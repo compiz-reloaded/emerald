@@ -4,7 +4,7 @@ AC_INIT()
 AM_CONFIG_HEADER([config.h])
 
 PACKAGE=emerald
-VERSION=`head debian/changelog -n 1 | cut -d \( -f 2 | cut -d \) -f 1 | cut -d '-' -f 1`
+source $srcdir/../VERSION
 
 AC_CONFIG_AUX_DIR(config)
 
