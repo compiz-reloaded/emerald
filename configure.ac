@@ -6,7 +6,7 @@ AM_CONFIG_HEADER([config.h])
 PACKAGE=emerald
 source $srcdir/VERSION
 
-AC_CONFIG_AUX_DIR(config)
+#AC_CONFIG_AUX_DIR(config)
 
 AM_INIT_AUTOMAKE($PACKAGE, $VERSION)
 #, [livinglatexkali@gmail.com])
