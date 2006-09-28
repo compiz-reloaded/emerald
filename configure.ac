@@ -4,7 +4,7 @@ AC_INIT()
 AM_CONFIG_HEADER([config.h])
 
 PACKAGE=emerald
-source $srcdir/../VERSION
+source $srcdir/VERSION
 
 AC_CONFIG_AUX_DIR(config)
 
