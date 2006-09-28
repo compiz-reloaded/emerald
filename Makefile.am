@@ -6,4 +6,5 @@ SUBDIRS = \
 		  engines \
 		  themer \
 		  pixmaps \
-		  misc
+		  misc \
+		  po
