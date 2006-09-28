@@ -81,7 +81,7 @@ typedef struct _private_ws
 void get_meta_info (EngineMetaInfo * emi)
 {
     emi->version = g_strdup("0.1");
-    emi->description = g_strdup("Evolved from the legacy engine");
+    emi->description = g_strdup(_("Evolved from the legacy engine"));
     emi->last_compat = g_strdup("0.0"); // old themes marked still compatible for testing-NeOS
     emi->icon = gdk_pixbuf_new_from_inline(-1,my_pixbuf,TRUE,NULL);
 }
@@ -1235,26 +1235,26 @@ void layout_layout_frame(GtkWidget * vbox)
 
     hbox = gtk_hbox_new(FALSE,2);
     gtk_box_pack_startC(vbox,hbox,FALSE,FALSE,0);
-    gtk_box_pack_startC(hbox,gtk_label_new("Border Gap"),FALSE,FALSE,0);
+    gtk_box_pack_startC(hbox,gtk_label_new(_("Border Gap")),FALSE,FALSE,0);
     junk = scaler_new(0,20,0.5);
     gtk_box_pack_startC(hbox,junk,TRUE,TRUE,0);
     register_setting(junk,ST_FLOAT,SECT,"window_gap");
 
     hbox = gtk_hbox_new(FALSE,2);
     gtk_box_pack_startC(vbox,hbox,FALSE,FALSE,0);
-    junk = gtk_check_button_new_with_label("Show Border when maximised?");
+    junk = gtk_check_button_new_with_label(_("Show Border when maximised?"));
     gtk_box_pack_startC(vbox,junk,FALSE,FALSE,0);
     register_setting(junk,ST_BOOL,SECT,"show_border_maximised");
 
     hbox = gtk_hbox_new(FALSE,2);
     gtk_box_pack_startC(vbox,hbox,FALSE,FALSE,0);
-    junk = gtk_check_button_new_with_label("Show when minimised?");
+    junk = gtk_check_button_new_with_label(_("Show when minimised?"));
     gtk_box_pack_startC(vbox,junk,FALSE,FALSE,0);
     register_setting(junk,ST_BOOL,SECT,"show_border_minimised");
 
     hbox = gtk_hbox_new(FALSE,2);
     gtk_box_pack_startC(vbox,hbox,FALSE,FALSE,0);
-    gtk_box_pack_startC(hbox,gtk_label_new("Minimised Border Size"),FALSE,FALSE,0);
+    gtk_box_pack_startC(hbox,gtk_label_new(_("Minimised Border Size")),FALSE,FALSE,0);
     junk = scaler_new(0,30,1);
     gtk_box_pack_startC(hbox,junk,TRUE,TRUE,0);
     register_setting(junk,ST_FLOAT,SECT,"minimised_border");
@@ -1271,26 +1271,26 @@ void layout_left_bar_frame(GtkWidget * vbox)
 
     hbox = gtk_hbox_new(FALSE,2);
     gtk_box_pack_startC(vbox,hbox,FALSE,FALSE,0);
-    junk = gtk_check_button_new_with_label("Enable Left Bar Dip?");
+    junk = gtk_check_button_new_with_label(_("Enable Left Bar Dip?"));
     gtk_box_pack_startC(vbox,junk,FALSE,FALSE,0);
     register_setting(junk,ST_BOOL,SECT,"enable_left_bar_dip");
 
     hbox = gtk_hbox_new(FALSE,2);
     gtk_box_pack_startC(vbox,hbox,FALSE,FALSE,0);
-    gtk_box_pack_startC(hbox,gtk_label_new("Left Bar Radius"),FALSE,FALSE,0);
+    gtk_box_pack_startC(hbox,gtk_label_new(_("Left Bar Radius")),FALSE,FALSE,0);
     junk = scaler_new(0,20,1);
     gtk_box_pack_startC(hbox,junk,TRUE,TRUE,0);
     register_setting(junk,ST_INT,SECT,"left_bar_dip_radius");
 
     hbox = gtk_hbox_new(FALSE,2);
     gtk_box_pack_startC(vbox,hbox,FALSE,FALSE,0);
-    junk = gtk_check_button_new_with_label("Enable Lower Bulge? (Useless at the moment, but will be used soon)");
+    junk = gtk_check_button_new_with_label(_("Enable Lower Bulge? (Useless at the moment, but will be used soon)"));
     gtk_box_pack_startC(vbox,junk,FALSE,FALSE,0);
     register_setting(junk,ST_BOOL,SECT,"enable_left_bar_dip_lower_part");
 
     hbox = gtk_hbox_new(FALSE,2);
     gtk_box_pack_startC(vbox,hbox,FALSE,FALSE,0);
-    gtk_box_pack_startC(hbox,gtk_label_new("Top Corner Offset (%)"),FALSE,FALSE,0);
+    gtk_box_pack_startC(hbox,gtk_label_new(_("Top Corner Offset (%)")),FALSE,FALSE,0);
     junk = scaler_new(0,90,1);
     gtk_box_pack_startC(hbox,junk,TRUE,TRUE,0);
     register_setting(junk,ST_INT,SECT,"left_bar_dip_offset");
@@ -1311,40 +1311,40 @@ void layout_title_bar_frame(GtkWidget * vbox)
 
     hbox = gtk_hbox_new(FALSE,2);
     gtk_box_pack_startC(vbox,hbox,FALSE,FALSE,0);
-    junk = gtk_check_button_new_with_label("Enable Title Bar Dip?");
+    junk = gtk_check_button_new_with_label(_("Enable Title Bar Dip?"));
     gtk_box_pack_startC(vbox,junk,FALSE,FALSE,0);
     register_setting(junk,ST_BOOL,SECT,"enable_title_bar_dip");
 
     hbox = gtk_hbox_new(FALSE,2);
     gtk_box_pack_startC(vbox,hbox,FALSE,FALSE,0);
-    junk = gtk_check_button_new_with_label("Enable Button Part?");
+    junk = gtk_check_button_new_with_label(_("Enable Button Part?"));
     gtk_box_pack_startC(vbox,junk,FALSE,FALSE,0);
     register_setting(junk,ST_BOOL,SECT,"enable_bar_dip_button_part");
 
     hbox = gtk_hbox_new(FALSE,2);
     gtk_box_pack_startC(vbox,hbox,FALSE,FALSE,0);
-    gtk_box_pack_startC(hbox,gtk_label_new("Title Part Width"),FALSE,FALSE,0);
+    gtk_box_pack_startC(hbox,gtk_label_new(_("Title Part Width")),FALSE,FALSE,0);
     junk = scaler_new(80,800,1);
     gtk_box_pack_startC(hbox,junk,TRUE,TRUE,0);
     register_setting(junk,ST_INT,SECT,"title_bar_dip_title_width");
 
     hbox = gtk_hbox_new(FALSE,2);
     gtk_box_pack_startC(vbox,hbox,FALSE,FALSE,0);
-    gtk_box_pack_startC(hbox,gtk_label_new("Button Part Width)"),FALSE,FALSE,0);
+    gtk_box_pack_startC(hbox,gtk_label_new(_("Button Part Width)")),FALSE,FALSE,0);
     junk = scaler_new(10,800,1);
     gtk_box_pack_startC(hbox,junk,TRUE,TRUE,0);
     register_setting(junk,ST_INT,SECT,"title_bar_dip_button_width");
 
     hbox = gtk_hbox_new(FALSE,2);
     gtk_box_pack_startC(vbox,hbox,FALSE,FALSE,0);
-    gtk_box_pack_startC(hbox,gtk_label_new("Dip Corners Radius)"),FALSE,FALSE,0);
+    gtk_box_pack_startC(hbox,gtk_label_new(_("Dip Corners Radius)")),FALSE,FALSE,0);
     junk = scaler_new(1,20,1);
     gtk_box_pack_startC(hbox,junk,TRUE,TRUE,0);
     register_setting(junk,ST_INT,SECT,"title_bar_dip_radius");
 
     hbox = gtk_hbox_new(FALSE,2);
     gtk_box_pack_startC(vbox,hbox,FALSE,FALSE,0);
-    junk = gtk_check_button_new_with_label("Round Inside Corners As well?");
+    junk = gtk_check_button_new_with_label(_("Round Inside Corners As well?"));
     gtk_box_pack_startC(vbox,junk,FALSE,FALSE,0);
     register_setting(junk,ST_BOOL,SECT,"round_tri");
 
@@ -1361,11 +1361,11 @@ void layout_maximised_colors(GtkWidget * vbox)
     hbox = gtk_hbox_new(FALSE,2);
     gtk_box_pack_startC(vbox,hbox,FALSE,FALSE,0);
 
-    junk = gtk_check_button_new_with_label("Enable Different Maximised Colors?");
+    junk = gtk_check_button_new_with_label(_("Enable Different Maximised Colors?"));
     gtk_box_pack_startC(vbox,junk,FALSE,FALSE,0);
     register_setting(junk,ST_BOOL,SECT,"enable_maximised_colors");
 
-    junk = gtk_check_button_new_with_label("Turn Off repeating gradients when maximised?");
+    junk = gtk_check_button_new_with_label(_("Turn Off repeating gradients when maximised?"));
     gtk_box_pack_startC(vbox,junk,FALSE,FALSE,0);
     register_setting(junk,ST_BOOL,SECT,"gradient_repeat_disabled_maximised");
 
@@ -1381,7 +1381,7 @@ void layout_maximised_colors(GtkWidget * vbox)
     table_append_separator();
 
 
-    w = gtk_label_new("Outer Frame Blend");
+    w = gtk_label_new(_("Outer Frame Blend"));
     table_append(w,FALSE);
     w = gtk_color_button_new();
     table_append(w,FALSE);
@@ -1390,7 +1390,7 @@ void layout_maximised_colors(GtkWidget * vbox)
     table_append(w,TRUE);
     register_setting(w,ST_FLOAT,SECT,"outer_maximised_alpha");
 
-    w = gtk_label_new("Inner Frame Blend");
+    w = gtk_label_new(_("Inner Frame Blend"));
     table_append(w,FALSE);
     w = gtk_color_button_new();
     table_append(w,FALSE);
@@ -1408,32 +1408,32 @@ void layout_corners_frame(GtkWidget * vbox)
     GtkWidget * hbox;
     GtkWidget * junk;
 
-    junk = gtk_check_button_new_with_label("Round Top Left Corner?");
+    junk = gtk_check_button_new_with_label(_("Round Top Left Corner?"));
     gtk_box_pack_startC(vbox,junk,FALSE,FALSE,0);
     register_setting(junk,ST_BOOL,SECT,"round_top_left");
 
-    junk = gtk_check_button_new_with_label("Round Top Right Corner");
+    junk = gtk_check_button_new_with_label(_("Round Top Right Corner"));
     gtk_box_pack_startC(vbox,junk,FALSE,FALSE,0);
     register_setting(junk,ST_BOOL,SECT,"round_top_right");
 
-    junk = gtk_check_button_new_with_label("Round Bottom Left Corner");
+    junk = gtk_check_button_new_with_label(_("Round Bottom Left Corner"));
     gtk_box_pack_startC(vbox,junk,FALSE,FALSE,0);
     register_setting(junk,ST_BOOL,SECT,"round_bottom_left");
 
-    junk = gtk_check_button_new_with_label("Round Bottom Right Corner");
+    junk = gtk_check_button_new_with_label(_("Round Bottom Right Corner"));
     gtk_box_pack_startC(vbox,junk,FALSE,FALSE,0);
     register_setting(junk,ST_BOOL,SECT,"round_bottom_right");
 
     hbox = gtk_hbox_new(FALSE,2);
     gtk_box_pack_startC(vbox,hbox,FALSE,FALSE,0);
-    gtk_box_pack_startC(hbox,gtk_label_new("Frame Rounding Radius"),FALSE,FALSE,0);
+    gtk_box_pack_startC(hbox,gtk_label_new(_("Frame Rounding Radius")),FALSE,FALSE,0);
     junk = scaler_new(0,20,0.5);
     gtk_box_pack_startC(hbox,junk,TRUE,TRUE,0);
     register_setting(junk,ST_FLOAT,SECT,"frame_radius");
 
     hbox = gtk_hbox_new(FALSE,2);
     gtk_box_pack_startC(vbox,hbox,FALSE,FALSE,0);
-    gtk_box_pack_startC(hbox,gtk_label_new("Titlebar Rounding Radius"),FALSE,FALSE,0);
+    gtk_box_pack_startC(hbox,gtk_label_new(_("Titlebar Rounding Radius")),FALSE,FALSE,0);
 
     junk = scaler_new(0,20,0.5);
     gtk_box_pack_startC(hbox,junk,TRUE,TRUE,0);
@@ -1474,17 +1474,17 @@ void my_engine_settings(GtkWidget * hbox, gboolean active)
 
     gtk_scrolled_window_add_with_viewport(GTK_SCROLLED_WINDOW(scroller),GTK_WIDGET(get_current_table()));
     
-    make_labels("Colors");
+    make_labels(_("Colors"));
     table_append_separator();
-    ACAV("Outer Frame Blend","outer",SECT);
-    ACAV("Inner Frame Blend","inner",SECT);
+    ACAV(_("Outer Frame Blend"),"outer",SECT);
+    ACAV(_("Inner Frame Blend"),"inner",SECT);
     table_append_separator();
-    ACAV("Outer Titlebar Blend","title_outer",SECT);
-    ACAV("Inner Titlebar Blend","title_inner",SECT);
+    ACAV(_("Outer Titlebar Blend"),"title_outer",SECT);
+    ACAV(_("Inner Titlebar Blend"),"title_inner",SECT);
 
     table_append_separator();
 
-    junk = gtk_label_new("Repeat Gradient?");
+    junk = gtk_label_new(_("Repeat Gradient?"));
     table_append(junk,FALSE);
     junk = gtk_label_new("");
     table_append(junk,FALSE);
@@ -1494,7 +1494,7 @@ void my_engine_settings(GtkWidget * hbox, gboolean active)
     key_line = g_strdup_printf(active?"active_%s":"inactive_%s","gradient_repeat_enabled");
     register_setting(junk,ST_BOOL,SECT,key_line);
 
-    junk = gtk_label_new("Vertical Repeat?");
+    junk = gtk_label_new(_("Vertical Repeat?"));
     table_append(junk,FALSE);
     junk = gtk_label_new("");
     table_append(junk,FALSE);
@@ -1503,7 +1503,7 @@ void my_engine_settings(GtkWidget * hbox, gboolean active)
     key_line = g_strdup_printf(active?"active_%s":"inactive_%s","gradient_repeat_direction_vertical");
     register_setting(junk,ST_BOOL,SECT,key_line);
 
-    junk = gtk_label_new("Diagonal Repeat?");
+    junk = gtk_label_new(_("Diagonal Repeat?"));
     table_append(junk,FALSE);
     junk = gtk_label_new("");
     table_append(junk,FALSE);
@@ -1513,7 +1513,7 @@ void my_engine_settings(GtkWidget * hbox, gboolean active)
     register_setting(junk,ST_BOOL,SECT,key_line);
 
 
-    junk = gtk_label_new("Repeat Frequency");
+    junk = gtk_label_new(_("Repeat Frequency"));
     table_append(junk,FALSE);
     junk = gtk_label_new("");
     table_append(junk,FALSE);
@@ -1525,15 +1525,15 @@ void my_engine_settings(GtkWidget * hbox, gboolean active)
 
 	
 
-    ACAV("Titlebar Separator","separator_line",SECT);
+    ACAV(_("Titlebar Separator"),"separator_line",SECT);
     table_append_separator();
-    ACAV("Frame Outline","window_frame_halo",SECT);
-    ACAV("Frame Highlight","window_highlight",SECT);
-    ACAV("Frame Shadow","window_shadow",SECT);
+    ACAV(_("Frame Outline"),"window_frame_halo",SECT);
+    ACAV(_("Frame Highlight"),"window_highlight",SECT);
+    ACAV(_("Frame Shadow"),"window_shadow",SECT);
     table_append_separator();
-    ACAV("Contents Outline","contents_halo",SECT);
-    ACAV("Contents Highlight","contents_highlight",SECT);
-    ACAV("Contents Shadow","contents_shadow",SECT);
+    ACAV(_("Contents Outline"),"contents_halo",SECT);
+    ACAV(_("Contents Highlight"),"contents_highlight",SECT);
+    ACAV(_("Contents Shadow"),"contents_shadow",SECT);
 }
 void layout_engine_colors(GtkWidget * vbox)
 {
@@ -1555,21 +1555,21 @@ void layout_pixmaps(GtkWidget * vbox) {
 
 ///////////////////////
 
-    junk = gtk_check_button_new_with_label("Enable Title Part Pixmap?");
+    junk = gtk_check_button_new_with_label(_("Enable Title Part Pixmap?"));
     gtk_box_pack_startC(vbox,junk,FALSE,FALSE,0);
     register_setting(junk,ST_BOOL,SECT,"pixmaps_titlebarpart_enabled");
 
-    junk = gtk_check_button_new_with_label("Repeat Title Part Pixmap?");
+    junk = gtk_check_button_new_with_label(_("Repeat Title Part Pixmap?"));
     gtk_box_pack_startC(vbox,junk,FALSE,FALSE,0);
     register_setting(junk,ST_BOOL,SECT,"pixmaps_titlebarpart_repeat_enabled");
 
     hbox = gtk_hbox_new(FALSE,2);
     gtk_box_pack_startC(vbox,hbox,FALSE,FALSE,0);
     
-    junk = gtk_label_new("Title Bar Part Pixmap");
+    junk = gtk_label_new(_("Title Bar Part Pixmap"));
     gtk_box_pack_startC(hbox,junk,FALSE,FALSE,0);
 
-    file_selector=gtk_file_chooser_button_new("Choose Titlebar Part Pixmap",
+    file_selector=gtk_file_chooser_button_new(_("Choose Titlebar Part Pixmap"),
             GTK_FILE_CHOOSER_ACTION_OPEN);
     gtk_box_pack_startC(hbox,file_selector,TRUE,TRUE,0);
     filter = gtk_file_filter_new();
@@ -1585,11 +1585,11 @@ void layout_pixmaps(GtkWidget * vbox) {
     gtk_box_pack_startC(hbox,gtk_vseparator_new(),FALSE,FALSE,0);
 ///////////////////////////
 
-    junk = gtk_check_button_new_with_label("Enable Button Part Pixmap?");
+    junk = gtk_check_button_new_with_label(_("Enable Button Part Pixmap?"));
     gtk_box_pack_startC(vbox,junk,FALSE,FALSE,0);
     register_setting(junk,ST_BOOL,SECT,"pixmaps_buttonpart_enabled");
 
-    junk = gtk_check_button_new_with_label("Repeat Button Part Pixmap?");
+    junk = gtk_check_button_new_with_label(_("Repeat Button Part Pixmap?"));
     gtk_box_pack_startC(vbox,junk,FALSE,FALSE,0);
     register_setting(junk,ST_BOOL,SECT,"pixmaps_buttonpart_repeat_enabled");
 
@@ -1597,10 +1597,10 @@ void layout_pixmaps(GtkWidget * vbox) {
     hbox = gtk_hbox_new(FALSE,2);
     gtk_box_pack_startC(vbox,hbox,FALSE,FALSE,0);
     
-    junk = gtk_label_new("Button Part Pixmap");
+    junk = gtk_label_new(_("Button Part Pixmap"));
     gtk_box_pack_startC(hbox,junk,FALSE,FALSE,0);
 
-    file_selector=gtk_file_chooser_button_new("Choose Button Part Pixmap",
+    file_selector=gtk_file_chooser_button_new(_("Choose Button Part Pixmap"),
             GTK_FILE_CHOOSER_ACTION_OPEN);
     gtk_box_pack_startC(hbox,file_selector,TRUE,TRUE,0);
     filter = gtk_file_filter_new();
@@ -1616,11 +1616,11 @@ void layout_pixmaps(GtkWidget * vbox) {
     gtk_box_pack_startC(hbox,gtk_vseparator_new(),FALSE,FALSE,0);
 ///////////////////////////
 
-    junk = gtk_check_button_new_with_label("Enable Titlebar Pixmap?");
+    junk = gtk_check_button_new_with_label(_("Enable Titlebar Pixmap?"));
     gtk_box_pack_startC(vbox,junk,FALSE,FALSE,0);
     register_setting(junk,ST_BOOL,SECT,"pixmaps_titlebar_enabled");
 
-    junk = gtk_check_button_new_with_label("Repeat Titlebar Pixmap?");
+    junk = gtk_check_button_new_with_label(_("Repeat Titlebar Pixmap?"));
     gtk_box_pack_startC(vbox,junk,FALSE,FALSE,0);
     register_setting(junk,ST_BOOL,SECT,"pixmaps_titlebar_repeat_enabled");
 
@@ -1628,10 +1628,10 @@ void layout_pixmaps(GtkWidget * vbox) {
     hbox = gtk_hbox_new(FALSE,2);
     gtk_box_pack_startC(vbox,hbox,FALSE,FALSE,0);
     
-    junk = gtk_label_new("Titlebar Pixmap");
+    junk = gtk_label_new(_("Titlebar Pixmap"));
     gtk_box_pack_startC(hbox,junk,FALSE,FALSE,0);
 
-    file_selector=gtk_file_chooser_button_new("Choose Titlebar Pixmap",
+    file_selector=gtk_file_chooser_button_new(_("Choose Titlebar Pixmap"),
             GTK_FILE_CHOOSER_ACTION_OPEN);
     gtk_box_pack_startC(hbox,file_selector,TRUE,TRUE,0);
     filter = gtk_file_filter_new();
@@ -1651,11 +1651,11 @@ void layout_engine_settings(GtkWidget * vbox)
     GtkWidget * note;
     note = gtk_notebook_new();
     gtk_box_pack_startC(vbox,note,TRUE,TRUE,0);
-    layout_engine_colors(build_notebook_page("Active/Inactive",note));
-    layout_maximised_colors(build_notebook_page("Maximised",note));
-    layout_corners_frame(build_notebook_page("Corners",note));
-    layout_layout_frame(build_notebook_page("Border Layout",note));
-    layout_title_bar_frame(build_notebook_page("Title Bar",note));
-    layout_left_bar_frame(build_notebook_page("Left Bar",note));
-    layout_pixmaps(build_notebook_page("Pixmaps",note));
+    layout_engine_colors(build_notebook_page(_("Active/Inactive"),note));
+    layout_maximised_colors(build_notebook_page(_("Maximised"),note));
+    layout_corners_frame(build_notebook_page(_("Corners"),note));
+    layout_layout_frame(build_notebook_page(_("Border Layout"),note));
+    layout_title_bar_frame(build_notebook_page(_("Title Bar"),note));
+    layout_left_bar_frame(build_notebook_page(_("Left Bar"),note));
+    layout_pixmaps(build_notebook_page(_("Pixmaps"),note));
 }

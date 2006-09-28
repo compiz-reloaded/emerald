@@ -65,7 +65,7 @@ typedef struct _private_ws
 void get_meta_info (EngineMetaInfo * emi)
 {
     emi->version = g_strdup("0.2");
-    emi->description = g_strdup("Everything done with customizable pixmaps!");
+    emi->description = g_strdup(_("Everything done with customizable pixmaps!"));
     emi->last_compat = g_strdup("0.0"); // old themes marked still compatible
     emi->icon = gdk_pixbuf_new_from_inline(-1,my_pixbuf,TRUE,NULL);
 }
@@ -468,32 +468,32 @@ void layout_corners_frame(GtkWidget * vbox)
     GtkWidget * hbox;
     GtkWidget * junk;
 
-    junk = gtk_check_button_new_with_label("Round Top Left Corner");
+    junk = gtk_check_button_new_with_label(_("Round Top Left Corner"));
     gtk_box_pack_startC(vbox,junk,FALSE,FALSE,0);
     register_setting(junk,ST_BOOL,SECT,"round_top_left");
 
-    junk = gtk_check_button_new_with_label("Round Top Right Corner");
+    junk = gtk_check_button_new_with_label(_("Round Top Right Corner"));
     gtk_box_pack_startC(vbox,junk,FALSE,FALSE,0);
     register_setting(junk,ST_BOOL,SECT,"round_top_right");
 
-    junk = gtk_check_button_new_with_label("Round Bottom Left Corner");
+    junk = gtk_check_button_new_with_label(_("Round Bottom Left Corner"));
     gtk_box_pack_startC(vbox,junk,FALSE,FALSE,0);
     register_setting(junk,ST_BOOL,SECT,"round_bottom_left");
 
-    junk = gtk_check_button_new_with_label("Round Bottom Right Corner");
+    junk = gtk_check_button_new_with_label(_("Round Bottom Right Corner"));
     gtk_box_pack_startC(vbox,junk,FALSE,FALSE,0);
     register_setting(junk,ST_BOOL,SECT,"round_bottom_right");
 
     hbox = gtk_hbox_new(FALSE,2);
     gtk_box_pack_startC(vbox,hbox,FALSE,FALSE,0);
-    gtk_box_pack_startC(hbox,gtk_label_new("Top Rounding Radius"),FALSE,FALSE,0);
+    gtk_box_pack_startC(hbox,gtk_label_new(_("Top Rounding Radius")),FALSE,FALSE,0);
     junk = scaler_new(0,20,0.5);
     gtk_box_pack_startC(hbox,junk,TRUE,TRUE,0);
     register_setting(junk,ST_FLOAT,SECT,"top_radius");
 
     hbox = gtk_hbox_new(FALSE,2);
     gtk_box_pack_startC(vbox,hbox,FALSE,FALSE,0);
-    gtk_box_pack_startC(hbox,gtk_label_new("Bottom Rounding Radius"),FALSE,FALSE,0);
+    gtk_box_pack_startC(hbox,gtk_label_new(_("Bottom Rounding Radius")),FALSE,FALSE,0);
     junk = scaler_new(0,20,0.5);
     gtk_box_pack_startC(hbox,junk,TRUE,TRUE,0);
     register_setting(junk,ST_FLOAT,SECT,"bottom_radius");
@@ -517,13 +517,13 @@ void my_engine_settings(GtkWidget * hbox, gboolean active)
     
     make_labels("Colors");
     table_append_separator();
-    ACAV("Outer Frame Blend","outer",SECT);
-    ACAV("Inner Frame Blend","inner",SECT);
+    ACAV(_("Outer Frame Blend"),"outer",SECT);
+    ACAV(_("Inner Frame Blend"),"inner",SECT);
     table_append_separator();
-    ACAV("Outer Titlebar Blend","title_outer",SECT);
-    ACAV("Inner Titlebar Blend","title_inner",SECT);
+    ACAV(_("Outer Titlebar Blend"),"title_outer",SECT);
+    ACAV(_("Inner Titlebar Blend"),"title_inner",SECT);
     table_append_separator();
-    ACAV("Titlebar Separator","separator_line",SECT);
+    ACAV(_("Titlebar Separator"),"separator_line",SECT);
 }
 void layout_engine_colors(GtkWidget * vbox)
 {
@@ -578,13 +578,13 @@ static void layout_pixmap_box(GtkWidget * vbox, gint b_t, gboolean active)
     table_append(clearer,FALSE);
 
     // Style : Use Tiled or Scaled pixmaps
-    use_scaled = gtk_check_button_new_with_label("Scaled");
+    use_scaled = gtk_check_button_new_with_label(_("Scaled"));
     register_setting(use_scaled, ST_BOOL, SECT, g_strdup_printf("%s_%s_use_scaled", pre, p_types[b_t]));
     table_append(use_scaled, FALSE);
 
     // Width : Checkbox (Use my width) + Number (0-500)
     if(b_t == 0 || b_t == 5 || b_t == 8) {
-        table_append(gtk_label_new("Not adjustable"), FALSE);
+        table_append(gtk_label_new(_("Not adjustable")), FALSE);
     } else {
         width = gtk_spin_button_new_with_range(0,500,1);
         register_setting(width,
@@ -613,7 +613,7 @@ static void layout_pixmap_box(GtkWidget * vbox, gint b_t, gboolean active)
         gtk_box_pack_startC(ttbox, use_my_height, FALSE, FALSE, 0);
         table_append(ttbox, FALSE);
     } else {
-        table_append(gtk_label_new("Not adjustable"), FALSE);
+        table_append(gtk_label_new(_("Not adjustable")), FALSE);
     }
 
 }
@@ -628,7 +628,7 @@ void layout_engine_pixmaps(GtkWidget * vbox, gboolean active)
     gtk_box_pack_startC(vbox,hbox,FALSE,FALSE,0);
 
     if(!active) {
-       junk = gtk_check_button_new_with_label("Same as Active");
+       junk = gtk_check_button_new_with_label(_("Same as Active"));
        gtk_box_pack_startC(hbox,junk,TRUE,TRUE,0);
        register_setting(junk,ST_BOOL,SECT,"inactive_use_active_pixmaps");
     }
@@ -642,13 +642,13 @@ void layout_engine_pixmaps(GtkWidget * vbox, gboolean active)
     gtk_scrolled_window_add_with_viewport(
             GTK_SCROLLED_WINDOW(scroller),GTK_WIDGET(get_current_table()));
     
-    table_append(gtk_label_new("Pixmap"),FALSE);
-    table_append(gtk_label_new("File"),FALSE);
-    table_append(gtk_label_new("Preview"),FALSE);
-    table_append(gtk_label_new("Clear"),FALSE);
-    table_append(gtk_label_new("Tiled/Scaled"),FALSE);
-    table_append(gtk_label_new("Width Override"),FALSE);
-    table_append(gtk_label_new("Height Override"),FALSE);
+    table_append(gtk_label_new(_("Pixmap")),FALSE);
+    table_append(gtk_label_new(_("File")),FALSE);
+    table_append(gtk_label_new(_("Preview")),FALSE);
+    table_append(gtk_label_new(_("Clear")),FALSE);
+    table_append(gtk_label_new(_("Tiled/Scaled")),FALSE);
+    table_append(gtk_label_new(_("Width Override")),FALSE);
+    table_append(gtk_label_new(_("Height Override")),FALSE);
     
     for(i=0;i<11;i++)
     {

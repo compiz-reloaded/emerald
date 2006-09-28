@@ -6,8 +6,6 @@ AM_CONFIG_HEADER([config.h])
 PACKAGE=emerald
 source $srcdir/VERSION
 
-#AC_CONFIG_AUX_DIR(config)
-
 AM_INIT_AUTOMAKE($PACKAGE, $VERSION)
 #, [livinglatexkali@gmail.com])
 
@@ -19,7 +17,7 @@ AC_HEADER_STDC
 IT_PROG_INTLTOOL([0.35.0])
 AC_SUBST(ALL_LINGUAS)
 AM_GLIB_GNU_GETTEXT
-GETTEXT_PACKAGE=beryl-settings
+GETTEXT_PACKAGE=emerald
 AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE,"$GETTEXT_PACKAGE", [Gettext package.])
 AC_SUBST(GETTEXT_PACKAGE)
 AC_CHECK_HEADERS([stdlib.h sys/time.h unistd.h])

@@ -1,1 +1,8 @@
-src/main.c
+themer/main.c
+engines/legacy.c
+engines/oxygen.c
+engines/pixmap.c
+engines/truglass.c
+engines/vrunner.c
+engines/zootreeves.c
+
