@@ -1,0 +1,806 @@
+# Emerald Window Decorator.
+# Copyright (C) 2006
+# This file is distributed under the same license as the Emerald package.
+# cyberorg <cyberorg@cyberorg.info>, 2006.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 0.1 \n"
+"Report-Msgid-Bugs-To: bugs.beryl-project.org \n"
+"POT-Creation-Date: 2006-09-28 23:18+0530\n"
+"PO-Revision-Date: 2006-09-28 23:18+0530\n"
+"Last-Translator: yourname <yourEMAIL@ADDRESS>\n"
+"Language-Team: beryl-project <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: engines/vrunner.c:600
+msgid "(Alpha)"
+msgstr ""
+
+#: engines/vrunner.c:591
+msgid "(Color)"
+msgstr ""
+
+#: themer/main.c:993
+msgid "Active Window"
+msgstr ""
+
+#: engines/zootreeves.c:1654
+msgid "Active/Inactive"
+msgstr ""
+
+#: themer/main.c:610
+#, c-format
+msgid "Are you sure you want to delete %s?"
+msgstr ""
+
+#: engines/oxygen.c:424
+msgid "Base"
+msgstr ""
+
+#: engines/legacy.c:31
+msgid "Based on original gnome-window-decorator"
+msgstr ""
+
+#: themer/main.c:942
+msgid "Border"
+msgstr ""
+
+#: engines/zootreeves.c:1238
+msgid "Border Gap"
+msgstr ""
+
+#: engines/zootreeves.c:1657
+msgid "Border Layout"
+msgstr ""
+
+#: themer/main.c:945
+msgid "Bottom"
+msgstr ""
+
+#: engines/pixmap.c:496
+msgid "Bottom Rounding Radius"
+msgstr ""
+
+#: themer/main.c:717
+msgid "Button"
+msgstr ""
+
+#: themer/main.c:1107
+msgid "Button Fade Step Duration"
+msgstr ""
+
+#: themer/main.c:1101
+msgid "Button Fade Total Duration"
+msgstr ""
+
+#: themer/main.c:742
+msgid "Button Fill"
+msgstr ""
+
+#: themer/main.c:1136
+msgid "Button Hover Cursor"
+msgstr ""
+
+#: themer/main.c:743
+msgid "Button Outline"
+msgstr ""
+
+#: engines/zootreeves.c:1600
+msgid "Button Part Pixmap"
+msgstr ""
+
+#: engines/zootreeves.c:1333
+msgid "Button Part Width)"
+msgstr ""
+
+#: themer/main.c:706
+msgid "Button Pixmaps"
+msgstr ""
+
+#: themer/main.c:1119
+msgid "Button Pulse Min Opacity %"
+msgstr ""
+
+#: themer/main.c:1113
+msgid "Button Pulse Wait Duration"
+msgstr ""
+
+#: themer/main.c:1186
+msgid "Buttons"
+msgstr ""
+
+#: themer/main.c:598
+msgid ""
+"Can't delete system themes\n"
+"(or you forgot to enter a name)"
+msgstr ""
+
+#: themer/main.c:503
+msgid ""
+"Can't save over system themes\n"
+"(or you forgot to enter a name)"
+msgstr ""
+
+#: engines/zootreeves.c:1603
+msgid "Choose Button Part Pixmap"
+msgstr ""
+
+#: engines/zootreeves.c:1572
+msgid "Choose Titlebar Part Pixmap"
+msgstr ""
+
+#: engines/zootreeves.c:1634
+msgid "Choose Titlebar Pixmap"
+msgstr ""
+
+#: themer/main.c:720 engines/pixmap.c:648
+msgid "Clear"
+msgstr ""
+
+#: themer/main.c:779
+msgid "Color"
+msgstr ""
+
+#: themer/main.c:738 engines/legacy.c:362 engines/legacy.c:394
+#: engines/oxygen.c:422 engines/oxygen.c:452 engines/pixmap.c:665
+#: engines/truglass.c:514 engines/truglass.c:549 engines/vrunner.c:582
+#: engines/vrunner.c:673 engines/zootreeves.c:1477
+msgid "Colors"
+msgstr ""
+
+#: engines/legacy.c:377 engines/oxygen.c:435 engines/truglass.c:532
+#: engines/vrunner.c:656 engines/zootreeves.c:1535
+msgid "Contents Highlight"
+msgstr ""
+
+#: engines/legacy.c:376 engines/oxygen.c:434 engines/truglass.c:531
+#: engines/vrunner.c:655 engines/zootreeves.c:1534
+msgid "Contents Outline"
+msgstr ""
+
+#: engines/legacy.c:378 engines/oxygen.c:436 engines/truglass.c:533
+#: engines/zootreeves.c:1536
+msgid "Contents Shadow"
+msgstr ""
+
+#: engines/vrunner.c:589 engines/vrunner.c:598
+msgid "Contrast"
+msgstr ""
+
+#: engines/zootreeves.c:1656
+msgid "Corners"
+msgstr ""
+
+#: themer/main.c:538
+msgid "Couldn't Form Theme"
+msgstr ""
+
+#: themer/main.c:533
+msgid "Couldn't Write Theme"
+msgstr ""
+
+#: themer/main.c:914
+msgid "Creator"
+msgstr ""
+
+#: engines/vrunner.c:617
+msgid "Curve"
+msgstr ""
+
+#: themer/main.c:915
+msgid "Description"
+msgstr ""
+
+#: engines/oxygen.c:31
+msgid "Designed to be vista-ish in nature"
+msgstr ""
+
+#: engines/zootreeves.c:1506
+msgid "Diagonal Repeat?"
+msgstr ""
+
+#: engines/zootreeves.c:1340
+msgid "Dip Corners Radius)"
+msgstr ""
+
+#: themer/main.c:1199 themer/main.c:1482
+msgid "Edit"
+msgstr ""
+
+#: themer/main.c:1483
+msgid "Emerald Settings"
+msgstr ""
+
+#: engines/zootreeves.c:1588
+msgid "Enable Button Part Pixmap?"
+msgstr ""
+
+#: engines/zootreeves.c:1320
+msgid "Enable Button Part?"
+msgstr ""
+
+#: engines/zootreeves.c:1364
+msgid "Enable Different Maximised Colors?"
+msgstr ""
+
+#: engines/zootreeves.c:1274
+msgid "Enable Left Bar Dip?"
+msgstr ""
+
+#: engines/zootreeves.c:1287
+msgid "Enable Lower Bulge? (Useless at the moment, but will be used soon)"
+msgstr ""
+
+#: engines/zootreeves.c:1314
+msgid "Enable Title Bar Dip?"
+msgstr ""
+
+#: engines/zootreeves.c:1558
+msgid "Enable Title Part Pixmap?"
+msgstr ""
+
+#: engines/zootreeves.c:1619
+msgid "Enable Titlebar Pixmap?"
+msgstr ""
+
+#: themer/main.c:485
+msgid "Error calling tar."
+msgstr ""
+
+#: engines/pixmap.c:68
+msgid "Everything done with customizable pixmaps!"
+msgstr ""
+
+#: engines/zootreeves.c:84
+msgid "Evolved from the legacy engine"
+msgstr ""
+
+#: themer/main.c:855
+msgid "Export Theme..."
+msgstr ""
+
+#: themer/main.c:904
+msgid "Export..."
+msgstr ""
+
+#: themer/main.c:718 engines/pixmap.c:646
+msgid "File"
+msgstr ""
+
+#: engines/legacy.c:395 engines/oxygen.c:453 engines/pixmap.c:666
+#: engines/truglass.c:550 engines/vrunner.c:674
+msgid "Frame"
+msgstr ""
+
+#: engines/truglass.c:516
+msgid "Frame Base Color"
+msgstr ""
+
+#: themer/main.c:975
+msgid "Frame Borders"
+msgstr ""
+
+#: themer/main.c:1185
+msgid "Frame Engine"
+msgstr ""
+
+#: engines/legacy.c:373 engines/oxygen.c:431 engines/truglass.c:528
+#: engines/vrunner.c:651 engines/zootreeves.c:1531
+msgid "Frame Highlight"
+msgstr ""
+
+#: engines/legacy.c:372 engines/oxygen.c:430 engines/truglass.c:527
+#: engines/vrunner.c:650 engines/zootreeves.c:1530
+msgid "Frame Outline"
+msgstr ""
+
+#: engines/zootreeves.c:1429
+msgid "Frame Rounding Radius"
+msgstr ""
+
+#: engines/legacy.c:374 engines/oxygen.c:432 engines/truglass.c:529
+#: engines/zootreeves.c:1532
+msgid "Frame Shadow"
+msgstr ""
+
+#: themer/main.c:1187
+msgid "Frame/Shadows"
+msgstr ""
+
+#: engines/truglass.c:35
+msgid "Glassy effects for your windows"
+msgstr ""
+
+#: engines/oxygen.c:425
+msgid "Glow"
+msgstr ""
+
+#: engines/truglass.c:491
+msgid "Glow Height"
+msgstr ""
+
+#: engines/pixmap.c:651
+msgid "Height Override"
+msgstr ""
+
+#: themer/main.c:813
+msgid "Horizontal Button Offset"
+msgstr ""
+
+#: themer/main.c:1042
+msgid "Images"
+msgstr ""
+
+#: themer/main.c:1375 themer/main.c:1439
+msgid "Import Theme..."
+msgstr ""
+
+#: themer/main.c:994
+msgid "Inactive Window"
+msgstr ""
+
+#: themer/main.c:1064
+msgid "Information"
+msgstr ""
+
+#: engines/legacy.c:365 engines/pixmap.c:521 engines/zootreeves.c:1393
+#: engines/zootreeves.c:1480
+msgid "Inner Frame Blend"
+msgstr ""
+
+#: engines/legacy.c:368 engines/pixmap.c:524 engines/zootreeves.c:1483
+msgid "Inner Titlebar Blend"
+msgstr ""
+
+#: themer/main.c:471
+msgid ""
+"Invalid File Name\n"
+"Must End in .emerald"
+msgstr ""
+
+#: themer/main.c:334 themer/main.c:342 themer/main.c:508 themer/main.c:604
+msgid "Invalid Theme Name"
+msgstr ""
+
+#: themer/main.c:465
+msgid ""
+"Invalid Theme Name\n"
+"Could Not Export"
+msgstr ""
+
+#: themer/main.c:423
+msgid "Invalid theme file.  Does not end in .emerald"
+msgstr ""
+
+#: themer/main.c:946
+msgid "Left"
+msgstr ""
+
+#: engines/zootreeves.c:1659
+msgid "Left Bar"
+msgstr ""
+
+#: engines/zootreeves.c:1280
+msgid "Left Bar Radius"
+msgstr ""
+
+#: engines/vrunner.c:584
+msgid "Left Blend"
+msgstr ""
+
+#: engines/truglass.c:520
+msgid "Lower Glass Glow"
+msgstr ""
+
+#: engines/zootreeves.c:1655
+msgid "Maximised"
+msgstr ""
+
+#: engines/vrunner.c:585
+msgid "Middle Blend"
+msgstr ""
+
+#: engines/truglass.c:522
+msgid "Middle Glass Glow"
+msgstr ""
+
+#: engines/zootreeves.c:1257
+msgid "Minimised Border Size"
+msgstr ""
+
+#: themer/main.c:801
+msgid "Minimum Title-bar Height"
+msgstr ""
+
+#: engines/vrunner.c:55
+msgid "Multiple gradients with somewhat glassy features too"
+msgstr ""
+
+#: themer/main.c:1080
+msgid ""
+"NOTE - These settings are not part of themes, they are stored separately, "
+"and control various UI preferences for Emerald."
+msgstr ""
+
+#: themer/main.c:895
+msgid "Name:"
+msgstr ""
+
+#: themer/main.c:185
+msgid "No Description"
+msgstr ""
+
+#: themer/main.c:641
+msgid "No such theme to delete"
+msgstr ""
+
+#: themer/main.c:1138
+msgid "Normal"
+msgstr ""
+
+#: engines/pixmap.c:587 engines/pixmap.c:616
+msgid "Not adjustable"
+msgstr ""
+
+#: engines/vrunner.c:607
+msgid "Notch"
+msgstr ""
+
+#: themer/main.c:949
+msgid ""
+"Note, when changing these values,\n"
+"it is advised that you do something\n"
+"like change viewports, as this will\n"
+"cause the position of the 'event windows'\n"
+"to update properly, and thus make\n"
+"moving/resizing windows work properly.\n"
+"This also applies to when you change\n"
+"the title-bar height through either\n"
+"the titlebar-min-height slider\n"
+"or the titlebar font setting.\n"
+msgstr ""
+
+#: engines/vrunner.c:619
+msgid "Offset"
+msgstr ""
+
+#: themer/main.c:780
+msgid "Opacity"
+msgstr ""
+
+#: engines/legacy.c:364 engines/pixmap.c:520 engines/zootreeves.c:1384
+#: engines/zootreeves.c:1479
+msgid "Outer Frame Blend"
+msgstr ""
+
+#: engines/truglass.c:523
+msgid "Outer Glass Glow"
+msgstr ""
+
+#: engines/legacy.c:367 engines/pixmap.c:523 engines/zootreeves.c:1482
+msgid "Outer Titlebar Blend"
+msgstr ""
+
+#: themer/main.c:521
+#, c-format
+msgid "Overwrite Theme %s?"
+msgstr ""
+
+#: engines/pixmap.c:645
+msgid "Pixmap"
+msgstr ""
+
+#: engines/zootreeves.c:1660
+msgid "Pixmaps"
+msgstr ""
+
+#: engines/pixmap.c:663
+msgid "Pixmaps (Active))"
+msgstr ""
+
+#: engines/pixmap.c:664
+msgid "Pixmaps (Inactive)"
+msgstr ""
+
+#: themer/main.c:1139
+msgid "Pointing Finger"
+msgstr ""
+
+#: engines/vrunner.c:609
+msgid "Position"
+msgstr ""
+
+#: themer/main.c:719 engines/pixmap.c:647
+msgid "Preview"
+msgstr ""
+
+#: themer/main.c:781 engines/vrunner.c:638
+msgid "Radius"
+msgstr ""
+
+#: engines/zootreeves.c:1592
+msgid "Repeat Button Part Pixmap?"
+msgstr ""
+
+#: engines/zootreeves.c:1516
+msgid "Repeat Frequency"
+msgstr ""
+
+#: engines/zootreeves.c:1487
+msgid "Repeat Gradient?"
+msgstr ""
+
+#: engines/zootreeves.c:1562
+msgid "Repeat Title Part Pixmap?"
+msgstr ""
+
+#: engines/zootreeves.c:1623
+msgid "Repeat Titlebar Pixmap?"
+msgstr ""
+
+#: themer/main.c:947
+msgid "Right"
+msgstr ""
+
+#: engines/vrunner.c:586
+msgid "Right Blend"
+msgstr ""
+
+#: engines/legacy.c:327 engines/oxygen.c:387 engines/pixmap.c:479
+#: engines/truglass.c:471 engines/vrunner.c:546 engines/zootreeves.c:1419
+msgid "Round Bottom Left Corner"
+msgstr ""
+
+#: engines/legacy.c:331 engines/oxygen.c:391 engines/pixmap.c:483
+#: engines/truglass.c:475 engines/vrunner.c:550 engines/zootreeves.c:1423
+msgid "Round Bottom Right Corner"
+msgstr ""
+
+#: engines/zootreeves.c:1347
+msgid "Round Inside Corners As well?"
+msgstr ""
+
+#: engines/legacy.c:319 engines/oxygen.c:379 engines/pixmap.c:471
+#: engines/truglass.c:463 engines/vrunner.c:538
+msgid "Round Top Left Corner"
+msgstr ""
+
+#: engines/zootreeves.c:1411
+msgid "Round Top Left Corner?"
+msgstr ""
+
+#: engines/legacy.c:323 engines/oxygen.c:383 engines/pixmap.c:475
+#: engines/truglass.c:467 engines/vrunner.c:542 engines/zootreeves.c:1415
+msgid "Round Top Right Corner"
+msgstr ""
+
+#: engines/legacy.c:338 engines/oxygen.c:398 engines/truglass.c:482
+#: engines/vrunner.c:557
+msgid "Rounding Radius"
+msgstr ""
+
+#: engines/pixmap.c:631
+msgid "Same as Active"
+msgstr ""
+
+#: engines/pixmap.c:581
+msgid "Scaled"
+msgstr ""
+
+#: themer/main.c:1038 themer/main.c:1057
+msgid "Screenshot"
+msgstr ""
+
+#: themer/main.c:1258
+msgid "Search:"
+msgstr ""
+
+#: themer/main.c:967
+msgid "Shadows"
+msgstr ""
+
+#: engines/zootreeves.c:1245
+msgid "Show Border when maximised?"
+msgstr ""
+
+#: themer/main.c:1086
+msgid "Show Tooltips for Buttons"
+msgstr ""
+
+#: engines/zootreeves.c:1251
+msgid "Show when minimised?"
+msgstr ""
+
+#: engines/oxygen.c:426
+msgid "Sides"
+msgstr ""
+
+#: themer/main.c:943
+msgid "Size"
+msgstr ""
+
+#: themer/main.c:917
+msgid "Suggested Widget Theme"
+msgstr ""
+
+#: themer/main.c:739
+msgid "Text Fill"
+msgstr ""
+
+#: themer/main.c:740
+msgid "Text Outline"
+msgstr ""
+
+#: themer/main.c:1189
+msgid "Theme"
+msgstr ""
+
+#: themer/main.c:491
+msgid "Theme Exported"
+msgstr ""
+
+#: themer/main.c:454
+msgid "Theme Imported"
+msgstr ""
+
+#: themer/main.c:575
+msgid "Theme Saved"
+msgstr ""
+
+#: themer/main.c:916
+msgid "Theme Version"
+msgstr ""
+
+#: themer/main.c:635
+msgid "Theme deleted"
+msgstr ""
+
+#: themer/main.c:921
+msgid "Themer Version"
+msgstr ""
+
+#: themer/main.c:1481
+msgid "Themes"
+msgstr ""
+
+#: engines/pixmap.c:649
+msgid "Tiled/Scaled"
+msgstr ""
+
+#: themer/main.c:1003 engines/zootreeves.c:1658
+msgid "Title Bar"
+msgstr ""
+
+#: engines/zootreeves.c:1569
+msgid "Title Bar Part Pixmap"
+msgstr ""
+
+#: engines/vrunner.c:635
+msgid "Title Glow"
+msgstr ""
+
+#: engines/zootreeves.c:1326
+msgid "Title Part Width"
+msgstr ""
+
+#: themer/main.c:793
+msgid "Title-Text Font"
+msgstr ""
+
+#: themer/main.c:821
+msgid "Title-bar Object Layout"
+msgstr ""
+
+#: themer/main.c:1188
+msgid "Titlebar"
+msgstr ""
+
+#: themer/main.c:1125
+msgid "Titlebar Double-Click Action"
+msgstr ""
+
+#: engines/zootreeves.c:1631
+msgid "Titlebar Pixmap"
+msgstr ""
+
+#: engines/zootreeves.c:1436
+msgid "Titlebar Rounding Radius"
+msgstr ""
+
+#: engines/legacy.c:370 engines/oxygen.c:428 engines/pixmap.c:526
+#: engines/truglass.c:525 engines/vrunner.c:647 engines/zootreeves.c:1528
+msgid "Titlebar Separator"
+msgstr ""
+
+#: themer/main.c:944
+msgid "Top"
+msgstr ""
+
+#: engines/zootreeves.c:1293
+msgid "Top Corner Offset (%)"
+msgstr ""
+
+#: engines/pixmap.c:489
+msgid "Top Rounding Radius"
+msgstr ""
+
+#: engines/zootreeves.c:1368
+msgid "Turn Off repeating gradients when maximised?"
+msgstr ""
+
+#: themer/main.c:167 themer/main.c:173
+msgid "Unknown"
+msgstr ""
+
+#: themer/main.c:897
+msgid "Untitled Theme"
+msgstr ""
+
+#: engines/truglass.c:519
+msgid "Upper Glass Glow"
+msgstr ""
+
+#: engines/truglass.c:517
+msgid "Upper Titlebar Glow"
+msgstr ""
+
+#: themer/main.c:1090
+msgid "Use Button Fade"
+msgstr ""
+
+#: themer/main.c:1094
+msgid "Use Button Fade Pulse"
+msgstr ""
+
+#: themer/main.c:686
+msgid "Use Button Halo/Glow"
+msgstr ""
+
+#: themer/main.c:690
+msgid "Use Button Halo/Glow For Inactive Windows"
+msgstr ""
+
+#: engines/vrunner.c:629
+msgid "Use Glow"
+msgstr ""
+
+#: themer/main.c:682
+msgid "Use Pixmap Buttons"
+msgstr ""
+
+#: themer/main.c:829
+msgid ""
+"Use colons to separate left, center, and right.\n"
+"Anything after a third colon is ignored.\n"
+"C=Close, N=Minimize, X/R=Restore\n"
+"I=Icon, T=Title, H=Help, M=Menu\n"
+"S=Shade, U/A=On Top(Up/Above)\n"
+"Y=Sticky, (#)=# pixels space, ex: (5)\n"
+msgstr ""
+
+#: themer/main.c:807
+msgid "Vertical Button Offset"
+msgstr ""
+
+#: engines/zootreeves.c:1497
+msgid "Vertical Repeat?"
+msgstr ""
+
+#: themer/main.c:179
+msgid "Whatever (no hint)"
+msgstr ""
+
+#: engines/pixmap.c:650
+msgid "Width Override"
+msgstr ""
+
+#: themer/main.c:782
+msgid "X Offset"
+msgstr ""
+
+#: themer/main.c:783
+msgid "Y Offset"
+msgstr ""
