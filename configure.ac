@@ -64,4 +64,5 @@ themer/Makefile
 pixmaps/Makefile
 libengine/Makefile
 misc/Makefile
+po/Makefile.in
 ])
