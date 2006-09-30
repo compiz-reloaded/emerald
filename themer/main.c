@@ -135,25 +135,25 @@ static void theme_list_append(gchar * value,gchar * dir, gchar * fil)
     g_free(path);
     {
         //create the Theme column data
-        const gchar * format =
-            "<b><big>%s</big></b>\n"
+        gchar * format =
+            _("<b><big>%s</big></b>\n"
             "<i>%s</i>\n"
             "<small>"
-            "<b>_(Version)</b> %s\n"
-            "<b>_(Created By)</b> %s\n"
-            "<b>_(Use With)</b> %s\n"
-            "</small>";
+            "<b>Version</b> %s\n"
+            "<b>Created By</b> %s\n"
+            "<b>Use With</b> %s\n"
+            "</small>");
         if (value[0]=='*')
         {
             value+=2;
             format=
-                "<b><big>%s</big></b> (System Theme)\n"
+                _("<b><big>%s</big></b> (System Theme)\n"
                 "<i>%s</i>\n"
                 "<small>"
-                "<b>_(Version)</b> %s\n"
-                "<b>_(Created By)</b> %s\n"
-                "<b>_(Use With)</b> %s\n"
-                "</small>";
+                "<b>Version</b> %s\n"
+                "<b>Created By</b> %s\n"
+                "<b>Use With</b> %s\n"
+                "</small>");
         }
         gchar * creator = g_key_file_get_string(f,"theme","creator",NULL);
         gchar * tver = g_key_file_get_string(f,"theme","theme_version",NULL);
