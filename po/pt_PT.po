@@ -2,463 +2,462 @@
 # Copyright (C) 2006
 # This file is distributed under the same license as the Emerald package.
 # cyberorg <cyberorg@cyberorg.info>, 2006.
-# 
-# 
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: 0.1\n"
+"Project-Id-Version: 0.1 \n"
 "Report-Msgid-Bugs-To: bugs.beryl-project.org \n"
 "POT-Creation-Date: 2006-09-28 23:18+0530\n"
-"PO-Revision-Date: 2006-09-29 16:56-0500\n"
-"Last-Translator: atie H. <atie.at.matrix@gmail.com>\n"
-"Language-Team: beryl-project\n"
+"PO-Revision-Date: 2006-09-28 23:18+0530\n"
+"Last-Translator: Joel Calado <joelcalado@gmail.com>\n"
+"Language-Team: beryl-project <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit"
+"Content-Transfer-Encoding: 8bit\n"
 
 #: engines/vrunner.c:600
 msgid "(Alpha)"
-msgstr "(투명값)"
+msgstr "(Alfa)"
 
 #: engines/vrunner.c:591
 msgid "(Color)"
-msgstr "(색상)"
+msgstr "(Cor)"
 
 #: themer/main.c:993
 msgid "Active Window"
-msgstr "사용중인 창"
+msgstr "Janela Activa"
 
 #: engines/zootreeves.c:1654
 msgid "Active/Inactive"
-msgstr "사용/비사용"
+msgstr "Activa/Inactiva"
 
 #: themer/main.c:610
 #, c-format
 msgid "Are you sure you want to delete %s?"
-msgstr "%s(을)를 삭제하기를 원합니까?"
+msgstr "Tem a certeza que deseja apagar %s?"
 
 #: engines/oxygen.c:424
 msgid "Base"
-msgstr "기본"
+msgstr "Base"
 
 #: engines/legacy.c:31
 msgid "Based on original gnome-window-decorator"
-msgstr "원래의 그놈 창 장식틀에 기반"
+msgstr "Baseado no gnome-window-decorator original"
 
 #: themer/main.c:942
 msgid "Border"
-msgstr "테두리"
+msgstr "Limites"
 
 #: engines/zootreeves.c:1238
 msgid "Border Gap"
-msgstr "테두리 간격"
+msgstr "Falha no limite"
 
 #: engines/zootreeves.c:1657
 msgid "Border Layout"
-msgstr "테두리 레이아웃"
+msgstr "Desgin dos limites"
 
 #: themer/main.c:945
 msgid "Bottom"
-msgstr "아래"
+msgstr "Fundo"
 
 #: engines/pixmap.c:496
 msgid "Bottom Rounding Radius"
-msgstr "아래 둥근 반경"
+msgstr "Grau de arredondamento do fundo"
 
 #: themer/main.c:717
 msgid "Button"
-msgstr "버튼"
+msgstr "Botão"
 
 #: themer/main.c:1107
 msgid "Button Fade Step Duration"
-msgstr "버튼 사라짐 단계 지속"
+msgstr "Duração de cada passo do fade"
 
 #: themer/main.c:1101
 msgid "Button Fade Total Duration"
-msgstr "버튼 사라짐 총 지속"
+msgstr "Dração total do fade dos botões"
 
 #: themer/main.c:742
 msgid "Button Fill"
-msgstr "버튼 채우기"
+msgstr "Preenchimento do botão"
 
 #: themer/main.c:1136
 msgid "Button Hover Cursor"
-msgstr "버튼 후버 커서"
+msgstr "Cursor quando sobre os botões"
 
 #: themer/main.c:743
 msgid "Button Outline"
-msgstr "버튼 외곽선"
+msgstr "Limites do botão"
 
 #: engines/zootreeves.c:1600
 msgid "Button Part Pixmap"
-msgstr "버튼 부분 픽스맵"
+msgstr ""
 
 #: engines/zootreeves.c:1333
 msgid "Button Part Width)"
-msgstr "버튼 부분 넓이"
+msgstr "Imagem da parte do botão"
 
 #: themer/main.c:706
 msgid "Button Pixmaps"
-msgstr "버튼 픽스맵"
+msgstr "Imagens dos botões"
 
 #: themer/main.c:1119
 msgid "Button Pulse Min Opacity %"
-msgstr "버튼 펄스 최소 불투명도 %"
+msgstr "Opacidade mínimima do pulsar dos botões"
 
 #: themer/main.c:1113
 msgid "Button Pulse Wait Duration"
-msgstr "버튼 펄스 기다림 지속"
+msgstr "Duração da espera para pulsar"
 
 #: themer/main.c:1186
 msgid "Buttons"
-msgstr "버튼"
+msgstr "Botões"
 
 #: themer/main.c:598
 msgid ""
 "Can't delete system themes\n"
 "(or you forgot to enter a name)"
 msgstr ""
-"시스템 테마는 삭제할 수 없습니다\n"
-"(또는 테마 이름을 입력하는 것을 잊었을 겁니다.)"
+"Impossível apagar temas do sistema\n"
+"(ou esqueceu-se de introduzir um nome)"
 
 #: themer/main.c:503
 msgid ""
 "Can't save over system themes\n"
 "(or you forgot to enter a name)"
 msgstr ""
-"시스템 테마로 저장할 수 없습니다\n"
-"(또는 테마 이름을 입력하는 것을 잊었을 겁니다.)"
+"Impossível sobrescrever temas do sistema\n"
+"(ou esqueceu-se de introduzir um nome)"
 
 #: engines/zootreeves.c:1603
 msgid "Choose Button Part Pixmap"
-msgstr "버튼 부분 픽스맵 선택"
+msgstr "Escolher imagem do botão"
 
 #: engines/zootreeves.c:1572
 msgid "Choose Titlebar Part Pixmap"
-msgstr "타이틀바 부분 픽스맵 선택"
+msgstr "Escolher imagem da parte da barra de título"
 
 #: engines/zootreeves.c:1634
 msgid "Choose Titlebar Pixmap"
-msgstr "타이틀바 픽스맵 선택"
+msgstr "Escolher imagem da barra de título "
 
 #: themer/main.c:720 engines/pixmap.c:648
 msgid "Clear"
-msgstr "비우기"
+msgstr "Limpar"
 
 #: themer/main.c:779
 msgid "Color"
-msgstr "색상"
+msgstr "Cor"
 
 #: themer/main.c:738 engines/legacy.c:362 engines/legacy.c:394
 #: engines/oxygen.c:422 engines/oxygen.c:452 engines/pixmap.c:665
 #: engines/truglass.c:514 engines/truglass.c:549 engines/vrunner.c:582
 #: engines/vrunner.c:673 engines/zootreeves.c:1477
 msgid "Colors"
-msgstr "색상"
+msgstr "Cores"
 
 #: engines/legacy.c:377 engines/oxygen.c:435 engines/truglass.c:532
 #: engines/vrunner.c:656 engines/zootreeves.c:1535
 msgid "Contents Highlight"
-msgstr "내용부 강조"
+msgstr "Highlight dos conteúdos"
 
 #: engines/legacy.c:376 engines/oxygen.c:434 engines/truglass.c:531
 #: engines/vrunner.c:655 engines/zootreeves.c:1534
 msgid "Contents Outline"
-msgstr "내용부 외곽선"
+msgstr "Limite dos conteúdos"
 
 #: engines/legacy.c:378 engines/oxygen.c:436 engines/truglass.c:533
 #: engines/zootreeves.c:1536
 msgid "Contents Shadow"
-msgstr "내용부 그림자"
+msgstr "Sombra dos conteúdos"
 
 #: engines/vrunner.c:589 engines/vrunner.c:598
 msgid "Contrast"
-msgstr "대조"
+msgstr "Contraste"
 
 #: engines/zootreeves.c:1656
 msgid "Corners"
-msgstr "구석"
+msgstr "Cantos"
 
 #: themer/main.c:538
 msgid "Couldn't Form Theme"
-msgstr "테마를 형성할 수 없습니다"
+msgstr "Impossível formar tema"
 
 #: themer/main.c:533
 msgid "Couldn't Write Theme"
-msgstr "테마를 쓸 수 없습니다"
+msgstr "Impossível escrever o tema"
 
 #: themer/main.c:914
 msgid "Creator"
-msgstr "만든이"
+msgstr "Criador"
 
 #: engines/vrunner.c:617
 msgid "Curve"
-msgstr "커브"
+msgstr "Curva"
 
 #: themer/main.c:915
 msgid "Description"
-msgstr "설명"
+msgstr "Desrição"
 
 #: engines/oxygen.c:31
 msgid "Designed to be vista-ish in nature"
-msgstr "기본적으로 비스타 테마스럽도록 디자인됨"
+msgstr "Com o objectivo de ser parecido com o vista"
 
 #: engines/zootreeves.c:1506
 msgid "Diagonal Repeat?"
-msgstr "대각선 반복?"
+msgstr "Repetição diagonal?"
 
 #: engines/zootreeves.c:1340
 msgid "Dip Corners Radius)"
-msgstr "함몰 구석 반경"
+msgstr "Grau de arredondamento da falha nos cantos"
 
 #: themer/main.c:1199 themer/main.c:1482
 msgid "Edit"
-msgstr "편집"
+msgstr "Editar"
 
 #: themer/main.c:1483
 msgid "Emerald Settings"
-msgstr "에머랄드 설정"
+msgstr "Opções do Emerald"
 
 #: engines/zootreeves.c:1588
 msgid "Enable Button Part Pixmap?"
-msgstr "버튼 부분 픽스맵을 사용합니까?"
+msgstr "Activar imagem da parte do botão?"
 
 #: engines/zootreeves.c:1320
 msgid "Enable Button Part?"
-msgstr "버튼 부분을 사용합니까?"
+msgstr "Activar parte do botão?"
 
 #: engines/zootreeves.c:1364
 msgid "Enable Different Maximised Colors?"
-msgstr "다른 최대화된 색상을 사용합니까?"
+msgstr "Activar cores diferentes para janelas maximizadas?"
 
 #: engines/zootreeves.c:1274
 msgid "Enable Left Bar Dip?"
-msgstr "왼쪽 막대 함몰을 사용합니까?"
+msgstr "Activar falha na barra esquerda?"
 
 #: engines/zootreeves.c:1287
 msgid "Enable Lower Bulge? (Useless at the moment, but will be used soon)"
-msgstr "아래쪽 부풀기를 사용합니까? (현재 사용을 못하지만, 나중에 사용됨)"
+msgstr "Activar falha inferior? (Sem uso de momento)"
 
 #: engines/zootreeves.c:1314
 msgid "Enable Title Bar Dip?"
-msgstr "타이틀바 함몰을 사용합니까?"
+msgstr "Activar falha na barra de título?"
 
 #: engines/zootreeves.c:1558
 msgid "Enable Title Part Pixmap?"
-msgstr "타이틀 부분 픽스맵을 사용합니까?"
+msgstr "Activar imagem da parte do título"
 
 #: engines/zootreeves.c:1619
 msgid "Enable Titlebar Pixmap?"
-msgstr "타이틀바 픽스맵을 사용합니까?"
+msgstr "Activar imagem da barra de título?"
 
 #: themer/main.c:485
 msgid "Error calling tar."
-msgstr "tar 명령을 부르는데 에러."
+msgstr "Erro ao executar o tar"
 
 #: engines/pixmap.c:68
 msgid "Everything done with customizable pixmaps!"
-msgstr "모든 것이 꾸밀 수 있는 픽스맵으로 마쳐짐!"
+msgstr "Tudo é feito com imagens customizáveis!"
 
 #: engines/zootreeves.c:84
 msgid "Evolved from the legacy engine"
-msgstr "레가시 엔진에서 진화됨"
+msgstr "Evoluído do motor inicial"
 
 #: themer/main.c:855
 msgid "Export Theme..."
-msgstr "테마 내보내기..."
+msgstr "Exportar tema"
 
 #: themer/main.c:904
 msgid "Export..."
-msgstr "내보내기..."
+msgstr "Exportar..."
 
 #: themer/main.c:718 engines/pixmap.c:646
 msgid "File"
-msgstr "파일"
+msgstr "Ficheiro"
 
 #: engines/legacy.c:395 engines/oxygen.c:453 engines/pixmap.c:666
 #: engines/truglass.c:550 engines/vrunner.c:674
 msgid "Frame"
-msgstr "테마틀"
+msgstr "Limite"
 
 #: engines/truglass.c:516
 msgid "Frame Base Color"
-msgstr "테마틀 기본 색상"
+msgstr "Cor base da moldura"
 
 #: themer/main.c:975
 msgid "Frame Borders"
-msgstr "테마틀 테두리"
+msgstr "Limites da moldura"
 
 #: themer/main.c:1185
 msgid "Frame Engine"
-msgstr "테마틀 엔진"
+msgstr "Motor da moldura"
 
 #: engines/legacy.c:373 engines/oxygen.c:431 engines/truglass.c:528
 #: engines/vrunner.c:651 engines/zootreeves.c:1531
 msgid "Frame Highlight"
-msgstr "테마틀 높이"
+msgstr "Highlight da moldura"
 
 #: engines/legacy.c:372 engines/oxygen.c:430 engines/truglass.c:527
 #: engines/vrunner.c:650 engines/zootreeves.c:1530
 msgid "Frame Outline"
-msgstr "테마틀 외곽선"
+msgstr "Limite exterior da moldura"
 
 #: engines/zootreeves.c:1429
 msgid "Frame Rounding Radius"
-msgstr "테마틀 둥근 반경"
+msgstr "Raio de arredondamento da moldura"
 
 #: engines/legacy.c:374 engines/oxygen.c:432 engines/truglass.c:529
 #: engines/zootreeves.c:1532
 msgid "Frame Shadow"
-msgstr "테마틀 그림자"
+msgstr "Sombra da moldura"
 
 #: themer/main.c:1187
 msgid "Frame/Shadows"
-msgstr "테마틀/그림자"
+msgstr "Modulra/sombra"
 
 #: engines/truglass.c:35
 msgid "Glassy effects for your windows"
-msgstr "창에 투명유리 효과"
+msgstr "Efeito vidrado nas janelas"
 
 #: engines/oxygen.c:425
 msgid "Glow"
-msgstr "발광"
+msgstr "Brilho"
 
 #: engines/truglass.c:491
 msgid "Glow Height"
-msgstr "발광 높이"
+msgstr "Altura do brilho"
 
 #: engines/pixmap.c:651
 msgid "Height Override"
-msgstr "높이 넘기"
+msgstr "Override da altura"
 
 #: themer/main.c:813
 msgid "Horizontal Button Offset"
-msgstr "수평적 버튼 오프셋"
+msgstr "Margem horizontal dos botões"
 
 #: themer/main.c:1042
 msgid "Images"
-msgstr "이미지"
+msgstr "Imagens"
 
 #: themer/main.c:1375 themer/main.c:1439
 msgid "Import Theme..."
-msgstr "테마 가져오기..."
+msgstr "Importar tema"
 
 #: themer/main.c:994
 msgid "Inactive Window"
-msgstr "비사용중인 창"
+msgstr "Janela inactiva"
 
 #: themer/main.c:1064
 msgid "Information"
-msgstr "정보"
+msgstr "Informação"
 
 #: engines/legacy.c:365 engines/pixmap.c:521 engines/zootreeves.c:1393
 #: engines/zootreeves.c:1480
 msgid "Inner Frame Blend"
-msgstr "내부 테마틀 혼합"
+msgstr "Mistura interior dos limites"
 
 #: engines/legacy.c:368 engines/pixmap.c:524 engines/zootreeves.c:1483
 msgid "Inner Titlebar Blend"
-msgstr "내부 타이틀바 혼합"
+msgstr "Mistura interior da barra de título"
 
 #: themer/main.c:471
 msgid ""
 "Invalid File Name\n"
 "Must End in .emerald"
 msgstr ""
-"올바르지 않는 파일 이름\n"
-"반드시 .emerald 확장자이어야 합니다"
+"Nome de ficheiro inválido"
+"Deve terminar em .emerald"
 
 #: themer/main.c:334 themer/main.c:342 themer/main.c:508 themer/main.c:604
 msgid "Invalid Theme Name"
-msgstr "올바르지 않는 테마 이름"
+msgstr "Nome de tema inválido"
 
 #: themer/main.c:465
 msgid ""
 "Invalid Theme Name\n"
 "Could Not Export"
 msgstr ""
-"올바르지 않는 테마 이름\n"
-"내보낼 수 없습니다"
+"Nome de tema inválido\n"
+"Impossível exportar"
 
 #: themer/main.c:423
 msgid "Invalid theme file.  Does not end in .emerald"
-msgstr "올바르지 않는 테마 파일. .emerald 확장자로 끝나지 않음"
+msgstr "Ficheiro de tema inválido, não termina em .emerald"
 
 #: themer/main.c:946
 msgid "Left"
-msgstr "왼쪽"
+msgstr "Esquerda"
 
 #: engines/zootreeves.c:1659
 msgid "Left Bar"
-msgstr "왼쪽 막대"
+msgstr "Barra esquerda"
 
 #: engines/zootreeves.c:1280
 msgid "Left Bar Radius"
-msgstr "왼쪽 막대 반경"
+msgstr "Raio da bara esquerda"
 
 #: engines/vrunner.c:584
 msgid "Left Blend"
-msgstr "왼쪽 혼합"
+msgstr "Mistura esquerda"
 
 #: engines/truglass.c:520
 msgid "Lower Glass Glow"
-msgstr "아래쪽 유리 발광"
+msgstr "Brilho inferior"
 
 #: engines/zootreeves.c:1655
 msgid "Maximised"
-msgstr "최대화됨"
+msgstr "Maximizada"
 
 #: engines/vrunner.c:585
 msgid "Middle Blend"
-msgstr "가운데 혼합"
+msgstr "Mistura central"
 
 #: engines/truglass.c:522
 msgid "Middle Glass Glow"
-msgstr "가운데 유리 발광"
+msgstr "Brilho central"
 
 #: engines/zootreeves.c:1257
 msgid "Minimised Border Size"
-msgstr "최소화된 테두리 크기"
+msgstr "Largura do limite quando minimizada"
 
 #: themer/main.c:801
 msgid "Minimum Title-bar Height"
-msgstr "최소 타이틀바 높이"
+msgstr "Altura mínima da barra de título"
 
 #: engines/vrunner.c:55
 msgid "Multiple gradients with somewhat glassy features too"
-msgstr "약간의 유리창 효과와 함께 복수의 색 변화"
+msgstr "Múltiplos gradientes com algum aspecto vidrado"
 
 #: themer/main.c:1080
 msgid ""
 "NOTE - These settings are not part of themes, they are stored separately, "
 "and control various UI preferences for Emerald."
 msgstr ""
-"주의 - 이 설정들은 테마의 부분이 아니고, 따로이 저장이 됩니다. "
-"그리고, 에머랄드를 위한 여러가지 UI 기본설정을 조종합니다."
+"NOTA - Estes valores não são parte dos temas, são armazenados em separado,"
+"e controlam variadas opções do Emerald"
 
 #: themer/main.c:895
 msgid "Name:"
-msgstr "이름:"
+msgstr "Nome:"
 
 #: themer/main.c:185
 msgid "No Description"
-msgstr "설명 없음"
+msgstr "Sem descrição"
 
 #: themer/main.c:641
 msgid "No such theme to delete"
-msgstr "삭제할 그런 테마가 없음"
+msgstr "Não existe tema para apagar"
 
 #: themer/main.c:1138
 msgid "Normal"
-msgstr "보통"
+msgstr "Normal"
 
 #: engines/pixmap.c:587 engines/pixmap.c:616
 msgid "Not adjustable"
-msgstr "조절할 수 없음"
+msgstr "Não ajustável"
 
 #: engines/vrunner.c:607
 msgid "Notch"
-msgstr "높이단"
+msgstr "Altura"
 
 #: themer/main.c:949
 msgid ""
@@ -473,324 +472,325 @@ msgid ""
 "the titlebar-min-height slider\n"
 "or the titlebar font setting.\n"
 msgstr ""
-"주의, 이 값을 변경할 때,\n"
-"뷰포트를 바꾸는 것과 같은\n"
-"무엇인가를 하도록 충고합니다, 그러면\n"
-"이벤트 창의 위치를 제대로\n"
-"갱신하게 되고, 그래서 창의 이동과\n"
-"크기조절이 올바르게 동작하게 만듭니다.\n"
-"이것은 타이틀바 최소 높이 슬라이더\n"
-"또는 타이틀바 폰트 설정에서\n"
-"타이틀바의 높이를 변경할 때도\n"
-"또한 적용합니다.\n"
+"Nota, quando mudar estes valores,\n"
+"é aconselhado que faça qualquer coisa\n"
+"como mudar de viweport, porque isto \n"
+"faz com que a posição das 'janelas de eventos'\n"
+"actualize propriamente, fazendo assim\n"
+"com que o mover/redimensionar de janelas funcione bem.\n"
+"Isto também se aplica a quando muda\n"
+"a altura da barra de título\n"
+"através da opção própria\n"
+"ou do tamanho da fonte da barra.\n"
+
 
 #: engines/vrunner.c:619
 msgid "Offset"
-msgstr "오프셋"
+msgstr "Margem"
 
 #: themer/main.c:780
 msgid "Opacity"
-msgstr "불투명"
+msgstr "Opacidade"
 
 #: engines/legacy.c:364 engines/pixmap.c:520 engines/zootreeves.c:1384
 #: engines/zootreeves.c:1479
 msgid "Outer Frame Blend"
-msgstr "외부 테마틀 혼합"
+msgstr "Mistura"
 
 #: engines/truglass.c:523
 msgid "Outer Glass Glow"
-msgstr "외부 유리 발광"
+msgstr "Brilho exterior"
 
 #: engines/legacy.c:367 engines/pixmap.c:523 engines/zootreeves.c:1482
 msgid "Outer Titlebar Blend"
-msgstr "외부 타이틀바 혼합"
+msgstr "Mistura exterior da barra de título"
 
 #: themer/main.c:521
 #, c-format
 msgid "Overwrite Theme %s?"
-msgstr "테마 %s(을)를 엎어씁니까?"
+msgstr "Sobrescrever tema %s?"
 
 #: engines/pixmap.c:645
 msgid "Pixmap"
-msgstr "픽스맵"
+msgstr "Imagem"
 
 #: engines/zootreeves.c:1660
 msgid "Pixmaps"
-msgstr "픽스맵"
+msgstr "Imagens"
 
 #: engines/pixmap.c:663
 msgid "Pixmaps (Active))"
-msgstr "픽스맵 (사용)"
+msgstr "Imagens (Activa)"
 
 #: engines/pixmap.c:664
 msgid "Pixmaps (Inactive)"
-msgstr "픽스맵 (비사용)"
+msgstr "Imagens (Inactiva)"
 
 #: themer/main.c:1139
 msgid "Pointing Finger"
-msgstr "손가락 모양"
+msgstr "Dedo apontador"
 
 #: engines/vrunner.c:609
 msgid "Position"
-msgstr "위치"
+msgstr "Posição"
 
 #: themer/main.c:719 engines/pixmap.c:647
 msgid "Preview"
-msgstr "미리보기"
+msgstr "Ver antes"
 
 #: themer/main.c:781 engines/vrunner.c:638
 msgid "Radius"
-msgstr "반경"
+msgstr "Raio"
 
 #: engines/zootreeves.c:1592
 msgid "Repeat Button Part Pixmap?"
-msgstr "버튼 부분 픽스맵을 반복합니까?"
+msgstr "Reptir imagem da parte do botão?"
 
 #: engines/zootreeves.c:1516
 msgid "Repeat Frequency"
-msgstr "반복 주기"
+msgstr "Frequência de repetição"
 
 #: engines/zootreeves.c:1487
 msgid "Repeat Gradient?"
-msgstr "색 변화를 반복합니까?"
+msgstr "Repetir gradiente?"
 
 #: engines/zootreeves.c:1562
 msgid "Repeat Title Part Pixmap?"
-msgstr "타이틀 부분 픽스맵을 반복합니까?"
+msgstr "Repetir imagem da parte da barra de título"
 
 #: engines/zootreeves.c:1623
 msgid "Repeat Titlebar Pixmap?"
-msgstr "타이틀바 픽스맵을 반복합니까?"
+msgstr "Repetir imagem da barra de título"
 
 #: themer/main.c:947
 msgid "Right"
-msgstr "오른쪽"
+msgstr "Direita"
 
 #: engines/vrunner.c:586
 msgid "Right Blend"
-msgstr "오른쪽 혼합"
+msgstr "Mistura direita"
 
 #: engines/legacy.c:327 engines/oxygen.c:387 engines/pixmap.c:479
 #: engines/truglass.c:471 engines/vrunner.c:546 engines/zootreeves.c:1419
 msgid "Round Bottom Left Corner"
-msgstr "왼쪽 아래 구석을 둥글게함"
+msgstr "Arredondar canto inferior esquerdo"
 
 #: engines/legacy.c:331 engines/oxygen.c:391 engines/pixmap.c:483
 #: engines/truglass.c:475 engines/vrunner.c:550 engines/zootreeves.c:1423
 msgid "Round Bottom Right Corner"
-msgstr "오른쪽 아래 구석을 둥글게 함"
+msgstr "Arredondar canto inferior direito"
 
 #: engines/zootreeves.c:1347
 msgid "Round Inside Corners As well?"
-msgstr "내부 구석들도 같이 둥글게 합니까?"
+msgstr "Arredondar cantos interiores também?"
 
 #: engines/legacy.c:319 engines/oxygen.c:379 engines/pixmap.c:471
 #: engines/truglass.c:463 engines/vrunner.c:538
 msgid "Round Top Left Corner"
-msgstr "왼쪽 위 구석을 둥글게 함"
+msgstr "Arredondar canto superior esquerdo"
 
 #: engines/zootreeves.c:1411
 msgid "Round Top Left Corner?"
-msgstr "왼쪽 위 구석을 둥글게 합니까?"
+msgstr "Arredondar canto superior esquerdo?"
 
 #: engines/legacy.c:323 engines/oxygen.c:383 engines/pixmap.c:475
 #: engines/truglass.c:467 engines/vrunner.c:542 engines/zootreeves.c:1415
 msgid "Round Top Right Corner"
-msgstr "오른쪽 위 구석을 둥글게 함"
+msgstr "Arredondar canto superior direito"
 
 #: engines/legacy.c:338 engines/oxygen.c:398 engines/truglass.c:482
 #: engines/vrunner.c:557
 msgid "Rounding Radius"
-msgstr "둥근 반경"
+msgstr "Raio de arredondamento"
 
 #: engines/pixmap.c:631
 msgid "Same as Active"
-msgstr "사용인 것과 같게 함"
+msgstr "Mesmas que as activas"
 
 #: engines/pixmap.c:581
 msgid "Scaled"
-msgstr "스케일"
+msgstr "Adaptado"
 
 #: themer/main.c:1038 themer/main.c:1057
 msgid "Screenshot"
-msgstr "스크린샷"
+msgstr "Captura de Ecrã"
 
 #: themer/main.c:1258
 msgid "Search:"
-msgstr "찾아보기:"
+msgstr "Procurar"
 
 #: themer/main.c:967
 msgid "Shadows"
-msgstr "그림자"
+msgstr "Sombras"
 
 #: engines/zootreeves.c:1245
 msgid "Show Border when maximised?"
-msgstr "최대화되었을 때 테두리를 보입니까?"
+msgstr "Mostrar limites quando maximizada?"
 
 #: themer/main.c:1086
 msgid "Show Tooltips for Buttons"
-msgstr "버튼을 위한 툴팁 보이기"
+msgstr "Mostrar tooltips dos botões?"
 
 #: engines/zootreeves.c:1251
 msgid "Show when minimised?"
-msgstr "최소화되었을 때 보입니까?"
+msgstr "Mostrar quando minimizada?"
 
 #: engines/oxygen.c:426
 msgid "Sides"
-msgstr "옆"
+msgstr "Lados"
 
 #: themer/main.c:943
 msgid "Size"
-msgstr "크기"
+msgstr "Tamanho"
 
 #: themer/main.c:917
 msgid "Suggested Widget Theme"
-msgstr "제안하는 위젯 테마"
+msgstr "Tema GTK sugerido"
 
 #: themer/main.c:739
 msgid "Text Fill"
-msgstr "글자 채우기"
+msgstr "Preenchimento do texto"
 
 #: themer/main.c:740
 msgid "Text Outline"
-msgstr "글자 외곽선"
+msgstr "Limite do texto"
 
 #: themer/main.c:1189
 msgid "Theme"
-msgstr "테마"
+msgstr "Tema"
 
 #: themer/main.c:491
 msgid "Theme Exported"
-msgstr "테마 내보내짐"
+msgstr "Tema exportado"
 
 #: themer/main.c:454
 msgid "Theme Imported"
-msgstr "테마 가져와짐"
+msgstr "Tema importado"
 
 #: themer/main.c:575
 msgid "Theme Saved"
-msgstr "테마 저장됨"
+msgstr "Tema guardado"
 
 #: themer/main.c:916
 msgid "Theme Version"
-msgstr "테마 버전"
+msgstr "Versão do themer"
 
 #: themer/main.c:635
 msgid "Theme deleted"
-msgstr "테마 삭제됨"
+msgstr "Tema apagado"
 
 #: themer/main.c:921
 msgid "Themer Version"
-msgstr "테마도구 버전"
+msgstr "Versão do themer"
 
 #: themer/main.c:1481
 msgid "Themes"
-msgstr "테마"
+msgstr "Temas"
 
 #: engines/pixmap.c:649
 msgid "Tiled/Scaled"
-msgstr "타일/스케일"
+msgstr "Repetido/Adaptado"
 
 #: themer/main.c:1003 engines/zootreeves.c:1658
 msgid "Title Bar"
-msgstr "타이틀바"
+msgstr "Barra de título"
 
 #: engines/zootreeves.c:1569
 msgid "Title Bar Part Pixmap"
-msgstr "타이틀바 부분 픽스맵"
+msgstr "Imagem da parte da barra de título"
 
 #: engines/vrunner.c:635
 msgid "Title Glow"
-msgstr "타이틀 발광"
+msgstr "Brilho do título"
 
 #: engines/zootreeves.c:1326
 msgid "Title Part Width"
-msgstr "타이틀 부분 넓이"
+msgstr "Largura da parte do título"
 
 #: themer/main.c:793
 msgid "Title-Text Font"
-msgstr "타이틀 글꼴"
+msgstr "Fonte do título"
 
 #: themer/main.c:821
 msgid "Title-bar Object Layout"
-msgstr "타이틀바 객체 배치"
+msgstr "Esquema da barra de título"
 
 #: themer/main.c:1188
 msgid "Titlebar"
-msgstr "타이틀바"
+msgstr "Barra de título"
 
 #: themer/main.c:1125
 msgid "Titlebar Double-Click Action"
-msgstr "타이틀바 두번누름 동작"
+msgstr "Acção de duplo clique na barra de título"
 
 #: engines/zootreeves.c:1631
 msgid "Titlebar Pixmap"
-msgstr "타이틀바 픽스맵"
+msgstr "Imagem da barra de título"
 
 #: engines/zootreeves.c:1436
 msgid "Titlebar Rounding Radius"
-msgstr "타이틀바 둥근 반경"
+msgstr "Raio de arredondamento da barra de título"
 
 #: engines/legacy.c:370 engines/oxygen.c:428 engines/pixmap.c:526
 #: engines/truglass.c:525 engines/vrunner.c:647 engines/zootreeves.c:1528
 msgid "Titlebar Separator"
-msgstr "타이틀바 구분자"
+msgstr "Separador da barra de título"
 
 #: themer/main.c:944
 msgid "Top"
-msgstr "위"
+msgstr "Topo"
 
 #: engines/zootreeves.c:1293
 msgid "Top Corner Offset (%)"
-msgstr "위 구석 오프셋 (%)"
+msgstr "Margens dos cantos superiores (%)"
 
 #: engines/pixmap.c:489
 msgid "Top Rounding Radius"
-msgstr "위 둥근 반경"
+msgstr "Raio de arredondamento do topo"
 
 #: engines/zootreeves.c:1368
 msgid "Turn Off repeating gradients when maximised?"
-msgstr "최대화되었을 때 색 변화를 반복하는 것을 끕니까?"
+msgstr "Desligar gradientes repetidos quando maximizada?"
 
 #: themer/main.c:167 themer/main.c:173
 msgid "Unknown"
-msgstr "알 수 없음"
+msgstr "Desconhecido"
 
 #: themer/main.c:897
 msgid "Untitled Theme"
-msgstr "제목없는 테마"
+msgstr "Tema sem nome"
 
 #: engines/truglass.c:519
 msgid "Upper Glass Glow"
-msgstr "위쪽 유리 발광"
+msgstr "Brilho superior"
 
 #: engines/truglass.c:517
 msgid "Upper Titlebar Glow"
-msgstr "위쪽 타이틀바 발광"
+msgstr "Brilho superior da barra de título"
 
 #: themer/main.c:1090
 msgid "Use Button Fade"
-msgstr "버튼 사라짐 사용"
+msgstr "Usar fade nos botões"
 
 #: themer/main.c:1094
 msgid "Use Button Fade Pulse"
-msgstr "버튼 사라짐 펄스 사용"
+msgstr "Usar botões pulsantes"
 
 #: themer/main.c:686
 msgid "Use Button Halo/Glow"
-msgstr "버튼 할로/발광 사용"
+msgstr "Usar Halo/brilho do botão"
 
 #: themer/main.c:690
 msgid "Use Button Halo/Glow For Inactive Windows"
-msgstr "비사용중인 창을 위하여 버튼 할로/발광 사용"
+msgstr "Usar halo para os botões/brilho para janelas inactivas"
 
 #: engines/vrunner.c:629
 msgid "Use Glow"
-msgstr "발광 사용"
+msgstr "Usar brilho"
 
 #: themer/main.c:682
 msgid "Use Pixmap Buttons"
-msgstr "픽스맵 버튼 사용"
+msgstr "Usar imagens para botões"
 
 #: themer/main.c:829
 msgid ""
@@ -801,34 +801,32 @@ msgid ""
 "S=Shade, U/A=On Top(Up/Above)\n"
 "Y=Sticky, (#)=# pixels space, ex: (5)\n"
 msgstr ""
-"왼쪽, 가운데, 오른쪽을 구분하기 위해 콜론 사용.\n"
-"어느 것이든 세번째 콜론 다음은 무시됨.\n"
-"C=닫기, N=최소, X/R=복원\n"
-"I=아이콘, T=타이틀, H=도움말, M=메뉴\n"
-"S=말아넣기, U/A=항상 위에\n"
-"Y=끈적이, (#)=# 픽셀 간격, 예: (5)\n"
-
+"Use vírgulas para separar esquerda, centro, e direita.\n"
+"Qualquer coisa depois da terceira vírgula é ignorada"
+"C=Fechar, N=Minimizar, X/R=Restaurar\n"
+"I=Ícone, T=Título, H=Ajuda, M=Menu\n"
+"S=Shade, U/A=No topo(Acima/abaixo)\n"
+"Y=Sticky, (#)= Nº de pixeis de espaço, ex: (5)\n"
 #: themer/main.c:807
 msgid "Vertical Button Offset"
-msgstr "수직적 버튼 오프셋"
+msgstr "Margem vertical dos botões"
 
 #: engines/zootreeves.c:1497
 msgid "Vertical Repeat?"
-msgstr "수직적으로 반복합니까?"
+msgstr "Repetição vertical?"
 
 #: themer/main.c:179
 msgid "Whatever (no hint)"
-msgstr "무엇이든 (힌트 없음)"
+msgstr "Qualquer (sem pista)"
 
 #: engines/pixmap.c:650
 msgid "Width Override"
-msgstr "넓이 넘기"
+msgstr "Sobrescrever largura"
 
 #: themer/main.c:782
 msgid "X Offset"
-msgstr "가로 오프셋"
+msgstr "Margem X"
 
 #: themer/main.c:783
 msgid "Y Offset"
-msgstr "세로 오프셋"
-
+msgstr "Margem Y"
