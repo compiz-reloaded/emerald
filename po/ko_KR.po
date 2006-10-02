@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: 0.1\n"
 "Report-Msgid-Bugs-To: bugs.beryl-project.org \n"
 "POT-Creation-Date: 2006-09-28 23:18+0530\n"
-"PO-Revision-Date: 2006-09-29 16:56-0500\n"
+"PO-Revision-Date: 2006-10-01 16:32-0500\n"
 "Last-Translator: atie H. <atie.at.matrix@gmail.com>\n"
 "Language-Team: beryl-project\n"
 "MIME-Version: 1.0\n"
@@ -67,51 +67,51 @@ msgstr "아래 둥근 반경"
 
 #: themer/main.c:717
 msgid "Button"
-msgstr "버튼"
+msgstr "단추"
 
 #: themer/main.c:1107
 msgid "Button Fade Step Duration"
-msgstr "버튼 사라짐 단계 지속"
+msgstr "단추 부드럽게 강조하기 단계 지속"
 
 #: themer/main.c:1101
 msgid "Button Fade Total Duration"
-msgstr "버튼 사라짐 총 지속"
+msgstr "단추 부드럽게 강조하기 총 지속"
 
 #: themer/main.c:742
 msgid "Button Fill"
-msgstr "버튼 채우기"
+msgstr "단추 채우기"
 
 #: themer/main.c:1136
 msgid "Button Hover Cursor"
-msgstr "버튼 후버 커서"
+msgstr "단추위에 커서를 올렸을 때 모양"
 
 #: themer/main.c:743
 msgid "Button Outline"
-msgstr "버튼 외곽선"
+msgstr "단추 외곽선"
 
 #: engines/zootreeves.c:1600
 msgid "Button Part Pixmap"
-msgstr "버튼 부분 픽스맵"
+msgstr "단추 부분 픽스맵"
 
 #: engines/zootreeves.c:1333
 msgid "Button Part Width)"
-msgstr "버튼 부분 넓이"
+msgstr "단추 부분 넓이"
 
 #: themer/main.c:706
 msgid "Button Pixmaps"
-msgstr "버튼 픽스맵"
+msgstr "단추 픽스맵"
 
 #: themer/main.c:1119
 msgid "Button Pulse Min Opacity %"
-msgstr "버튼 펄스 최소 불투명도 %"
+msgstr "단추 깜빡이기 최소 불투명도 %"
 
 #: themer/main.c:1113
 msgid "Button Pulse Wait Duration"
-msgstr "버튼 펄스 기다림 지속"
+msgstr "단추 깜빡이기 기다림 지속"
 
 #: themer/main.c:1186
 msgid "Buttons"
-msgstr "버튼"
+msgstr "단추"
 
 #: themer/main.c:598
 msgid ""
@@ -131,7 +131,7 @@ msgstr ""
 
 #: engines/zootreeves.c:1603
 msgid "Choose Button Part Pixmap"
-msgstr "버튼 부분 픽스맵 선택"
+msgstr "단추 부분 픽스맵 선택"
 
 #: engines/zootreeves.c:1572
 msgid "Choose Titlebar Part Pixmap"
@@ -221,11 +221,11 @@ msgstr "에머랄드 설정"
 
 #: engines/zootreeves.c:1588
 msgid "Enable Button Part Pixmap?"
-msgstr "버튼 부분 픽스맵을 사용합니까?"
+msgstr "단추 부분 픽스맵을 사용합니까?"
 
 #: engines/zootreeves.c:1320
 msgid "Enable Button Part?"
-msgstr "버튼 부분을 사용합니까?"
+msgstr "단추 부분을 사용합니까?"
 
 #: engines/zootreeves.c:1364
 msgid "Enable Different Maximised Colors?"
@@ -333,7 +333,7 @@ msgstr "높이 넘기"
 
 #: themer/main.c:813
 msgid "Horizontal Button Offset"
-msgstr "수평적 버튼 오프셋"
+msgstr "수평적 단추 오프셋"
 
 #: themer/main.c:1042
 msgid "Images"
@@ -544,7 +544,7 @@ msgstr "반경"
 
 #: engines/zootreeves.c:1592
 msgid "Repeat Button Part Pixmap?"
-msgstr "버튼 부분 픽스맵을 반복합니까?"
+msgstr "단추 부분 픽스맵을 반복합니까?"
 
 #: engines/zootreeves.c:1516
 msgid "Repeat Frequency"
@@ -605,7 +605,7 @@ msgstr "둥근 반경"
 
 #: engines/pixmap.c:631
 msgid "Same as Active"
-msgstr "사용인 것과 같게 함"
+msgstr "사용중인 것과 같게 함"
 
 #: engines/pixmap.c:581
 msgid "Scaled"
@@ -629,7 +629,7 @@ msgstr "최대화되었을 때 테두리를 보입니까?"
 
 #: themer/main.c:1086
 msgid "Show Tooltips for Buttons"
-msgstr "버튼을 위한 툴팁 보이기"
+msgstr "단추 도움말 보이기"
 
 #: engines/zootreeves.c:1251
 msgid "Show when minimised?"
@@ -770,19 +770,19 @@ msgstr "위쪽 타이틀바 발광"
 
 #: themer/main.c:1090
 msgid "Use Button Fade"
-msgstr "버튼 사라짐 사용"
+msgstr "단추 부드럽게 강조 사용"
 
 #: themer/main.c:1094
 msgid "Use Button Fade Pulse"
-msgstr "버튼 사라짐 펄스 사용"
+msgstr "단추 깜빡이기 사용"
 
 #: themer/main.c:686
 msgid "Use Button Halo/Glow"
-msgstr "버튼 할로/발광 사용"
+msgstr "단추 할로/발광 사용"
 
 #: themer/main.c:690
 msgid "Use Button Halo/Glow For Inactive Windows"
-msgstr "비사용중인 창을 위하여 버튼 할로/발광 사용"
+msgstr "비사용중인 창을 위하여 단추 할로/발광 사용"
 
 #: engines/vrunner.c:629
 msgid "Use Glow"
@@ -790,7 +790,7 @@ msgstr "발광 사용"
 
 #: themer/main.c:682
 msgid "Use Pixmap Buttons"
-msgstr "픽스맵 버튼 사용"
+msgstr "픽스맵 단추 사용"
 
 #: themer/main.c:829
 msgid ""
@@ -810,7 +810,7 @@ msgstr ""
 
 #: themer/main.c:807
 msgid "Vertical Button Offset"
-msgstr "수직적 버튼 오프셋"
+msgstr "수직적 단추 오프셋"
 
 #: engines/zootreeves.c:1497
 msgid "Vertical Repeat?"

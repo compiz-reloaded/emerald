@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: 0.1\n"
 "Report-Msgid-Bugs-To: bugs.beryl-project.org \n"
 "POT-Creation-Date: 2006-09-28 23:18+0530\n"
-"PO-Revision-Date: 2006-09-29 13:17+0200\n"
+"PO-Revision-Date: 2006-10-01 19:43+0200\n"
 "Last-Translator: Fass <ns.fass@gmail.com>\n"
 "Language-Team: beryl-project\n"
 "MIME-Version: 1.0\n"
@@ -59,11 +59,11 @@ msgstr "Fönsterlistlayout"
 
 #: themer/main.c:945
 msgid "Bottom"
-msgstr "Övre"
+msgstr "Undre"
 
 #: engines/pixmap.c:496
 msgid "Bottom Rounding Radius"
-msgstr "Övre kantens rundningsradie"
+msgstr "Undre rundningsradie"
 
 #: themer/main.c:717
 msgid "Button"
@@ -257,7 +257,7 @@ msgstr "Fel vid åberopande av 'tar'"
 
 #: engines/pixmap.c:68
 msgid "Everything done with customizable pixmaps!"
-msgstr "Allt gjort med anpassningsbara pixmappar!"
+msgstr "Allt görs med anpassningsbara pixmappar!"
 
 #: engines/zootreeves.c:84
 msgid "Evolved from the legacy engine"
@@ -265,7 +265,7 @@ msgstr "Utvecklat från legacy-motorn"
 
 #: themer/main.c:855
 msgid "Export Theme..."
-msgstr "Exportera tema"
+msgstr "Exportera tema..."
 
 #: themer/main.c:904
 msgid "Export..."
@@ -746,7 +746,7 @@ msgstr "Övre hörnkompensation (%)"
 
 #: engines/pixmap.c:489
 msgid "Top Rounding Radius"
-msgstr "Övre hörnrundningsradie"
+msgstr "Övre rundningsradie"
 
 #: engines/zootreeves.c:1368
 msgid "Turn Off repeating gradients when maximised?"
