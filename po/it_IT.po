@@ -545,7 +545,7 @@ msgstr ""
 
 #: themer/main.c:781 engines/vrunner.c:638
 msgid "Radius"
-msgstr "Paggio"
+msgstr "Raggio"
 
 #: engines/zootreeves.c:1592
 msgid "Repeat Button Part Pixmap?"
