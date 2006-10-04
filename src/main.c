@@ -1,3 +1,6 @@
+#ifdef HAVE_CONFIG_H
+#include <config.h>
+#endif
 #define NEED_BUTTON_BISTATES
 #define NEED_BUTTON_STATE_FLAGS
 #define NEED_BUTTON_ACTIONS
@@ -6128,6 +6131,11 @@ main (int argc, char *argv[])
     ws = malloc(sizeof(window_settings));
     bzero(ws,sizeof(window_settings));
     global_ws = ws;
+    setlocale (LC_ALL, "");
+    bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
+    bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
+    textdomain (GETTEXT_PACKAGE);
+
     ws->win_extents.left = 6;
     ws->win_extents.top = 4;
     ws->win_extents.right = 6;
