@@ -226,7 +226,7 @@ void send_reload_signal()
 #else
     gchar * args[]=
     {"/bin/sh","-c",
-   "ps xo 'pid comm' | grep -e ' emerald$' | head -n 1 | cut -d ' ' -f 1 ",NULL};
+   "ps xo 'pid comm' | grep -e ' emerald$' | head -n 1 | sed -e 's/^ *//' | cut -d ' ' -f 1 ",NULL};
     gchar * ret=NULL;
     if (!g_spawn_sync(NULL,args,NULL,G_SPAWN_STDERR_TO_DEV_NULL,
                 NULL,NULL,&ret,NULL,NULL,NULL) || !ret)
