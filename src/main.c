@@ -4178,19 +4178,19 @@ action_menu_map (WnckWindow *win,
 static gboolean generic_button_event(WnckWindow * win, XEvent * xevent, gint button, gint bpict)
 {
     Display *xdisplay = GDK_DISPLAY_XDISPLAY (gdk_display_get_default ());
-    static gchar * tooltips[B_COUNT] = {
-        "Close Window",
-        "Maximize Window",
-        "Restore Window",
-        "Minimize Window",
-        "Context Help",
-        "Window Menu",
-        "Shade Window",
-        "UnShade Window",
-        "Set Above",
-        "UnSet Above",
-        "Stick Window",
-        "UnStick Window",
+    const gchar * tooltips[B_COUNT] = {
+        _("Close Window"),
+        _("Maximize Window"),
+        _("Restore Window"),
+        _("Minimize Window"),
+        _("Context Help"),
+        _("Window Menu"),
+        _("Shade Window"),
+        _("UnShade Window"),
+        _("Set Above"),
+        _("UnSet Above"),
+        _("Stick Window"),
+        _("UnStick Window"),
     };
     
     decor_t *d = g_object_get_data (G_OBJECT (win), "decor");
