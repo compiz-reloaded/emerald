@@ -6069,6 +6069,7 @@ update_settings(window_settings * ws)
     }
 }
 
+#ifdef USE_DBUS
 static DBusHandlerResult
 dbus_signal_filter(DBusConnection *connection, DBusMessage *message, void *user_data)
 {
@@ -6089,6 +6090,16 @@ void dbc(DBusError * err)
         dbus_error_free( err );
     }
 }
+#else
+void reload_all_settings (int sig)
+{
+    if (sig == SIGUSR1)
+    {
+        puts("Reloading...");
+        update_settings(global_ws);
+    }
+}
+#endif
 #define ACOLOR(idn,zr,zg,zb,za) \
     fs->idn.color.r = (zr);\
     fs->idn.color.g = (zg);\
@@ -6163,8 +6174,10 @@ main (int argc, char *argv[])
         ws->ButtonPix[i]=NULL;
     }
     gtk_init (&argc, &argv);
+#ifdef USE_DBUS
     if (!g_thread_supported()) g_thread_init(NULL);
     dbus_g_thread_init();
+#endif
 
     for (i = 0; i < argc; i++)
     {
@@ -6185,6 +6198,7 @@ main (int argc, char *argv[])
         }
     }
 
+#ifdef USE_DBUS
     {
         DBusConnection * dbcon;
         DBusError err;
@@ -6200,6 +6214,9 @@ main (int argc, char *argv[])
         dbc(&err);
         dbus_connection_add_filter(dbcon,dbus_signal_filter,NULL,NULL);
     }
+#else
+    signal(SIGUSR1,reload_all_settings);
+#endif
     
     
     gdkdisplay = gdk_display_get_default ();

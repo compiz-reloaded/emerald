@@ -1518,8 +1518,10 @@ int main (int argc, char * argv[])
 
 
     gtk_init (&argc, &argv);
+#ifdef USE_DBUS
     if (!g_thread_supported()) g_thread_init(NULL);
     dbus_g_thread_init();
+#endif
 
     g_mkdir_with_parents(g_strdup_printf("%s/.emerald/theme/",g_get_home_dir()),00755);
     g_mkdir_with_parents(g_strdup_printf("%s/.emerald/themes/",g_get_home_dir()),00755);
@@ -1534,8 +1536,9 @@ int main (int argc, char * argv[])
     		gtk_widget_show (filechooserdialog1);
     }
 
-
+#ifdef USE_DBUS
     setup_dbus();
+#endif
 
     gtk_window_set_title (GTK_WINDOW (mainWindow), "Emerald Themer " VERSION);
 

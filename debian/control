@@ -1,0 +1,15 @@
+Source: emerald
+Section: x11
+Priority: optional
+Maintainer: Quinn Storm <livinglatexkali@gmail.com>
+Build-Depends: debhelper (>= 4.0.0), autotools-dev, beryl-dev, libgtk2.0-dev, libpango1.0-dev, libcairo2-dev, libwnck-dev, libxcomposite-dev, libxdamage-dev
+Standards-Version: 3.6.2
+
+Package: emerald
+Architecture: any
+Depends: libgtk2.0-0, libwnck18, beryl-plugins
+Conflicts: gcompizthemer, cgwd
+Replaces: gcompizthemer, cgwd
+Provides: gcompizthemer, cgwd
+Recommends: emerald-themes
+Description: emerald

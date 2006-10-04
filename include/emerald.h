@@ -17,10 +17,12 @@
 #include <gtk/gtkwindow.h>
 #include <gdk/gdkx.h>
 
+#ifdef USE_DBUS
 #define DBUS_API_SUBJECT_TO_CHANGE
 #include <dbus/dbus.h>
 #include <dbus/dbus-glib.h>
 #include <dbus/dbus-glib-lowlevel.h>
+#endif
 
 //#include <gconf/gconf-client.h>
 

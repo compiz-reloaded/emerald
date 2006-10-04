@@ -30,10 +30,10 @@ EMERALD_REQUIRES=" xrender >= 0.8.4  \
 		    gtk+-2.0 >= 2.8.0 \
 		    libwnck-1.0	      \
             beryl \
-            dbus-1 \
-            dbus-glib-1 \
-            gthread-2.0 \
 		    pangocairo "
+            #dbus-1 \
+            #dbus-glib-1 \
+            #gthread-2.0 \
 PKG_CHECK_MODULES(EMERALD, $EMERALD_REQUIRES)
 AC_SUBST(EMERALD_REQUIRES)
 CFLAGS="$CFLAGS $EMERALD_CFLAGS"
