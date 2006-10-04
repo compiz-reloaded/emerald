@@ -3,12 +3,13 @@
 # This file is distributed under the same license as the Emerald package.
 # cyberorg <cyberorg@cyberorg.info>, 2006.
 #
+
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.1 \n"
 "Report-Msgid-Bugs-To: bugs.beryl-project.org \n"
 "POT-Creation-Date: 2006-09-28 23:18+0530\n"
-"PO-Revision-Date: 2006-09-28 23:18+0530\n"
+"PO-Revision-Date: 2006-10-04 21:06+0200\n"
 "Last-Translator: yourname <yourEMAIL@ADDRESS>\n"
 "Language-Team: beryl-project <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -804,3 +805,52 @@ msgstr ""
 #: themer/main.c:783
 msgid "Y Offset"
 msgstr ""
+
+#: src/main.c:4185
+msgid "Close Window"
+msgstr ""
+
+#: src/main.c:4186
+msgid "Maximize Window"
+msgstr ""
+
+#: src/main.c:4187
+msgid "Restore Window"
+msgstr ""
+
+#: src/main.c:4188
+msgid "Minimize Window"
+msgstr ""
+
+#: src/main.c:4189
+msgid "Context Help"
+msgstr ""
+
+#: src/main.c:4190
+msgid "Window Menu"
+msgstr ""
+
+#: src/main.c:4191
+msgid "Shade Window"
+msgstr ""
+
+#: src/main.c:4192
+msgid "UnShade Window"
+msgstr ""
+
+#: src/main.c:4193
+msgid "Set Above"
+msgstr ""
+
+#: src/main.c:4194
+msgid "UnSet Above"
+msgstr ""
+
+#: src/main.c:4195
+msgid "Stick Window"
+msgstr ""
+
+#: src/main.c:4196
+msgid "UnStick Window"
+msgstr ""
+
