@@ -225,20 +225,11 @@ void send_reload_signal()
     dbus_message_unref(message);
 #else
     gchar * args[]=
-    {"/bin/sh","-c",
-   "ps xo 'pid comm' | grep -e ' emerald$' | head -n 1 | sed -e 's/^ *//' | cut -d ' ' -f 1 ",NULL};
+        {"killall","-u",(gchar *)g_get_user_name(),"-SIGUSR1","emerald",NULL};
     gchar * ret=NULL;
-    if (!g_spawn_sync(NULL,args,NULL,G_SPAWN_STDERR_TO_DEV_NULL,
+    if (!g_spawn_sync(NULL,args,NULL,G_SPAWN_STDERR_TO_DEV_NULL | G_SPAWN_SEARCH_PATH,
                 NULL,NULL,&ret,NULL,NULL,NULL) || !ret)
         g_warning("Couldn't find running emerald, no reload signal sent.");
-    else
-    {
-        pid_t pid = atol(ret);
-        if (pid)
-            kill(pid,SIGUSR1);
-        else
-            g_warning("Return evaluated to 0");
-    }
 #endif
 }
 void apply_settings()
