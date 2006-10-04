@@ -2555,6 +2555,7 @@ update_default_decorations (GdkScreen *screen, frame_settings * fs_act,
     quad       quads[N_QUADS_MAX];
     window_settings * ws = fs_act->ws; // hackish, I know, FIXME
     extents    extents = ws->win_extents;
+    bzero(&d,sizeof(decor_t));
 
     xroot = RootWindowOfScreen (gdk_x11_screen_get_xscreen (screen));
 
@@ -2837,7 +2838,6 @@ void position_title_object(gchar obj, WnckWindow * win, window_settings * ws, gi
         gdk_error_trap_push ();
         if (d->actions & button_actions[i])
         {
-            XMapWindow(xdisplay,d->button_windows[i]);
             XMoveResizeWindow(xdisplay,d->button_windows[i],x,y,w,h);
             if (button_cursor.cursor && ws->button_hover_cursor==1)
                 XDefineCursor (xdisplay, 
@@ -2850,19 +2850,6 @@ void position_title_object(gchar obj, WnckWindow * win, window_settings * ws, gi
     }
     d->tobj_item_pos[i]=x-d->tobj_pos[s];
     d->tobj_item_state[i]=s;
-}
-void unmap_button_windows(decor_t * d)
-{
-    Display * xdisplay;
-    gint i;
-    xdisplay = GDK_DISPLAY_XDISPLAY (gdk_display_get_default ());
-    gdk_error_trap_push ();
-    for (i=0;i<B_T_COUNT;i++)
-    {
-        XUnmapWindow(xdisplay,d->button_windows[i]);
-    }
-    XSync (xdisplay, FALSE);
-    gdk_error_trap_pop ();
 }
 void layout_title_objects (WnckWindow *win)
 {
@@ -2906,7 +2893,6 @@ void layout_title_objects (WnckWindow *win)
     d->tobj_pos[2]=width-d->tobj_size[2]+ws->win_extents.left;
     d->tobj_pos[1]=MAX((d->tobj_pos[2]-d->tobj_size[0])/2-(d->tobj_size[1])/2+d->tobj_size[0],0)+ws->win_extents.left;
     x=d->tobj_pos[0]+ws->button_hoffset;
-    unmap_button_windows(d);
     for (i=0;i<TBT_COUNT;i++)
     {
         d->tobj_item_state[i]=3;
@@ -3003,9 +2989,20 @@ update_event_windows (WnckWindow *win)
         }
     }
 
+    for (i=0;i<B_T_COUNT;i++)
+    {
+        if (d->actions & button_actions[i])
+        {
+            XMapWindow(xdisplay,d->button_windows[i]);
+        }
+        else
+        {
+            XUnmapWindow(xdisplay,d->button_windows[i]);
+        }
+    }
+    layout_title_objects(win);
     XSync (xdisplay, FALSE);
     gdk_error_trap_pop ();
-    layout_title_objects(win);
 }
 
 #if HAVE_WNCK_WINDOW_HAS_NAME
@@ -3201,47 +3198,21 @@ update_window_decoration_size (WnckWindow *win)
     GdkPixmap *ipixmap, *ibuffer_pixmap = NULL;
     gint      width, height;
     gint      w;
-    gint      h; // this is to make it work with things like reflection maps,
-                // gradients, etc.
-    //gint      tw;
+    gint      h;
+
     window_settings * ws = d->fs->ws;
 
-    //tw = 
     max_window_name_width (win);
     layout_title_objects(win);
-    //tw=0;
-    //if (d->layout)
-    //    pango_layout_get_pixel_size(d->layout,&tw,NULL);
     
     wnck_window_get_geometry (win, NULL, NULL, &w, &h);
     
-    //width = d->tobj_size[0]+d->tobj_size[1]+d->tobj_size[2];
-    
-    //if (w < width)
-    //    return FALSE;
-
-    /*if (w < width+tw)
-    else
-        width+=tw;*/
-
-    //width = MAX (width, w); // FIXME - wasteful, but the only way I can get the layout to work
-
-    //width  = MAX (w, ws->left_corner_space + ws->right_corner_space);
-    //width += ws->left_space + 1 + ws->right_space;
-
-    //height = MAX(h,ws->normal_top_corner_space+ws->bottom_corner_space+
-    //        ws->titlebar_height);
-    //height  = ws->titlebar_height + 
-    //    ws->normal_top_corner_space + ws->bottom_corner_space;
-    //height += ws->top_space + 2 + ws->bottom_space;
-    //
-
     width  = ws->left_space + MAX(w,1) +
         ws->right_space ;
     if (ws->stretch_sides)
     {
         height = ws->top_space + ws->normal_top_corner_space
-           +ws->bottom_corner_space+2 + // MAX(h,1) +
+           +ws->bottom_corner_space+2 + 
             ws->bottom_space + ws->titlebar_height;
     }
     else
@@ -3328,6 +3299,7 @@ add_frame_window (WnckWindow *win,
 
     xdisplay = GDK_DISPLAY_XDISPLAY (gdk_display_get_default ());
 
+    bzero(&attr,sizeof(XSetWindowAttributes));
     attr.event_mask = ButtonPressMask | EnterWindowMask | LeaveWindowMask;
     attr.override_redirect = TRUE;
 
@@ -3459,9 +3431,6 @@ update_switcher_window (WnckWindow *win,
 
             if (d->layout)
             {
-                //int tw;
-
-                //tw = width - ws->left_space - ws->right_space - 64;
                 pango_layout_set_width (d->layout, -1);
                 pango_layout_set_text (d->layout, name, name_length);
 
@@ -3800,40 +3769,14 @@ window_opened (WnckScreen *screen,
     d = g_malloc (sizeof (decor_t));
     if (!d)
         return;
-
-    d->pixmap	     = NULL;
-    d->buffer_pixmap = NULL;
-    d->p_active	     = NULL;
-    d->p_active_buffer = NULL;
-    d->p_inactive	     = NULL;
-    d->p_inactive_buffer = NULL;
-    d->only_change_active = FALSE;
-    d->gc	     = NULL;
-
-    reset_buttons_bg_and_fade(d);
-
-    d->icon	   = NULL;
-    d->icon_pixmap = NULL;
-
-    d->width  = 0;
-    d->height = 0;
+    bzero(d,sizeof(decor_t));
 
     d->active = wnck_window_is_active (win);
 
-    d->layout = NULL;
-    d->name   = NULL;
-
-    d->state   = 0;
-    d->actions = 0;
-
-    d->prop_xid = 0;
-
-    d->decorated = FALSE;
-
-    d->force_quit_dialog = NULL;
-
     d->draw = draw_window_decoration;
     d->fs = d->active?global_ws->fs_act:global_ws->fs_inact;
+
+    reset_buttons_bg_and_fade(d);
 
     g_object_set_data (G_OBJECT (win), "decor", d);
 
@@ -4144,25 +4087,22 @@ handle_tooltip_event (WnckWindow *win,
         guint	 state,
         const char *tip)
 {
-    if (enable_tooltips)
-    {
-        switch (xevent->type) {
-            case ButtonPress:
-                hide_tooltip ();
-                break;
-            case ButtonRelease:
-                break;
-            case EnterNotify:
-                if (!(state & PRESSED_EVENT_WINDOW))
-                {
-                    if (wnck_window_is_active (win))
-                        tooltip_start_delay (tip);
-                }
-                break;
-            case LeaveNotify:
-                hide_tooltip ();
-                break;
-        }
+    switch (xevent->type) {
+        case ButtonPress:
+            hide_tooltip ();
+            break;
+        case ButtonRelease:
+            break;
+        case EnterNotify:
+            if (!(state & PRESSED_EVENT_WINDOW))
+            {
+                if (wnck_window_is_active (win))
+                    tooltip_start_delay (tip);
+            }
+            break;
+        case LeaveNotify:
+            hide_tooltip ();
+            break;
     }
 }
     static void
@@ -4253,23 +4193,15 @@ static gboolean generic_button_event(WnckWindow * win, XEvent * xevent, gint but
     window_settings * ws = d->fs->ws;
 
     handle_tooltip_event (win, xevent, state, tooltips[bpict]);
+
     switch (xevent->type) {
         case ButtonPress:
             if (xevent->xbutton.button==1)
-            {
                 d->button_states[button] |= PRESSED_EVENT_WINDOW;
-                XUngrabPointer (xdisplay, xevent->xbutton.time); // reset just in case
-                XGrabPointer(xdisplay,xevent->xbutton.window,True,ButtonReleaseMask | EnterWindowMask |
-                        LeaveWindowMask | ButtonPressMask,
-                        GrabModeAsync,GrabModeAsync,None,
-                        ws->button_hover_cursor==1?button_cursor.cursor:None,
-                        xevent->xbutton.time);
-            }
             break;
         case ButtonRelease:
             if (xevent->xbutton.button==1)
             {
-                XUngrabPointer (xdisplay, xevent->xbutton.time);
                 if (d->button_states[button] == (PRESSED_EVENT_WINDOW | IN_EVENT_WINDOW))
                     ret = TRUE;
 
@@ -5522,6 +5454,7 @@ update_shadow (frame_settings * fs)
     int			size, n_params = 0;
     cairo_t		*cr;
     decor_t		d;
+    bzero(&d,sizeof(decor_t));
     window_settings * ws = fs->ws;
 //    double		save_decoration_alpha;
     static XRenderColor color;
@@ -6122,8 +6055,6 @@ update_settings(window_settings * ws)
     update_shadow(ws->fs_act);
     update_default_decorations(gdkscreen,ws->fs_act,ws->fs_inact);
 
-    //minoimal TODO
-
     windows = wnck_screen_get_windows(screen);
     while(windows)
     {
@@ -6344,19 +6275,14 @@ main (int argc, char *argv[])
             selection_event_filter_func,
             NULL);
 
-        gdk_window_add_filter (NULL,
-                event_filter_func,
-                NULL);
+    gdk_window_add_filter (NULL,
+            event_filter_func,
+            NULL);
 
-        connect_screen (screen);
+    connect_screen (screen);
 
-    /*if (!init_settings (screen))
-      {
-      fprintf (stderr, "%s: Failed to get necessary gtk settings\n", argv[0]);
-      return 1;
-      }*/
     style_window = gtk_window_new (GTK_WINDOW_POPUP);
-    gtk_widget_ensure_style (style_window);
+    gtk_widget_realize (style_window);
     ws->pango_context = gtk_widget_create_pango_context (style_window);
     ws->font_desc = pango_font_description_from_string("Sans Bold 12");
     pango_context_set_font_description (ws->pango_context, ws->font_desc );
@@ -6368,15 +6294,14 @@ main (int argc, char *argv[])
 
     ws->titlebar_height = ws->text_height;
     if (ws->titlebar_height < ws->min_titlebar_height)
-        ws->titlebar_height = ws->min_titlebar_height; //The same as titlebar_height at line 204
+        ws->titlebar_height = ws->min_titlebar_height; 
 
-  pango_font_metrics_unref (metrics);
+    pango_font_metrics_unref (metrics);
 
     update_window_extents(ws);
     update_shadow(fs);
-    set_dm_check_hint (gdk_display_get_default_screen (gdkdisplay));
 
-    //update_default_decorations (gdkscreen,ws->fs_act,ws->fs_inact);
+    set_dm_check_hint (gdk_display_get_default_screen (gdkdisplay));
 
     update_settings(ws);
 
