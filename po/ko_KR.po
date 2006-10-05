@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: 0.1\n"
 "Report-Msgid-Bugs-To: bugs.beryl-project.org \n"
 "POT-Creation-Date: 2006-09-28 23:18+0530\n"
-"PO-Revision-Date: 2006-10-01 16:32-0500\n"
+"PO-Revision-Date: 2006-10-04 15:56-0500\n"
 "Last-Translator: atie H. <atie.at.matrix@gmail.com>\n"
 "Language-Team: beryl-project\n"
 "MIME-Version: 1.0\n"
@@ -43,7 +43,7 @@ msgstr "기본"
 
 #: engines/legacy.c:31
 msgid "Based on original gnome-window-decorator"
-msgstr "원래의 그놈 창 장식틀에 기반"
+msgstr "원래의 그놈 창 테두리에 기반"
 
 #: themer/main.c:942
 msgid "Border"
@@ -135,11 +135,11 @@ msgstr "단추 부분 픽스맵 선택"
 
 #: engines/zootreeves.c:1572
 msgid "Choose Titlebar Part Pixmap"
-msgstr "타이틀바 부분 픽스맵 선택"
+msgstr "창이름막대 부분 픽스맵 선택"
 
 #: engines/zootreeves.c:1634
 msgid "Choose Titlebar Pixmap"
-msgstr "타이틀바 픽스맵 선택"
+msgstr "창이름막대 픽스맵 선택"
 
 #: themer/main.c:720 engines/pixmap.c:648
 msgid "Clear"
@@ -241,15 +241,15 @@ msgstr "아래쪽 부풀기를 사용합니까? (현재 사용을 못하지만, 
 
 #: engines/zootreeves.c:1314
 msgid "Enable Title Bar Dip?"
-msgstr "타이틀바 함몰을 사용합니까?"
+msgstr "창이름막대 함몰을 사용합니까?"
 
 #: engines/zootreeves.c:1558
 msgid "Enable Title Part Pixmap?"
-msgstr "타이틀 부분 픽스맵을 사용합니까?"
+msgstr "창이름 부분 픽스맵을 사용합니까?"
 
 #: engines/zootreeves.c:1619
 msgid "Enable Titlebar Pixmap?"
-msgstr "타이틀바 픽스맵을 사용합니까?"
+msgstr "창이름막대 픽스맵을 사용합니까?"
 
 #: themer/main.c:485
 msgid "Error calling tar."
@@ -333,7 +333,7 @@ msgstr "높이 넘기"
 
 #: themer/main.c:813
 msgid "Horizontal Button Offset"
-msgstr "수평적 단추 오프셋"
+msgstr "단추 가로 오프셋"
 
 #: themer/main.c:1042
 msgid "Images"
@@ -358,7 +358,7 @@ msgstr "내부 테마틀 혼합"
 
 #: engines/legacy.c:368 engines/pixmap.c:524 engines/zootreeves.c:1483
 msgid "Inner Titlebar Blend"
-msgstr "내부 타이틀바 혼합"
+msgstr "내부 창이름막대 혼합"
 
 #: themer/main.c:471
 msgid ""
@@ -422,7 +422,7 @@ msgstr "최소화된 테두리 크기"
 
 #: themer/main.c:801
 msgid "Minimum Title-bar Height"
-msgstr "최소 타이틀바 높이"
+msgstr "최소 창이름막대 높이"
 
 #: engines/vrunner.c:55
 msgid "Multiple gradients with somewhat glassy features too"
@@ -474,15 +474,15 @@ msgid ""
 "or the titlebar font setting.\n"
 msgstr ""
 "주의, 이 값을 변경할 때,\n"
-"뷰포트를 바꾸는 것과 같은\n"
-"무엇인가를 하도록 충고합니다, 그러면\n"
-"이벤트 창의 위치를 제대로\n"
+"작업 공간을 바꾸는 것과 같은\n"
+"무엇인가를 하도록 충고합니다. 그러면\n"
+"이벤트가 일어나는 창의 위치를 제대로\n"
 "갱신하게 되고, 그래서 창의 이동과\n"
 "크기조절이 올바르게 동작하게 만듭니다.\n"
-"이것은 타이틀바 최소 높이 슬라이더\n"
-"또는 타이틀바 폰트 설정에서\n"
-"타이틀바의 높이를 변경할 때도\n"
-"또한 적용합니다.\n"
+"이것은 창이름막대 최소 높이 슬라이더\n"
+"또는 창이름막대 글꼴 설정에서\n"
+"창이름막대의 높이를 변경할 때도\n"
+"또한 적용됩니다.\n"
 
 #: engines/vrunner.c:619
 msgid "Offset"
@@ -503,7 +503,7 @@ msgstr "외부 유리 발광"
 
 #: engines/legacy.c:367 engines/pixmap.c:523 engines/zootreeves.c:1482
 msgid "Outer Titlebar Blend"
-msgstr "외부 타이틀바 혼합"
+msgstr "외부 창이름막대 혼합"
 
 #: themer/main.c:521
 #, c-format
@@ -556,11 +556,11 @@ msgstr "색 변화를 반복합니까?"
 
 #: engines/zootreeves.c:1562
 msgid "Repeat Title Part Pixmap?"
-msgstr "타이틀 부분 픽스맵을 반복합니까?"
+msgstr "창이름 부분 픽스맵을 반복합니까?"
 
 #: engines/zootreeves.c:1623
 msgid "Repeat Titlebar Pixmap?"
-msgstr "타이틀바 픽스맵을 반복합니까?"
+msgstr "창이름막대 픽스맵을 반복합니까?"
 
 #: themer/main.c:947
 msgid "Right"
@@ -693,48 +693,48 @@ msgstr "타일/스케일"
 
 #: themer/main.c:1003 engines/zootreeves.c:1658
 msgid "Title Bar"
-msgstr "타이틀바"
+msgstr "창이름막대"
 
 #: engines/zootreeves.c:1569
 msgid "Title Bar Part Pixmap"
-msgstr "타이틀바 부분 픽스맵"
+msgstr "창이름막대 부분 픽스맵"
 
 #: engines/vrunner.c:635
 msgid "Title Glow"
-msgstr "타이틀 발광"
+msgstr "창이름 발광"
 
 #: engines/zootreeves.c:1326
 msgid "Title Part Width"
-msgstr "타이틀 부분 넓이"
+msgstr "창이름 부분 넓이"
 
 #: themer/main.c:793
 msgid "Title-Text Font"
-msgstr "타이틀 글꼴"
+msgstr "창이름 글꼴"
 
 #: themer/main.c:821
 msgid "Title-bar Object Layout"
-msgstr "타이틀바 객체 배치"
+msgstr "창이름막대 객체 배치"
 
 #: themer/main.c:1188
 msgid "Titlebar"
-msgstr "타이틀바"
+msgstr "창이름막대"
 
 #: themer/main.c:1125
 msgid "Titlebar Double-Click Action"
-msgstr "타이틀바 두번누름 동작"
+msgstr "창이름막대 두번누름 동작"
 
 #: engines/zootreeves.c:1631
 msgid "Titlebar Pixmap"
-msgstr "타이틀바 픽스맵"
+msgstr "창이름막대 픽스맵"
 
 #: engines/zootreeves.c:1436
 msgid "Titlebar Rounding Radius"
-msgstr "타이틀바 둥근 반경"
+msgstr "창이름막대 둥근 반경"
 
 #: engines/legacy.c:370 engines/oxygen.c:428 engines/pixmap.c:526
 #: engines/truglass.c:525 engines/vrunner.c:647 engines/zootreeves.c:1528
 msgid "Titlebar Separator"
-msgstr "타이틀바 구분자"
+msgstr "창이름막대 구분자"
 
 #: themer/main.c:944
 msgid "Top"
@@ -766,7 +766,7 @@ msgstr "위쪽 유리 발광"
 
 #: engines/truglass.c:517
 msgid "Upper Titlebar Glow"
-msgstr "위쪽 타이틀바 발광"
+msgstr "창이름막대 위쪽 발광"
 
 #: themer/main.c:1090
 msgid "Use Button Fade"
@@ -803,18 +803,18 @@ msgid ""
 msgstr ""
 "왼쪽, 가운데, 오른쪽을 구분하기 위해 콜론 사용.\n"
 "어느 것이든 세번째 콜론 다음은 무시됨.\n"
-"C=닫기, N=최소, X/R=복원\n"
-"I=아이콘, T=타이틀, H=도움말, M=메뉴\n"
+"C=닫기, N=최소, X/R=되돌리기\n"
+"I=아이콘, T=창이름, H=도움말, M=메뉴\n"
 "S=말아넣기, U/A=항상 위에\n"
 "Y=끈적이, (#)=# 픽셀 간격, 예: (5)\n"
 
 #: themer/main.c:807
 msgid "Vertical Button Offset"
-msgstr "수직적 단추 오프셋"
+msgstr "단추 세로 오프셋"
 
 #: engines/zootreeves.c:1497
 msgid "Vertical Repeat?"
-msgstr "수직적으로 반복합니까?"
+msgstr "세로로 반복합니까?"
 
 #: themer/main.c:179
 msgid "Whatever (no hint)"
@@ -831,4 +831,52 @@ msgstr "가로 오프셋"
 #: themer/main.c:783
 msgid "Y Offset"
 msgstr "세로 오프셋"
+
+#: src/main.c:4185
+msgid "Close Window"
+msgstr "창 닫기"
+
+#: src/main.c:4186
+msgid "Maximize Window"
+msgstr "창 최대화"
+
+#: src/main.c:4187
+msgid "Restore Window"
+msgstr "창 되돌리기"
+
+#: src/main.c:4188
+msgid "Minimize Window"
+msgstr "창 최소화"
+
+#: src/main.c:4189
+msgid "Context Help"
+msgstr "도움말"
+
+#: src/main.c:4190
+msgid "Window Menu"
+msgstr "창 메뉴"
+
+#: src/main.c:4191
+msgid "Shade Window"
+msgstr "창 말아넣기"
+
+#: src/main.c:4192
+msgid "UnShade Window"
+msgstr "창 말아풀기"
+
+#: src/main.c:4193
+msgid "Set Above"
+msgstr "항상 위에"
+
+#: src/main.c:4194
+msgid "UnSet Above"
+msgstr "항상 위에 풀기"
+
+#: src/main.c:4195
+msgid "Stick Window"
+msgstr "끈적이 창"
+
+#: src/main.c:4196
+msgid "UnStick Window"
+msgstr "끈적이 창 풀기"
 
