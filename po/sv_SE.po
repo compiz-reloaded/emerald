@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: 0.1\n"
 "Report-Msgid-Bugs-To: bugs.beryl-project.org \n"
 "POT-Creation-Date: 2006-09-28 23:18+0530\n"
-"PO-Revision-Date: 2006-10-01 19:43+0200\n"
+"PO-Revision-Date: 2006-10-05 02:54+0200\n"
 "Last-Translator: Fass <ns.fass@gmail.com>\n"
 "Language-Team: beryl-project\n"
 "MIME-Version: 1.0\n"
@@ -481,7 +481,7 @@ msgstr ""
 "fönsterflyttning/-storleksändring att fungera rätt.\n"
 "Detta gäller också för när man ändrar\n"
 "titelradshöjden via antingen\n"
-"titelraderns min-höjd-stapeln\n"
+"titelradens min-höjd-stapel\n"
 "eller titelradens typsnittsinställning.\n"
 
 #: engines/vrunner.c:619
@@ -806,7 +806,7 @@ msgstr ""
 "Allt efter ett tredje kolon ignoreras.\n"
 "C=Stäng, N=Maximera, X/R=Återställ\n"
 "I=Ikon, T=Titel, H=Hjälp, M=Meny\n"
-"S=Skugga, U/A=Överst(Upp/Ovanför)\n"
+"S=Rulla upp, U/A=Överst(Upp/Ovanför)\n"
 "Y=Klibbig, (#)=# pixelutrymme, ex: (5)\n"
 
 #: themer/main.c:807
@@ -832,4 +832,52 @@ msgstr "X-kompensation"
 #: themer/main.c:783
 msgid "Y Offset"
 msgstr "Y-kompensation"
+
+#: src/main.c:4185
+msgid "Close Window"
+msgstr "Stäng fönster"
+
+#: src/main.c:4186
+msgid "Maximize Window"
+msgstr "Maximera fönster"
+
+#: src/main.c:4187
+msgid "Restore Window"
+msgstr "Återställ fönster"
+
+#: src/main.c:4188
+msgid "Minimize Window"
+msgstr "Minimera fönster"
+
+#: src/main.c:4189
+msgid "Context Help"
+msgstr "Kontexthjälp"
+
+#: src/main.c:4190
+msgid "Window Menu"
+msgstr "Fönstermeny"
+
+#: src/main.c:4191
+msgid "Shade Window"
+msgstr "Rulla upp fönster"
+
+#: src/main.c:4192
+msgid "UnShade Window"
+msgstr "Rulla ned fönster"
+
+#: src/main.c:4193
+msgid "Set Above"
+msgstr "Överst på"
+
+#: src/main.c:4194
+msgid "UnSet Above"
+msgstr "Överst av"
+
+#: src/main.c:4195
+msgid "Stick Window"
+msgstr "Haka upp fönster"
+
+#: src/main.c:4196
+msgid "UnStick Window"
+msgstr "Haka av fönster"
 
