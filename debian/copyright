@@ -1,0 +1,135 @@
+This package was debianized by Quinn Storm <livinglatexkali@gmail.com> on
+Fri, 22 Sept 2006 01:42:50 -0500.
+
+It was downloaded from svn://metascape.afraid.org/svnroot/beryl/ on
+Fri, 22 Sept 2006.
+
+Upstream authors: Quinn Storm <livinglatexkali@gmail.com> and others
+
+Information: All of the theme engines use code from Quinn Storm's legacy engine and are GPL.
+
+Copyright: for all files not listed here
+
+ * Copyright (C) 2006 Quinn Storm <livinglatexkali@gmail.com>
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 2
+ * of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+
+Copyright: 
+
+ * Legacy theme engine
+ *
+ * legacy.c
+ *
+ * Copyright (C) 2006 Quinn Storm <livinglatexkali@gmail.com>
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 2
+ * of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+
+Copyright:
+
+ * vrunner theme engine
+ *
+ * vrunner.c
+ *
+ * Copyright (C) 2006 Varun <varunratnakar@gmail.com>
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 2
+ * of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+
+Copyright:
+
+ * oxygen theme engine
+ *
+ * oxygen.c
+ *
+ * Copyright (C) 2006 Alain <big_al326@hotmail.com>
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 2
+ * of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+
+Copyright:
+
+ * pixmap theme engine
+ *
+ * pixmap.c
+ *
+ * Copyright (C) 2006 Alain <big_al326@hotmail.com>
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 2
+ * of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+
+Copyright:
+
+ * truglass theme engine
+ *
+ * truglass.c
+ *
+ * Copyright (C) 2006 Alain <big_al326@hotmail.com>
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 2
+ * of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+
+Copyright:
+
+ * zootreeves theme engine
+ *
+ * zootreeves.c
+ *
+ * Copyright (C) 2006 Ben Reeves <john@reeves160.freeserve.co.uk>
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 2
+ * of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+
+The Debian packaging is (C) 2006, Quinn Storm <livinglatexkali@gmail.com> and
+Shawn Starr <shawn.starr@rogers.com> and is licensed 
+under the GPL, see `/usr/share/common-licenses/GPL'.
