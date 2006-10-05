@@ -159,25 +159,25 @@ static void theme_list_append(gchar * value,gchar * dir, gchar * fil)
         gchar * tver = g_key_file_get_string(f,"theme","theme_version",NULL);
         gchar * rwid = g_key_file_get_string(f,"theme","suggested",NULL);
         gchar * desc = g_key_file_get_string(f,"theme","description",NULL);
-        if (!strlen(creator))
+        if (creator && !strlen(creator)) 
         {
             g_free(creator);
             creator=NULL;
         }
         if (!creator) creator=g_strdup(_("Unknown"));
-        if (!strlen(tver))
+        if (tver && !strlen(tver)) 
         {
             g_free(tver);
             tver=NULL;
         }
         if (!tver) tver=g_strdup(_("Unknown"));
-        if (!strlen(rwid))
+        if (rwid && !strlen(rwid)) 
         {
             g_free(rwid);
             rwid=NULL;
         }
         if (!rwid) rwid=g_strdup(_("Whatever (no hint)"));
-        if (!strlen(desc))
+        if (desc && !strlen(desc)) 
         {
             g_free(desc);
             desc=NULL;
