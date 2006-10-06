@@ -4178,7 +4178,11 @@ action_menu_map (WnckWindow *win,
     action_menu_mapped = TRUE;
 }
 
-static gboolean generic_button_event(WnckWindow * win, XEvent * xevent, gint button, gint bpict)
+/* generic_button_event returns:
+ * 0: nothing, hover, ButtonPress
+ * XEvent Button code: ButtonRelease (mouse click)
+ */
+static gint generic_button_event(WnckWindow * win, XEvent * xevent, gint button, gint bpict)
 {
     Display *xdisplay = GDK_DISPLAY_XDISPLAY (gdk_display_get_default ());
     const gchar * tooltips[B_COUNT] = {
@@ -4198,21 +4202,30 @@ static gboolean generic_button_event(WnckWindow * win, XEvent * xevent, gint but
     
     decor_t *d = g_object_get_data (G_OBJECT (win), "decor");
     guint   state = d->button_states[button];
-    gboolean ret = FALSE;
+    gint ret = 0;
     window_settings * ws = d->fs->ws;
 
     handle_tooltip_event (win, xevent, state, tooltips[bpict]);
 
+	/* 
+	 * "!(xevent->xbutton.button & -4)" tests whether event button is one of
+	 * three major mouse buttons
+	 * "!(xevent->xbutton.button & -4)" evaluates to:
+	 * 0: xevent->xbutton.button < 0, xevent->xbutton.button > 3
+	 * 1: -1 < xevent->xbutton.button < 4
+	 */
     switch (xevent->type) {
         case ButtonPress:
-            if (xevent->xbutton.button==1)
+            if (((button == B_T_MAXIMIZE) && !(xevent->xbutton.button & -4)) ||
+                (xevent->xbutton.button == Button1))
                 d->button_states[button] |= PRESSED_EVENT_WINDOW;
             break;
         case ButtonRelease:
-            if (xevent->xbutton.button==1)
+            if (((button == B_T_MAXIMIZE) && !(xevent->xbutton.button & -4)) ||
+                (xevent->xbutton.button == Button1))
             {
                 if (d->button_states[button] == (PRESSED_EVENT_WINDOW | IN_EVENT_WINDOW))
-                    ret = TRUE;
+                    ret = xevent->xbutton.button;
 
                 d->button_states[button] &= ~PRESSED_EVENT_WINDOW;
             }
@@ -4243,15 +4256,26 @@ close_button_event (WnckWindow *win,
 max_button_event (WnckWindow *win,
         XEvent     *xevent)
 {
-    if (wnck_window_is_maximized (win))
-    {
-        if (generic_button_event(win,xevent,B_T_MAXIMIZE,B_RESTORE))
-            wnck_window_unmaximize(win);
-    }
-    else
-    {
-        if (generic_button_event(win,xevent,B_T_MAXIMIZE,B_MAXIMIZE))
-            wnck_window_maximize(win);
+    gboolean maximized = wnck_window_is_maximized(win);
+    switch (generic_button_event(win,
+                                 xevent,
+                                 B_T_MAXIMIZE,
+                                 (maximized ? B_RESTORE : B_MAXIMIZE))) {
+    case Button1:
+        maximized ? wnck_window_unmaximize(win) : wnck_window_maximize(win);
+        break;
+    case Button2:
+        if (wnck_window_is_maximized_vertically(win))
+            wnck_window_unmaximize_vertically(win);
+        else
+            wnck_window_maximize_vertically(win);
+        break;
+    case Button3:
+        if (wnck_window_is_maximized_horizontally(win))
+            wnck_window_unmaximize_horizontally(win);
+        else
+            wnck_window_maximize_horizontally(win);
+        break;
     }
 }
 
