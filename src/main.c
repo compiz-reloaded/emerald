@@ -4454,7 +4454,17 @@ title_event (WnckWindow *win,
         action_menu_map (win,
                 xevent->xbutton.button,
                 xevent->xbutton.time);
+    } 
+    else if (xevent->xbutton.button == 4) 
+    {
+        if(!wnck_window_is_shaded(win))
+            wnck_window_shade(win);    
     }
+    else if (xevent->xbutton.button == 5) 
+    {
+        if(wnck_window_is_shaded(win))
+            wnck_window_unshade(win);
+    } 
 }
 
     static void
