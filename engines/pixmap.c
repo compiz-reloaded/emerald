@@ -4,7 +4,7 @@
  * oxygen.c
  *
  * Copyright (C) 2006 Quinn Storm <livinglatexkali@gmail.com> (original legacy theme engine)
- * Copyright (C) 2006 Alain <big_al326@hotmail.com>
+ * Copyright (C) 2006 Varun <varunratnakar@gmail.com>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
