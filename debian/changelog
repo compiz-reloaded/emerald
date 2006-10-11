@@ -1,0 +1,378 @@
+emerald (0.1.0-1) dapper; urgency=low
+
+  * Release version 0.1.0
+
+ -- Quinn Storm <livinglatexkali@gmail.com>  Fri, 29 Sep 2006 09:57:07 -0400
+
+emerald (0.1.0-0ubuntu1) dapper; urgency=low
+
+  * move to Emerald, set ver. to 0.1.0
+
+ -- Quinn Storm <livinglatexkali@gmail.com>  Sun, 17 Sep 2006 21:56:21 -0400
+
+cgwd (0.69-0ubuntu1) dapper; urgency=low
+
+  * FINALLY FIX MEMORY LEAK!!! (at least I hope so!, all testing so far shows
+          it fixed)
+
+ -- Quinn Storm <livinglatexkali@gmail.com>  Wed, 13 Sep 2006 18:24:04 -0400
+
+cgwd (0.68-0ubuntu2) dapper; urgency=low
+
+  * update control file for newer dbus possibility
+  * rebuild edgy against newer dbus (-1-3)
+
+ -- Quinn Storm <livinglatexkali@gmail.com>  Mon, 11 Sep 2006 20:21:36 -0400
+
+cgwd (0.68-0ubuntu1) dapper; urgency=low
+
+  * sorry about the long wait, engine updates!!
+  * truglass, vrunner, pixmap all have updates!
+
+ -- Quinn Storm <livinglatexkali@gmail.com>  Mon,  4 Sep 2006 03:18:02 -0400
+
+cgwd (0.67-0ubuntu1) dapper; urgency=low
+
+  * hopefully fix memory bug
+  * fix white-line-at-bottom-of-window-shadow bug
+
+ -- Quinn Storm <livinglatexkali@gmail.com>  Thu, 31 Aug 2006 22:46:55 -0400
+
+cgwd (0.66-0ubuntu1) dapper; urgency=low
+
+  * switched back to the stretched-sides model for speed, should engines
+  really need non-stretched sides, they should set ws->stretch_sides to false
+
+ -- Quinn Storm <livinglatexkali@gmail.com>  Tue, 29 Aug 2006 19:38:15 -0400
+
+cgwd (0.65-0ubuntu1) dapper; urgency=low
+
+  * err, forgot, have to increment base version
+
+ -- Quinn Storm <livinglatexkali@gmail.com>  Sun, 27 Aug 2006 19:34:55 -0400
+
+cgwd (0.64-0ubuntu2) dapper; urgency=low
+
+  * oops in packaging, this should fix it
+
+ -- Quinn Storm <livinglatexkali@gmail.com>  Sun, 27 Aug 2006 19:34:43 -0400
+
+cgwd (0.64-0ubuntu1) dapper; urgency=low
+
+  * shadows fixed!!
+
+ -- Quinn Storm <livinglatexkali@gmail.com>  Sun, 27 Aug 2006 18:45:09 -0400
+
+cgwd (0.63-0ubuntu1) dapper; urgency=low
+
+  * fix pixmap leak, hopefully
+
+ -- Quinn Storm <livinglatexkali@gmail.com>  Sat, 26 Aug 2006 13:50:21 -0400
+
+cgwd (0.62-0ubuntu1) dapper; urgency=low
+
+  * add icon for cgwdtheme files
+
+ -- Quinn Storm <livinglatexkali@gmail.com>  Thu, 24 Aug 2006 23:16:34 -0400
+
+cgwd (0.61-0ubuntu1) dapper; urgency=low
+
+  * added double-click-minimize option
+  * possible fix for possible issue where settings were being ignored (could
+          just be a bug on my system)
+
+ -- Quinn Storm <livinglatexkali@gmail.com>  Wed, 23 Aug 2006 23:11:44 -0400
+
+cgwd (0.60-0ubuntu1) dapper; urgency=low
+
+  * update pixmap engine
+
+ -- Quinn Storm <livinglatexkali@gmail.com>  Wed, 23 Aug 2006 04:12:03 -0400
+
+cgwd (0.59-0ubuntu2) dapper; urgency=low
+
+  * fix packaging stupidity
+
+ -- Quinn Storm <livinglatexkali@gmail.com>  Tue, 22 Aug 2006 23:30:40 -0400
+
+cgwd (0.59-0ubuntu1) dapper; urgency=low
+
+  * just bumping to proper update procedure
+
+ -- Quinn Storm <livinglatexkali@gmail.com>  Tue, 22 Aug 2006 01:41:03 -0400
+
+cgwd (0.59) dapper; urgency=low
+
+  * fix segfault!!
+
+ -- Quinn Storm <livinglatexkali@gmail.com>  Sun, 20 Aug 2006 06:51:03 -0400
+
+cgwd (0.58) dapper; urgency=low
+
+  * change usage of quad flags so that gnome-window-decorator can co-exist
+  peacefully
+  * fix dialog popup obnoxiousness on new install
+  * bi-state the shade button
+  * add two new buttons (atop, sticky)
+
+ -- Quinn Storm <livinglatexkali@gmail.com>  Sat, 19 Aug 2006 23:40:01 -0400
+
+cgwd (0.57) dapper; urgency=low
+
+  * meta-info for engines (description, version, last_compat_ver, icon)
+  * update zootreeves, truglass...
+  * perhaps other updates?
+
+ -- Quinn Storm <livinglatexkali@gmail.com>  Sat, 19 Aug 2006 01:47:52 -0400
+
+cgwd (0.56) dapper; urgency=low
+
+  * yet more during-resize-appearance fixes
+
+ -- Quinn Storm <livinglatexkali@gmail.com>  Thu, 17 Aug 2006 05:55:10 -0400
+
+cgwd (0.55) dapper; urgency=low
+
+  * more fixes for during-resize appearance, etc.
+  * add search box to themer
+
+ -- Quinn Storm <livinglatexkali@gmail.com>  Thu, 17 Aug 2006 00:16:51 -0400
+
+
+cgwd (0.54) dapper; urgency=low
+
+  * add pixmap engine, hopefully fix some more bugs, add oxygen engine
+  * sorry, meant to release this earlier, forgot to dch
+
+ -- Quinn Storm <livinglatexkali@gmail.com>  Wed, 16 Aug 2006 21:35:57 -0400
+
+cgwd (0.53) dapper; urgency=low
+
+  * bugfixes, cleanups, hopefully a speedup too
+
+ -- Quinn Storm <livinglatexkali@gmail.com>  Mon, 14 Aug 2006 04:30:11 -0400
+
+cgwd (0.52) dapper; urgency=low
+
+  * hopefully got all the slowdowns out.  there's still a visual glitch on the
+  sides of windows on maximize but it doesn't look -as- bad.  Basically,
+  there's a bug in the decoration plugin still with how it renders xy/yx
+  modified textures
+
+ -- Quinn Storm <livinglatexkali@gmail.com>  Sun, 13 Aug 2006 08:17:59 -0400
+
+cgwd (0.51) dapper; urgency=low
+
+  * fix the dumb glitch in the depends
+  * update truglass, zootreeves engines
+
+ -- Quinn Storm <livinglatexkali@gmail.com>  Sun, 13 Aug 2006 00:12:21 -0400
+
+cgwd (0.50) dapper; urgency=low
+
+  * add truglass engine
+  * fix bug that kept dapper build from compiling
+
+ -- Quinn Storm <livinglatexkali@gmail.com>  Sat, 12 Aug 2006 23:36:27 -0400
+
+cgwd (0.49) dapper; urgency=low
+
+  * solve some speed issues, finally, shouldn't have taken this long, but
+  there was some weirdly bad matrix code in compiz
+
+ -- Quinn Storm <livinglatexkali@gmail.com>  Sat, 12 Aug 2006 06:27:14 -0400
+
+cgwd (0.48) dapper; urgency=low
+
+  * possible speedup
+  * move the name/save/export thing out of the 'theme' tab (still in the
+          'edit' tab)
+
+ -- Quinn Storm <livinglatexkali@gmail.com>  Fri, 11 Aug 2006 17:45:20 -0400
+
+cgwd (0.47) dapper; urgency=low
+
+  * added vrunner engine & new zootreeves version
+
+ -- Quinn Storm <livinglatexkali@gmail.com>  Fri, 11 Aug 2006 11:56:19 -0400
+
+cgwd (0.46) dapper; urgency=low
+
+  * internal updates, draw all decor as four quads, 1:1 with decor pixmap
+  * button fade pulse min % setting
+
+ -- Quinn Storm <livinglatexkali@gmail.com>  Thu, 10 Aug 2006 22:20:50 -0400
+
+cgwd (0.45) dapper; urgency=low
+
+  * buttons no longer activate on anything but mouse Button1
+  * major interface updates!
+
+ -- Quinn Storm <livinglatexkali@gmail.com>  Wed,  9 Aug 2006 22:47:23 -0400
+
+cgwd (0.44) dapper; urgency=low
+
+  * made themer resizable
+
+ -- Quinn Storm <livinglatexkali@gmail.com>  Wed,  9 Aug 2006 01:00:57 -0400
+
+cgwd (0.43) dapper; urgency=low
+
+  * added zootreeves' latest engine
+
+ -- Quinn Storm <livinglatexkali@gmail.com>  Wed,  9 Aug 2006 00:34:24 -0400
+
+cgwd (0.42) dapper; urgency=low
+
+  * fix for inactive buttons vanishing on click
+  * pulse patch
+
+ -- Quinn Storm <livinglatexkali@gmail.com>  Tue,  8 Aug 2006 23:25:52 -0400
+
+cgwd (0.41) dapper; urgency=low
+
+  * quick-n-dirty screenshot support
+
+ -- Quinn Storm <livinglatexkali@gmail.com>  Mon,  7 Aug 2006 02:56:31 -0400
+
+cgwd (0.40) dapper; urgency=low
+
+  * possible fix for segfault
+
+ -- Quinn Storm <livinglatexkali@gmail.com>  Sun,  6 Aug 2006 13:36:01 -0400
+
+cgwd (0.39) dapper; urgency=low
+
+  * moved some settings where they really belong
+
+ -- Quinn Storm <livinglatexkali@gmail.com>  Sun,  6 Aug 2006 13:16:57 -0400
+
+cgwd (0.38) dapper; urgency=low
+
+  * add zootreeves' current work-in-progress engine
+  * add engine to columns in theme selector
+
+ -- Quinn Storm <livinglatexkali@gmail.com>  Sat,  5 Aug 2006 14:16:51 -0400
+
+cgwd (0.37) dapper; urgency=low
+
+  * little bugfix, no longer 'forgets' to update backing store on title change
+
+ -- Quinn Storm <livinglatexkali@gmail.com>  Sat,  5 Aug 2006 02:01:49 -0400
+
+cgwd (0.36) dapper; urgency=low
+
+  * importer from command-line
+  * bugfix for stupid bug with initial gcompizthemer settings
+
+ -- Quinn Storm <livinglatexkali@gmail.com>  Fri,  4 Aug 2006 14:53:23 -0400
+
+cgwd (0.35) dapper; urgency=low
+
+  * fix dumb bug in themer import
+
+ -- Quinn Storm <livinglatexkali@gmail.com>  Fri,  4 Aug 2006 13:44:35 -0400
+
+cgwd (0.34) dapper; urgency=low
+
+  * updating to themes-in-dirs style
+
+ -- Quinn Storm <livinglatexkali@gmail.com>  Thu,  3 Aug 2006 22:52:21 -0400
+
+cgwd (0.33) dapper; urgency=low
+
+  * bugfixes
+
+ -- Quinn Storm <livinglatexkali@gmail.com>  Thu,  3 Aug 2006 16:04:31 -0400
+
+cgwd (0.32) dapper; urgency=low
+
+  * added launcher for gcompizthemer
+  * .pc file for libcgwdengine
+
+ -- Quinn Storm <livinglatexkali@gmail.com>  Thu,  3 Aug 2006 14:02:13 -0400
+
+cgwd (0.31) dapper; urgency=low
+
+  * fix for bug that was causing crashes, thanks to cornelius
+
+ -- Quinn Storm <livinglatexkali@gmail.com>  Thu,  3 Aug 2006 13:06:02 -0400
+
+cgwd (0.30) dapper; urgency=low
+
+  * bumped version number to 0.30 to handle the inclusion of themer
+  * merged gcompizthemer into the cgwd source tree
+  * themer with engine support is ready
+  * legacy engine
+
+ -- Quinn Storm <livinglatexkali@gmail.com>  Wed,  2 Aug 2006 21:33:37 -0400
+
+cgwd (0.10) dapper; urgency=low
+
+  * cornelius's button drawing patch!
+
+ -- Quinn Storm <livinglatexkali@gmail.com>  Sun, 30 Jul 2006 10:35:56 -0400
+
+cgwd (0.9) dapper; urgency=low
+
+  * vertical button offset
+  * window contents halo/etc.
+  * added --version
+
+ -- Quinn Storm <livinglatexkali@gmail.com>  Fri, 28 Jul 2006 20:03:39 -0400
+
+cgwd (0.8) dapper; urgency=low
+
+  * bugfix for missing settings.ini
+
+ -- Quinn Storm <livinglatexkali@gmail.com>  Thu, 27 Jul 2006 18:52:10 -0400
+
+cgwd (0.7) dapper; urgency=low
+
+  * customizable border width
+  * customizable minimum titlebar height
+  * fix button offset
+  * added settings for shade & button hover cursor
+
+ -- Quinn Storm <livinglatexkali@gmail.com>  Thu, 27 Jul 2006 18:29:51 -0400
+
+cgwd (0.6) dapper; urgency=low
+
+  * button glow
+
+ -- Quinn Storm <livinglatexkali@gmail.com>  Tue, 25 Jul 2006 09:43:21 -0400
+
+cgwd (0.5) dapper; urgency=low
+
+  * bugfix for title layout
+
+ -- Quinn Storm <livinglatexkali@gmail.com>  Mon, 24 Jul 2006 04:11:19 -0400
+
+cgwd (0.4) dapper; urgency=low
+
+  * fixed shade...forgot to add it to a switch
+
+ -- Quinn Storm <livinglatexkali@gmail.com>  Mon, 24 Jul 2006 03:52:58 -0400
+
+cgwd (0.3) dapper; urgency=low
+
+  * fixed (#)
+  * added pointer grabs for buttons so they display right, added cursor change
+  on buttons as well
+
+ -- Quinn Storm <livinglatexkali@gmail.com>  Mon, 24 Jul 2006 01:16:06 -0400
+
+cgwd (0.2) dapper; urgency=low
+
+  * per-button files
+  * needs themer 0.18
+  * customizable title-bar layout
+  * customizable corner radius & roundedness
+
+ -- Quinn Storm <livinglatexkali@gmail.com>  Sun, 23 Jul 2006 11:38:22 -0400
+
+cgwd (0.1) dapper; urgency=low
+
+  * Initial Release.
+
+ -- Quinn Storm <livinglatexkali@gmail.com>  Fri, 21 Jul 2006 02:12:20 -0400
