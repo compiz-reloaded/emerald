@@ -5933,7 +5933,7 @@ void load_buttons_image(window_settings * ws, gint y)
             file,NULL)))
     {
         ws->ButtonArray[y] = gdk_pixbuf_new(GDK_COLORSPACE_RGB,TRUE,8,16*S_COUNT,16); // create a blank pixbuf
-        g_warning("Cannot open pixmap: %s", b_types[y]);
+        //g_warning("Cannot open pixmap: %s", b_types[y]);
     }
     g_free(file);
 
@@ -6025,14 +6025,14 @@ void load_buttons_glow_images(window_settings * ws)
             ws->ButtonGlowArray =
                 gdk_pixbuf_new(GDK_COLORSPACE_RGB,TRUE,8,
                         pix_width*B_COUNT,pix_height); // create a blank pixbuf
-            g_warning("Cannot open pixmap: %s", file1);
+            //g_warning("Cannot open pixmap: %s", file1);
         }
         if (!success2 && ws->use_button_inactive_glow)
         {
             ws->ButtonInactiveGlowArray =
                 gdk_pixbuf_new(GDK_COLORSPACE_RGB,TRUE,8,
                         pix_width*B_COUNT,pix_height); // create a blank pixbuf
-            g_warning("Cannot open pixmap: %s", file2);
+            //g_warning("Cannot open pixmap: %s", file2);
         }
     }
     ws->c_glow_size.w = pix_width;
