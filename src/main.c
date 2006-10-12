@@ -690,7 +690,8 @@ decor_update_window_property (decor_t *d)
         pango_layout_get_pixel_size(d->layout,&w,&h);
     }
 
-    get_window_max_state(d->prop_xid,&hm,&vm);
+    if (d->prop_xid)
+        get_window_max_state(d->prop_xid,&hm,&vm);
     nQuad = my_set_window_quads (quads, d->width, d->height, ws,hm,vm);
 
     extents.top += ws->titlebar_height;
