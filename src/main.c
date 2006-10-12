@@ -655,6 +655,8 @@ get_window_max_state(Window w, gboolean * hm, gboolean * vm)
     *hm=FALSE;
     *vm=FALSE;
     Atom np = XInternAtom(xdisplay,"_NET_WM_STATE",FALSE);
+    gdk_error_trap_push ();
+
     if (XGetWindowProperty(xdisplay,w,np,0L,1024L,FALSE,XA_ATOM,&actual,&format,
             &nreturn,&left,&data)==Success && nreturn && data)
     {
@@ -667,6 +669,9 @@ get_window_max_state(Window w, gboolean * hm, gboolean * vm)
         }
         XFree((void*)data);
     }
+    XSync(xdisplay,FALSE);
+
+    gdk_error_trap_pop();
 }
 
     static void
