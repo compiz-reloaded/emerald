@@ -8,6 +8,13 @@
 #include <emerald.h>
 #include <engine.h>
 
+#define BASE_PROP_SIZE 12
+#define QUAD_PROP_SIZE 9
+
+#ifndef DECOR_INTERFACE_VERSION
+#define DECOR_INTERFACE_VERSION 0
+#endif
+
 GdkPixmap * pdeb;
 
 /*    static GdkPixmap *
@@ -117,15 +124,22 @@ static gchar * engine = NULL;
    decoration property
    -------------------
 
-   data[0] = pixmap
+   data[0] = version
 
-   data[1] = input left
-   data[2] = input right
-   data[3] = input top
-   data[4] = input bottom
+   data[1] = pixmap
 
-   data[5] = min width
-   data[6] = min height
+   data[2] = input left
+   data[3] = input right
+   data[4] = input top
+   data[5] = input bottom
+
+   data[6] = input left when maximized
+   data[7] = input right when maximized
+   data[8] = input top when maximized
+   data[9] = input bottom when maximized
+ 
+   data[10] = min width
+   data[11] = min height
 
    flags
 
@@ -133,15 +147,15 @@ static gchar * engine = NULL;
    9rd and 10th bit alignment, 11rd and 12th bit clamp,
    13th bit XX, 14th bit XY, 15th bit YX, 16th bit YY.
 
-   data[6 + n * 9 + 1] = flags
-   data[6 + n * 9 + 2] = p1 x
-   data[6 + n * 9 + 3] = p1 y
-   data[6 + n * 9 + 4] = p2 x
-   data[6 + n * 9 + 5] = p2 y
-   data[6 + n * 9 + 6] = widthMax
-   data[6 + n * 9 + 7] = heightMax
-   data[6 + n * 9 + 8] = x0
-   data[6 + n * 9 + 9] = y0
+   data[11 + n * 9 + 1] = flags
+   data[11 + n * 9 + 2] = p1 x
+   data[11 + n * 9 + 3] = p1 y
+   data[11 + n * 9 + 4] = p2 x
+   data[11 + n * 9 + 5] = p2 y
+   data[11 + n * 9 + 6] = widthMax
+   data[11 + n * 9 + 7] = heightMax
+   data[11 + n * 9 + 8] = x0
+   data[11 + n * 9 + 9] = y0
    */
 static gint get_b_offset(gint b_t)
 {
@@ -272,17 +286,25 @@ update_window_extents(window_settings * ws)
 decoration_to_property (long	*data,
         Pixmap	pixmap,
         extents	*input,
+        extents *maxinput,
         int	min_width,
         int	min_height,
         quad	*quad,
         int	nQuad)
 {
+    *data++ = DECOR_INTERFACE_VERSION;
+
     memcpy (data++, &pixmap, sizeof (Pixmap));
 
     *data++ = input->left;
     *data++ = input->right;
     *data++ = input->top;
     *data++ = input->bottom;
+
+    *data++ = maxinput->left;
+    *data++ = maxinput->right;
+    *data++ = maxinput->top;
+    *data++ = maxinput->bottom;
 
     *data++ = min_width;
     *data++ = min_height;
@@ -594,6 +616,7 @@ decor_update_window_property (decor_t *d)
     long    data[256];
     Display *xdisplay = GDK_DISPLAY_XDISPLAY (gdk_display_get_default ());
     window_settings * ws = d->fs->ws;
+    extents maxextents;
     extents extents = ws->win_extents;
     gint    nQuad;
     quad    quads[N_QUADS_MAX];
@@ -609,9 +632,15 @@ decor_update_window_property (decor_t *d)
     nQuad = my_set_window_quads (quads, d->width, d->height, ws);
 
     extents.top += ws->titlebar_height;
-    
+
+    maxextents.left=0;
+    maxextents.right=0;
+    maxextents.top=ws->titlebar_height;
+    maxextents.bottom=0;
+   
     decoration_to_property (data, GDK_PIXMAP_XID (d->pixmap),
             &extents,
+            &maxextents,
             0,
             0,
             quads, nQuad);
@@ -620,7 +649,7 @@ decor_update_window_property (decor_t *d)
     XChangeProperty (xdisplay, d->prop_xid,
             win_decor_atom,
             XA_INTEGER,
-            32, PropModeReplace, (guchar *) data, 7 + 9 * nQuad);
+            32, PropModeReplace, (guchar *) data, BASE_PROP_SIZE + QUAD_PROP_SIZE * nQuad);
     XSync (xdisplay, FALSE);
     gdk_error_trap_pop ();
 }
@@ -719,13 +748,13 @@ decor_update_switcher_property (decor_t *d)
     nQuad = set_switcher_quads (quads, d->width, d->height,ws);
 
     decoration_to_property (data, GDK_PIXMAP_XID (d->pixmap),
-            &extents, 0, 0, quads, nQuad);
+            &extents, &extents, 0, 0, quads, nQuad);
 
     gdk_error_trap_push ();
     XChangeProperty (xdisplay, d->prop_xid,
             win_decor_atom,
             XA_INTEGER,
-            32, PropModeReplace, (guchar *) data, 7 + 9 * nQuad);
+            32, PropModeReplace, (guchar *) data, BASE_PROP_SIZE + QUAD_PROP_SIZE * nQuad);
     XSync (xdisplay, FALSE);
     gdk_error_trap_pop ();
 }
@@ -2575,13 +2604,13 @@ update_default_decorations (GdkScreen *screen, frame_settings * fs_act,
         nQuad = set_shadow_quads (quads, width, height,ws);
 
         decoration_to_property (data, GDK_PIXMAP_XID (ws->shadow_pixmap),
-                &ws->shadow_extents, 0, 0, quads, nQuad);
+                &ws->shadow_extents, &ws->shadow_extents, 0, 0, quads, nQuad);
 
         XChangeProperty (xdisplay, xroot,
                 bareAtom,
                 XA_INTEGER,
                 32, PropModeReplace, (guchar *) data,
-                7 + 9 * nQuad);
+                BASE_PROP_SIZE + QUAD_PROP_SIZE * nQuad);
 
     }
     else
@@ -2635,20 +2664,20 @@ update_default_decorations (GdkScreen *screen, frame_settings * fs_act,
         (*d.draw) (&d);
 
         decoration_to_property (data, GDK_PIXMAP_XID (d.p_inactive),
-                &extents, 0, 0, quads, nQuad);
+                &extents, &extents, 0, 0, quads, nQuad);
 
         XChangeProperty (xdisplay, xroot,
                 normalAtom,
                 XA_INTEGER,
-                32, PropModeReplace, (guchar *) data, 7 + 9 * nQuad);
+                32, PropModeReplace, (guchar *) data, BASE_PROP_SIZE + QUAD_PROP_SIZE * nQuad);
 
         decoration_to_property (data, GDK_PIXMAP_XID (d.p_active),
-                &extents, 0, 0, quads, nQuad);
+                &extents, &extents, 0, 0, quads, nQuad);
 
         XChangeProperty (xdisplay, xroot,
                 activeAtom,
                 XA_INTEGER,
-                32, PropModeReplace, (guchar *) data, 7 + 9 * nQuad);
+                32, PropModeReplace, (guchar *) data, BASE_PROP_SIZE + QUAD_PROP_SIZE * nQuad);
     }
 }
 

@@ -29,48 +29,6 @@ GtkWidget * ImportButton;
 GtkWidget * ExportButton;
 GtkWidget * QuitButton;
 
-#define Patoi(nn) g_ascii_strtoull(nn,NULL,0)
-static gboolean ver_ge(gchar * v1, gchar * v2)
-{
-    gchar * dv1 = v1?g_strdup(v1):g_strdup("");
-    gchar * dv2 = v2?g_strdup(v2):g_strdup("");
-    gchar * c1;
-    gchar * c2;
-    if (Patoi(dv2)>Patoi(dv1))
-    {
-        g_free(dv1);
-        g_free(dv2);
-        return FALSE;
-    }
-    c1 = strchr(dv1,'.');
-    c2 = strchr(dv2,'.');
-    while (c1 || c2)
-    {
-        if (!c1 || !c2 || !strlen(c1) || !strlen(c2))
-        {
-            g_free(dv1);
-            g_free(dv2);
-            if (!c1 || !strlen(c1))
-                return FALSE;
-            else
-                return TRUE;
-        }
-        c1++;
-        c2++;
-        if (Patoi(c2)>Patoi(c1))
-        {
-            g_free(dv1);
-            g_free(dv2);
-            return FALSE;
-        }
-        c1 = strchr(c1,'.');
-        c2 = strchr(c2,'.');
-    }
-    g_free(dv1);
-    g_free(dv2);
-    return TRUE;
-}
-
 static void theme_list_append(gchar * value,gchar * dir, gchar * fil)
 {
     GtkTreeIter iter;
@@ -92,16 +50,20 @@ static void theme_list_append(gchar * value,gchar * dir, gchar * fil)
         gchar * ostr1;
         gchar * ostr2;
         gchar * ostr;
+        gchar * elc;
         get_engine_meta_info(val,&emi);
         val2 = g_key_file_get_string(f,"engine_version",val,NULL);
         if (!val2)
-            val2 = g_strdup("0.0");
+            val2 = g_strdup("0.0.0");
         tver = g_key_file_get_string(f,"theme","version",NULL);
         if (!tver)
-            tver = g_strup("0.0");
-        ostr1 = g_strdup_printf(ver_ge(val2,emi.last_compat)?
+            tver = g_strup("0.0.0");
+        elc=emi.last_compat;
+        if (!emi.last_compat)
+            elc="0.0.0";
+        ostr1 = g_strdup_printf(strverscmp(val2,elc)>=0?
                 "Engine: YES (%s)\n":"Engine: NO (%s)\n",val2);
-        ostr2 = g_strdup_printf(ver_ge(tver,LAST_COMPAT_VER)?
+        ostr2 = g_strdup_printf(strverscmp(tver,LAST_COMPAT_VER)>=0?
                 "Emerald: YES (%s)":"Emerald: NO (%s)",tver);
         ostr = g_strdup_printf("%s%s",ostr1,ostr2);
         g_free(ostr1);
@@ -114,7 +76,9 @@ static void theme_list_append(gchar * value,gchar * dir, gchar * fil)
     else
     {
         val = g_key_file_get_string(f,"theme","version",NULL);
-        val2 = g_strdup_printf(ver_ge(val,LAST_COMPAT_VER)?
+        if (!val)
+            val=g_strdup("0.0.0");
+        val2 = g_strdup_printf(strverscmp(val,LAST_COMPAT_VER)>=0?
                 "No Engine\nEmerald: YES (%s)":"No Engine\nEmerald: NO (%s)",val?val:"NONE");
         gtk_list_store_set(ThemeList,&iter,1,val2,-1);
         g_free(val2);
