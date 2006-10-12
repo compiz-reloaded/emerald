@@ -576,38 +576,97 @@ static int my_add_quad_col(quad * q,
 my_set_window_quads (quad *q,
         int  width,
         int  height,
-        window_settings * ws)
+        window_settings * ws,
+        gboolean max_horz,
+        gboolean max_vert)
 {
     int nq;
     int mnq=0;
-    //TOP QUAD
-    nq=my_add_quad_row(q,width,ws->left_space,ws->right_space,
-            ws->titlebar_height+ws->top_space,GRAVITY_NORTH,0,0);
-    q+=nq;
-    mnq+=nq;
+    if (!max_vert)
+    {
+        //TOP QUAD
+        nq=my_add_quad_row(q,width,ws->left_space,ws->right_space,
+                ws->titlebar_height+ws->top_space,GRAVITY_NORTH,0,0);
+        q+=nq;
+        mnq+=nq;
 
-    //BOTTOM QUAD
-    nq=my_add_quad_row(q,width,ws->left_space,ws->right_space,
-            ws->bottom_space,GRAVITY_SOUTH,0,
-           height-ws->bottom_space);
-    q+=nq;
-    mnq+=nq;
 
-    nq=my_add_quad_col(q,height-
-            (ws->titlebar_height+ws->top_space+ws->bottom_space),
-            ws->left_space,GRAVITY_WEST,0,
-            ws->top_space+ws->titlebar_height);
-    q+=nq;
-    mnq+=nq;
+        //BOTTOM QUAD
+        nq=my_add_quad_row(q,width,ws->left_space,ws->right_space,
+                ws->bottom_space,GRAVITY_SOUTH,0,
+               height-ws->bottom_space);
+        q+=nq;
+        mnq+=nq;
+    }
+    else
+    {
+        q->p1.x=0;
+        q->p1.y=-ws->titlebar_height;
+        q->p1.gravity = GRAVITY_NORTH | GRAVITY_WEST;
+        q->p2.x=0;
+        q->p2.y=0;
+        q->p2.gravity = GRAVITY_NORTH | GRAVITY_EAST;
+        q->max_width = width-(ws->left_space+ws->right_space);
+        q->max_height = ws->titlebar_height;
+        q->align = 0; // left&top
+        q->clamp = CLAMP_HORZ|CLAMP_VERT;
+        q->m.x0=ws->left_space;
+        q->m.y0=ws->top_space;
+        q->m.xx=1.0;
+        q->m.xy=0.0;
+        q->m.yy=1.0;
+        q->m.yx=0.0;
+        q++;
+        mnq++;
+    }
 
-    nq=my_add_quad_col(q,height-
-            (ws->titlebar_height+ws->top_space+ws->bottom_space),
-            ws->right_space,GRAVITY_EAST,width-ws->right_space,
-            ws->top_space+ws->titlebar_height);
-    q+=nq;
-    mnq+=nq;
+    if (!max_horz)
+    {
+        nq=my_add_quad_col(q,height-
+                (ws->titlebar_height+ws->top_space+ws->bottom_space),
+                ws->left_space,GRAVITY_WEST,0,
+                ws->top_space+ws->titlebar_height);
+        q+=nq;
+        mnq+=nq;
+
+        nq=my_add_quad_col(q,height-
+                (ws->titlebar_height+ws->top_space+ws->bottom_space),
+                ws->right_space,GRAVITY_EAST,width-ws->right_space,
+                ws->top_space+ws->titlebar_height);
+        q+=nq;
+        mnq+=nq;
+    }
 
     return mnq;
+}
+
+static void
+get_window_max_state(Window w, gboolean * hm, gboolean * vm)
+{
+    //query the _NET_WM hints
+    Display *xdisplay = GDK_DISPLAY_XDISPLAY (gdk_display_get_default ());
+    unsigned long nreturn;
+    unsigned long left;
+    unsigned char * data;
+    Atom actual;
+    int format;
+    Atom hma = XInternAtom(xdisplay,"_NET_WM_STATE_MAXIMIZED_HORZ",FALSE);
+    Atom vma = XInternAtom(xdisplay,"_NET_WM_STATE_MAXIMIZED_VERT",FALSE);
+    *hm=FALSE;
+    *vm=FALSE;
+    Atom np = XInternAtom(xdisplay,"_NET_WM_STATE",FALSE);
+    if (XGetWindowProperty(xdisplay,w,np,0L,1024L,FALSE,XA_ATOM,&actual,&format,
+            &nreturn,&left,&data)==Success && nreturn && data)
+    {
+        Atom *a = (Atom *)data;
+        while(nreturn--)
+        {
+            if (*a==hma) *hm=TRUE;
+            if (*a==vma) *vm=TRUE;
+            a++;
+        }
+        XFree((void*)data);
+    }
 }
 
     static void
@@ -622,6 +681,8 @@ decor_update_window_property (decor_t *d)
     quad    quads[N_QUADS_MAX];
     gint w;
     gint h;
+    gboolean hm,vm;
+
     w=0;
     h=0;
     if (d->layout)
@@ -629,7 +690,8 @@ decor_update_window_property (decor_t *d)
         pango_layout_get_pixel_size(d->layout,&w,&h);
     }
 
-    nQuad = my_set_window_quads (quads, d->width, d->height, ws);
+    get_window_max_state(d->prop_xid,&hm,&vm);
+    nQuad = my_set_window_quads (quads, d->width, d->height, ws,hm,vm);
 
     extents.top += ws->titlebar_height;
 
@@ -2643,7 +2705,7 @@ update_default_decorations (GdkScreen *screen, frame_settings * fs_act,
     if (ws->decor_active_pixmap)
         gdk_pixmap_unref (ws->decor_active_pixmap);
 
-    nQuad = my_set_window_quads (quads, d.width, d.height,ws);
+    nQuad = my_set_window_quads (quads, d.width, d.height,ws,FALSE,FALSE);
 
     ws->decor_normal_pixmap = create_pixmap (MAX(d.width, d.height),
             ws->top_space+ws->left_space+ws->right_space+ws->bottom_space+
