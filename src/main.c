@@ -601,7 +601,7 @@ my_set_window_quads (quad *q,
     else
     {
         q->p1.x=0;
-        q->p1.y=-ws->titlebar_height;
+        q->p1.y=-(ws->titlebar_height+ws->win_extents.top);
         q->p1.gravity = GRAVITY_NORTH | GRAVITY_WEST;
         q->p2.x=0;
         q->p2.y=0;
@@ -611,7 +611,7 @@ my_set_window_quads (quad *q,
         q->align = 0; // left&top
         q->clamp = CLAMP_HORZ|CLAMP_VERT;
         q->m.x0=ws->left_space;
-        q->m.y0=ws->top_space;
+        q->m.y0=ws->top_space-ws->win_extents.top;
         q->m.xx=1.0;
         q->m.xy=0.0;
         q->m.yy=1.0;
@@ -703,7 +703,7 @@ decor_update_window_property (decor_t *d)
 
     maxextents.left=0;
     maxextents.right=0;
-    maxextents.top=ws->titlebar_height;
+    maxextents.top=ws->titlebar_height+ws->win_extents.top;
     maxextents.bottom=0;
    
     decoration_to_property (data, GDK_PIXMAP_XID (d->pixmap),
