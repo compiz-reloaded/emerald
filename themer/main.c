@@ -26,6 +26,7 @@ GtkWidget * ThemeEnable;
 GtkWidget * ReloadButton;
 GtkWidget * DeleteButton;
 GtkWidget * ImportButton;
+GtkWidget * FetchButton;
 GtkWidget * ExportButton;
 GtkWidget * QuitButton;
 
@@ -269,6 +270,17 @@ static void error_dialog(gchar * val)
     gtk_dialog_run(GTK_DIALOG(w));
     gtk_widget_destroy(w);
 }
+static void fetching_dialog(gchar * val)
+{
+    GtkWidget * w;
+    w = gtk_message_dialog_new(GTK_WINDOW(mainWindow),
+            GTK_DIALOG_DESTROY_WITH_PARENT,
+            GTK_MESSAGE_INFO,
+            GTK_BUTTONS_OK,
+            val);
+    gtk_dialog_run(GTK_DIALOG(w));
+    gtk_widget_destroy(w);
+}
 static void cb_load(GtkWidget *w, gpointer d)
 {
     GKeyFile * f;
@@ -415,7 +427,7 @@ static gchar * import_theme(gchar * file)
     g_free(fn);
     g_free(ot);
     g_free(at);
-    info_dialog(_("Theme Imported"));
+ //   info_dialog(_("Theme Imported"));
     return rstr;
 }
 static void export_theme(gchar * file)
@@ -1361,6 +1373,33 @@ static void cb_import(GtkWidget * w, gpointer p)
     }
     gtk_widget_destroy(dialog);
 }
+void cb_fetch()
+{
+    gint ex=0;
+    gchar* fetchthemes = g_strconcat("svn co http://svn.beryl-project.org/trunk/emerald-themes-repo ",g_get_home_dir(),"/.emerald/themecache",NULL);
+     fetching_dialog(_("Click OK to start fetching themes \n"
+                       "May take time depending on \n"
+                       "internet connection speed"));
+    g_spawn_command_line_sync(fetchthemes,NULL,NULL,&ex,NULL);
+    g_free(fetchthemes);
+    gchar * themecache = g_strdup_printf("%s/.emerald/themecache/",g_get_home_dir());
+    GDir * d;
+    d = g_dir_open(themecache,0,NULL);
+    if (d)
+    {
+        gchar * n;
+        while((n = (gchar *) g_dir_read_name(d)))
+        {
+		gchar * fn;
+		fn = g_strconcat(themecache,n,NULL);
+ 		import_theme(fn);
+        }
+	g_free(n);
+        g_dir_close(d);
+    }
+
+    info_dialog(_("Themes Fetched"));
+}
 void cb_quit(GtkWidget * w, gpointer p)
 {
     gtk_widget_destroy(mainWindow);
@@ -1393,6 +1432,12 @@ void layout_upper_pane(GtkWidget * vbox)
     table_append(ImportButton,FALSE);
     g_signal_connect(ImportButton,"clicked",G_CALLBACK(cb_import),NULL);
     
+    FetchButton = gtk_button_new_with_label("Fetch Themes");
+    gtk_button_set_image(GTK_BUTTON(FetchButton),
+            gtk_image_new_from_stock(GTK_STOCK_CONNECT,GTK_ICON_SIZE_BUTTON));
+    table_append(FetchButton,FALSE);
+    g_signal_connect(FetchButton,"clicked",G_CALLBACK(cb_fetch),NULL);
+ 
 }
 
 GtkWidget* create_filechooserdialog1 (char *input)
