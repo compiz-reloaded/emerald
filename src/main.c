@@ -582,7 +582,7 @@ my_set_window_quads (quad *q,
 {
     int nq;
     int mnq=0;
-    if (!max_vert)
+    if (!max_vert || !ws->use_decoration_cropping)
     {
         //TOP QUAD
         nq=my_add_quad_row(q,width,ws->left_space,ws->right_space,
@@ -620,7 +620,7 @@ my_set_window_quads (quad *q,
         mnq++;
     }
 
-    if (!max_horz)
+    if (!max_horz || !ws->use_decoration_cropping)
     {
         nq=my_add_quad_col(q,height-
                 (ws->titlebar_height+ws->top_space+ws->bottom_space),
@@ -701,10 +701,15 @@ decor_update_window_property (decor_t *d)
 
     extents.top += ws->titlebar_height;
 
-    maxextents.left=0;
-    maxextents.right=0;
-    maxextents.top=ws->titlebar_height+ws->win_extents.top;
-    maxextents.bottom=0;
+    if (ws->use_decoration_cropping)
+    {
+        maxextents.left=0;
+        maxextents.right=0;
+        maxextents.top=ws->titlebar_height+ws->win_extents.top;
+        maxextents.bottom=0;
+    }
+    else
+        maxextents=extents;
    
     decoration_to_property (data, GDK_PIXMAP_XID (d->pixmap),
             &extents,
@@ -6087,12 +6092,10 @@ load_settings(window_settings * ws)
     else
     {
         g_free(path);
-        load_int_setting(f,&ws->double_click_action,
-                "double_click_action","titlebars");
-        load_int_setting(f,&ws->button_hover_cursor,
-                "hover_cursor","buttons");
+        load_int_setting(f,&ws->double_click_action,"double_click_action","titlebars");
+        load_int_setting(f,&ws->button_hover_cursor,"hover_cursor","buttons");
+		load_bool_setting(f,&ws->use_decoration_cropping,"use_decoration_cropping","decorations");
         load_bool_setting(f,&ws->use_button_fade,"use_button_fade","buttons");
-
         gint button_fade_step_duration = ws->button_fade_step_duration;
         load_int_setting(f,&button_fade_step_duration,"button_fade_step_duration","buttons");
         if (button_fade_step_duration > 0)

@@ -165,9 +165,10 @@ typedef struct _pos_t {
     int x, y, w, h;
     int xw, yh, ww, hh;
 } pos_t;
+
 typedef struct _frame_settings frame_settings;
-typedef struct _window_settings window_settings;
-struct _window_settings
+
+typedef struct _window_settings
 {
     void * engine_ws;
     gint button_offset;
@@ -193,6 +194,7 @@ struct _window_settings
 
     gboolean    use_button_glow;
     gboolean    use_button_inactive_glow;
+	gboolean	use_decoration_cropping;
     gboolean    use_button_fade;
     GdkPixbuf * ButtonGlowPix[B_COUNT];
     GdkPixbuf * ButtonGlowArray;
@@ -269,7 +271,9 @@ struct _window_settings
                    // (buttons will be centered in their glows)
                    // active and inactive glow pixmaps are assumed to be of same size
     gboolean stretch_sides;
-};
+	
+} window_settings;
+
 struct _frame_settings
 {
     void * engine_fs;
