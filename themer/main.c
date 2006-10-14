@@ -9,6 +9,12 @@
 
 #define LAST_COMPAT_VER "0.1.0"
 
+typedef struct _FetcherInfo
+{
+    GtkWidget * dialog;
+    GtkWidget * progbar;
+    GPid        pd;
+} FetcherInfo;
 
 GtkWidget * ThemeSelector;
 GtkListStore * ThemeList;
@@ -1377,15 +1383,8 @@ static void cb_import(GtkWidget * w, gpointer p)
     }
     gtk_widget_destroy(dialog);
 }
-void cb_fetch()
+void import_cache(GtkWidget * progbar)
 {
-    gint ex=0;
-    gchar* fetchthemes = g_strconcat("svn co http://svn.beryl-project.org/trunk/emerald-themes-repo ",g_get_home_dir(),"/.emerald/themecache",NULL);
-     fetching_dialog(_("Click OK to start fetching themes \n"
-                       "May take time depending on \n"
-                       "internet connection speed"));
-    g_spawn_command_line_sync(fetchthemes,NULL,NULL,&ex,NULL);
-    g_free(fetchthemes);
     gchar * themecache = g_strdup_printf("%s/.emerald/themecache/",g_get_home_dir());
     GDir * d;
     d = g_dir_open(themecache,0,NULL);
@@ -1394,15 +1393,60 @@ void cb_fetch()
         gchar * n;
         while((n = (gchar *) g_dir_read_name(d)))
         {
-		gchar * fn;
-		fn = g_strconcat(themecache,n,NULL);
- 		import_theme(fn);
+            gchar * fn;
+            if (g_str_has_suffix(n,".emerald"))
+            {
+                fn = g_strconcat(themecache,n,NULL);
+                import_theme(fn);
+                g_free(fn);
+                gtk_progress_bar_pulse(GTK_PROGRESS_BAR(progbar));
+            }
         }
-	g_free(n);
+        g_free(n);
         g_dir_close(d);
     }
-
-    info_dialog(_("Themes Fetched"));
+}
+gboolean watcher_func(gpointer p)
+{
+    FetcherInfo * f = p;
+    int stat;
+    gtk_progress_bar_pulse(GTK_PROGRESS_BAR(f->progbar));
+    if (waitpid(f->pd,NULL,WNOHANG)!=0)
+    {
+        import_cache(f->progbar);
+        gtk_widget_destroy(f->dialog);
+        free(p);
+        return FALSE;
+    }
+    return TRUE;
+}
+void cb_fetch()
+{
+    gchar * svnpath="http://svn.beryl-project.org/trunk/emerald-themes-repo";
+    gchar* themefetcher[] = {
+        "svn", "co", svnpath, g_strconcat(g_get_home_dir(),"/.emerald/themecache",NULL), NULL };
+    GtkWidget * w;
+    GtkWidget * l;
+    GPid pd;
+    FetcherInfo * fe = malloc(sizeof(FetcherInfo));
+    w = gtk_dialog_new_with_buttons(_("Fetching Themes"),
+            GTK_WINDOW(mainWindow),
+            GTK_DIALOG_DESTROY_WITH_PARENT | GTK_DIALOG_MODAL, NULL);
+    l = gtk_label_new(_("Fetching themes... \n"
+                       "This may take time depending on \n"
+                       "internet connection speed."));
+    gtk_box_pack_start(GTK_BOX(GTK_DIALOG(w)->vbox),l,FALSE,FALSE,0);
+    l = gtk_progress_bar_new();
+    gtk_box_pack_start(GTK_BOX(GTK_DIALOG(w)->action_area),l,TRUE,TRUE,0);
+    gtk_widget_show_all(w);
+    g_spawn_async(NULL,themefetcher,NULL,
+            G_SPAWN_SEARCH_PATH | G_SPAWN_DO_NOT_REAP_CHILD,
+            NULL,NULL,&pd,NULL);
+    g_free(themefetcher[3]);
+    fe->dialog=w;
+    fe->progbar=l;
+    fe->pd=pd;
+    g_timeout_add(100,watcher_func,fe);
 }
 void cb_quit(GtkWidget * w, gpointer p)
 {
