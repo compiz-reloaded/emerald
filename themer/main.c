@@ -6,6 +6,7 @@
 #define NEED_TITLEBAR_ACTION_NAMES
 #include <emerald.h>
 #include <engine.h>
+#include <svn_client.h>
 
 #define LAST_COMPAT_VER "0.1.0"
 
@@ -13,7 +14,7 @@ typedef struct _FetcherInfo
 {
     GtkWidget * dialog;
     GtkWidget * progbar;
-    GPid        pd;
+    GtkWidget * filelabel;
 } FetcherInfo;
 
 GtkWidget * ThemeSelector;
@@ -1406,29 +1407,51 @@ void import_cache(GtkWidget * progbar)
         g_dir_close(d);
     }
 }
-gboolean watcher_func(gpointer p)
+void svn_notified(void * dat, svn_wc_notify_t * n, apr_pool_t * pool)
 {
-    FetcherInfo * f = p;
+    FetcherInfo * f = dat;
     int stat;
+    if (n->path)
+        gtk_label_set_text(GTK_LABEL(f->filelabel),n->path);
     gtk_progress_bar_pulse(GTK_PROGRESS_BAR(f->progbar));
-    if (waitpid(f->pd,NULL,WNOHANG)!=0)
+    while (gtk_events_pending())
+        gtk_main_iteration();
+    /*if (waitpid(f->pd,NULL,WNOHANG)!=0)
     {
-        import_cache(f->progbar);
-        gtk_widget_destroy(f->dialog);
-        free(p);
         return FALSE;
     }
-    return TRUE;
+    return TRUE;*/
 }
 void cb_fetch()
 {
     gchar * svnpath="http://svn.beryl-project.org/trunk/emerald-themes-repo";
-    gchar* themefetcher[] = {
-        "svn", "co", svnpath, g_strconcat(g_get_home_dir(),"/.emerald/themecache",NULL), NULL };
+    gchar * destpath = g_strconcat(g_get_home_dir(),"/.emerald/themecache",NULL);
     GtkWidget * w;
     GtkWidget * l;
-    GPid pd;
-    FetcherInfo * fe = malloc(sizeof(FetcherInfo));
+    FetcherInfo fe;
+
+    //set up subversion context
+    svn_auth_baton_t * ab;
+    apr_pool_t * pool;
+    svn_client_ctx_t * svnctx;
+    svn_error_t * svne=NULL;
+    svn_opt_revision_t rev;
+    svn_auth_provider_object_t *provider;
+    apr_pool_create(&pool,NULL);
+    apr_array_header_t *providers
+              = apr_array_make (pool, 11, sizeof (svn_auth_provider_object_t *));
+    svne=svn_client_create_context(&svnctx,pool);
+    if (svne) 
+    {
+        svn_error_clear(svne);
+        svne=NULL;
+    }
+    svn_client_get_simple_provider (&provider, pool);
+    APR_ARRAY_PUSH (providers, svn_auth_provider_object_t *) = provider;
+    svn_auth_open (&ab, providers, pool);
+    svnctx->auth_baton = ab;
+
+    //create the dialog
     w = gtk_dialog_new_with_buttons(_("Fetching Themes"),
             GTK_WINDOW(mainWindow),
             GTK_DIALOG_DESTROY_WITH_PARENT | GTK_DIALOG_MODAL, NULL);
@@ -1436,17 +1459,45 @@ void cb_fetch()
                        "This may take time depending on \n"
                        "internet connection speed."));
     gtk_box_pack_start(GTK_BOX(GTK_DIALOG(w)->vbox),l,FALSE,FALSE,0);
+    gtk_box_pack_start(GTK_BOX(GTK_DIALOG(w)->vbox),gtk_hseparator_new(),FALSE,FALSE,0);
+    fe.filelabel = gtk_label_new("");
+    gtk_box_pack_start(GTK_BOX(GTK_DIALOG(w)->vbox),fe.filelabel,FALSE,FALSE,0);
     l = gtk_progress_bar_new();
     gtk_box_pack_start(GTK_BOX(GTK_DIALOG(w)->action_area),l,TRUE,TRUE,0);
     gtk_widget_show_all(w);
-    g_spawn_async(NULL,themefetcher,NULL,
-            G_SPAWN_SEARCH_PATH | G_SPAWN_DO_NOT_REAP_CHILD,
-            NULL,NULL,&pd,NULL);
-    g_free(themefetcher[3]);
-    fe->dialog=w;
-    fe->progbar=l;
-    fe->pd=pd;
-    g_timeout_add(100,watcher_func,fe);
+    fe.dialog=w;
+    fe.progbar=l;
+
+    //ensure the dialog is visible
+    while (gtk_events_pending())
+        gtk_main_iteration();
+
+    //jump into the svn call
+    rev.kind = svn_opt_revision_head;
+    svnctx->notify_func2=(svn_wc_notify_func2_t) svn_notified;
+    svnctx->notify_baton2=&fe;
+    svne=svn_client_checkout2(
+                    NULL,           // result rev
+     (const char *) svnpath,        // source
+     (const char *) destpath,       // dest
+                    &rev,           // 'peg' revision
+                    &rev,           // regular revision
+                    TRUE,           // recurse
+                    TRUE,           // ignore svn:externals
+                    svnctx,         // context
+                    pool            // memory pool
+            );
+    if (svne) 
+    {
+        svn_error_clear(svne);
+        svne=NULL;
+    }
+
+    //clean up and call import
+    apr_pool_destroy(pool);
+    g_free(destpath);
+    import_cache(fe.progbar);
+    gtk_widget_destroy(fe.dialog);
 }
 void cb_quit(GtkWidget * w, gpointer p)
 {
@@ -1549,6 +1600,8 @@ void layout_main_window()
 }
 int main (int argc, char * argv[])
 {
+    apr_app_initialize(&argc,&argv,NULL);
+    atexit(apr_terminate);
     set_changed(FALSE);
     set_apply(FALSE);
     gchar *input_file=NULL;
@@ -1558,7 +1611,7 @@ int main (int argc, char * argv[])
     textdomain (GETTEXT_PACKAGE);
     int install_file = 0;
     int loop_count = 0;
-	
+
     while (loop_count < argc) {
 	if (strcmp(argv[loop_count],"-i") == 0) {
 	 //-i arg found so next option should be the file to install
