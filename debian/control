@@ -2,7 +2,9 @@ Source: emerald
 Section: x11
 Priority: optional
 Maintainer: Quinn Storm <livinglatexkali@gmail.com>
-Build-Depends: debhelper (>= 4.0.0), autotools-dev, beryl-dev, libgtk2.0-dev, libpango1.0-dev, libcairo2-dev, libwnck-dev, libxcomposite-dev, libxdamage-dev
+Build-Depends: debhelper (>= 4.0.0), autotools-dev, beryl-dev, libgtk2.0-dev,
+ libpango1.0-dev, libcairo2-dev, libwnck-dev, libxcomposite-dev,
+ libxdamage-dev, libneon25-dev, libapr0-dev, libsvn0-dev
 Standards-Version: 3.6.2
 
 Package: emerald
