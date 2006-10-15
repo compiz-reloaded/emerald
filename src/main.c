@@ -2944,7 +2944,10 @@ void position_title_object(gchar obj, WnckWindow * win, window_settings * ws, gi
         gdk_error_trap_push ();
         if (d->actions & button_actions[i])
         {
-            XMoveResizeWindow(xdisplay,d->button_windows[i],x,y,w,h);
+            gboolean mh, mv;
+            get_window_max_state(wnck_window_get_xid(win),&mh,&mv);
+            XMoveResizeWindow(xdisplay,d->button_windows[i],x-
+                    ((ws->use_decoration_cropping && mh)?ws->win_extents.left:0),y,w,h);
             if (button_cursor.cursor && ws->button_hover_cursor==1)
                 XDefineCursor (xdisplay, 
                         d->button_windows[i], button_cursor.cursor);
@@ -3079,14 +3082,16 @@ update_event_windows (WnckWindow *win)
         {
             if (d->actions & event_window_actions[i][j] && i >= k && i <= l)
             {
+                gboolean mh,mv;
                 x = ws->pos[i][j].x + ws->pos[i][j].xw * width;
                 y = ws->pos[i][j].y + ws->pos[i][j].yh * height;
                 w = ws->pos[i][j].w + ws->pos[i][j].ww * width;
                 h = ws->pos[i][j].h + ws->pos[i][j].hh * height;
 
                 XMapWindow (xdisplay, d->event_windows[i][j]);
+                get_window_max_state(wnck_window_get_xid(win),&mh,&mv);
                 XMoveResizeWindow (xdisplay, d->event_windows[i][j],
-                        x, y, w, h);
+                        x-((ws->use_decoration_cropping && mh)?ws->win_extents.left:0), y, w, h);
             }
             else
             {
