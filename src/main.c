@@ -16,6 +16,7 @@
 #endif
 
 GdkPixmap * pdeb;
+static gboolean do_reload=FALSE;
 
 /*    static GdkPixmap *
 create_pixmap (int w,
@@ -6229,11 +6230,20 @@ void reload_all_settings (int sig)
 {
     if (sig == SIGUSR1)
     {
-        puts("Reloading...");
-        update_settings(global_ws);
+        do_reload=TRUE;
     }
 }
 #endif
+gboolean reload_if_needed (gpointer p)
+{
+    if (do_reload)
+    {
+        do_reload=FALSE;
+        puts("Reloading...");
+        update_settings(global_ws);
+    }
+    return TRUE;
+}
 #define ACOLOR(idn,zr,zg,zb,za) \
     fs->idn.color.r = (zr);\
     fs->idn.color.g = (zg);\
@@ -6460,6 +6470,8 @@ main (int argc, char *argv[])
     set_dm_check_hint (gdk_display_get_default_screen (gdkdisplay));
 
     update_settings(ws);
+
+    g_timeout_add(500,reload_if_needed,NULL);
 
     gtk_main ();
 
