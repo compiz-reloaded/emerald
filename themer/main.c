@@ -1665,6 +1665,7 @@ int main (int argc, char * argv[])
     gtk_widget_show_all(mainWindow);
 
     refresh_theme_list(NULL);
+    copy_from_defaults_if_needed();
     init_settings();
     set_changed(FALSE);
     set_apply(TRUE);

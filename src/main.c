@@ -6084,62 +6084,53 @@ load_settings(window_settings * ws)
 {
     gchar * path = g_strjoin("/",g_get_home_dir(),".emerald/settings.ini",NULL);
     GKeyFile * f = g_key_file_new();
-    if (!g_key_file_load_from_file(f,path,0,NULL))
+
+    copy_from_defaults_if_needed();
+    
+    //settings
+    g_key_file_load_from_file(f,path,0,NULL);
+    g_free(path);
+    load_int_setting(f,&ws->double_click_action,"double_click_action","titlebars");
+    load_int_setting(f,&ws->button_hover_cursor,"hover_cursor","buttons");
+    load_bool_setting(f,&ws->use_decoration_cropping,"use_decoration_cropping","decorations");
+    load_bool_setting(f,&ws->use_button_fade,"use_button_fade","buttons");
+    gint button_fade_step_duration = ws->button_fade_step_duration;
+    load_int_setting(f,&button_fade_step_duration,"button_fade_step_duration","buttons");
+    if (button_fade_step_duration > 0)
+        ws->button_fade_step_duration = button_fade_step_duration;
+    gint button_fade_total_duration = 250;
+    load_int_setting(f,&button_fade_total_duration,"button_fade_total_duration","buttons");
+    if (button_fade_total_duration > 0)
+        ws->button_fade_num_steps = button_fade_total_duration/ws->button_fade_step_duration;
+    if (ws->button_fade_num_steps == 0)
+        ws->button_fade_num_steps = 1;
+    gboolean use_button_fade_pulse = FALSE;
+    load_bool_setting(f,&use_button_fade_pulse,"use_button_fade_pulse","buttons");
+    if (use_button_fade_pulse)
     {
-        g_free(path);
-        puts("Couldn't load settings.  Reverting to defaults.");
+        gint button_fade_pulse_min_opacity = 0;
+        load_int_setting(f,&button_fade_pulse_min_opacity,"button_fade_pulse_min_opacity","buttons");
+        ws->button_fade_pulse_len_steps =
+            ws->button_fade_num_steps*(100-button_fade_pulse_min_opacity)/100;
+        gint button_fade_pulse_wait_duration = 0;
+        load_int_setting(f,&button_fade_pulse_wait_duration,
+                "button_fade_pulse_wait_duration","buttons");
+        if (button_fade_pulse_wait_duration > 0)
+            ws->button_fade_pulse_wait_steps =
+                button_fade_pulse_wait_duration/ws->button_fade_step_duration;
+        else
+            ws->button_fade_pulse_wait_steps = 0;
     }
     else
     {
-        g_free(path);
-        load_int_setting(f,&ws->double_click_action,"double_click_action","titlebars");
-        load_int_setting(f,&ws->button_hover_cursor,"hover_cursor","buttons");
-		load_bool_setting(f,&ws->use_decoration_cropping,"use_decoration_cropping","decorations");
-        load_bool_setting(f,&ws->use_button_fade,"use_button_fade","buttons");
-        gint button_fade_step_duration = ws->button_fade_step_duration;
-        load_int_setting(f,&button_fade_step_duration,"button_fade_step_duration","buttons");
-        if (button_fade_step_duration > 0)
-            ws->button_fade_step_duration = button_fade_step_duration;
-        gint button_fade_total_duration = 250;
-        load_int_setting(f,&button_fade_total_duration,"button_fade_total_duration","buttons");
-        if (button_fade_total_duration > 0)
-            ws->button_fade_num_steps = button_fade_total_duration/ws->button_fade_step_duration;
-        if (ws->button_fade_num_steps == 0)
-            ws->button_fade_num_steps = 1;
-        gboolean use_button_fade_pulse = FALSE;
-        load_bool_setting(f,&use_button_fade_pulse,"use_button_fade_pulse","buttons");
-        if (use_button_fade_pulse)
-        {
-            gint button_fade_pulse_min_opacity = 0;
-            load_int_setting(f,&button_fade_pulse_min_opacity,"button_fade_pulse_min_opacity","buttons");
-            ws->button_fade_pulse_len_steps =
-                ws->button_fade_num_steps*(100-button_fade_pulse_min_opacity)/100;
-            gint button_fade_pulse_wait_duration = 0;
-            load_int_setting(f,&button_fade_pulse_wait_duration,
-                    "button_fade_pulse_wait_duration","buttons");
-            if (button_fade_pulse_wait_duration > 0)
-                ws->button_fade_pulse_wait_steps =
-                    button_fade_pulse_wait_duration/ws->button_fade_step_duration;
-            else
-                ws->button_fade_pulse_wait_steps = 0;
-        }
-        else
-        {
-            ws->button_fade_pulse_len_steps = 0;
-            ws->button_fade_pulse_wait_steps = 0;
-        }
-        load_bool_setting(f,&enable_tooltips,"enable_tooltips","buttons");
+        ws->button_fade_pulse_len_steps = 0;
+        ws->button_fade_pulse_wait_steps = 0;
     }
-    g_key_file_free(f);
+    load_bool_setting(f,&enable_tooltips,"enable_tooltips","buttons");
+
+    //theme
     path = g_strjoin("/",g_get_home_dir(),".emerald/theme/theme.ini",NULL);
-    f = g_key_file_new();
-    if (!g_key_file_load_from_file(f,path,0,NULL))
-    {
-        g_key_file_free(f);
-        g_free(path);
-        puts("Couldn't load theme.  Reverting to defaults.");
-        return;
-    }
+    g_key_file_load_from_file(f,path,0,NULL);
     g_free(path);
     load_string_setting(f,&engine,"engine","engine");
     if (!load_engine(engine,ws))

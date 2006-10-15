@@ -1,6 +1,7 @@
 #ifndef EMERALD_LIBENGINE_H
 #define EMERALD_LIBENGINE_H
 #include <emerald.h>
+void copy_from_defaults_if_needed();
 void load_color_setting(GKeyFile * f, decor_color_t * color, gchar * key, gchar * sect);
 void load_shadow_color_setting(GKeyFile * f, gint sc[3], gchar * key, gchar * sect);
 void load_float_setting(GKeyFile * f, gdouble * d, gchar * key, gchar * sect);

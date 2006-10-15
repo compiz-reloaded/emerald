@@ -7,4 +7,5 @@ SUBDIRS = \
 		  themer \
 		  pixmaps \
 		  misc \
+		  defaults \
 		  po

@@ -213,4 +213,6 @@ pixmaps/Makefile
 libengine/Makefile
 misc/Makefile
 po/Makefile.in
+defaults/Makefile
+defaults/theme/Makefile
 ])
