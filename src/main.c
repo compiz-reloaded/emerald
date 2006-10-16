@@ -687,7 +687,8 @@ decor_update_window_property (decor_t *d)
     quad    quads[N_QUADS_MAX];
     gint w;
     gint h;
-    gboolean hm,vm;
+    gboolean hm = False;
+    gboolean vm = False;
 
     w=0;
     h=0;
@@ -2509,11 +2510,11 @@ draw_switcher_foreground (decor_t *d)
             else
             {
                 // if the font size is set to 0 indeed, set it to 10, otherwise don't draw anything
-                PangoFontDescription *font = pango_layout_get_font_description(d->layout);
-                if(font == NULL)
+
+                if(!pango_layout_get_font_description(d->layout))
                 {
 		     PangoContext *context = pango_layout_get_context(d->layout);
-                     font = pango_context_get_font_description(context);
+		     PangoFontDescription *font = pango_context_get_font_description(context);
                      if(font == NULL)
                          return;
 
@@ -2966,7 +2967,7 @@ void layout_title_objects (WnckWindow *win)
     window_settings * ws = d->fs->ws;
     gint x0,y0;
     gint width,height;
-    gint i;
+    guint i;
     gint state=0;
     gint owidth;
     gint x;
@@ -4292,7 +4293,7 @@ action_menu_map (WnckWindow *win,
  */
 static gint generic_button_event(WnckWindow * win, XEvent * xevent, gint button, gint bpict)
 {
-    Display *xdisplay = GDK_DISPLAY_XDISPLAY (gdk_display_get_default ());
+    // Display *xdisplay = GDK_DISPLAY_XDISPLAY (gdk_display_get_default ());
     const gchar * tooltips[B_COUNT] = {
         _("Close Window"),
         _("Maximize Window"),
@@ -4311,7 +4312,7 @@ static gint generic_button_event(WnckWindow * win, XEvent * xevent, gint button,
     decor_t *d = g_object_get_data (G_OBJECT (win), "decor");
     guint   state = d->button_states[button];
     gint ret = 0;
-    window_settings * ws = d->fs->ws;
+    // window_settings * ws = d->fs->ws;
 
     handle_tooltip_event (win, xevent, state, tooltips[bpict]);
 
@@ -4527,7 +4528,7 @@ left_event (WnckWindow *win,
 title_event (WnckWindow *win,
         XEvent     *xevent)
 {
-    static int	  last_button_num = 0;
+    static unsigned int	  last_button_num = 0;
     static Window last_button_xwindow = None;
     static Time	  last_button_time = 0;
     decor_t *d = g_object_get_data (G_OBJECT (win), "decor");
@@ -5156,7 +5157,7 @@ event_filter_func (GdkXEvent *gdkxevent,
         case ClientMessage:
             if (xevent->xclient.message_type == toolkit_action_atom)
             {
-                long action;
+                unsigned long action;
 
                 action = xevent->xclient.data.l[0];
                 if (action == toolkit_action_main_menu_atom)
