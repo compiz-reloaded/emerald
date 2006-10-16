@@ -6328,6 +6328,7 @@ main (int argc, char *argv[])
         ws->ButtonPix[i]=NULL;
     }
     gtk_init (&argc, &argv);
+    gdk_error_trap_push();
 #ifdef USE_DBUS
     if (!g_thread_supported()) g_thread_init(NULL);
     dbus_g_thread_init();
@@ -6479,6 +6480,7 @@ main (int argc, char *argv[])
     g_timeout_add(500,reload_if_needed,NULL);
 
     gtk_main ();
+    gdk_error_trap_pop();
 
     return 0;
 }
