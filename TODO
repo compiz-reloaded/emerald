@@ -1,7 +1,4 @@
-- Display proper status information when downloading themes
-- Get rid of not .emerald error after fetching themes
+- Make svn optional
 - Display the fetch button only if svn is installed
-- keep it greyed if net connection not present
 - Enable multiple repositories with different backend(ftp, http etc)
 - Preview of themes and ability to select the themes to download
-- I wont be able to do most of the above (cyberorg)
