@@ -1,3 +1,9 @@
+emerald (0.1.1-1) dapper; urgency=low
+
+  * Bump to 0.1.1
+
+ -- Guillaume Seguin <ixce@beryl-project.org>  Tue, 17 Oct 2006 19:41:43 +0200
+
 emerald (0.1.0-1) dapper; urgency=low
 
   * Release version 0.1.0
