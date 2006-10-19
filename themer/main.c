@@ -6,7 +6,6 @@
 #define NEED_TITLEBAR_ACTION_NAMES
 #include <emerald.h>
 #include <engine.h>
-#include <svn_client.h>
 
 #define LAST_COMPAT_VER "0.1.0"
 

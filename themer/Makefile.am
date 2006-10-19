@@ -1,5 +1,5 @@
 emerald_theme_manager_SOURCES = main.c
-emerald_theme_manager_LDADD = $(APR_LIBS) $(SVN_LIBS) $(NEON_LIBS) $(EMERALD_LIBS) $(top_srcdir)/libengine/libemeraldengine.la
+emerald_theme_manager_LDADD = $(EMERALD_LIBS) $(top_srcdir)/libengine/libemeraldengine.la
 
 bin_PROGRAMS = emerald-theme-manager
 
