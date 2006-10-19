@@ -8,4 +8,5 @@ SUBDIRS = \
 		  pixmaps \
 		  misc \
 		  defaults \
+		  doc \
 		  po

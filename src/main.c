@@ -6370,9 +6370,8 @@ main (int argc, char *argv[])
         dbc(&err);
         dbus_connection_add_filter(dbcon,dbus_signal_filter,NULL,NULL);
     }
-#else
-    signal(SIGUSR1,reload_all_settings);
 #endif
+    signal(SIGUSR1,reload_all_settings);
     
     
     gdkdisplay = gdk_display_get_default ();
