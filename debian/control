@@ -1,11 +1,11 @@
 Source: emerald
 Section: x11
 Priority: optional
-Maintainer: Quinn Storm <livinglatexkali@gmail.com>
+Maintainer: Manuel Evano <reggaemanu@beryl-project.org>
 Build-Depends: debhelper (>= 4.0.0), autotools-dev, beryl-dev, libgtk2.0-dev,
  libpango1.0-dev, libcairo2-dev, libwnck-dev, libxcomposite-dev,
  libxdamage-dev, libneon25-dev, libapr0-dev, libsvn0-dev
-Standards-Version: 3.6.2
+Standards-Version: 3.7.2
 
 Package: emerald
 Architecture: any
@@ -14,4 +14,5 @@ Conflicts: gcompizthemer, cgwd
 Replaces: gcompizthemer, cgwd
 Provides: gcompizthemer, cgwd
 Recommends: emerald-themes
-Description: emerald
+Description: Decoration engines for beryl
+ This package provides some engines for drawing decoration on beryl

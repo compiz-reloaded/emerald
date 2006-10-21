@@ -1,8 +1,8 @@
-emerald (0.1.1-1) dapper; urgency=low
+emerald (0.1.1-0ubuntu1) dapper; urgency=low
 
   * Bump to 0.1.1
 
- -- Guillaume Seguin <ixce@beryl-project.org>  Tue, 17 Oct 2006 19:41:43 +0200
+ -- Manuel Evano <reggaemanu@beryl-project.org>  Fri, 20 Oct 2006 23:16:41 +0200
 
 emerald (0.1.0-1) dapper; urgency=low
 
