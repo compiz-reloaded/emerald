@@ -33,8 +33,11 @@ GtkWidget * ReloadButton;
 GtkWidget * DeleteButton;
 GtkWidget * ImportButton;
 GtkWidget * FetchButton;
+GtkWidget * FetchButton2;
 GtkWidget * ExportButton;
 GtkWidget * QuitButton;
+gchar * svnpath;
+gchar * themecache;
 
 static void theme_list_append(gchar * value,gchar * dir, gchar * fil)
 {
@@ -1385,7 +1388,6 @@ static void cb_import(GtkWidget * w, gpointer p)
 }
 void import_cache(GtkWidget * progbar)
 {
-    gchar * themecache = g_strdup_printf("%s/.emerald/themecache/",g_get_home_dir());
     GDir * d;
     d = g_dir_open(themecache,0,NULL);
     if (d)
@@ -1421,11 +1423,10 @@ gboolean watcher_func(gpointer p)
     }
     return TRUE;
 }
-void cb_fetch()
+void fetch_svn()
 {
-    gchar * svnpath="http://svn.beryl-project.org/trunk/emerald-themes-repo";
     gchar* themefetcher[] = {
-        "svn", "co", svnpath, g_strconcat(g_get_home_dir(),"/.emerald/themecache",NULL), NULL };
+        "svn", "co", svnpath, themecache, NULL };
     GtkWidget * w;
     GtkWidget * l;
     GPid pd;
@@ -1449,29 +1450,17 @@ void cb_fetch()
     fe->pd=pd;
     g_timeout_add(100,watcher_func,fe);
 }
-gboolean detect_app(const gchar * app)
+void fetch_gpl_svn()
 {
-    gint ex;
-    if (!g_spawn_command_line_sync(
-                g_strdup_printf("sh -c 'which %s > /dev/null 2>&1'",app),
-                NULL,NULL,&ex,NULL))
-        info_dialog(_("can't use this app, no which"));
-    if (WIFEXITED(ex))
-    {
-        if (WEXITSTATUS(ex)==0)
-            return TRUE;
-    }
-    else
-        info_dialog(_("something went wrong with which"));
-    return FALSE;
+	svnpath="http://svn.beryl-project.org/trunk/emerald-themes-repo";
+	themecache=g_strconcat(g_get_home_dir(),"/.emerald/themecache",NULL);
+	fetch_svn();
 }
-void fetch_svn()
+void fetch_ngpl_svn()
 {
-    if (detect_app("svn")==TRUE)
-	cb_fetch();
-    else
-        info_dialog(_("You need Subversion package installed \n"
-			"to use this feature"));
+	svnpath="https://svn.generation.no/emerald-themes";
+	themecache=g_strconcat(g_get_home_dir(),"/.emerald/ngplthemecache",NULL);
+	fetch_svn();
 }
 void cb_quit(GtkWidget * w, gpointer p)
 {
@@ -1503,13 +1492,63 @@ void layout_upper_pane(GtkWidget * vbox)
             gtk_image_new_from_stock(GTK_STOCK_OPEN,GTK_ICON_SIZE_BUTTON));
     table_append(ImportButton,FALSE);
     g_signal_connect(ImportButton,"clicked",G_CALLBACK(cb_import),NULL);
-    
-    FetchButton = gtk_button_new_with_label("Fetch Themes");
+ 
+}
+void layout_repo_pane(GtkWidget * vbox)
+{
+	GtkWidget * hbox;
+	GtkWidget * rlabel;
+	gtk_box_pack_startC(vbox,gtk_label_new(
+		_("Here are the repositories that you can fetch Emerald Themes from. \n"
+	"Fetching themes would fetch and import themes from SVN repositories \n"
+	"You need Subversion package installed to use this feature."
+	)),FALSE,FALSE,0);
+    gtk_box_pack_startC(vbox,gtk_hseparator_new(),FALSE,FALSE,0);
+    hbox = gtk_hbox_new(FALSE,2);
+    gtk_box_pack_startC(vbox,hbox,TRUE,TRUE,0);
+
+
+    table_new(2,TRUE,FALSE);
+    gtk_box_pack_startC(hbox,get_current_table(),FALSE,FALSE,0);
+       
+    FetchButton = gtk_button_new_with_label("Fetch GPL'd Themes");
     gtk_button_set_image(GTK_BUTTON(FetchButton),
             gtk_image_new_from_stock(GTK_STOCK_CONNECT,GTK_ICON_SIZE_BUTTON));
     table_append(FetchButton,FALSE);
-    g_signal_connect(FetchButton,"clicked",G_CALLBACK(fetch_svn),NULL);
- 
+    g_signal_connect(FetchButton,"clicked",G_CALLBACK(fetch_gpl_svn),NULL);
+	
+	rlabel = gtk_label_new(
+		_("This repository contains GPL'd themes that can be used under \n"
+	"the terms of GNU GPL licence v2.0 or later \n"));
+	table_append(rlabel,FALSE);
+	
+	FetchButton2 = gtk_button_new_with_label("Fetch non GPL'd Themes");
+    gtk_button_set_image(GTK_BUTTON(FetchButton2),
+            gtk_image_new_from_stock(GTK_STOCK_CONNECT,GTK_ICON_SIZE_BUTTON));
+    table_append(FetchButton2,FALSE);
+    g_signal_connect(FetchButton2,"clicked",G_CALLBACK(fetch_ngpl_svn),NULL);
+	
+	rlabel = gtk_label_new(
+		_("This repository contains non-GPL'd themes. They might infringe \n"
+		"copyrights and patent laws in some countries."));
+	table_append(rlabel,FALSE);
+	
+	gtk_box_pack_startC(vbox,gtk_hseparator_new(),FALSE,FALSE,0);
+	
+		gtk_box_pack_startC(vbox,gtk_label_new(
+		_("To activate Non-GPL repository please run the following in shell and accept the server ceritficate permanently: \n"
+		"svn ls https://svn.generation.no/emerald-themes."
+	)),FALSE,FALSE,0);
+}
+void layout_themes_pane(GtkWidget * vbox)
+{
+    GtkWidget * notebook;  
+    notebook = gtk_notebook_new();
+    gtk_box_pack_startC(vbox,notebook,TRUE,TRUE,0);
+    layout_upper_pane(build_notebook_page(_("Themes"),notebook));
+    layout_lower_pane(build_notebook_page(_("Edit Themes"),notebook));
+	layout_repo_pane(build_notebook_page(_("Repositories"),notebook));
+	
 }
 GtkWidget* create_filechooserdialog1 (char *input)
 {
@@ -1544,7 +1583,6 @@ GtkWidget* create_filechooserdialog1 (char *input)
         gtk_widget_destroy(dialog_startup);
         return dialog_startup;
 }
-
 void layout_main_window()
 {
     GtkWidget * notebook;
@@ -1556,8 +1594,7 @@ void layout_main_window()
     notebook = gtk_notebook_new();
     gtk_box_pack_startC(vbox,notebook,TRUE,TRUE,0);
 
-    layout_upper_pane(build_notebook_page(_("Themes"),notebook));
-    layout_lower_pane(build_notebook_page(_("Edit"),notebook));
+    layout_themes_pane(build_notebook_page(_("Themes Settings"),notebook));
     layout_settings_pane(build_notebook_page(_("Emerald Settings"),notebook));
 
     hbox = gtk_hbox_new(FALSE,2);
