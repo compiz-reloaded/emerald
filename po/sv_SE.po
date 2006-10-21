@@ -99,7 +99,7 @@ msgstr "Knappdelsbredd"
 
 #: themer/main.c:706
 msgid "Button Pixmaps"
-msgstr "Knappixmappar"
+msgstr "Pixmappar för knappar"
 
 #: themer/main.c:1119
 msgid "Button Pulse Min Opacity %"
@@ -135,7 +135,7 @@ msgstr "Välj knappdelspixmap"
 
 #: engines/zootreeves.c:1572
 msgid "Choose Titlebar Part Pixmap"
-msgstr "Välj titelradsdelpixmap"
+msgstr "Välj titelradens delpixmap"
 
 #: engines/zootreeves.c:1634
 msgid "Choose Titlebar Pixmap"
@@ -209,7 +209,7 @@ msgstr "Diagonalrepetition?"
 
 #: engines/zootreeves.c:1340
 msgid "Dip Corners Radius)"
-msgstr "Hörnnedsättningsradie"
+msgstr "Radie för hörnnedsättning"
 
 #: themer/main.c:1199 themer/main.c:1482
 msgid "Edit"
@@ -433,7 +433,7 @@ msgid ""
 "NOTE - These settings are not part of themes, they are stored separately, "
 "and control various UI preferences for Emerald."
 msgstr ""
-"OBS! - Dessa inställningar är skilda från teman, de sparas separat, "
+"OBS! - Dessa inställningar är skilda från temana. De sparas separat "
 "och styr diverse gränssnittsinställningar åt Emerald"
 
 #: themer/main.c:895
@@ -446,7 +446,7 @@ msgstr "Ingen beskrivning"
 
 #: themer/main.c:641
 msgid "No such theme to delete"
-msgstr "Inget sådant tema att radera"
+msgstr "Finns inget sådant tema att radera"
 
 #: themer/main.c:1138
 msgid "Normal"
@@ -697,7 +697,7 @@ msgstr "Titelrad"
 
 #: engines/zootreeves.c:1569
 msgid "Title Bar Part Pixmap"
-msgstr "Titelradsdelpixmap"
+msgstr "Titelradens delpixmap"
 
 #: engines/vrunner.c:635
 msgid "Title Glow"
@@ -729,7 +729,7 @@ msgstr "Titelradspixmap"
 
 #: engines/zootreeves.c:1436
 msgid "Titlebar Rounding Radius"
-msgstr "Titelradsrundningsradie"
+msgstr "Titelradens rundningsradie"
 
 #: engines/legacy.c:370 engines/oxygen.c:428 engines/pixmap.c:526
 #: engines/truglass.c:525 engines/vrunner.c:647 engines/zootreeves.c:1528
@@ -804,7 +804,7 @@ msgid ""
 msgstr ""
 "Använd kolon för att skilja vänster, centrerat, och höger.\n"
 "Allt efter ett tredje kolon ignoreras.\n"
-"C=Stäng, N=Maximera, X/R=Återställ\n"
+"C=Stäng, N=Minimera, X/R=Återställ\n"
 "I=Ikon, T=Titel, H=Hjälp, M=Meny\n"
 "S=Rulla upp, U/A=Överst(Upp/Ovanför)\n"
 "Y=Klibbig, (#)=# pixelutrymme, ex: (5)\n"
