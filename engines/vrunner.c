@@ -143,7 +143,7 @@ void create_glow(decor_t *d, cairo_t *cr,
        double hp = p;
        //cairo_rectangle(cr, x1, y1, w, h);
        frame_settings * fs = d->fs;
-       private_fs * pfs = fs->engine_fs;
+       // private_fs * pfs = fs->engine_fs;
        window_settings * ws = fs->ws;
        if(wp*2 > w) wp = w/2;
        if(hp*2 > h) hp = h/2;
@@ -218,8 +218,8 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
 		  top_title_height, bottom_title_height, 
 		  top_frame_height, bottom_frame_height,
 		  top_left, top_right;
-    int		  top, title_width, title_height, title_pos;
-    double        curve_offset;
+    int		  top, title_width = 0, title_height = 0, title_pos;
+    // double        curve_offset;
     frame_settings * fs = d->fs;
     private_fs * pfs = fs->engine_fs;
     window_settings * ws = fs->ws;
