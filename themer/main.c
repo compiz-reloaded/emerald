@@ -1408,6 +1408,7 @@ void import_cache(GtkWidget * progbar)
         }
         g_free(n);
         g_dir_close(d);
+	g_free(themecache);
     }
 }
 
@@ -1419,7 +1420,9 @@ gboolean watcher_func(gpointer p)
     if (waitpid(f->pd,NULL,WNOHANG)!=0)
     {
 	import_cache(f->progbar);
+	refresh_theme_list(NULL);
         gtk_widget_destroy(f->dialog);
+	g_free(themecache);
         free(p);
         return FALSE;
     }
@@ -1427,8 +1430,7 @@ gboolean watcher_func(gpointer p)
 }
 void fetch_svn()
 {
-    gchar* themefetcher[] = {
-        "svn", "co", svnpath, themecache, NULL };
+    gchar* themefetcher[] = {g_strdup("svn"), g_strdup("co"), g_strdup(svnpath), g_strdup(themecache), NULL };
     GtkWidget * w;
     GtkWidget * l;
     GPid pd;
@@ -1446,7 +1448,7 @@ void fetch_svn()
     g_spawn_async(NULL,themefetcher,NULL,
             G_SPAWN_SEARCH_PATH | G_SPAWN_DO_NOT_REAP_CHILD,
             NULL,NULL,&pd,NULL);
-   // g_free(themefetcher[3]);
+    g_free(themefetcher[4]);
     fe->dialog=w;
     fe->progbar=l;
     fe->pd=pd;
