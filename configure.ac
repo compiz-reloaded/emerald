@@ -8,7 +8,6 @@ source $srcdir/VERSION
 
 AM_INIT_AUTOMAKE($PACKAGE, $VERSION)
 #, [livinglatexkali@gmail.com])
-AC_PREFIX_DEFAULT(/usr)
 
 AC_ISC_POSIX
 AC_PROG_CC
