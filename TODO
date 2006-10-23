@@ -1,4 +1,4 @@
-- Make svn optional
 - Display the fetch button only if svn is installed
 - Enable multiple repositories with different backend(ftp, http etc)
 - Preview of themes and ability to select the themes to download
+- I think I broke import_cache, hopefully Quinn_storm would fix that soon.
