@@ -1395,10 +1395,12 @@ void import_cache(GtkWidget * progbar)
         gchar * n;
         while((n = (gchar *) g_dir_read_name(d)))
         {
+	   
             gchar * fn;
             if (g_str_has_suffix(n,".emerald"))
             {
-                fn = g_strconcat(themecache,n,NULL);
+              fn = g_strconcat(themecache,"/",NULL);
+	      fn = g_strconcat(fn,n,NULL);
                 import_theme(fn);
                 g_free(fn);
                 gtk_progress_bar_pulse(GTK_PROGRESS_BAR(progbar));
@@ -1416,7 +1418,7 @@ gboolean watcher_func(gpointer p)
     gtk_progress_bar_pulse(GTK_PROGRESS_BAR(f->progbar));
     if (waitpid(f->pd,NULL,WNOHANG)!=0)
     {
-        import_cache(f->progbar);
+	import_cache(f->progbar);
         gtk_widget_destroy(f->dialog);
         free(p);
         return FALSE;
@@ -1444,7 +1446,7 @@ void fetch_svn()
     g_spawn_async(NULL,themefetcher,NULL,
             G_SPAWN_SEARCH_PATH | G_SPAWN_DO_NOT_REAP_CHILD,
             NULL,NULL,&pd,NULL);
-    g_free(themefetcher[3]);
+   // g_free(themefetcher[3]);
     fe->dialog=w;
     fe->progbar=l;
     fe->pd=pd;
