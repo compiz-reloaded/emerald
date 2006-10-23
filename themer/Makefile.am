@@ -1,3 +1,4 @@
+## Process this file with automake to produce Makefile.in
 emerald_theme_manager_SOURCES = main.c
 emerald_theme_manager_LDADD = $(EMERALD_LIBS) $(top_srcdir)/libengine/libemeraldengine.la
 

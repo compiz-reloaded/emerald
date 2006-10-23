@@ -1,3 +1,4 @@
+## Process this file with automake to produce Makefile.in
 emerald_LDADD   = @EMERALD_LIBS@ $(top_builddir)/libengine/libemeraldengine.la
 emerald_SOURCES = main.c \
 			   engine_loader.c
