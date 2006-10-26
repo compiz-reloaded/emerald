@@ -1408,7 +1408,6 @@ void import_cache(GtkWidget * progbar)
         }
         g_free(n);
         g_dir_close(d);
-	g_free(themecache);
     }
 }
 
