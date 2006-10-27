@@ -25,7 +25,7 @@
 //truglass
 #include <emerald.h>
 #include <engine.h>
-#include <trueglass_icon.h>
+#include <truglass_icon.h>
 #define SECT "truglass_settings"
 typedef struct _private_fs
 {
