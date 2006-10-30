@@ -2530,14 +2530,23 @@ draw_switcher_foreground (decor_t *d)
             }
 	}
 
-        // fix too long title text in switcher - basically cut off the text
-        if(text_width > d->width && text_len != 0)
+        // fix too long title text in switcher
+        // using ellipsize instead of cutting off text
+        pango_layout_set_ellipsize (d->layout, PANGO_ELLIPSIZE_END);
+        if(d->width > 1000 && text_len != 0)
         {
-            int char_width = text_width / text_len + 2;
-
-            char* new_text = g_strconcat(
-                    g_strndup(text, d->width / char_width), "...",NULL);
-            pango_layout_set_text(d->layout, new_text, strlen(new_text));
+            pango_layout_set_width (d->layout, 1080000);
+        }
+        else
+        {
+            if(d->width > 700 && text_len != 0)
+            {
+                pango_layout_set_width (d->layout, 650000);
+            }
+            else
+            {
+                pango_layout_set_width (d->layout, 220000);
+            }
         }
 
         cairo_set_operator (cr, CAIRO_OPERATOR_OVER);
