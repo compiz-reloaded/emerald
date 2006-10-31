@@ -1,13 +1,11 @@
 AC_PREREQ(2.57)
 
-AC_INIT()
-AM_CONFIG_HEADER([config.h])
+AC_INIT([emerald],esyscmd(. ./VERSION;echo -n $VERSION), [livinglatexkali@gmail.com])
 
-PACKAGE=emerald
-source $srcdir/VERSION
+AC_DEFINE_UNQUOTED(VERSION,"$VERSION",[Version])
 
-AM_INIT_AUTOMAKE($PACKAGE, $VERSION)
-#, [livinglatexkali@gmail.com])
+AM_INIT_AUTOMAKE([dist-bzip2])
+AC_CONFIG_HEADER([config.h])
 
 AC_ISC_POSIX
 AC_PROG_CC
@@ -46,7 +44,7 @@ AC_ARG_ENABLE(mime-update,
   yes) mime_update=true ;;
   no)  mime_update=false ;;
   *) AC_MSG_ERROR(bad value ${enableval} for --enable-mime-update) ;;
-esac],[mime_update=true])
+esac],[mime_update=false])
 AM_CONDITIONAL(MIMEUPDATE, test x$mime_update = xtrue)
 
 AC_PATH_PROG(UPDATE_MIME_DATABASE, update-mime-database)

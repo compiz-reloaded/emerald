@@ -11,7 +11,11 @@ mime_DATA = emerald.mime
 emeraldxmldir = $(datadir)/mime/packages/
 emeraldxml_DATA = emerald.xml
 
-EXTRA_DIST = $(desktop_DATA) $(emeraldxml_DATA)
+EXTRA_DIST = \
+        $(desktop_DATA) \
+        $(mimeicon_DATA) \
+        $(mime_DATA) \
+        $(emeraldxml_DATA)
 
 if MIMEUPDATE
 install-data-local: install-desktopDATA
