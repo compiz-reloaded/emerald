@@ -59,14 +59,6 @@ msgstr "Hata; tar. çağrılırken..."
 msgid "Theme Exported"
 msgstr "Tema dışa aktarıldı"
 
-#: themer/main.c:488
-msgid ""
-"Can't delete system themes\n"
-"(or you forgot to enter a name)"
-msgstr ""
-"Sistem teması silinemiyor\n"
-"(veya ismini vermeyi unuttunuz)"
-
 #: themer/main.c:506
 #, c-format
 msgid "Overwrite Theme %s?"
