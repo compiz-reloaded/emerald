@@ -4,7 +4,7 @@ AC_INIT([emerald],esyscmd(. ./VERSION;echo -n $VERSION), [livinglatexkali@gmail.
 
 AC_DEFINE_UNQUOTED(VERSION,"$VERSION",[Version])
 
-AM_INIT_AUTOMAKE([1.9])
+AM_INIT_AUTOMAKE([dist-bzip2])
 AC_CONFIG_HEADER([config.h])
 
 AC_ISC_POSIX
@@ -29,9 +29,7 @@ EMERALD_REQUIRES=" xrender >= 0.8.4  \
 		    libwnck-1.0	      \
             beryl \
 		    pangocairo "
-            #dbus-1 \
-            #dbus-glib-1 \
-            #gthread-2.0 \
+
 PKG_CHECK_MODULES(EMERALD, $EMERALD_REQUIRES)
 AC_SUBST(EMERALD_REQUIRES)
 CFLAGS="$CFLAGS $EMERALD_CFLAGS"
