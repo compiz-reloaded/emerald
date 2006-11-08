@@ -30,6 +30,17 @@ EMERALD_REQUIRES=" xrender >= 0.8.4  \
             beryl \
 		    pangocairo "
 
+dnl ============================================================
+dnl Check for the pkg-config path.
+if test x"$PKG_CONFIG_PATH" = x; then
+    PKG_CONFIG_PATH=${prefix}/lib/pkgconfig
+        else
+    PKG_CONFIG_PATH=${prefix}/lib/pkgconfig:${PKG_CONFIG_PATH}
+fi
+export PKG_CONFIG_PATH
+AC_SUBST(PKG_CONFIG_PATH)
+AC_MSG_NOTICE([Using PKG_CONFIG_PATH=$PKG_CONFIG_PATH])
+
 PKG_CHECK_MODULES(EMERALD, $EMERALD_REQUIRES)
 AC_SUBST(EMERALD_REQUIRES)
 CFLAGS="$CFLAGS $EMERALD_CFLAGS"
