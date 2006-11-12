@@ -4,7 +4,7 @@ AC_INIT([emerald],esyscmd(. ./VERSION;echo -n $VERSION), [livinglatexkali@gmail.
 
 AC_DEFINE_UNQUOTED(VERSION,"$VERSION",[Version])
 
-AM_INIT_AUTOMAKE([dist-bzip2])
+AM_INIT_AUTOMAKE([1.9 dist-bzip2])
 AC_CONFIG_HEADER([config.h])
 
 AC_ISC_POSIX
