@@ -1,207 +1,204 @@
-# translation of emerald.po to
 # Emerald Window Decorator.
 # Copyright (C) 2006
 # This file is distributed under the same license as the Emerald package.
-#
 # cyberorg <cyberorg@cyberorg.info>, 2006.
-# Jesús Vidal Panalés <jesusvpct@ono.com>, 2006.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: emerald\n"
+"Project-Id-Version: 0.1 \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-10-21 16:41+0530\n"
-"PO-Revision-Date: 2006-11-14 12:50+0100\n"
-"Last-Translator: Jesús Vidal Panalés <jesusvpct@ono.com>\n"
-"Language-Team:  <es@li.org>\n"
+"PO-Revision-Date: 2006-11-14 21:06+0200\n"
+"Last-Translator: Lónyai Gergely <alephlg@gmail.com>\n"
+"Language-Team: Gentoo-hu <gentoo-doc-hu@gentoo.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
 
 #: themer/main.c:141 themer/main.c:147
 msgid "Unknown"
-msgstr "Desconocido"
+msgstr "Ismeretlen"
 
 #: themer/main.c:153
 msgid "Whatever (no hint)"
-msgstr "Cualquiera (sin consejo)"
+msgstr "Bármi (semmi célzás)"
 
 #: themer/main.c:159
 msgid "No Description"
-msgstr "Sin descripción"
+msgstr "Nincs meghatározva"
 
 #: themer/main.c:319 themer/main.c:327 themer/main.c:493 themer/main.c:589
 msgid "Invalid Theme Name"
-msgstr "Nombre de tema incorrecto"
+msgstr "Nem létező témanév"
 
 #: themer/main.c:408
 msgid "Invalid theme file.  Does not end in .emerald"
-msgstr "Archivo de tema incorrecto. No termina en .emerald"
+msgstr "Nem létező témafájl.  Nem .emerald végződése van."
 
 #: themer/main.c:450
 msgid ""
 "Invalid Theme Name\n"
 "Could Not Export"
 msgstr ""
-"Nombre de tema incorrecto\n"
-"No se pudo exportar"
+"Nem létező témanév\n"
+"Nem tudom behozni"
 
 #: themer/main.c:456
 msgid ""
 "Invalid File Name\n"
 "Must End in .emerald"
 msgstr ""
-"Nombre de archivo incorrecto\n"
-"Debe terminar en .emerald"
+"Nem létező témanév\n"
+".emerald végződése kell, hogy legyen."
 
 #: themer/main.c:470
 msgid "Error calling tar."
-msgstr "Error ejecutando tar."
+msgstr "Error calling tar."
 
 #: themer/main.c:476
 msgid "Theme Exported"
-msgstr "Tema exportado"
+msgstr "Théma exportálva"
 
 #: themer/main.c:488
 msgid ""
 "Can't save over system themes\n"
 "(or you forgot to enter a name)"
 msgstr ""
-"No se pueden sobreescribir los temas del sistema\n"
-"(u olvidó introducir un nombre)"
+"Nem tudom elmenteni a rendszertémát\n"
+"(vagy nem adtad meg a nevét)"
 
 #: themer/main.c:506
 #, c-format
 msgid "Overwrite Theme %s?"
-msgstr "¿Sobreescribir el tema %s?"
+msgstr "Felülírod a(z) %s témát?"
 
 #: themer/main.c:518
 msgid "Couldn't Write Theme"
-msgstr "No se pudo escribir el tema"
+msgstr "Nem tudom írni a témát"
 
 #: themer/main.c:523
 msgid "Couldn't Form Theme"
-msgstr "No se pudo crear el tema"
+msgstr "Nem ismerős a téma leírása"
 
 #: themer/main.c:560
 msgid "Theme Saved"
-msgstr "Tema guardado"
+msgstr "Téma mentve"
 
 #: themer/main.c:583
 msgid ""
 "Can't delete system themes\n"
 "(or you forgot to enter a name)"
 msgstr ""
-"No se puede eliminar los temas del sistema \n"
-"(u olvidó introducir un nombre)"
+"Nem tudom törölni a rendszertémát\n"
+"(vagy nem adtad meg a nevét)"
 
 #: themer/main.c:595
 #, c-format
 msgid "Are you sure you want to delete %s?"
-msgstr "¿Está seguro de que quiere eliminar %s?"
+msgstr "Biztos vagy abban, hogy letörlöd a(z) %s témát?"
 
 #: themer/main.c:620
 msgid "Theme deleted"
-msgstr "Tema eliminado"
+msgstr "Téma törölve"
 
 #: themer/main.c:626
 msgid "No such theme to delete"
-msgstr "No existe el tema para eliminar"
+msgstr "Nem olyan törölhető téma"
 
 #: themer/main.c:667
 msgid "Use Pixmap Buttons"
-msgstr "Usar imágenes como botones"
+msgstr "Pixmap gombok használata"
 
 #: themer/main.c:671
 msgid "Use Button Halo/Glow"
-msgstr "Usar halo/brillo en el botón"
+msgstr "Halo/Glow gombok használata"
 
 #: themer/main.c:675
 msgid "Use Button Halo/Glow For Inactive Windows"
-msgstr "Usar halo/brillo en el botón para las ventanas inactivas"
+msgstr "Halo/Glow gombok használata az inaktív ablakokon"
 
 #: themer/main.c:691
 msgid "Button Pixmaps"
-msgstr "Imágenes de los botones"
+msgstr "Gombok képei"
 
 #: themer/main.c:702
 msgid "Button"
-msgstr "Botón"
+msgstr "Gomb"
 
 #: themer/main.c:703 engines/pixmap.c:669
 msgid "File"
-msgstr "Archivo"
+msgstr "Fájl"
 
 #: themer/main.c:704 engines/pixmap.c:670
 msgid "Preview"
-msgstr "Vista previa"
+msgstr "Előnézet"
 
 #: themer/main.c:705 engines/pixmap.c:671
 msgid "Clear"
-msgstr "Limpiar"
+msgstr "Törlés"
 
 #: themer/main.c:723 engines/legacy.c:385 engines/legacy.c:417
 #: engines/oxygen.c:445 engines/oxygen.c:475 engines/truglass.c:538
 #: engines/truglass.c:573 engines/vrunner.c:605 engines/vrunner.c:696
 #: engines/zootreeves.c:1501
 msgid "Colors"
-msgstr "Colores"
+msgstr "Színek"
 
 #: themer/main.c:724
 msgid "Text Fill"
-msgstr "Relleno del texto"
+msgstr "Szöveg kitöltése"
 
 #: themer/main.c:725
 msgid "Text Outline"
-msgstr "Contorno del texto"
+msgstr "Szöveg körvonala"
 
 #: themer/main.c:727
 msgid "Button Fill"
-msgstr "Relleno del botón"
+msgstr "Gomb kitöltése"
 
 #: themer/main.c:728
 msgid "Button Outline"
-msgstr "Contorno del botón"
+msgstr "Gomb körvonala"
 
 #: themer/main.c:764
 msgid "Color"
-msgstr "Color"
+msgstr "Szín"
 
 #: themer/main.c:765
 msgid "Opacity"
-msgstr "Opacidad"
+msgstr "Opálosság"
 
 #: themer/main.c:766 engines/vrunner.c:661
 msgid "Radius"
-msgstr "Radio"
+msgstr "Sugár"
 
 #: themer/main.c:767
 msgid "X Offset"
-msgstr "Margen X"
+msgstr "X eltolás"
 
 #: themer/main.c:768
 msgid "Y Offset"
-msgstr "Margen Y"
+msgstr "Y eltolás"
 
 #: themer/main.c:778
-msgid "Title-Text Font"
-msgstr "Fuente de texto del título"
+msgid "Címsor betűkészlet"
+msgstr "Title-Text Font"
 
 #: themer/main.c:786
 msgid "Minimum Title-bar Height"
-msgstr "Altura mínima de la barra de título"
+msgstr "Minimális címsormagasság"
 
 #: themer/main.c:792
 msgid "Vertical Button Offset"
-msgstr "Margen vertical del botón"
+msgstr "Függőleges gombmagasság"
 
 #: themer/main.c:798
 msgid "Horizontal Button Offset"
-msgstr "Margen horizontal del botón"
+msgstr "Vízszintes gombmagasság"
 
 #: themer/main.c:806
 msgid "Title-bar Object Layout"
-msgstr "Disposición del objeto de la barra de título"
+msgstr "Címsor-objektum elhelyezkedése"
 
 #: themer/main.c:814
 msgid ""
@@ -212,72 +209,72 @@ msgid ""
 "S=Shade, U/A=On Top(Up/Above)\n"
 "Y=Sticky, (#)=# pixels space, ex: (5)\n"
 msgstr ""
-"Usar dos puntos para separar izquierda, centro, y derecha.\n"
-"Cualquier cosa tras una tercer dos puntos se ignora.\n"
-"C=Cerrar, N=Minimizar, X/R=Restaurar\n"
-"I=Icono, T=Título, H=Ayuda, M=Menú\n"
-"S=Sombra, U/A=Arriba(Arriba/Debajo)\n"
-"Y=Pegajoso, (#)=# espaciado de los píxeles, ej:(5)\n"
+"Használj kettőspontot a bal, közép és jobb elválasztására.\n"
+"Egy harmadik kettőspont nem veszek tudomásul.\n"
+"C=Bezárás, N=Minimalizálás, X/R=Eredeti méret\n"
+"I=Ikon, T=Cím, H=Segítség, M=Menü\n"
+"S=Háttérbe, U/A=Felül(A többi fölé)\n"
+"Y=Ragasztás, (#)=# képpont kihagyása, pl: (5)\n"
 
 #: themer/main.c:840
 msgid "Export Theme..."
-msgstr "Exportar Tema..."
+msgstr "Téma exportálása..."
 
 #: themer/main.c:880
 msgid "Name:"
-msgstr "Nombre:"
+msgstr "Név:"
 
 #: themer/main.c:882
 msgid "Untitled Theme"
-msgstr "Tema sin título"
+msgstr "Névtelen téma"
 
 #: themer/main.c:889
 msgid "Export..."
-msgstr "Exportar..."
+msgstr "Export..."
 
 #: themer/main.c:899
 msgid "Creator"
-msgstr "Creador"
+msgstr "Létrehozás"
 
 #: themer/main.c:900
 msgid "Description"
-msgstr "Descripción"
+msgstr "Meghatározás"
 
 #: themer/main.c:901
 msgid "Theme Version"
-msgstr "Versión del tema"
+msgstr "Téma Verzió"
 
 #: themer/main.c:902
 msgid "Suggested Widget Theme"
-msgstr "Tema sugerido de Widget"
+msgstr "Javasolt eszköztéma"
 
 #: themer/main.c:906
 msgid "Themer Version"
-msgstr "Versión del gestor de temas"
+msgstr "Témázó verzió"
 
 #: themer/main.c:927
 msgid "Border"
-msgstr "Borde"
+msgstr "Szegély"
 
 #: themer/main.c:928
 msgid "Size"
-msgstr "Tamaño"
+msgstr "Méret"
 
 #: themer/main.c:929
 msgid "Top"
-msgstr "Parte superior"
+msgstr "Fent"
 
 #: themer/main.c:930
 msgid "Bottom"
-msgstr "Fondo"
+msgstr "Lent"
 
 #: themer/main.c:931
 msgid "Left"
-msgstr "Izquierda"
+msgstr "Bal"
 
 #: themer/main.c:932
 msgid "Right"
-msgstr "Derecha"
+msgstr "Jobb"
 
 #: themer/main.c:934
 msgid ""
@@ -292,138 +289,140 @@ msgid ""
 "the titlebar-min-height slider\n"
 "or the titlebar font setting.\n"
 msgstr ""
-"Nota, cuando cambiar estos valores,\n"
-"se le aconseja que haga algo como\n"
-"cambiar de escritorio, ya que esto\n"
-"hará que la posición de las 'ventanas de eventos\n"
-"se actualicen correctamente, y así se consigue\n"
-"que mover/redimensionar las ventanas\n"
-"funcione correctamente.\n"
-"Esto también se aplica cuando cambia la altura de\n"
-"la barra de título a través de la propia opción "
-"o del ajuste de la fuente de la barra de título.\n"
+"Note, when changing these values\n"
+"it is advised that you do something\n"
+"like change viewports, as this will\n"
+"cause the position of the 'event windows'\n"
+"to update properly, and thus make\n"
+"moving/resizing windows work properly.\n"
+"This also applies to when you change\n"
+"the title-bar height through either\n"
+"the titlebar-min-height slider\n"
+"or the titlebar font setting.\n"
 
 #: themer/main.c:952
 msgid "Shadows"
-msgstr "Sombras"
+msgstr "Árnyékok"
 
 #: themer/main.c:960
 msgid "Frame Borders"
-msgstr "Bordes del marco"
+msgstr "Kerethatároló"
 
 #: themer/main.c:978
 msgid "Active Window"
-msgstr "Ventana activa"
+msgstr "Aktív ablak"
 
 #: themer/main.c:979
 msgid "Inactive Window"
-msgstr "Ventana inactiva"
+msgstr "Inaktív ablak"
 
 #: themer/main.c:988 engines/zootreeves.c:1682
 msgid "Title Bar"
-msgstr "Barra de título"
+msgstr "Címsor"
 
 #: themer/main.c:1023 themer/main.c:1042
 msgid "Screenshot"
-msgstr "Captura de pantalla"
+msgstr "Képernyőkép"
 
 #: themer/main.c:1027
 msgid "Images"
-msgstr "Imágenes"
+msgstr "Képek"
 
 #: themer/main.c:1049
 msgid "Information"
-msgstr "Información"
+msgstr "Információ"
 
 #: themer/main.c:1065
 msgid ""
 "NOTE - These settings are not part of themes, they are stored separately, "
 "and control various UI preferences for Emerald."
-msgstr "NOTA - Estos ajustes no son parte de los temas, que están grabados de forma separada, y controla varias preferencias del interfaz de usuario para Emerald."
+msgstr ""
+"NOTE - These settings are not part of themes, they are stored separately "
+"and control various UI preferences for Emerald."
 
 #: themer/main.c:1071
 msgid "Show Tooltips for Buttons"
-msgstr "Mostrar sugerencias para los botones"
+msgstr "Mutasd a gombok tippjeit"
 
 #: themer/main.c:1075
 msgid "Use Decoration Cropping"
-msgstr "Usar decoración cropping"
+msgstr "Használd a dekoráció bőrözését"
 
 #: themer/main.c:1079
 msgid "Use Button Fade"
-msgstr "Usar atenuación en los botones"
+msgstr "Fakó gombokat használj"
 
 #: themer/main.c:1083
 msgid "Use Button Fade Pulse"
-msgstr "Usar atenuación al pulsar el botón"
+msgstr "Pulzáló gombokat használj"
 
 #: themer/main.c:1090
 msgid "Button Fade Total Duration"
-msgstr "Duración total de la atenuación del botón"
+msgstr "A gomb teljes elhalványításának ideje"
 
 #: themer/main.c:1096
 msgid "Button Fade Step Duration"
-msgstr "Duración de la atenuación del botón"
+msgstr "A gomb mértékes halványításánal ideje"
 
 #: themer/main.c:1102
 msgid "Button Pulse Wait Duration"
-msgstr "Duración de espera al pulsar el botón"
+msgstr "A gomb pulzálása közti szünet"
 
 #: themer/main.c:1108
 msgid "Button Pulse Min Opacity %"
-msgstr "Opacidad mínima al pulsar el botón %"
+msgstr "A gomb pulzálásának min opálossága: %"
 
 #: themer/main.c:1114
 msgid "Titlebar Double-Click Action"
-msgstr "Acción al hacer doble clic en la barra de título"
+msgstr "Címsor duplaklikk akció"
 
 #: themer/main.c:1125
 msgid "Button Hover Cursor"
-msgstr "Cursor sobre el botón"
+msgstr "Gomb fölötti mutató"
 
 #: themer/main.c:1127
 msgid "Normal"
-msgstr "Normal"
+msgstr "Normál"
 
 #: themer/main.c:1128
 msgid "Pointing Finger"
-msgstr "Dedo apuntador"
+msgstr "Mutatóujj"
 
 #: themer/main.c:1174
 msgid "Frame Engine"
-msgstr "Motor del marco"
+msgstr "Keret motor"
 
 #: themer/main.c:1175
 msgid "Buttons"
-msgstr "Botones"
+msgstr "Gombok"
 
 #: themer/main.c:1176
 msgid "Frame/Shadows"
-msgstr "Marco/Sombras"
+msgstr "Keretek/árnyékok"
 
 #: themer/main.c:1177
 msgid "Titlebar"
-msgstr "Barra de título"
+msgstr "Címsor"
 
 #: themer/main.c:1178
 msgid "Theme"
-msgstr "Tema"
+msgstr "Téma"
 
 #: themer/main.c:1188
 msgid "Edit"
-msgstr "Editar"
+msgstr "Szerkesztés"
 
 #: themer/main.c:1247
 msgid "Search:"
-msgstr "Buscar:"
+msgstr "Keresés:"
 
 #: themer/main.c:1364 themer/main.c:1558
 msgid "Import Theme..."
-msgstr "Importar tema..."
+msgstr "Téma behozása..."
 
 #: themer/main.c:1434
 msgid "Fetching Themes"
-msgstr "Descargar temas"
+msgstr "Témák letöltése"
 
 #: themer/main.c:1437
 msgid ""
@@ -431,9 +430,9 @@ msgid ""
 "This may take time depending on \n"
 "internet connection speed."
 msgstr ""
-"Descargar temas... \n"
-"Esto tardará un tiempo dependiendo de \n"
-"su velocidad de conexión a internet."
+"Témák letöltése... \n"
+"A szükséges idő nagymértékben függ az \n"
+"Internetkapcsolat sebességétől."
 
 #: themer/main.c:1502
 msgid ""
@@ -441,25 +440,25 @@ msgid ""
 "Fetching themes would fetch and import themes from SVN repositories \n"
 "You need Subversion package installed to use this feature."
 msgstr ""
-"Aquí están los repositorios desde los que puede descargar temas de Emerald. \n"
-"Descargar los temas descargará e importará los temas desde el repositorio SVN \n"
-"Necesita tener el paquete Subversion instalado para usar esta característica."
+"Itt tudod letölteni az Emerald témákat a netről. \n"
+"A témák megszerzéséhez és importálásához szükséged van az SVN-re.\n"
+"Kérlek telepítsd a subversion csomagot, hogy elérhesd ezt a funkciót."
 
 #: themer/main.c:1521
 msgid ""
 "This repository contains GPL'd themes that can be used under \n"
 "the terms of GNU GPL licence v2.0 or later \n"
 msgstr ""
-"Este repositorio contiene temas GPL'd que se pueden usar bajo \n"
-"las condiciones de la licencia GNU GPL v2.0 o posterior \n"
+"Ez a témakészlet GPL témákat tartalmaz, és a felhasználásuk, terjesztésük \n"
+"kizárólag a GNU GPL licensz v2.0 vagy újabb alapján történhet. \n"
 
 #: themer/main.c:1532
 msgid ""
 "This repository contains non-GPL'd themes. They might infringe \n"
 "copyrights and patent laws in some countries."
 msgstr ""
-"Este repositorio contiene temas que no son GPL'd. Estos pueden infringir \n"
-"la copia de derechos y las leyes patentes en algunos países."
+"Ezu a témakészlet tartalmaz nem GPL elemeket. Ők lehet, hogy megszegnek \n"
+"néhány szerzői jogot vagy törvényt néhány országban."
 
 #: themer/main.c:1539
 msgid ""
@@ -467,421 +466,420 @@ msgid ""
 "the server ceritficate permanently: \n"
 "svn ls https://svn.generation.no/emerald-themes."
 msgstr ""
-"Para activar los temas No GPL del repositorio, por favor, ejecute lo siguiente en una consola y acepte el certificado del servidor permanentemente: \n"
+"A nem GPL elemeket tartalmazó témakészlet aktiválásához kérlek futtasd ezt a parancsor a shellben, és fogadd el állandóra a feltételeket: \n"
 "svn ls https://svn.generation.no/emerald-themes."
 
 #: themer/main.c:1548
 msgid "Themes"
-msgstr "Temas"
+msgstr "Témák"
 
 #: themer/main.c:1549
 msgid "Edit Themes"
-msgstr "Editar temas"
+msgstr "Edit Themes"
 
 #: themer/main.c:1550
 msgid "Repositories"
-msgstr "Repositorios"
+msgstr "Témakészlet"
 
 #: themer/main.c:1597
 msgid "Themes Settings"
-msgstr "Ajustes de los temas"
+msgstr "Témák beállítása"
 
 #: themer/main.c:1598
 msgid "Emerald Settings"
-msgstr "Ajustes de Emerald"
+msgstr "Emerald beállítása"
 
 #: engines/legacy.c:54
 msgid "Based on original gnome-window-decorator"
-msgstr "Basado en el decorador de ventanas original de gnome"
+msgstr "Eredeti gnome-window-decorator alapú"
 
 #: engines/legacy.c:342 engines/oxygen.c:402 engines/pixmap.c:494
 #: engines/truglass.c:487 engines/vrunner.c:561
 msgid "Round Top Left Corner"
-msgstr "Redondear la esquina superior izquierda"
+msgstr "Lekerekített bal fölső sarok"
 
 #: engines/legacy.c:346 engines/oxygen.c:406 engines/pixmap.c:498
 #: engines/truglass.c:491 engines/vrunner.c:565 engines/zootreeves.c:1439
 msgid "Round Top Right Corner"
-msgstr "Redondear la esquina superior derecha"
+msgstr "Lekerekített jobb fölső sarok"
 
 #: engines/legacy.c:350 engines/oxygen.c:410 engines/pixmap.c:502
 #: engines/truglass.c:495 engines/vrunner.c:569 engines/zootreeves.c:1443
 msgid "Round Bottom Left Corner"
-msgstr "Redondear la esquina inferior izquierda"
+msgstr "Lekerekített bal alsó sarok"
 
 #: engines/legacy.c:354 engines/oxygen.c:414 engines/pixmap.c:506
 #: engines/truglass.c:499 engines/vrunner.c:573 engines/zootreeves.c:1447
 msgid "Round Bottom Right Corner"
-msgstr "Redondear la esquina inferior derecha"
+msgstr "Lekerekített jobb alsó sarok"
 
 #: engines/legacy.c:361 engines/oxygen.c:421 engines/truglass.c:506
 #: engines/vrunner.c:580
 msgid "Rounding Radius"
-msgstr "Radio de redondeo"
+msgstr "Lekerekítés sugara"
 
 #: engines/legacy.c:387 engines/pixmap.c:543 engines/zootreeves.c:1408
 #: engines/zootreeves.c:1503
 msgid "Outer Frame Blend"
-msgstr "Mezcla externa del marco"
+msgstr "Külső keretillestés"
 
 #: engines/legacy.c:388 engines/pixmap.c:544 engines/zootreeves.c:1417
 #: engines/zootreeves.c:1504
 msgid "Inner Frame Blend"
-msgstr "Mezcla interna del marco"
+msgstr "Belső keretillesztés"
 
 #: engines/legacy.c:390 engines/pixmap.c:546 engines/zootreeves.c:1506
 msgid "Outer Titlebar Blend"
-msgstr "Mezcla exterior de la barra de título"
+msgstr "Külső címsorillesztés"
 
 #: engines/legacy.c:391 engines/pixmap.c:547 engines/zootreeves.c:1507
 msgid "Inner Titlebar Blend"
-msgstr "Mezcla interna de la barra de título"
+msgstr "Belső címsorillesztés"
 
 #: engines/legacy.c:393 engines/oxygen.c:451 engines/pixmap.c:549
 #: engines/truglass.c:549 engines/vrunner.c:670 engines/zootreeves.c:1552
 msgid "Titlebar Separator"
-msgstr "Separador de la barra de título"
+msgstr "Címsor elválasztó"
 
 #: engines/legacy.c:395 engines/oxygen.c:453 engines/truglass.c:551
 #: engines/vrunner.c:673 engines/zootreeves.c:1554
 msgid "Frame Outline"
-msgstr "Contorno del marco"
+msgstr "Külső keret"
 
 #: engines/legacy.c:396 engines/oxygen.c:454 engines/truglass.c:552
 #: engines/vrunner.c:674 engines/zootreeves.c:1555
 msgid "Frame Highlight"
-msgstr "Resaltado del marco"
+msgstr "Keret megvilágítása"
 
 #: engines/legacy.c:397 engines/oxygen.c:455 engines/truglass.c:553
 #: engines/zootreeves.c:1556
 msgid "Frame Shadow"
-msgstr "Sombra del marco"
+msgstr "Keret árnyáka"
 
 #: engines/legacy.c:399 engines/oxygen.c:457 engines/truglass.c:555
 #: engines/vrunner.c:678 engines/zootreeves.c:1558
 msgid "Contents Outline"
-msgstr "Contorno de los contenidos"
+msgstr "Külső tartalom"
 
 #: engines/legacy.c:400 engines/oxygen.c:458 engines/truglass.c:556
 #: engines/vrunner.c:679 engines/zootreeves.c:1559
 msgid "Contents Highlight"
-msgstr "Resaltado de los contenidos"
+msgstr "Tartalom megvilágítása"
 
 #: engines/legacy.c:401 engines/oxygen.c:459 engines/truglass.c:557
 #: engines/zootreeves.c:1560
 msgid "Contents Shadow"
-msgstr "Sombra de los contenidos"
+msgstr "Tartalom árnyéka"
 
 #: engines/legacy.c:418 engines/oxygen.c:476 engines/truglass.c:574
 #: engines/vrunner.c:697
 msgid "Frame"
-msgstr "Marco"
+msgstr "Keret"
 
 #: engines/oxygen.c:54
 msgid "Designed to be vista-ish in nature"
-msgstr "Diseñado para aparentar el estilo visual de Vista"
+msgstr "Tájkép kinézet"
 
 #: engines/oxygen.c:447
 msgid "Base"
-msgstr "Base"
+msgstr "Alap"
 
 #: engines/oxygen.c:448
 msgid "Glow"
-msgstr "Brillo"
+msgstr "Parázs"
 
 #: engines/oxygen.c:449
 msgid "Sides"
-msgstr "Lados"
+msgstr "Oldalak"
 
 #: engines/pixmap.c:91
 msgid "Everything done with customizable pixmaps!"
-msgstr "¡Cualquier cosa hecha con imágenes personalizadas!"
+msgstr "Minden jó az egyedi képekkel!"
 
 #: engines/pixmap.c:512
 msgid "Top Rounding Radius"
-msgstr "Radio de redondeo de la parte superior"
+msgstr "Felső gömbölyítés sugara"
 
 #: engines/pixmap.c:519
 msgid "Bottom Rounding Radius"
-msgstr "Radio de redondeo del fondo"
+msgstr "Alsó gömbölyítés sugara"
 
 #: engines/pixmap.c:604
 msgid "Scaled"
-msgstr "Escalado"
+msgstr "Pikkelyes"
 
 #: engines/pixmap.c:610 engines/pixmap.c:639
 msgid "Not adjustable"
-msgstr "No ajustable"
+msgstr "Nem állítható"
 
 #: engines/pixmap.c:654
 msgid "Same as Active"
-msgstr "El mismo que el activo"
+msgstr "Akárcsak az Aktív"
 
 #: engines/pixmap.c:668
 msgid "Pixmap"
-msgstr "Imagen"
+msgstr "Kép"
 
 #: engines/pixmap.c:672
 msgid "Tiled/Scaled"
-msgstr "Mosaico/Escalado"
+msgstr "Cserepes/Pikkelyes"
 
 #: engines/pixmap.c:673
 msgid "Width Override"
-msgstr "Sobreescribir anchura"
+msgstr "Szélesség méretezése"
 
 #: engines/pixmap.c:674
 msgid "Height Override"
-msgstr "Sobreescribir altura"
+msgstr "Magasság méretezése"
 
 #: engines/truglass.c:59
 msgid "Glassy effects for your windows"
-msgstr "Efectos cristalinos para tus ventanas"
+msgstr "Üvegszerű effektek az ablakoknál"
 
 #: engines/truglass.c:515
 msgid "Glow Height"
-msgstr "Altura del brillo"
+msgstr "Üveg vastagsága"
 
 #: engines/truglass.c:540
 msgid "Frame Base Color"
-msgstr "Color base del marco"
+msgstr "Keret alapszíne"
 
 #: engines/truglass.c:541
 msgid "Upper Titlebar Glow"
-msgstr "Brillo de la barra de título superior"
+msgstr "Fényes felső címsor"
 
 #: engines/truglass.c:543
 msgid "Upper Glass Glow"
-msgstr "Brillo de cristal superior"
+msgstr "Felülről világított üveg"
 
 #: engines/truglass.c:544
 msgid "Lower Glass Glow"
-msgstr "Brillo de cristal inferior"
+msgstr "Alulról világított üveg"
 
 #: engines/truglass.c:546
 msgid "Middle Glass Glow"
-msgstr "Brillo de cristal central"
+msgstr "Középről világított üveg"
 
 #: engines/truglass.c:547
 msgid "Outer Glass Glow"
-msgstr "Brillo de cristal exterior"
+msgstr "Kívülről világított üveg"
 
 #: engines/vrunner.c:78
 msgid "Multiple gradients with somewhat glassy features too"
-msgstr "Múltiplos gradientes con algunas características de cristal también"
+msgstr "többszörös lejtő valahol üvegszerű tulajdonságokkal"
 
 #: engines/vrunner.c:607
-msgid "Left Blend"
-msgstr "Mezcla izquierda"
+msgid "Bal keverés"
+msgstr "Left Blend"
 
 #: engines/vrunner.c:608
 msgid "Middle Blend"
-msgstr "Mezcla central"
+msgstr "Közép keverés"
 
 #: engines/vrunner.c:609
 msgid "Right Blend"
-msgstr "Mezcla derecha"
+msgstr "Jobb keverés"
 
 #: engines/vrunner.c:612 engines/vrunner.c:621
 msgid "Contrast"
-msgstr "Contraste"
+msgstr "Kontraszt"
 
 #: engines/vrunner.c:614
 msgid "(Color)"
-msgstr "(Color)"
+msgstr "(Szín)"
 
 #: engines/vrunner.c:623
 msgid "(Alpha)"
-msgstr "(Alfa)"
+msgstr "(Alpha)"
 
 #: engines/vrunner.c:630
 msgid "Notch"
-msgstr "Corte"
+msgstr "Bemetszés"
 
 #: engines/vrunner.c:632
 msgid "Position"
-msgstr "Posición"
+msgstr "Pozíció"
 
 #: engines/vrunner.c:640
 msgid "Curve"
-msgstr "Curva"
+msgstr "Görbe"
 
 #: engines/vrunner.c:642
 msgid "Offset"
-msgstr "Margen"
+msgstr "Eltolás"
 
 #: engines/vrunner.c:652
 msgid "Use Glow"
-msgstr "Usar brillo"
+msgstr "Használj fényesítést"
 
 #: engines/vrunner.c:658
 msgid "Title Glow"
-msgstr "Brillo del título"
+msgstr "Fényes címsor"
 
 #: engines/zootreeves.c:108
 msgid "Evolved from the legacy engine"
-msgstr "Desarrollado desde el motor heredado"
+msgstr "A régi motorból örökölve"
 
 #: engines/zootreeves.c:1262
 msgid "Border Gap"
-msgstr "Espacio del borde"
+msgstr "Szegély hézag"
 
 #: engines/zootreeves.c:1269
 msgid "Show Border when maximised?"
-msgstr "¿Mostrar borde cuando maximice?"
+msgstr "Látszodjon a szegély maximalizálva?"
 
 #: engines/zootreeves.c:1275
 msgid "Show when minimised?"
-msgstr "¿Mostrar cuando minimice?"
+msgstr "Látszódjon minimalizálva?"
 
 #: engines/zootreeves.c:1281
 msgid "Minimised Border Size"
-msgstr "Tamaño del borde minimizado"
+msgstr "Minimalizált szegélyméret"
 
 #: engines/zootreeves.c:1298
 msgid "Enable Left Bar Dip?"
-msgstr "¿Activar desnivel en la barra izquierda"
+msgstr "Engedélyezed a bal oldal ívét?"
 
 #: engines/zootreeves.c:1304
 msgid "Left Bar Radius"
-msgstr "Radio de la barra izquierda"
+msgstr "Bal oldal sugara"
 
 #: engines/zootreeves.c:1311
 msgid "Enable Lower Bulge? (Useless at the moment, but will be used soon)"
-msgstr "¿Activar grosor inferior? (Sin uso en este momento, pero se usará pronto)"
+msgstr "Engedélyezel egy kis dudort? (Most még hasztalan bejelölni, de nemsokára kész lesz)"
 
 #: engines/zootreeves.c:1317
 msgid "Top Corner Offset (%)"
-msgstr "Margen de la esquina superior (%)"
+msgstr "Felső sarok eltolása (%)"
 
 #: engines/zootreeves.c:1338
 msgid "Enable Title Bar Dip?"
-msgstr "¿Activar desnivel en la barra de título?"
+msgstr "Engedélyezed a címsor ívét?"
 
 #: engines/zootreeves.c:1344
 msgid "Enable Button Part?"
-msgstr "¿Activar pieza del botón?"
+msgstr "Engedélyezed a gomb részt?"
 
 #: engines/zootreeves.c:1350
 msgid "Title Part Width"
-msgstr "Anchura de la pieza del título"
+msgstr "Címsor szélessége"
 
 #: engines/zootreeves.c:1357
 msgid "Button Part Width)"
-msgstr "Altura de la parte del botón"
+msgstr "Gombsor szélessége)"
 
 #: engines/zootreeves.c:1364
 msgid "Dip Corners Radius)"
-msgstr "Radio del desnivel de las esquinas"
+msgstr "Sarok ívének sugara)"
 
 #: engines/zootreeves.c:1371
 msgid "Round Inside Corners As well?"
-msgstr "¿Redondear las esquinas interiores también?"
+msgstr "Belül is leherekített sarok?"
 
 #: engines/zootreeves.c:1388
 msgid "Enable Different Maximised Colors?"
-msgstr "¿Activar diferentes colores en ventanas maximizadas?"
+msgstr "Engedélyezed a különböző maximalizált színeket?"
 
 #: engines/zootreeves.c:1392
 msgid "Turn Off repeating gradients when maximised?"
-msgstr "¿Desactivar los gradientes repetidos al maximizar?"
+msgstr "Maximalizáláskor kikapcsolod az ismétlődő lejtőket?"
 
 #: engines/zootreeves.c:1435
 msgid "Round Top Left Corner?"
-msgstr "¿Redondear la esquina superior izquierda?"
+msgstr "Lekerekíted a bal felső sarkot?"
 
 #: engines/zootreeves.c:1453
 msgid "Frame Rounding Radius"
-msgstr "Radio del redondeo del marco"
+msgstr "Keret-lekerekítés sugara"
 
 #: engines/zootreeves.c:1460
 msgid "Titlebar Rounding Radius"
-msgstr "Radio del redondeo de la barra de título"
+msgstr "Címsor ívének sugara"
 
 #: engines/zootreeves.c:1511
 msgid "Repeat Gradient?"
-msgstr "¿Repetir gradiente?"
+msgstr "Ismétlődő lejtő?"
 
 #: engines/zootreeves.c:1521
 msgid "Vertical Repeat?"
-msgstr "¿Repetición vertical?"
+msgstr "Függőleges ismétlődés?"
 
 #: engines/zootreeves.c:1530
 msgid "Diagonal Repeat?"
-msgstr "¿Repetición diagonal?"
+msgstr "Átlós ismétlődés?"
 
 #: engines/zootreeves.c:1540
 msgid "Repeat Frequency"
-msgstr "Frecuencia de repetición"
+msgstr "Ismétlődés frekvenciája"
 
 #: engines/zootreeves.c:1582
 msgid "Enable Title Part Pixmap?"
-msgstr "¿Activar la pieza de imagen del título?"
+msgstr "Engedélyezed a címsor rész képét?"
 
 #: engines/zootreeves.c:1586
 msgid "Repeat Title Part Pixmap?"
-msgstr "¿Repetir la pieza de imagen del título?"
+msgstr "Ismétlődjön a címsor rész képe?"
 
 #: engines/zootreeves.c:1593
 msgid "Title Bar Part Pixmap"
-msgstr "Imagen de la pieza de la barra de título"
+msgstr "Címsor rész képe"
 
 #: engines/zootreeves.c:1596
 msgid "Choose Titlebar Part Pixmap"
-msgstr "Elegir pieza de imagen para la barra de título"
+msgstr "Válassz a címsor résznek képet"
 
 #: engines/zootreeves.c:1612
 msgid "Enable Button Part Pixmap?"
-msgstr "¿Activar la pieza de imagen del botón?"
+msgstr "Engedélyezed a gombsor képét?"
 
 #: engines/zootreeves.c:1616
 msgid "Repeat Button Part Pixmap?"
-msgstr "¿Repetir la pieza de imagen del botón?"
+msgstr "Ismétlődjön a gombsor képe?"
 
 #: engines/zootreeves.c:1624
 msgid "Button Part Pixmap"
-msgstr "Pieza de imagen del botón"
+msgstr "Gombsor képe"
 
 #: engines/zootreeves.c:1627
 msgid "Choose Button Part Pixmap"
-msgstr "Elegir pieza de imagen del botón"
+msgstr "Válassz a gombsornak képet"
 
 #: engines/zootreeves.c:1643
 msgid "Enable Titlebar Pixmap?"
-msgstr "¿Activar imagen de la barra de título?"
+msgstr "Engedélyezed a címsor képét?"
 
 #: engines/zootreeves.c:1647
 msgid "Repeat Titlebar Pixmap?"
-msgstr "¿Repetir imagen de la barra de título?"
+msgstr "Ismétlődjön a címsor képe?"
 
 #: engines/zootreeves.c:1655
 msgid "Titlebar Pixmap"
-msgstr "Imagen de la barra de título"
+msgstr "Címsor kép"
 
 #: engines/zootreeves.c:1658
 msgid "Choose Titlebar Pixmap"
-msgstr "Elegir la imagen de la barra de título"
+msgstr "Válassz a címsornak képet"
 
 #: engines/zootreeves.c:1678
 msgid "Active/Inactive"
-msgstr "Activa/Inactiva"
+msgstr "Aktív/Inaktív"
 
 #: engines/zootreeves.c:1679
 msgid "Maximised"
-msgstr "Maximizada"
+msgstr "Maximalizált"
 
 #: engines/zootreeves.c:1680
 msgid "Corners"
-msgstr "Esquinas"
+msgstr "Sarkok"
 
 #: engines/zootreeves.c:1681
 msgid "Border Layout"
-msgstr "Disposición del borde"
+msgstr "Szegélyréteg"
 
 #: engines/zootreeves.c:1683
 msgid "Left Bar"
-msgstr "Barra izquierda"
+msgstr "Bal oldal"
 
 #: engines/zootreeves.c:1684
 msgid "Pixmaps"
-msgstr "Imágenes"
-
+msgstr "Képek"
