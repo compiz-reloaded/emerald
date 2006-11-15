@@ -13,6 +13,7 @@ SUBDIRS = \
 		  po
 
 EXTRA_DIST =			\
+    VERSION             \
 	intltool-extract.in \
 	intltool-merge.in   \
 	intltool-update.in
