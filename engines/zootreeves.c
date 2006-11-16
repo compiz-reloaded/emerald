@@ -1574,7 +1574,7 @@ void layout_pixmaps(GtkWidget * vbox) {
     GtkFileFilter * filter;
     GtkWidget * junk;
     GtkWidget * title_bar_image;
-    SettingItem * set;
+    //SettingItem * set;
     GtkWidget * hbox;
 
 ///////////////////////
@@ -1604,7 +1604,7 @@ void layout_pixmaps(GtkWidget * vbox) {
     
     title_bar_image = gtk_image_new();
     
-    set = register_img_file_setting(file_selector,"pixmaps","titlebarpart",GTK_IMAGE(title_bar_image));
+    /* set =*/ register_img_file_setting(file_selector,"pixmaps","titlebarpart",GTK_IMAGE(title_bar_image));
 ///////////////////////////
     gtk_box_pack_startC(hbox,gtk_vseparator_new(),FALSE,FALSE,0);
 ///////////////////////////
@@ -1635,7 +1635,7 @@ void layout_pixmaps(GtkWidget * vbox) {
     
     title_bar_image = gtk_image_new();
     
-    set = register_img_file_setting(file_selector,"pixmaps","buttonpart",GTK_IMAGE(title_bar_image));
+    /*set =*/ register_img_file_setting(file_selector,"pixmaps","buttonpart",GTK_IMAGE(title_bar_image));
 ///////////////////////////////////////
     gtk_box_pack_startC(hbox,gtk_vseparator_new(),FALSE,FALSE,0);
 ///////////////////////////
@@ -1666,7 +1666,7 @@ void layout_pixmaps(GtkWidget * vbox) {
     
     title_bar_image = gtk_image_new();
     
-    set = register_img_file_setting(file_selector,"pixmaps","titlebar",GTK_IMAGE(title_bar_image));
+    /* set =*/ register_img_file_setting(file_selector,"pixmaps","titlebar",GTK_IMAGE(title_bar_image));
 ///////////////////////////////////////
     
 }

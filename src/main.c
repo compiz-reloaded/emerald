@@ -6175,7 +6175,7 @@ update_settings(window_settings * ws)
     //assumes ws is fully allocated
 
     GdkDisplay * gdkdisplay;
-    Display    *xdisplay;
+    // Display    *xdisplay;
     GdkScreen * gdkscreen;
     WnckScreen * screen = wnck_screen_get_default();
     GList * windows;
@@ -6183,7 +6183,7 @@ update_settings(window_settings * ws)
     load_settings(ws);
 
     gdkdisplay = gdk_display_get_default ();
-    xdisplay   = gdk_x11_display_get_xdisplay (gdkdisplay);
+    // xdisplay   = gdk_x11_display_get_xdisplay (gdkdisplay);
     gdkscreen  = gdk_display_get_default_screen (gdkdisplay);
 
     titlebar_font_changed(ws);
