@@ -1,18 +1,14 @@
 # translation of es_ES.po to
-# translation of es-ES.po to
-# translation of emerald.po to
-# emerald i18n file
-# Copyright (C) 2006 beryl-project
-# This file is distributed under the same license as the beryl package.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
 #
-# cyberorg <cyberorg@cyberorg.info>, 2006.
 # Jesús Vidal Panalés <jesusvpct@ono.com>, 2006.
 msgid ""
 msgstr ""
 "Project-Id-Version: es_ES\n"
 "Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
-"POT-Creation-Date: 2006-11-17 16:42+0530\n"
-"PO-Revision-Date: 2006-11-18 12:53+0100\n"
+"POT-Creation-Date: 2006-11-18 11:23-0500\n"
+"PO-Revision-Date: 2006-11-20 19:07+0100\n"
 "Last-Translator: Jesús Vidal Panalés <jesusvpct@ono.com>\n"
 "Language-Team:  <es@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -131,7 +127,9 @@ msgid "Use Button Halo/Glow"
 msgstr "Usar halo/brillo en el botón"
 
 msgid "Use Button Halo/Glow For Inactive Windows"
-msgstr "Usar halo/brillo en el botón para las ventanas inactivas"
+msgstr ""
+"Usar halo/brillo en el botón para las\n"
+"ventanas inactivas"
 
 msgid "Button Pixmaps"
 msgstr "Imágenes de los botones"
@@ -265,16 +263,14 @@ msgid ""
 "the titlebar-min-height slider\n"
 "or the titlebar font setting.\n"
 msgstr ""
-"Nota, cuando cambiar estos valores,\n"
-"se le aconseja que haga algo como\n"
-"cambiar de escritorio, ya que esto\n"
-"hará que la posición de las 'ventanas de eventos\n"
-"se actualicen correctamente, y así se consigue\n"
-"que mover/redimensionar las ventanas\n"
-"funcione correctamente.\n"
-"Esto también se aplica cuando cambia la altura de\n"
-"la barra de título a través de la propia opción "
-"o del ajuste de la fuente de la barra de título.\n"
+"Nota, cuando cambie estos valores, se le aconseja que haga\n"
+"alguna acción cambiar de escritorio, ya que esto hará que la\n"
+"posición de las ventanas de eventos se actualicen correctamente,\n"
+"y así se consigue que mover/redimensionar las ventanas funcione\n"
+"correctamente.\n\n"
+"Esto también se aplica cuando cambia la altura de la barra de\n"
+"título a través de la propia opción o del ajuste de la fuente de\n"
+"la barra de título.\n"
 
 msgid "Shadows"
 msgstr "Sombras"
@@ -303,7 +299,9 @@ msgstr "Información"
 msgid ""
 "NOTE - These settings are not part of themes, they are stored separately, "
 "and control various UI preferences for Emerald."
-msgstr "NOTA - Estos ajustes no son parte de los temas, que están grabados de forma separada, y controla varias preferencias del interfaz de usuario para Emerald."
+msgstr ""
+"NOTA - Estos ajustes no son parte de los temas, que están grabados de forma\n"
+"separada, y controla varias preferencias del interfaz de usuario para Emerald."
 
 msgid "Show Tooltips for Buttons"
 msgstr "Mostrar sugerencias para los botones"
@@ -391,22 +389,22 @@ msgid ""
 "This repository contains GPL'd themes that can be used under \n"
 "the terms of GNU GPL licence v2.0 or later \n"
 msgstr ""
-"Este repositorio contiene temas GPL'd que se pueden usar bajo \n"
-"las condiciones de la licencia GNU GPL v2.0 o posterior \n"
+"Este repositorio contiene temas GPL'd que se pueden usar bajo las\n"
+"condiciones de la licencia GNU GPL v2.0 o posterior\n"
 
 msgid ""
 "This repository contains non-GPL'd themes. They might infringe \n"
 "copyrights and patent laws in some countries."
 msgstr ""
-"Este repositorio contiene temas que no son GPL'd. Estos pueden infringir \n"
-"la copia de derechos y las leyes patentes en algunos países."
+"Este repositorio contiene temas que no son GPL'd. Estos pueden\n"
+"infringir la copia de derechos y las leyes patentes en algunos países."
 
 msgid ""
 "To activate Non-GPL repository please run the following in shell and accept "
 "the server ceritficate permanently: \n"
 "svn ls https://svn.generation.no/emerald-themes."
 msgstr ""
-"Para activar los temas No GPL del repositorio, por favor, ejecute lo siguiente en una consola y acepte el certificado del servidor permanentemente: \n"
+"Para activar los temas No GPL del repositorio, por favor, ejecute lo siguiente en una consola y acepte el certificado del servidor permanentemente: \n\n"
 "svn ls https://svn.generation.no/emerald-themes."
 
 msgid "Themes"

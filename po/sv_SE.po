@@ -7,372 +7,60 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.1\n"
-"Report-Msgid-Bugs-To: bugs.beryl-project.org \n"
-"POT-Creation-Date: 2006-09-28 23:18+0530\n"
-"PO-Revision-Date: 2006-10-05 02:54+0200\n"
+"Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
+"POT-Creation-Date: 2006-11-18 11:23-0500\n"
+"PO-Revision-Date: 2006-11-20 17:10+0100\n"
 "Last-Translator: Fass <ns.fass@gmail.com>\n"
 "Language-Team: beryl-project\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit"
 
-#: engines/vrunner.c:600
-msgid "(Alpha)"
-msgstr "(Alfa)"
-
-#: engines/vrunner.c:591
-msgid "(Color)"
-msgstr "(Färg)"
-
-#: themer/main.c:993
-msgid "Active Window"
-msgstr "Aktivt fönster"
-
-#: engines/zootreeves.c:1654
-msgid "Active/Inactive"
-msgstr "Aktivt/Inaktivt"
-
-#: themer/main.c:610
 #, c-format
-msgid "Are you sure you want to delete %s?"
-msgstr "Är du säker på att du vill radera %s?"
-
-#: engines/oxygen.c:424
-msgid "Base"
-msgstr "Bas"
-
-#: engines/legacy.c:31
-msgid "Based on original gnome-window-decorator"
-msgstr "Baseras på ursprungliga gnome-window-decorator"
-
-#: themer/main.c:942
-msgid "Border"
-msgstr "Fönsterlist"
-
-#: engines/zootreeves.c:1238
-msgid "Border Gap"
-msgstr "Fönsterlistlucka"
-
-#: engines/zootreeves.c:1657
-msgid "Border Layout"
-msgstr "Fönsterlistlayout"
-
-#: themer/main.c:945
-msgid "Bottom"
-msgstr "Undre"
-
-#: engines/pixmap.c:496
-msgid "Bottom Rounding Radius"
-msgstr "Undre rundningsradie"
-
-#: themer/main.c:717
-msgid "Button"
-msgstr "Knapp"
-
-#: themer/main.c:1107
-msgid "Button Fade Step Duration"
-msgstr "Knapptoningens intervallängd"
-
-#: themer/main.c:1101
-msgid "Button Fade Total Duration"
-msgstr "Knapptoningens totallängd"
-
-#: themer/main.c:742
-msgid "Button Fill"
-msgstr "Knappfyllnad"
-
-#: themer/main.c:1136
-msgid "Button Hover Cursor"
-msgstr "Pekare över knapp"
-
-#: themer/main.c:743
-msgid "Button Outline"
-msgstr "Knappkontur"
-
-#: engines/zootreeves.c:1600
-msgid "Button Part Pixmap"
-msgstr "Knappdelspixmap"
-
-#: engines/zootreeves.c:1333
-msgid "Button Part Width)"
-msgstr "Knappdelsbredd"
-
-#: themer/main.c:706
-msgid "Button Pixmaps"
-msgstr "Pixmappar för knappar"
-
-#: themer/main.c:1119
-msgid "Button Pulse Min Opacity %"
-msgstr "Knappulsationens minimiopacitet %"
-
-#: themer/main.c:1113
-msgid "Button Pulse Wait Duration"
-msgstr "Knappulsationens väntelängd"
-
-#: themer/main.c:1186
-msgid "Buttons"
-msgstr "Knappar"
-
-#: themer/main.c:598
 msgid ""
-"Can't delete system themes\n"
-"(or you forgot to enter a name)"
-msgstr ""
-"Systemteman kan inte raderas\""
-"(eller så glömde du ange ett namn)"
+"<b><big>%s</big></b>\n"
+"<i>%s</i>\n"
+"<small><b>Version</b> %s\n"
+"<b>Created By</b> %s\n"
+"<b>Use With</b> %s\n"
+"</small>"
+msgstr "<b><big>%s</big></b>\n"
+"<i>%s</i>\n"
+"<small><b>Version</b> %s\n"
+"<b>Skapat av</b> %s\n"
+"<b>Använd med</b> %s\n"
+"</small>"
 
-#: themer/main.c:503
+#, c-format
 msgid ""
-"Can't save over system themes\n"
-"(or you forgot to enter a name)"
-msgstr ""
-"Systemteman kan inte sparas över\n"
-"(eller så glömde du ange ett namn)"
+"<b><big>%s</big></b> (System Theme)\n"
+"<i>%s</i>\n"
+"<small><b>Version</b> %s\n"
+"<b>Created By</b> %s\n"
+"<b>Use With</b> %s\n"
+"</small>"
+msgstr "<b><big>%s</big></b> (Systemtema)\n"
+"<i>%s</i>\n"
+"<small><b>Version</b> %s\n"
+"<b>Skapat av</b> %s\n"
+"<b>Använd med</b> %s\n"
+"</small>"
 
-#: engines/zootreeves.c:1603
-msgid "Choose Button Part Pixmap"
-msgstr "Välj knappdelspixmap"
+msgid "Unknown"
+msgstr "Okänt"
 
-#: engines/zootreeves.c:1572
-msgid "Choose Titlebar Part Pixmap"
-msgstr "Välj titelradens delpixmap"
+msgid "Whatever (no hint)"
+msgstr "Vad som helst (ingen antydan)"
 
-#: engines/zootreeves.c:1634
-msgid "Choose Titlebar Pixmap"
-msgstr "Välj titelradspixmap"
+msgid "No Description"
+msgstr "Ingen beskrivning"
 
-#: themer/main.c:720 engines/pixmap.c:648
-msgid "Clear"
-msgstr "Rensa"
-
-#: themer/main.c:779
-msgid "Color"
-msgstr "Färg"
-
-#: themer/main.c:738 engines/legacy.c:362 engines/legacy.c:394
-#: engines/oxygen.c:422 engines/oxygen.c:452 engines/pixmap.c:665
-#: engines/truglass.c:514 engines/truglass.c:549 engines/vrunner.c:582
-#: engines/vrunner.c:673 engines/zootreeves.c:1477
-msgid "Colors"
-msgstr "Färger"
-
-#: engines/legacy.c:377 engines/oxygen.c:435 engines/truglass.c:532
-#: engines/vrunner.c:656 engines/zootreeves.c:1535
-msgid "Contents Highlight"
-msgstr "Innehållets framhävning"
-
-#: engines/legacy.c:376 engines/oxygen.c:434 engines/truglass.c:531
-#: engines/vrunner.c:655 engines/zootreeves.c:1534
-msgid "Contents Outline"
-msgstr "Innehållets kontur"
-
-#: engines/legacy.c:378 engines/oxygen.c:436 engines/truglass.c:533
-#: engines/zootreeves.c:1536
-msgid "Contents Shadow"
-msgstr "Innehållets skugga"
-
-#: engines/vrunner.c:589 engines/vrunner.c:598
-msgid "Contrast"
-msgstr "Kontrast"
-
-#: engines/zootreeves.c:1656
-msgid "Corners"
-msgstr "Hörn"
-
-#: themer/main.c:538
-msgid "Couldn't Form Theme"
-msgstr "Tema kunde inte formas"
-
-#: themer/main.c:533
-msgid "Couldn't Write Theme"
-msgstr "Tema kunde inte skrivas"
-
-#: themer/main.c:914
-msgid "Creator"
-msgstr "Skapare"
-
-#: engines/vrunner.c:617
-msgid "Curve"
-msgstr "Kurva"
-
-#: themer/main.c:915
-msgid "Description"
-msgstr "Beskrivning"
-
-#: engines/oxygen.c:31
-msgid "Designed to be vista-ish in nature"
-msgstr "Utformad att likna Vista"
-
-#: engines/zootreeves.c:1506
-msgid "Diagonal Repeat?"
-msgstr "Diagonalrepetition?"
-
-#: engines/zootreeves.c:1340
-msgid "Dip Corners Radius)"
-msgstr "Radie för hörnnedsättning"
-
-#: themer/main.c:1199 themer/main.c:1482
-msgid "Edit"
-msgstr "Redigera"
-
-#: themer/main.c:1483
-msgid "Emerald Settings"
-msgstr "Emerald-inställningar"
-
-#: engines/zootreeves.c:1588
-msgid "Enable Button Part Pixmap?"
-msgstr "Slå på knappdelspixmap?"
-
-#: engines/zootreeves.c:1320
-msgid "Enable Button Part?"
-msgstr "Slå på knappdel?"
-
-#: engines/zootreeves.c:1364
-msgid "Enable Different Maximised Colors?"
-msgstr "Slå på olika maximeringsfärger?"
-
-#: engines/zootreeves.c:1274
-msgid "Enable Left Bar Dip?"
-msgstr "Slå på nedsänkning av vänsterrad?"
-
-#: engines/zootreeves.c:1287
-msgid "Enable Lower Bulge? (Useless at the moment, but will be used soon)"
-msgstr "Slå på nedre utbuktning? (Värdelöst för tillfället, men kommer snart att användas)"
-
-#: engines/zootreeves.c:1314
-msgid "Enable Title Bar Dip?"
-msgstr "Slå på nedsänkning av titelrad?"
-
-#: engines/zootreeves.c:1558
-msgid "Enable Title Part Pixmap?"
-msgstr "Slå på titeldelspixmap?"
-
-#: engines/zootreeves.c:1619
-msgid "Enable Titlebar Pixmap?"
-msgstr "Slå på titelradspixmap?"
-
-#: themer/main.c:485
-msgid "Error calling tar."
-msgstr "Fel vid åberopande av 'tar'"
-
-#: engines/pixmap.c:68
-msgid "Everything done with customizable pixmaps!"
-msgstr "Allt görs med anpassningsbara pixmappar!"
-
-#: engines/zootreeves.c:84
-msgid "Evolved from the legacy engine"
-msgstr "Utvecklat från legacy-motorn"
-
-#: themer/main.c:855
-msgid "Export Theme..."
-msgstr "Exportera tema..."
-
-#: themer/main.c:904
-msgid "Export..."
-msgstr "Exportera..."
-
-#: themer/main.c:718 engines/pixmap.c:646
-msgid "File"
-msgstr "Fil"
-
-#: engines/legacy.c:395 engines/oxygen.c:453 engines/pixmap.c:666
-#: engines/truglass.c:550 engines/vrunner.c:674
-msgid "Frame"
-msgstr "Ram"
-
-#: engines/truglass.c:516
-msgid "Frame Base Color"
-msgstr "Rambasfärg"
-
-#: themer/main.c:975
-msgid "Frame Borders"
-msgstr "Ramlister"
-
-#: themer/main.c:1185
-msgid "Frame Engine"
-msgstr "Rammotor"
-
-#: engines/legacy.c:373 engines/oxygen.c:431 engines/truglass.c:528
-#: engines/vrunner.c:651 engines/zootreeves.c:1531
-msgid "Frame Highlight"
-msgstr "Ramframhävning"
-
-#: engines/legacy.c:372 engines/oxygen.c:430 engines/truglass.c:527
-#: engines/vrunner.c:650 engines/zootreeves.c:1530
-msgid "Frame Outline"
-msgstr "Ramkontur"
-
-#: engines/zootreeves.c:1429
-msgid "Frame Rounding Radius"
-msgstr "Ramrundningsradie"
-
-#: engines/legacy.c:374 engines/oxygen.c:432 engines/truglass.c:529
-#: engines/zootreeves.c:1532
-msgid "Frame Shadow"
-msgstr "Ramskugga"
-
-#: themer/main.c:1187
-msgid "Frame/Shadows"
-msgstr "Ram/Skuggor"
-
-#: engines/truglass.c:35
-msgid "Glassy effects for your windows"
-msgstr "Glaseffekter för dina fönster"
-
-#: engines/oxygen.c:425
-msgid "Glow"
-msgstr "Glans"
-
-#: engines/truglass.c:491
-msgid "Glow Height"
-msgstr "Glanshöjd"
-
-#: engines/pixmap.c:651
-msgid "Height Override"
-msgstr "Höjd-override"
-
-#: themer/main.c:813
-msgid "Horizontal Button Offset"
-msgstr "Horisontell knappkompensation"
-
-#: themer/main.c:1042
-msgid "Images"
-msgstr "Bilder"
-
-#: themer/main.c:1375 themer/main.c:1439
-msgid "Import Theme..."
-msgstr "Importera tema..."
-
-#: themer/main.c:994
-msgid "Inactive Window"
-msgstr "Inaktivt fönster"
-
-#: themer/main.c:1064
-msgid "Information"
-msgstr "Information"
-
-#: engines/legacy.c:365 engines/pixmap.c:521 engines/zootreeves.c:1393
-#: engines/zootreeves.c:1480
-msgid "Inner Frame Blend"
-msgstr "Ramens inre blandning"
-
-#: engines/legacy.c:368 engines/pixmap.c:524 engines/zootreeves.c:1483
-msgid "Inner Titlebar Blend"
-msgstr "Titelradens inre blandning"
-
-#: themer/main.c:471
-msgid ""
-"Invalid File Name\n"
-"Must End in .emerald"
-msgstr ""
-"Ogiltigt filnamn\n"
-"Måste sluta på .emerald"
-
-#: themer/main.c:334 themer/main.c:342 themer/main.c:508 themer/main.c:604
 msgid "Invalid Theme Name"
 msgstr "Ogiltigt temanamn"
 
-#: themer/main.c:465
+msgid "Invalid theme file.  Does not end in .emerald"
+msgstr "Ogiltig temafil. Slutar inte på .emerald"
+
 msgid ""
 "Invalid Theme Name\n"
 "Could Not Export"
@@ -380,87 +68,183 @@ msgstr ""
 "Ogiltigt temanamn\n"
 "Kunde inte exporteras"
 
-#: themer/main.c:423
-msgid "Invalid theme file.  Does not end in .emerald"
-msgstr "Ogiltig temafil. Slutar inte på .emerald"
-
-#: themer/main.c:946
-msgid "Left"
-msgstr "Vänster"
-
-#: engines/zootreeves.c:1659
-msgid "Left Bar"
-msgstr "Vänsterrad"
-
-#: engines/zootreeves.c:1280
-msgid "Left Bar Radius"
-msgstr "Vänsterradens radie"
-
-#: engines/vrunner.c:584
-msgid "Left Blend"
-msgstr "Vänster blandning"
-
-#: engines/truglass.c:520
-msgid "Lower Glass Glow"
-msgstr "Nedre glasglans"
-
-#: engines/zootreeves.c:1655
-msgid "Maximised"
-msgstr "Maximerad"
-
-#: engines/vrunner.c:585
-msgid "Middle Blend"
-msgstr "Mittenblandning"
-
-#: engines/truglass.c:522
-msgid "Middle Glass Glow"
-msgstr "Mellersta glasglans"
-
-#: engines/zootreeves.c:1257
-msgid "Minimised Border Size"
-msgstr "Minimerad fönsterliststorlek"
-
-#: themer/main.c:801
-msgid "Minimum Title-bar Height"
-msgstr "Titelradens minimihöjd"
-
-#: engines/vrunner.c:55
-msgid "Multiple gradients with somewhat glassy features too"
-msgstr "Flertal gradienter med någorlunda glasaktiga drag"
-
-#: themer/main.c:1080
 msgid ""
-"NOTE - These settings are not part of themes, they are stored separately, "
-"and control various UI preferences for Emerald."
+"Invalid File Name\n"
+"Must End in .emerald"
 msgstr ""
-"OBS! - Dessa inställningar är skilda från temana. De sparas separat "
-"och styr diverse gränssnittsinställningar åt Emerald"
+"Ogiltigt filnamn\n"
+"Måste sluta på .emerald"
 
-#: themer/main.c:895
-msgid "Name:"
-msgstr "Namn:"
+msgid "Error calling tar."
+msgstr "Fel vid åberopande av 'tar'"
 
-#: themer/main.c:185
-msgid "No Description"
-msgstr "Ingen beskrivning"
+msgid "Theme Exported"
+msgstr "Tema exporterat"
 
-#: themer/main.c:641
+msgid ""
+"Can't save over system themes\n"
+"(or you forgot to enter a name)"
+msgstr ""
+"Systemteman kan inte sparas över\n"
+"(eller så glömde du ange ett namn)"
+
+#, c-format
+msgid "Overwrite Theme %s?"
+msgstr "Skriv över tema %s?"
+
+msgid "Couldn't Write Theme"
+msgstr "Tema kunde inte skrivas"
+
+msgid "Couldn't Form Theme"
+msgstr "Tema kunde inte formas"
+
+msgid "Theme Saved"
+msgstr "Tema sparat"
+
+msgid ""
+"Can't delete system themes\n"
+"(or you forgot to enter a name)"
+msgstr "Systemteman kan inte raderas\"(eller så glömde du ange ett namn)"
+
+#, c-format
+msgid "Are you sure you want to delete %s?"
+msgstr "Är du säker på att du vill radera %s?"
+
+msgid "Theme deleted"
+msgstr "Tema raderat"
+
 msgid "No such theme to delete"
 msgstr "Finns inget sådant tema att radera"
 
-#: themer/main.c:1138
-msgid "Normal"
-msgstr "Normal"
+msgid "Use Pixmap Buttons"
+msgstr "Använd pixmapknappar"
 
-#: engines/pixmap.c:587 engines/pixmap.c:616
-msgid "Not adjustable"
-msgstr "Ej anpassningsbar"
+msgid "Use Button Halo/Glow"
+msgstr "Använd knappgloria/-glans"
 
-#: engines/vrunner.c:607
-msgid "Notch"
-msgstr "Jack"
+msgid "Use Button Halo/Glow For Inactive Windows"
+msgstr "Använd knappgloria/-glans för inaktiva fönster"
 
-#: themer/main.c:949
+msgid "Button Pixmaps"
+msgstr "Pixmappar för knappar"
+
+msgid "Button"
+msgstr "Knapp"
+
+msgid "File"
+msgstr "Fil"
+
+msgid "Preview"
+msgstr "Förhandsgranskning"
+
+msgid "Clear"
+msgstr "Rensa"
+
+msgid "Colors"
+msgstr "Färger"
+
+msgid "Text Fill"
+msgstr "Textfyllnad"
+
+msgid "Text Outline"
+msgstr "Textkontur"
+
+msgid "Button Fill"
+msgstr "Knappfyllnad"
+
+msgid "Button Outline"
+msgstr "Knappkontur"
+
+msgid "Color"
+msgstr "Färg"
+
+msgid "Opacity"
+msgstr "Opacitet"
+
+msgid "Radius"
+msgstr "Radie"
+
+msgid "X Offset"
+msgstr "X-kompensation"
+
+msgid "Y Offset"
+msgstr "Y-kompensation"
+
+msgid "Title-Text Font"
+msgstr "Titeltypsnitt"
+
+msgid "Minimum Title-bar Height"
+msgstr "Titelradens minimihöjd"
+
+msgid "Vertical Button Offset"
+msgstr "Vertikal knappkompensation"
+
+msgid "Horizontal Button Offset"
+msgstr "Horisontell knappkompensation"
+
+msgid "Title-bar Object Layout"
+msgstr "Layout för titelradsobjekt"
+
+msgid ""
+"Use colons to separate left, center, and right.\n"
+"Anything after a third colon is ignored.\n"
+"C=Close, N=Minimize, X/R=Restore\n"
+"I=Icon, T=Title, H=Help, M=Menu\n"
+"S=Shade, U/A=On Top(Up/Above)\n"
+"Y=Sticky, (#)=# pixels space, ex: (5)\n"
+msgstr ""
+"Använd kolon för att skilja vänster, centrerat, och höger.\n"
+"Allt efter ett tredje kolon ignoreras.\n"
+"C=Stäng, N=Minimera, X/R=Återställ\n"
+"I=Ikon, T=Titel, H=Hjälp, M=Meny\n"
+"S=Rulla upp, U/A=Överst(Upp/Ovanför)\n"
+"Y=Klibbig, (#)=# pixelutrymme, ex: (5)\n"
+
+msgid "Export Theme..."
+msgstr "Exportera tema..."
+
+msgid "Name:"
+msgstr "Namn:"
+
+msgid "Untitled Theme"
+msgstr "Namnlöst tema"
+
+msgid "Export..."
+msgstr "Exportera..."
+
+msgid "Creator"
+msgstr "Skapare"
+
+msgid "Description"
+msgstr "Beskrivning"
+
+msgid "Theme Version"
+msgstr "Temaversion"
+
+msgid "Suggested Widget Theme"
+msgstr "Föreslaget widgettema"
+
+msgid "Themer Version"
+msgstr "Tematorversion"
+
+msgid "Border"
+msgstr "Fönsterlist"
+
+msgid "Size"
+msgstr "Storlek"
+
+msgid "Top"
+msgstr "Övre"
+
+msgid "Bottom"
+msgstr "Undre"
+
+msgid "Left"
+msgstr "Vänster"
+
+msgid "Right"
+msgstr "Höger"
+
 msgid ""
 "Note, when changing these values,\n"
 "it is advised that you do something\n"
@@ -484,400 +268,482 @@ msgstr ""
 "titelradens min-höjd-stapel\n"
 "eller titelradens typsnittsinställning.\n"
 
-#: engines/vrunner.c:619
-msgid "Offset"
-msgstr "Kompensation"
-
-#: themer/main.c:780
-msgid "Opacity"
-msgstr "Opacitet"
-
-#: engines/legacy.c:364 engines/pixmap.c:520 engines/zootreeves.c:1384
-#: engines/zootreeves.c:1479
-msgid "Outer Frame Blend"
-msgstr "Ramens yttre blandning"
-
-#: engines/truglass.c:523
-msgid "Outer Glass Glow"
-msgstr "Yttre glasglans"
-
-#: engines/legacy.c:367 engines/pixmap.c:523 engines/zootreeves.c:1482
-msgid "Outer Titlebar Blend"
-msgstr "Titelradens yttre blandning"
-
-#: themer/main.c:521
-#, c-format
-msgid "Overwrite Theme %s?"
-msgstr "Skriv över tema %s?"
-
-#: engines/pixmap.c:645
-msgid "Pixmap"
-msgstr "Pixmap"
-
-#: engines/zootreeves.c:1660
-msgid "Pixmaps"
-msgstr "Pixmappar"
-
-#: engines/pixmap.c:663
-msgid "Pixmaps (Active))"
-msgstr "Pixmappar (aktiva)"
-
-#: engines/pixmap.c:664
-msgid "Pixmaps (Inactive)"
-msgstr "Pixmappar (inaktiva)"
-
-#: themer/main.c:1139
-msgid "Pointing Finger"
-msgstr "Pekande finger"
-
-#: engines/vrunner.c:609
-msgid "Position"
-msgstr "Position"
-
-#: themer/main.c:719 engines/pixmap.c:647
-msgid "Preview"
-msgstr "Förhandsgranskning"
-
-#: themer/main.c:781 engines/vrunner.c:638
-msgid "Radius"
-msgstr "Radie"
-
-#: engines/zootreeves.c:1592
-msgid "Repeat Button Part Pixmap?"
-msgstr "Upprepa knappdelspixmap?"
-
-#: engines/zootreeves.c:1516
-msgid "Repeat Frequency"
-msgstr "Upprepningsfrekvens"
-
-#: engines/zootreeves.c:1487
-msgid "Repeat Gradient?"
-msgstr "Upprepa gradient?"
-
-#: engines/zootreeves.c:1562
-msgid "Repeat Title Part Pixmap?"
-msgstr "Upprepa titeldelpixmap?"
-
-#: engines/zootreeves.c:1623
-msgid "Repeat Titlebar Pixmap?"
-msgstr "Upprepa titelsradspixmap?"
-
-#: themer/main.c:947
-msgid "Right"
-msgstr "Höger"
-
-#: engines/vrunner.c:586
-msgid "Right Blend"
-msgstr "Höger blandning"
-
-#: engines/legacy.c:327 engines/oxygen.c:387 engines/pixmap.c:479
-#: engines/truglass.c:471 engines/vrunner.c:546 engines/zootreeves.c:1419
-msgid "Round Bottom Left Corner"
-msgstr "Runda nedre vänstra hörnet"
-
-#: engines/legacy.c:331 engines/oxygen.c:391 engines/pixmap.c:483
-#: engines/truglass.c:475 engines/vrunner.c:550 engines/zootreeves.c:1423
-msgid "Round Bottom Right Corner"
-msgstr "Runda nedre högra hörnet"
-
-#: engines/zootreeves.c:1347
-msgid "Round Inside Corners As well?"
-msgstr "Runda också inre hörn?"
-
-#: engines/legacy.c:319 engines/oxygen.c:379 engines/pixmap.c:471
-#: engines/truglass.c:463 engines/vrunner.c:538
-msgid "Round Top Left Corner"
-msgstr "Runda övre vänstra hörnet"
-
-#: engines/zootreeves.c:1411
-msgid "Round Top Left Corner?"
-msgstr "Runda övre vänstra hörnet?"
-
-#: engines/legacy.c:323 engines/oxygen.c:383 engines/pixmap.c:475
-#: engines/truglass.c:467 engines/vrunner.c:542 engines/zootreeves.c:1415
-msgid "Round Top Right Corner"
-msgstr "Runda övre högra hörnet?"
-
-#: engines/legacy.c:338 engines/oxygen.c:398 engines/truglass.c:482
-#: engines/vrunner.c:557
-msgid "Rounding Radius"
-msgstr "Rundningsradie"
-
-#: engines/pixmap.c:631
-msgid "Same as Active"
-msgstr "Samma som aktivt"
-
-#: engines/pixmap.c:581
-msgid "Scaled"
-msgstr "Skalad"
-
-#: themer/main.c:1038 themer/main.c:1057
-msgid "Screenshot"
-msgstr "Skärmbild"
-
-#: themer/main.c:1258
-msgid "Search:"
-msgstr "Sök:"
-
-#: themer/main.c:967
 msgid "Shadows"
 msgstr "Skuggor"
 
-#: engines/zootreeves.c:1245
-msgid "Show Border when maximised?"
-msgstr "Visa fönsterlist vid maximering?"
+msgid "Frame Borders"
+msgstr "Ramlister"
 
-#: themer/main.c:1086
-msgid "Show Tooltips for Buttons"
-msgstr "Visa verktypstips för knappar?"
+msgid "Active Window"
+msgstr "Aktivt fönster"
 
-#: engines/zootreeves.c:1251
-msgid "Show when minimised?"
-msgstr "Visa vid minimering?"
+msgid "Inactive Window"
+msgstr "Inaktivt fönster"
 
-#: engines/oxygen.c:426
-msgid "Sides"
-msgstr "Sidor"
-
-#: themer/main.c:943
-msgid "Size"
-msgstr "Storlek"
-
-#: themer/main.c:917
-msgid "Suggested Widget Theme"
-msgstr "Föreslaget widgettema"
-
-#: themer/main.c:739
-msgid "Text Fill"
-msgstr "Textfyllnad"
-
-#: themer/main.c:740
-msgid "Text Outline"
-msgstr "Textkontur"
-
-#: themer/main.c:1189
-msgid "Theme"
-msgstr "Tema"
-
-#: themer/main.c:491
-msgid "Theme Exported"
-msgstr "Tema exporterat"
-
-#: themer/main.c:454
-msgid "Theme Imported"
-msgstr "Tema importerat"
-
-#: themer/main.c:575
-msgid "Theme Saved"
-msgstr "Tema sparat"
-
-#: themer/main.c:916
-msgid "Theme Version"
-msgstr "Temaversion"
-
-#: themer/main.c:635
-msgid "Theme deleted"
-msgstr "Tema raderat"
-
-#: themer/main.c:921
-msgid "Themer Version"
-msgstr "Tematorversion"
-
-#: themer/main.c:1481
-msgid "Themes"
-msgstr "Teman"
-
-#: engines/pixmap.c:649
-msgid "Tiled/Scaled"
-msgstr "Sida vid sida/skalad"
-
-#: themer/main.c:1003 engines/zootreeves.c:1658
 msgid "Title Bar"
 msgstr "Titelrad"
 
-#: engines/zootreeves.c:1569
-msgid "Title Bar Part Pixmap"
-msgstr "Titelradens delpixmap"
+msgid "Screenshot"
+msgstr "Skärmbild"
 
-#: engines/vrunner.c:635
-msgid "Title Glow"
-msgstr "Titelglans"
+msgid "Images"
+msgstr "Bilder"
 
-#: engines/zootreeves.c:1326
-msgid "Title Part Width"
-msgstr "Titeldelsbredd"
+msgid "Information"
+msgstr "Information"
 
-#: themer/main.c:793
-msgid "Title-Text Font"
-msgstr "Titeltypsnitt"
+msgid ""
+"NOTE - These settings are not part of themes, they are stored separately, "
+"and control various UI preferences for Emerald."
+msgstr ""
+"OBS! - Dessa inställningar är skilda från temana. De sparas separat och styr "
+"diverse gränssnittsinställningar åt Emerald"
 
-#: themer/main.c:821
-msgid "Title-bar Object Layout"
-msgstr "Layout för titelradsobjekt"
+msgid "Show Tooltips for Buttons"
+msgstr "Visa verktypstips för knappar?"
 
-#: themer/main.c:1188
-msgid "Titlebar"
-msgstr "Titelrad"
+msgid "Use Decoration Cropping"
+msgstr "Använd dekorationsbeskärning"
 
-#: themer/main.c:1125
-msgid "Titlebar Double-Click Action"
-msgstr "Dubbelklicksåtgärd för titelraden"
-
-#: engines/zootreeves.c:1631
-msgid "Titlebar Pixmap"
-msgstr "Titelradspixmap"
-
-#: engines/zootreeves.c:1436
-msgid "Titlebar Rounding Radius"
-msgstr "Titelradens rundningsradie"
-
-#: engines/legacy.c:370 engines/oxygen.c:428 engines/pixmap.c:526
-#: engines/truglass.c:525 engines/vrunner.c:647 engines/zootreeves.c:1528
-msgid "Titlebar Separator"
-msgstr "Titelradsseparator"
-
-#: themer/main.c:944
-msgid "Top"
-msgstr "Övre"
-
-#: engines/zootreeves.c:1293
-msgid "Top Corner Offset (%)"
-msgstr "Övre hörnkompensation (%)"
-
-#: engines/pixmap.c:489
-msgid "Top Rounding Radius"
-msgstr "Övre rundningsradie"
-
-#: engines/zootreeves.c:1368
-msgid "Turn Off repeating gradients when maximised?"
-msgstr "Stäng av upprepande gradienter vid maximering?"
-
-#: themer/main.c:167 themer/main.c:173
-msgid "Unknown"
-msgstr "Okänt"
-
-#: themer/main.c:897
-msgid "Untitled Theme"
-msgstr "Namnlöst tema"
-
-#: engines/truglass.c:519
-msgid "Upper Glass Glow"
-msgstr "Övre glasglans"
-
-#: engines/truglass.c:517
-msgid "Upper Titlebar Glow"
-msgstr "Övre titelradsglans"
-
-#: themer/main.c:1090
 msgid "Use Button Fade"
 msgstr "Använd knapptoning"
 
-#: themer/main.c:1094
 msgid "Use Button Fade Pulse"
 msgstr "Använd knapptoningspulsation"
 
-#: themer/main.c:686
-msgid "Use Button Halo/Glow"
-msgstr "Använd knappgloria/-glans"
+msgid "Button Fade Total Duration"
+msgstr "Knapptoningens totallängd"
 
-#: themer/main.c:690
-msgid "Use Button Halo/Glow For Inactive Windows"
-msgstr "Använd knappgloria/-glans för inaktiva fönster"
+msgid "Button Fade Step Duration"
+msgstr "Knapptoningens intervallängd"
 
-#: engines/vrunner.c:629
-msgid "Use Glow"
-msgstr "Använd glans"
+msgid "Button Pulse Wait Duration"
+msgstr "Knappulsationens väntelängd"
 
-#: themer/main.c:682
-msgid "Use Pixmap Buttons"
-msgstr "Använd pixmapknappar"
+msgid "Button Pulse Min Opacity %"
+msgstr "Knappulsationens minimiopacitet %"
 
-#: themer/main.c:829
-#: themer/main.c:807
+msgid "Titlebar Double-Click Action"
+msgstr "Dubbelklicksåtgärd för titelraden"
+
+msgid "Button Hover Cursor"
+msgstr "Pekare över knapp"
+
+msgid "Normal"
+msgstr "Normal"
+
+msgid "Pointing Finger"
+msgstr "Pekande finger"
+
+msgid "Frame Engine"
+msgstr "Rammotor"
+
+msgid "Buttons"
+msgstr "Knappar"
+
+msgid "Frame/Shadows"
+msgstr "Ram/Skuggor"
+
+msgid "Titlebar"
+msgstr "Titelrad"
+
+msgid "Theme"
+msgstr "Tema"
+
+msgid "Edit"
+msgstr "Redigera"
+
+msgid "Search:"
+msgstr "Sök:"
+
+msgid "Import Theme..."
+msgstr "Importera tema..."
+
+msgid "Fetching Themes"
+msgstr "Hämtar Teman"
+
 msgid ""
-"Use colons to separate left, center, and right.\n"
-"Anything after a third colon is ignored.\n"
-"C=Close, N=Minimize, X/R=Restore\n"
-"I=Icon, T=Title, H=Help, M=Menu\n"
-"S=Shade, U/A=On Top(Up/Above)\n"
-"Y=Sticky, (#)=# pixels space, ex: (5)\n"
-msgstr ""
-"Använd kolon för att skilja vänster, centrerat, och höger.\n"
-"Allt efter ett tredje kolon ignoreras.\n"
-"C=Stäng, N=Minimera, X/R=Återställ\n"
-"I=Ikon, T=Titel, H=Hjälp, M=Meny\n"
-"S=Rulla upp, U/A=Överst(Upp/Ovanför)\n"
-"Y=Klibbig, (#)=# pixelutrymme, ex: (5)\n"
+"Fetching themes... \n"
+"This may take time depending on \n"
+"internet connection speed."
+msgstr "Hämtar teman... \n"
+"Detta kan ta tid beroende på din \n"
+"internetanslutningshastighet."
 
-#: themer/main.c:807
-msgid "Vertical Button Offset"
-msgstr "Vertikal knappkompensation"
+msgid ""
+"Here are the repositories that you can fetch Emerald Themes from. \n"
+"Fetching themes would fetch and import themes from SVN repositories \n"
+"You need Subversion package installed to use this feature."
+msgstr "Från dessa förråd kan du hämta Emerald-teman. \n"
+"Att hämta teman laddar hem och importerar dem från SVN-förråden. \n"
+"Du måste ha \"subversion\" installerat för att använda denna funktion."
 
-#: engines/zootreeves.c:1497
-msgid "Vertical Repeat?"
-msgstr "Vertikal upprepning?"
+msgid ""
+"This repository contains GPL'd themes that can be used under \n"
+"the terms of GNU GPL licence v2.0 or later \n"
+msgstr "Detta förråd innehåller GPL-licensierade teman som kan användas \n"
+"enligt GNU GPL-licensen (v2.0 eller senare) \n"
 
-#: themer/main.c:179
-msgid "Whatever (no hint)"
-msgstr "Vad som helst (ingen antydan)"
+msgid ""
+"This repository contains non-GPL'd themes. They might infringe \n"
+"copyrights and patent laws in some countries."
+msgstr "Detta förråd innehåller teman som inte är GPL. De kan inkräkta\n"
+"på vissa länders upphovsrätts- och patentlagar."
 
-#: engines/pixmap.c:650
+msgid ""
+"To activate Non-GPL repository please run the following in shell and accept "
+"the server ceritficate permanently: \n"
+"svn ls https://svn.generation.no/emerald-themes."
+msgstr "För att aktivera förråd som inte är GPL kör vänligen följande i en terminal och acceptera servercertifikatet permanent: \n"
+"svn ls https://svn.generation.no/emerald-themes"
+
+msgid "Themes"
+msgstr "Teman"
+
+msgid "Edit Themes"
+msgstr "Redigera teman"
+
+msgid "Repositories"
+msgstr "Förråd"
+
+msgid "Themes Settings"
+msgstr "Tema-inställningar"
+
+msgid "Emerald Settings"
+msgstr "Emerald-inställningar"
+
+msgid "Based on original gnome-window-decorator"
+msgstr "Baseras på ursprungliga gnome-window-decorator"
+
+msgid "Round Top Left Corner"
+msgstr "Runda övre vänstra hörnet"
+
+msgid "Round Top Right Corner"
+msgstr "Runda övre högra hörnet?"
+
+msgid "Round Bottom Left Corner"
+msgstr "Runda nedre vänstra hörnet"
+
+msgid "Round Bottom Right Corner"
+msgstr "Runda nedre högra hörnet"
+
+msgid "Rounding Radius"
+msgstr "Rundningsradie"
+
+msgid "Outer Frame Blend"
+msgstr "Ramens yttre blandning"
+
+msgid "Inner Frame Blend"
+msgstr "Ramens inre blandning"
+
+msgid "Outer Titlebar Blend"
+msgstr "Titelradens yttre blandning"
+
+msgid "Inner Titlebar Blend"
+msgstr "Titelradens inre blandning"
+
+msgid "Titlebar Separator"
+msgstr "Titelradsseparator"
+
+msgid "Frame Outline"
+msgstr "Ramkontur"
+
+msgid "Frame Highlight"
+msgstr "Ramframhävning"
+
+msgid "Frame Shadow"
+msgstr "Ramskugga"
+
+msgid "Contents Outline"
+msgstr "Innehållets kontur"
+
+msgid "Contents Highlight"
+msgstr "Innehållets framhävning"
+
+msgid "Contents Shadow"
+msgstr "Innehållets skugga"
+
+msgid "Frame"
+msgstr "Ram"
+
+msgid "Designed to be vista-ish in nature"
+msgstr "Utformad att likna Vista"
+
+msgid "Base"
+msgstr "Bas"
+
+msgid "Glow"
+msgstr "Glans"
+
+msgid "Sides"
+msgstr "Sidor"
+
+msgid "Everything done with customizable pixmaps!"
+msgstr "Allt görs med anpassningsbara pixmappar!"
+
+msgid "Top Rounding Radius"
+msgstr "Övre rundningsradie"
+
+msgid "Bottom Rounding Radius"
+msgstr "Undre rundningsradie"
+
+#. Style : Use Tiled or Scaled pixmaps
+msgid "Scaled"
+msgstr "Skalad"
+
+msgid "Not adjustable"
+msgstr "Ej anpassningsbar"
+
+msgid "Same as Active"
+msgstr "Samma som aktivt"
+
+msgid "Pixmap"
+msgstr "Pixmap"
+
+msgid "Tiled/Scaled"
+msgstr "Sida vid sida/skalad"
+
 msgid "Width Override"
 msgstr "Bredd-override"
 
-#: themer/main.c:782
-msgid "X Offset"
-msgstr "X-kompensation"
+msgid "Height Override"
+msgstr "Höjd-override"
 
-#: themer/main.c:783
-msgid "Y Offset"
-msgstr "Y-kompensation"
+msgid "Glassy effects for your windows"
+msgstr "Glaseffekter för dina fönster"
 
-#: src/main.c:4185
-msgid "Close Window"
-msgstr "Stäng fönster"
+msgid "Glow Height"
+msgstr "Glanshöjd"
 
-#: src/main.c:4186
-msgid "Maximize Window"
-msgstr "Maximera fönster"
+msgid "Frame Base Color"
+msgstr "Rambasfärg"
 
-#: src/main.c:4187
-msgid "Restore Window"
-msgstr "Återställ fönster"
+msgid "Upper Titlebar Glow"
+msgstr "Övre titelradsglans"
 
-#: src/main.c:4188
-msgid "Minimize Window"
-msgstr "Minimera fönster"
+msgid "Upper Glass Glow"
+msgstr "Övre glasglans"
 
-#: src/main.c:4189
-msgid "Context Help"
-msgstr "Kontexthjälp"
+msgid "Lower Glass Glow"
+msgstr "Nedre glasglans"
 
-#: src/main.c:4190
-msgid "Window Menu"
-msgstr "Fönstermeny"
+msgid "Middle Glass Glow"
+msgstr "Mellersta glasglans"
 
-#: src/main.c:4191
-msgid "Shade Window"
-msgstr "Rulla upp fönster"
+msgid "Outer Glass Glow"
+msgstr "Yttre glasglans"
 
-#: src/main.c:4192
-msgid "UnShade Window"
-msgstr "Rulla ned fönster"
+msgid "Multiple gradients with somewhat glassy features too"
+msgstr "Flertal gradienter med någorlunda glasaktiga drag"
 
-#: src/main.c:4193
-msgid "Set Above"
-msgstr "Överst på"
+msgid "Left Blend"
+msgstr "Vänster blandning"
 
-#: src/main.c:4194
-msgid "UnSet Above"
-msgstr "Överst av"
+msgid "Middle Blend"
+msgstr "Mittenblandning"
 
-#: src/main.c:4195
-msgid "Stick Window"
-msgstr "Haka upp fönster"
+msgid "Right Blend"
+msgstr "Höger blandning"
 
-#: src/main.c:4196
-msgid "UnStick Window"
-msgstr "Haka av fönster"
+msgid "Contrast"
+msgstr "Kontrast"
 
+msgid "(Color)"
+msgstr "(Färg)"
+
+msgid "(Alpha)"
+msgstr "(Alfa)"
+
+msgid "Notch"
+msgstr "Jack"
+
+msgid "Position"
+msgstr "Position"
+
+msgid "Curve"
+msgstr "Kurva"
+
+msgid "Offset"
+msgstr "Kompensation"
+
+msgid "Use Glow"
+msgstr "Använd glans"
+
+msgid "Title Glow"
+msgstr "Titelglans"
+
+msgid "Evolved from the legacy engine"
+msgstr "Utvecklat från legacy-motorn"
+
+msgid "Border Gap"
+msgstr "Fönsterlistlucka"
+
+msgid "Show Border when maximised?"
+msgstr "Visa fönsterlist vid maximering?"
+
+msgid "Show when minimised?"
+msgstr "Visa vid minimering?"
+
+msgid "Minimised Border Size"
+msgstr "Minimerad fönsterliststorlek"
+
+msgid "Enable Left Bar Dip?"
+msgstr "Slå på nedsänkning av vänsterrad?"
+
+msgid "Left Bar Radius"
+msgstr "Vänsterradens radie"
+
+msgid "Enable Lower Bulge? (Useless at the moment, but will be used soon)"
+msgstr ""
+"Slå på nedre utbuktning? (Värdelöst för tillfället, men kommer snart att "
+"användas)"
+
+msgid "Top Corner Offset (%)"
+msgstr "Övre hörnkompensation (%)"
+
+msgid "Enable Title Bar Dip?"
+msgstr "Slå på nedsänkning av titelrad?"
+
+msgid "Enable Button Part?"
+msgstr "Slå på knappdel?"
+
+msgid "Title Part Width"
+msgstr "Titeldelsbredd"
+
+msgid "Button Part Width)"
+msgstr "Knappdelsbredd"
+
+msgid "Dip Corners Radius)"
+msgstr "Radie för hörnnedsättning"
+
+msgid "Round Inside Corners As well?"
+msgstr "Runda också inre hörn?"
+
+msgid "Enable Different Maximised Colors?"
+msgstr "Slå på olika maximeringsfärger?"
+
+msgid "Turn Off repeating gradients when maximised?"
+msgstr "Stäng av upprepande gradienter vid maximering?"
+
+msgid "Round Top Left Corner?"
+msgstr "Runda övre vänstra hörnet?"
+
+msgid "Frame Rounding Radius"
+msgstr "Ramrundningsradie"
+
+msgid "Titlebar Rounding Radius"
+msgstr "Titelradens rundningsradie"
+
+msgid "Repeat Gradient?"
+msgstr "Upprepa gradient?"
+
+msgid "Vertical Repeat?"
+msgstr "Vertikal upprepning?"
+
+msgid "Diagonal Repeat?"
+msgstr "Diagonalrepetition?"
+
+msgid "Repeat Frequency"
+msgstr "Upprepningsfrekvens"
+
+#. /////////////////////
+msgid "Enable Title Part Pixmap?"
+msgstr "Slå på titeldelspixmap?"
+
+msgid "Repeat Title Part Pixmap?"
+msgstr "Upprepa titeldelpixmap?"
+
+msgid "Title Bar Part Pixmap"
+msgstr "Titelradens delpixmap"
+
+msgid "Choose Titlebar Part Pixmap"
+msgstr "Välj titelradens delpixmap"
+
+#. /////////////////////////
+msgid "Enable Button Part Pixmap?"
+msgstr "Slå på knappdelspixmap?"
+
+msgid "Repeat Button Part Pixmap?"
+msgstr "Upprepa knappdelspixmap?"
+
+msgid "Button Part Pixmap"
+msgstr "Knappdelspixmap"
+
+msgid "Choose Button Part Pixmap"
+msgstr "Välj knappdelspixmap"
+
+#. /////////////////////////
+msgid "Enable Titlebar Pixmap?"
+msgstr "Slå på titelradspixmap?"
+
+msgid "Repeat Titlebar Pixmap?"
+msgstr "Upprepa titelsradspixmap?"
+
+msgid "Titlebar Pixmap"
+msgstr "Titelradspixmap"
+
+msgid "Choose Titlebar Pixmap"
+msgstr "Välj titelradspixmap"
+
+msgid "Active/Inactive"
+msgstr "Aktivt/Inaktivt"
+
+msgid "Maximised"
+msgstr "Maximerad"
+
+msgid "Corners"
+msgstr "Hörn"
+
+msgid "Border Layout"
+msgstr "Fönsterlistlayout"
+
+msgid "Left Bar"
+msgstr "Vänsterrad"
+
+msgid "Pixmaps"
+msgstr "Pixmappar"
+
+#~ msgid "Pixmaps (Active))"
+#~ msgstr "Pixmappar (aktiva)"
+
+#~ msgid "Pixmaps (Inactive)"
+#~ msgstr "Pixmappar (inaktiva)"
+
+#~ msgid "Theme Imported"
+#~ msgstr "Tema importerat"
+
+#~ msgid "Close Window"
+#~ msgstr "Stäng fönster"
+
+#~ msgid "Maximize Window"
+#~ msgstr "Maximera fönster"
+
+#~ msgid "Restore Window"
+#~ msgstr "Återställ fönster"
+
+#~ msgid "Minimize Window"
+#~ msgstr "Minimera fönster"
+
+#~ msgid "Context Help"
+#~ msgstr "Kontexthjälp"
+
+#~ msgid "Window Menu"
+#~ msgstr "Fönstermeny"
+
+#~ msgid "Shade Window"
+#~ msgstr "Rulla upp fönster"
+
+#~ msgid "UnShade Window"
+#~ msgstr "Rulla ned fönster"
+
+#~ msgid "Set Above"
+#~ msgstr "Överst på"
+
+#~ msgid "UnSet Above"
+#~ msgstr "Överst av"
+
+#~ msgid "Stick Window"
+#~ msgstr "Haka upp fönster"
+
+#~ msgid "UnStick Window"
+#~ msgstr "Haka av fönster"
