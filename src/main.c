@@ -4764,7 +4764,7 @@ show_force_quit_dialog (WnckWindow *win,
         return;
 
     tmp = g_markup_escape_text (wnck_window_get_name (win), -1);
-    str = g_strdup_printf ("The window \"%s\" is not responding.", tmp);
+    str = g_strdup_printf (N_("The window \"%s\" is not responding."), tmp);
 
     g_free (tmp);
 
@@ -4773,9 +4773,9 @@ show_force_quit_dialog (WnckWindow *win,
             GTK_BUTTONS_NONE,
             "<b>%s</b>\n\n%s",
             str,
-            "Forcing this application to "
+            N_("Forcing this application to "
             "quit will cause you to lose any "
-            "unsaved changes.");
+            "unsaved changes."));
     g_free (str);
 
     gtk_window_set_icon_name (GTK_WINDOW (dialog), "force-quit");

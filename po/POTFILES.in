@@ -1,4 +1,6 @@
+src/main.c
 themer/main.c
+libengine/themer.c
 engines/legacy.c
 engines/oxygen.c
 engines/pixmap.c

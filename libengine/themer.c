@@ -760,7 +760,7 @@ void layout_engine_list(GtkWidget * vbox)
     EngineCombo = gtk_combo_box_new();
     hbox = gtk_hbox_new(FALSE,2);
     gtk_box_pack_startC(vbox,hbox,FALSE,FALSE,0);
-    gtk_box_pack_startC(hbox,gtk_label_new("Select\nEngine"),FALSE,FALSE,0);
+    gtk_box_pack_startC(hbox,gtk_label_new(_("Select\nEngine")),FALSE,FALSE,0);
     gtk_box_pack_startC(hbox,EngineCombo,FALSE,FALSE,0);
     gtk_box_pack_startC(vbox,gtk_hseparator_new(),FALSE,FALSE,0);
     EngineContainer = gtk_alignment_new(0,0,1,1); // really only needed for the bin-ness
