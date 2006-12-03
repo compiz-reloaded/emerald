@@ -8,13 +8,60 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1\n"
 "Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
-"POT-Creation-Date: 2006-11-17 05:38-0600\n"
-"PO-Revision-Date: 2006-11-17 04:48-0600\n"
+"POT-Creation-Date: 2006-12-02 20:52-0600\n"
+"PO-Revision-Date: 2006-12-02 20:59-0600\n"
 "Last-Translator: atie H. <atie.at.matrix@gmail.com>\n"
 "Language-Team: beryl-project\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: 8bit"
+
+msgid "Close Window"
+msgstr "창 닫기"
+
+msgid "Maximize Window"
+msgstr "창 최대화"
+
+msgid "Restore Window"
+msgstr "창 되돌리기"
+
+msgid "Minimize Window"
+msgstr "창 최소화"
+
+msgid "Context Help"
+msgstr "도움말"
+
+msgid "Window Menu"
+msgstr "창 메뉴"
+
+msgid "Shade Window"
+msgstr "창 말아넣기"
+
+msgid "UnShade Window"
+msgstr "창 말아풀기"
+
+msgid "Set Above"
+msgstr "항상 위에"
+
+msgid "UnSet Above"
+msgstr "항상 위에 풀기"
+
+msgid "Stick Window"
+msgstr "끈적이 창"
+
+msgid "UnStick Window"
+msgstr "끈적이 창 풀기"
+
+#, c-format
+msgid "The window \"%s\" is not responding."
+msgstr "창 \"%s\"(은)는 응답이 없습니다."
+
+msgid ""
+"Forcing this application to quit will cause you to lose any unsaved changes."
+msgstr "이 프로그램을 강제로 끝내는 것에 의해 저장되지 않은 변경을 잃게 됩니다."
+
+msgid "_Force Quit"
+msgstr "강제로 끝내기(_F)"
 
 #, c-format
 msgid ""
@@ -422,6 +469,12 @@ msgstr "테마 설정"
 msgid "Emerald Settings"
 msgstr "에머랄드 설정"
 
+msgid ""
+"Select\n"
+"Engine"
+msgstr "테마엔진\n"
+"고르기"
+
 msgid "Based on original gnome-window-decorator"
 msgstr "원래의 그놈 창 테두리에 기반"
 
@@ -719,39 +772,3 @@ msgstr "픽스맵"
 
 #~ msgid "Theme Imported"
 #~ msgstr "테마 가져와짐"
-
-#~ msgid "Close Window"
-#~ msgstr "창 닫기"
-
-#~ msgid "Maximize Window"
-#~ msgstr "창 최대화"
-
-#~ msgid "Restore Window"
-#~ msgstr "창 되돌리기"
-
-#~ msgid "Minimize Window"
-#~ msgstr "창 최소화"
-
-#~ msgid "Context Help"
-#~ msgstr "도움말"
-
-#~ msgid "Window Menu"
-#~ msgstr "창 메뉴"
-
-#~ msgid "Shade Window"
-#~ msgstr "창 말아넣기"
-
-#~ msgid "UnShade Window"
-#~ msgstr "창 말아풀기"
-
-#~ msgid "Set Above"
-#~ msgstr "항상 위에"
-
-#~ msgid "UnSet Above"
-#~ msgstr "항상 위에 풀기"
-
-#~ msgid "Stick Window"
-#~ msgstr "끈적이 창"
-
-#~ msgid "UnStick Window"
-#~ msgstr "끈적이 창 풀기"
