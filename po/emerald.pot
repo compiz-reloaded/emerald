@@ -8,13 +8,57 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
-"POT-Creation-Date: 2006-11-18 11:23-0500\n"
+"POT-Creation-Date: 2006-12-03 01:01+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+msgid "Close Window"
+msgstr ""
+
+msgid "Maximize Window"
+msgstr ""
+
+msgid "Restore Window"
+msgstr ""
+
+msgid "Minimize Window"
+msgstr ""
+
+msgid "Context Help"
+msgstr ""
+
+msgid "Window Menu"
+msgstr ""
+
+msgid "Shade Window"
+msgstr ""
+
+msgid "UnShade Window"
+msgstr ""
+
+msgid "Set Above"
+msgstr ""
+
+msgid "UnSet Above"
+msgstr ""
+
+msgid "Stick Window"
+msgstr ""
+
+msgid "UnStick Window"
+msgstr ""
+
+#, c-format
+msgid "The window \"%s\" is not responding."
+msgstr ""
+
+msgid ""
+"Forcing this application to quit will cause you to lose any unsaved changes."
+msgstr ""
 
 #, c-format
 msgid ""
@@ -369,6 +413,11 @@ msgid "Themes Settings"
 msgstr ""
 
 msgid "Emerald Settings"
+msgstr ""
+
+msgid ""
+"Select\n"
+"Engine"
 msgstr ""
 
 msgid "Based on original gnome-window-decorator"
