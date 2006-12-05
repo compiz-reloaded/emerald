@@ -3293,7 +3293,16 @@ update_window_decoration_actions (WnckWindow *win)
             {
                 d->actions |= FAKE_WINDOW_ACTION_HELP;
             }
-        }
+        } else {
+		/* This is an attempt to solve #161
+		 * FIXME: Remove or alter the error message when this fix is sufficiently verified.
+		 */
+		if(data)
+			XFree((void *) data);
+		fprintf(stderr,"XGetWindowProperty() returned non-success value (%d).\n",result);
+		fprintf(stderr,"Please report this to the development team.\n",result);
+		break;
+	}
     }
 }
 
