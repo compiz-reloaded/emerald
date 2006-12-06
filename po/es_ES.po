@@ -1,20 +1,73 @@
-# translation of es_ES.po to
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# Translation of Emerald to es_ES
+# Copyright (C) 2006 beryl-project
+# This file is distributed under the same license as the Beryl packages.
 #
 # Jesús Vidal Panalés <jesusvpct@ono.com>, 2006.
 msgid ""
 msgstr ""
 "Project-Id-Version: es_ES\n"
 "Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
-"POT-Creation-Date: 2006-11-18 11:23-0500\n"
-"PO-Revision-Date: 2006-11-20 19:07+0100\n"
+"POT-Creation-Date: 2006-12-05 13:34+0100\n"
+"PO-Revision-Date: 2006-12-03 12:55+0100\n"
 "Last-Translator: Jesús Vidal Panalés <jesusvpct@ono.com>\n"
 "Language-Team:  <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
+
+msgid "Close Window"
+msgstr "Cerrar la ventana"
+
+msgid "Maximize Window"
+msgstr "Maximizar la ventana"
+
+msgid "Restore Window"
+msgstr "Restaurar la ventana"
+
+msgid "Minimize Window"
+msgstr "Minimizar la ventana"
+
+#, fuzzy
+msgid "Context Help"
+msgstr "Ayuda de contexto"
+
+msgid "Window Menu"
+msgstr "Menú de la ventana"
+
+#, fuzzy
+msgid "Shade Window"
+msgstr "Enrollar la ventana"
+
+#, fuzzy
+msgid "UnShade Window"
+msgstr "Desenrollar la ventana"
+
+msgid "Set Above"
+msgstr "Fijar en la parte superior"
+
+msgid "UnSet Above"
+msgstr "Quitar la fijación en la parte superior"
+
+#, fuzzy
+msgid "Stick Window"
+msgstr "Pegar la ventana"
+
+#, fuzzy
+msgid "UnStick Window"
+msgstr "Despegar la ventana"
+
+#, c-format
+msgid "The window \"%s\" is not responding."
+msgstr "La ventana \"%s\" no responde."
+
+msgid "Forcing this application to quit will cause you to lose any unsaved changes."
+msgstr ""
+"Forzar esta aplicación a cerrar provocará que pierdas los cambios no "
+"guardados."
+
+msgid "_Force Quit"
+msgstr "Forzar cerrar"
 
 #, c-format
 msgid ""
@@ -267,7 +320,8 @@ msgstr ""
 "alguna acción cambiar de escritorio, ya que esto hará que la\n"
 "posición de las ventanas de eventos se actualicen correctamente,\n"
 "y así se consigue que mover/redimensionar las ventanas funcione\n"
-"correctamente.\n\n"
+"correctamente.\n"
+"\n"
 "Esto también se aplica cuando cambia la altura de la barra de\n"
 "título a través de la propia opción o del ajuste de la fuente de\n"
 "la barra de título.\n"
@@ -301,7 +355,8 @@ msgid ""
 "and control various UI preferences for Emerald."
 msgstr ""
 "NOTA - Estos ajustes no son parte de los temas, que están grabados de forma\n"
-"separada, y controla varias preferencias del interfaz de usuario para Emerald."
+"separada, y controla varias preferencias del interfaz de usuario para "
+"Emerald."
 
 msgid "Show Tooltips for Buttons"
 msgstr "Mostrar sugerencias para los botones"
@@ -381,8 +436,10 @@ msgid ""
 "Fetching themes would fetch and import themes from SVN repositories \n"
 "You need Subversion package installed to use this feature."
 msgstr ""
-"Aquí están los repositorios desde los que puede descargar temas de Emerald. \n"
-"Descargar los temas descargará e importará los temas desde el repositorio SVN \n"
+"Aquí están los repositorios desde los que puede descargar temas de "
+"Emerald. \n"
+"Descargar los temas descargará e importará los temas desde el repositorio "
+"SVN \n"
 "Necesita tener el paquete Subversion instalado para usar esta característica."
 
 msgid ""
@@ -404,7 +461,10 @@ msgid ""
 "the server ceritficate permanently: \n"
 "svn ls https://svn.generation.no/emerald-themes."
 msgstr ""
-"Para activar los temas No GPL del repositorio, por favor, ejecute lo siguiente en una consola y acepte el certificado del servidor permanentemente: \n\n"
+"Para activar los temas No GPL del repositorio, por favor, ejecute lo "
+"siguiente en una consola y acepte el certificado del servidor "
+"permanentemente: \n"
+"\n"
 "svn ls https://svn.generation.no/emerald-themes."
 
 msgid "Themes"
@@ -421,6 +481,13 @@ msgstr "Ajustes de los temas"
 
 msgid "Emerald Settings"
 msgstr "Ajustes de Emerald"
+
+msgid ""
+"Select\n"
+"Engine"
+msgstr ""
+"Seleccionar\n"
+"Motor"
 
 msgid "Based on original gnome-window-decorator"
 msgstr "Basado en el decorador de ventanas original de gnome"
