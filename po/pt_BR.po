@@ -1,8 +1,6 @@
 # Emerald Window Decorator.
 # Copyright (C) 2006
 # This file is distributed under the same license as the Emerald package.
-# cyberorg <cyberorg@cyberorg.info>, 2006.
-#
 # Transladed by Carlos Eduardo Ariede - DuD@ <duda@ariede.com.br>, 2006.
 msgid ""
 msgstr ""
@@ -16,403 +14,54 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: engines/vrunner.c:600
-msgid "(Alpha)"
-msgstr "(Alfa)"
-
-#: engines/vrunner.c:591
-msgid "(Color)"
-msgstr "(Cor)"
-
-#: themer/main.c:993
-msgid "Active Window"
-msgstr "Janela Ativa"
-
-#: engines/zootreeves.c:1654
-msgid "Active/Inactive"
-msgstr "Ativa/Inativa"
-
-#: themer/main.c:610
 #, c-format
-msgid "Are you sure you want to delete %s?"
-msgstr "Tem a certeza que deseja apagar %s?"
-
-#: engines/oxygen.c:424
-msgid "Base"
-msgstr "Base"
-
-#: engines/legacy.c:31
-msgid "Based on original gnome-window-decorator"
-msgstr "Baseado no gnome-window-decorator original"
-
-#: themer/main.c:942
-msgid "Border"
-msgstr "Bordas"
-
-#: engines/zootreeves.c:1238
-msgid "Border Gap"
-msgstr "Falha na borda"
-
-#: engines/zootreeves.c:1657
-msgid "Border Layout"
-msgstr "Desgin das bordas"
-
-#: themer/main.c:945
-msgid "Bottom"
-msgstr "Fundo"
-
-#: engines/pixmap.c:496
-msgid "Bottom Rounding Radius"
-msgstr "Grau de arredondamento do fundo"
-
-#: themer/main.c:717
-msgid "Button"
-msgstr "Botão"
-
-#: themer/main.c:1107
-msgid "Button Fade Step Duration"
-msgstr "Duração de cada passo do fade"
-
-#: themer/main.c:1101
-msgid "Button Fade Total Duration"
-msgstr "Dração total do fade dos botões"
-
-#: themer/main.c:742
-msgid "Button Fill"
-msgstr "Preenchimento do botão"
-
-#: themer/main.c:1136
-msgid "Button Hover Cursor"
-msgstr "Cursor quando sobre os botões"
-
-#: themer/main.c:743
-msgid "Button Outline"
-msgstr "Limites do botão"
-
-#: engines/zootreeves.c:1600
-msgid "Button Part Pixmap"
-msgstr "Imagem da parte do botão"
-
-#: engines/zootreeves.c:1333
-msgid "Button Part Width)"
-msgstr "Largura da parte do botão"
-
-#: themer/main.c:706
-msgid "Button Pixmaps"
-msgstr "Imagens dos botões"
-
-#: themer/main.c:1119
-msgid "Button Pulse Min Opacity %"
-msgstr "Opacidade mínima do pulsar dos botões"
-
-#: themer/main.c:1113
-msgid "Button Pulse Wait Duration"
-msgstr "Duração da espera para pulsar"
-
-#: themer/main.c:1186
-msgid "Buttons"
-msgstr "Botões"
-
-#: themer/main.c:598
 msgid ""
-"Can't delete system themes\n"
-"(or you forgot to enter a name)"
+"<b><big>%s</big></b>\n"
+"<i>%s</i>\n"
+"<small><b>Version</b> %s\n"
+"<b>Created By</b> %s\n"
+"<b>Use With</b> %s\n"
+"</small>"
 msgstr ""
-"Impossível apagar temas do sistema\n"
-"(ou esqueceu-se de inserir um nome)"
+"<b><big>%s</big></b>\n"
+"<i>%s</i>\n"
+"<small><b>Versão</b> %s\n"
+"<b>Criado Por</b> %s\n"
+"<b>Usar Com</b> %s\n"
+"</small>"
 
-#: themer/main.c:503
+
+#, c-format
 msgid ""
-"Can't save over system themes\n"
-"(or you forgot to enter a name)"
+"<b><big>%s</big></b> (System Theme)\n"
+"<i>%s</i>\n"
+"<small><b>Version</b> %s\n"
+"<b>Created By</b> %s\n"
+"<b>Use With</b> %s\n"
+"</small>"
 msgstr ""
-"Impossível sobrescrever temas do sistema\n"
-"(ou esqueceu-se de inserir um nome)"
+"<b><big>%s</big></b> (Tema do Sistema)\n"
+"<i>%s</i>\n"
+"<small><b>Versão</b> %s\n"
+"<b>Criado Por</b> %s\n"
+"<b>Usar Com</b> %s\n"
+"</small>"
 
-#: engines/zootreeves.c:1603
-msgid "Choose Button Part Pixmap"
-msgstr "Escolher imagem do botão"
+msgid "Unknown"
+msgstr "Desconhecido"
 
-#: engines/zootreeves.c:1572
-msgid "Choose Titlebar Part Pixmap"
-msgstr "Escolher imagem da parte da barra de título"
+msgid "Whatever (no hint)"
+msgstr "Qualquer (sem pista)"
 
-#: engines/zootreeves.c:1634
-msgid "Choose Titlebar Pixmap"
-msgstr "Escolher imagem da barra de título "
+msgid "No Description"
+msgstr "Sem descrição"
 
-#: themer/main.c:720
-msgid "Teste DUDA"
-msgstr "Teste DUDA"
-
-#: engines/pixmap.c:648
-msgid "Clear"
-msgstr "Limpar"
-
-#: themer/main.c:779
-msgid "Color"
-msgstr "Cor"
-
-#: themer/main.c:738
-#: engines/legacy.c:362
-#: engines/legacy.c:394
-#: engines/oxygen.c:422
-#: engines/oxygen.c:452
-#: engines/pixmap.c:665
-#: engines/truglass.c:514
-#: engines/truglass.c:549
-#: engines/vrunner.c:582
-#: engines/vrunner.c:673
-#: engines/zootreeves.c:1477
-msgid "Colors"
-msgstr "Cores"
-
-#: engines/legacy.c:377
-#: engines/oxygen.c:435
-#: engines/truglass.c:532
-#: engines/vrunner.c:656
-#: engines/zootreeves.c:1535
-msgid "Contents Highlight"
-msgstr "Highlight dos conteúdos"
-
-#: engines/legacy.c:376
-#: engines/oxygen.c:434
-#: engines/truglass.c:531
-#: engines/vrunner.c:655
-#: engines/zootreeves.c:1534
-msgid "Contents Outline"
-msgstr "Limite dos conteúdos"
-
-#: engines/legacy.c:378
-#: engines/oxygen.c:436
-#: engines/truglass.c:533
-#: engines/zootreeves.c:1536
-msgid "Contents Shadow"
-msgstr "Sombra dos conteúdos"
-
-#: engines/vrunner.c:589
-#: engines/vrunner.c:598
-msgid "Contrast"
-msgstr "Contraste"
-
-#: engines/zootreeves.c:1656
-msgid "Corners"
-msgstr "Cantos"
-
-#: themer/main.c:538
-msgid "Couldn't Form Theme"
-msgstr "Impossível formar o tema"
-
-#: themer/main.c:533
-msgid "Couldn't Write Theme"
-msgstr "Impossível escrever o tema"
-
-#: themer/main.c:914
-msgid "Creator"
-msgstr "Criador"
-
-#: engines/vrunner.c:617
-msgid "Curve"
-msgstr "Curva"
-
-#: themer/main.c:915
-msgid "Description"
-msgstr "Desrição"
-
-#: engines/oxygen.c:31
-msgid "Designed to be vista-ish in nature"
-msgstr "Com o objetivo de ser parecido com o vista"
-
-#: engines/zootreeves.c:1506
-msgid "Diagonal Repeat?"
-msgstr "Repetição diagonal?"
-
-#: engines/zootreeves.c:1340
-msgid "Dip Corners Radius)"
-msgstr "Grau de arredondamento da falha nos cantos"
-
-#: themer/main.c:1199
-#: themer/main.c:1482
-msgid "Edit"
-msgstr "Editar"
-
-#: themer/main.c:1483
-msgid "Emerald Settings"
-msgstr "Opções do Emerald"
-
-#: engines/zootreeves.c:1588
-msgid "Enable Button Part Pixmap?"
-msgstr "Ativar imagem da parte do botão?"
-
-#: engines/zootreeves.c:1320
-msgid "Enable Button Part?"
-msgstr "Ativar parte do botão?"
-
-#: engines/zootreeves.c:1364
-msgid "Enable Different Maximised Colors?"
-msgstr "Ativar cores diferentes para janelas maximizadas?"
-
-#: engines/zootreeves.c:1274
-msgid "Enable Left Bar Dip?"
-msgstr "Ativar falha na barra esquerda?"
-
-#: engines/zootreeves.c:1287
-msgid "Enable Lower Bulge? (Useless at the moment, but will be used soon)"
-msgstr "Ativar falha inferior? (Sem uso de momento, mas logo será usada)"
-
-#: engines/zootreeves.c:1314
-msgid "Enable Title Bar Dip?"
-msgstr "Ativar falha na barra de título?"
-
-#: engines/zootreeves.c:1558
-msgid "Enable Title Part Pixmap?"
-msgstr "Ativar imagem da parte do título"
-
-#: engines/zootreeves.c:1619
-msgid "Enable Titlebar Pixmap?"
-msgstr "Ativar imagem da barra de título?"
-
-#: themer/main.c:485
-msgid "Error calling tar."
-msgstr "Erro ao executar o tar"
-
-#: engines/pixmap.c:68
-msgid "Everything done with customizable pixmaps!"
-msgstr "Tudo é feito com imagens customizáveis!"
-
-#: engines/zootreeves.c:84
-msgid "Evolved from the legacy engine"
-msgstr "Evoluído do engine inicial"
-
-#: themer/main.c:855
-msgid "Export Theme..."
-msgstr "Exportar tema..."
-
-#: themer/main.c:904
-msgid "Export..."
-msgstr "Exportar..."
-
-#: themer/main.c:718
-#: engines/pixmap.c:646
-msgid "File"
-msgstr "Arquivo"
-
-#: engines/legacy.c:395
-#: engines/oxygen.c:453
-#: engines/pixmap.c:666
-#: engines/truglass.c:550
-#: engines/vrunner.c:674
-msgid "Frame"
-msgstr "Moldura"
-
-#: engines/truglass.c:516
-msgid "Frame Base Color"
-msgstr "Cor base da moldura"
-
-#: themer/main.c:975
-msgid "Frame Borders"
-msgstr "Limites da moldura"
-
-#: themer/main.c:1185
-msgid "Frame Engine"
-msgstr "Engine da moldura"
-
-#: engines/legacy.c:373
-#: engines/oxygen.c:431
-#: engines/truglass.c:528
-#: engines/vrunner.c:651
-#: engines/zootreeves.c:1531
-msgid "Frame Highlight"
-msgstr "Highlight da moldura"
-
-#: engines/legacy.c:372
-#: engines/oxygen.c:430
-#: engines/truglass.c:527
-#: engines/vrunner.c:650
-#: engines/zootreeves.c:1530
-msgid "Frame Outline"
-msgstr "Limite exterior da moldura"
-
-#: engines/zootreeves.c:1429
-msgid "Frame Rounding Radius"
-msgstr "Raio de arredondamento da moldura"
-
-#: engines/legacy.c:374
-#: engines/oxygen.c:432
-#: engines/truglass.c:529
-#: engines/zootreeves.c:1532
-msgid "Frame Shadow"
-msgstr "Sombra da moldura"
-
-#: themer/main.c:1187
-msgid "Frame/Shadows"
-msgstr "Moldura/sombra"
-
-#: engines/truglass.c:35
-msgid "Glassy effects for your windows"
-msgstr "Efeito de vidro nas janelas"
-
-#: engines/oxygen.c:425
-msgid "Glow"
-msgstr "Brilho"
-
-#: engines/truglass.c:491
-msgid "Glow Height"
-msgstr "Altura do brilho"
-
-#: engines/pixmap.c:651
-msgid "Height Override"
-msgstr "Override da altura"
-
-#: themer/main.c:813
-msgid "Horizontal Button Offset"
-msgstr "Margem horizontal dos botões"
-
-#: themer/main.c:1042
-msgid "Images"
-msgstr "Imagens"
-
-#: themer/main.c:1375
-#: themer/main.c:1439
-msgid "Import Theme..."
-msgstr "Importar tema.."
-
-#: themer/main.c:994
-msgid "Inactive Window"
-msgstr "Janela inativa"
-
-#: themer/main.c:1064
-msgid "Information"
-msgstr "Informação"
-
-#: engines/legacy.c:365
-#: engines/pixmap.c:521
-#: engines/zootreeves.c:1393
-#: engines/zootreeves.c:1480
-msgid "Inner Frame Blend"
-msgstr "Mistura interior das molduras"
-
-#: engines/legacy.c:368
-#: engines/pixmap.c:524
-#: engines/zootreeves.c:1483
-msgid "Inner Titlebar Blend"
-msgstr "Mistura interior da barra de título"
-
-#: themer/main.c:471
-msgid ""
-"Invalid File Name\n"
-"Must End in .emerald"
-msgstr "Nome do arquivo inválido\n"
-"Deve terminar com .emerald"
-
-#: themer/main.c:334
-#: themer/main.c:342
-#: themer/main.c:508
-#: themer/main.c:604
 msgid "Invalid Theme Name"
 msgstr "Nome do tema inválido"
 
-#: themer/main.c:465
+msgid "Invalid theme file.  Does not end in .emerald"
+msgstr "Arquivo do tema inválido. Não termina com .emerald"
+
 msgid ""
 "Invalid Theme Name\n"
 "Could Not Export"
@@ -420,446 +69,125 @@ msgstr ""
 "Nome do tema inválido\n"
 "Não foi possível exportar"
 
-#: themer/main.c:423
-msgid "Invalid theme file.  Does not end in .emerald"
-msgstr "Arquivo do tema inválido. Não termina com .emerald"
-
-#: themer/main.c:946
-msgid "Left"
-msgstr "Esquerda"
-
-#: engines/zootreeves.c:1659
-msgid "Left Bar"
-msgstr "Barra esquerda"
-
-#: engines/zootreeves.c:1280
-msgid "Left Bar Radius"
-msgstr "Raio da bara esquerda"
-
-#: engines/vrunner.c:584
-msgid "Left Blend"
-msgstr "Mistura esquerda"
-
-#: engines/truglass.c:520
-msgid "Lower Glass Glow"
-msgstr "Brilho inferior"
-
-#: engines/zootreeves.c:1655
-msgid "Maximised"
-msgstr "Maximizado"
-
-#: engines/vrunner.c:585
-msgid "Middle Blend"
-msgstr "Mistura central"
-
-#: engines/truglass.c:522
-msgid "Middle Glass Glow"
-msgstr "Brilho central"
-
-#: engines/zootreeves.c:1257
-msgid "Minimised Border Size"
-msgstr "Largura da moldura quando minimizada"
-
-#: themer/main.c:801
-msgid "Minimum Title-bar Height"
-msgstr "Altura mínima da barra de título"
-
-#: engines/vrunner.c:55
-msgid "Multiple gradients with somewhat glassy features too"
-msgstr "Múltiplos gradientes com algum aspecto de vidro"
-
-#: themer/main.c:1080
-msgid "NOTE - These settings are not part of themes, they are stored separately, and control various UI preferences for Emerald."
-msgstr "NOTA - Estes valores não são parte dos temas, são armazenados separadamente, e controlam variádas opções do Emerald"
-
-#: themer/main.c:895
-msgid "Name:"
-msgstr "Nome:"
-
-#: themer/main.c:185
-msgid "No Description"
-msgstr "Sem descrição"
-
-#: themer/main.c:641
-msgid "No such theme to delete"
-msgstr "Não existe tema para apagar"
-
-#: themer/main.c:1138
-msgid "Normal"
-msgstr "Normal"
-
-#: engines/pixmap.c:587
-#: engines/pixmap.c:616
-msgid "Not adjustable"
-msgstr "Não ajustável"
-
-#: engines/vrunner.c:607
-msgid "Notch"
-msgstr "Altura"
-
-#: themer/main.c:949
 msgid ""
-"Note, when changing these values,\n"
-"it is advised that you do something\n"
-"like change viewports, as this will\n"
-"cause the position of the 'event windows'\n"
-"to update properly, and thus make\n"
-"moving/resizing windows work properly.\n"
-"This also applies to when you change\n"
-"the title-bar height through either\n"
-"the titlebar-min-height slider\n"
-"or the titlebar font setting.\n"
+"Invalid File Name\n"
+"Must End in .emerald"
 msgstr ""
-"Nota, quando mudar estes valores,\n"
-"é aconselhado que faça qualquer coisa\n"
-"como mudar de viweport, porque isto \n"
-"faz com que a posição das 'janelas de eventos'\n"
-"atualize propriamente, fazendo assim\n"
-"com que o mover/redimensionar de janelas funcione bem.\n"
-"Isto também se aplica a quando muda\n"
-"a altura da barra de título\n"
-"através da opção própria\n"
-"ou do tamanho da fonte da barra.\n"
+"Nome do arquivo inválido\n"
+"Deve terminar com .emerald"
 
-#: engines/vrunner.c:619
-msgid "Offset"
-msgstr "Margem"
+msgid "Error calling tar."
+msgstr "Erro ao executar o tar"
 
-#: themer/main.c:780
-msgid "Opacity"
-msgstr "Opacidade"
+msgid "Theme Exported"
+msgstr "Tema Exportado"
 
-#: engines/legacy.c:364
-#: engines/pixmap.c:520
-#: engines/zootreeves.c:1384
-#: engines/zootreeves.c:1479
-msgid "Outer Frame Blend"
-msgstr "Mistura exterior das molduras"
+msgid ""
+"Can't save over system themes\n"
+"(or you forgot to enter a name)"
+msgstr ""
+"Impossível sobrescrever temas do sistema\n"
+"(ou esqueceu-se de inserir um nome)"
 
-#: engines/truglass.c:523
-msgid "Outer Glass Glow"
-msgstr "Brilho exterior"
-
-#: engines/legacy.c:367
-#: engines/pixmap.c:523
-#: engines/zootreeves.c:1482
-msgid "Outer Titlebar Blend"
-msgstr "Mistura exterior da barra de título"
-
-#: themer/main.c:521
 #, c-format
 msgid "Overwrite Theme %s?"
-msgstr "Sobrescrever tema %s?"
+msgstr "Sobrescrever Tema %s?"
 
-#: engines/pixmap.c:645
-msgid "Pixmap"
-msgstr "Imagem"
+msgid "Couldn't Write Theme"
+msgstr "Impossível Escrever o Tema"
 
-#: engines/zootreeves.c:1660
-msgid "Pixmaps"
-msgstr "Imagens"
+msgid "Couldn't Form Theme"
+msgstr "Impossível Formar o Tema"
 
-#: engines/pixmap.c:663
-msgid "Pixmaps (Active))"
-msgstr "Imagens (Ativa)"
-
-#: engines/pixmap.c:664
-msgid "Pixmaps (Inactive)"
-msgstr "Imagens (Inativa)"
-
-#: themer/main.c:1139
-msgid "Pointing Finger"
-msgstr "Dedo apontador"
-
-#: engines/vrunner.c:609
-msgid "Position"
-msgstr "Posição"
-
-#: themer/main.c:719
-#: engines/pixmap.c:647
-msgid "Preview"
-msgstr "Preview"
-
-#: themer/main.c:781
-#: engines/vrunner.c:638
-msgid "Radius"
-msgstr "Raio"
-
-#: engines/zootreeves.c:1592
-msgid "Repeat Button Part Pixmap?"
-msgstr "Reptir imagem da parte do botão?"
-
-#: engines/zootreeves.c:1516
-msgid "Repeat Frequency"
-msgstr "Frequência de repetição"
-
-#: engines/zootreeves.c:1487
-msgid "Repeat Gradient?"
-msgstr "Repetir gradiente?"
-
-#: engines/zootreeves.c:1562
-msgid "Repeat Title Part Pixmap?"
-msgstr "Repetir imagem da parte da barra de título"
-
-#: engines/zootreeves.c:1623
-msgid "Repeat Titlebar Pixmap?"
-msgstr "Repetir imagem da barra de título"
-
-#: themer/main.c:947
-msgid "Right"
-msgstr "Direita"
-
-#: engines/vrunner.c:586
-msgid "Right Blend"
-msgstr "Mistura direita"
-
-#: engines/legacy.c:327
-#: engines/oxygen.c:387
-#: engines/pixmap.c:479
-#: engines/truglass.c:471
-#: engines/vrunner.c:546
-#: engines/zootreeves.c:1419
-msgid "Round Bottom Left Corner"
-msgstr "Arredondar canto inferior esquerdo"
-
-#: engines/legacy.c:331
-#: engines/oxygen.c:391
-#: engines/pixmap.c:483
-#: engines/truglass.c:475
-#: engines/vrunner.c:550
-#: engines/zootreeves.c:1423
-msgid "Round Bottom Right Corner"
-msgstr "Arredondar canto inferior direito"
-
-#: engines/zootreeves.c:1347
-msgid "Round Inside Corners As well?"
-msgstr "Arredondar cantos interiores também?"
-
-#: engines/legacy.c:319
-#: engines/oxygen.c:379
-#: engines/pixmap.c:471
-#: engines/truglass.c:463
-#: engines/vrunner.c:538
-msgid "Round Top Left Corner"
-msgstr "Arredondar canto superior esquerdo"
-
-#: engines/zootreeves.c:1411
-msgid "Round Top Left Corner?"
-msgstr "Arredondar canto superior esquerdo?"
-
-#: engines/legacy.c:323
-#: engines/oxygen.c:383
-#: engines/pixmap.c:475
-#: engines/truglass.c:467
-#: engines/vrunner.c:542
-#: engines/zootreeves.c:1415
-msgid "Round Top Right Corner"
-msgstr "Arredondar canto superior direito"
-
-#: engines/legacy.c:338
-#: engines/oxygen.c:398
-#: engines/truglass.c:482
-#: engines/vrunner.c:557
-msgid "Rounding Radius"
-msgstr "Raio de arredondamento"
-
-#: engines/pixmap.c:631
-msgid "Same as Active"
-msgstr "Mesmo que ativos"
-
-#: engines/pixmap.c:581
-msgid "Scaled"
-msgstr "Adaptado"
-
-#: themer/main.c:1038
-#: themer/main.c:1057
-msgid "Screenshot"
-msgstr "Screenshot"
-
-#: themer/main.c:1258
-msgid "Search:"
-msgstr "Procurar:"
-
-#: themer/main.c:967
-msgid "Shadows"
-msgstr "Sombras"
-
-#: engines/zootreeves.c:1245
-msgid "Show Border when maximised?"
-msgstr "Mostrar bordas quando maximizada?"
-
-#: themer/main.c:1086
-msgid "Show Tooltips for Buttons"
-msgstr "Mostrar tooltips dos botões?"
-
-#: engines/zootreeves.c:1251
-msgid "Show when minimised?"
-msgstr "Mostrar quando minimizada?"
-
-#: engines/oxygen.c:426
-msgid "Sides"
-msgstr "Lados"
-
-#: themer/main.c:943
-msgid "Size"
-msgstr "Tamanho"
-
-#: themer/main.c:917
-msgid "Suggested Widget Theme"
-msgstr "Tema GTK sugerido"
-
-#: themer/main.c:739
-msgid "Text Fill"
-msgstr "Preenchimento do texto"
-
-#: themer/main.c:740
-msgid "Text Outline"
-msgstr "Limite do texto"
-
-#: themer/main.c:1189
-msgid "Theme"
-msgstr "Tema"
-
-#: themer/main.c:491
-msgid "Theme Exported"
-msgstr "Tema exportado"
-
-#: themer/main.c:454
-msgid "Theme Imported"
-msgstr "Tema importado"
-
-#: themer/main.c:575
 msgid "Theme Saved"
-msgstr "Tema gravado"
+msgstr "Tema Gravado"
 
-#: themer/main.c:916
-msgid "Theme Version"
-msgstr "Versão do tema"
+msgid ""
+"Can't delete system themes\n"
+"(or you forgot to enter a name)"
+msgstr ""
+"Impossível apagar temas do sistema\n"
+"(ou esqueceu-se de inserir um nome)"
 
-#: themer/main.c:635
+#, c-format
+msgid "Are you sure you want to delete %s?"
+msgstr "Tem a certeza que deseja apagar %s?"
+
 msgid "Theme deleted"
 msgstr "Tema apagado"
 
-#: themer/main.c:921
-msgid "Themer Version"
-msgstr "Versão do tema"
+msgid "No such theme to delete"
+msgstr "Não existe tema para apagar"
 
-#: themer/main.c:1481
-msgid "Themes"
-msgstr "Temas"
-
-#: engines/pixmap.c:649
-msgid "Tiled/Scaled"
-msgstr "Repetido/Adaptado"
-
-#: themer/main.c:1003
-#: engines/zootreeves.c:1658
-msgid "Title Bar"
-msgstr "Barra de título"
-
-#: engines/zootreeves.c:1569
-msgid "Title Bar Part Pixmap"
-msgstr "Imagem da parte da barra de título"
-
-#: engines/vrunner.c:635
-msgid "Title Glow"
-msgstr "Brilho do título"
-
-#: engines/zootreeves.c:1326
-msgid "Title Part Width"
-msgstr "Largura da parte do título"
-
-#: themer/main.c:793
-msgid "Title-Text Font"
-msgstr "Fonte do título"
-
-#: themer/main.c:821
-msgid "Title-bar Object Layout"
-msgstr "Esquema da barra de título"
-
-#: themer/main.c:1188
-msgid "Titlebar"
-msgstr "Barra de título"
-
-#: themer/main.c:1125
-msgid "Titlebar Double-Click Action"
-msgstr "Ação de duplo clique na barra de título"
-
-#: engines/zootreeves.c:1631
-msgid "Titlebar Pixmap"
-msgstr "Imagem da barra de título"
-
-#: engines/zootreeves.c:1436
-msgid "Titlebar Rounding Radius"
-msgstr "Raio de arredondamento da barra de título"
-
-#: engines/legacy.c:370
-#: engines/oxygen.c:428
-#: engines/pixmap.c:526
-#: engines/truglass.c:525
-#: engines/vrunner.c:647
-#: engines/zootreeves.c:1528
-msgid "Titlebar Separator"
-msgstr "Separador da barra de título"
-
-#: themer/main.c:944
-msgid "Top"
-msgstr "Topo"
-
-#: engines/zootreeves.c:1293
-msgid "Top Corner Offset (%)"
-msgstr "Margens dos cantos superiores (%)"
-
-#: engines/pixmap.c:489
-msgid "Top Rounding Radius"
-msgstr "Raio de arredondamento do topo"
-
-#: engines/zootreeves.c:1368
-msgid "Turn Off repeating gradients when maximised?"
-msgstr "Desligar gradientes repetidos quando maximizada?"
-
-#: themer/main.c:167
-#: themer/main.c:173
-msgid "Unknown"
-msgstr "Desconhecido"
-
-#: themer/main.c:897
-msgid "Untitled Theme"
-msgstr "Tema sem nome"
-
-#: engines/truglass.c:519
-msgid "Upper Glass Glow"
-msgstr "Brilho superior"
-
-#: engines/truglass.c:517
-msgid "Upper Titlebar Glow"
-msgstr "Brilho superior da barra de título"
-
-#: themer/main.c:1090
-msgid "Use Button Fade"
-msgstr "Usar fade nos botões"
-
-#: themer/main.c:1094
-msgid "Use Button Fade Pulse"
-msgstr "Usar botões pulsantes"
-
-#: themer/main.c:686
-msgid "Use Button Halo/Glow"
-msgstr "Usar Halo/brilho do botão"
-
-#: themer/main.c:690
-msgid "Use Button Halo/Glow For Inactive Windows"
-msgstr "Usar Halo/brilho para os botões nas janelas inativas"
-
-#: engines/vrunner.c:629
-msgid "Use Glow"
-msgstr "Usar brilho"
-
-#: themer/main.c:682
 msgid "Use Pixmap Buttons"
 msgstr "Usar imagens para botões"
 
-#: themer/main.c:829
+msgid "Use Button Halo/Glow"
+msgstr "Usar Halo/brilho do botão"
+
+msgid "Use Button Halo/Glow For Inactive Windows"
+msgstr "Usar Halo/brilho para os botões nas janelas inativas"
+
+msgid "Button Pixmaps"
+msgstr "Imagens dos botões"
+
+msgid "Button"
+msgstr "Botão"
+
+msgid "File"
+msgstr "Arquivo"
+
+msgid "Preview"
+msgstr "Preview"
+
+msgid "Clear"
+msgstr "Limpar"
+
+msgid "Colors"
+msgstr "Cores"
+
+msgid "Text Fill"
+msgstr "Preenchimento do texto"
+
+msgid "Text Outline"
+msgstr "Limite do texto"
+
+msgid "Button Fill"
+msgstr "Preenchimento do botão"
+
+msgid "Button Outline"
+msgstr "Limites do botão"
+
+msgid "Color"
+msgstr "Cor"
+
+msgid "Opacity"
+msgstr "Opacidade"
+
+msgid "Radius"
+msgstr "Raio"
+
+msgid "X Offset"
+msgstr "Margem X"
+
+msgid "Y Offset"
+msgstr "Margem Y"
+
+msgid "Title-Text Font"
+msgstr "Fonte do título"
+
+msgid "Minimum Title-bar Height"
+msgstr "Altura mínima da barra de título"
+
+msgid "Vertical Button Offset"
+msgstr "Margem vertical dos botões"
+
+msgid "Horizontal Button Offset"
+msgstr "Margem horizontal dos botões"
+
+msgid "Title-bar Object Layout"
+msgstr "Esquema da barra de título"
+
 msgid ""
 "Use colons to separate left, center, and right.\n"
 "Anything after a third colon is ignored.\n"
@@ -875,75 +203,508 @@ msgstr ""
 "S=Shade, U/A=No topo(Acima/abaixo)\n"
 "Y=Sticky, (#)= Nº de pixeis de espaço, ex: (5)\n"
 
-#: themer/main.c:807
-msgid "Vertical Button Offset"
-msgstr "Margem vertical dos botões"
+msgid "Export Theme..."
+msgstr "Exportar Tema..."
 
-#: engines/zootreeves.c:1497
-msgid "Vertical Repeat?"
-msgstr "Repetição vertical?"
+msgid "Name:"
+msgstr "Nome:"
 
-#: themer/main.c:179
-msgid "Whatever (no hint)"
-msgstr "Qualquer (sem pista)"
+msgid "Untitled Theme"
+msgstr "Tema Sem Título"
 
-#: engines/pixmap.c:650
+msgid "Export..."
+msgstr "Exportar..."
+
+msgid "Creator"
+msgstr "Criador"
+
+msgid "Description"
+msgstr "Descrição"
+
+msgid "Theme Version"
+msgstr "Versão do Tema"
+
+msgid "Suggested Widget Theme"
+msgstr "Tema GTK sugerido"
+
+msgid "Themer Version"
+msgstr "Versão do tema"
+
+msgid "Border"
+msgstr "Borda"
+
+msgid "Size"
+msgstr "Tamanho"
+
+msgid "Top"
+msgstr "Superior"
+
+msgid "Bottom"
+msgstr "Inferior"
+
+msgid "Left"
+msgstr "Esquerdo"
+
+msgid "Right"
+msgstr "Direito"
+
+msgid ""
+"Note, when changing these values,\n"
+"it is advised that you do something\n"
+"like change viewports, as this will\n"
+"cause the position of the 'event windows'\n"
+"to update properly, and thus make\n"
+"moving/resizing windows work properly.\n"
+"This also applies to when you change\n"
+"the title-bar height through either\n"
+"the titlebar-min-height slider\n"
+"or the titlebar font setting."
+msgstr ""
+"Note, que ao mudar estes valores,\n"
+"recomenda-se que você faça algo\n"
+"como trocar de viewports, porque isto\n"
+"faz com que a posição das 'janelas de evento'\n"
+"atualizem corretamente, fazendo assim o\n"
+"mover/redimensionar de janelas funcione corretamente.\n"
+"Isto também aplica-se quando você muda a altura\n"
+"da barra de título através da opção própria\n"
+"ou do tamanho da fonte da barra."
+
+msgid "Shadows"
+msgstr "Sombras"
+
+msgid "Frame Borders"
+msgstr "Limites das Bordas"
+
+msgid "Active Window"
+msgstr "Janela Ativa"
+
+msgid "Inactive Window"
+msgstr "Janela Inativa"
+
+msgid "Title Bar"
+msgstr "Barra de Título"
+
+msgid "Screenshot"
+msgstr "Screenshot"
+
+msgid "Images"
+msgstr "Imagens"
+
+msgid "Information"
+msgstr "Informação"
+
+msgid ""
+"NOTE - These settings are not part of themes, they are stored separately, "
+"and control various UI preferences for Emerald."
+msgstr ""
+"NOTA - Estes ajustes não são parte dos temas, são armazenados separadamente, "
+"e controlam várias preferências de UI do Emerald."
+
+msgid "Show Tooltips for Buttons"
+msgstr "Mostrar Nome dos botões?"
+
+msgid "Use Decoration Cropping"
+msgstr "Usar o corte da decoração"
+
+msgid "Use Button Fade"
+msgstr "Usar Fade nos Botões"
+
+msgid "Use Button Fade Pulse"
+msgstr "Usar Botões Pulsantes"
+
+msgid "Button Fade Total Duration"
+msgstr "Duração Total do Fade dos Botões"
+
+msgid "Button Fade Step Duration"
+msgstr "Duração de Cada Passo do Fade"
+
+msgid "Button Pulse Wait Duration"
+msgstr "Duração da Espera para Pulsar"
+
+msgid "Button Pulse Min Opacity %"
+msgstr "Opacidade Mínima do Pulsar dos Botões em %"
+
+msgid "Titlebar Double-Click Action"
+msgstr "Ação de duplo clique na barra de título"
+
+msgid "Button Hover Cursor"
+msgstr "Cursor quando sobre os botões"
+
+msgid "Normal"
+msgstr "Normal"
+
+msgid "Pointing Finger"
+msgstr "Dedo apontador"
+
+msgid "Frame Engine"
+msgstr "Engine das Bordas"
+
+msgid "Buttons"
+msgstr "Botões"
+
+msgid "Frame/Shadows"
+msgstr "Bordas/Sombras"
+
+msgid "Titlebar"
+msgstr "Barra de Título"
+
+msgid "Theme"
+msgstr "Tema"
+
+msgid "Edit"
+msgstr "Editar"
+
+msgid "Search:"
+msgstr "Procurar:"
+
+msgid "Import Theme..."
+msgstr "Importar Tema..."
+
+msgid "Fetching Themes"
+msgstr "Buscando Temas"
+
+msgid ""
+"Fetching themes... \n"
+"This may take time depending on \n"
+"internet connection speed."
+msgstr ""
+"Buscando temas... \n"
+"Isto pode demorar alguns minutos \n"
+"dependendo da conexão da internet"
+
+msgid ""
+"Here are the repositories that you can fetch Emerald Themes from. \n"
+"Fetching themes would fetch and import themes from SVN repositories \n"
+"You need Subversion package installed to use this feature."
+msgstr ""
+"Aqui estão os repositórios que você pode buscar temas do Emerald. \n"
+"Buscar temas buscaria e importaria temas dos repositórios de SVN \n"
+"Você necessita do pacote do Subversion instalado para usar esta característica."
+
+msgid ""
+"This repository contains GPL'd themes that can be used under \n"
+"the terms of GNU GPL licence v2.0 or later"
+msgstr ""
+"Este repositório contem os temas em GPL que podem ser usados sob \n"
+"os termos da licença v2.0 do GNU GPL ou inferiores"
+
+msgid ""
+"This repository contains non-GPL'd themes. They might infringe \n"
+"copyrights and patent laws in some countries."
+msgstr ""
+"Este repositório contem temas sem licença GPL. Você poderá infringir \n"
+"o copyright e as leis da patente em alguns países."
+
+msgid ""
+"To activate Non-GPL repository please run the following in shell and accept "
+"the server ceritficate permanently: \n"
+"svn ls https://svn.generation.no/emerald-themes."
+msgstr ""
+"Para ativar o repositório Não-GPL, por favor execute a seguinte linha e aceite "
+"o ceritficato de usuário permanentemente: \n"
+"svn ls https://svn.generation.no/emerald-themes."
+
+msgid "Themes"
+msgstr "Temas"
+
+msgid "Edit Themes"
+msgstr "Editar Temas"
+
+msgid "Repositories"
+msgstr "Repositórios"
+
+msgid "Themes Settings"
+msgstr "Configurações dos Temas"
+
+msgid "Emerald Settings"
+msgstr "Configurações do Emerald"
+
+msgid "Based on original gnome-window-decorator"
+msgstr "Baseado no gnome-window-decorator original"
+
+msgid "Round Top Left Corner"
+msgstr "Arredondar canto superior esquerdo"
+
+msgid "Round Top Right Corner"
+msgstr "Arredondar canto superior direido"
+
+msgid "Round Bottom Left Corner"
+msgstr "Arredondar canto inferior esquerdo"
+
+msgid "Round Bottom Right Corner"
+msgstr "Arredondar canto inferior direido"
+
+msgid "Rounding Radius"
+msgstr "Raio de Arredondamento"
+
+msgid "Outer Frame Blend"
+msgstr "Mistura exterior das Bordas"
+
+msgid "Inner Frame Blend"
+msgstr "Mistura interior das Bordas"
+
+msgid "Outer Titlebar Blend"
+msgstr "Mistura exterior da Barra de Título"
+
+msgid "Inner Titlebar Blend"
+msgstr "Mistura interior da Barra de Título"
+
+msgid "Titlebar Separator"
+msgstr "Separador da Barra de Título"
+
+msgid "Frame Outline"
+msgstr "Limite externo da Borda"
+
+msgid "Frame Highlight"
+msgstr "Highlight da Borda"
+
+msgid "Frame Shadow"
+msgstr "Sombra da Borda"
+
+msgid "Contents Outline"
+msgstr "Limite dos conteúdos"
+
+msgid "Contents Highlight"
+msgstr "Highlight dos conteúdos"
+
+msgid "Contents Shadow"
+msgstr "Sombra dos conteúdos"
+
+msgid "Frame"
+msgstr "Borda"
+
+msgid "Designed to be vista-ish in nature"
+msgstr "Com o objetivo de ser parecido com o vista"
+
+msgid "Base"
+msgstr "Base"
+
+msgid "Glow"
+msgstr "Brilho"
+
+msgid "Sides"
+msgstr "Lados"
+
+msgid "Everything done with customizable pixmaps!"
+msgstr "Tudo é feito com imagens customizáveis!"
+
+msgid "Top Rounding Radius"
+msgstr "Raio de arredondamento Superior"
+
+msgid "Bottom Rounding Radius"
+msgstr "Grau de arredondamento Inferior"
+
+#. Style : Use Tiled or Scaled pixmaps
+msgid "Scaled"
+msgstr "Adaptado"
+
+msgid "Not adjustable"
+msgstr "Não Ajustável"
+
+msgid "Same as Active"
+msgstr "Mesmo que ativos"
+
+msgid "Pixmap"
+msgstr "Imagem"
+
+msgid "Tiled/Scaled"
+msgstr "Repetido/Adaptado"
+
 msgid "Width Override"
-msgstr "Sobrescrever largura"
+msgstr "Sobrescrever Largura"
 
-#: themer/main.c:782
-msgid "X Offset"
-msgstr "Margem X"
+msgid "Height Override"
+msgstr "Sobrescrever Altura"
 
-#: themer/main.c:783
-msgid "Y Offset"
-msgstr "Margem Y"
+msgid "Glassy effects for your windows"
+msgstr "Efeito de vidro nas janelas"
 
-#: src/main.c:4185
-msgid "Close Window"
-msgstr "Fechar janela"
+msgid "Glow Height"
+msgstr "Altura do Brilho"
 
-#: src/main.c:4186
-msgid "Maximize Window"
-msgstr "Maximizar janela"
+msgid "Frame Base Color"
+msgstr "Cor da Borda da Base"
 
-#: src/main.c:4187
-msgid "Restore Window"
-msgstr "Restaurar janela"
+msgid "Upper Titlebar Glow"
+msgstr "Brilho superior da barra de título"
 
-#: src/main.c:4188
-msgid "Minimize Window"
-msgstr "Minimizar janela"
+msgid "Upper Glass Glow"
+msgstr "Brilho superior de vidro"
 
-#: src/main.c:4189
-msgid "Context Help"
-msgstr "Ajuda de contexto"
+msgid "Lower Glass Glow"
+msgstr "Brilho inferior de vidro"
 
-#: src/main.c:4190
-msgid "Window Menu"
-msgstr "Menu da janela"
+msgid "Middle Glass Glow"
+msgstr "Brilho central de vidro"
 
-#: src/main.c:4191
-msgid "Shade Window"
-msgstr "Encolher janela"
+msgid "Outer Glass Glow"
+msgstr "Brilho Externo de vidro"
 
-#: src/main.c:4192
-msgid "UnShade Window"
-msgstr "Desencolher janela"
+msgid "Multiple gradients with somewhat glassy features too"
+msgstr "Múltiplos gradientes com algum aspecto de vidro"
 
-#: src/main.c:4193
-msgid "Set Above"
-msgstr "Colocar acima"
+msgid "Left Blend"
+msgstr "Mistura da esquerda"
 
-#: src/main.c:4194
-msgid "UnSet Above"
-msgstr "Retirar de cima"
+msgid "Middle Blend"
+msgstr "Mistura central"
 
-#: src/main.c:4195
-msgid "Stick Window"
-msgstr "Prender janela"
+msgid "Right Blend"
+msgstr "Mistura da direita"
 
-#: src/main.c:4196
-msgid "UnStick Window"
-msgstr "Soltar janela"
+msgid "Contrast"
+msgstr "Contraste"
 
+msgid "(Color)"
+msgstr "(Cor)"
+
+msgid "(Alpha)"
+msgstr "(Alfa)"
+
+msgid "Notch"
+msgstr "Entalhe"
+
+msgid "Position"
+msgstr "Posição"
+
+msgid "Curve"
+msgstr "Curva"
+
+msgid "Offset"
+msgstr "Margem"
+
+msgid "Use Glow"
+msgstr "Usar Brilho"
+
+msgid "Title Glow"
+msgstr "Brilho do título"
+
+msgid "Evolved from the legacy engine"
+msgstr "Evoluído do engine inicial"
+
+msgid "Border Gap"
+msgstr "Falha na borda"
+
+msgid "Show Border when maximised?"
+msgstr "Mostrar bordas quando maximizada?"
+
+msgid "Show when minimised?"
+msgstr "Mostrar quando minimizada?"
+
+msgid "Minimised Border Size"
+msgstr "Largura da Borda quando minimizada"
+
+msgid "Enable Left Bar Dip?"
+msgstr "Ativar falha na barra esquerda?"
+
+msgid "Left Bar Radius"
+msgstr "Raio da bara esquerda"
+
+msgid "Enable Lower Bulge? (Useless at the moment, but will be used soon)"
+msgstr "Ativar falha inferior? (Sem uso de momento, mas logo será usada)"
+
+msgid "Top Corner Offset (%)"
+msgstr "Margens dos cantos superiores (%)"
+
+msgid "Enable Title Bar Dip?"
+msgstr "Ativar falha na barra de título?"
+
+msgid "Enable Button Part?"
+msgstr "Ativar parte dos botões?"
+
+msgid "Title Part Width"
+msgstr "Largura da parte do título"
+
+msgid "Button Part Width)"
+msgstr "Largura da parte dos botões"
+
+msgid "Dip Corners Radius)"
+msgstr "Grau de arredondamento da falha nos cantos"
+
+msgid "Round Inside Corners As well?"
+msgstr "Arredondar cantos interiores também?"
+
+msgid "Enable Different Maximised Colors?"
+msgstr "Ativar cores diferentes para janelas maximizadas?"
+
+msgid "Turn Off repeating gradients when maximised?"
+msgstr "Desligar gradientes repetidos quando maximizada?"
+
+msgid "Round Top Left Corner?"
+msgstr "Arredondar canto superior esquerdo?"
+
+msgid "Frame Rounding Radius"
+msgstr "Raio de arredondamento das bordas"
+
+msgid "Titlebar Rounding Radius"
+msgstr "Raio de arredondamento da barra de título"
+
+msgid "Repeat Gradient?"
+msgstr "Repetir Gradiente?"
+
+msgid "Vertical Repeat?"
+msgstr "Repetir verticalmente?"
+
+msgid "Diagonal Repeat?"
+msgstr "Repetir Diagonalmente"
+
+msgid "Repeat Frequency"
+msgstr "Reperit Frequência"
+
+#. /////////////////////
+msgid "Enable Title Part Pixmap?"
+msgstr "Ativar imagem na parte do título"
+
+msgid "Repeat Title Part Pixmap?"
+msgstr "Repetir imagem na parte do título"
+
+msgid "Title Bar Part Pixmap"
+msgstr "Imagem na parte da barra de título"
+
+msgid "Choose Titlebar Part Pixmap"
+msgstr "Escolher imagem na parte da barra de título"
+
+#. /////////////////////////
+msgid "Enable Button Part Pixmap?"
+msgstr "Ativar imagem na parte dos botões?"
+
+msgid "Repeat Button Part Pixmap?"
+msgstr "Repetir imagem na parte do botões?"
+
+msgid "Button Part Pixmap"
+msgstr "Imagem na parte dos botões"
+
+msgid "Choose Button Part Pixmap"
+msgstr "Escolher imagem na parte dos botões"
+
+#. /////////////////////////
+msgid "Enable Titlebar Pixmap?"
+msgstr "Ativar imagem na barra de título?"
+
+msgid "Repeat Titlebar Pixmap?"
+msgstr "Repetir imagem na barra de título?"
+
+msgid "Titlebar Pixmap"
+msgstr "Imagem da barra de título"
+
+msgid "Choose Titlebar Pixmap"
+msgstr "Escolher imagem da barra de título"
+
+msgid "Active/Inactive"
+msgstr "Ativo/Inativo"
+
+msgid "Maximised"
+msgstr "Maximizado"
+
+msgid "Corners"
+msgstr "Cantos"
+
+msgid "Border Layout"
+msgstr "Layout das Bordas"
+
+msgid "Left Bar"
+msgstr "Barra Esquerda"
+
+msgid "Pixmaps"
+msgstr "Imagens"

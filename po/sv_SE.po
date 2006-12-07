@@ -8,13 +8,60 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1\n"
 "Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
-"POT-Creation-Date: 2006-11-18 11:23-0500\n"
-"PO-Revision-Date: 2006-11-20 17:10+0100\n"
+"POT-Creation-Date: 2006-12-06 15:14+0100\n"
+"PO-Revision-Date: 2006-12-06 15:28+0100\n"
 "Last-Translator: Fass <ns.fass@gmail.com>\n"
 "Language-Team: beryl-project\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit"
+
+msgid "Close Window"
+msgstr "Stäng fönster"
+
+msgid "Maximize Window"
+msgstr "Maximera fönster"
+
+msgid "Restore Window"
+msgstr "Återställ fönster"
+
+msgid "Minimize Window"
+msgstr "Minimera fönster"
+
+msgid "Context Help"
+msgstr "Kontexthjälp"
+
+msgid "Window Menu"
+msgstr "Fönstermeny"
+
+msgid "Shade Window"
+msgstr "Rulla upp fönster"
+
+msgid "UnShade Window"
+msgstr "Rulla ned fönster"
+
+msgid "Set Above"
+msgstr "Överst på"
+
+msgid "UnSet Above"
+msgstr "Överst av"
+
+msgid "Stick Window"
+msgstr "Haka upp fönster"
+
+msgid "UnStick Window"
+msgstr "Haka av fönster"
+
+#, c-format
+msgid "The window \"%s\" is not responding."
+msgstr "Fönster \"%s\" svarar inte."
+
+msgid ""
+"Forcing this application to quit will cause you to lose any unsaved changes."
+msgstr "Att tvinga detta program att avsluta leder till förlust av alla osparade ändringar."
+
+msgid "_Force Quit"
+msgstr "_Tvinga att avsluta"
 
 #, c-format
 msgid ""
@@ -24,7 +71,8 @@ msgid ""
 "<b>Created By</b> %s\n"
 "<b>Use With</b> %s\n"
 "</small>"
-msgstr "<b><big>%s</big></b>\n"
+msgstr ""
+"<b><big>%s</big></b>\n"
 "<i>%s</i>\n"
 "<small><b>Version</b> %s\n"
 "<b>Skapat av</b> %s\n"
@@ -39,7 +87,8 @@ msgid ""
 "<b>Created By</b> %s\n"
 "<b>Use With</b> %s\n"
 "</small>"
-msgstr "<b><big>%s</big></b> (Systemtema)\n"
+msgstr ""
+"<b><big>%s</big></b> (Systemtema)\n"
 "<i>%s</i>\n"
 "<small><b>Version</b> %s\n"
 "<b>Skapat av</b> %s\n"
@@ -366,7 +415,8 @@ msgid ""
 "Fetching themes... \n"
 "This may take time depending on \n"
 "internet connection speed."
-msgstr "Hämtar teman... \n"
+msgstr ""
+"Hämtar teman... \n"
 "Detta kan ta tid beroende på din \n"
 "internetanslutningshastighet."
 
@@ -374,27 +424,32 @@ msgid ""
 "Here are the repositories that you can fetch Emerald Themes from. \n"
 "Fetching themes would fetch and import themes from SVN repositories \n"
 "You need Subversion package installed to use this feature."
-msgstr "Från dessa förråd kan du hämta Emerald-teman. \n"
+msgstr ""
+"Från dessa förråd kan du hämta Emerald-teman. \n"
 "Att hämta teman laddar hem och importerar dem från SVN-förråden. \n"
 "Du måste ha \"subversion\" installerat för att använda denna funktion."
 
 msgid ""
 "This repository contains GPL'd themes that can be used under \n"
 "the terms of GNU GPL licence v2.0 or later \n"
-msgstr "Detta förråd innehåller GPL-licensierade teman som kan användas \n"
+msgstr ""
+"Detta förråd innehåller GPL-licensierade teman som kan användas \n"
 "enligt GNU GPL-licensen (v2.0 eller senare) \n"
 
 msgid ""
 "This repository contains non-GPL'd themes. They might infringe \n"
 "copyrights and patent laws in some countries."
-msgstr "Detta förråd innehåller teman som inte är GPL. De kan inkräkta\n"
+msgstr ""
+"Detta förråd innehåller teman som inte är GPL. De kan inkräkta\n"
 "på vissa länders upphovsrätts- och patentlagar."
 
 msgid ""
 "To activate Non-GPL repository please run the following in shell and accept "
 "the server ceritficate permanently: \n"
 "svn ls https://svn.generation.no/emerald-themes."
-msgstr "För att aktivera förråd som inte är GPL kör vänligen följande i en terminal och acceptera servercertifikatet permanent: \n"
+msgstr ""
+"För att aktivera förråd som inte är GPL kör vänligen följande i en terminal "
+"och acceptera servercertifikatet permanent: \n"
 "svn ls https://svn.generation.no/emerald-themes"
 
 msgid "Themes"
@@ -411,6 +466,12 @@ msgstr "Tema-inställningar"
 
 msgid "Emerald Settings"
 msgstr "Emerald-inställningar"
+
+msgid ""
+"Select\n"
+"Engine"
+msgstr "Välj\n"
+"motor"
 
 msgid "Based on original gnome-window-decorator"
 msgstr "Baseras på ursprungliga gnome-window-decorator"
@@ -711,39 +772,3 @@ msgstr "Pixmappar"
 
 #~ msgid "Theme Imported"
 #~ msgstr "Tema importerat"
-
-#~ msgid "Close Window"
-#~ msgstr "Stäng fönster"
-
-#~ msgid "Maximize Window"
-#~ msgstr "Maximera fönster"
-
-#~ msgid "Restore Window"
-#~ msgstr "Återställ fönster"
-
-#~ msgid "Minimize Window"
-#~ msgstr "Minimera fönster"
-
-#~ msgid "Context Help"
-#~ msgstr "Kontexthjälp"
-
-#~ msgid "Window Menu"
-#~ msgstr "Fönstermeny"
-
-#~ msgid "Shade Window"
-#~ msgstr "Rulla upp fönster"
-
-#~ msgid "UnShade Window"
-#~ msgstr "Rulla ned fönster"
-
-#~ msgid "Set Above"
-#~ msgstr "Överst på"
-
-#~ msgid "UnSet Above"
-#~ msgstr "Överst av"
-
-#~ msgid "Stick Window"
-#~ msgstr "Haka upp fönster"
-
-#~ msgid "UnStick Window"
-#~ msgstr "Haka av fönster"
