@@ -15,6 +15,8 @@
 #define DECOR_INTERFACE_VERSION 0
 #endif
 
+void reload_all_settings (int sig);
+
 GdkPixmap * pdeb;
 static gboolean do_reload=FALSE;
 
@@ -80,6 +82,7 @@ static Atom multiple_atom;
 static Atom timestamp_atom;
 static Atom version_atom;
 static Atom atom_pair_atom;
+static Atom emerald_sigusr1_atom;
 
 static Atom utf8_string_atom;
 
@@ -3300,7 +3303,7 @@ update_window_decoration_actions (WnckWindow *win)
 		if(data)
 			XFree((void *) data);
 		fprintf(stderr,"XGetWindowProperty() returned non-success value (%d).\n",result);
-		fprintf(stderr,"Please report this to the development team.\n",result);
+		fprintf(stderr,"Please report this to the development team.\n" /* ,result */);
 		break;
 	}
     }
@@ -5202,7 +5205,10 @@ event_filter_func (GdkXEvent *gdkxevent,
                             hide_force_quit_dialog (win);
                     }
                 }
-            }
+            } else if (xevent->xclient.message_type == emerald_sigusr1_atom) {
+	        reload_all_settings(SIGUSR1);
+	    }
+
         default:
             break;
     }
@@ -6417,6 +6423,8 @@ main (int argc, char *argv[])
     timestamp_atom = XInternAtom (xdisplay, "TIMESTAMP", FALSE);
     version_atom   = XInternAtom (xdisplay, "VERSION", FALSE);
     atom_pair_atom = XInternAtom (xdisplay, "ATOM_PAIR", FALSE);
+    emerald_sigusr1_atom = XInternAtom (xdisplay, "emerals-sigusr1", FALSE);
+    
 
     utf8_string_atom = XInternAtom (xdisplay, "UTF8_STRING", FALSE);
 

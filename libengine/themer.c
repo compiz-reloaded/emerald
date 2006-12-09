@@ -42,6 +42,25 @@ DBusConnection *dbcon;
 #endif
 gchar * active_engine = NULL;
 
+static gchar* display_part(const gchar *p)
+{
+  gchar *name = g_strdup(p);
+  gchar *tmp;
+
+  if ((tmp = g_strrstr(name,":"))) {
+    *tmp++ = 0;
+    tmp = g_strdup(tmp);
+    g_free(name);
+    name = tmp;
+  }
+    
+  if ((tmp = g_strrstr(name,"."))) {
+    *tmp = 0;
+  }
+    
+  return name;
+}
+
 GSList * get_setting_list()
 {
     return SettingList;
@@ -224,12 +243,47 @@ void send_reload_signal()
     dbus_connection_send(dbcon,message,NULL);
     dbus_message_unref(message);
 #else
-    gchar * args[]=
-        {"killall","-u",(gchar *)g_get_user_name(),"-SIGUSR1","emerald",NULL};
-    gchar * ret=NULL;
-    if (!g_spawn_sync(NULL,args,NULL,G_SPAWN_STDERR_TO_DEV_NULL | G_SPAWN_SEARCH_PATH,
-                NULL,NULL,&ret,NULL,NULL,NULL) || !ret)
-        g_warning("Couldn't find running emerald, no reload signal sent.");
+    Atom wmAtom = 0;
+    Display *dpy = GDK_DISPLAY_XDISPLAY (gdk_display_get_default ());
+
+    char buffer[128];
+    char *part = display_part(getenv("DISPLAY"));
+
+    sprintf(buffer, "DM_S%s", part);
+    free(part);
+    
+    if (dpy)
+        wmAtom = XInternAtom(dpy,buffer,0);
+
+    if (wmAtom) {
+        XEvent clientEvent;
+	Status missed;
+        Window w = XGetSelectionOwner(dpy,wmAtom);
+	Atom ReloadIt = XInternAtom(dpy, "emerald-sigusr1", 0);
+	clientEvent.xclient.type = ClientMessage;
+	clientEvent.xclient.window = w;
+	clientEvent.xclient.message_type = ReloadIt;
+	clientEvent.xclient.format = 32;
+	clientEvent.xclient.display = dpy;
+	clientEvent.xclient.data.l[0]    = 0;
+	clientEvent.xclient.data.l[1]    = 0;
+	clientEvent.xclient.data.l[2]    = 0;
+	clientEvent.xclient.data.l[3]    = 0;
+	clientEvent.xclient.data.l[4]    = 0;
+	missed = XSendEvent(dpy,w, 
+			    False,
+			    NoEventMask, 
+			    &clientEvent);
+	XSync (dpy, False);
+    } else {
+        /* The old way */
+        gchar * args[]=
+	    {"killall","-u",(gchar *)g_get_user_name(),"-SIGUSR1","emerald",NULL};
+	gchar * ret=NULL;
+	if (!g_spawn_sync(NULL,args,NULL,G_SPAWN_STDERR_TO_DEV_NULL | G_SPAWN_SEARCH_PATH,
+			  NULL,NULL,&ret,NULL,NULL,NULL) || !ret)
+	    g_warning("Couldn't find running emerald, no reload signal sent.");
+    }
 #endif
 }
 void apply_settings()
