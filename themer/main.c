@@ -1230,6 +1230,36 @@ void cb_clearbox(GtkWidget * w, gpointer p)
 {
     gtk_entry_set_text(GTK_ENTRY(p),"");
 }
+static void cb_import(GtkWidget * w, gpointer p)
+{
+    //get a filename
+    GtkWidget * dialog = gtk_file_chooser_dialog_new(
+            _("Import Theme..."),GTK_WINDOW(mainWindow),
+            GTK_FILE_CHOOSER_ACTION_OPEN,
+            GTK_STOCK_CANCEL,GTK_RESPONSE_CANCEL,
+            GTK_STOCK_OPEN,GTK_RESPONSE_ACCEPT,
+            NULL);
+    gchar * pth = g_strdup_printf("%s/Desktop/",g_get_home_dir());
+    GtkFileFilter * filter = gtk_file_filter_new();
+    gtk_file_filter_set_name(filter,"Theme Packages");
+    gtk_file_filter_add_pattern(filter,"*.emerald");
+    gtk_file_chooser_add_filter(GTK_FILE_CHOOSER(dialog),filter);
+    gtk_file_chooser_set_current_folder (GTK_FILE_CHOOSER(dialog),
+            pth);
+    g_free(pth);
+    if (gtk_dialog_run(GTK_DIALOG(dialog))==GTK_RESPONSE_ACCEPT)
+    {
+        gchar * filename;
+        gchar * thn;
+        filename = gtk_file_chooser_get_filename(GTK_FILE_CHOOSER(dialog));
+        thn = import_theme(filename);
+        g_free(filename);
+        refresh_theme_list(thn);
+        if (thn) g_free(thn);
+    }
+    gtk_widget_destroy(dialog);
+}
+
 GtkWidget * build_tree_view()
 {
     GtkWidget * scrollwin;
@@ -1256,6 +1286,25 @@ GtkWidget * build_tree_view()
     clearbut = gtk_button_new_from_stock(GTK_STOCK_CLEAR);
     g_signal_connect(clearbut,"clicked",G_CALLBACK(cb_clearbox),searchbox);
     gtk_box_pack_startC(hbox,clearbut,FALSE,FALSE,0);
+
+	gtk_box_pack_startC(hbox,gtk_vseparator_new(),FALSE,FALSE,0);
+
+    ReloadButton = gtk_button_new_from_stock(GTK_STOCK_REFRESH);
+    gtk_box_pack_startC(hbox,ReloadButton,FALSE,FALSE,0);
+    g_signal_connect(ReloadButton,"clicked",G_CALLBACK(cb_refresh),NULL);
+
+    DeleteButton = gtk_button_new_from_stock(GTK_STOCK_DELETE);
+    gtk_box_pack_startC(hbox,DeleteButton,FALSE,FALSE,0);
+    gtk_widget_set_sensitive(DeleteButton,FALSE);
+    g_signal_connect(DeleteButton,"clicked",G_CALLBACK(cb_delete),NULL);
+
+    ImportButton = gtk_button_new_with_label("Import...");
+    gtk_button_set_image(GTK_BUTTON(ImportButton),
+            gtk_image_new_from_stock(GTK_STOCK_OPEN,GTK_ICON_SIZE_BUTTON));
+    gtk_box_pack_startC(hbox,ImportButton,FALSE,FALSE,0);
+    g_signal_connect(ImportButton,"clicked",G_CALLBACK(cb_import),NULL);
+ 
+	gtk_box_pack_startC(vbox,gtk_hseparator_new(),FALSE,FALSE,0);
 
     filt = GTK_TREE_MODEL_FILTER(
             gtk_tree_model_filter_new(GTK_TREE_MODEL(ThemeList),NULL));
@@ -1357,35 +1406,6 @@ GtkWidget * build_tree_view()
     gtk_box_pack_startC(vbox,scrollwin,TRUE,TRUE,0);
     return vbox;
 }
-static void cb_import(GtkWidget * w, gpointer p)
-{
-    //get a filename
-    GtkWidget * dialog = gtk_file_chooser_dialog_new(
-            _("Import Theme..."),GTK_WINDOW(mainWindow),
-            GTK_FILE_CHOOSER_ACTION_OPEN,
-            GTK_STOCK_CANCEL,GTK_RESPONSE_CANCEL,
-            GTK_STOCK_OPEN,GTK_RESPONSE_ACCEPT,
-            NULL);
-    gchar * pth = g_strdup_printf("%s/Desktop/",g_get_home_dir());
-    GtkFileFilter * filter = gtk_file_filter_new();
-    gtk_file_filter_set_name(filter,"Theme Packages");
-    gtk_file_filter_add_pattern(filter,"*.emerald");
-    gtk_file_chooser_add_filter(GTK_FILE_CHOOSER(dialog),filter);
-    gtk_file_chooser_set_current_folder (GTK_FILE_CHOOSER(dialog),
-            pth);
-    g_free(pth);
-    if (gtk_dialog_run(GTK_DIALOG(dialog))==GTK_RESPONSE_ACCEPT)
-    {
-        gchar * filename;
-        gchar * thn;
-        filename = gtk_file_chooser_get_filename(GTK_FILE_CHOOSER(dialog));
-        thn = import_theme(filename);
-        g_free(filename);
-        refresh_theme_list(thn);
-        if (thn) g_free(thn);
-    }
-    gtk_widget_destroy(dialog);
-}
 void import_cache(GtkWidget * progbar)
 {
     GDir * d;
@@ -1474,28 +1494,14 @@ void layout_upper_pane(GtkWidget * vbox)
     GtkWidget * hbox;
 
     hbox = gtk_hbox_new(FALSE,2);
-    gtk_box_pack_startC(vbox,hbox,TRUE,TRUE,0);
+    //gtk_box_pack_startC(vbox,hbox,TRUE,TRUE,0);
 
-    gtk_box_pack_startC(hbox,build_tree_view(),TRUE,TRUE,0);
+    gtk_box_pack_startC(vbox,build_tree_view(),TRUE,TRUE,0);
 
-    table_new(1,TRUE,FALSE);
-    gtk_box_pack_startC(hbox,get_current_table(),FALSE,FALSE,0);
+    //table_new(1,TRUE,FALSE);
+    //gtk_box_pack_startC(hbox,get_current_table(),FALSE,FALSE,0);
     
-    ReloadButton = gtk_button_new_from_stock(GTK_STOCK_REFRESH);
-    table_append(ReloadButton,FALSE);
-    g_signal_connect(ReloadButton,"clicked",G_CALLBACK(cb_refresh),NULL);
 
-    DeleteButton = gtk_button_new_from_stock(GTK_STOCK_DELETE);
-    table_append(DeleteButton,FALSE);
-    gtk_widget_set_sensitive(DeleteButton,FALSE);
-    g_signal_connect(DeleteButton,"clicked",G_CALLBACK(cb_delete),NULL);
-
-    ImportButton = gtk_button_new_with_label("Import...");
-    gtk_button_set_image(GTK_BUTTON(ImportButton),
-            gtk_image_new_from_stock(GTK_STOCK_OPEN,GTK_ICON_SIZE_BUTTON));
-    table_append(ImportButton,FALSE);
-    g_signal_connect(ImportButton,"clicked",G_CALLBACK(cb_import),NULL);
- 
 }
 void layout_repo_pane(GtkWidget * vbox)
 {

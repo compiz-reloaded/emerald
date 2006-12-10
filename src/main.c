@@ -6423,7 +6423,7 @@ main (int argc, char *argv[])
     timestamp_atom = XInternAtom (xdisplay, "TIMESTAMP", FALSE);
     version_atom   = XInternAtom (xdisplay, "VERSION", FALSE);
     atom_pair_atom = XInternAtom (xdisplay, "ATOM_PAIR", FALSE);
-    emerald_sigusr1_atom = XInternAtom (xdisplay, "emerals-sigusr1", FALSE);
+    emerald_sigusr1_atom = XInternAtom (xdisplay, "emerald-sigusr1", FALSE);
     
 
     utf8_string_atom = XInternAtom (xdisplay, "UTF8_STRING", FALSE);
