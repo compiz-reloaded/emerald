@@ -28,18 +28,15 @@ msgstr "Restaurar la ventana"
 msgid "Minimize Window"
 msgstr "Minimizar la ventana"
 
-#, fuzzy
 msgid "Context Help"
 msgstr "Ayuda de contexto"
 
 msgid "Window Menu"
 msgstr "Menú de la ventana"
 
-#, fuzzy
 msgid "Shade Window"
 msgstr "Enrollar la ventana"
 
-#, fuzzy
 msgid "UnShade Window"
 msgstr "Desenrollar la ventana"
 
@@ -49,11 +46,9 @@ msgstr "Fijar en la parte superior"
 msgid "UnSet Above"
 msgstr "Quitar la fijación en la parte superior"
 
-#, fuzzy
 msgid "Stick Window"
 msgstr "Pegar la ventana"
 
-#, fuzzy
 msgid "UnStick Window"
 msgstr "Despegar la ventana"
 
@@ -361,7 +356,6 @@ msgstr ""
 msgid "Show Tooltips for Buttons"
 msgstr "Mostrar sugerencias para los botones"
 
-#, fuzzy
 msgid "Use Decoration Cropping"
 msgstr "Usar decoración cropping"
 
