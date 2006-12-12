@@ -2983,9 +2983,11 @@ update_event_windows (WnckWindow *win)
 static const char *
 wnck_window_get_real_name (WnckWindow *win)
 {
-    return wnck_window_has_name (win) ? wnck_window_get_name (win) : NULL;
+    return wnck_window_has_name (win) ? wnck_window_get_name (win) : "noname";
 }
-#define wnck_window_get_name wnck_window_get_real_name
+#define wnck_window_get_name(w) wnck_window_get_real_name(w)
+#else
+#define wnck_window_get_name(w) "noname"
 #endif
 gint
 max_window_name_width (WnckWindow *win)
