@@ -1876,6 +1876,7 @@ draw_window_decoration_real (decor_t *d,gboolean shadow_time)
             cairo_set_source (cr, d->icon);
             cairo_rectangle (cr, 0.0, 0.0, 16.0, 16.0);
             cairo_clip (cr);
+	    cairo_paint (cr);
         }
         // Copy button region backgrounds to buffers
         // for fast drawing of buttons from now on
