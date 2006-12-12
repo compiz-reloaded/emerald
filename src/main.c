@@ -3172,7 +3172,7 @@ update_window_decoration_actions (WnckWindow *win)
 		 * we crash ;)
 		 * FIXME: Remove or alter the error message when this fix is sufficiently verified.
 		 */
-		fprintf(stderr,"XGetWindowProperty() returned non-success value (%d) for window '%s'.\n",result, wnck_window_get_real_name(win));
+		fprintf(stderr,"XGetWindowProperty() returned non-success value (%d) for window '%s'.\n",result, wnck_window_get_name(win));
 		fprintf(stderr,"Please report this to the development team.\n" /* ,result */);
 		if(data && n)
 			XFree((void *) data);
