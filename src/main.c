@@ -3161,21 +3161,9 @@ update_window_decoration_actions (WnckWindow *win)
             if (a == net_wm_context_help_atom)
                 d->actions |= FAKE_WINDOW_ACTION_HELP;
 	    data=NULL;
-        } else {
-		/* This is an attempt to solve #161
-		 * This is take two. data is apparantly set to non-null at 
-		 * some point but still doesn't contain something valid and
-		 * XFree()'able, that's why we  attempt to reset data to 
-		 * NULL after successfull XFree(). If this doesn't work, 
-		 * we'll have to skip the XFree() entierly on error.
-		 * Also moved the fprintf so we get the error message before
-		 * we crash ;)
-		 * FIXME: Remove or alter the error message when this fix is sufficiently verified.
-		 */
+        } else if (result != Success) {
+		/* Closes #161 */
 		fprintf(stderr,"XGetWindowProperty() returned non-success value (%d) for window '%s'.\n",result, wnck_window_get_name(win));
-		fprintf(stderr,"Please report this to the development team.\n" /* ,result */);
-		if(data && n)
-			XFree((void *) data);
 		break;
 	}
     }
