@@ -2979,7 +2979,7 @@ update_event_windows (WnckWindow *win)
     gdk_error_trap_pop ();
 }
 
-#if HAVE_WNCK_WINDOW_HAS_NAME
+#if HAVE_WNCK_WINDOW_HAS_NAME && 0
 static const char *
 wnck_window_get_real_name (WnckWindow *win)
 {
@@ -2987,7 +2987,7 @@ wnck_window_get_real_name (WnckWindow *win)
 }
 #define wnck_window_get_name(w) wnck_window_get_real_name(w)
 #else
-#define wnck_window_get_name(w) "noname"
+#define wnck_window_get_real_name(w) wnck_window_get_name(w) 
 #endif
 gint
 max_window_name_width (WnckWindow *win)
