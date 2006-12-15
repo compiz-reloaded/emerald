@@ -2170,8 +2170,9 @@ draw_switcher_background (decor_t *d)
     cairo_set_line_width (cr, 1.0);
 
     cairo_set_operator (cr, CAIRO_OPERATOR_SOURCE);
-
-    draw_shadow_background (d, cr);
+    if(d->prop_xid || !d->buffer_pixmap){
+	    draw_shadow_background (d, cr);
+    }
 
     fill_rounded_rectangle (cr,
             x1 + 0.5,
