@@ -1,0 +1,755 @@
+# Beryl-plugin German Translation.
+# Copyright (C) 2006 Beryl-Project
+# This file is distributed under the same license as the Beryl package.
+# Bernd Dulfer <bdulfer@gmail.com>, 2006
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: de_DE\n"
+"Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
+"POT-Creation-Date: 2006-12-03 01:08+0100\n"
+"PO-Revision-Date: 2006-12-16 12:00+0100\n"
+"Last-Translator: Bernd Dulfer <bdulfer@gmail.com>\n"
+"Language-Team: german <bdulfer@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+
+msgid "Close Window"
+msgstr "Fenster schließen"
+
+msgid "Maximize Window"
+msgstr "Fenster maximieren"
+
+msgid "Restore Window"
+msgstr "Fenster wiederherstellen"
+
+msgid "Minimize Window"
+msgstr "Fenster minimieren"
+
+msgid "Context Help"
+msgstr "Kontexthilfe"
+
+msgid "Window Menu"
+msgstr "Fenstermenü"
+
+msgid "Shade Window"
+msgstr "Fenster einrollen"
+
+msgid "UnShade Window"
+msgstr "Fenster ausrollen"
+
+msgid "Set Above"
+msgstr "Darüber setzen"
+
+msgid "UnSet Above"
+msgstr ""
+
+msgid "Stick Window"
+msgstr "Fenster festsetzen"
+
+msgid "UnStick Window"
+msgstr "Fenster lösen"
+
+#, c-format
+msgid "The window \"%s\" is not responding."
+msgstr "Das Fenster \"%s\" antwortet nicht."
+
+msgid ""
+"Forcing this application to quit will cause you to lose any unsaved changes."
+msgstr ""
+"Wenn die Beendigung der Anwendung erzwungen wird, gehen alle nicht gespeicherten"
+"Änderungen verloren."
+
+msgid "_Force Quit"
+msgstr "Beenden erzwingen"
+
+#, c-format
+msgid ""
+"<b><big>%s</big></b>\n"
+"<i>%s</i>\n"
+"<small><b>Version</b> %s\n"
+"<b>Created By</b> %s\n"
+"<b>Use With</b> %s\n"
+"</small>"
+msgstr ""
+
+#, c-format
+msgid ""
+"<b><big>%s</big></b> (System Theme)\n"
+"<i>%s</i>\n"
+"<small><b>Version</b> %s\n"
+"<b>Created By</b> %s\n"
+"<b>Use With</b> %s\n"
+"</small>"
+msgstr ""
+
+msgid "Unknown"
+msgstr "Unbekannt"
+
+msgid "Whatever (no hint)"
+msgstr "Was auch immer (Kein Hinweis)"
+
+msgid "No Description"
+msgstr "Keine Beschreibung"
+
+msgid "Invalid Theme Name"
+msgstr "Ungültiger Themenname"
+
+msgid "Invalid theme file.  Does not end in .emerald"
+msgstr "Ungültige Themendatei. Endet nicht auf .emerald"
+
+msgid ""
+"Invalid Theme Name\n"
+"Could Not Export"
+msgstr ""
+"Ungültiger Themenname\n"
+"Konnte nicht exportieren"
+
+msgid ""
+"Invalid File Name\n"
+"Must End in .emerald"
+msgstr ""
+"Ungültiger Dateiname\n"
+"Datei muß auf .emerald enden"
+
+msgid "Error calling tar."
+msgstr "Fehler beim Aufruf von tar."
+
+msgid "Theme Exported"
+msgstr "Thema exportiert"
+
+msgid ""
+"Can't save over system themes\n"
+"(or you forgot to enter a name)"
+msgstr ""
+"Kann nicht als Systemthema speichern\n"
+"(Oder es wurde vergessen einen Namen einzugeben)"
+
+#, c-format
+msgid "Overwrite Theme %s?"
+msgstr "Thema %s überschreiben?"
+
+msgid "Couldn't Write Theme"
+msgstr "Thema konnte nicht geschrieben werden"
+
+msgid "Couldn't Form Theme"
+msgstr "Thema konnte nicht erzeugt werden"
+
+msgid "Theme Saved"
+msgstr "Thema gespeichert"
+
+msgid ""
+"Can't delete system themes\n"
+"(or you forgot to enter a name)"
+msgstr ""
+"Systemthema kann nicht gelöscht werden\n"
+"(Oder es wurde vergessen einen Namen einzugeben)"
+
+#, c-format
+msgid "Are you sure you want to delete %s?"
+msgstr "Sind Sie sicher, daß %s gelöscht werden soll?"
+
+msgid "Theme deleted"
+msgstr "Thema gelöscht"
+
+msgid "No such theme to delete"
+msgstr "Kein solches Thema zum Löschen vorhanden"
+
+msgid "Use Pixmap Buttons"
+msgstr "Pixmap Knöpfe verwenden"
+
+msgid "Use Button Halo/Glow"
+msgstr "Halo/Glühen für Knöpfe verwenden"
+
+msgid "Use Button Halo/Glow For Inactive Windows"
+msgstr "Halo/Glühen für Knöpfe von inaktiven Fenstern verwenden"
+
+msgid "Button Pixmaps"
+msgstr "Pixmaps für Knöpfe"
+
+msgid "Button"
+msgstr "Knopf"
+
+msgid "File"
+msgstr "Datei"
+
+msgid "Preview"
+msgstr "Vorschau"
+
+msgid "Clear"
+msgstr "Löschen"
+
+msgid "Colors"
+msgstr "Farben"
+
+msgid "Text Fill"
+msgstr "Textfüllung"
+
+msgid "Text Outline"
+msgstr "Textrahmen"
+
+msgid "Button Fill"
+msgstr "Knopffüllung"
+
+msgid "Button Outline"
+msgstr "Knopfrahmen"
+
+msgid "Color"
+msgstr "Farbe"
+
+msgid "Opacity"
+msgstr "Deckkraft"
+
+msgid "Radius"
+msgstr "Radius"
+
+msgid "X Offset"
+msgstr "X Versatz"
+
+msgid "Y Offset"
+msgstr "Y Versatz"
+
+msgid "Title-Text Font"
+msgstr "Titel Schrift"
+
+msgid "Minimum Title-bar Height"
+msgstr "Minimale Höhe der Titelleiste"
+
+msgid "Vertical Button Offset"
+msgstr "Vertikale Knopfversatz"
+
+msgid "Horizontal Button Offset"
+msgstr "Horizontaler Knopfversatz"
+
+msgid "Title-bar Object Layout"
+msgstr "Layout der Objekte in der Titelleiste"
+
+msgid ""
+"Use colons to separate left, center, and right.\n"
+"Anything after a third colon is ignored.\n"
+"C=Close, N=Minimize, X/R=Restore\n"
+"I=Icon, T=Title, H=Help, M=Menu\n"
+"S=Shade, U/A=On Top(Up/Above)\n"
+"Y=Sticky, (#)=# pixels space, ex: (5)\n"
+msgstr ""
+"Doppelpunkte verwenden, um links, mitte und rechts zu trennen.\n"
+"Alles nach dem dritten Doppelpunkt wird ignoriert.\n"
+"C=Schließen, N=Minimieren, X/R=Wiederherstellen\n"
+"I=Icon, T=Titel, H=Hilfe, M=Menü\n"
+"S=Einrollen, U/A=Über andere Fenster\n"
+"Y=Festsetzen, (#)=# Pixel Abstand, Bsp: (5)\n"
+
+msgid "Export Theme..."
+msgstr "Exportiere Thema..."
+
+msgid "Name:"
+msgstr "Name:"
+
+msgid "Untitled Theme"
+msgstr "Thema ohne Titel"
+
+msgid "Export..."
+msgstr "Exportiere..."
+
+msgid "Creator"
+msgstr "Author"
+
+msgid "Description"
+msgstr "Beschreibung"
+
+msgid "Theme Version"
+msgstr "Version"
+
+msgid "Suggested Widget Theme"
+msgstr "Widget Thema vorschlagen"
+
+msgid "Themer Version"
+msgstr ""
+
+msgid "Border"
+msgstr "Rand"
+
+msgid "Size"
+msgstr "Größe"
+
+msgid "Top"
+msgstr "Oben"
+
+msgid "Bottom"
+msgstr "Unten"
+
+msgid "Left"
+msgstr "Links"
+
+msgid "Right"
+msgstr "Rechts"
+
+msgid ""
+"Note, when changing these values,\n"
+"it is advised that you do something\n"
+"like change viewports, as this will\n"
+"cause the position of the 'event windows'\n"
+"to update properly, and thus make\n"
+"moving/resizing windows work properly.\n"
+"This also applies to when you change\n"
+"the title-bar height through either\n"
+"the titlebar-min-height slider\n"
+"or the titlebar font setting.\n"
+msgstr ""
+"Hinweis, Wenn diese Werte verändert werden,\n"
+"ist es angeraten, den Viewport zu verändern,\n"
+"da dies dazu führt, daß die 'Ereignisfenster'\n"
+"korrekt erneuert werden, und dadurch Verschieben\n"
+"und Vergrößen richtig funktioniert.\n"
+"Dies gilt auch für die Änderung der Höhe der\n"
+"Titelleiste, entweder mit dem Höhen-Slider\n"
+"oder durch Änderung der Schrift.\n"
+
+msgid "Shadows"
+msgstr "Schatten"
+
+msgid "Frame Borders"
+msgstr "Rahmenränder"
+
+msgid "Active Window"
+msgstr "Aktives Fenster"
+
+msgid "Inactive Window"
+msgstr "Inaktives Fenster"
+
+msgid "Title Bar"
+msgstr "Titelleiste"
+
+msgid "Screenshot"
+msgstr "Bildschirmabzug"
+
+msgid "Images"
+msgstr "Bilder"
+
+msgid "Information"
+msgstr "Information"
+
+msgid ""
+"NOTE - These settings are not part of themes, they are stored separately, "
+"and control various UI preferences for Emerald."
+msgstr ""
+"Hinweis - Diese Einstellungen sind nicht Teil der Themen, sie werden "
+"separat gespeichert und kontrollieren verschiedene UI Einstellungen für "
+"Emerald."
+
+msgid "Show Tooltips for Buttons"
+msgstr "Tooltips für Knöpfe zeigen"
+
+msgid "Use Decoration Cropping"
+msgstr "Dekoration beschneiden"
+
+msgid "Use Button Fade"
+msgstr "Knöpfe dimmen"
+
+msgid "Use Button Fade Pulse"
+msgstr "Knöpfe pulsierend dimmen"
+
+msgid "Button Fade Total Duration"
+msgstr "Dauer des Dimmens"
+
+msgid "Button Fade Step Duration"
+msgstr "Schrittdauer des Dimmens"
+
+msgid "Button Pulse Wait Duration"
+msgstr "Wartezeit für Pulsieren"
+
+msgid "Button Pulse Min Opacity %"
+msgstr "Minimale Deckkraft in %"
+
+msgid "Titlebar Double-Click Action"
+msgstr "Aktion für Doppelklick in Titelleiste"
+
+msgid "Button Hover Cursor"
+msgstr "Cursor beim Schweben über Knopf"
+
+msgid "Normal"
+msgstr "Normal"
+
+msgid "Pointing Finger"
+msgstr "Zeigefinger"
+
+msgid "Frame Engine"
+msgstr ""
+
+msgid "Buttons"
+msgstr "Knöpfe"
+
+msgid "Frame/Shadows"
+msgstr "Rahmen/Schatten"
+
+msgid "Titlebar"
+msgstr "Titelleiste"
+
+msgid "Theme"
+msgstr "Thema"
+
+msgid "Edit"
+msgstr "Editieren"
+
+msgid "Search:"
+msgstr "Suche:"
+
+msgid "Import Theme..."
+msgstr "Thema importieren..."
+
+msgid "Fetching Themes"
+msgstr "Themen holen"
+
+msgid ""
+"Fetching themes... \n"
+"This may take time depending on \n"
+"internet connection speed."
+msgstr ""
+"Themen werden geholt...\n"
+"Die kann einige Zeit dauern, abhängig von der Internetverbindung."
+
+msgid ""
+"Here are the repositories that you can fetch Emerald Themes from. \n"
+"Fetching themes would fetch and import themes from SVN repositories \n"
+"You need Subversion package installed to use this feature."
+msgstr ""
+"Hier sind die Repositories, aus denen Emerald Themen geholt werden können.\n"
+"Die Themen werden aus SVN Repositories geholt.\n"
+"Subversion muß installiert sein."
+
+msgid ""
+"This repository contains GPL'd themes that can be used under \n"
+"the terms of GNU GPL licence v2.0 or later \n"
+msgstr ""
+"Dieses Repository enthält Themen, die unter der GPL freigegeben sind.\n"
+"Sie können nach den Vorgaben der GPL v2.0 oder später verwendet werden.\n"
+
+msgid ""
+"This repository contains non-GPL'd themes. They might infringe \n"
+"copyrights and patent laws in some countries."
+msgstr ""
+"Dieses Repository enthält Themen, die nicht unter der GPL freigegeben sind.\n"
+"Sie könnten Copyrights und Patentrecht in einigen Länder verletzen."
+
+msgid ""
+"To activate Non-GPL repository please run the following in shell and accept "
+"the server ceritficate permanently: \n"
+"svn ls https://svn.generation.no/emerald-themes."
+msgstr ""
+"Um ein Non-GPL Repository zu aktivieren, muß folgender Befehl ausgeführt und "
+"das Server Zertifikat dauerhaft akzeptiert werden:\n"
+"svn ls https://svn.generation.no/emerald-themes."
+
+msgid "Themes"
+msgstr "Themen"
+
+msgid "Edit Themes"
+msgstr "Themen editieren"
+
+msgid "Repositories"
+msgstr "Repositories"
+
+msgid "Themes Settings"
+msgstr "Themen Einstellungen"
+
+msgid "Emerald Settings"
+msgstr "Emerald Einstellungen"
+
+msgid ""
+"Select\n"
+"Engine"
+msgstr ""
+"Engine\n"
+"auswählen"
+
+msgid "Based on original gnome-window-decorator"
+msgstr "Basiert auf dem original Gnome Fensterdekorator"
+
+msgid "Round Top Left Corner"
+msgstr "Runde Ecke oben links"
+
+msgid "Round Top Right Corner"
+msgstr "Runde Ecke oben rechts"
+
+msgid "Round Bottom Left Corner"
+msgstr "Runde Ecke unten links"
+
+msgid "Round Bottom Right Corner"
+msgstr "Runde Ecke unten rechts"
+
+msgid "Rounding Radius"
+msgstr "Rundungsradius"
+
+msgid "Outer Frame Blend"
+msgstr "Äußerer Rahmenübergang"
+
+msgid "Inner Frame Blend"
+msgstr "Innerer Rahmenübergang"
+
+msgid "Outer Titlebar Blend"
+msgstr "Äußerer Titleübergang"
+
+msgid "Inner Titlebar Blend"
+msgstr "Innerer Titelübergang"
+
+msgid "Titlebar Separator"
+msgstr "Titel Separator"
+
+msgid "Frame Outline"
+msgstr "Rahmenäußeres"
+
+msgid "Frame Highlight"
+msgstr "Rahmen Highlight"
+
+msgid "Frame Shadow"
+msgstr "Rahmen Schatten"
+
+msgid "Contents Outline"
+msgstr "Inhalt Äußeres"
+
+msgid "Contents Highlight"
+msgstr "Inhalt Highlight"
+
+msgid "Contents Shadow"
+msgstr "Inhalt Schatten"
+
+msgid "Frame"
+msgstr "Rahmen"
+
+msgid "Designed to be vista-ish in nature"
+msgstr "Soll aussehen, wie Vista"
+
+msgid "Base"
+msgstr "Basis"
+
+msgid "Glow"
+msgstr "Glühen"
+
+msgid "Sides"
+msgstr "Seiten"
+
+msgid "Everything done with customizable pixmaps!"
+msgstr "Alles mit einer einstellbaren Pixmap gemacht!"
+
+msgid "Top Rounding Radius"
+msgstr "Oberer Rundungsradius"
+
+msgid "Bottom Rounding Radius"
+msgstr "Unterer Rundungsradius"
+
+#. Style : Use Tiled or Scaled pixmaps
+msgid "Scaled"
+msgstr "Skaliert"
+
+msgid "Not adjustable"
+msgstr "Nicht einstellbar"
+
+msgid "Same as Active"
+msgstr "Wie Aktiv"
+
+msgid "Pixmap"
+msgstr "Pixmap"
+
+msgid "Tiled/Scaled"
+msgstr "Gekachelt/Skaliert"
+
+msgid "Width Override"
+msgstr "Mit Überlagerung"
+
+msgid "Height Override"
+msgstr "Höhe der Überlagerung"
+
+msgid "Glassy effects for your windows"
+msgstr "Glaseffekte für die Fenster"
+
+msgid "Glow Height"
+msgstr "Höhe des Glühens"
+
+msgid "Frame Base Color"
+msgstr "Basisfarbe des Rahmens"
+
+msgid "Upper Titlebar Glow"
+msgstr "Glühen der oberen Titelleiste"
+
+msgid "Upper Glass Glow"
+msgstr "Glühen des oberen Glases"
+
+msgid "Lower Glass Glow"
+msgstr "Glühen des unteren Glases"
+
+msgid "Middle Glass Glow"
+msgstr "Glühen des mittleren Glases"
+
+msgid "Outer Glass Glow"
+msgstr "Glühen des äußeren Glases"
+
+msgid "Multiple gradients with somewhat glassy features too"
+msgstr "Mehrere Gradienten mit irgendwie galsigen Eigenschaften"
+
+msgid "Left Blend"
+msgstr "Linkes Übergang"
+
+msgid "Middle Blend"
+msgstr "Mittlerer Übergang"
+
+msgid "Right Blend"
+msgstr "Rechter Übergang"
+
+msgid "Contrast"
+msgstr "Kontrast"
+
+msgid "(Color)"
+msgstr "(Farbe)"
+
+msgid "(Alpha)"
+msgstr "(Alpha)"
+
+msgid "Notch"
+msgstr "Delle"
+
+msgid "Position"
+msgstr "Position"
+
+msgid "Curve"
+msgstr "Kurve"
+
+msgid "Offset"
+msgstr "Versatz"
+
+msgid "Use Glow"
+msgstr "Glühen verwenden"
+
+msgid "Title Glow"
+msgstr "Glühen des Titels"
+
+msgid "Evolved from the legacy engine"
+msgstr "Aus der alten Engine entwickelt"
+
+msgid "Border Gap"
+msgstr "Randabstand"
+
+msgid "Show Border when maximised?"
+msgstr "Rand zeigen, wenn maximiert?"
+
+msgid "Show when minimised?"
+msgstr "Zeigen wenn minimiert?"
+
+msgid "Minimised Border Size"
+msgstr "Minimierte Randgröße"
+
+msgid "Enable Left Bar Dip?"
+msgstr "Dip für linke Leiste aktivieren?"
+
+msgid "Left Bar Radius"
+msgstr "Radius der linken Leiste"
+
+msgid "Enable Lower Bulge? (Useless at the moment, but will be used soon)"
+msgstr "Untere Beule aktivieren? (Im Moment nutzlos)"
+
+msgid "Top Corner Offset (%)"
+msgstr "Versatz der oberen Ecken in %"
+
+msgid "Enable Title Bar Dip?"
+msgstr "Dip der Titelleiste aktivieren?"
+
+msgid "Enable Button Part?"
+msgstr "Knopfbereich aktivieren?"
+
+msgid "Title Part Width"
+msgstr "Breite des Titelbereichs"
+
+msgid "Button Part Width)"
+msgstr "Breite des Knopfbereichs"
+
+msgid "Dip Corners Radius)"
+msgstr "Radius der Dip Ecken"
+
+msgid "Round Inside Corners As well?"
+msgstr "Innere Ecken auch runden?"
+
+msgid "Enable Different Maximised Colors?"
+msgstr "Verschiedene Farben für Maximiert aktivieren?"
+
+msgid "Turn Off repeating gradients when maximised?"
+msgstr "Wiederholenden Gradienten abschalten, wenn maximiert?"
+
+msgid "Round Top Left Corner?"
+msgstr "Obere linke Ecke runden?"
+
+msgid "Frame Rounding Radius"
+msgstr "Radius der Rahmenrundung"
+
+msgid "Titlebar Rounding Radius"
+msgstr "Radius der Titelrundung"
+
+msgid "Repeat Gradient?"
+msgstr "Gradient wiederholen?"
+
+msgid "Vertical Repeat?"
+msgstr "Seknrecht wiederholen?"
+
+msgid "Diagonal Repeat?"
+msgstr "Diagonal wiederholen"
+
+msgid "Repeat Frequency"
+msgstr "Frequenz"
+
+#. /////////////////////
+msgid "Enable Title Part Pixmap?"
+msgstr "Pixmap for Titelbereich aktivieren"
+
+msgid "Repeat Title Part Pixmap?"
+msgstr "Pixmap für Titelbereich wiederholen?"
+
+msgid "Title Bar Part Pixmap"
+msgstr "Pixmap für Titelbereich"
+
+msgid "Choose Titlebar Part Pixmap"
+msgstr "Pixmap für Titelbereich auswählen"
+
+#. /////////////////////////
+msgid "Enable Button Part Pixmap?"
+msgstr "Pixmap für Knopfbereich aktivieren"
+
+msgid "Repeat Button Part Pixmap?"
+msgstr "Pixmap für Knopfbereich wiederholen"
+
+msgid "Button Part Pixmap"
+msgstr "Pixmap für Knopfbereich"
+
+msgid "Choose Button Part Pixmap"
+msgstr "Pixmap für Knopfbereich auswählen"
+
+#. /////////////////////////
+msgid "Enable Titlebar Pixmap?"
+msgstr "Pixmap für Titelleiste aktivieren?"
+
+msgid "Repeat Titlebar Pixmap?"
+msgstr "Pixmap für Titelleiste wiederholen"
+
+msgid "Titlebar Pixmap"
+msgstr "Pixmap für Titelleiste"
+
+msgid "Choose Titlebar Pixmap"
+msgstr "Pixmap für Titelleiste auswählen"
+
+msgid "Active/Inactive"
+msgstr "Aktiv/Inaktiv"
+
+msgid "Maximised"
+msgstr "Maximiert"
+
+msgid "Corners"
+msgstr "Ecken"
+
+msgid "Border Layout"
+msgstr "Randlayout"
+
+msgid "Left Bar"
+msgstr "Linke Leiste"
+
+msgid "Pixmaps"
+msgstr "Pixmaps"
