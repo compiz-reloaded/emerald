@@ -2277,12 +2277,12 @@ static void draw_switcher_background(decor_t * d)
 	cairo_fill(cr);
 
 	cairo_set_operator(cr, CAIRO_OPERATOR_OVER);
+	cairo_identity_matrix(cr);
+       cairo_rectangle(cr, x1 + 1, y1 + 1,
+                                         x2 - x1 - 1.0,
+                                         y2 - y1 - 1.0);
 
-	rounded_rectangle(cr,
-					  x1 + 0.5, y1 + 0.5,
-					  x2 - x1 - 1.0, y2 - y1 - 1.0,
-					  CORNER_TOPLEFT | CORNER_TOPRIGHT | CORNER_BOTTOMLEFT |
-					  CORNER_BOTTOMRIGHT, ws, 5.0);
+
 
 	cairo_clip(cr);
 
