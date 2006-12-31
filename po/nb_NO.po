@@ -1,12 +1,12 @@
 # Beryl-Manager translation.
 # Copyright (C) 2006
 # This file is distributed under the same license as the emerald package.
-#Frederik M.J. Vestre <freqmod AT gmail DOT com>
+# Frederik M.J. Vestre <freqmod AT gmail DOT com>
 msgid ""
 msgstr ""
 "Project-Id-Version: nb_NO\n"
 "Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
-"POT-Creation-Date: 2006-12-10 14:52+0100\n"
+"POT-Creation-Date: 2006-12-31 16:38+0530\n"
 "PO-Revision-Date: 2006-12-10 14:59+0100\n"
 "Last-Translator: Frederik M.J. Vestre <freqmod AT gmail DOT com>\n"
 "Language-Team: Norsk bokmål\n"
@@ -55,7 +55,8 @@ msgstr "Ikke klistre vindu"
 msgid "The window \"%s\" is not responding."
 msgstr "Vinduet \"%s\" svarer ikke"
 
-msgid "Forcing this application to quit will cause you to lose any unsaved changes."
+msgid ""
+"Forcing this application to quit will cause you to lose any unsaved changes."
 msgstr ""
 "Hvis du tvinger dette programmet til å slutte vil du miste alle endringer "
 "som ikke er lagret."
@@ -750,4 +751,3 @@ msgstr "Venstre linje"
 
 msgid "Pixmaps"
 msgstr "Bilder"
-

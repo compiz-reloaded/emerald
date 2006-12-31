@@ -3,12 +3,11 @@
 # This file is distributed under the same license as the Emerald package.
 # cyberorg <cyberorg@cyberorg.info>, 2006.
 #
-
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.1 \n"
-"Report-Msgid-Bugs-To: bugs.beryl-project.org \n"
-"POT-Creation-Date: 2006-09-28 23:18+0530\n"
+"Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
+"POT-Creation-Date: 2006-12-31 16:38+0530\n"
 "PO-Revision-Date: 2006-10-04 21:06+0200\n"
 "Last-Translator: Harshal Shah <yourEMAIL@ADDRESS>\n"
 "Language-Team: beryl-project <ixce@beryl-project.org>\n"
@@ -16,113 +15,110 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: engines/vrunner.c:600
-msgid "(Alpha)"
-msgstr "(ક/આલ્ફા)"
+msgid "Close Window"
+msgstr "માાહિતિદ્વાર(Window) બંધ કરવુ"
 
-#: engines/vrunner.c:591
-msgid "(Color)"
-msgstr "(રંગ)"
+msgid "Maximize Window"
+msgstr "માાહિતિદ્વાર(Window) મહત્તમ કરવુ"
 
-#: themer/main.c:993
-msgid "Active Window"
-msgstr "કાર્યરત ચોકઠુ/માાહિતિ દ્વાર (Window)"
+msgid "Restore Window"
+msgstr "માાહિતિદ્વાર(Window) પુન:સ્થાપિત કરવુ"
 
-#: engines/zootreeves.c:1654
-msgid "Active/Inactive"
-msgstr "કાર્યરત/બિનકાર્યરત "
+msgid "Minimize Window"
+msgstr "માાહિતિદ્વાર(Window) લઘુત્તમ કરવુ"
 
-#: themer/main.c:610
+msgid "Context Help"
+msgstr "મદદ"
+
+msgid "Window Menu"
+msgstr "માાહિતિદ્વાર(Window) સૂચિ "
+
+msgid "Shade Window"
+msgstr "માાહિતિદ્વાર(Window) છાયા કરવી"
+
+msgid "UnShade Window"
+msgstr "માાહિતિદ્વાર(Window) છાયા બંધ કરવી"
+
+msgid "Set Above"
+msgstr "ઉપર નુ/ના ને નિશ્ર્ચિત કરવુ "
+
+msgid "UnSet Above"
+msgstr "ઉપર નુ/ના ને અનિશ્ર્ચિત કરવુ"
+
+msgid "Stick Window"
+msgstr "સ્થાયી માાહિતિદ્વાર(Window)"
+
+msgid "UnStick Window"
+msgstr "અસ્થાયી માાહિતિદ્વાર(Window)"
+
 #, c-format
-msgid "Are you sure you want to delete %s?"
-msgstr "ખરેખર, તમે %s કાઢી નાખવા માગો છો?"
-
-#: engines/oxygen.c:424
-msgid "Base"
-msgstr "પાયો/મૂળ/આધાર"
-
-#: engines/legacy.c:31
-msgid "Based on original gnome-window-decorator"
-msgstr "અસલ gnome(જિનોમ)-ચોકઠુ-શણગારક  આધારિત"
-
-#: themer/main.c:942
-msgid "Border"
-msgstr "ધાર/કિનાર"
-
-#: engines/zootreeves.c:1238
-msgid "Border Gap"
-msgstr "ધારો વચ્ચે નુ અંતર"
-
-#: engines/zootreeves.c:1657
-msgid "Border Layout"
-msgstr "ધાર ની ગોઠવણ"
-
-#: themer/main.c:945
-msgid "Bottom"
-msgstr "તળીયુ"
-
-#: engines/pixmap.c:496
-msgid "Bottom Rounding Radius"
-msgstr "તળીયા ની ગોળાઇ ની ત્રિજ્યા "
-
-#: themer/main.c:717
-msgid "Button"
-msgstr "ચાંપ/બટન/સ્વિચ "
-
-#: themer/main.c:1107
-msgid "Button Fade Step Duration"
-msgstr "બટન વિસર્જન કાર્ય કાળ "
-
-#: themer/main.c:1101
-msgid "Button Fade Total Duration"
-msgstr "કુલ બટન વિસર્જન કાર્ય કાળ"
-
-#: themer/main.c:742
-msgid "Button Fill"
-msgstr "બટન ભરણી"
-
-#: themer/main.c:1136
-msgid "Button Hover Cursor"
-msgstr "બટન નિર્દેશક"
-
-#: themer/main.c:743
-msgid "Button Outline"
-msgstr "બટન સિમારેખા"
-
-#: engines/zootreeves.c:1600
-msgid "Button Part Pixmap"
-msgstr "બટન ચિત્ર ભાગ "
-
-#: engines/zootreeves.c:1333
-msgid "Button Part Width"
-msgstr "બટન ભાગ ની પહોળાઇ"
-
-#: themer/main.c:706
-msgid "Button Pixmaps"
-msgstr "બટન નુ ચિત્ર"
-
-#: themer/main.c:1119
-msgid "Button Pulse Min Opacity %"
-msgstr "બટન ની ધારા ની ન્યુનતમ દૃશ્યાતા %"
-
-#: themer/main.c:1113
-msgid "Button Pulse Wait Duration"
-msgstr "બટન ની ધારા નો વાટ સમય"
-
-#: themer/main.c:1186
-msgid "Buttons"
-msgstr "બટનો/ચાંપો"
-
-#: themer/main.c:598
-msgid ""
-"Can't delete system themes\n"
-"(or you forgot to enter a name)"
+msgid "The window \"%s\" is not responding."
 msgstr ""
-"પ્રણાલિ ની વિષય આધારિત સાજ-સજ્જાઓ (system themes) ને કાઢી શકાય નહી\n"
-"(અથવા તમે નામ આપવા નુ ભુલી ગયા)"
 
+msgid ""
+"Forcing this application to quit will cause you to lose any unsaved changes."
+msgstr ""
 
-#: themer/main.c:503
+msgid "_Force Quit"
+msgstr ""
+
+#, c-format
+msgid ""
+"<b><big>%s</big></b>\n"
+"<i>%s</i>\n"
+"<small><b>Version</b> %s\n"
+"<b>Created By</b> %s\n"
+"<b>Use With</b> %s\n"
+"</small>"
+msgstr ""
+
+#, c-format
+msgid ""
+"<b><big>%s</big></b> (System Theme)\n"
+"<i>%s</i>\n"
+"<small><b>Version</b> %s\n"
+"<b>Created By</b> %s\n"
+"<b>Use With</b> %s\n"
+"</small>"
+msgstr ""
+
+msgid "Unknown"
+msgstr "અજ્ઞાત"
+
+msgid "Whatever (no hint)"
+msgstr "જે પણ (સુચન નહી)"
+
+msgid "No Description"
+msgstr "વર્ણન નહી"
+
+msgid "Invalid Theme Name"
+msgstr "અમાન્ય વિષય આધારિત સાજ-સજ્જાઓ (Theme) નુ નામ"
+
+msgid "Invalid theme file.  Does not end in .emerald"
+msgstr ""
+"અમાન્ય વિષય આધારિત સાજ-સજ્જાઓ (Theme) ની પોથી (file).\n"
+"     .emerald થી પુર્ણ થતુ નથી"
+
+msgid ""
+"Invalid Theme Name\n"
+"Could Not Export"
+msgstr ""
+"અમાન્ય વિષય આધારિત સાજ-સજ્જાઓ (Theme) નુ નામ\n"
+"નિકાસ શક્ય નથી"
+
+msgid ""
+"Invalid File Name\n"
+"Must End in .emerald"
+msgstr ""
+"અમાન્ય પોથી(File) નુ નામ\n"
+".emerald ના અંતે પુરુ થવું જ જોઇએ"
+
+msgid "Error calling tar."
+msgstr "ખામી સુચક tar."
+
+msgid "Theme Exported"
+msgstr "નિકાસ કરેલી વિષય આધારિત સાજ-સજ્જા (Theme) "
+
 msgid ""
 "Can't save over system themes\n"
 "(or you forgot to enter a name)"
@@ -130,332 +126,159 @@ msgstr ""
 "પ્રણાલિ ની વિષય આધારિત સાજ-સજ્જાઓ (system themes) પર સંગ્રહ કરી નહી શકાય\n"
 "(અથવા તમે નામ આપવા નુ ભુલી ગયા)"
 
-#: engines/zootreeves.c:1603
-msgid "Choose Button Part Pixmap"
-msgstr "બટન ચિત્ર ભાગ ની પસંદગી"
+#, c-format
+msgid "Overwrite Theme %s?"
+msgstr "વિષય આધારિત સાજ-સજ્જાઓ (themes)"
 
-#: engines/zootreeves.c:1572
-msgid "Choose Titlebar Part Pixmap"
-msgstr " મથાળાપટ્ટી  ના ચિત્ર ભાગ ની પસંદગી"
-
-#: engines/zootreeves.c:1634
-msgid "Choose Titlebar Pixmap"
-msgstr "મથાળાપટ્ટી  ના ચિત્ર ની પસંદગી"
-
-#: themer/main.c:720 engines/pixmap.c:648
-msgid "Clear"
-msgstr "સાફ/સ્વચ્છ"
-
-#: themer/main.c:779
-msgid "Color"
-msgstr "રંગ"
-
-#: themer/main.c:738 engines/legacy.c:362 engines/legacy.c:394
-#: engines/oxygen.c:422 engines/oxygen.c:452 engines/pixmap.c:665
-#: engines/truglass.c:514 engines/truglass.c:549 engines/vrunner.c:582
-#: engines/vrunner.c:673 engines/zootreeves.c:1477
-msgid "Colors"
-msgstr "રંગો"
-
-#: engines/legacy.c:377 engines/oxygen.c:435 engines/truglass.c:532
-#: engines/vrunner.c:656 engines/zootreeves.c:1535
-msgid "Contents Highlight"
-msgstr " સમાવેલ મુદ્દા ની રૂપરેખા"
-
-#: engines/legacy.c:376 engines/oxygen.c:434 engines/truglass.c:531
-#: engines/vrunner.c:655 engines/zootreeves.c:1534
-msgid "Contents Outline"
-msgstr " સમાવેલ મુદ્દા ની સંક્ષિપ્ત ઝલક"
-
-#: engines/legacy.c:378 engines/oxygen.c:436 engines/truglass.c:533
-#: engines/zootreeves.c:1536
-msgid "Contents Shadow"
-msgstr "સમાવેલ મુદ્દા ની ઝાંખી "
-
-#: engines/vrunner.c:589 engines/vrunner.c:598
-msgid "Contrast"
-msgstr "તફાવત"
-
-#: engines/zootreeves.c:1656
-msgid "Corners"
-msgstr "ખૂણાાોાાાોોોોાાાૌ"
-
-#: themer/main.c:538
-msgid "Couldn't Form Theme"
-msgstr "વિષય આધારિત સાજ-સજ્જાઓ (Theme) બનાવાઇ નથી "
-
-#: themer/main.c:533
 msgid "Couldn't Write Theme"
 msgstr "વિષય આધારિત સાજ-સજ્જાઓ (Theme) લખાઇ નથી"
 
-#: themer/main.c:914
-msgid "Creator"
-msgstr "કર્તા"
+msgid "Couldn't Form Theme"
+msgstr "વિષય આધારિત સાજ-સજ્જાઓ (Theme) બનાવાઇ નથી "
 
-#: engines/vrunner.c:617
-msgid "Curve"
-msgstr "વળાંક"
+msgid "Theme Saved"
+msgstr "સંગ્રહ કરેલી વિષય આધારિત સાજ-સજ્જા (Theme)"
 
-#: themer/main.c:915
-msgid "Description"
-msgstr "વર્ણન"
-
-#: engines/oxygen.c:31
-msgid "Designed to be vista-ish in nature"
-msgstr "વધુ સુંદર/સુઘડ (vista-ish) બનાવનુ સ્વભાવિક આયોજન "
-
-#: engines/zootreeves.c:1506
-msgid "Diagonal Repeat?"
-msgstr "ખૂણે-ખૂણે થી ફરી જોડાણ ?"
-
-#: engines/zootreeves.c:1340
-msgid "Dip Corners Radius)"
-msgstr "ખૂણાઓ ના ઉંડાણ ની  ત્રિજ્યા)"
-
-#: themer/main.c:1199 themer/main.c:1482
-msgid "Edit"
-msgstr "સુધારો-વધારો"
-
-#: themer/main.c:1483
-msgid "Emerald Settings"
-msgstr "એમરલ્ડ(Emerald) ગોઠવણીોોોોોાાાાાાાોોોોોોાાાોોાોોાાાાાાાાાાઓ "
-
-#: engines/zootreeves.c:1588
-msgid "Enable Button Part Pixmap?"
-msgstr "બટન નો ચિત્ર ભાગ કાર્યરત કરવુ છે?"
-
-#: engines/zootreeves.c:1320
-msgid "Enable Button Part?"
-msgstr "બટન નો ભાગ કાર્યરત કરવો છે?"
-
-#: engines/zootreeves.c:1364
-msgid "Enable Different Maximised Colors?"
-msgstr "વિવધ રંગો ને પુષ્ક્ળ ઘેરા/ગાઢા કરવા છે?"
-
-#: engines/zootreeves.c:1274
-msgid "Enable Left Bar Dip?"
-msgstr "ડાબી પટ્ટી ને છેક સુધી કાર્યરત કરવી છે?"
-
-#: engines/zootreeves.c:1287
-msgid "Enable Lower Bulge? (Useless at the moment, but will be used soon)"
-msgstr "નિમ્ન નિષ્કાષ (Lower Bulge) કાર્યરત કરવુ છે? (હાલ મા બિન ઉપયોગી છે, પણ ત્વરીત ઉપયોગી થશે)"
-
-#: engines/zootreeves.c:1314
-msgid "Enable Title Bar Dip?"
-msgstr "મથાળાપટ્ટી ને છેક સુધી કાર્યરત કરવી છે?"
-
-#: engines/zootreeves.c:1558
-msgid "Enable Title Part Pixmap?"
-msgstr "મથાળા નો ચિત્ર ભાગ કાર્યરત કરવો છે?"
-
-#: engines/zootreeves.c:1619
-msgid "Enable Titlebar Pixmap?"
-msgstr "મથાળાપટ્ટી નો ચિત્ર ભાગ કાર્યરત કરવો છે?"
-
-#: themer/main.c:485
-msgid "Error calling tar."
-msgstr "ખામી સુચક tar."
-
-#: engines/pixmap.c:68
-msgid "Everything done with customizable pixmaps!"
-msgstr "બધા જ  કાર્ય આગવા ચિત્ર સાથે થયેલ છે!"
-
-#: engines/zootreeves.c:84
-msgid "Evolved from the legacy engine"
-msgstr "નિયમ અનુસાર યંત્ર થી બનેલુ "
-
-#: themer/main.c:855
-msgid "Export Theme..."
-msgstr "વિષય આધારિત સાજ-સજ્જાઓ (Theme) ... ની નિકાસ"
-
-#: themer/main.c:904
-msgid "Export..."
-msgstr "નિકાસ..."
-
-#: themer/main.c:718 engines/pixmap.c:646
-msgid "File"
-msgstr "પોથી(ફાઇલ)"
-
-#: engines/legacy.c:395 engines/oxygen.c:453 engines/pixmap.c:666
-#: engines/truglass.c:550 engines/vrunner.c:674
-msgid "Frame"
-msgstr "માળખુ/ચોકઠુ"
-
-#: engines/truglass.c:516
-msgid "Frame Base Color"
-msgstr "માળખા/ચોકઠા આધારિત રંગ"
-
-#: themer/main.c:975
-msgid "Frame Borders"
-msgstr "માળખા/ચોકઠા ની ધારો"
-
-#: themer/main.c:1185
-msgid "Frame Engine"
-msgstr "માળખા/ચોકઠા યંત્ર"
-
-#: engines/legacy.c:373 engines/oxygen.c:431 engines/truglass.c:528
-#: engines/vrunner.c:651 engines/zootreeves.c:1531
-msgid "Frame Highlight"
-msgstr "માળખા/ચોકઠા ની રૂપરેખાા"
-
-#: engines/legacy.c:372 engines/oxygen.c:430 engines/truglass.c:527
-#: engines/vrunner.c:650 engines/zootreeves.c:1530
-msgid "Frame Outline"
-msgstr "માળખા/ચોકઠા સિમારેખા"
-
-#: engines/zootreeves.c:1429
-msgid "Frame Rounding Radius"
-msgstr "માળખા/ચોકઠા ના ગોળાઇ ની ત્રિજ્યા "
-
-#: engines/legacy.c:374 engines/oxygen.c:432 engines/truglass.c:529
-#: engines/zootreeves.c:1532
-msgid "Frame Shadow"
-msgstr "માળખા/ચોકઠા ની ઝાંખી"
-
-#: themer/main.c:1187
-msgid "Frame/Shadows"
-msgstr "માળખુ/ઝાંખી"
-
-#: engines/truglass.c:35
-msgid "Glassy effects for your windows"
-msgstr "ચોકઠા/માાહિતિ દ્વાર (Window) માાટે  પારદર્શીત અસરો"
-
-#: engines/oxygen.c:425
-msgid "Glow"
-msgstr "તેજસ્વિતા/તેજ"
-
-#: engines/truglass.c:491
-msgid "Glow Height"
-msgstr "તેજસ્વિતા નુ માપ"
-
-#: engines/pixmap.c:651
-msgid "Height Override"
-msgstr "માપ થી વધુ"
-
-#: themer/main.c:813
-msgid "Horizontal Button Offset"
-msgstr "બટન નુ ઉભે થી ઉપર નુ અંતર "
-
-#: themer/main.c:1042
-msgid "Images"
-msgstr "છાપો"
-
-#: themer/main.c:1375 themer/main.c:1439
-msgid "Import Theme..."
-msgstr "વિષય આધારિત સાજ-સજ્જાઓ (Theme) ... ની આયાત"
-
-#: themer/main.c:994
-msgid "Inactive Window"
-msgstr "બિનકાર્યરત ચોકઠુ/માાહિતિ દ્વાર (Window)"
-
-#: themer/main.c:1064
-msgid "Information"
-msgstr "માહિતિ"
-
-#: engines/legacy.c:365 engines/pixmap.c:521 engines/zootreeves.c:1393
-#: engines/zootreeves.c:1480
-msgid "Inner Frame Blend"
-msgstr "આંતરિક માળખા ના ભાગ"
-
-#: engines/legacy.c:368 engines/pixmap.c:524 engines/zootreeves.c:1483
-msgid "Inner Titlebar Blend"
-msgstr "આંતરિક મથાળાપટ્ટી ના ભાગ"
-
-#: themer/main.c:471
 msgid ""
-"Invalid File Name\n"
-"Must End in .emerald"
-msgstr "અમાન્ય પોથી(File) નુ નામ\n"
-".emerald ના અંતે પુરુ થવું જ જોઇએ"
-#: themer/main.c:334 themer/main.c:342 themer/main.c:508 themer/main.c:604
-msgid "Invalid Theme Name"
-msgstr "અમાન્ય વિષય આધારિત સાજ-સજ્જાઓ (Theme) નુ નામ"
+"Can't delete system themes\n"
+"(or you forgot to enter a name)"
+msgstr ""
+"પ્રણાલિ ની વિષય આધારિત સાજ-સજ્જાઓ (system themes) ને કાઢી શકાય નહી\n"
+"(અથવા તમે નામ આપવા નુ ભુલી ગયા)"
 
-#: themer/main.c:465
-msgid ""
-"Invalid Theme Name\n"
-"Could Not Export"
-msgstr "અમાન્ય વિષય આધારિત સાજ-સજ્જાઓ (Theme) નુ નામ\n"
-"નિકાસ શક્ય નથી"
-#: themer/main.c:423
-msgid "Invalid theme file.  Does not end in .emerald"
-msgstr "અમાન્ય વિષય આધારિત સાજ-સજ્જાઓ (Theme) ની પોથી (file).\n     .emerald થી પુર્ણ થતુ નથી"
+#, c-format
+msgid "Are you sure you want to delete %s?"
+msgstr "ખરેખર, તમે %s કાઢી નાખવા માગો છો?"
 
-#: themer/main.c:946
-msgid "Left"
-msgstr "ડાબી બાજુ"
+msgid "Theme deleted"
+msgstr "કાાઢી નાાખેલી વિષય આધારિત સાજ-સજ્જા (Theme)"
 
-#: engines/zootreeves.c:1659
-msgid "Left Bar"
-msgstr "ડાબી બાજુ ની પટ્ટી"
-
-#: engines/zootreeves.c:1280
-msgid "Left Bar Radius"
-msgstr "ડાબી બાજુ ની પટ્ટી ત્રિજ્યાા"
-
-#: engines/vrunner.c:584
-msgid "Left Blend"
-msgstr "ડાબી બાજુ નો ભાાગ"
-
-#: engines/truglass.c:520
-msgid "Lower Glass Glow"
-msgstr "નિમ્ન કાચ નુ તેજ"
-
-#: engines/zootreeves.c:1655
-msgid "Maximised"
-msgstr "મહત્તમ"
-
-#: engines/vrunner.c:585
-msgid "Middle Blend"
-msgstr "મધ્ય ભાગ"
-
-#: engines/truglass.c:522
-msgid "Middle Glass Glow"
-msgstr "મધ્ય ભાગ નાા કાાચ નુ તેજ"
-
-#: engines/zootreeves.c:1257
-msgid "Minimised Border Size"
-msgstr "લઘુત્તમ ધાર નુ માાપ"
-
-#: themer/main.c:801
-msgid "Minimum Title-bar Height"
-msgstr "મથાળાા પટ્ટી નુ લઘુત્તમ માપ"
-
-#: engines/vrunner.c:55
-msgid "Multiple gradients with somewhat glassy features too"
-msgstr "વિવિધ કોણો નો પારદર્શીત લાક્ષણિકતા સાથે નો દેખાવ "
-
-#: themer/main.c:1080
-msgid ""
-"NOTE - These settings are not part of themes, they are stored separately, "
-"and control various UI preferences for Emerald."
-msgstr "સુચના - આ ગોઠવણીઓ વિષય આધારિત સાજ-સજ્જાઓ (themes) નો ભાગ નથી, તેનો અલગ થી સંગ્રહ કરેલો છે,"
-"અને એમરલ્ડ(Emerald) ના માટે ની વિવિધ વપરાશ કાર(UI) ની પસદંગીઓ પર નો અંકુશ."
-#: themer/main.c:895
-msgid "Name:"
-msgstr "નામ:"
-
-#: themer/main.c:185
-msgid "No Description"
-msgstr "વર્ણન નહી"
-
-#: themer/main.c:641
 msgid "No such theme to delete"
 msgstr "આવી વિષય આધારિત સાજ-સજ્જા (theme) નથી કે જે કાઢી શકાાય"
 
-#: themer/main.c:1138
-msgid "Normal"
-msgstr "સામન્ય"
+msgid "Use Pixmap Buttons"
+msgstr "બટન ચિત્ર રાખવુ"
 
-#: engines/pixmap.c:587 engines/pixmap.c:616
-msgid "Not adjustable"
-msgstr "ગોઠવી ન શકાય તેવુ "
+msgid "Use Button Halo/Glow"
+msgstr "બટન નુ તેજ રાખવુ"
 
-#: engines/vrunner.c:607
-msgid "Notch"
-msgstr "કાપ"
+msgid "Use Button Halo/Glow For Inactive Windows"
+msgstr "બટન નુ તેજ બિનકાર્યરત ચોકઠા/માાહિતિ દ્વાર (Window) માટે રાખવુ"
 
-#: themer/main.c:949
+msgid "Button Pixmaps"
+msgstr "બટન નુ ચિત્ર"
+
+msgid "Button"
+msgstr "ચાંપ/બટન/સ્વિચ "
+
+msgid "File"
+msgstr "પોથી(ફાઇલ)"
+
+msgid "Preview"
+msgstr "પૂર્વદર્શન"
+
+msgid "Clear"
+msgstr "સાફ/સ્વચ્છ"
+
+msgid "Colors"
+msgstr "રંગો"
+
+msgid "Text Fill"
+msgstr "અક્ષર ભરણી"
+
+msgid "Text Outline"
+msgstr "અક્ષરો ની સંક્ષિપ્ત ઝલક"
+
+msgid "Button Fill"
+msgstr "બટન ભરણી"
+
+msgid "Button Outline"
+msgstr "બટન સિમારેખા"
+
+msgid "Color"
+msgstr "રંગ"
+
+msgid "Opacity"
+msgstr "અપારદર્શકતા"
+
+msgid "Radius"
+msgstr "ત્રિજ્યાા"
+
+msgid "X Offset"
+msgstr "X આડુ અંતર"
+
+msgid "Y Offset"
+msgstr "Y ઉભુ અંતર"
+
+msgid "Title-Text Font"
+msgstr "મથાળા ના અક્ષરો ના પ્રકાર (Font)"
+
+msgid "Minimum Title-bar Height"
+msgstr "મથાળાા પટ્ટી નુ લઘુત્તમ માપ"
+
+msgid "Vertical Button Offset"
+msgstr "બટન નુ ઉભુ અંતર"
+
+msgid "Horizontal Button Offset"
+msgstr "બટન નુ ઉભે થી ઉપર નુ અંતર "
+
+msgid "Title-bar Object Layout"
+msgstr "મથાળાપટ્ટી ની વસ્તુ ની ગોઠવણ "
+
+msgid ""
+"Use colons to separate left, center, and right.\n"
+"Anything after a third colon is ignored.\n"
+"C=Close, N=Minimize, X/R=Restore\n"
+"I=Icon, T=Title, H=Help, M=Menu\n"
+"S=Shade, U/A=On Top(Up/Above)\n"
+"Y=Sticky, (#)=# pixels space, ex: (5)\n"
+msgstr ""
+
+msgid "Export Theme..."
+msgstr "વિષય આધારિત સાજ-સજ્જાઓ (Theme) ... ની નિકાસ"
+
+msgid "Name:"
+msgstr "નામ:"
+
+msgid "Untitled Theme"
+msgstr "મથાળાવિહિન વિષય આધારિત સાજ-સજ્જા (Theme)"
+
+msgid "Export..."
+msgstr "નિકાસ..."
+
+msgid "Creator"
+msgstr "કર્તા"
+
+msgid "Description"
+msgstr "વર્ણન"
+
+msgid "Theme Version"
+msgstr "વિષય આધારિત સાજ-સજ્જા (Theme) બદલાવ"
+
+msgid "Suggested Widget Theme"
+msgstr "વિષય આધારિત સાજ-સજ્જાઓ (themes)"
+
+msgid "Themer Version"
+msgstr "વિષય આધારિત સાજ-સજ્જા (Theme) નો બદલાાવ"
+
+msgid "Border"
+msgstr "ધાર/કિનાર"
+
+msgid "Size"
+msgstr "કદ"
+
+msgid "Top"
+msgstr "ટોચ"
+
+msgid "Bottom"
+msgstr "તળીયુ"
+
+msgid "Left"
+msgstr "ડાબી બાજુ"
+
+msgid "Right"
+msgstr "જ્મણી બાજુ"
+
 msgid ""
 "Note, when changing these values,\n"
 "it is advised that you do something\n"
@@ -479,393 +302,447 @@ msgstr ""
 " દ્વારાા થતો મથાળાટ્ટી માપ(title-bar height) નો \n"
 "બદલાવ કરો છો, ત્યારે પણ એ લાગુ પડે છે\n"
 
-#: engines/vrunner.c:619
-msgid "Offset"
-msgstr "ઉભુ અંતર"
-
-#: themer/main.c:780
-msgid "Opacity"
-msgstr "અપારદર્શકતા"
-
-#: engines/legacy.c:364 engines/pixmap.c:520 engines/zootreeves.c:1384
-#: engines/zootreeves.c:1479
-msgid "Outer Frame Blend"
-msgstr "બહારી માળાખા નો ભાગ"
-
-#: engines/truglass.c:523
-msgid "Outer Glass Glow"
-msgstr "બહારી કાચ નુ તેજ"
-
-#: engines/legacy.c:367 engines/pixmap.c:523 engines/zootreeves.c:1482
-msgid "Outer Titlebar Blend"
-msgstr "બહારી મથાળાપટ્ટી નો ભાગ"
-
-#: themer/main.c:521
-#, c-format
-msgid "Overwrite Theme %s?"
-msgstr "વિષય આધારિત સાજ-સજ્જાઓ (themes)"
-
-#: engines/pixmap.c:645
-msgid "Pixmap"
-msgstr "ચિત્ર"
-
-#: engines/zootreeves.c:1660
-msgid "Pixmaps"
-msgstr "ચિત્રો"
-
-#: engines/pixmap.c:663
-msgid "Pixmaps (Active))"
-msgstr "ચિત્રો (કાર્યરત)"
-
-#: engines/pixmap.c:664
-msgid "Pixmaps (Inactive)"
-msgstr "ચિત્રો (બિનકાર્યરત)"
-
-#: themer/main.c:1139
-msgid "Pointing Finger"
-msgstr "અંગુલિ નિર્દેશ"
-
-#: engines/vrunner.c:609
-msgid "Position"
-msgstr "સ્થિતિ"
-
-#: themer/main.c:719 engines/pixmap.c:647
-msgid "Preview"
-msgstr "પૂર્વદર્શન"
-
-#: themer/main.c:781 engines/vrunner.c:638
-msgid "Radius"
-msgstr "ત્રિજ્યાા"
-
-#: engines/zootreeves.c:1592
-msgid "Repeat Button Part Pixmap?"
-msgstr "બટન ચિત્ર ભાગ નુ પુન: ઉપયોગ ?"
-
-#: engines/zootreeves.c:1516
-msgid "Repeat Frequency"
-msgstr "પુનરાવૃત્તિ"
-
-#: engines/zootreeves.c:1487
-msgid "Repeat Gradient?"
-msgstr "ખુણો ના માપ નુ પુનરાવર્તન?"
-
-#: engines/zootreeves.c:1562
-msgid "Repeat Title Part Pixmap?"
-msgstr "મથાળા ભાગ ના ચિત્ર નુ પુનરાવર્તન? "
-
-#: engines/zootreeves.c:1623
-msgid "Repeat Titlebar Pixmap?"
-msgstr "મથાળાપટ્ટી ના ચિત્ર નુ પુનરાવર્તન?"
-
-#: themer/main.c:947
-msgid "Right"
-msgstr "જ્મણી બાજુ"
-
-#: engines/vrunner.c:586
-msgid "Right Blend"
-msgstr "જ્મણી બાજુ નો ભાગ"
-
-#: engines/legacy.c:327 engines/oxygen.c:387 engines/pixmap.c:479
-#: engines/truglass.c:471 engines/vrunner.c:546 engines/zootreeves.c:1419
-msgid "Round Bottom Left Corner"
-msgstr "તળીયા ના ડાબા ખુણા ને ગોળ કરવો"
-
-#: engines/legacy.c:331 engines/oxygen.c:391 engines/pixmap.c:483
-#: engines/truglass.c:475 engines/vrunner.c:550 engines/zootreeves.c:1423
-msgid "Round Bottom Right Corner"
-msgstr "તળીયા ના જમણા ખુણા ને ગોળ કરવો"
-
-#: engines/zootreeves.c:1347
-msgid "Round Inside Corners As well?"
-msgstr "તે જ રીતે તળીયા ના આંતરિક ખુણાઓ ને ગોળ કરવા ?"
-
-#: engines/legacy.c:319 engines/oxygen.c:379 engines/pixmap.c:471
-#: engines/truglass.c:463 engines/vrunner.c:538
-msgid "Round Top Left Corner"
-msgstr "ઉપરી ડાબા ખુણા ને ગોળ કરવો"
-
-#: engines/zootreeves.c:1411
-msgid "Round Top Left Corner?"
-msgstr "ઉપરી ડાબા ખુણા ને ગોળ કરવો છે?"
-
-#: engines/legacy.c:323 engines/oxygen.c:383 engines/pixmap.c:475
-#: engines/truglass.c:467 engines/vrunner.c:542 engines/zootreeves.c:1415
-msgid "Round Top Right Corner"
-msgstr "ઉપરી જમાણા ખુણા ને ગોળ કરવો"
-
-#: engines/legacy.c:338 engines/oxygen.c:398 engines/truglass.c:482
-#: engines/vrunner.c:557
-msgid "Rounding Radius"
-msgstr "ગોળાઇ ની ત્રિજ્યા/ત્રિજયાા ની સંખ્યાા ને પુર્ણ કરવી "
-
-#: engines/pixmap.c:631
-msgid "Same as Active"
-msgstr "કાાર્યરત જેવુ"
-
-#: engines/pixmap.c:581
-msgid "Scaled"
-msgstr "પ્રમાણિત"
-
-#: themer/main.c:1038 themer/main.c:1057
-msgid "Screenshot"
-msgstr "પડદા ની છાપ(ફોટો)"
-
-#: themer/main.c:1258
-msgid "Search:"
-msgstr "શોધ/ખોજ"
-
-#: themer/main.c:967
 msgid "Shadows"
 msgstr "છાયાઓ"
 
-#: engines/zootreeves.c:1245
-msgid "Show Border when maximised?"
-msgstr "જ્યારે મહત્તમ હોય ત્યારે ધાર બતાવવી?"
+msgid "Frame Borders"
+msgstr "માળખા/ચોકઠા ની ધારો"
 
-#: themer/main.c:1086
-msgid "Show Tooltips for Buttons"
-msgstr "બટન વિષે ની માહિતિ બતાવો"
+msgid "Active Window"
+msgstr "કાર્યરત ચોકઠુ/માાહિતિ દ્વાર (Window)"
 
-#: engines/zootreeves.c:1251
-msgid "Show when minimised?"
-msgstr "જ્યારે લઘુત્તમ હોય ત્યારે બતાવવી કે બતાવવુ?"
+msgid "Inactive Window"
+msgstr "બિનકાર્યરત ચોકઠુ/માાહિતિ દ્વાર (Window)"
 
-#: engines/oxygen.c:426
-msgid "Sides"
-msgstr "બાજુઓ"
-
-#: themer/main.c:943
-msgid "Size"
-msgstr "કદ"
-
-#: themer/main.c:917
-msgid "Suggested Widget Theme"
-msgstr "વિષય આધારિત સાજ-સજ્જાઓ (themes)"
-
-#: themer/main.c:739
-msgid "Text Fill"
-msgstr "અક્ષર ભરણી"
-
-#: themer/main.c:740
-msgid "Text Outline"
-msgstr "અક્ષરો ની સંક્ષિપ્ત ઝલક"
-
-#: themer/main.c:1189
-msgid "Theme"
-msgstr "વિષય આધારિત સાજ-સજ્જા (Theme)"
-
-#: themer/main.c:491
-msgid "Theme Exported"
-msgstr "નિકાસ કરેલી વિષય આધારિત સાજ-સજ્જા (Theme) "
-
-#: themer/main.c:454
-msgid "Theme Imported"
-msgstr "આયાત કરેલી વિષય આધારિત સાજ-સજ્જા (Theme) "
-
-#: themer/main.c:575
-msgid "Theme Saved"
-msgstr "સંગ્રહ કરેલી વિષય આધારિત સાજ-સજ્જા (Theme)"
-
-#: themer/main.c:916
-msgid "Theme Version"
-msgstr "વિષય આધારિત સાજ-સજ્જા (Theme) બદલાવ"
-
-#: themer/main.c:635
-msgid "Theme deleted"
-msgstr "કાાઢી નાાખેલી વિષય આધારિત સાજ-સજ્જા (Theme)"
-
-#: themer/main.c:921
-msgid "Themer Version"
-msgstr "વિષય આધારિત સાજ-સજ્જા (Theme) નો બદલાાવ"
-
-#: themer/main.c:1481
-msgid "Themes"
-msgstr "વિષય આધારિત સાજ-સજ્જાઓ (Themes)"
-
-#: engines/pixmap.c:649
-msgid "Tiled/Scaled"
-msgstr "આધારીત/પ્રમાણિત"
-
-#: themer/main.c:1003 engines/zootreeves.c:1658
 msgid "Title Bar"
 msgstr "મથાળા પટ્ટી"
 
-#: engines/zootreeves.c:1569
-msgid "Title Bar Part Pixmap"
-msgstr "મથાળા પટ્ટી નો ચિત્ર ભાગ"
+msgid "Screenshot"
+msgstr "પડદા ની છાપ(ફોટો)"
 
-#: engines/vrunner.c:635
-msgid "Title Glow"
-msgstr "મથાળા ની ચમક"
+msgid "Images"
+msgstr "છાપો"
 
-#: engines/zootreeves.c:1326
-msgid "Title Part Width"
-msgstr "મથાળા ના ભાગ ની પહોળાઇ"
+msgid "Information"
+msgstr "માહિતિ"
 
-#: themer/main.c:793
-msgid "Title-Text Font"
-msgstr "મથાળા ના અક્ષરો ના પ્રકાર (Font)"
+msgid ""
+"NOTE - These settings are not part of themes, they are stored separately, "
+"and control various UI preferences for Emerald."
+msgstr ""
+"સુચના - આ ગોઠવણીઓ વિષય આધારિત સાજ-સજ્જાઓ (themes) નો ભાગ નથી, તેનો અલગ થી સંગ્રહ "
+"કરેલો છે,અને એમરલ્ડ(Emerald) ના માટે ની વિવિધ વપરાશ કાર(UI) ની પસદંગીઓ પર નો અંકુશ."
 
-#: themer/main.c:821
-msgid "Title-bar Object Layout"
-msgstr "મથાળાપટ્ટી ની વસ્તુ ની ગોઠવણ "
+msgid "Show Tooltips for Buttons"
+msgstr "બટન વિષે ની માહિતિ બતાવો"
 
-#: themer/main.c:1188
-msgid "Titlebar"
-msgstr "મથાળાપટ્ટી "
+msgid "Use Decoration Cropping"
+msgstr ""
 
-#: themer/main.c:1125
-msgid "Titlebar Double-Click Action"
-msgstr "મથાળાપટ્ટી પર બે વાાર દબાાવવા(Click) થી થતી ક્રિયાા "
-
-#: engines/zootreeves.c:1631
-msgid "Titlebar Pixmap"
-msgstr "મથાળાપટ્ટી નુ ચિત્ર"
-
-#: engines/zootreeves.c:1436
-msgid "Titlebar Rounding Radius"
-msgstr "મથાળાપટ્ટી ગોળાઇ ની ત્રિજ્યા"
-
-#: engines/legacy.c:370 engines/oxygen.c:428 engines/pixmap.c:526
-#: engines/truglass.c:525 engines/vrunner.c:647 engines/zootreeves.c:1528
-msgid "Titlebar Separator"
-msgstr "મથાળાપટ્ટી વિભાજક"
-
-#: themer/main.c:944
-msgid "Top"
-msgstr "ટોચ"
-
-#: engines/zootreeves.c:1293
-msgid "Top Corner Offset (%)"
-msgstr "ટોચ ના ખુણા ના ઉભુ અંતર (%)"
-
-#: engines/pixmap.c:489
-msgid "Top Rounding Radius"
-msgstr "ગોળાઇ ની ત્રિજ્યા"
-
-#: engines/zootreeves.c:1368
-msgid "Turn Off repeating gradients when maximised?"
-msgstr "જ્યાારે મહત્તમ હોય ત્યારે, કોણ પુનરાવર્તન બંધ કરવુ? "
-
-#: themer/main.c:167 themer/main.c:173
-msgid "Unknown"
-msgstr "અજ્ઞાત"
-
-#: themer/main.c:897
-msgid "Untitled Theme"
-msgstr "મથાળાવિહિન વિષય આધારિત સાજ-સજ્જા (Theme)"
-
-#: engines/truglass.c:519
-msgid "Upper Glass Glow"
-msgstr "ઉપર ના કાચ નુ તેજ"
-
-#: engines/truglass.c:517
-msgid "Upper Titlebar Glow"
-msgstr "ઉપરી મથાળપટ્ટી નુ તેજ"
-
-#: themer/main.c:1090
 msgid "Use Button Fade"
 msgstr "બટન વિસર્જન રાખવુ "
 
-#: themer/main.c:1094
 msgid "Use Button Fade Pulse"
 msgstr "બટન વિસર્જન કાળ રાખવુ"
 
-#: themer/main.c:686
-msgid "Use Button Halo/Glow"
-msgstr "બટન નુ તેજ રાખવુ"
+msgid "Button Fade Total Duration"
+msgstr "કુલ બટન વિસર્જન કાર્ય કાળ"
 
-#: themer/main.c:690
-msgid "Use Button Halo/Glow For Inactive Windows"
-msgstr "બટન નુ તેજ બિનકાર્યરત ચોકઠા/માાહિતિ દ્વાર (Window) માટે રાખવુ"
+msgid "Button Fade Step Duration"
+msgstr "બટન વિસર્જન કાર્ય કાળ "
 
-#: engines/vrunner.c:629
-msgid "Use Glow"
-msgstr "તેજ રાખવુ"
+msgid "Button Pulse Wait Duration"
+msgstr "બટન ની ધારા નો વાટ સમય"
 
-#: themer/main.c:682
-msgid "Use Pixmap Buttons"
-msgstr "બટન ચિત્ર રાખવુ"
+msgid "Button Pulse Min Opacity %"
+msgstr "બટન ની ધારા ની ન્યુનતમ દૃશ્યાતા %"
 
-#: themer/main.c:829
-msgid ""
-"Use colons to separate left, center, and right.\n"
-"Anything after a third colon is ignored.\n"
-"C=Close, N=Minimize, X/R=Restore\n"
-"I=Icon, T=Title, H=Help, M=Menu\n"
-"S=Shade, U/A=On Top(Up/Above)\n"
-"Y=Sticky, (#)=# pixels space, ex: (5)\n"
+msgid "Titlebar Double-Click Action"
+msgstr "મથાળાપટ્ટી પર બે વાાર દબાાવવા(Click) થી થતી ક્રિયાા "
+
+msgid "Button Hover Cursor"
+msgstr "બટન નિર્દેશક"
+
+msgid "Normal"
+msgstr "સામન્ય"
+
+msgid "Pointing Finger"
+msgstr "અંગુલિ નિર્દેશ"
+
+msgid "Frame Engine"
+msgstr "માળખા/ચોકઠા યંત્ર"
+
+msgid "Buttons"
+msgstr "બટનો/ચાંપો"
+
+msgid "Frame/Shadows"
+msgstr "માળખુ/ઝાંખી"
+
+msgid "Titlebar"
+msgstr "મથાળાપટ્ટી "
+
+msgid "Theme"
+msgstr "વિષય આધારિત સાજ-સજ્જા (Theme)"
+
+msgid "Edit"
+msgstr "સુધારો-વધારો"
+
+msgid "Import Theme..."
+msgstr "વિષય આધારિત સાજ-સજ્જાઓ (Theme) ... ની આયાત"
+
+msgid "Search:"
+msgstr "શોધ/ખોજ"
+
+msgid "Fetching Themes"
 msgstr ""
 
-#: themer/main.c:807
-msgid "Vertical Button Offset"
-msgstr "બટન નુ ઉભુ અંતર"
+msgid ""
+"Fetching themes... \n"
+"This may take time depending on \n"
+"internet connection speed."
+msgstr ""
 
-#: engines/zootreeves.c:1497
-msgid "Vertical Repeat?"
-msgstr "ઉભુ પુનરાવર્તન?"
+msgid ""
+"Here are the repositories that you can fetch Emerald Themes from. \n"
+"Fetching themes would fetch and import themes from SVN repositories \n"
+"You need Subversion package installed to use this feature."
+msgstr ""
 
-#: themer/main.c:179
-msgid "Whatever (no hint)"
-msgstr "જે પણ (સુચન નહી)"
+msgid ""
+"This repository contains GPL'd themes that can be used under \n"
+"the terms of GNU GPL licence v2.0 or later \n"
+msgstr ""
 
-#: engines/pixmap.c:650
+msgid ""
+"This repository contains non-GPL'd themes. They might infringe \n"
+"copyrights and patent laws in some countries."
+msgstr ""
+
+msgid ""
+"To activate Non-GPL repository please run the following in shell and accept "
+"the server ceritficate permanently: \n"
+"svn ls https://svn.generation.no/emerald-themes."
+msgstr ""
+
+msgid "Themes"
+msgstr "વિષય આધારિત સાજ-સજ્જાઓ (Themes)"
+
+#, fuzzy
+msgid "Edit Themes"
+msgstr "વિષય આધારિત સાજ-સજ્જાઓ (Themes)"
+
+msgid "Repositories"
+msgstr ""
+
+#, fuzzy
+msgid "Themes Settings"
+msgstr "એમરલ્ડ(Emerald) ગોઠવણીોોોોોાાાાાાાોોોોોોાાાોોાોોાાાાાાાાાાઓ "
+
+msgid "Emerald Settings"
+msgstr "એમરલ્ડ(Emerald) ગોઠવણીોોોોોાાાાાાાોોોોોોાાાોોાોોાાાાાાાાાાઓ "
+
+msgid ""
+"Select\n"
+"Engine"
+msgstr ""
+
+msgid "Based on original gnome-window-decorator"
+msgstr "અસલ gnome(જિનોમ)-ચોકઠુ-શણગારક  આધારિત"
+
+msgid "Round Top Left Corner"
+msgstr "ઉપરી ડાબા ખુણા ને ગોળ કરવો"
+
+msgid "Round Top Right Corner"
+msgstr "ઉપરી જમાણા ખુણા ને ગોળ કરવો"
+
+msgid "Round Bottom Left Corner"
+msgstr "તળીયા ના ડાબા ખુણા ને ગોળ કરવો"
+
+msgid "Round Bottom Right Corner"
+msgstr "તળીયા ના જમણા ખુણા ને ગોળ કરવો"
+
+msgid "Rounding Radius"
+msgstr "ગોળાઇ ની ત્રિજ્યા/ત્રિજયાા ની સંખ્યાા ને પુર્ણ કરવી "
+
+msgid "Outer Frame Blend"
+msgstr "બહારી માળાખા નો ભાગ"
+
+msgid "Inner Frame Blend"
+msgstr "આંતરિક માળખા ના ભાગ"
+
+msgid "Outer Titlebar Blend"
+msgstr "બહારી મથાળાપટ્ટી નો ભાગ"
+
+msgid "Inner Titlebar Blend"
+msgstr "આંતરિક મથાળાપટ્ટી ના ભાગ"
+
+msgid "Titlebar Separator"
+msgstr "મથાળાપટ્ટી વિભાજક"
+
+msgid "Frame Outline"
+msgstr "માળખા/ચોકઠા સિમારેખા"
+
+msgid "Frame Highlight"
+msgstr "માળખા/ચોકઠા ની રૂપરેખાા"
+
+msgid "Frame Shadow"
+msgstr "માળખા/ચોકઠા ની ઝાંખી"
+
+msgid "Contents Outline"
+msgstr " સમાવેલ મુદ્દા ની સંક્ષિપ્ત ઝલક"
+
+msgid "Contents Highlight"
+msgstr " સમાવેલ મુદ્દા ની રૂપરેખા"
+
+msgid "Contents Shadow"
+msgstr "સમાવેલ મુદ્દા ની ઝાંખી "
+
+msgid "Frame"
+msgstr "માળખુ/ચોકઠુ"
+
+msgid "Designed to be vista-ish in nature"
+msgstr "વધુ સુંદર/સુઘડ (vista-ish) બનાવનુ સ્વભાવિક આયોજન "
+
+msgid "Base"
+msgstr "પાયો/મૂળ/આધાર"
+
+msgid "Glow"
+msgstr "તેજસ્વિતા/તેજ"
+
+msgid "Sides"
+msgstr "બાજુઓ"
+
+msgid "Everything done with customizable pixmaps!"
+msgstr "બધા જ  કાર્ય આગવા ચિત્ર સાથે થયેલ છે!"
+
+msgid "Top Rounding Radius"
+msgstr "ગોળાઇ ની ત્રિજ્યા"
+
+msgid "Bottom Rounding Radius"
+msgstr "તળીયા ની ગોળાઇ ની ત્રિજ્યા "
+
+#. Style : Use Tiled or Scaled pixmaps
+msgid "Scaled"
+msgstr "પ્રમાણિત"
+
+msgid "Not adjustable"
+msgstr "ગોઠવી ન શકાય તેવુ "
+
+msgid "Same as Active"
+msgstr "કાાર્યરત જેવુ"
+
+msgid "Pixmap"
+msgstr "ચિત્ર"
+
+msgid "Tiled/Scaled"
+msgstr "આધારીત/પ્રમાણિત"
+
 msgid "Width Override"
 msgstr "પહોળાઇ  ઉપરાછાપરી"
 
-#: themer/main.c:782
-msgid "X Offset"
-msgstr "X આડુ અંતર"
+msgid "Height Override"
+msgstr "માપ થી વધુ"
 
-#: themer/main.c:783
-msgid "Y Offset"
-msgstr "Y ઉભુ અંતર"
+msgid "Glassy effects for your windows"
+msgstr "ચોકઠા/માાહિતિ દ્વાર (Window) માાટે  પારદર્શીત અસરો"
 
-#: src/main.c:4185
-msgid "Close Window"
-msgstr "માાહિતિદ્વાર(Window) બંધ કરવુ"
+msgid "Glow Height"
+msgstr "તેજસ્વિતા નુ માપ"
 
-#: src/main.c:4186
-msgid "Maximize Window"
-msgstr "માાહિતિદ્વાર(Window) મહત્તમ કરવુ"
+msgid "Frame Base Color"
+msgstr "માળખા/ચોકઠા આધારિત રંગ"
 
-#: src/main.c:4187
-msgid "Restore Window"
-msgstr "માાહિતિદ્વાર(Window) પુન:સ્થાપિત કરવુ"
+msgid "Upper Titlebar Glow"
+msgstr "ઉપરી મથાળપટ્ટી નુ તેજ"
 
-#: src/main.c:4188
-msgid "Minimize Window"
-msgstr "માાહિતિદ્વાર(Window) લઘુત્તમ કરવુ"
+msgid "Upper Glass Glow"
+msgstr "ઉપર ના કાચ નુ તેજ"
 
-#: src/main.c:4189
-msgid "Context Help"
-msgstr "મદદ"
+msgid "Lower Glass Glow"
+msgstr "નિમ્ન કાચ નુ તેજ"
 
-#: src/main.c:4190
-msgid "Window Menu"
-msgstr "માાહિતિદ્વાર(Window) સૂચિ "
+msgid "Middle Glass Glow"
+msgstr "મધ્ય ભાગ નાા કાાચ નુ તેજ"
 
-#: src/main.c:4191
-msgid "Shade Window"
-msgstr "માાહિતિદ્વાર(Window) છાયા કરવી"
+msgid "Outer Glass Glow"
+msgstr "બહારી કાચ નુ તેજ"
 
-#: src/main.c:4192
-msgid "UnShade Window"
-msgstr "માાહિતિદ્વાર(Window) છાયા બંધ કરવી"
+msgid "Multiple gradients with somewhat glassy features too"
+msgstr "વિવિધ કોણો નો પારદર્શીત લાક્ષણિકતા સાથે નો દેખાવ "
 
-#: src/main.c:4193
-msgid "Set Above"
-msgstr "ઉપર નુ/ના ને નિશ્ર્ચિત કરવુ "
+msgid "Left Blend"
+msgstr "ડાબી બાજુ નો ભાાગ"
 
-#: src/main.c:4194
-msgid "UnSet Above"
-msgstr "ઉપર નુ/ના ને અનિશ્ર્ચિત કરવુ"
+msgid "Middle Blend"
+msgstr "મધ્ય ભાગ"
 
-#: src/main.c:4195
-msgid "Stick Window"
-msgstr "સ્થાયી માાહિતિદ્વાર(Window)"
+msgid "Right Blend"
+msgstr "જ્મણી બાજુ નો ભાગ"
 
-#: src/main.c:4196
-msgid "UnStick Window"
-msgstr "અસ્થાયી માાહિતિદ્વાર(Window)"
+msgid "Contrast"
+msgstr "તફાવત"
 
+msgid "(Color)"
+msgstr "(રંગ)"
+
+msgid "(Alpha)"
+msgstr "(ક/આલ્ફા)"
+
+msgid "Notch"
+msgstr "કાપ"
+
+msgid "Position"
+msgstr "સ્થિતિ"
+
+msgid "Curve"
+msgstr "વળાંક"
+
+msgid "Offset"
+msgstr "ઉભુ અંતર"
+
+msgid "Use Glow"
+msgstr "તેજ રાખવુ"
+
+msgid "Title Glow"
+msgstr "મથાળા ની ચમક"
+
+msgid "Evolved from the legacy engine"
+msgstr "નિયમ અનુસાર યંત્ર થી બનેલુ "
+
+msgid "Border Gap"
+msgstr "ધારો વચ્ચે નુ અંતર"
+
+msgid "Show Border when maximised?"
+msgstr "જ્યારે મહત્તમ હોય ત્યારે ધાર બતાવવી?"
+
+msgid "Show when minimised?"
+msgstr "જ્યારે લઘુત્તમ હોય ત્યારે બતાવવી કે બતાવવુ?"
+
+msgid "Minimised Border Size"
+msgstr "લઘુત્તમ ધાર નુ માાપ"
+
+msgid "Enable Left Bar Dip?"
+msgstr "ડાબી પટ્ટી ને છેક સુધી કાર્યરત કરવી છે?"
+
+msgid "Left Bar Radius"
+msgstr "ડાબી બાજુ ની પટ્ટી ત્રિજ્યાા"
+
+msgid "Enable Lower Bulge? (Useless at the moment, but will be used soon)"
+msgstr ""
+"નિમ્ન નિષ્કાષ (Lower Bulge) કાર્યરત કરવુ છે? (હાલ મા બિન ઉપયોગી છે, પણ ત્વરીત "
+"ઉપયોગી થશે)"
+
+msgid "Top Corner Offset (%)"
+msgstr "ટોચ ના ખુણા ના ઉભુ અંતર (%)"
+
+msgid "Enable Title Bar Dip?"
+msgstr "મથાળાપટ્ટી ને છેક સુધી કાર્યરત કરવી છે?"
+
+msgid "Enable Button Part?"
+msgstr "બટન નો ભાગ કાર્યરત કરવો છે?"
+
+msgid "Title Part Width"
+msgstr "મથાળા ના ભાગ ની પહોળાઇ"
+
+#, fuzzy
+msgid "Button Part Width)"
+msgstr "બટન ભાગ ની પહોળાઇ"
+
+msgid "Dip Corners Radius)"
+msgstr "ખૂણાઓ ના ઉંડાણ ની  ત્રિજ્યા)"
+
+msgid "Round Inside Corners As well?"
+msgstr "તે જ રીતે તળીયા ના આંતરિક ખુણાઓ ને ગોળ કરવા ?"
+
+msgid "Enable Different Maximised Colors?"
+msgstr "વિવધ રંગો ને પુષ્ક્ળ ઘેરા/ગાઢા કરવા છે?"
+
+msgid "Turn Off repeating gradients when maximised?"
+msgstr "જ્યાારે મહત્તમ હોય ત્યારે, કોણ પુનરાવર્તન બંધ કરવુ? "
+
+msgid "Round Top Left Corner?"
+msgstr "ઉપરી ડાબા ખુણા ને ગોળ કરવો છે?"
+
+msgid "Frame Rounding Radius"
+msgstr "માળખા/ચોકઠા ના ગોળાઇ ની ત્રિજ્યા "
+
+msgid "Titlebar Rounding Radius"
+msgstr "મથાળાપટ્ટી ગોળાઇ ની ત્રિજ્યા"
+
+msgid "Repeat Gradient?"
+msgstr "ખુણો ના માપ નુ પુનરાવર્તન?"
+
+msgid "Vertical Repeat?"
+msgstr "ઉભુ પુનરાવર્તન?"
+
+msgid "Diagonal Repeat?"
+msgstr "ખૂણે-ખૂણે થી ફરી જોડાણ ?"
+
+msgid "Repeat Frequency"
+msgstr "પુનરાવૃત્તિ"
+
+#. /////////////////////
+msgid "Enable Title Part Pixmap?"
+msgstr "મથાળા નો ચિત્ર ભાગ કાર્યરત કરવો છે?"
+
+msgid "Repeat Title Part Pixmap?"
+msgstr "મથાળા ભાગ ના ચિત્ર નુ પુનરાવર્તન? "
+
+msgid "Title Bar Part Pixmap"
+msgstr "મથાળા પટ્ટી નો ચિત્ર ભાગ"
+
+msgid "Choose Titlebar Part Pixmap"
+msgstr " મથાળાપટ્ટી  ના ચિત્ર ભાગ ની પસંદગી"
+
+#. /////////////////////////
+msgid "Enable Button Part Pixmap?"
+msgstr "બટન નો ચિત્ર ભાગ કાર્યરત કરવુ છે?"
+
+msgid "Repeat Button Part Pixmap?"
+msgstr "બટન ચિત્ર ભાગ નુ પુન: ઉપયોગ ?"
+
+msgid "Button Part Pixmap"
+msgstr "બટન ચિત્ર ભાગ "
+
+msgid "Choose Button Part Pixmap"
+msgstr "બટન ચિત્ર ભાગ ની પસંદગી"
+
+#. /////////////////////////
+msgid "Enable Titlebar Pixmap?"
+msgstr "મથાળાપટ્ટી નો ચિત્ર ભાગ કાર્યરત કરવો છે?"
+
+msgid "Repeat Titlebar Pixmap?"
+msgstr "મથાળાપટ્ટી ના ચિત્ર નુ પુનરાવર્તન?"
+
+msgid "Titlebar Pixmap"
+msgstr "મથાળાપટ્ટી નુ ચિત્ર"
+
+msgid "Choose Titlebar Pixmap"
+msgstr "મથાળાપટ્ટી  ના ચિત્ર ની પસંદગી"
+
+msgid "Active/Inactive"
+msgstr "કાર્યરત/બિનકાર્યરત "
+
+msgid "Maximised"
+msgstr "મહત્તમ"
+
+msgid "Corners"
+msgstr "ખૂણાાોાાાોોોોાાાૌ"
+
+msgid "Border Layout"
+msgstr "ધાર ની ગોઠવણ"
+
+msgid "Left Bar"
+msgstr "ડાબી બાજુ ની પટ્ટી"
+
+msgid "Pixmaps"
+msgstr "ચિત્રો"
+
+#~ msgid "Pixmaps (Active))"
+#~ msgstr "ચિત્રો (કાર્યરત)"
+
+#~ msgid "Pixmaps (Inactive)"
+#~ msgstr "ચિત્રો (બિનકાર્યરત)"
+
+#~ msgid "Theme Imported"
+#~ msgstr "આયાત કરેલી વિષય આધારિત સાજ-સજ્જા (Theme) "

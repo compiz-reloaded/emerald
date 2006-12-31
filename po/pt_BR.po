@@ -6,13 +6,69 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1\n"
 "Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
-"POT-Creation-Date: 2006-10-19 15:20+0530\n"
+"POT-Creation-Date: 2006-12-31 16:38+0530\n"
 "PO-Revision-Date: 2006-10-04 20:17+0100\n"
 "Last-Translator: DuD@ <duda@ariede.com.br>\n"
 "Language-Team: beryl-project <cyberorg@cyberorg.info>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#, fuzzy
+msgid "Close Window"
+msgstr "Janela Ativa"
+
+#, fuzzy
+msgid "Maximize Window"
+msgstr "Janela Inativa"
+
+#, fuzzy
+msgid "Restore Window"
+msgstr "Janela Ativa"
+
+#, fuzzy
+msgid "Minimize Window"
+msgstr "Janela Inativa"
+
+#, fuzzy
+msgid "Context Help"
+msgstr "Highlight dos conteúdos"
+
+msgid "Window Menu"
+msgstr ""
+
+#, fuzzy
+msgid "Shade Window"
+msgstr "Janela Inativa"
+
+#, fuzzy
+msgid "UnShade Window"
+msgstr "Janela Inativa"
+
+msgid "Set Above"
+msgstr ""
+
+msgid "UnSet Above"
+msgstr ""
+
+#, fuzzy
+msgid "Stick Window"
+msgstr "Janela Ativa"
+
+#, fuzzy
+msgid "UnStick Window"
+msgstr "Janela Inativa"
+
+#, c-format
+msgid "The window \"%s\" is not responding."
+msgstr ""
+
+msgid ""
+"Forcing this application to quit will cause you to lose any unsaved changes."
+msgstr ""
+
+msgid "_Force Quit"
+msgstr ""
 
 #, c-format
 msgid ""
@@ -29,7 +85,6 @@ msgstr ""
 "<b>Criado Por</b> %s\n"
 "<b>Usar Com</b> %s\n"
 "</small>"
-
 
 #, c-format
 msgid ""
@@ -248,6 +303,7 @@ msgstr "Esquerdo"
 msgid "Right"
 msgstr "Direito"
 
+#, fuzzy
 msgid ""
 "Note, when changing these values,\n"
 "it is advised that you do something\n"
@@ -258,7 +314,7 @@ msgid ""
 "This also applies to when you change\n"
 "the title-bar height through either\n"
 "the titlebar-min-height slider\n"
-"or the titlebar font setting."
+"or the titlebar font setting.\n"
 msgstr ""
 "Note, que ao mudar estes valores,\n"
 "recomenda-se que você faça algo\n"
@@ -355,11 +411,11 @@ msgstr "Tema"
 msgid "Edit"
 msgstr "Editar"
 
-msgid "Search:"
-msgstr "Procurar:"
-
 msgid "Import Theme..."
 msgstr "Importar Tema..."
+
+msgid "Search:"
+msgstr "Procurar:"
 
 msgid "Fetching Themes"
 msgstr "Buscando Temas"
@@ -380,11 +436,13 @@ msgid ""
 msgstr ""
 "Aqui estão os repositórios que você pode buscar temas do Emerald. \n"
 "Buscar temas buscaria e importaria temas dos repositórios de SVN \n"
-"Você necessita do pacote do Subversion instalado para usar esta característica."
+"Você necessita do pacote do Subversion instalado para usar esta "
+"característica."
 
+#, fuzzy
 msgid ""
 "This repository contains GPL'd themes that can be used under \n"
-"the terms of GNU GPL licence v2.0 or later"
+"the terms of GNU GPL licence v2.0 or later \n"
 msgstr ""
 "Este repositório contem os temas em GPL que podem ser usados sob \n"
 "os termos da licença v2.0 do GNU GPL ou inferiores"
@@ -401,8 +459,8 @@ msgid ""
 "the server ceritficate permanently: \n"
 "svn ls https://svn.generation.no/emerald-themes."
 msgstr ""
-"Para ativar o repositório Não-GPL, por favor execute a seguinte linha e aceite "
-"o ceritficato de usuário permanentemente: \n"
+"Para ativar o repositório Não-GPL, por favor execute a seguinte linha e "
+"aceite o ceritficato de usuário permanentemente: \n"
 "svn ls https://svn.generation.no/emerald-themes."
 
 msgid "Themes"
@@ -419,6 +477,11 @@ msgstr "Configurações dos Temas"
 
 msgid "Emerald Settings"
 msgstr "Configurações do Emerald"
+
+msgid ""
+"Select\n"
+"Engine"
+msgstr ""
 
 msgid "Based on original gnome-window-decorator"
 msgstr "Baseado no gnome-window-decorator original"
