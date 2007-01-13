@@ -1287,9 +1287,13 @@ static void reset_buttons_bg_and_fade(decor_t * d)
 		d->button_fade_info.pulsating[b_t] = 0;
 		d->button_region[b_t].base_x1 = -100;
 		d->button_region[b_t].glow_x1 = -100;
+		if (d->button_region[b_t].bg_pixmap)
+			gdk_pixmap_unref(d->button_region[b_t].bg_pixmap);
 		d->button_region[b_t].bg_pixmap = NULL;
 		d->button_region_inact[b_t].base_x1 = -100;
 		d->button_region_inact[b_t].glow_x1 = -100;
+		if (d->button_region_inact[b_t].bg_pixmap)
+			gdk_pixmap_unref(d->button_region_inact[b_t].bg_pixmap);
 		d->button_region_inact[b_t].bg_pixmap = NULL;
 		d->button_last_drawn_state[b_t] = 0;
 	}
@@ -1939,7 +1943,7 @@ static void draw_window_decoration_real(decor_t * d, gboolean shadow_time)
 				break;
 			}
 		}
-		if (bg_pixmaps_update_needed)
+		if (bg_pixmaps_update_needed && !shadow_time)
 		{
 			for (b_t = 0; b_t < B_T_COUNT; b_t++)
 			{
