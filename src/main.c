@@ -2085,7 +2085,7 @@ static void draw_window_decoration_real(decor_t * d, gboolean shadow_time)
 
 	if (d->buffer_pixmap)
 	{
-		if (d->draw_only_buttons_region && d->min_drawn_buttons_region.x1 < 10000)	// if region is updated at least once
+		/*if (d->draw_only_buttons_region && d->min_drawn_buttons_region.x1 < 10000)	// if region is updated at least once
 		{
 			gdk_draw_drawable(d->pixmap,
 							  d->gc,
@@ -2099,7 +2099,7 @@ static void draw_window_decoration_real(decor_t * d, gboolean shadow_time)
 							  d->min_drawn_buttons_region.y2 -
 							  d->min_drawn_buttons_region.y1);
 		}
-		else
+		else*/
 		{
 			gdk_draw_drawable(d->pixmap,
 							  d->gc,
