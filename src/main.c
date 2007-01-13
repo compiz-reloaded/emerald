@@ -1635,7 +1635,7 @@ static void draw_buttons_without_fade(decor_t * d, cairo_t * cr, double y1)
 	int necessary_update_type[B_T_COUNT];	// 0: none, 1: only base, 2: base+glow
 
 	for (b_t = 0; b_t < B_T_COUNT; b_t++)
-		necessary_update_type[b_t] = 0;
+		necessary_update_type[b_t] = 2;
 
 	for (b_t = 0; b_t < B_T_COUNT; b_t++)
 	{
@@ -1660,19 +1660,19 @@ static void draw_buttons_without_fade(decor_t * d, cairo_t * cr, double y1)
 					if (d->button_region[b_t].overlap_buttons[b_t2] &&
 						necessary_update_type[b_t2] == 0)
 					{
-						necessary_update_type[b_t2] = 1;
+						necessary_update_type[b_t2] = 2;
 					}
 				}
 			}
 			else
-				necessary_update_type[b_t] = 1;
+				necessary_update_type[b_t] = 2;
 		}
 		else if (!d->draw_only_buttons_region ||
 				 b_state == S_ACTIVE_PRESS || b_state == S_INACTIVE_PRESS ||
 				 d->button_last_drawn_state[b_t] == S_ACTIVE_PRESS ||
 				 d->button_last_drawn_state[b_t] == S_INACTIVE_PRESS)
 		{
-			necessary_update_type[b_t] = 1;
+			necessary_update_type[b_t] = 2;
 		}
 		d->button_last_drawn_state[b_t] = b_state;
 	}
