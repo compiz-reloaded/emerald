@@ -3020,16 +3020,14 @@ static void update_event_windows(WnckWindow * win)
 	gdk_error_trap_pop();
 }
 
-#if HAVE_WNCK_WINDOW_HAS_NAME && 0
+#if HAVE_WNCK_WINDOW_HAS_NAME
 static const char *wnck_window_get_real_name(WnckWindow * win)
 {
-	return wnck_window_has_name(win) ? wnck_window_get_name(win) : "noname";
+	return wnck_window_has_name(win) ? wnck_window_get_name(win) : NULL;
 }
-
 #define wnck_window_get_name(w) wnck_window_get_real_name(w)
-#else
-#define wnck_window_get_real_name(w) wnck_window_get_name(w)
 #endif
+
 gint max_window_name_width(WnckWindow * win)
 {
 	decor_t *d = g_object_get_data(G_OBJECT(win), "decor");
@@ -4576,12 +4574,17 @@ static void show_force_quit_dialog(WnckWindow * win, Time timestamp)
 {
 	decor_t *d = g_object_get_data(G_OBJECT(win), "decor");
 	GtkWidget *dialog;
-	gchar *str, *tmp;
+	gchar *str, *tmp; 
+	const gchar *name;
 
 	if (d->force_quit_dialog)
 		return;
 
-	tmp = g_markup_escape_text(wnck_window_get_name(win), -1);
+	name = wnck_window_get_name(win);
+	if (!name)
+		name = "";
+
+	tmp = g_markup_escape_text(name, -1);
 	str = g_strdup_printf(_("The window \"%s\" is not responding."), tmp);
 
 	g_free(tmp);
