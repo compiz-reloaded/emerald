@@ -2456,7 +2456,7 @@ static void draw_switcher_foreground(decor_t * d)
 		// fix too long title text in switcher
 		// using ellipsize instead of cutting off text
 		pango_layout_set_ellipsize(d->layout, PANGO_ELLIPSIZE_END);
-		pango_layout_set_width(d->layout, d->width * 850);
+		pango_layout_set_width(d->layout, d->width * PANGO_SCALE);
 
 		cairo_set_operator(cr, CAIRO_OPERATOR_OVER);
 
