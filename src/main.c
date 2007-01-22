@@ -1171,7 +1171,7 @@ draw_pixbuf(GdkPixbuf * pixbuf, cairo_t * cr,
 			gdouble x, gdouble y, gdouble x2, gdouble y2, gdouble alpha)
 {
 	cairo_save(cr);
-	cairo_rectangle(cr, x, y, x2, y2);
+	cairo_rectangle(cr, x, y, x2-x, y2-y);
 	cairo_clip(cr);
 	gdk_cairo_set_source_pixbuf(cr, pixbuf, x, y);
 	cairo_paint_with_alpha(cr, alpha);
@@ -1186,7 +1186,7 @@ draw_button_with_glow_alpha_bstate(gint b_t, decor_t * d, cairo_t * cr,
 	gdouble x, y;
 	gdouble x2, y2;
 	gdouble glow_x, glow_y;		// glow top left coordinates
-	gdouble glow_x2, glow_y2;	// glow top left coordinates
+	gdouble glow_x2, glow_y2;	// glow bottom right coordinates
 	window_settings *ws = d->fs->ws;
 
 	if (b_state < 0)
