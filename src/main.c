@@ -575,7 +575,7 @@ my_set_window_quads(quad * q,
 	int nq;
 	int mnq = 0;
 
-	if (!max_vert || !ws->use_decoration_cropping)
+	if (!max_vert || !max_horz || !ws->use_decoration_cropping)
 	{
 		//TOP QUAD
 		nq = my_add_quad_row(q, width, ws->left_space, ws->right_space,
@@ -589,6 +589,21 @@ my_set_window_quads(quad * q,
 		nq = my_add_quad_row(q, width, ws->left_space, ws->right_space,
 							 ws->bottom_space, GRAVITY_SOUTH, 0,
 							 height - ws->bottom_space);
+		q += nq;
+		mnq += nq;
+
+		nq = my_add_quad_col(q, height -
+							 (ws->titlebar_height + ws->top_space +
+							  ws->bottom_space), ws->left_space, GRAVITY_WEST,
+							 0, ws->top_space + ws->titlebar_height);
+		q += nq;
+		mnq += nq;
+
+		nq = my_add_quad_col(q, height -
+							 (ws->titlebar_height + ws->top_space +
+							  ws->bottom_space), ws->right_space,
+							 GRAVITY_EAST, width - ws->right_space,
+							 ws->top_space + ws->titlebar_height);
 		q += nq;
 		mnq += nq;
 	}
@@ -612,24 +627,6 @@ my_set_window_quads(quad * q,
 		q->m.yx = 0;
 		q++;
 		mnq++;
-	}
-
-	if (!max_horz || !ws->use_decoration_cropping)
-	{
-		nq = my_add_quad_col(q, height -
-							 (ws->titlebar_height + ws->top_space +
-							  ws->bottom_space), ws->left_space, GRAVITY_WEST,
-							 0, ws->top_space + ws->titlebar_height);
-		q += nq;
-		mnq += nq;
-
-		nq = my_add_quad_col(q, height -
-							 (ws->titlebar_height + ws->top_space +
-							  ws->bottom_space), ws->right_space,
-							 GRAVITY_EAST, width - ws->right_space,
-							 ws->top_space + ws->titlebar_height);
-		q += nq;
-		mnq += nq;
 	}
 
 	return mnq;
