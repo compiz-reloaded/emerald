@@ -600,9 +600,9 @@ set_shadow_quads(decor_quad_t * q, gint width, gint height, window_settings * ws
 	n = decor_set_vert_quad_row(q,
 			0, ws->shadow_top_corner_space, 0, ws->shadow_bottom_corner_space,
 			-ws->shadow_left_space, 0, GRAVITY_WEST,
+			height - ws->shadow_top_space - ws->shadow_bottom_space, 
 			(ws->shadow_top_corner_space - ws->shadow_bottom_corner_space) >> 1,
-			0, height - ws->shadow_top_space - ws->shadow_bottom_space, 
-			0.0, ws->shadow_top_space, FALSE);
+			0, 0.0, ws->shadow_top_space, FALSE);
 
 	q += n;
 	nQuad += n;
@@ -611,9 +611,9 @@ set_shadow_quads(decor_quad_t * q, gint width, gint height, window_settings * ws
 	n = decor_set_vert_quad_row(q,
 			0, ws->shadow_top_corner_space, 0, ws->shadow_bottom_corner_space, 0,
 			ws->shadow_right_space, GRAVITY_EAST,
+			height - ws->shadow_top_space - ws->shadow_bottom_space,
 			(ws->shadow_top_corner_space - ws->shadow_bottom_corner_space) >> 1,
-			0, height - ws->shadow_top_space - ws->shadow_bottom_space,
-			width - ws->shadow_right_space, ws->shadow_top_space, FALSE);
+			0, width - ws->shadow_right_space, ws->shadow_top_space, FALSE);
 
 	q += n;
 	nQuad += n;
