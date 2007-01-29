@@ -4,7 +4,7 @@
 #include <config.h>
 #endif
 
-#include <beryl/beryl-decoration.h>
+#include <beryl-decoration.h>
 
 #include <X11/Xlib.h>
 #include <X11/Xatom.h>
