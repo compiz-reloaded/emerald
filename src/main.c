@@ -100,7 +100,6 @@ static Atom emerald_sigusr1_atom;
 static Atom utf8_string_atom;
 
 static Atom dm_name_atom;
-static Atom dm_sn_atom;
 
 static Time dm_sn_timestamp;
 
@@ -142,44 +141,6 @@ static guint draw_idle_id = 0;
 
 static gboolean enable_tooltips = TRUE;
 static gchar *engine = NULL;
-
-/*
-   decoration property
-   -------------------
-
-   data[0] = version
-
-   data[1] = pixmap
-
-   data[2] = input left
-   data[3] = input right
-   data[4] = input top
-   data[5] = input bottom
-
-   data[6] = input left when maximized
-   data[7] = input right when maximized
-   data[8] = input top when maximized
-   data[9] = input bottom when maximized
- 
-   data[10] = min width
-   data[11] = min height
-
-   flags
-
-   1st to 4nd bit p1 gravity, 5rd to 8th bit p2 gravity,
-   9rd and 10th bit alignment, 11rd and 12th bit clamp,
-   13th bit XX, 14th bit XY, 15th bit YX, 16th bit YY.
-
-   data[11 + n * 9 + 1] = flags
-   data[11 + n * 9 + 2] = p1 x
-   data[11 + n * 9 + 3] = p1 y
-   data[11 + n * 9 + 4] = p2 x
-   data[11 + n * 9 + 5] = p2 y
-   data[11 + n * 9 + 6] = widthMax
-   data[11 + n * 9 + 7] = heightMax
-   data[11 + n * 9 + 8] = x0
-   data[11 + n * 9 + 9] = y0
-   */
 
 static gint get_b_offset(gint b_t)
 {
@@ -283,197 +244,8 @@ static void update_window_extents(window_settings * ws)
 	};
 	memcpy(ws->pos, newpos, sizeof(pos_t) * 9);
 }
-static void
-decoration_to_property(long *data,
-					   Pixmap pixmap,
-					   extents * input,
-					   extents * maxinput,
-					   int min_width, int min_height, quad * quad, int nQuad)
-{
-	*data++ = DECOR_INTERFACE_VERSION;
 
-	memcpy(data++, &pixmap, sizeof(Pixmap));
-
-	*data++ = input->left;
-	*data++ = input->right;
-	*data++ = input->top;
-	*data++ = input->bottom;
-
-	*data++ = maxinput->left;
-	*data++ = maxinput->right;
-	*data++ = maxinput->top;
-	*data++ = maxinput->bottom;
-
-	*data++ = min_width;
-	*data++ = min_height;
-
-	while (nQuad--)
-	{
-		*data++ =
-				(quad->p1.gravity << 0) |
-				(quad->p2.gravity << 4) |
-				(quad->align << 8) |
-				(quad->clamp << 10) |
-				(quad->m.xx ? XX_MASK : 0) |
-				(quad->m.xy ? XY_MASK : 0) |
-				(quad->m.yx ? YX_MASK : 0) | (quad->m.yy ? YY_MASK : 0);
-
-		*data++ = quad->p1.x;
-		*data++ = quad->p1.y;
-		*data++ = quad->p2.x;
-		*data++ = quad->p2.y;
-		*data++ = quad->max_width;
-		*data++ = quad->max_height;
-		*data++ = quad->m.x0;
-		*data++ = quad->m.y0;
-
-		quad++;
-	}
-}
-
-static gint
-set_horz_quad_line(quad * q,
-				   int left,
-				   int left_corner,
-				   int right,
-				   int right_corner,
-				   int top,
-				   int bottom, int gravity, int width, double x0, double y0)
-{
-	gint dx;
-
-	dx = (left_corner - right_corner) >> 1;
-
-	q->p1.x = -left;
-	q->p1.y = top;				// opt: never changes
-	q->p1.gravity = gravity | GRAVITY_WEST;
-	q->p2.x = dx;
-	q->p2.y = bottom;			// opt: never changes
-	q->p2.gravity = gravity;
-	q->max_width = left + left_corner;
-	q->max_height = SHRT_MAX;	// opt: never changes
-	q->align = ALIGN_LEFT;
-	q->clamp = 0;				// opt: never changes
-	q->m.xx = 1.0;
-	q->m.xy = 0.0;				// opt: never changes
-	q->m.yx = 0.0;				// opt: never changes
-	q->m.yy = 1.0;				// opt: never changes
-	q->m.x0 = x0;
-	q->m.y0 = y0;				// opt: never changes
-
-	q++;
-
-	q->p1.x = left_corner;
-	q->p1.y = top;
-	q->p1.gravity = gravity | GRAVITY_WEST;
-	q->p2.x = -right_corner;
-	q->p2.y = bottom;
-	q->p2.gravity = gravity | GRAVITY_EAST;
-	q->max_width = SHRT_MAX;
-	q->max_height = SHRT_MAX;
-	q->align = 0;
-	q->clamp = 0;
-	q->m.xx = 0.0;
-	q->m.xy = 0.0;
-	q->m.yx = 0.0;
-	q->m.yy = 1.0;
-	q->m.x0 = x0 + left + left_corner;
-	q->m.y0 = y0;
-
-	q++;
-
-	q->p1.x = dx;
-	q->p1.y = top;
-	q->p1.gravity = gravity;
-	q->p2.x = right;
-	q->p2.y = bottom;
-	q->p2.gravity = gravity | GRAVITY_EAST;
-	q->max_width = right_corner + right;
-	q->max_height = SHRT_MAX;
-	q->align = ALIGN_RIGHT;
-	q->clamp = 0;
-	q->m.xx = 1.0;
-	q->m.xy = 0.0;
-	q->m.yx = 0.0;
-	q->m.yy = 1.0;
-	q->m.x0 = x0 + width;
-	q->m.y0 = y0;
-
-	return 3;
-}
-
-static gint
-set_vert_quad_row(quad * q,
-				  int top,
-				  int top_corner,
-				  int bottom,
-				  int bottom_corner,
-				  int left,
-				  int right, int gravity, int height, double x0, double y0)
-{
-	gint dy;
-
-	dy = (top_corner - bottom_corner) >> 1;
-
-	q->p1.x = left;				// opt: never changes
-	q->p1.y = -top;
-	q->p1.gravity = gravity | GRAVITY_NORTH;
-	q->p2.x = right;			// opt: never changes
-	q->p2.y = dy;
-	q->p2.gravity = gravity;
-	q->max_width = SHRT_MAX;	// opt: never changes
-	q->max_height = top + top_corner;
-	q->align = ALIGN_TOP;
-	q->clamp = CLAMP_VERT;		// opt: never changes
-	q->m.xx = 1.0;				// opt: never changes
-	q->m.xy = 0.0;				// opt: never changes
-	q->m.yx = 0.0;				// opt: never changes
-	q->m.yy = 1.0;
-	q->m.x0 = x0;				// opt: never changes
-	q->m.y0 = y0;
-
-	q++;
-
-	q->p1.x = left;
-	q->p1.y = top_corner;
-	q->p1.gravity = gravity | GRAVITY_NORTH;
-	q->p2.x = right;
-	q->p2.y = -bottom_corner;
-	q->p2.gravity = gravity | GRAVITY_SOUTH;
-	q->max_width = SHRT_MAX;
-	q->max_height = SHRT_MAX;
-	q->align = 0;
-	q->clamp = CLAMP_VERT;
-	q->m.xx = 1.0;
-	q->m.xy = 0.0;
-	q->m.yx = 0.0;
-	q->m.yy = 0.0;
-	q->m.x0 = x0;
-	q->m.y0 = y0 + top + top_corner;
-
-	q++;
-
-	q->p1.x = left;
-	q->p1.y = dy;
-	q->p1.gravity = gravity;
-	q->p2.x = right;
-	q->p2.y = bottom;
-	q->p2.gravity = gravity | GRAVITY_SOUTH;
-	q->max_width = SHRT_MAX;
-	q->max_height = bottom_corner + bottom;
-	q->align = ALIGN_BOTTOM;
-	q->clamp = CLAMP_VERT;
-	q->m.xx = 1.0;
-	q->m.xy = 0.0;
-	q->m.yx = 0.0;
-	q->m.yy = 1.0;
-	q->m.x0 = x0;
-	q->m.y0 = y0 + height;
-
-	return 3;
-}
-
-static int my_add_quad_row(quad * q,
+static int my_add_quad_row(decor_quad_t * q,
 						   int width,
 						   int left,
 						   int right, int ypush, int vgrav, int x0, int y0)
@@ -540,7 +312,7 @@ static int my_add_quad_row(quad * q,
 
 	return 3;
 }
-static int my_add_quad_col(quad * q,
+static int my_add_quad_col(decor_quad_t * q,
 						   int height, int xpush, int hgrav, int x0, int y0)
 {
 	int p1x = (hgrav == GRAVITY_WEST) ? -xpush : 0;
@@ -566,7 +338,7 @@ static int my_add_quad_col(quad * q,
 	return 1;
 }
 static int
-my_set_window_quads(quad * q,
+my_set_window_quads(decor_quad_t * q,
 					int width,
 					int height,
 					window_settings * ws,
@@ -676,10 +448,10 @@ static void decor_update_window_property(decor_t * d)
 	long data[256];
 	Display *xdisplay = GDK_DISPLAY_XDISPLAY(gdk_display_get_default());
 	window_settings *ws = d->fs->ws;
-	extents maxextents;
-	extents extents = ws->win_extents;
+	decor_extents_t maxextents;
+	decor_extents_t extents = ws->win_extents;
 	gint nQuad;
-	quad quads[N_QUADS_MAX];
+	decor_quad_t quads[N_QUADS_MAX];
 	gboolean hm = False;
 	gboolean vm = False;
 
@@ -699,7 +471,7 @@ static void decor_update_window_property(decor_t * d)
 	else
 		maxextents = extents;
 
-	decoration_to_property(data, GDK_PIXMAP_XID(d->pixmap),
+	decor_quads_to_property(data, GDK_PIXMAP_XID(d->pixmap),
 						   &extents, &maxextents, 0, 0, quads, nQuad);
 
 	gdk_error_trap_push();
@@ -713,7 +485,7 @@ static void decor_update_window_property(decor_t * d)
 }
 
 static int
-set_switcher_quads(quad * q, int width, int height, window_settings * ws)
+set_switcher_quads(decor_quad_t * q, int width, int height, window_settings * ws)
 {
 	gint n, nQuad = 0;
 
@@ -739,33 +511,23 @@ set_switcher_quads(quad * q, int width, int height, window_settings * ws)
 	nQuad++;
 
 	/* left quads */
-	n = set_vert_quad_row(q,
-						  0,
-						  ws->switcher_top_corner_space,
-						  0,
-						  ws->bottom_corner_space,
-						  -ws->left_space,
-						  0,
-						  GRAVITY_WEST,
-						  height - ws->top_space - ws->titlebar_height -
-						  ws->bottom_space, 0.0,
-						  ws->top_space + SWITCHER_TOP_EXTRA);
+	n = decor_set_vert_quad_row(q, 
+			0, ws->switcher_top_corner_space, 0, ws->bottom_corner_space,
+			-ws->left_space, 0, GRAVITY_WEST,
+			height - ws->top_space - ws->titlebar_height - ws->bottom_space, 
+			(ws->switcher_top_corner_space - ws->switcher_bottom_corner_space) >> 1,
+			0, 0.0, ws->top_space + SWITCHER_TOP_EXTRA, FALSE);
 
 	q += n;
 	nQuad += n;
 
 	/* right quads */
-	n = set_vert_quad_row(q,
-						  0,
-						  ws->switcher_top_corner_space,
-						  0,
-						  ws->switcher_bottom_corner_space,
-						  0,
-						  ws->right_space,
-						  GRAVITY_EAST,
-						  height - ws->top_space - ws->titlebar_height -
-						  ws->bottom_space, width - ws->right_space,
-						  ws->top_space + SWITCHER_TOP_EXTRA);
+	n = decor_set_vert_quad_row(q, 
+			0, ws->switcher_top_corner_space, 0, ws->switcher_bottom_corner_space,
+			0, ws->right_space, GRAVITY_EAST,
+			height - ws->top_space - ws->titlebar_height - ws->bottom_space, 
+			(ws->switcher_top_corner_space - ws->switcher_bottom_corner_space) >> 1,
+			0, width - ws->right_space, ws->top_space + SWITCHER_TOP_EXTRA, FALSE);
 
 	q += n;
 	nQuad += n;
@@ -798,13 +560,13 @@ static void decor_update_switcher_property(decor_t * d)
 	long data[256];
 	Display *xdisplay = GDK_DISPLAY_XDISPLAY(gdk_display_get_default());
 	gint nQuad;
-	quad quads[N_QUADS_MAX];
+	decor_quad_t quads[N_QUADS_MAX];
 	window_settings *ws = d->fs->ws;
-	extents extents = ws->switcher_extents;
+	decor_extents_t extents = ws->switcher_extents;
 
 	nQuad = set_switcher_quads(quads, d->width, d->height, ws);
 
-	decoration_to_property(data, GDK_PIXMAP_XID(d->pixmap),
+	decor_quads_to_property(data, GDK_PIXMAP_XID(d->pixmap),
 						   &extents, &extents, 0, 0, quads, nQuad);
 
 	gdk_error_trap_push();
@@ -818,68 +580,51 @@ static void decor_update_switcher_property(decor_t * d)
 }
 
 static int
-set_shadow_quads(quad * q, gint width, gint height, window_settings * ws)
+set_shadow_quads(decor_quad_t * q, gint width, gint height, window_settings * ws)
 {
 	gint n, nQuad = 0;
 
 	/* top quads */
-	n = set_horz_quad_line(q,
-						   ws->shadow_left_space,
-						   ws->shadow_left_corner_space,
-						   ws->shadow_right_space,
-						   ws->shadow_right_corner_space,
-						   -ws->shadow_top_space,
-						   0, GRAVITY_NORTH, width, 0.0, 0.0);
+	n = decor_set_horz_quad_line(q,
+			ws->shadow_left_space, ws->shadow_left_corner_space,
+			ws->shadow_right_space, ws->shadow_right_corner_space,
+			-ws->shadow_top_space, 0, GRAVITY_NORTH, width, 
+			(ws->shadow_left_corner_space - ws->shadow_right_corner_space) >> 1,
+			0, 0.0, 0.0);
 
 	q += n;
 	nQuad += n;
 
 	/* left quads */
-	n = set_vert_quad_row(q,
-						  0,
-						  ws->shadow_top_corner_space,
-						  0,
-						  ws->shadow_bottom_corner_space,
-						  -ws->shadow_left_space,
-						  0,
-						  GRAVITY_WEST,
-						  height - ws->shadow_top_space -
-						  ws->shadow_bottom_space, 0.0, ws->shadow_top_space);
+	n = decor_set_vert_quad_row(q,
+			0, ws->shadow_top_corner_space, 0, ws->shadow_bottom_corner_space,
+			-ws->shadow_left_space, 0, GRAVITY_WEST,
+			height - ws->shadow_top_space - ws->shadow_bottom_space, 
+			(ws->shadow_top_corner_space - ws->shadow_bottom_corner_space) >> 1,
+			0, 0.0, ws->shadow_top_space, FALSE);
 
 	q += n;
 	nQuad += n;
 
 	/* right quads */
-	n = set_vert_quad_row(q,
-						  0,
-						  ws->shadow_top_corner_space,
-						  0,
-						  ws->shadow_bottom_corner_space,
-						  0,
-						  ws->shadow_right_space,
-						  GRAVITY_EAST,
-						  height - ws->shadow_top_space -
-						  ws->shadow_bottom_space,
-						  width - ws->shadow_right_space,
-						  ws->shadow_top_space);
+	n = decor_set_vert_quad_row(q,
+			0, ws->shadow_top_corner_space, 0, ws->shadow_bottom_corner_space, 0,
+			ws->shadow_right_space, GRAVITY_EAST,
+			height - ws->shadow_top_space - ws->shadow_bottom_space,
+			(ws->shadow_top_corner_space - ws->shadow_bottom_corner_space) >> 1,
+			0, width - ws->shadow_right_space, ws->shadow_top_space, FALSE);
 
 	q += n;
 	nQuad += n;
 
 	/* bottom quads */
-	n = set_horz_quad_line(q,
-						   ws->shadow_left_space,
-						   ws->shadow_left_corner_space,
-						   ws->shadow_right_space,
-						   ws->shadow_right_corner_space,
-						   0,
-						   ws->shadow_bottom_space,
-						   GRAVITY_SOUTH,
-						   width,
-						   0.0,
-						   ws->shadow_top_space +
-						   ws->shadow_top_corner_space +
-						   ws->shadow_bottom_corner_space + 1.0);
+	n = decor_set_horz_quad_line(q,
+			ws->shadow_left_space, ws->shadow_left_corner_space, 
+			ws->shadow_right_space, ws->shadow_right_corner_space, 0,
+			ws->shadow_bottom_space, GRAVITY_SOUTH, width,
+			(ws->shadow_left_corner_space - ws->shadow_right_corner_space) >> 1,
+			0, 0.0, ws->shadow_top_space + ws->shadow_top_corner_space +
+			ws->shadow_bottom_corner_space + 1.0);
 
 	nQuad += n;
 
@@ -2562,9 +2307,9 @@ update_default_decorations(GdkScreen * screen, frame_settings * fs_act,
 	Atom bareAtom, normalAtom, activeAtom;
 	decor_t d;
 	gint nQuad;
-	quad quads[N_QUADS_MAX];
+	decor_quad_t quads[N_QUADS_MAX];
 	window_settings *ws = fs_act->ws;	// hackish, I know, FIXME
-	extents extents = ws->win_extents;
+	decor_extents_t extents = ws->win_extents;
 
 	bzero(&d, sizeof(decor_t));
 
@@ -2582,8 +2327,8 @@ update_default_decorations(GdkScreen * screen, frame_settings * fs_act,
 
 		nQuad = set_shadow_quads(quads, width, height, ws);
 
-		decoration_to_property(data, GDK_PIXMAP_XID(ws->shadow_pixmap),
-							   &ws->shadow_extents, &ws->shadow_extents, 0, 0,
+		decor_quads_to_property(data, GDK_PIXMAP_XID(ws->shadow_pixmap),
+							   &ws->shadow_extents, &ws->shadow_extents, 0, 0, 
 							   quads, nQuad);
 
 		XChangeProperty(xdisplay, xroot,
@@ -2640,7 +2385,7 @@ update_default_decorations(GdkScreen * screen, frame_settings * fs_act,
 
 		(*d.draw) (&d);
 
-		decoration_to_property(data, GDK_PIXMAP_XID(d.p_inactive),
+		decor_quads_to_property(data, GDK_PIXMAP_XID(d.p_inactive),
 							   &extents, &extents, 0, 0, quads, nQuad);
 
 		XChangeProperty(xdisplay, xroot,
@@ -2649,7 +2394,7 @@ update_default_decorations(GdkScreen * screen, frame_settings * fs_act,
 						32, PropModeReplace, (guchar *) data,
 						BASE_PROP_SIZE + QUAD_PROP_SIZE * nQuad);
 
-		decoration_to_property(data, GDK_PIXMAP_XID(d.p_active),
+		decor_quads_to_property(data, GDK_PIXMAP_XID(d.p_active),
 							   &extents, &extents, 0, 0, quads, nQuad);
 
 		XChangeProperty(xdisplay, xroot,
@@ -2658,35 +2403,6 @@ update_default_decorations(GdkScreen * screen, frame_settings * fs_act,
 						32, PropModeReplace, (guchar *) data,
 						BASE_PROP_SIZE + QUAD_PROP_SIZE * nQuad);
 	}
-}
-
-static void set_dm_check_hint(GdkScreen * screen)
-{
-	XSetWindowAttributes attrs;
-	unsigned long data[1];
-	Window xroot;
-	GdkDisplay *gdkdisplay = gdk_display_get_default();
-	Display *xdisplay = gdk_x11_display_get_xdisplay(gdkdisplay);
-	Atom atom;
-
-	attrs.override_redirect = TRUE;
-	attrs.event_mask = PropertyChangeMask;
-
-	xroot = RootWindowOfScreen(gdk_x11_screen_get_xscreen(screen));
-
-	data[0] = XCreateWindow(xdisplay,
-							xroot,
-							-100, -100, 1, 1,
-							0,
-							CopyFromParent,
-							CopyFromParent,
-							(Visual *) CopyFromParent,
-							CWOverrideRedirect | CWEventMask, &attrs);
-
-	atom = XInternAtom(xdisplay, "_NET_SUPPORTING_DM_CHECK", FALSE);
-
-	XChangeProperty(xdisplay, xroot,
-					atom, XA_WINDOW, 32, PropModeReplace, (guchar *) data, 1);
 }
 
 static gboolean get_window_prop(Window xwindow, Atom atom, Window * val)
@@ -4638,214 +4354,6 @@ static void hide_force_quit_dialog(WnckWindow * win)
 	}
 }
 
-/* from fvwm2, Copyright Matthias Clasen, Dominik Vogt */
-static gboolean
-convert_property(Display * xdisplay, Window w, Atom target, Atom property)
-{
-
-#define N_TARGETS 4
-
-	Atom conversion_targets[N_TARGETS];
-	long icccm_version[] = { 2, 0 };
-
-	conversion_targets[0] = targets_atom;
-	conversion_targets[1] = multiple_atom;
-	conversion_targets[2] = timestamp_atom;
-	conversion_targets[3] = version_atom;
-
-	if (target == targets_atom)
-		XChangeProperty(xdisplay, w, property,
-						XA_ATOM, 32, PropModeReplace,
-						(unsigned char *)conversion_targets, N_TARGETS);
-	else if (target == timestamp_atom)
-		XChangeProperty(xdisplay, w, property,
-						XA_INTEGER, 32, PropModeReplace,
-						(unsigned char *)&dm_sn_timestamp, 1);
-	else if (target == version_atom)
-		XChangeProperty(xdisplay, w, property,
-						XA_INTEGER, 32, PropModeReplace,
-						(unsigned char *)icccm_version, 2);
-	else
-		return FALSE;
-
-	/* Be sure the PropertyNotify has arrived so we
-	 * can send SelectionNotify
-	 */
-	XSync(xdisplay, FALSE);
-
-	return TRUE;
-}
-
-static void handle_selection_request(Display * xdisplay, XEvent * event)
-{
-	XSelectionEvent reply;
-
-	reply.type = SelectionNotify;
-	reply.display = xdisplay;
-	reply.requestor = event->xselectionrequest.requestor;
-	reply.selection = event->xselectionrequest.selection;
-	reply.target = event->xselectionrequest.target;
-	reply.property = None;
-	reply.time = event->xselectionrequest.time;
-
-	if (event->xselectionrequest.target == multiple_atom)
-	{
-		if (event->xselectionrequest.property != None)
-		{
-			Atom type, *adata;
-			int i, format;
-			unsigned long num, rest;
-			unsigned char *data;
-
-			if (XGetWindowProperty(xdisplay,
-								   event->xselectionrequest.requestor,
-								   event->xselectionrequest.property,
-								   0, 256, FALSE,
-								   atom_pair_atom,
-								   &type, &format, &num, &rest,
-								   &data) != Success)
-				return;
-
-			/* FIXME: to be 100% correct, should deal with rest > 0,
-			 * but since we have 4 possible targets, we will hardly ever
-			 * meet multiple requests with a length > 8
-			 */
-			adata = (Atom *) data;
-			i = 0;
-			while (i < (int)num)
-			{
-				if (!convert_property(xdisplay,
-									  event->xselectionrequest.requestor,
-									  adata[i], adata[i + 1]))
-					adata[i + 1] = None;
-
-				i += 2;
-			}
-
-			XChangeProperty(xdisplay,
-							event->xselectionrequest.requestor,
-							event->xselectionrequest.property,
-							atom_pair_atom, 32, PropModeReplace, data, num);
-		}
-	}
-	else
-	{
-		if (event->xselectionrequest.property == None)
-			event->xselectionrequest.property =
-					event->xselectionrequest.target;
-
-		if (convert_property(xdisplay,
-							 event->xselectionrequest.requestor,
-							 event->xselectionrequest.target,
-							 event->xselectionrequest.property))
-			reply.property = event->xselectionrequest.property;
-	}
-
-	XSendEvent(xdisplay,
-			   event->xselectionrequest.requestor,
-			   FALSE, 0L, (XEvent *) & reply);
-}
-
-static void handle_selection_clear(Display * xdisplay, XEvent * xevent)
-{
-	if (xevent->xselectionclear.selection == dm_sn_atom)
-		exit(0);
-}
-
-static gboolean
-acquire_dm_session(Display * xdisplay,
-				   int screen, gboolean replace_current_dm)
-{
-	XEvent event;
-	XSetWindowAttributes attr;
-	Window current_dm_sn_owner, new_dm_sn_owner;
-	char buf[128];
-
-	sprintf(buf, "DM_S%d", screen);
-	dm_sn_atom = XInternAtom(xdisplay, buf, 0);
-
-	current_dm_sn_owner = XGetSelectionOwner(xdisplay, dm_sn_atom);
-
-	if (current_dm_sn_owner != None)
-	{
-		if (!replace_current_dm)
-		{
-			fprintf(stderr,
-					"%s: Screen %d on display \"%s\" already "
-					"has a decoration manager; try using the "
-					"--replace option to replace the current "
-					"decoration manager.\n",
-					program_name, screen, DisplayString(xdisplay));
-
-			return FALSE;
-		}
-
-		XSelectInput(xdisplay, current_dm_sn_owner, StructureNotifyMask);
-	}
-
-	attr.override_redirect = TRUE;
-	attr.event_mask = PropertyChangeMask;
-
-	new_dm_sn_owner =
-			XCreateWindow(xdisplay, XRootWindow(xdisplay, screen),
-						  -100, -100, 1, 1, 0,
-						  CopyFromParent, CopyFromParent,
-						  CopyFromParent,
-						  CWOverrideRedirect | CWEventMask, &attr);
-
-	XChangeProperty(xdisplay,
-					new_dm_sn_owner,
-					dm_name_atom,
-					utf8_string_atom, 8,
-					PropModeReplace, (unsigned char *)"gwd", strlen("gwd"));
-
-	XWindowEvent(xdisplay, new_dm_sn_owner, PropertyChangeMask, &event);
-
-	dm_sn_timestamp = event.xproperty.time;
-
-	XSetSelectionOwner(xdisplay, dm_sn_atom, new_dm_sn_owner,
-					   dm_sn_timestamp);
-
-	if (XGetSelectionOwner(xdisplay, dm_sn_atom) != new_dm_sn_owner)
-	{
-		fprintf(stderr,
-				"%s: Could not acquire decoration manager "
-				"selection on screen %d display \"%s\"\n",
-				program_name, screen, DisplayString(xdisplay));
-
-		XDestroyWindow(xdisplay, new_dm_sn_owner);
-
-		return FALSE;
-	}
-
-	/* Send client message indicating that we are now the DM */
-	event.xclient.type = ClientMessage;
-	event.xclient.window = XRootWindow(xdisplay, screen);
-	event.xclient.message_type = manager_atom;
-	event.xclient.format = 32;
-	event.xclient.data.l[0] = dm_sn_timestamp;
-	event.xclient.data.l[1] = dm_sn_atom;
-	event.xclient.data.l[2] = 0;
-	event.xclient.data.l[3] = 0;
-	event.xclient.data.l[4] = 0;
-
-	XSendEvent(xdisplay, XRootWindow(xdisplay, screen), FALSE,
-			   StructureNotifyMask, &event);
-
-	/* Wait for old decoration manager to go away */
-	if (current_dm_sn_owner != None)
-	{
-		do
-		{
-			XWindowEvent(xdisplay, current_dm_sn_owner,
-						 StructureNotifyMask, &event);
-		}
-		while (event.type != DestroyNotify);
-	}
-
-	return TRUE;
-}
-
 static GdkFilterReturn
 event_filter_func(GdkXEvent * gdkxevent, GdkEvent * event, gpointer data)
 {
@@ -5054,6 +4562,7 @@ selection_event_filter_func(GdkXEvent * gdkxevent,
 	Display *xdisplay;
 	GdkDisplay *gdkdisplay;
 	XEvent *xevent = gdkxevent;
+	int status;
 
 	gdkdisplay = gdk_display_get_default();
 	xdisplay = GDK_DISPLAY_XDISPLAY(gdkdisplay);
@@ -5061,10 +4570,13 @@ selection_event_filter_func(GdkXEvent * gdkxevent,
 	switch (xevent->type)
 	{
 	case SelectionRequest:
-		handle_selection_request(xdisplay, xevent);
+		decor_handle_selection_request(xdisplay, xevent, dm_sn_timestamp);
 		break;
 	case SelectionClear:
-		handle_selection_clear(xdisplay, xevent);
+		status = decor_handle_selection_clear(xdisplay, xevent, 0);
+		if (status == DECOR_SELECTION_GIVE_UP)
+			exit(0);
+		break;
 	default:
 		break;
 	}
@@ -5837,6 +5349,7 @@ int main(int argc, char *argv[])
 	Display *xdisplay;
 	GdkScreen *gdkscreen;
 	WnckScreen *screen;
+	int status;
 
 	gint i, j;
 	gboolean replace = FALSE;
@@ -6002,8 +5515,30 @@ int main(int argc, char *argv[])
 
 	dm_name_atom = XInternAtom(xdisplay, "_NET_DM_NAME", FALSE);
 
-	if (!acquire_dm_session(xdisplay, 0, replace))
+    status = decor_acquire_dm_session (xdisplay, 0, "emerald", replace,
+				       &dm_sn_timestamp);
+
+    if (status != DECOR_ACQUIRE_STATUS_SUCCESS)
+    {
+		if (status == DECOR_ACQUIRE_STATUS_OTHER_DM_RUNNING)
+		{
+			fprintf (stderr,
+				 "%s: Could not acquire decoration manager "
+			     "selection on screen %d display \"%s\"\n",
+			     program_name, 0, DisplayString (xdisplay));
+		}
+		else if (status == DECOR_ACQUIRE_STATUS_OTHER_DM_RUNNING)
+		{
+			fprintf (stderr,
+				 "%s: Screen %d on display \"%s\" already "
+			     "has a decoration manager; try using the "
+			     "--replace option to replace the current "
+			     "decoration manager.\n",
+				 program_name, 0, DisplayString (xdisplay));
+		}
+
 		return 1;
+	}
 
 	for (i = 0; i < 3; i++)
 	{
@@ -6055,7 +5590,7 @@ int main(int argc, char *argv[])
 	update_window_extents(ws);
 	update_shadow(fs);
 
-	set_dm_check_hint(gdk_display_get_default_screen(gdkdisplay));
+	decor_set_dm_check_hint(xdisplay, 0);
 
 	update_settings(ws);
 
