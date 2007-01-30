@@ -1856,8 +1856,9 @@ static void draw_window_decoration_real(decor_t * d, gboolean shadow_time)
 							  0,
 							  0,
 							  d->width,
-							  ws->top_space + ws->bottom_space +
-							  ws->titlebar_height + 2);
+							  d->height);
+							  //ws->top_space + ws->bottom_space +
+							  //ws->titlebar_height + 2);
 		}
 	}
 }
