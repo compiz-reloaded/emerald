@@ -142,21 +142,22 @@ static guint draw_idle_id = 0;
 static gboolean enable_tooltips = TRUE;
 static gchar *engine = NULL;
 
-static gint get_b_offset(gint b_t)
+static gint get_b_offset(gint b)
 {
 	static int boffset[B_COUNT];
-	gint i, b = 0;
+	gint i, b_t = 0;
 
 	for (i = 0; i < B_COUNT; i++)
 	{
-		boffset[i] = b;
-		static gboolean steplast = FALSE;
-
-		if (steplast || !btbistate[b])
-			b++;
-		steplast = !steplast;
+		boffset[i] = b_t;
+		if (btbistate[b_t])
+		{
+			boffset[i+1] = b_t;
+			i++;
+		}
+		b_t++;
 	}
-	return boffset[b_t];
+	return boffset[b];
 }
 static gint get_b_t_offset(gint b_t)
 {
@@ -1487,7 +1488,7 @@ static void update_button_regions(decor_t * d)
 	if (ws->use_pixmap_buttons)
 	{
 		if ((d->active && ws->use_button_glow) ||
-			(!d->active && ws->use_button_inactive_glow))
+				(!d->active && ws->use_button_inactive_glow))
 		{
 			for (b_t = 0; b_t < B_T_COUNT; b_t++)
 			{
@@ -1503,15 +1504,15 @@ static void update_button_regions(decor_t * d)
 				button_region->base_y1 = y;
 				button_region->base_x2 = x + ws->c_icon_size[b_t].w;
 				button_region->base_y2 = MIN(y + ws->c_icon_size[b_t].h,
-											 ws->top_space +
-											 ws->titlebar_height);
+						ws->top_space +
+						ws->titlebar_height);
 
 				button_region->glow_x1 = glow_x;
 				button_region->glow_y1 = glow_y;
 				button_region->glow_x2 = glow_x + ws->c_glow_size.w;
 				button_region->glow_y2 = MIN(glow_y + ws->c_glow_size.h,
-											 ws->top_space +
-											 ws->titlebar_height);
+						ws->top_space +
+						ws->titlebar_height);
 
 				// Update glow overlaps of each pair
 
@@ -1520,14 +1521,14 @@ static void update_button_regions(decor_t * d)
 					if (BUTTON_NOT_VISIBLE(d, b_t2))
 						continue;
 					if ((button_region->base_x1 > d->button_region[b_t2].base_x1 &&	//right of b_t2
-						 button_region->glow_x1 <= d->button_region[b_t2].base_x2) || (button_region->base_x1 < d->button_region[b_t2].base_x1 &&	//left of b_t2
-																					   button_region->
-																					   glow_x2
-																					   >=
-																					   d->
-																					   button_region
-																					   [b_t2].
-																					   base_x1))
+								button_region->glow_x1 <= d->button_region[b_t2].base_x2) || (button_region->base_x1 < d->button_region[b_t2].base_x1 &&	//left of b_t2
+									button_region->
+									glow_x2
+									>=
+									d->
+									button_region
+									[b_t2].
+									base_x1))
 					{
 						button_region->overlap_buttons[b_t2] = TRUE;
 					}
@@ -1536,14 +1537,14 @@ static void update_button_regions(decor_t * d)
 
 					// buttons' protruding glow length might be asymmetric
 					if ((d->button_region[b_t2].base_x1 > button_region->base_x1 &&	//left of b_t2
-						 d->button_region[b_t2].glow_x1 <= button_region->base_x2) || (d->button_region[b_t2].base_x1 < button_region->base_x1 &&	//right of b_t2
-																					   d->
-																					   button_region
-																					   [b_t2].
-																					   glow_x2
-																					   >=
-																					   button_region->
-																					   base_x1))
+								d->button_region[b_t2].glow_x1 <= button_region->base_x2) || (d->button_region[b_t2].base_x1 < button_region->base_x1 &&	//right of b_t2
+									d->
+									button_region
+									[b_t2].
+									glow_x2
+									>=
+									button_region->
+									base_x1))
 					{
 						d->button_region[b_t2].overlap_buttons[b_t] = TRUE;
 					}
@@ -1564,9 +1565,10 @@ static void update_button_regions(decor_t * d)
 				button_region->base_x1 = x;
 				button_region->base_y1 = y;
 				button_region->base_x2 = x + ws->c_icon_size[b_t].w;
+				printf("b:%d, w:%d\n",b_t,ws->c_icon_size[b_t].w);
 				button_region->base_y2 = MIN(y + ws->c_icon_size[b_t].h,
-											 ws->top_space +
-											 ws->titlebar_height);
+						ws->top_space +
+						ws->titlebar_height);
 			}
 		}
 	}
@@ -1854,10 +1856,9 @@ static void draw_window_decoration_real(decor_t * d, gboolean shadow_time)
 							  0,
 							  0,
 							  0,
-							  MAX(d->width, d->height),
+							  d->width,
 							  ws->top_space + ws->bottom_space +
-							  ws->titlebar_height + ws->left_space +
-							  ws->right_space);
+							  ws->titlebar_height + 2);
 		}
 	}
 }
