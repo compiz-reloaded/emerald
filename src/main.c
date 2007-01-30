@@ -1565,7 +1565,6 @@ static void update_button_regions(decor_t * d)
 				button_region->base_x1 = x;
 				button_region->base_y1 = y;
 				button_region->base_x2 = x + ws->c_icon_size[b_t].w;
-				printf("b:%d, w:%d\n",b_t,ws->c_icon_size[b_t].w);
 				button_region->base_y2 = MIN(y + ws->c_icon_size[b_t].h,
 						ws->top_space +
 						ws->titlebar_height);
