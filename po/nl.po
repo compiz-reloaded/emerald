@@ -1,16 +1,15 @@
-# translation of emerald.po to Dutch
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-#
-# Elve <elve@savage-elve.net>, 2007.
-msgid ""
-msgstr ""
-"Project-Id-Version: 0.1\n"
-"Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
+ # Emerald translation.
+  # Copyright (C) 2006
+  # This file is distributed under the same license as the emerald package.
+  # cyberorg <cyberorg@cyberorg.info>, 2006.
+  msgid ""
+  msgstr ""
+  "Project-Id-Version: 0.1\n"
+  "Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
 "POT-Creation-Date: 2006-12-31 16:39+0530\n"
-"PO-Revision-Date: 2007-01-11 18:57+0100\n"
-"Last-Translator: Elve <elve@savage-elve.net>\n"
-"Language-Team: Dutch <nl@li.org>\n"
+"PO-Revision-Date: 2007-01-29 17:45+0100\n"
+"Last-Translator: elve <elve@savage-elve.net>\n"
+"Language-Team: Dutch <ixce@beryl-project.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -304,15 +303,16 @@ msgid ""
 "the titlebar-min-height slider\n"
 "or the titlebar font setting.\n"
 msgstr ""
-"Notitie, als deze waarden worden veranderd\n"
-"is het aangeraden dat je iets doet om\n"
-"bijvoorbeeld viewports te veranderen omdat zo\n"
-"de positie van de 'gebeurtenis vensters' op de\n"
-"juiste manier herladen wordt. Zodoende werkt venster vergootten en verplaatsen ook op de juiste manier. Dit is ook van\n"
-"toepassing als de titelbalk hoogte wordt\n"
-"aangepast met behulp van de\n"
-"titelbalk-min-hoogte schuif of de\n"
-"titelbalk fontgrootte instelling\n"
+"Notitie, als deze waarden worden veranderd is het\n"
+"aangeraden dat je iets doet om bijvoorbeeld \n"
+"viewports te veranderen omdat zo de positie\n"
+"van de 'gebeurtenis vensters' op de juiste\n"
+"manier herladen wordt. Zodoende werkt \n"
+"venster vergroten en verplaatsen ook op\n"
+"de juiste manier. Dit is ook van toepassing\n"
+"als de titelbalk hoogte wordt aangepast\n"
+"met behulp van de titelbalk-min-hoogte schuif\n"
+"of de titelbalk fontgrootte instelling\n"
 
 msgid "Shadows"
 msgstr "Schaduwen"

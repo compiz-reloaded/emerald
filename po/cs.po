@@ -1,0 +1,754 @@
+# translation of beryl-core.pot to Czech
+# Copyright (C) 2007 Emerald
+# This file is distributed under the same license as the Emerald package.
+#
+# Martin Filip <nexus@smoula.net>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: cs\n"
+"Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
+"POT-Creation-Date: 2007-01-12 20:41+0100\n"
+"PO-Revision-Date: 2007-01-13 12:31+0100\n"
+"Last-Translator: Martin Filip <nexus@smoula.net>\n"
+"Language-Team: Czech\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Czech\n"
+"X-Poedit-Country: CZECH REPUBLIC\n"
+
+msgid "Close Window"
+msgstr "Zavřít okno"
+
+msgid "Maximize Window"
+msgstr "Maximalizovat okno"
+
+msgid "Restore Window"
+msgstr "Obnovit okno"
+
+msgid "Minimize Window"
+msgstr "Minimalizovat okno"
+
+msgid "Context Help"
+msgstr "Kontextová nápověda"
+
+msgid "Window Menu"
+msgstr "Nabídka okna"
+
+msgid "Shade Window"
+msgstr "Srolovat okno"
+
+msgid "UnShade Window"
+msgstr "Rozrolovat okno"
+
+msgid "Set Above"
+msgstr "Nad ostatní"
+
+msgid "UnSet Above"
+msgstr "Zrušit nad ostatní"
+
+msgid "Stick Window"
+msgstr "Na všech plochách"
+
+msgid "UnStick Window"
+msgstr "Zrušit na všech plochách"
+
+#, c-format
+msgid "The window \"%s\" is not responding."
+msgstr "Okno \"%s\" neodpovídá."
+
+msgid "Forcing this application to quit will cause you to lose any unsaved changes."
+msgstr "Vynucení ukončení aplikace způsobí ztrátu veškerých neuložených změn."
+
+msgid "_Force Quit"
+msgstr "Vynutit ukončení"
+
+#, c-format
+msgid ""
+"<b><big>%s</big></b>\n"
+"<i>%s</i>\n"
+"<small><b>Version</b> %s\n"
+"<b>Created By</b> %s\n"
+"<b>Use With</b> %s\n"
+"</small>"
+msgstr ""
+"<b><big>%s</big></b>\n"
+"<i>%s</i>\n"
+"<small><b>Verze</b> %s\n"
+"<b>Vytvořil</b> %s\n"
+"<b>Používejte s</b> %s\n"
+"</small>"
+
+#, c-format
+msgid ""
+"<b><big>%s</big></b> (System Theme)\n"
+"<i>%s</i>\n"
+"<small><b>Version</b> %s\n"
+"<b>Created By</b> %s\n"
+"<b>Use With</b> %s\n"
+"</small>"
+msgstr ""
+"<b><big>%s</big></b> (Systémové téma)\n"
+"<i>%s</i>\n"
+"<small><b>Verze</b> %s\n"
+"<b>Vytvořil</b> %s\n"
+"<b>Používejte s</b> %s\n"
+"</small>"
+
+msgid "Unknown"
+msgstr "Neznámé"
+
+msgid "Whatever (no hint)"
+msgstr "Cokoliv (žádný tip)"
+
+msgid "No Description"
+msgstr "Bez popisu"
+
+msgid "Invalid Theme Name"
+msgstr "Neplatný název tématu"
+
+msgid "Invalid theme file.  Does not end in .emerald"
+msgstr "Neplatný soubor tématu. Nekončí .\"emerald\""
+
+msgid ""
+"Invalid Theme Name\n"
+"Could Not Export"
+msgstr "Neplatný název tématu. Nemohu exportovat"
+
+msgid ""
+"Invalid File Name\n"
+"Must End in .emerald"
+msgstr "Neplatné jméno souboru. Musí končit \".emerald\""
+
+msgid "Error calling tar."
+msgstr "Chyba při volání tar-u."
+
+msgid "Theme Exported"
+msgstr "Téma exportováno"
+
+msgid ""
+"Can't save over system themes\n"
+"(or you forgot to enter a name)"
+msgstr "Nemohu uložit místo systémového tématu (nebo jste zapomněl zadat jméno)"
+
+#, c-format
+msgid "Overwrite Theme %s?"
+msgstr "Přepsat téma %s?"
+
+msgid "Couldn't Write Theme"
+msgstr "Nemohu zapsat téma"
+
+msgid "Couldn't Form Theme"
+msgstr ""
+
+msgid "Theme Saved"
+msgstr "Téma uloženo"
+
+msgid ""
+"Can't delete system themes\n"
+"(or you forgot to enter a name)"
+msgstr "Nemohu mazat systémová témata (nebo jste zapomněl zadat název)"
+
+#, c-format
+msgid "Are you sure you want to delete %s?"
+msgstr "Jste si jistý, že chcete odstranit%s?"
+
+msgid "Theme deleted"
+msgstr "Téma odstraněno"
+
+msgid "No such theme to delete"
+msgstr "Takové téma pro odstranění neexistuje"
+
+msgid "Use Pixmap Buttons"
+msgstr "Použij obrázková tlačítka"
+
+#, fuzzy
+msgid "Use Button Halo/Glow"
+msgstr "Použij na tlačítka Halo/Glow efekt"
+
+#, fuzzy
+msgid "Use Button Halo/Glow For Inactive Windows"
+msgstr "Použij na neaktivní okna Halo/Glow efekt"
+
+msgid "Button Pixmaps"
+msgstr "Obrázky pro tlačítka"
+
+msgid "Button"
+msgstr "Tlačítko"
+
+msgid "File"
+msgstr "Soubor"
+
+msgid "Preview"
+msgstr "Náhled"
+
+msgid "Clear"
+msgstr "Zrušit"
+
+msgid "Colors"
+msgstr "Barvy"
+
+msgid "Text Fill"
+msgstr "Výplň textu"
+
+msgid "Text Outline"
+msgstr "Okolo textu"
+
+msgid "Button Fill"
+msgstr "Výplň tlačítka"
+
+msgid "Button Outline"
+msgstr "Okolo tlačítka"
+
+msgid "Color"
+msgstr "Barva"
+
+msgid "Opacity"
+msgstr "Průhlednost"
+
+msgid "Radius"
+msgstr "Poloměr"
+
+msgid "X Offset"
+msgstr "Odsazení X"
+
+msgid "Y Offset"
+msgstr "Odsazení Y"
+
+msgid "Title-Text Font"
+msgstr "Písmo v záhlaví"
+
+msgid "Minimum Title-bar Height"
+msgstr "Nejmenší výška záhlaví"
+
+msgid "Vertical Button Offset"
+msgstr "Vertikální odsazení tlačítka"
+
+msgid "Horizontal Button Offset"
+msgstr "Horizontální odsazení tlačítka"
+
+msgid "Title-bar Object Layout"
+msgstr "Rozmístění objektů v záhlaví"
+
+msgid ""
+"Use colons to separate left, center, and right.\n"
+"Anything after a third colon is ignored.\n"
+"C=Close, N=Minimize, X/R=Restore\n"
+"I=Icon, T=Title, H=Help, M=Menu\n"
+"S=Shade, U/A=On Top(Up/Above)\n"
+"Y=Sticky, (#)=# pixels space, ex: (5)\n"
+msgstr ""
+"Pro oddělení v pořadí vlevo, ve středu a vpravo použijte dvojtečky .\n"
+"Cokoliv za třetí dvojtečkou bude ignorováno.\n"
+"C=Zavřít, N=Minimalizovat, X/R=Obnovit \n"
+"I=Ikona, T=Nadpis, H=Nápověda, M=Nabídka\n"
+"S=Srolovat, U/A=Vždy nahoře\n"
+"Y=Na všech plochách, (#)=# pixelů mezera, např.: (5)\n"
+
+msgid "Export Theme..."
+msgstr "Exportovat téma..."
+
+msgid "Name:"
+msgstr "Název:"
+
+msgid "Untitled Theme"
+msgstr "Nepojmenované téma"
+
+msgid "Export..."
+msgstr "Export..."
+
+msgid "Creator"
+msgstr "Tvůrce"
+
+msgid "Description"
+msgstr "Popis"
+
+msgid "Theme Version"
+msgstr "Verze tématu"
+
+msgid "Suggested Widget Theme"
+msgstr "Navrhované téma widgetů"
+
+msgid "Themer Version"
+msgstr "Verze tvořiče témat"
+
+msgid "Border"
+msgstr "Okraj"
+
+msgid "Size"
+msgstr "Velikost"
+
+msgid "Top"
+msgstr "Nahoře"
+
+msgid "Bottom"
+msgstr "Dole"
+
+msgid "Left"
+msgstr "Vlevo"
+
+msgid "Right"
+msgstr "Vpravo"
+
+msgid ""
+"Note, when changing these values,\n"
+"it is advised that you do something\n"
+"like change viewports, as this will\n"
+"cause the position of the 'event windows'\n"
+"to update properly, and thus make\n"
+"moving/resizing windows work properly.\n"
+"This also applies to when you change\n"
+"the title-bar height through either\n"
+"the titlebar-min-height slider\n"
+"or the titlebar font setting.\n"
+msgstr ""
+"Nezapomeňte, ze pokud změníte tyto hodnoty,\n"
+"je vhodné provést něco jako změnu viewportu.\n"
+"Ta způsobí update pozicí oken a tím pádem bude \n"
+"správně fungovat hýbání s okny i změna velikosti. \n"
+"Toto platí také pro případ změny výšky záhlaví okna \n"
+"nebo písma použitého v něm.\n"
+
+msgid "Shadows"
+msgstr "Stíny"
+
+msgid "Frame Borders"
+msgstr "Okraje rámu"
+
+msgid "Active Window"
+msgstr "Aktivní okno"
+
+msgid "Inactive Window"
+msgstr "Neaktivní okno"
+
+msgid "Title Bar"
+msgstr "Záhlaví okna"
+
+msgid "Screenshot"
+msgstr "Snímek obrazovky"
+
+msgid "Images"
+msgstr "Obrázky"
+
+msgid "Information"
+msgstr "Informace"
+
+msgid "NOTE - These settings are not part of themes, they are stored separately, and control various UI preferences for Emerald."
+msgstr "Poznámka - Tyto nastavení nejsou součástí tématu. Jsou uchovávány odděleně a ovládají různé nastavení uživatelského rozhraní pro Emerald."
+
+msgid "Show Tooltips for Buttons"
+msgstr "Zobrazuj nápovědu pro tlačítka"
+
+#, fuzzy
+msgid "Use Decoration Cropping"
+msgstr "Zařezávej dekorace"
+
+msgid "Use Button Fade"
+msgstr "Stmívání tlačítek"
+
+msgid "Use Button Fade Pulse"
+msgstr "Pulsující stmívání tlačítek"
+
+msgid "Button Fade Total Duration"
+msgstr "Celková doba stmívání tlačítek"
+
+msgid "Button Fade Step Duration"
+msgstr "Doba kroku stmívání tlačítek"
+
+msgid "Button Pulse Wait Duration"
+msgstr "Doba prodlevy stmívání tlačítek"
+
+msgid "Button Pulse Min Opacity %"
+msgstr "Minimální průhlednost pulsijícího tlačítka"
+
+msgid "Titlebar Double-Click Action"
+msgstr "Akce při poklepání na záhlaví"
+
+msgid "Button Hover Cursor"
+msgstr "Ukazatel nad tlačítkem"
+
+msgid "Normal"
+msgstr "Normální"
+
+msgid "Pointing Finger"
+msgstr "Ukazovátko"
+
+msgid "Frame Engine"
+msgstr "Zobrazovač rámu"
+
+msgid "Buttons"
+msgstr "Tlačítka"
+
+msgid "Frame/Shadows"
+msgstr "Rám/Stíny"
+
+msgid "Titlebar"
+msgstr "Záhlaví okna"
+
+msgid "Theme"
+msgstr "Téma"
+
+msgid "Edit"
+msgstr "Upravit"
+
+msgid "Import Theme..."
+msgstr "Importovat téma..."
+
+msgid "Search:"
+msgstr "Vyhledat:"
+
+msgid "Fetching Themes"
+msgstr "Stahuji témata"
+
+msgid ""
+"Fetching themes... \n"
+"This may take time depending on \n"
+"internet connection speed."
+msgstr ""
+"Stahuji témata...\n"
+"Může to chvíli trvat v závislosti na rychlosti\n"
+"vašeho internetového připojení."
+
+msgid ""
+"Here are the repositories that you can fetch Emerald Themes from. \n"
+"Fetching themes would fetch and import themes from SVN repositories \n"
+"You need Subversion package installed to use this feature."
+msgstr ""
+"Zde naleznete repozitáře, ze kterách můžete stáhnout témata pro Emerald.\n"
+"Stáhnutí tématu stáhne a importuje témata ze zvoleného SVN repozitáře.\n"
+"Budete potřebovat nainstalovaný balíček Subversion, abyste mohli tuto\n"
+"vymoženost použít."
+
+msgid ""
+"This repository contains GPL'd themes that can be used under \n"
+"the terms of GNU GPL licence v2.0 or later \n"
+msgstr ""
+"Tento repozitář obsahuje témata vydaná pod licencí GPL, která mohou být\n"
+"použita při splnění podmínek licence GNU GPL verze 2.0 a pozdější. \n"
+
+msgid ""
+"This repository contains non-GPL'd themes. They might infringe \n"
+"copyrights and patent laws in some countries."
+msgstr ""
+"Tento repozitář obsahuje témata vydaná pod jinou licencí nez GPL. \n"
+"Mohou v některých zemích porušovat autorská a patentová práva."
+
+msgid ""
+"To activate Non-GPL repository please run the following in shell and accept the server ceritficate permanently: \n"
+"svn ls https://svn.generation.no/emerald-themes."
+msgstr ""
+"Pro aktivaci ne-GPL repozitáře je třeba spustit ručně ve vašem shellu příkaz:\n"
+"svn ls https://svn.generation.no/emerald-themes.\n"
+"a natrvalo akceptovat bezpečnostní certifikát."
+
+msgid "Themes"
+msgstr "Témata"
+
+msgid "Edit Themes"
+msgstr "Editovat témata"
+
+msgid "Repositories"
+msgstr "Repozitáře"
+
+msgid "Themes Settings"
+msgstr "Nastavení témat"
+
+msgid "Emerald Settings"
+msgstr "Nastavení Emeraldu"
+
+msgid ""
+"Select\n"
+"Engine"
+msgstr ""
+"Vyberte\n"
+"zobrazovací jádro"
+
+msgid "Based on original gnome-window-decorator"
+msgstr "Založený na originálním gnome-window-decorator"
+
+msgid "Round Top Left Corner"
+msgstr "Zakulatit horní levý roh"
+
+msgid "Round Top Right Corner"
+msgstr "Zakulatit horní pravý roh"
+
+msgid "Round Bottom Left Corner"
+msgstr "Zakulatit dolní levý roh"
+
+msgid "Round Bottom Right Corner"
+msgstr "Zakulatit dolní pravý roh"
+
+msgid "Rounding Radius"
+msgstr "Poloměr zakulacení"
+
+msgid "Outer Frame Blend"
+msgstr ""
+
+msgid "Inner Frame Blend"
+msgstr ""
+
+msgid "Outer Titlebar Blend"
+msgstr ""
+
+msgid "Inner Titlebar Blend"
+msgstr ""
+
+msgid "Titlebar Separator"
+msgstr "Oddělovač záhlaví"
+
+msgid "Frame Outline"
+msgstr "Rám záhlaví"
+
+msgid "Frame Highlight"
+msgstr "Zesvětlení rámu"
+
+msgid "Frame Shadow"
+msgstr "Stín rámu"
+
+msgid "Contents Outline"
+msgstr "Obrys obsahu"
+
+msgid "Contents Highlight"
+msgstr "Zesvětlení obsahu"
+
+msgid "Contents Shadow"
+msgstr "Stín obsahu"
+
+msgid "Frame"
+msgstr "Rám"
+
+msgid "Designed to be vista-ish in nature"
+msgstr "Navržen, aby Vistě z oka vypadl"
+
+msgid "Base"
+msgstr "Základ"
+
+msgid "Glow"
+msgstr "Záření"
+
+msgid "Sides"
+msgstr "Strany"
+
+msgid "Everything done with customizable pixmaps!"
+msgstr "Vše je děláno přes volitelné obrázky!"
+
+msgid "Top Rounding Radius"
+msgstr "Horní poloměr zakulacení"
+
+msgid "Bottom Rounding Radius"
+msgstr "Spodní poloměr zakulacení"
+
+#. Style : Use Tiled or Scaled pixmaps
+msgid "Scaled"
+msgstr "Zvětšené"
+
+msgid "Not adjustable"
+msgstr "Neměnitelné"
+
+msgid "Same as Active"
+msgstr "Stejné jako aktivní"
+
+msgid "Pixmap"
+msgstr "Obrázek"
+
+msgid "Tiled/Scaled"
+msgstr "Opakovat/Roztáhnout"
+
+msgid "Width Override"
+msgstr "Přepsat šířku"
+
+msgid "Height Override"
+msgstr "Přepsat výšku"
+
+msgid "Glassy effects for your windows"
+msgstr "Skleněné efekty pro vaše okýnka"
+
+msgid "Glow Height"
+msgstr "Výška záře"
+
+msgid "Frame Base Color"
+msgstr "Základní barva rámu"
+
+msgid "Upper Titlebar Glow"
+msgstr "Horní záře záhlaví"
+
+msgid "Upper Glass Glow"
+msgstr "Horní záře lesku"
+
+msgid "Lower Glass Glow"
+msgstr "Spodní záře lesku"
+
+msgid "Middle Glass Glow"
+msgstr "Střední záře lesku"
+
+msgid "Outer Glass Glow"
+msgstr "Vnější záře lesku"
+
+msgid "Multiple gradients with somewhat glassy features too"
+msgstr "Násobné přechody s nějakými skleněnými vlastnostmi"
+
+msgid "Left Blend"
+msgstr "Leve rozpouštění"
+
+msgid "Middle Blend"
+msgstr "Prostřední rozpouštění"
+
+msgid "Right Blend"
+msgstr "Pravé rozpouštění"
+
+msgid "Contrast"
+msgstr "Kontrast"
+
+msgid "(Color)"
+msgstr "(Barva)"
+
+msgid "(Alpha)"
+msgstr "(Průhlednost)"
+
+msgid "Notch"
+msgstr "Plynulost"
+
+msgid "Position"
+msgstr "Pozice"
+
+msgid "Curve"
+msgstr "Zahnutí"
+
+msgid "Offset"
+msgstr "Odsazení"
+
+msgid "Use Glow"
+msgstr "Použít záři"
+
+msgid "Title Glow"
+msgstr "Záře záhlaví"
+
+msgid "Evolved from the legacy engine"
+msgstr "Vyvinutý ze zobrazovače \"legacy\""
+
+msgid "Border Gap"
+msgstr "Mezera okraje"
+
+msgid "Show Border when maximised?"
+msgstr "Zobrazit okraj u maximalizovaných?"
+
+msgid "Show when minimised?"
+msgstr "Zobrazit u minimalizovaných?"
+
+msgid "Minimised Border Size"
+msgstr ""
+
+msgid "Enable Left Bar Dip?"
+msgstr ""
+
+msgid "Left Bar Radius"
+msgstr ""
+
+msgid "Enable Lower Bulge? (Useless at the moment, but will be used soon)"
+msgstr ""
+
+msgid "Top Corner Offset (%)"
+msgstr "Odsazení horního rohu (%)"
+
+msgid "Enable Title Bar Dip?"
+msgstr ""
+
+msgid "Enable Button Part?"
+msgstr "Povolit tlačítkovou část?"
+
+msgid "Title Part Width"
+msgstr "Šířka části s nadpisem"
+
+msgid "Button Part Width)"
+msgstr "Šířka části s tlačítky)"
+
+msgid "Dip Corners Radius)"
+msgstr ""
+
+msgid "Round Inside Corners As well?"
+msgstr ""
+
+msgid "Enable Different Maximised Colors?"
+msgstr "Povolit rozdílné barvy pro maximalizované?"
+
+msgid "Turn Off repeating gradients when maximised?"
+msgstr "Vypnout opakující se přechody, když je maximalizováno?"
+
+msgid "Round Top Left Corner?"
+msgstr "Zakulatit horní levý roh?"
+
+msgid "Frame Rounding Radius"
+msgstr "Poloměr zakulacení rámu"
+
+msgid "Titlebar Rounding Radius"
+msgstr "Poloměr zakulacení záhlaví"
+
+msgid "Repeat Gradient?"
+msgstr "Opakovat přechody?"
+
+msgid "Vertical Repeat?"
+msgstr "Vertikální opakování?"
+
+msgid "Diagonal Repeat?"
+msgstr "Úhlopříčné opakování?"
+
+msgid "Repeat Frequency"
+msgstr "Frekvence opakování"
+
+#. /////////////////////
+msgid "Enable Title Part Pixmap?"
+msgstr "Povolit obrázek v nadpisové části?"
+
+msgid "Repeat Title Part Pixmap?"
+msgstr "Opakovat obrázek v nadpisové části?"
+
+msgid "Title Bar Part Pixmap"
+msgstr "Obrázek nadpisové části"
+
+msgid "Choose Titlebar Part Pixmap"
+msgstr "Vyberte obrázek nadpisové části"
+
+#. /////////////////////////
+msgid "Enable Button Part Pixmap?"
+msgstr "Povolit obrázek v tlačítkové části?"
+
+msgid "Repeat Button Part Pixmap?"
+msgstr "Opakovat obrázek v tlačítkové části?"
+
+msgid "Button Part Pixmap"
+msgstr "Obrázek v tlačítkové části"
+
+msgid "Choose Button Part Pixmap"
+msgstr "Vyberte obrázek v tlačítkové části"
+
+#. /////////////////////////
+msgid "Enable Titlebar Pixmap?"
+msgstr "Povolit obrázek pro nadpis?"
+
+msgid "Repeat Titlebar Pixmap?"
+msgstr "Opakovat obrázek pro nadpis?"
+
+msgid "Titlebar Pixmap"
+msgstr "Obrázek pro nadpis"
+
+msgid "Choose Titlebar Pixmap"
+msgstr "Vyberte obrázek pro nadpis"
+
+msgid "Active/Inactive"
+msgstr "Aktivní/neaktivní"
+
+msgid "Maximised"
+msgstr "Maximizované"
+
+msgid "Corners"
+msgstr "Rohy"
+
+msgid "Border Layout"
+msgstr "Rozvržení okraje"
+
+msgid "Left Bar"
+msgstr "Levý okraj"
+
+msgid "Pixmaps"
+msgstr "Obrázky"
+
