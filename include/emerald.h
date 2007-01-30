@@ -4,8 +4,6 @@
 #include <config.h>
 #endif
 
-#include <beryl-decoration.h>
-
 #include <X11/Xlib.h>
 #include <X11/Xatom.h>
 #include <X11/cursorfont.h>
@@ -59,7 +57,33 @@
 #define gettext_noop(String) String
 #define N_(String) gettext_noop (String)
 
+
+typedef struct _extents {
+    gint left;
+    gint right;
+    gint top;
+    gint bottom;
+} extents;
+
 #define FAKE_WINDOW_ACTION_HELP (1 << 20)
+
+#define GRAVITY_WEST  (1 << 0)
+#define GRAVITY_EAST  (1 << 1)
+#define GRAVITY_NORTH (1 << 2)
+#define GRAVITY_SOUTH (1 << 3)
+
+#define ALIGN_LEFT   (0)
+#define ALIGN_RIGHT  (1 << 0)
+#define ALIGN_TOP    (0)
+#define ALIGN_BOTTOM (1 << 1)
+
+#define CLAMP_HORZ (1 << 0)
+#define CLAMP_VERT (1 << 1)
+
+#define XX_MASK (1 << 12)
+#define XY_MASK (1 << 13)
+#define YX_MASK (1 << 14)
+#define YY_MASK (1 << 15)
 
 #define WM_MOVERESIZE_SIZE_TOPLEFT      0
 #define WM_MOVERESIZE_SIZE_TOP          1
@@ -80,6 +104,24 @@
 #define SHADOW_COLOR_BLUE  0x0000
 #define SHADOW_OFFSET_X    1
 #define SHADOW_OFFSET_Y    1
+
+#define N_QUADS_MAX 24
+
+typedef struct _point {
+    gint x;
+    gint y;
+    gint gravity;
+} point;
+
+typedef struct _quad {
+    point	   p1;
+    point	   p2;
+    gint	   max_width;
+    gint	   max_height;
+    gint	   align;
+    gint	   clamp;
+    cairo_matrix_t m;
+} quad;
 
 #define MWM_HINTS_DECORATIONS (1L << 1)
 
@@ -173,8 +215,8 @@ typedef struct _window_settings
     gint    shadow_color[3];
     gint    shadow_offset_x;
     gint    shadow_offset_y;
-    decor_extents_t shadow_extents;//   = { 0, 0, 0, 0 };
-    decor_extents_t win_extents;//      = { 6, 6, 4, 6 };
+    extents shadow_extents;//   = { 0, 0, 0, 0 };
+    extents win_extents;//      = { 6, 6, 4, 6 };
     pos_t pos[3][3];
     gint left_space;//   = 6;
     gint right_space;//  = 6;
@@ -213,7 +255,7 @@ typedef struct _window_settings
     PangoFontDescription *font_desc;
     PangoContext * pango_context;
 
-    decor_extents_t switcher_extents;// = { 0, 0, 0, 0 };
+    extents switcher_extents;// = { 0, 0, 0, 0 };
     GdkPixmap *switcher_pixmap;// = NULL;
     GdkPixmap *switcher_buffer_pixmap;// = NULL;
     gint      switcher_width;

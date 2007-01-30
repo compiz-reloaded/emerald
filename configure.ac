@@ -27,8 +27,7 @@ AC_C_BIGENDIAN
 EMERALD_REQUIRES=" xrender >= 0.8.4  \
 		    gtk+-2.0 >= 2.8.0 \
 		    libwnck-1.0	      \
-		    pangocairo \
-		    libberyldecoration "
+		    pangocairo "
 
 dnl ============================================================
 dnl Check for the pkg-config path.
@@ -42,7 +41,6 @@ AC_SUBST(PKG_CONFIG_PATH)
 AC_MSG_NOTICE([Using PKG_CONFIG_PATH=$PKG_CONFIG_PATH])
 
 PKG_CHECK_MODULES(EMERALD, $EMERALD_REQUIRES)
-
 AC_SUBST(EMERALD_REQUIRES)
 CFLAGS="$CFLAGS $EMERALD_CFLAGS"
 LIBS="$LIBS $EMERALD_LIBS"
