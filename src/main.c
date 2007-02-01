@@ -1139,34 +1139,12 @@ gint draw_buttons_timer_func(gpointer data)
 	}
 
 	// Determine necessary updates
-	int b_t, b_t2;
+	int b_t;
 	int necessary_update_type[B_T_COUNT];	// 0: none, 1: only base, 2: base+glow
 
 	for (b_t = 0; b_t < B_T_COUNT; b_t++)
 	{
-		necessary_update_type[b_t] = 1;
-		if (fade_info->counters[b_t] || d->button_last_drawn_state[b_t])
-		{
-			if (ws->use_pixmap_buttons &&
-				((ws->use_button_glow && d->active) ||
-				 (ws->use_button_inactive_glow && !d->active)))
-			{
-				necessary_update_type[b_t] = 2;
-				for (b_t2 = 0; b_t2 < B_T_COUNT; b_t2++)
-				{
-					if (BUTTON_NOT_VISIBLE(d, b_t2))
-						continue;
-					if (d->button_region[b_t].overlap_buttons[b_t2] &&
-						necessary_update_type[b_t2] == 0)
-					{
-						necessary_update_type[b_t2] = 1;
-					}
-				}
-			}
-		}
-		if ((!fade_info->first_draw && d->draw_only_buttons_region) ||
-			BUTTON_NOT_VISIBLE(d, b_t))
-			necessary_update_type[b_t] = 0;
+		necessary_update_type[b_t] = 2;
 	}
 	draw_button_backgrounds(d, necessary_update_type);
 
@@ -1378,51 +1356,12 @@ static void draw_buttons_without_fade(decor_t * d, cairo_t * cr, double y1)
 	d->min_drawn_buttons_region.x2 = -100;
 	d->min_drawn_buttons_region.y2 = -100;
 
-	int b_t, b_t2;
+	int b_t;
 	int necessary_update_type[B_T_COUNT];	// 0: none, 1: only base, 2: base+glow
 
 	for (b_t = 0; b_t < B_T_COUNT; b_t++)
 		necessary_update_type[b_t] = 2;
 
-	for (b_t = 0; b_t < B_T_COUNT; b_t++)
-	{
-		if (BUTTON_NOT_VISIBLE(d, b_t))
-			continue;
-		int b_state = get_b_state(d, b_t);
-
-		if (b_state == S_ACTIVE_HOVER || b_state == S_INACTIVE_HOVER ||
-			d->button_last_drawn_state[b_t] == S_ACTIVE_HOVER ||
-			d->button_last_drawn_state[b_t] == S_INACTIVE_HOVER)
-		{
-			if (ws->use_pixmap_buttons &&
-				((ws->use_button_glow && d->active) ||
-				 (ws->use_button_inactive_glow && !d->active)))
-			{
-				necessary_update_type[b_t] = 2;
-
-				for (b_t2 = 0; b_t2 < B_T_COUNT; b_t2++)
-				{
-					if (BUTTON_NOT_VISIBLE(d, b_t2))
-						continue;
-					if (d->button_region[b_t].overlap_buttons[b_t2] &&
-						necessary_update_type[b_t2] == 0)
-					{
-						necessary_update_type[b_t2] = 2;
-					}
-				}
-			}
-			else
-				necessary_update_type[b_t] = 2;
-		}
-		else if (!d->draw_only_buttons_region ||
-				 b_state == S_ACTIVE_PRESS || b_state == S_INACTIVE_PRESS ||
-				 d->button_last_drawn_state[b_t] == S_ACTIVE_PRESS ||
-				 d->button_last_drawn_state[b_t] == S_INACTIVE_PRESS)
-		{
-			necessary_update_type[b_t] = 2;
-		}
-		d->button_last_drawn_state[b_t] = b_state;
-	}
 	draw_button_backgrounds(d, necessary_update_type);
 
 	// Draw buttons
@@ -2551,31 +2490,7 @@ void position_title_object(gchar obj, WnckWindow * win, window_settings * ws,
 	if (i < 0)
 		return;
 	if (i < B_T_COUNT)
-	{
-		Display *xdisplay;
-		gint w = ws->use_pixmap_buttons ? ws->c_icon_size[i].w : 16;
-		gint h = ws->use_pixmap_buttons ? ws->c_icon_size[i].h : 16;
-		gint y = ws->button_offset;
-
-		xdisplay = GDK_DISPLAY_XDISPLAY(gdk_display_get_default());
-		gdk_error_trap_push();
-		if (d->actions & button_actions[i])
-		{
-			gboolean mh, mv;
-
-			get_window_max_state(wnck_window_get_xid(win), &mh, &mv);
-			XMoveResizeWindow(xdisplay, d->button_windows[i], x -
-							  ((ws->use_decoration_cropping &&
-								mh) ? ws->win_extents.left : 0), y, w, h);
-			if (button_cursor.cursor && ws->button_hover_cursor == 1)
-				XDefineCursor(xdisplay,
-							  d->button_windows[i], button_cursor.cursor);
-			else
-				XUndefineCursor(xdisplay, d->button_windows[i]);
-		}
-		XSync(xdisplay, FALSE);
-		gdk_error_trap_pop();
-	}
+		d->button_pos[i]=x;
 	d->tobj_item_pos[i] = x - d->tobj_pos[s];
 	d->tobj_item_state[i] = s;
 }
@@ -2682,6 +2597,12 @@ static void update_event_windows(WnckWindow * win)
 		l = 2;
 	}
 
+	gboolean mh, mv;
+
+	get_window_max_state(wnck_window_get_xid(win), &mh, &mv);
+	gint leftshift = mh && mv && ws->use_decoration_cropping?ws->win_extents.left:0;
+	layout_title_objects(win);
+
 	gdk_error_trap_push();
 
 	for (i = 0; i < 3; i++)
@@ -2703,19 +2624,14 @@ static void update_event_windows(WnckWindow * win)
 		{
 			if (d->actions & event_window_actions[i][j] && i >= k && i <= l)
 			{
-				gboolean mh, mv;
-
 				x = ws->pos[i][j].x + ws->pos[i][j].xw * width;
 				y = ws->pos[i][j].y + ws->pos[i][j].yh * height;
 				w = ws->pos[i][j].w + ws->pos[i][j].ww * width;
 				h = ws->pos[i][j].h + ws->pos[i][j].hh * height;
 
 				XMapWindow(xdisplay, d->event_windows[i][j]);
-				get_window_max_state(wnck_window_get_xid(win), &mh, &mv);
 				XMoveResizeWindow(xdisplay, d->event_windows[i][j],
-								  x -
-								  ((ws->use_decoration_cropping &&
-									mh) ? ws->win_extents.left : 0), y, w, h);
+								  x - leftshift, y, w, h);
 			}
 			else
 				XUnmapWindow(xdisplay, d->event_windows[i][j]);
@@ -2725,11 +2641,21 @@ static void update_event_windows(WnckWindow * win)
 	for (i = 0; i < B_T_COUNT; i++)
 	{
 		if (d->actions & button_actions[i])
+		{
+			gint w = ws->use_pixmap_buttons ? ws->c_icon_size[i].w : 16;
+			gint h = ws->use_pixmap_buttons ? ws->c_icon_size[i].h : 16;
 			XMapWindow(xdisplay, d->button_windows[i]);
+			XMoveResizeWindow(xdisplay, d->button_windows[i], 
+								d->button_pos[i] - leftshift, ws->button_offset, w, h); 
+			if (button_cursor.cursor && ws->button_hover_cursor == 1)
+				XDefineCursor(xdisplay,
+							  d->button_windows[i], button_cursor.cursor);
+			else
+				XUndefineCursor(xdisplay, d->button_windows[i]);
+		}
 		else
 			XUnmapWindow(xdisplay, d->button_windows[i]);
 	}
-	layout_title_objects(win);
 	XSync(xdisplay, FALSE);
 	gdk_error_trap_pop();
 }
