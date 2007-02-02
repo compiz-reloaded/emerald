@@ -279,7 +279,6 @@ typedef struct _decor
     gint tobj_item_pos[11];
     gint tobj_item_state[11];
     gint tobj_item_width[11];
-	gint button_pos[B_T_COUNT];
     GdkPixmap	      *pixmap;
     GdkPixmap	      *buffer_pixmap;
     GdkGC	      *gc;
