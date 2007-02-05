@@ -3294,10 +3294,11 @@ static void window_state_changed(WnckWindow * win)
 		update_window_decoration_state(win);
 		update_button_regions(d);
 		stop_button_fade(d);
-		if (update_window_decoration_size(win))
-			update_event_windows(win);
-		else
-			queue_decor_draw(d);
+		update_window_decoration_size(win);
+		update_event_windows(win);
+
+		d->prop_xid = wnck_window_get_xid(win);
+		queue_decor_draw(d);
 	}
 }
 
@@ -3308,10 +3309,11 @@ static void window_actions_changed(WnckWindow * win)
 	if (d->decorated)
 	{
 		update_window_decoration_actions(win);
-		if (update_window_decoration_size(win))
-			update_event_windows(win);
-		else
-			queue_decor_draw(d);
+		update_window_decoration_size(win);
+		update_event_windows(win);
+
+		d->prop_xid = wnck_window_get_xid(win);
+		queue_decor_draw(d);
 	}
 }
 
