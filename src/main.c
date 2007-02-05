@@ -405,45 +405,6 @@ my_set_window_quads(decor_quad_t * q,
 	return mnq;
 }
 
-static void get_window_max_state(Window w, gboolean * hm, gboolean * vm)
-{
-	//query the _NET_WM hints
-	Display *xdisplay = GDK_DISPLAY_XDISPLAY(gdk_display_get_default());
-	unsigned long nreturn;
-	unsigned long left;
-	unsigned char *data;
-	Atom actual;
-	int format;
-	Atom hma = XInternAtom(xdisplay, "_NET_WM_STATE_MAXIMIZED_HORZ", FALSE);
-	Atom vma = XInternAtom(xdisplay, "_NET_WM_STATE_MAXIMIZED_VERT", FALSE);
-
-	*hm = FALSE;
-	*vm = FALSE;
-	Atom np = XInternAtom(xdisplay, "_NET_WM_STATE", FALSE);
-
-	gdk_error_trap_push();
-
-	if (XGetWindowProperty
-		(xdisplay, w, np, 0L, 1024L, FALSE, XA_ATOM, &actual, &format,
-		 &nreturn, &left, &data) == Success && nreturn && data)
-	{
-		Atom *a = (Atom *) data;
-
-		while (nreturn--)
-		{
-			if (*a == hma)
-				*hm = TRUE;
-			if (*a == vma)
-				*vm = TRUE;
-			a++;
-		}
-		XFree((void *)data);
-	}
-	XSync(xdisplay, FALSE);
-
-	gdk_error_trap_pop();
-}
-
 static void decor_update_window_property(decor_t * d)
 {
 	long data[256];
@@ -453,12 +414,10 @@ static void decor_update_window_property(decor_t * d)
 	decor_extents_t extents = ws->win_extents;
 	gint nQuad;
 	decor_quad_t quads[N_QUADS_MAX];
-	gboolean hm = False;
-	gboolean vm = False;
 
-	if (d->prop_xid)
-		get_window_max_state(d->prop_xid, &hm, &vm);
-	nQuad = my_set_window_quads(quads, d->width, d->height, ws, hm, vm);
+	nQuad = my_set_window_quads(quads, d->width, d->height, ws, 
+			d->state & WNCK_WINDOW_STATE_MAXIMIZED_HORIZONTALLY,
+			d->state & WNCK_WINDOW_STATE_MAXIMIZED_VERTICALLY);
 
 	extents.top += ws->titlebar_height;
 
@@ -2498,12 +2457,10 @@ void position_title_object(gchar obj, WnckWindow * win, window_settings * ws,
 		gdk_error_trap_push();
 		if (d->actions & button_actions[i])
 		{
-			gboolean mh, mv;
-
-			get_window_max_state(wnck_window_get_xid(win), &mh, &mv);
 			XMoveResizeWindow(xdisplay, d->button_windows[i], x -
-							  ((ws->use_decoration_cropping &&
-								mh) ? ws->win_extents.left : 0), y, w, h);
+					((ws->use_decoration_cropping &&
+					  (d->state & WNCK_WINDOW_STATE_MAXIMIZED_HORIZONTALLY)) ? 
+					 ws->win_extents.left : 0), y, w, h);
 			if (button_cursor.cursor && ws->button_hover_cursor == 1)
 				XDefineCursor(xdisplay,
 							  d->button_windows[i], button_cursor.cursor);
@@ -2640,19 +2597,16 @@ static void update_event_windows(WnckWindow * win)
 		{
 			if (d->actions & event_window_actions[i][j] && i >= k && i <= l)
 			{
-				gboolean mh, mv;
-
 				x = ws->pos[i][j].x + ws->pos[i][j].xw * width;
 				y = ws->pos[i][j].y + ws->pos[i][j].yh * height;
 				w = ws->pos[i][j].w + ws->pos[i][j].ww * width;
 				h = ws->pos[i][j].h + ws->pos[i][j].hh * height;
 
 				XMapWindow(xdisplay, d->event_windows[i][j]);
-				get_window_max_state(wnck_window_get_xid(win), &mh, &mv);
-				XMoveResizeWindow(xdisplay, d->event_windows[i][j],
-								  x -
-								  ((ws->use_decoration_cropping &&
-									mh) ? ws->win_extents.left : 0), y, w, h);
+				XMoveResizeWindow(xdisplay, d->event_windows[i][j], x -
+						((ws->use_decoration_cropping &&
+						  (d->state & WNCK_WINDOW_STATE_MAXIMIZED_HORIZONTALLY)) ? 
+						 ws->win_extents.left : 0), y, w, h);
 			}
 			else
 				XUnmapWindow(xdisplay, d->event_windows[i][j]);
@@ -3340,8 +3294,10 @@ static void window_state_changed(WnckWindow * win)
 		update_window_decoration_state(win);
 		update_button_regions(d);
 		stop_button_fade(d);
-		queue_decor_draw(d);
-		update_event_windows(win);
+		if (update_window_decoration_size(win))
+			update_event_windows(win);
+		else
+			queue_decor_draw(d);
 	}
 }
 
@@ -3352,9 +3308,10 @@ static void window_actions_changed(WnckWindow * win)
 	if (d->decorated)
 	{
 		update_window_decoration_actions(win);
-		update_window_decoration_size(win);
-		update_event_windows(win);
-		queue_decor_draw(d);
+		if (update_window_decoration_size(win))
+			update_event_windows(win);
+		else
+			queue_decor_draw(d);
 	}
 }
 
