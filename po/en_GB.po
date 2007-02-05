@@ -15,61 +15,53 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#, fuzzy
 msgid "Close Window"
-msgstr "Active Window"
+msgstr "Close Window"
 
-#, fuzzy
 msgid "Maximize Window"
-msgstr "Inactive Window"
+msgstr "Maximise Window"
 
-#, fuzzy
 msgid "Restore Window"
-msgstr "Active Window"
+msgstr "Restore Window"
 
-#, fuzzy
 msgid "Minimize Window"
-msgstr "Inactive Window"
+msgstr "Minimise Window"
 
-#, fuzzy
 msgid "Context Help"
-msgstr "Contents Highlight"
+msgstr "Context Help"
 
 msgid "Window Menu"
-msgstr ""
+msgstr "Window Menu"
 
-#, fuzzy
 msgid "Shade Window"
-msgstr "Inactive Window"
+msgstr "Shade Window"
 
-#, fuzzy
 msgid "UnShade Window"
-msgstr "Inactive Window"
+msgstr "UnShade Window"
 
 msgid "Set Above"
-msgstr ""
+msgstr "Set Above"
 
 msgid "UnSet Above"
-msgstr ""
+msgstr "UnSet Above"
 
-#, fuzzy
 msgid "Stick Window"
-msgstr "Active Window"
+msgstr "Stick Window"
 
-#, fuzzy
 msgid "UnStick Window"
-msgstr "Inactive Window"
+msgstr "UnStick Window"
 
 #, c-format
 msgid "The window \"%s\" is not responding."
-msgstr ""
+msgstr "The window \"%s\" is not responding."
 
 msgid ""
 "Forcing this application to quit will cause you to lose any unsaved changes."
 msgstr ""
+"Forcing this application to quit will cause you to lose any unsaved changes."
 
 msgid "_Force Quit"
-msgstr ""
+msgstr "_Force Quit"
 
 #, c-format
 msgid ""
@@ -80,6 +72,12 @@ msgid ""
 "<b>Use With</b> %s\n"
 "</small>"
 msgstr ""
+"<b><big>%s</big></b>\n"
+"<i>%s</i>\n"
+"<small><b>Version</b> %s\n"
+"<b>Created By</b> %s\n"
+"<b>Use With</b> %s\n"
+"</small>"
 
 #, c-format
 msgid ""
@@ -90,6 +88,12 @@ msgid ""
 "<b>Use With</b> %s\n"
 "</small>"
 msgstr ""
+"<b><big>%s</big></b> (System Theme)\n"
+"<i>%s</i>\n"
+"<small><b>Version</b> %s\n"
+"<b>Created By</b> %s\n"
+"<b>Use With</b> %s\n"
+"</small>"
 
 msgid "Unknown"
 msgstr "Unknown"
@@ -469,6 +473,8 @@ msgid ""
 "Select\n"
 "Engine"
 msgstr ""
+"Select\n"
+"Engine"
 
 msgid "Based on original gnome-window-decorator"
 msgstr "Based on original gnome-window-decorator"
