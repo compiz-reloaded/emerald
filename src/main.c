@@ -5422,7 +5422,8 @@ int main(int argc, char *argv[])
 			fprintf (stderr,
 				 "%s: Could not acquire decoration manager "
 			     "selection on screen %d display \"%s\"\n",
-			     program_name, 0, DisplayString (xdisplay));
+			     program_name, DefaultScreen(xdisplay),
+				 DisplayString (xdisplay));
 		}
 		else if (status == DECOR_ACQUIRE_STATUS_OTHER_DM_RUNNING)
 		{
@@ -5431,7 +5432,8 @@ int main(int argc, char *argv[])
 			     "has a decoration manager; try using the "
 			     "--replace option to replace the current "
 			     "decoration manager.\n",
-				 program_name, 0, DisplayString (xdisplay));
+				 program_name, DefaultScreen(xdisplay),
+				 DisplayString (xdisplay));
 		}
 
 		return 1;
@@ -5487,7 +5489,7 @@ int main(int argc, char *argv[])
 	update_window_extents(ws);
 	update_shadow(fs);
 
-	decor_set_dm_check_hint(xdisplay, 0);
+	decor_set_dm_check_hint(xdisplay, DefaultScreen(xdisplay));
 
 	update_settings(ws);
 
