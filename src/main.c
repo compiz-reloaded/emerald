@@ -415,7 +415,7 @@ static void decor_update_window_property(decor_t * d)
 	gint nQuad;
 	decor_quad_t quads[N_QUADS_MAX];
 
-	nQuad = my_set_window_quads(quads, d->width, d->height, ws, 
+	nQuad = my_set_window_quads(quads, d->width, d->height, ws,
 			d->state & WNCK_WINDOW_STATE_MAXIMIZED_HORIZONTALLY,
 			d->state & WNCK_WINDOW_STATE_MAXIMIZED_VERTICALLY);
 
@@ -471,10 +471,10 @@ set_switcher_quads(decor_quad_t * q, int width, int height, window_settings * ws
 	nQuad++;
 
 	/* left quads */
-	n = decor_set_vert_quad_row(q, 
+	n = decor_set_vert_quad_row(q,
 			0, ws->switcher_top_corner_space, 0, ws->bottom_corner_space,
 			-ws->left_space, 0, GRAVITY_WEST,
-			height - ws->top_space - ws->titlebar_height - ws->bottom_space, 
+			height - ws->top_space - ws->titlebar_height - ws->bottom_space,
 			(ws->switcher_top_corner_space - ws->switcher_bottom_corner_space) >> 1,
 			0, 0.0, ws->top_space + SWITCHER_TOP_EXTRA, FALSE);
 
@@ -482,10 +482,10 @@ set_switcher_quads(decor_quad_t * q, int width, int height, window_settings * ws
 	nQuad += n;
 
 	/* right quads */
-	n = decor_set_vert_quad_row(q, 
+	n = decor_set_vert_quad_row(q,
 			0, ws->switcher_top_corner_space, 0, ws->switcher_bottom_corner_space,
 			0, ws->right_space, GRAVITY_EAST,
-			height - ws->top_space - ws->titlebar_height - ws->bottom_space, 
+			height - ws->top_space - ws->titlebar_height - ws->bottom_space,
 			(ws->switcher_top_corner_space - ws->switcher_bottom_corner_space) >> 1,
 			0, width - ws->right_space, ws->top_space + SWITCHER_TOP_EXTRA, FALSE);
 
@@ -548,7 +548,7 @@ set_shadow_quads(decor_quad_t * q, gint width, gint height, window_settings * ws
 	n = decor_set_horz_quad_line(q,
 			ws->shadow_left_space, ws->shadow_left_corner_space,
 			ws->shadow_right_space, ws->shadow_right_corner_space,
-			-ws->shadow_top_space, 0, GRAVITY_NORTH, width, 
+			-ws->shadow_top_space, 0, GRAVITY_NORTH, width,
 			(ws->shadow_left_corner_space - ws->shadow_right_corner_space) >> 1,
 			0, 0.0, 0.0);
 
@@ -559,7 +559,7 @@ set_shadow_quads(decor_quad_t * q, gint width, gint height, window_settings * ws
 	n = decor_set_vert_quad_row(q,
 			0, ws->shadow_top_corner_space, 0, ws->shadow_bottom_corner_space,
 			-ws->shadow_left_space, 0, GRAVITY_WEST,
-			height - ws->shadow_top_space - ws->shadow_bottom_space, 
+			height - ws->shadow_top_space - ws->shadow_bottom_space,
 			(ws->shadow_top_corner_space - ws->shadow_bottom_corner_space) >> 1,
 			0, 0.0, ws->shadow_top_space, FALSE);
 
@@ -579,7 +579,7 @@ set_shadow_quads(decor_quad_t * q, gint width, gint height, window_settings * ws
 
 	/* bottom quads */
 	n = decor_set_horz_quad_line(q,
-			ws->shadow_left_space, ws->shadow_left_corner_space, 
+			ws->shadow_left_space, ws->shadow_left_corner_space,
 			ws->shadow_right_space, ws->shadow_right_corner_space, 0,
 			ws->shadow_bottom_space, GRAVITY_SOUTH, width,
 			(ws->shadow_left_corner_space - ws->shadow_right_corner_space) >> 1,
@@ -1256,7 +1256,7 @@ static void draw_buttons_with_fade(decor_t * d, cairo_t * cr, double y1)
 		if (fade_info->counters[b_t] != 0 &&
 			(b_state == S_ACTIVE_PRESS || b_state == S_INACTIVE_PRESS))
 		{
-			// Button pressed, stop fade 
+			// Button pressed, stop fade
 			fade_info->counters[b_t] = 0;
 			button_pressed = TRUE;
 		}
@@ -2225,7 +2225,7 @@ update_default_decorations(GdkScreen * screen, frame_settings * fs_act,
 		nQuad = set_shadow_quads(quads, width, height, ws);
 
 		decor_quads_to_property(data, GDK_PIXMAP_XID(ws->shadow_pixmap),
-							   &ws->shadow_extents, &ws->shadow_extents, 0, 0, 
+							   &ws->shadow_extents, &ws->shadow_extents, 0, 0,
 							   quads, nQuad);
 
 		XChangeProperty(xdisplay, xroot,
@@ -2459,7 +2459,7 @@ void position_title_object(gchar obj, WnckWindow * win, window_settings * ws,
 		{
 			XMoveResizeWindow(xdisplay, d->button_windows[i], x -
 					((ws->use_decoration_cropping &&
-					  (d->state & WNCK_WINDOW_STATE_MAXIMIZED_HORIZONTALLY)) ? 
+					  (d->state & WNCK_WINDOW_STATE_MAXIMIZED_HORIZONTALLY)) ?
 					 ws->win_extents.left : 0), y, w, h);
 			if (button_cursor.cursor && ws->button_hover_cursor == 1)
 				XDefineCursor(xdisplay,
@@ -2605,7 +2605,7 @@ static void update_event_windows(WnckWindow * win)
 				XMapWindow(xdisplay, d->event_windows[i][j]);
 				XMoveResizeWindow(xdisplay, d->event_windows[i][j], x -
 						((ws->use_decoration_cropping &&
-						  (d->state & WNCK_WINDOW_STATE_MAXIMIZED_HORIZONTALLY)) ? 
+						  (d->state & WNCK_WINDOW_STATE_MAXIMIZED_HORIZONTALLY)) ?
 						 ws->win_extents.left : 0), y, w, h);
 			}
 			else
@@ -3784,7 +3784,7 @@ static gint generic_button_event(WnckWindow * win, XEvent * xevent,
 
 	handle_tooltip_event(win, xevent, state, tooltips[bpict]);
 
-	/* 
+	/*
 	 * "!(xevent->xbutton.button & -4)" tests whether event button is one of
 	 * three major mouse buttons
 	 * "!(xevent->xbutton.button & -4)" evaluates to:
@@ -4184,7 +4184,7 @@ static void show_force_quit_dialog(WnckWindow * win, Time timestamp)
 {
 	decor_t *d = g_object_get_data(G_OBJECT(win), "decor");
 	GtkWidget *dialog;
-	gchar *str, *tmp; 
+	gchar *str, *tmp;
 	const gchar *name;
 
 	if (d->force_quit_dialog)
@@ -5412,8 +5412,8 @@ int main(int argc, char *argv[])
 
 	dm_name_atom = XInternAtom(xdisplay, "_NET_DM_NAME", FALSE);
 
-    status = decor_acquire_dm_session (xdisplay, 0, "emerald", replace,
-				       &dm_sn_timestamp);
+    status = decor_acquire_dm_session (xdisplay, DefaultScreen(xdisplay),
+									   "emerald", replace, &dm_sn_timestamp);
 
     if (status != DECOR_ACQUIRE_STATUS_SUCCESS)
     {
