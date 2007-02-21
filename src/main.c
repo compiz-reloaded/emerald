@@ -1102,7 +1102,8 @@ gint draw_buttons_timer_func(gpointer data)
 	int necessary_update_type[B_T_COUNT];	// 0: none, 1: only base, 2: base+glow
 
 	for (b_t = 0; b_t < B_T_COUNT; b_t++)
-		necessary_update_type[b_t] = 2;
+		necessary_update_type[b_t] = (ws->use_button_glow && d->active) || 
+			(ws->use_button_inactive_glow && !d->active) ? 2:1;
 	draw_button_backgrounds(d, necessary_update_type);
 
 	// Draw the buttons that are in "non-hovered" or pressed state
@@ -1317,7 +1318,9 @@ static void draw_buttons_without_fade(decor_t * d, cairo_t * cr, double y1)
 	int necessary_update_type[B_T_COUNT];	// 0: none, 1: only base, 2: base+glow
 
 	for (b_t = 0; b_t < B_T_COUNT; b_t++)
-		necessary_update_type[b_t] = 2;
+		necessary_update_type[b_t] = (ws->use_button_glow && d->active) || 
+			(ws->use_button_inactive_glow && !d->active) ? 2:1;
+		//necessary_update_type[b_t] = 2;
 
 	draw_button_backgrounds(d, necessary_update_type);
 
