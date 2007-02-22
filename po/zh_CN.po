@@ -5,10 +5,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: 0.1 \n"
+"Project-Id-Version: 0.1\n"
 "Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
 "POT-Creation-Date: 2006-12-31 16:37+0530\n"
-"PO-Revision-Date: 2006-10-04 21:06+0200\n"
+"PO-Revision-Date: 2007-02-21 01:00+0800\n"
 "Last-Translator: Thruth <gubotruth@gmail.com>\n"
 "Language-Team: beryl-project <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -53,14 +53,13 @@ msgstr "取消置顶"
 
 #, c-format
 msgid "The window \"%s\" is not responding."
-msgstr ""
+msgstr "窗口 \"%s\" 不再响应。"
 
-msgid ""
-"Forcing this application to quit will cause you to lose any unsaved changes."
-msgstr ""
+msgid "Forcing this application to quit will cause you to lose any unsaved changes."
+msgstr "强制退出程序，所有未保存改动将丢失。"
 
 msgid "_Force Quit"
-msgstr ""
+msgstr "_强制退出"
 
 #, c-format
 msgid ""
@@ -71,6 +70,12 @@ msgid ""
 "<b>Use With</b> %s\n"
 "</small>"
 msgstr ""
+"<b><big>%s</big></b>\n"
+"<i>%s</i>\n"
+"<small><b>版本</b> %s\n"
+"<b>创建者</b> %s\n"
+"<b>配合</b> %s\n"
+"</small>"
 
 #, c-format
 msgid ""
@@ -81,12 +86,18 @@ msgid ""
 "<b>Use With</b> %s\n"
 "</small>"
 msgstr ""
+"<b><big>%s</big></b> （系统主题）\n"
+"<i>%s</i>\n"
+"<small><b>版本</b> %s\n"
+"<b>创建者</b> %s\n"
+"<b>配合</b> %s\n"
+"</small>"
 
 msgid "Unknown"
 msgstr "未知"
 
 msgid "Whatever (no hint)"
-msgstr ""
+msgstr "任意"
 
 msgid "No Description"
 msgstr "无描述信息"
@@ -95,7 +106,7 @@ msgid "Invalid Theme Name"
 msgstr "无效主题名称"
 
 msgid "Invalid theme file.  Does not end in .emerald"
-msgstr ""
+msgstr "无效主题文件。没有以 .emerald 结尾"
 
 msgid ""
 "Invalid Theme Name\n"
@@ -112,7 +123,7 @@ msgstr ""
 "文件名结尾必须是 .emerald"
 
 msgid "Error calling tar."
-msgstr ""
+msgstr "调用 tar 错误。"
 
 msgid "Theme Exported"
 msgstr "导出主题"
@@ -126,13 +137,13 @@ msgstr ""
 
 #, c-format
 msgid "Overwrite Theme %s?"
-msgstr ""
+msgstr "覆盖主题 %s ?"
 
 msgid "Couldn't Write Theme"
-msgstr ""
+msgstr "无法写入主题"
 
 msgid "Couldn't Form Theme"
-msgstr ""
+msgstr "无法构成主题"
 
 msgid "Theme Saved"
 msgstr "主题存档"
@@ -164,7 +175,7 @@ msgid "Use Button Halo/Glow For Inactive Windows"
 msgstr "对非活动窗口启用按钮光效"
 
 msgid "Button Pixmaps"
-msgstr ""
+msgstr "按钮位图"
 
 msgid "Button"
 msgstr "按钮"
@@ -176,22 +187,22 @@ msgid "Preview"
 msgstr "预览"
 
 msgid "Clear"
-msgstr ""
+msgstr "清除"
 
 msgid "Colors"
 msgstr "颜色"
 
 msgid "Text Fill"
-msgstr ""
+msgstr "文本填充"
 
 msgid "Text Outline"
-msgstr ""
+msgstr "文本轮廓"
 
 msgid "Button Fill"
-msgstr ""
+msgstr "按钮填充"
 
 msgid "Button Outline"
-msgstr ""
+msgstr "按钮轮廓"
 
 msgid "Color"
 msgstr "颜色"
@@ -200,28 +211,28 @@ msgid "Opacity"
 msgstr "不透明度"
 
 msgid "Radius"
-msgstr ""
+msgstr "辐射"
 
 msgid "X Offset"
-msgstr ""
+msgstr "X 偏移"
 
 msgid "Y Offset"
-msgstr ""
+msgstr "Y 偏移"
 
 msgid "Title-Text Font"
-msgstr ""
+msgstr "标题文本字体"
 
 msgid "Minimum Title-bar Height"
-msgstr ""
+msgstr "最小标题栏高度"
 
 msgid "Vertical Button Offset"
-msgstr ""
+msgstr "垂直按钮偏移"
 
 msgid "Horizontal Button Offset"
-msgstr ""
+msgstr "水平按钮偏移"
 
 msgid "Title-bar Object Layout"
-msgstr ""
+msgstr "标题栏物件输出"
 
 msgid ""
 "Use colons to separate left, center, and right.\n"
@@ -231,6 +242,12 @@ msgid ""
 "S=Shade, U/A=On Top(Up/Above)\n"
 "Y=Sticky, (#)=# pixels space, ex: (5)\n"
 msgstr ""
+"使用颜色区分左、中、右。\n"
+"第三列之后被忽略。\n"
+"C=关闭，N=最小化，X/R=恢复\n"
+"I=图标，T=标题，H=帮助，M=菜单\n"
+"S=卷起, U/A=放到上面(顶端/之上)\n"
+"Y=置顶，(#)=# 像素间距，如: (5)\n"
 
 msgid "Export Theme..."
 msgstr "导出主题..."
@@ -239,7 +256,7 @@ msgid "Name:"
 msgstr "名称:"
 
 msgid "Untitled Theme"
-msgstr ""
+msgstr "未命名主题"
 
 msgid "Export..."
 msgstr "导出..."
@@ -254,7 +271,7 @@ msgid "Theme Version"
 msgstr "主题版本"
 
 msgid "Suggested Widget Theme"
-msgstr ""
+msgstr "推荐 widget 主题"
 
 msgid "Themer Version"
 msgstr "主题管理器版本"
@@ -266,16 +283,16 @@ msgid "Size"
 msgstr "大小"
 
 msgid "Top"
-msgstr ""
+msgstr "顶"
 
 msgid "Bottom"
 msgstr "底"
 
 msgid "Left"
-msgstr ""
+msgstr "左"
 
 msgid "Right"
-msgstr ""
+msgstr "右"
 
 msgid ""
 "Note, when changing these values,\n"
@@ -289,12 +306,18 @@ msgid ""
 "the titlebar-min-height slider\n"
 "or the titlebar font setting.\n"
 msgstr ""
+"注意，改动这些值时，建议您进行一些\n"
+"改变立面数量之类的改动，这将使'事件\n"
+"窗口'被正确更新，进而使移动/调整大\n"
+"小功能正常。同样，当你改动标题栏高度\n"
+"时，无论是改变标题栏最小高度还是设置\n"
+"标题栏字体大小，也会取得同样效果。\n"
 
 msgid "Shadows"
 msgstr "阴影"
 
 msgid "Frame Borders"
-msgstr ""
+msgstr "框架边框"
 
 msgid "Active Window"
 msgstr "活动窗口"
@@ -314,24 +337,20 @@ msgstr "图像"
 msgid "Information"
 msgstr "信息"
 
-msgid ""
-"NOTE - These settings are not part of themes, they are stored separately, "
-"and control various UI preferences for Emerald."
-msgstr ""
-"注意 - 这些设置并不是主题的组成部分, 他们将于主题分开存储, 并将控制一些 "
-"Emerald 用户界面设置."
+msgid "NOTE - These settings are not part of themes, they are stored separately, and control various UI preferences for Emerald."
+msgstr "注意 - 这些设置并不是主题的组成部分, 他们将于主题分开存储, 并将控制一些 Emerald 用户界面设置."
 
 msgid "Show Tooltips for Buttons"
 msgstr "显示按钮提示"
 
 msgid "Use Decoration Cropping"
-msgstr ""
+msgstr "使用装饰裁剪"
 
 msgid "Use Button Fade"
-msgstr ""
+msgstr "使用按钮淡入淡出"
 
 msgid "Use Button Fade Pulse"
-msgstr ""
+msgstr "使用按钮淡入淡出暂停"
 
 msgid "Button Fade Total Duration"
 msgstr "按钮淡出总时长"
@@ -340,34 +359,34 @@ msgid "Button Fade Step Duration"
 msgstr "按钮淡出步长"
 
 msgid "Button Pulse Wait Duration"
-msgstr ""
+msgstr "鼠标暂停等待时长"
 
 msgid "Button Pulse Min Opacity %"
-msgstr ""
+msgstr "按钮暂停最小不透明度 %"
 
 msgid "Titlebar Double-Click Action"
-msgstr ""
+msgstr "标题栏双击行为"
 
 msgid "Button Hover Cursor"
 msgstr "按钮悬停指针"
 
 msgid "Normal"
-msgstr ""
+msgstr "普通"
 
 msgid "Pointing Finger"
-msgstr ""
+msgstr "指针手指"
 
 msgid "Frame Engine"
-msgstr ""
+msgstr "框架引擎"
 
 msgid "Buttons"
 msgstr "按钮"
 
 msgid "Frame/Shadows"
-msgstr ""
+msgstr "框架/阴影"
 
 msgid "Titlebar"
-msgstr ""
+msgstr "标题栏"
 
 msgid "Theme"
 msgstr "主题"
@@ -382,49 +401,58 @@ msgid "Search:"
 msgstr "搜索:"
 
 msgid "Fetching Themes"
-msgstr ""
+msgstr "获取主题..."
 
 msgid ""
 "Fetching themes... \n"
 "This may take time depending on \n"
 "internet connection speed."
 msgstr ""
+"获取主题中...\n"
+"这可能用上几分钟，视网络\n"
+"连接速度而定。"
 
 msgid ""
 "Here are the repositories that you can fetch Emerald Themes from. \n"
 "Fetching themes would fetch and import themes from SVN repositories \n"
 "You need Subversion package installed to use this feature."
 msgstr ""
+"这里有一些 Emerald 主题仓库，供你获取主题。\n"
+"获取主题将从 SVN 仓库下载导入主题。\n"
+"你需要安装 Subversion 软件包才能使用此功能。"
 
 msgid ""
 "This repository contains GPL'd themes that can be used under \n"
 "the terms of GNU GPL licence v2.0 or later \n"
 msgstr ""
+"此仓库包含遵守 GPL 协议的主题，请遵照 GNU GPL 许可证 v2.0 \n"
+"或更新版本的规定使用。\n"
 
 msgid ""
 "This repository contains non-GPL'd themes. They might infringe \n"
 "copyrights and patent laws in some countries."
 msgstr ""
+"此仓库包含非 GPL 协议的主题，它们可能侵害某些国家的知识产权\n"
+"相关法规或专利法案。"
 
 msgid ""
-"To activate Non-GPL repository please run the following in shell and accept "
-"the server ceritficate permanently: \n"
+"To activate Non-GPL repository please run the following in shell and accept the server ceritficate permanently: \n"
 "svn ls https://svn.generation.no/emerald-themes."
 msgstr ""
+"要激活 Non-GPL 仓库，请在 shell 运行如下命令，永久接受服务器认证:\n"
+"svn ls https://svn.generation.no/emerald-themes"
 
 msgid "Themes"
 msgstr "主题"
 
-#, fuzzy
 msgid "Edit Themes"
-msgstr "主题"
+msgstr "编辑主题"
 
 msgid "Repositories"
-msgstr ""
+msgstr "仓库"
 
-#, fuzzy
 msgid "Themes Settings"
-msgstr "Emerald 设置"
+msgstr "主题设置"
 
 msgid "Emerald Settings"
 msgstr "Emerald 设置"
@@ -433,142 +461,144 @@ msgid ""
 "Select\n"
 "Engine"
 msgstr ""
+"选择\n"
+"引擎"
 
 msgid "Based on original gnome-window-decorator"
 msgstr "基于原来的 gnome-window-decorator"
 
 msgid "Round Top Left Corner"
-msgstr ""
+msgstr "左上角圆滑"
 
 msgid "Round Top Right Corner"
-msgstr ""
+msgstr "右上角圆滑"
 
 msgid "Round Bottom Left Corner"
-msgstr ""
+msgstr "左下角圆滑"
 
 msgid "Round Bottom Right Corner"
-msgstr ""
+msgstr "右下角圆滑"
 
 msgid "Rounding Radius"
-msgstr ""
+msgstr "圆角辐射"
 
 msgid "Outer Frame Blend"
-msgstr ""
+msgstr "外框架复合"
 
 msgid "Inner Frame Blend"
-msgstr ""
+msgstr "内框架复合"
 
 msgid "Outer Titlebar Blend"
-msgstr ""
+msgstr "外标题栏复合"
 
 msgid "Inner Titlebar Blend"
-msgstr ""
+msgstr "内标题栏复合"
 
 msgid "Titlebar Separator"
-msgstr ""
+msgstr "标题栏分隔符"
 
 msgid "Frame Outline"
-msgstr ""
+msgstr "框架轮廓"
 
 msgid "Frame Highlight"
-msgstr ""
+msgstr "框架高度"
 
 msgid "Frame Shadow"
-msgstr ""
+msgstr "框架阴影"
 
 msgid "Contents Outline"
-msgstr ""
+msgstr "内容轮廓"
 
 msgid "Contents Highlight"
-msgstr ""
+msgstr "内容高度"
 
 msgid "Contents Shadow"
-msgstr ""
+msgstr "内容阴影"
 
 msgid "Frame"
-msgstr ""
+msgstr "框架"
 
 msgid "Designed to be vista-ish in nature"
-msgstr ""
+msgstr "按照 Vista 风格设计"
 
 msgid "Base"
-msgstr ""
+msgstr "基础"
 
 msgid "Glow"
-msgstr ""
+msgstr "光晕"
 
 msgid "Sides"
-msgstr ""
+msgstr "侧边"
 
 msgid "Everything done with customizable pixmaps!"
-msgstr ""
+msgstr "用自定义位图处理一切！"
 
 msgid "Top Rounding Radius"
-msgstr ""
+msgstr "顶圆角辐射"
 
 msgid "Bottom Rounding Radius"
-msgstr ""
+msgstr "底圆角辐射"
 
 #. Style : Use Tiled or Scaled pixmaps
 msgid "Scaled"
-msgstr ""
+msgstr "排列"
 
 msgid "Not adjustable"
 msgstr "不可调整"
 
 msgid "Same as Active"
-msgstr ""
+msgstr "与活动窗口相同"
 
 msgid "Pixmap"
 msgstr "位图"
 
 msgid "Tiled/Scaled"
-msgstr ""
+msgstr "堆砌/排列"
 
 msgid "Width Override"
-msgstr ""
+msgstr "宽度覆盖"
 
 msgid "Height Override"
-msgstr ""
+msgstr "高度覆盖"
 
 msgid "Glassy effects for your windows"
-msgstr ""
+msgstr "窗口毛玻璃效果"
 
 msgid "Glow Height"
-msgstr ""
+msgstr "光晕高度"
 
 msgid "Frame Base Color"
-msgstr ""
+msgstr "框架基色"
 
 msgid "Upper Titlebar Glow"
-msgstr ""
+msgstr "上部标题栏光晕"
 
 msgid "Upper Glass Glow"
-msgstr ""
+msgstr "上层毛玻璃光晕"
 
 msgid "Lower Glass Glow"
-msgstr ""
+msgstr "下层毛玻璃光晕"
 
 msgid "Middle Glass Glow"
-msgstr ""
+msgstr "中部毛玻璃光晕"
 
 msgid "Outer Glass Glow"
-msgstr ""
+msgstr "外部毛玻璃光晕"
 
 msgid "Multiple gradients with somewhat glassy features too"
-msgstr ""
+msgstr "多种渐变及一定毛玻璃效果"
 
 msgid "Left Blend"
-msgstr ""
+msgstr "左复合"
 
 msgid "Middle Blend"
-msgstr ""
+msgstr "中复合"
 
 msgid "Right Blend"
-msgstr ""
+msgstr "右复合"
 
 msgid "Contrast"
-msgstr ""
+msgstr "对比"
 
 msgid "(Color)"
 msgstr "(颜色)"
@@ -577,25 +607,25 @@ msgid "(Alpha)"
 msgstr ""
 
 msgid "Notch"
-msgstr ""
+msgstr "缺口"
 
 msgid "Position"
 msgstr "位置"
 
 msgid "Curve"
-msgstr ""
+msgstr "曲线"
 
 msgid "Offset"
-msgstr ""
+msgstr "偏移"
 
 msgid "Use Glow"
-msgstr "启用光效"
+msgstr "启用光晕"
 
 msgid "Title Glow"
-msgstr "标题栏发光"
+msgstr "标题栏光晕"
 
 msgid "Evolved from the legacy engine"
-msgstr ""
+msgstr "基于 legacy 引擎演化而来"
 
 msgid "Border Gap"
 msgstr "边框间隔"
@@ -607,103 +637,103 @@ msgid "Show when minimised?"
 msgstr "最小化时是否显示?"
 
 msgid "Minimised Border Size"
-msgstr ""
+msgstr "最小化边框大小"
 
 msgid "Enable Left Bar Dip?"
-msgstr ""
+msgstr "启用左边栏倾斜？"
 
 msgid "Left Bar Radius"
-msgstr ""
+msgstr "左边栏辐射"
 
 msgid "Enable Lower Bulge? (Useless at the moment, but will be used soon)"
-msgstr ""
+msgstr "使用下部膨胀？（目前无用，但将有用）"
 
 msgid "Top Corner Offset (%)"
-msgstr ""
+msgstr "顶角偏移(%)"
 
 msgid "Enable Title Bar Dip?"
-msgstr ""
+msgstr "启用标题栏倾斜？"
 
 msgid "Enable Button Part?"
-msgstr ""
+msgstr "启用按钮部分？"
 
 msgid "Title Part Width"
-msgstr ""
+msgstr "标题部分宽度"
 
 msgid "Button Part Width)"
-msgstr ""
+msgstr "按钮部分宽度)"
 
 msgid "Dip Corners Radius)"
-msgstr ""
+msgstr "倾斜角辐射)"
 
 msgid "Round Inside Corners As well?"
-msgstr ""
+msgstr "内角圆滑？"
 
 msgid "Enable Different Maximised Colors?"
-msgstr ""
+msgstr "使用差异最大化颜色？"
 
 msgid "Turn Off repeating gradients when maximised?"
-msgstr ""
+msgstr "最大化关闭重复渐变？"
 
 msgid "Round Top Left Corner?"
-msgstr ""
+msgstr "圆滑左上角？"
 
 msgid "Frame Rounding Radius"
-msgstr ""
+msgstr "框架圆角辐射"
 
 msgid "Titlebar Rounding Radius"
-msgstr ""
+msgstr "标题栏圆角辐射"
 
 msgid "Repeat Gradient?"
-msgstr ""
+msgstr "重复渐变？"
 
 msgid "Vertical Repeat?"
-msgstr ""
+msgstr "垂直重复？"
 
 msgid "Diagonal Repeat?"
-msgstr ""
+msgstr "对角重复？"
 
 msgid "Repeat Frequency"
 msgstr "重复频率"
 
 #. /////////////////////
 msgid "Enable Title Part Pixmap?"
-msgstr ""
+msgstr "使用标题栏部分位图？"
 
 msgid "Repeat Title Part Pixmap?"
-msgstr ""
+msgstr "重复标题栏部分位图？"
 
 msgid "Title Bar Part Pixmap"
-msgstr ""
+msgstr "标题栏部分位图"
 
 msgid "Choose Titlebar Part Pixmap"
-msgstr ""
+msgstr "选取标题栏部分位图"
 
 #. /////////////////////////
 msgid "Enable Button Part Pixmap?"
-msgstr ""
+msgstr "使用按钮部分位图？"
 
 msgid "Repeat Button Part Pixmap?"
-msgstr ""
+msgstr "重复按钮部分位图？"
 
 msgid "Button Part Pixmap"
-msgstr ""
+msgstr "按钮部分位图"
 
 msgid "Choose Button Part Pixmap"
-msgstr ""
+msgstr "选取按钮部分位图"
 
 #. /////////////////////////
 msgid "Enable Titlebar Pixmap?"
-msgstr ""
+msgstr "使用标题栏位图？"
 
 msgid "Repeat Titlebar Pixmap?"
-msgstr ""
+msgstr "重复标题栏位图？"
 
 msgid "Titlebar Pixmap"
-msgstr ""
+msgstr "标题栏位图"
 
 msgid "Choose Titlebar Pixmap"
-msgstr ""
+msgstr "选取标题栏位图"
 
 msgid "Active/Inactive"
 msgstr "活动/非活动"
@@ -712,22 +742,14 @@ msgid "Maximised"
 msgstr "最大化"
 
 msgid "Corners"
-msgstr ""
+msgstr "角"
 
 msgid "Border Layout"
-msgstr ""
+msgstr "边框输出"
 
 msgid "Left Bar"
-msgstr ""
+msgstr "左边栏"
 
 msgid "Pixmaps"
 msgstr "位图"
 
-#~ msgid "Pixmaps (Active))"
-#~ msgstr "位图 (活动))"
-
-#~ msgid "Pixmaps (Inactive)"
-#~ msgstr "位图 (非活动)"
-
-#~ msgid "Theme Imported"
-#~ msgstr "导入主题"
