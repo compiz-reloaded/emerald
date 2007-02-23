@@ -1545,7 +1545,7 @@ void layout_repo_pane(GtkWidget * vbox)
 	gtk_box_pack_startC(vbox,gtk_hseparator_new(),FALSE,FALSE,0);
 	
 		gtk_box_pack_startC(vbox,gtk_label_new(
-		_("To activate Non-GPL repository please run the following in shell and accept the server ceritficate permanently: \n"
+		_("To activate Non-GPL repository please run the following in shell and accept the server certificate permanently: \n"
 		"svn ls https://svn.generation.no/emerald-themes."
 	)),FALSE,FALSE,0);
 }
