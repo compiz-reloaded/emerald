@@ -2538,11 +2538,11 @@ update_default_decorations(GdkScreen * screen, frame_settings * fs_act,
     extents.top += ws->titlebar_height;
 
     d.buffer_surface = NULL;
-    d.layout = NULL;
     d.icon = NULL;
     d.state = 0;
     d.actions = 0;
     d.prop_xid = 0;
+    d.layout = pango_layout_new(ws->pango_context);
     d.draw = draw_window_decoration;
     d.only_change_active = FALSE;
 
@@ -2607,6 +2607,9 @@ update_default_decorations(GdkScreen * screen, frame_settings * fs_act,
 			PROP_HEADER_SIZE + BASE_PROP_SIZE + QUAD_PROP_SIZE * N_QUADS_MAX);
 #endif
     }
+
+    if (d.layout)
+	g_object_unref(G_OBJECT(d.layout));
 
     if (data)
 	free(data);
