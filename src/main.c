@@ -264,6 +264,7 @@ static int my_add_quad_row(decor_quad_t * q,
 	q->p2.gravity = vgrav | GRAVITY_WEST;
 	q->align = 0;				// opt: never changes
 	q->clamp = 0;
+	q->stretch = 0;
 	q->max_width = left;
 	q->max_height = ypush;		// opt: never changes
 	q->m.x0 = x0;
@@ -281,8 +282,9 @@ static int my_add_quad_row(decor_quad_t * q,
 	q->p2.x = 0;
 	q->p2.y = p2y;
 	q->p2.gravity = vgrav | GRAVITY_EAST;
-	q->align = 0;				// left&top
-	q->clamp = CLAMP_HORZ | CLAMP_VERT;
+	q->align = ALIGN_LEFT | ALIGN_TOP;	
+	q->clamp = 0;
+	q->stretch = STRETCH_X;
 	q->max_width = fwidth;
 	q->max_height = ypush;
 	q->m.x0 = x0 + left;
@@ -304,6 +306,7 @@ static int my_add_quad_row(decor_quad_t * q,
 	q->max_height = ypush;
 	q->align = 0;
 	q->clamp = 0;
+	q->stretch = 0;
 	q->m.x0 = x0 + left + fwidth;
 	q->m.y0 = y0;
 	q->m.xx = 1;
@@ -328,7 +331,8 @@ static int my_add_quad_col(decor_quad_t * q,
 	q->max_width = xpush;
 	q->max_height = height;
 	q->align = 0;
-	q->clamp = CLAMP_VERT | CLAMP_HORZ;
+	q->clamp = CLAMP_VERT;
+	q->stretch = STRETCH_Y;
 	q->m.x0 = x0;
 	q->m.y0 = y0;
 	q->m.xx = 1;
@@ -389,9 +393,10 @@ my_set_window_quads(decor_quad_t * q,
 		q->p2.y = 0;
 		q->p2.gravity = GRAVITY_NORTH | GRAVITY_EAST;
 		q->max_width = width - (ws->left_space + ws->right_space);
-		q->max_height = ws->titlebar_height;
-		q->align = 0;			// left&top
-		q->clamp = CLAMP_HORZ | CLAMP_VERT;
+		q->max_height = ws->titlebar_height + ws->win_extents.top;
+		q->align = ALIGN_LEFT | ALIGN_TOP;
+		q->clamp = 0;
+		q->stretch = STRETCH_X;
 		q->m.x0 = ws->left_space;
 		q->m.y0 = ws->top_space - ws->win_extents.top;
 		q->m.xx = 1;
@@ -460,6 +465,7 @@ set_switcher_quads(decor_quad_t * q, int width, int height, window_settings * ws
 	q->max_height = SHRT_MAX;
 	q->align = 0;
 	q->clamp = 0;
+	q->stretch = 0;
 	q->m.xx = 1;
 	q->m.xy = 0;
 	q->m.yx = 0;
@@ -503,6 +509,7 @@ set_switcher_quads(decor_quad_t * q, int width, int height, window_settings * ws
 	q->max_height = SHRT_MAX;
 	q->align = 0;
 	q->clamp = 0;
+	q->stretch = 0;
 	q->m.xx = 1;
 	q->m.xy = 0;
 	q->m.yx = 0;
