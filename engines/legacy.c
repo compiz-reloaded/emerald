@@ -62,6 +62,7 @@ void get_meta_info (EngineMetaInfo * emi)
     emi->last_compat = g_strdup("0.0"); // old themes still compatible
     emi->icon = gdk_pixbuf_new_from_inline(-1, my_pixbuf, TRUE, NULL);
 }
+
 void engine_draw_frame (decor_t * d, cairo_t * cr)
 {
     double        x1, y1, x2, y2, h;
@@ -270,6 +271,7 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
     cairo_set_source_alpha_color (cr, &pfs->contents_halo);
     cairo_stroke(cr);
 }
+
 void load_engine_settings(GKeyFile * f, window_settings * ws)
 {
     private_ws * pws = ws->engine_ws;
@@ -295,8 +297,6 @@ void load_engine_settings(GKeyFile * f, window_settings * ws)
     load_float_setting(f, &pws->corner_radius, "radius", SECT);
 
 }
-
-// macro for settings alpha_color structs
 
 void init_engine(window_settings * ws)
 {
@@ -345,11 +345,13 @@ void init_engine(window_settings * ws)
     ACOLOR(contents_shadow, 0.6, 0.6, 0.6, 0.8);
     ACOLOR(contents_halo, 0.8, 0.8, 0.8, 0.8);
 }
+
 void fini_engine(window_settings * ws)
 {
     free(ws->fs_act->engine_fs);
     free(ws->fs_inact->engine_fs);
 }
+
 void layout_corners_frame(GtkWidget * vbox)
 {
     GtkWidget * hbox;
@@ -379,8 +381,8 @@ void layout_corners_frame(GtkWidget * vbox)
     junk = scaler_new(0, 20, 0.5);
     gtk_box_pack_startC(hbox, junk, TRUE, TRUE, 0);
     register_setting(junk, ST_FLOAT, SECT, "radius");
-
 }
+
 void my_engine_settings(GtkWidget * hbox, gboolean active)
 {
     GtkWidget * vbox;
@@ -416,6 +418,7 @@ void my_engine_settings(GtkWidget * hbox, gboolean active)
     ACAV(_("Contents Highlight"), "contents_highlight", SECT);
     ACAV(_("Contents Shadow"), "contents_shadow", SECT);
 }
+
 void layout_engine_colors(GtkWidget * vbox)
 {
     GtkWidget * hbox;
@@ -425,6 +428,7 @@ void layout_engine_colors(GtkWidget * vbox)
     gtk_box_pack_startC(hbox, gtk_vseparator_new(), FALSE, FALSE, 0);
     my_engine_settings(hbox, FALSE);
 }
+
 void layout_engine_settings(GtkWidget * vbox)
 {
     GtkWidget * note;
