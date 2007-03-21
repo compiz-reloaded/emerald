@@ -8,6 +8,10 @@ liblegacy_la_LDFLAGS = -module -avoid-version -no-undefined
 liblegacy_la_LIBADD = @EMERALD_LIBS@ $(ENGINELIBS)
 liblegacy_la_SOURCES = legacy.c legacy_icon.h
 
+libline_la_LDFLAGS = -module -avoid-version -no-undefined
+libline_la_LIBADD = @EMERALD_LIBS@ $(ENGINELIBS)
+libline_la_SOURCES = line.c legacy_icon.h
+
 libzootreeves_la_LDFLAGS = -module -avoid-version -no-undefined
 libzootreeves_la_LIBADD = @EMERALD_LIBS@ $(ENGINELIBS)
 libzootreeves_la_SOURCES = zootreeves.c zootreeves_icon.h
@@ -32,6 +36,7 @@ enginedir = $(enginesdir)
 
 engine_LTLIBRARIES = \
 					 liblegacy.la \
+					 libline.la \
 					 libvrunner.la \
 					 libtruglass.la \
 					 liboxygen.la \
