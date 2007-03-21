@@ -114,11 +114,25 @@ typedef struct _decor_color {
 #include <titlebar.h>
 
 typedef void (*event_callback) (WnckWindow *win, XEvent *event);
+
+#define ACOLOR(idn,zr,zg,zb,za) \
+    pfs->idn.color.r = (zr);\
+    pfs->idn.color.g = (zg);\
+    pfs->idn.color.b = (zb);\
+    pfs->idn.alpha   = (za);
+
+#define CCOLOR(idn,zc) \
+    pfs->idn.color.r = (pfs->color_contrast * pfs->zc.color.r);\
+    pfs->idn.color.g = (pfs->color_contrast * pfs->zc.color.g);\
+    pfs->idn.color.b = (pfs->color_contrast * pfs->zc.color.b);\
+    pfs->idn.alpha   = (pfs->alpha_contrast * pfs->zc.alpha);
+
 typedef struct _alpha_color
 {
     decor_color_t color;
     double alpha;
 } alpha_color;
+
 typedef struct _pos_t {
     int x, y, w, h;
     int xw, yh, ww, hh;

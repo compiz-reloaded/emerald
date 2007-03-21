@@ -445,11 +445,7 @@ void load_engine_settings(GKeyFile * f, window_settings * ws)
     }
     printf("Engine settings loaded\n");
 }
-#define ACOLOR(idn,zr,zg,zb,za) \
-    pfs->idn.color.r = (zr);\
-    pfs->idn.color.g = (zg);\
-    pfs->idn.color.b = (zb);\
-    pfs->idn.alpha   = (za);
+
 void init_engine(window_settings * ws)
 {
     private_fs * pfs;
