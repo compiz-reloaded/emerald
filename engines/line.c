@@ -27,7 +27,7 @@
 
 #include <legacy_icon.h>
 
-#define SECT "legacy_settings"
+#define SECT "line_settings"
 
 /*
  * color privates
