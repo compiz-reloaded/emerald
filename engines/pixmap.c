@@ -642,8 +642,7 @@ static void layout_pixmap_box(GtkWidget * vbox, gint b_t, gboolean active)
     // Height : Checkbox (Use my width) + Number (0-500)
     if(b_t == 1 || b_t == 2 || b_t == 6 || b_t == 7) {
         height = gtk_spin_button_new_with_range(0,500,1);
-        register_setting(height,
-	      ST_INT, SECT, g_strdup_printf("%s_%s_height", pre, p_types[b_t]));
+        register_setting(height, ST_INT, SECT, g_strdup_printf("%s_%s_height", pre, p_types[b_t]));
 
         use_my_height = gtk_check_button_new_with_label("");
         register_setting(use_my_height, ST_BOOL,SECT, g_strdup_printf("%s_%s_use_height", pre, p_types[b_t]));
