@@ -89,10 +89,10 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
     h = d->height - ws->top_space - ws->titlebar_height - ws->bottom_space;
 
     int corners = 
-        ((pws->round_top_left)?CORNER_TOPLEFT:0) |
-        ((pws->round_top_right)?CORNER_TOPRIGHT:0) |
-        ((pws->round_bottom_left)?CORNER_BOTTOMLEFT:0) |
-        ((pws->round_bottom_right)?CORNER_BOTTOMRIGHT:0);
+        ((pws->round_top_left)     ? CORNER_TOPLEFT     : 0) |
+        ((pws->round_top_right)    ? CORNER_TOPRIGHT    : 0) |
+        ((pws->round_bottom_left)  ? CORNER_BOTTOMLEFT  : 0) |
+        ((pws->round_bottom_right) ? CORNER_BOTTOMRIGHT : 0);
     
 	// maximize work-a-round
 	if (d->state & (WNCK_WINDOW_STATE_MAXIMIZED_HORIZONTALLY |
