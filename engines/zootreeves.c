@@ -27,11 +27,8 @@
 #include <emerald.h>
 #include <engine.h>
 #include <zootreeves_icon.h>
+
 #define SECT "zootreeves_settings"  
-#define ACOLOR(idn,zr,zg,zb,za) pfs->idn.color.r = (zr);\
-    pfs->idn.color.g = (zg);\
-    pfs->idn.color.b = (zb);\
-    pfs->idn.alpha   = (za);
 
 #define DIP_ROUND_TRI  (1 << 4)
 

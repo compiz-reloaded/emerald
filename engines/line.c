@@ -27,7 +27,7 @@
 
 #include <legacy_icon.h>
 
-#define SECT "legacy_settings"
+#define SECT "line_settings"
 
 /*
  * color privates
@@ -69,16 +69,22 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
 	double m1 = MIN(ws->win_extents.left, ws->win_extents.right);
 	double m2 = MIN(ws->win_extents.top,  ws->win_extents.bottom);
 	double border_width = MIN(m1, m2);
+	double border_offset = border_width/2.0;
 
-	cairo_save(cr);
+/*	cairo_save(cr);
 	cairo_set_operator(cr, CAIRO_OPERATOR_CLEAR);
-	cairo_paint(cr);
-	cairo_restore(cr);
+	rounded_rectangle (cr,
+			x1 - ws->left_space,
+			y1 - ws->titlebar_height - ws->top_space,
+			x2 - x1 + ws->left_space + ws->right_space,
+			y1 - border_offset*2.0,
+			0, ws, 0);
+	cairo_fill(cr);
+	cairo_restore(cr);*/
+	ws->top_space = ws->titlebar_height; // FIXME bad work-a-round
 
     cairo_set_line_width (cr, border_width);
     cairo_set_operator (cr, CAIRO_OPERATOR_OVER);
-
-	double border_offset = border_width/2.0;
 
 	rounded_rectangle (cr,
             x1,
@@ -106,11 +112,6 @@ void load_engine_settings(GKeyFile * f, window_settings * ws)
 	PFACS(title_bar);
 }
 
-#define ACOLOR(idn,zr,zg,zb,za) \
-    pfs->idn.color.r = (zr);\
-    pfs->idn.color.g = (zg);\
-    pfs->idn.color.b = (zb);\
-    pfs->idn.alpha   = (za);
 void init_engine(window_settings * ws)
 {
     private_fs * pfs;

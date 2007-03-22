@@ -29,16 +29,7 @@
 #define FLTS(flt) \
     load_float_setting(f,&((private_fs *)ws->fs_act->engine_fs)->flt,"active_" #flt ,SECT);\
     load_float_setting(f,&((private_fs *)ws->fs_inact->engine_fs)->flt,"inactive_" #flt ,SECT);
-#define CCOLOR(idn,zc) \
-    pfs->idn.color.r = (pfs->color_contrast * pfs->zc.color.r);\
-    pfs->idn.color.g = (pfs->color_contrast * pfs->zc.color.g);\
-    pfs->idn.color.b = (pfs->color_contrast * pfs->zc.color.b);\
-    pfs->idn.alpha   = (pfs->alpha_contrast * pfs->zc.alpha);
-#define ACOLOR(idn,zr,zg,zb,za) \
-    pfs->idn.color.r = (zr);\
-    pfs->idn.color.g = (zg);\
-    pfs->idn.color.b = (zb);\
-    pfs->idn.alpha   = (za);
+
 typedef struct _private_fs
 {
     alpha_color title_left;
