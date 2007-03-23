@@ -53,6 +53,76 @@ void get_meta_info (EngineMetaInfo * emi)
     emi->icon = gdk_pixbuf_new_from_inline(-1, my_pixbuf, TRUE, NULL);
 }
 
+static void draw_shadow_background(decor_t * d, cairo_t * cr)
+{
+	cairo_matrix_t matrix;
+	double w, h, x2, y2;
+	gint width, height;
+	gint left, right, top, bottom;
+	window_settings *ws = d->fs->ws;
+
+	if (!ws->large_shadow_pixmap)
+	{
+		cairo_set_source_rgba(cr, 0.0, 0.0, 0.0, 0.0);
+		cairo_paint(cr);
+
+		return;
+	}
+
+	gdk_drawable_get_size(ws->large_shadow_pixmap, &width, &height);
+
+	left = ws->left_space + ws->left_corner_space;
+	right = ws->right_space + ws->right_corner_space;
+	top = ws->top_space + ws->top_corner_space;
+	bottom = ws->bottom_space + ws->bottom_corner_space;
+
+	if (d->width - left - right < 0)
+	{
+		left = d->width / 2;
+		right = d->width - left;
+	}
+
+	if (d->height - top - bottom < 0)
+	{
+		top = d->height / 2;
+		bottom = d->height - top;
+	}
+
+	w = d->width - left - right;
+	h = d->height - top - bottom;
+
+	x2 = d->width - right;
+	y2 = d->height - bottom;
+
+	/* top left */
+	cairo_matrix_init_identity(&matrix);
+	cairo_pattern_set_matrix(ws->shadow_pattern, &matrix);
+	cairo_set_source(cr, ws->shadow_pattern);
+	cairo_rectangle(cr, 0.0, 0.0, left, top);
+	cairo_fill(cr);
+
+	/* top */
+	if (w > 0)
+	{
+		cairo_matrix_init_translate(&matrix, left, 0.0);
+		cairo_matrix_scale(&matrix, 1.0 / w, 1.0);
+		cairo_matrix_translate(&matrix, -left, 0.0);
+		cairo_pattern_set_matrix(ws->shadow_pattern, &matrix);
+		cairo_set_source(cr, ws->shadow_pattern);
+		cairo_rectangle(cr, left, 0.0, w, top);
+		cairo_fill(cr);
+	}
+
+	
+	/* top right */
+	cairo_matrix_init_translate(&matrix, width - right - x2, 0.0);
+	cairo_pattern_set_matrix(ws->shadow_pattern, &matrix);
+	cairo_set_source(cr, ws->shadow_pattern);
+	cairo_rectangle(cr, x2, 0.0, right, top);
+	cairo_clip_preserve(cr);
+	cairo_fill(cr);
+}
+
 void engine_draw_frame (decor_t * d, cairo_t * cr)
 {
     frame_settings *fs = d->fs;
@@ -62,47 +132,55 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
 
 	double x1, y1, x2, y2, h;
     x1 = ws->left_space - ws->win_extents.left;
-    y1 = ws->top_space + ws->titlebar_height;
+    y1 = ws->top_space - ws->win_extents.top;
     x2 = d->width  - ws->right_space  + ws->win_extents.right;
     y2 = d->height - ws->bottom_space + ws->win_extents.bottom;
+	int top;
+	top = ws->win_extents.top + ws->titlebar_height;
 
 	double m1 = MIN(ws->win_extents.left, ws->win_extents.right);
 	double m2 = MIN(ws->win_extents.top,  ws->win_extents.bottom);
+	
 	double border_width = MIN(m1, m2);
 	double border_offset = border_width/2.0;
 
-/*	cairo_save(cr);
-	cairo_set_operator(cr, CAIRO_OPERATOR_CLEAR);
-	rounded_rectangle (cr,
-			x1 - ws->left_space,
-			y1 - ws->titlebar_height - ws->top_space,
-			x2 - x1 + ws->left_space + ws->right_space,
-			y1 - border_offset*2.0,
-			0, ws, 0);
-	cairo_fill(cr);
-	cairo_restore(cr);*/
-	ws->top_space = ws->titlebar_height; // FIXME bad work-a-round
-
     cairo_set_line_width (cr, border_width);
-    cairo_set_operator (cr, CAIRO_OPERATOR_OVER);
-
-	rounded_rectangle (cr,
-            x1,
-			y1 - ws->titlebar_height,
-            x2 - x1,
-			y1 - border_offset*2.0,
-            0, ws, 0);
-	cairo_set_source_alpha_color(cr, &pfs->title_bar);
-	cairo_fill(cr);
+	
+	cairo_set_operator (cr, CAIRO_OPERATOR_SOURCE);
 
     rounded_rectangle (cr,
             x1 + border_offset,
-			y1 - border_offset,
-            x2 - x1 - border_offset*2,
-			y2 - y1,
+			y1 + top - border_offset,
+            x2 - x1 - border_width,
+			y2 - y1 - top,
             0, ws, 0);
 	cairo_set_source_alpha_color(cr, &pfs->border);
 	cairo_stroke (cr);
+
+	// title bar
+	if (pfs->title_bar.alpha != 0.0) {
+		rounded_rectangle (cr,
+				x1,
+				y1,
+				x2 - x1,
+				top,
+				0, ws, 0);
+		cairo_set_source_alpha_color(cr, &pfs->title_bar);
+		cairo_fill(cr);
+	} else {
+		cairo_save(cr);
+		cairo_set_operator (cr, CAIRO_OPERATOR_CLEAR);
+		cairo_rectangle (cr, 0.0, 0.0, d->width, top + x1);
+		cairo_set_source_rgba(cr, 1.0, 1.0, 1.0, 1.0);
+		cairo_fill(cr);
+		cairo_restore(cr);
+// FIXME => find a proper solution for this
+#if 1
+		cairo_translate(cr, 0.0, ws->top_space + ws->win_extents.top);
+		draw_shadow_background(d, cr);
+		cairo_translate(cr, 0.0, -ws->top_space -ws->win_extents.top);
+#endif
+	}
 }
 
 void load_engine_settings(GKeyFile * f, window_settings * ws)
