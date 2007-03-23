@@ -178,8 +178,11 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
 		cairo_set_source_rgba(cr, 1.0, 1.0, 1.0, 1.0);
 		cairo_fill(cr);
 		cairo_restore(cr);
+
 // FIXME => find a proper solution for this
 #ifdef SHADOW_FIX
+		cairo_rectangle (cr, 0.0, 0.0, d->width, top + y1 - border_width);
+		cairo_clip(cr);
 		cairo_translate(cr, 0.0, ws->top_space + ws->win_extents.top);
 		draw_shadow_background(d, cr);
 		cairo_translate(cr, 0.0, -ws->top_space - ws->win_extents.top);
