@@ -1,6 +1,7 @@
 # Emerald Window Decorator.
-# Copyright (C) 2006
+# Copyright (C) 2006-2007
 # This file is distributed under the same license as the Emerald package.
+# Éric lassauge <rpmfarm@free.fr>, 2007.
 # cyberorg <cyberorg@cyberorg.info>, 2006.
 # reggaemanu <reggaemanu@beryl-project.org>, 2006.
 # 
@@ -11,7 +12,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
 "POT-Creation-Date: 2006-12-31 16:38+0530\n"
 "PO-Revision-Date: 2006-12-03 01:08+0100\n"
-"Last-Translator: reggaemanu <reggaemanu@beryl-project.org>\n"
+"Last-Translator: Éric lassauge <rpmfarm@free.fr>\n"
 "Language-Team: French <gnomefr@traduc.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -91,7 +92,7 @@ msgid ""
 "<b>Use With</b> %s\n"
 "</small>"
 msgstr ""
-"<b><big>%s</big></b> (Thème Système)\n"
+"<b><big>%s</big></b> (thème système)\n"
 "<i>%s</i>\n"
 "<small><b>Version</b> %s\n"
 "<b>Auteur :</b> %s\n"
@@ -128,7 +129,7 @@ msgstr ""
 "l'extension doit être .emerald"
 
 msgid "Error calling tar."
-msgstr "Erreur lors de la compression"
+msgstr "Erreur lors de la compression."
 
 msgid "Theme Exported"
 msgstr "Thème exporté"
@@ -255,7 +256,7 @@ msgstr ""
 "(#)=Espace de # pixels, ex : (5)\n"
 
 msgid "Export Theme..."
-msgstr "Exporter le thème..."
+msgstr "Exporter le thème…"
 
 msgid "Name:"
 msgstr "Nom :"
@@ -264,7 +265,7 @@ msgid "Untitled Theme"
 msgstr "Thème sans nom"
 
 msgid "Export..."
-msgstr "Exporter..."
+msgstr "Exporter…"
 
 msgid "Creator"
 msgstr "Créateur"
@@ -403,23 +404,23 @@ msgid "Theme"
 msgstr "Thème"
 
 msgid "Edit"
-msgstr "Edition"
+msgstr "Édition"
 
 msgid "Import Theme..."
-msgstr "Importer un thème..."
+msgstr "Importer un thème…"
 
 msgid "Search:"
 msgstr "Recherche :"
 
 msgid "Fetching Themes"
-msgstr "Récupération des Thèmes"
+msgstr "Récupération des thèmes"
 
 msgid ""
 "Fetching themes... \n"
 "This may take time depending on \n"
 "internet connection speed."
 msgstr ""
-"Récupération des thèmes... \n"
+"Récupération des thèmes…\n"
 "Ceci peu prendre du temps, en fonction \n"
 "de la vitesse de votre connexion internet."
 
@@ -441,7 +442,7 @@ msgid ""
 "This repository contains non-GPL'd themes. They might infringe \n"
 "copyrights and patent laws in some countries."
 msgstr ""
-"Ce dépôt contiens des thèmes non-GPL, ils peuvent violer certains \n"
+"Ce dépôt contiens des thèmes non-GPL, ils peuvent violer certains\n"
 "copyright et/ou brevets logiciels dans certains pays."
 
 msgid ""
@@ -451,7 +452,7 @@ msgid ""
 msgstr ""
 "Pour activer le dépôt non-GPL veuillez utiliser la commande suivante dans un "
 "terminal, et accepter définitivement le certificat :\n"
-"svn ls https://svn.generation.no/emerald-themes"
+"« svn ls https://svn.generation.no/emerald-themes »"
 
 msgid "Themes"
 msgstr "Thèmes"
@@ -473,7 +474,7 @@ msgid ""
 "Engine"
 msgstr ""
 "Sélectionnez un\n"
-"Moteur de rendu"
+"moteur de rendu"
 
 msgid "Based on original gnome-window-decorator"
 msgstr "Basé sur gnome-window-decorator"
