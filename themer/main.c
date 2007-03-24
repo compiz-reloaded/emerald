@@ -1130,6 +1130,16 @@ void layout_settings_pane(GtkWidget * vbox)
     table_append(combo,TRUE);
     register_setting(combo,ST_SFILE_INT_COMBO,"buttons",
             "hover_cursor");
+
+    table_append(gtk_label_new(_("Compiz Decoration Blur Type")),FALSE);
+    combo = gtk_combo_box_new_text();
+    gtk_combo_box_append_text(GTK_COMBO_BOX(combo),_("None"));
+    gtk_combo_box_append_text(GTK_COMBO_BOX(combo),_("Titlebar only"));
+    gtk_combo_box_append_text(GTK_COMBO_BOX(combo),_("All decoration"));    
+    gtk_combo_box_set_active(GTK_COMBO_BOX(combo), BLUR_TYPE_NONE);
+    table_append(combo,TRUE);
+    register_setting(combo,ST_SFILE_INT_COMBO,"decorations",
+            "blur_type");
     
     /*table_append(gtk_label_new("Icon Click Action"),FALSE);
     combo = gtk_combo_box_new_text();

@@ -8,6 +8,7 @@
 
 #include <X11/Xlib.h>
 #include <X11/Xatom.h>
+#include <X11/Xregion.h>
 #include <X11/cursorfont.h>
 #include <X11/extensions/Xrender.h>
 
@@ -90,6 +91,10 @@
 #define MWM_DECOR_MENU     (1L << 4)
 #define MWM_DECOR_MINIMIZE (1L << 5)
 #define MWM_DECOR_MAXIMIZE (1L << 6)
+
+#define BLUR_TYPE_NONE     0
+#define BLUR_TYPE_TITLEBAR 1
+#define BLUR_TYPE_ALL      2
 
 #define PROP_MOTIF_WM_HINT_ELEMENTS 3
 
@@ -243,6 +248,7 @@ typedef struct _window_settings
                    // (buttons will be centered in their glows)
                    // active and inactive glow pixmaps are assumed to be of same size
     gboolean stretch_sides;
+    gint blur_type;// = BLUR_TYPE_NONE;
 	
 } window_settings;
 

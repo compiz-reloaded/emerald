@@ -72,6 +72,7 @@ void load_engine_settings(GKeyFile * f, window_settings * ws);
 
 static Atom frame_window_atom;
 static Atom win_decor_atom;
+static Atom win_blur_decor_atom;
 static Atom wm_move_resize_atom;
 static Atom restack_window_atom;
 static Atom select_window_atom;
@@ -410,6 +411,74 @@ my_set_window_quads(decor_quad_t * q,
 	return mnq;
 }
 
+static void
+decor_update_blur_property (decor_t *d,
+			    int     width,
+			    int     height,
+			    Region  top_region,
+			    int     top_offset,
+			    Region  bottom_region,
+			    int     bottom_offset,
+			    Region  left_region,
+			    int     left_offset,
+			    Region  right_region,
+			    int     right_offset)
+{
+    Display *xdisplay = GDK_DISPLAY_XDISPLAY (gdk_display_get_default ());
+    long    *data = NULL;
+    int     size = 0;
+    window_settings *ws = d->fs->ws;
+
+    if (ws->blur_type != BLUR_TYPE_ALL)
+    {
+	bottom_region = NULL;
+	left_region   = NULL;
+	right_region  = NULL;
+
+	if (ws->blur_type != BLUR_TYPE_TITLEBAR)
+	    top_region = NULL;
+    }
+
+    if (top_region)
+	size += top_region->numRects;
+    if (bottom_region)
+	size += bottom_region->numRects;
+    if (left_region)
+	size += left_region->numRects;
+    if (right_region)
+	size += right_region->numRects;
+
+    if (size)
+	data = malloc (sizeof (long) * (2 + size * 6));
+
+    if (data)
+    {
+	decor_region_to_blur_property (data, 4, 0, width, height,
+				       top_region, top_offset,
+				       bottom_region, bottom_offset,
+				       left_region, left_offset,
+				       right_region, right_offset);
+
+	gdk_error_trap_push ();
+	XChangeProperty (xdisplay, d->prop_xid,
+			 win_blur_decor_atom,
+			 XA_INTEGER,
+			 32, PropModeReplace, (guchar *) data,
+			 2 + size * 6);
+	XSync(xdisplay, FALSE);
+	gdk_error_trap_pop ();
+
+	free (data);
+    }
+    else
+    {
+	gdk_error_trap_push ();
+	XDeleteProperty (xdisplay, d->prop_xid, win_blur_decor_atom);
+	XSync(xdisplay, FALSE);
+	gdk_error_trap_pop ();
+    }
+}
+
 static void decor_update_window_property(decor_t * d)
 {
 	long data[256];
@@ -419,6 +488,14 @@ static void decor_update_window_property(decor_t * d)
 	decor_extents_t extents = ws->win_extents;
 	gint nQuad;
 	decor_quad_t quads[N_QUADS_MAX];
+	int		    w, h;
+	gint	    stretch_offset;
+	REGION	    top, bottom, left, right;
+
+	w = d->width;
+	h = d->height;
+	
+	stretch_offset = 60;
 
 	nQuad = my_set_window_quads(quads, d->width, d->height, ws,
 			d->state & WNCK_WINDOW_STATE_MAXIMIZED_HORIZONTALLY,
@@ -447,6 +524,45 @@ static void decor_update_window_property(decor_t * d)
 					BASE_PROP_SIZE + QUAD_PROP_SIZE * nQuad);
 	XSync(xdisplay, FALSE);
 	gdk_error_trap_pop();
+	
+	top.rects = &top.extents;
+	top.numRects = top.size = 1;
+
+	top.extents.x1 = -extents.left;
+	top.extents.y1 = -extents.top;
+	top.extents.x2 = w + extents.right;
+	top.extents.y2 = 0;
+
+	bottom.rects = &bottom.extents;
+	bottom.numRects = bottom.size = 1;
+
+	bottom.extents.x1 = -extents.left;
+	bottom.extents.y1 = 0;
+	bottom.extents.x2 = w + extents.right;
+	bottom.extents.y2 = extents.bottom;
+
+	left.rects = &left.extents;
+	left.numRects = left.size = 1;
+
+	left.extents.x1 = -extents.left;
+	left.extents.y1 = 0;
+	left.extents.x2 = 0;
+	left.extents.y2 = h;
+
+	right.rects = &right.extents;
+	right.numRects = right.size = 1;
+
+	right.extents.x1 = 0;
+	right.extents.y1 = 0;
+	right.extents.x2 = extents.right;
+	right.extents.y2 = h;
+
+	decor_update_blur_property (d,
+				w, h,
+				&top, stretch_offset,
+				&bottom, w / 2,
+				&left, h / 2,
+				&right, h / 2);	
 }
 
 static int
@@ -5123,6 +5239,8 @@ static void load_settings(window_settings * ws)
 		ws->button_fade_pulse_len_steps = 0;
 
 	load_bool_setting(f, &enable_tooltips, "enable_tooltips", "buttons");
+	load_int_setting(f, &ws->blur_type,
+					 "blur_type", "decorations");
 
 	//theme
 	path = g_strjoin("/", g_get_home_dir(), ".emerald/theme/theme.ini", NULL);
@@ -5287,6 +5405,7 @@ int main(int argc, char *argv[])
 	ws->button_hoffset = 1;
 	ws->button_fade_step_duration = 50;
 	ws->button_fade_num_steps = 5;
+	ws->blur_type = BLUR_TYPE_NONE;
 
 	ws->tobj_layout = g_strdup("IT::HNXC");	// DEFAULT TITLE OBJECT LAYOUT, does not use any odd buttons
 	//ws->tobj_layout=g_strdup("CNX:IT:HM");
@@ -5381,6 +5500,7 @@ int main(int argc, char *argv[])
 
 	frame_window_atom = XInternAtom(xdisplay, "_NET_FRAME_WINDOW", FALSE);
 	win_decor_atom = XInternAtom(xdisplay, "_NET_WINDOW_DECOR", FALSE);
+	win_blur_decor_atom = XInternAtom (xdisplay, "_COMPIZ_WM_WINDOW_BLUR_DECOR", FALSE);
 	wm_move_resize_atom = XInternAtom(xdisplay, "_NET_WM_MOVERESIZE", FALSE);
 	restack_window_atom = XInternAtom(xdisplay, "_NET_RESTACK_WINDOW", FALSE);
 	select_window_atom = XInternAtom(xdisplay, "_SWITCH_SELECT_WINDOW",
