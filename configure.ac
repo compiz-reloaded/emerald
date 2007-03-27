@@ -24,11 +24,30 @@ enginesdir=$libdir/emerald/engines
 AC_SUBST(enginesdir)
 
 AC_C_BIGENDIAN
+
+AC_ARG_WITH([cm],
+  [AS_HELP_STRING([--with-cm=NAME],[composite manager to use. beryl, compiz @<:@default=beryl@:>@])],
+  [case "${withval}" in
+   beryl|compiz) cm_manager="${withval}" ;;
+   *) AC_MSG_ERROR([Wrong argument ${withval} for --with-cm, allowed values are beryl and compiz]) ;;
+   esac], [cm_manager="beryl"])
+AC_MSG_NOTICE([Using $cm_manager])
+
 EMERALD_REQUIRES=" xrender >= 0.8.4  \
 		    gtk+-2.0 >= 2.8.0 \
 		    libwnck-1.0	      \
-		    pangocairo \
-		    libberyldecoration "
+		    pangocairo"
+
+case "$cm_manager" in
+  beryl) EMERALD_REQUIRES="$EMERALD_REQUIRES \
+			   libberyldecoration"
+	 AC_DEFINE([HAVE_BERYL], [], [Compile for Beryl])
+  ;;
+  compiz) EMERALD_REQUIRES="$EMERALD_REQUIRES \
+			   libdecoration"
+	AC_DEFINE([HAVE_COMPIZ], [], [Compile for Compiz])
+  ;;
+esac
 
 dnl ============================================================
 dnl Check for the pkg-config path.
