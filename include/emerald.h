@@ -4,12 +4,7 @@
 #include <config.h>
 #endif
 
-#ifdef HAVE_BERYL
-#include <beryl-decoration.h>
-#endif
-#ifdef HAVE_COMPIZ
 #include <compiz/decoration.h>
-#endif
 
 #include <X11/Xlib.h>
 #include <X11/Xatom.h>
