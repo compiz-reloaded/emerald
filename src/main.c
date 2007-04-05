@@ -2397,6 +2397,8 @@ update_default_decorations(GdkScreen * screen, frame_settings * fs_act,
 						  ws->top_space + ws->left_space + ws->right_space +
 						  ws->bottom_space + ws->titlebar_height);
 
+	gdk_pixmap_ref(ws->decor_active_pixmap);
+
 	if (ws->decor_normal_pixmap && ws->decor_active_pixmap)
 	{
 		d.p_inactive = ws->decor_normal_pixmap;
@@ -3519,26 +3521,28 @@ static void window_opened(WnckScreen * screen, WnckWindow * win)
 
 	xid = wnck_window_get_xid(win);
 
-	if (get_window_prop(xid, frame_window_atom, &window))
-		add_frame_window(win, window);
-	else if (get_window_prop(xid, select_window_atom, &window))
+	if (get_window_prop(xid, select_window_atom, &window))
 	{
 		d->prop_xid = wnck_window_get_xid(win);
 		update_switcher_window(win, window);
 	}
+	else if (get_window_prop(xid, frame_window_atom, &window))
+		add_frame_window(win, window);
 }
 
 static void window_closed(WnckScreen * screen, WnckWindow * win)
 {
 	Display *xdisplay = GDK_DISPLAY_XDISPLAY(gdk_display_get_default());
 	decor_t *d = g_object_get_data(G_OBJECT(win), "decor");
-
-	remove_frame_window(win);
+	Window window;
 
 	gdk_error_trap_push();
 	XDeleteProperty(xdisplay, wnck_window_get_xid(win), win_decor_atom);
 	XSync(xdisplay, FALSE);
 	gdk_error_trap_pop();
+
+	if (!get_window_prop(wnck_window_get_xid(win), select_window_atom, &window))
+		remove_frame_window(win);
 
 	g_free(d);
 }
