@@ -304,6 +304,8 @@ typedef struct _decor
     GdkGC	      *gc;
     gint	      width;
     gint	      height;
+    gint              client_width;
+    gint              client_height;
     gboolean	      decorated;
     gboolean	      active;
     PangoLayout	      *layout;
