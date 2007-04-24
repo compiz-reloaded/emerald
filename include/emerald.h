@@ -4,7 +4,7 @@
 #include <config.h>
 #endif
 
-#include <compiz/decoration.h>
+#include <decoration.h>
 
 #include <X11/Xlib.h>
 #include <X11/Xatom.h>
