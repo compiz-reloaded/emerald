@@ -34,6 +34,10 @@
 #define DECOR_INTERFACE_VERSION 0
 #endif
 
+#if defined (HAVE_LIBWNCK_2_19_4)
+#define wnck_window_get_geometry wnck_window_get_client_window_geometry
+#endif
+
 void reload_all_settings(int sig);
 
 GdkPixmap *pdeb;
