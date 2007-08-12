@@ -2,6 +2,7 @@ src/main.c
 themer/main.c
 libengine/themer.c
 engines/legacy.c
+engines/line.c
 engines/oxygen.c
 engines/pixmap.c
 engines/truglass.c
