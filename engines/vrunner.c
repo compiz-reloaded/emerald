@@ -210,9 +210,8 @@ static gint get_real_pos(window_settings * ws, gint tobj, decor_t * d)
 
 void engine_draw_frame (decor_t * d, cairo_t * cr)
 {
-    double        x1, y1, x2, y2, h, width, top_width, 
+    double        x1, y1, x2, y2, h, 
                   top_title_height, bottom_title_height, 
-                  top_frame_height, bottom_frame_height,
                   top_left, top_right;
     int           top, title_width = 0, title_height = 0, title_pos;
     // double        curve_offset;
@@ -253,8 +252,6 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
 
     top_title_height    = (top - 0.5)*pfs->title_notch_position + 1;
     bottom_title_height = (top - 0.5)*(1-pfs->title_notch_position) + 1;
-    top_frame_height    = h*pfs->frame_notch_position + 1;
-    bottom_frame_height = h*(1-pfs->frame_notch_position) + 1;
 
     top_left = ws->win_extents.left;
     top_right = ws->win_extents.right;
@@ -262,8 +259,6 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
 		top_left = pws->corner_radius;
     if((top_right < pws->corner_radius) && (corners & CORNER_TOPRIGHT))
 		top_right = pws->corner_radius;
-    width = x2 - x1 - ws->win_extents.left - ws->win_extents.right;
-    top_width = x2 - x1 - top_left - top_right;
 
     // Main Top Titlebar
     rounded_rectangle (cr,

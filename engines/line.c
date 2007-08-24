@@ -59,7 +59,7 @@ void get_meta_info (EngineMetaInfo * emi)
 static void draw_shadow_background(decor_t * d, cairo_t * cr)
 {
 	cairo_matrix_t matrix;
-	double w, h, x2, y2;
+	double w, x2;
 	gint width, height;
 	gint left, right, top, bottom;
 	window_settings *ws = d->fs->ws;
@@ -92,10 +92,8 @@ static void draw_shadow_background(decor_t * d, cairo_t * cr)
 	}
 
 	w = d->width - left - right;
-	h = d->height - top - bottom;
 
 	x2 = d->width - right;
-	y2 = d->height - bottom;
 
 	/* top left */
 	cairo_matrix_init_identity(&matrix);
@@ -132,9 +130,9 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
     frame_settings *fs = d->fs;
     private_fs *pfs = fs->engine_fs;
     window_settings *ws = fs->ws;
-    private_ws *pws = ws->engine_ws;
 
-	double x1, y1, x2, y2, h;
+    double x1, y1, x2, y2;
+
     x1 = ws->left_space - ws->win_extents.left;
     y1 = ws->top_space - ws->win_extents.top;
     x2 = d->width  - ws->right_space  + ws->win_extents.right;
@@ -192,7 +190,6 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
 
 void load_engine_settings(GKeyFile * f, window_settings * ws)
 {
-    private_ws * pws = ws->engine_ws;
     PFACS(border);
 	PFACS(title_bar);
 }

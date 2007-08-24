@@ -279,17 +279,6 @@ static void error_dialog(gchar * val)
     gtk_dialog_run(GTK_DIALOG(w));
     gtk_widget_destroy(w);
 }
-static void fetching_dialog(gchar * val)
-{
-    GtkWidget * w;
-    w = gtk_message_dialog_new(GTK_WINDOW(mainWindow),
-            GTK_DIALOG_DESTROY_WITH_PARENT,
-            GTK_MESSAGE_INFO,
-            GTK_BUTTONS_OK,
-            val);
-    gtk_dialog_run(GTK_DIALOG(w));
-    gtk_widget_destroy(w);
-}
 static void cb_load(GtkWidget *w, gpointer d)
 {
     GKeyFile * f;
@@ -1444,7 +1433,7 @@ void import_cache(GtkWidget * progbar)
 gboolean watcher_func(gpointer p)
 {
     FetcherInfo * f = p;
-    int stat;
+
     gtk_progress_bar_pulse(GTK_PROGRESS_BAR(f->progbar));
     if (waitpid(f->pd,NULL,WNOHANG)!=0)
     {
