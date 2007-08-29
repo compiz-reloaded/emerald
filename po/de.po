@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: de_DE\n"
 "Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
-"POT-Creation-Date: 2007-02-26 18:39+0100\n"
-"PO-Revision-Date: 2007-02-26 18:00+0100\n"
+"POT-Creation-Date: 2007-08-29 10:51+0200\n"
+"PO-Revision-Date: 2007-08-29 10:51+0200\n"
 "Last-Translator: Martin Ereth <martin.ereth@arcor.de>\n"
 "Language-Team: Deutsch <translation-team-de@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -388,6 +388,19 @@ msgstr "Normal"
 msgid "Pointing Finger"
 msgstr "Zeigefinger"
 
+# FIXME
+msgid "Compiz Decoration Blur Type"
+msgstr "Rahmen-Verwisch-Effekt"
+
+msgid "None"
+msgstr "Keiner"
+
+msgid "Titlebar only"
+msgstr "Nur Titelleiste"
+
+msgid "All decoration"
+msgstr "Kompletter Fensterrahmen"
+
 msgid "Frame Engine"
 msgstr "Fensterkern"
 
@@ -448,7 +461,7 @@ msgstr ""
 
 msgid ""
 "To activate Non-GPL repository please run the following in shell and accept "
-"the server ceritficate permanently: \n"
+"the server certificate permanently: \n"
 "svn ls https://svn.generation.no/emerald-themes."
 msgstr ""
 "Um eine Non-GPL Quelle zu aktivieren, muß folgender Befehl ausgeführt und "
@@ -530,6 +543,9 @@ msgstr "Inhalt Schatten"
 
 msgid "Frame"
 msgstr "Rahmen"
+
+msgid "Based on original legacy"
+msgstr "Basiert auf dem original Gnome Fensterdekorator"
 
 msgid "Designed to be vista-ish in nature"
 msgstr "Soll wie Vista aussehen"
