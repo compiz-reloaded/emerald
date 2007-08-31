@@ -1,75 +1,69 @@
+# translation of emerald.po to Turkish
 # Emerald Window Decorator.
 # Copyright (C) 2006
 # This file is distributed under the same license as the Emerald package.
-# Suat SARIALP <muhendis.suat@gmail.com>, 2006.
 #
+# Suat SARIALP <muhendis.suat@gmail.com>, 2006.
+# Serdar Soytetir <tulliana@gmail.com>, 2007.
 msgid ""
 msgstr ""
-"Project-Id-Version: 0.1 \n"
+"Project-Id-Version: emerald\n"
 "Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
 "POT-Creation-Date: 2006-12-31 16:38+0530\n"
-"PO-Revision-Date: 2006-10-29 21:06+0200\n"
-"Last-Translator: Suat SARIALP <muhendis.suat@gmail.com>\n"
-"Language-Team: linux-sevenler <forum.linux-sevenler.org>\n"
+"PO-Revision-Date: 2007-08-24 03:31+0300\n"
+"Last-Translator: Serdar Soytetir <tulliana@gmail.com>\n"
+"Language-Team: Turkish <tr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms:  nplurals=1; plural=0;\n"
 
-#, fuzzy
 msgid "Close Window"
-msgstr "Etkin pencere"
+msgstr "Pencereyi Kapat"
 
-#, fuzzy
 msgid "Maximize Window"
-msgstr "Etkisiz pencere"
+msgstr "Pencereyi Büyüt"
 
-#, fuzzy
 msgid "Restore Window"
-msgstr "Etkin pencere"
+msgstr "Pencereyi Geri Yükle"
 
-#, fuzzy
 msgid "Minimize Window"
-msgstr "Etkisiz pencere"
+msgstr "Pencereyi Küçült"
 
-#, fuzzy
 msgid "Context Help"
-msgstr "Içerik vurgulaması"
+msgstr "Yardım"
 
 msgid "Window Menu"
-msgstr ""
+msgstr "Pencere Menüsü"
 
-#, fuzzy
 msgid "Shade Window"
-msgstr "Etkisiz pencere"
+msgstr "Pencereyi Gölgele"
 
-#, fuzzy
 msgid "UnShade Window"
-msgstr "Etkisiz pencere"
+msgstr "Pencereyi Gölgeleme"
 
 msgid "Set Above"
-msgstr ""
+msgstr "Yukarıda Tut"
 
 msgid "UnSet Above"
-msgstr ""
+msgstr "Yukarıda Tutma"
 
-#, fuzzy
 msgid "Stick Window"
-msgstr "Etkin pencere"
+msgstr "Pencereyi Yapıştır"
 
-#, fuzzy
 msgid "UnStick Window"
-msgstr "Etkisiz pencere"
+msgstr "Pencereyi Yapıştırma"
 
 #, c-format
 msgid "The window \"%s\" is not responding."
-msgstr ""
+msgstr "\"%s\" penceresi yanıt vermiyor."
 
-msgid ""
-"Forcing this application to quit will cause you to lose any unsaved changes."
-msgstr ""
+msgid "Forcing this application to quit will cause you to lose any unsaved changes."
+msgstr "Bu uygulamadan çıkmayı zorlamak, kaydedilmemiş değişikliklerin kaybedilmesine neden olur."
 
 msgid "_Force Quit"
-msgstr ""
+msgstr "_Çıkmayı Zorla"
 
 #, c-format
 msgid ""
@@ -80,6 +74,12 @@ msgid ""
 "<b>Use With</b> %s\n"
 "</small>"
 msgstr ""
+"<b><big>%s</big></b>\n"
+"<i>%s</i>\n"
+"<small><b>Sürüm</b> %s\n"
+"<b>Oluşturan</b> %s\n"
+"<b>Birlikte Kullan</b> %s\n"
+"</small>"
 
 #, c-format
 msgid ""
@@ -90,6 +90,12 @@ msgid ""
 "<b>Use With</b> %s\n"
 "</small>"
 msgstr ""
+"<b><big>%s</big></b> (Sistem Teması)\n"
+"<i>%s</i>\n"
+"<small><b>Sürüm</b> %s\n"
+"<b>Oluşturan</b> %s\n"
+"<b>Birlikte Kullan</b> %s\n"
+"</small>"
 
 msgid "Unknown"
 msgstr "Bilinmeyen"
@@ -469,6 +475,8 @@ msgid ""
 "Select\n"
 "Engine"
 msgstr ""
+"Seç\n"
+"Motor"
 
 msgid "Based on original gnome-window-decorator"
 msgstr "Orjinal gnome-window-decorator baz alınmıştır"
@@ -760,3 +768,4 @@ msgstr "Sol çubuk"
 
 msgid "Pixmaps"
 msgstr "Resimler"
+
