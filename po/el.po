@@ -1,6 +1,6 @@
 # Emerald Greek Translation.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) 2007 compiz-fusion.org.org
+# This file is distributed under the same license as the emerald package.
 # Δημήτρης (djdoo) <jimdusis@yahoo.gr>, 2007.
 #
 #, fuzzy
@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Compiz-Emerald 0.5.5\n"
 "Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
-"POT-Creation-Date: 2007-09-05 12:36+0530\n"
-"PO-Revision-Date: 2007-08-31 01:20+0200\n"
+"POT-Creation-Date: 2007-09-11 11:54+0530\n"
+"PO-Revision-Date: 2007-09-11 01:20+0200\n"
 "Last-Translator: Δημήτρης (djdoo) <jimdusis@yahoo.gr>\n"
 "Language-Team: Greek <jimdusis@yahoo.gr>\n"
 "MIME-Version: 1.0\n"
@@ -382,7 +382,7 @@ msgid "Titlebar Double-Click Action"
 msgstr "Ενέργεια Διπλού-Κλικ Μπάρας Τίτλου"
 
 msgid "Button Hover Cursor"
-msgstr ""
+msgstr "Κράτημα Κέρσορα πάνω από Κουμπί"
 
 msgid "Normal"
 msgstr "Κανονικά"
@@ -564,7 +564,7 @@ msgid "Sides"
 msgstr "Μεριές"
 
 msgid "Everything done with customizable pixmaps!"
-msgstr "Όλα γίνονται με "
+msgstr "Όλα γίνονται με ρυθμιζόμενα pixmaps!"
 
 msgid "Top Rounding Radius"
 msgstr "Πάνω Ακτίνα Στρογγυλέματος"
@@ -619,7 +619,7 @@ msgid "Outer Glass Glow"
 msgstr "Ρξωτερική Γυάλινη Λάμψη"
 
 msgid "Multiple gradients with somewhat glassy features too"
-msgstr ""
+msgstr "Πολλαπλές διαβαθμίσεις με κάπως γυάλινα χαρακτηριστικά επίσης"
 
 msgid "Left Blend"
 msgstr "Αριστερή Μίξη"
@@ -707,7 +707,7 @@ msgid "Enable Different Maximised Colors?"
 msgstr "Ενεργοποίηση Διαφορετικών Μεγιστοποιημένων Χρωμάτων?"
 
 msgid "Turn Off repeating gradients when maximised?"
-msgstr ""
+msgstr "Κλείσιμο επαναλαμβανόμενων διαβαθμίσεων σε μεγιστοποίηση?"
 
 msgid "Round Top Left Corner?"
 msgstr "Στρογγύλεμα Πάνω Αριστερής Γωνίας?"
@@ -719,7 +719,7 @@ msgid "Titlebar Rounding Radius"
 msgstr "Ακτίνα Στρογγυλέματος Μπάρας Τίτλου"
 
 msgid "Repeat Gradient?"
-msgstr ""
+msgstr "Επανάληψη Διαβάθμισης?"
 
 msgid "Vertical Repeat?"
 msgstr "Κάθετη Επανάληψη?"
