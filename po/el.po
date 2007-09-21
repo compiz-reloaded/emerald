@@ -1,5 +1,5 @@
 # Emerald Greek Translation.
-# Copyright (C) 2007 compiz-fusion.org.org
+# Copyright (C) 2007 compiz-fusion.org
 # This file is distributed under the same license as the emerald package.
 # Δημήτρης (djdoo) <jimdusis@yahoo.gr>, 2007.
 #
@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Compiz-Emerald 0.5.5\n"
 "Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
-"POT-Creation-Date: 2007-09-11 11:54+0530\n"
-"PO-Revision-Date: 2007-09-11 01:20+0200\n"
+"POT-Creation-Date: 2007-09-21 14:00+0530\n"
+"PO-Revision-Date: 2007-09-16 02:00+0200\n"
 "Last-Translator: Δημήτρης (djdoo) <jimdusis@yahoo.gr>\n"
 "Language-Team: Greek <jimdusis@yahoo.gr>\n"
 "MIME-Version: 1.0\n"
@@ -54,7 +54,7 @@ msgstr "Ξεκαρφίτσωσε το Παράθυρο"
 
 #, c-format
 msgid "The window \"%s\" is not responding."
-msgstr "Το παρά8υρο \"%s\" δεν ανταποκρίνεται"
+msgstr "Το παράθυρο \"%s\" δεν ανταποκρίνεται"
 
 msgid ""
 "Forcing this application to quit will cause you to lose any unsaved changes."
@@ -110,7 +110,7 @@ msgid "Invalid Theme Name"
 msgstr "Λάθος Όνομα Θέματος"
 
 msgid "Invalid theme file.  Does not end in .emerald"
-msgstr "Λάθος αρχείο θέματος. Δεν Καταλήγει σε .emerald"
+msgstr "Λάθος αρχείο θέματος. Δεν καταλήγει σε .emerald"
 
 msgid ""
 "Invalid Theme Name\n"
@@ -161,7 +161,7 @@ msgstr ""
 
 #, c-format
 msgid "Are you sure you want to delete %s?"
-msgstr "Είσαι σίγουρος/η οτι θέλεις να το διαγράψεις %s?"
+msgstr "Είστε σίγουρος/η οτι θέλετε να το διαγράψετε %s?"
 
 msgid "Theme deleted"
 msgstr "Θέμα διαγράφηκε"
@@ -200,16 +200,16 @@ msgid "Text Fill"
 msgstr "Γέμισμα Κειμένου"
 
 msgid "Text Outline"
-msgstr "Περίληωη Κειμένου"
+msgstr "Περίγραμμα Κειμένου"
 
 msgid "Button Fill"
 msgstr "Γέμισμα Κουμπιού"
 
 msgid "Button Outline"
-msgstr "Περίληωη Κουμπιού"
+msgstr "Περίγραμμα Κουμπιού"
 
 msgid "Color"
-msgstr "Χρώματαοφ"
+msgstr "Χρώμα"
 
 msgid "Opacity"
 msgstr "Αδιαφάνεια"
@@ -400,7 +400,7 @@ msgid "Titlebar only"
 msgstr "Μπάρα τίτλου μόνο"
 
 msgid "All decoration"
-msgstr "Όλες οι διακοσμήσεις"
+msgstr "Ολόκληρη η διακόσμηση"
 
 msgid "Frame Engine"
 msgstr "Μηχανή Κάδρου"
@@ -435,7 +435,7 @@ msgid ""
 "internet connection speed."
 msgstr ""
 "Απόκτηση θεμάτων...\n"
-"Αυτό μπορεί να πάρει χρόνο κ εξαρτάται από \n"
+"Αυτό μπορεί να πάρει χρόνο και εξαρτάται από \n"
 "την ταχύτητα σύνδεσης στο διαδίκτυο."
 
 msgid ""
@@ -443,10 +443,10 @@ msgid ""
 "Fetching themes would fetch and import themes from SVN repositories \n"
 "You need Subversion package installed to use this feature."
 msgstr ""
-"Αυτές είναι οι αποθήκες απο οπου μπορείτε να αποκτήσετε Θέματα του "
+"Αυτές είναι οι αποθήκες από όπου μπορείτε να αποκτήσετε Θέματα του "
 "Emerald. \n"
 "Η απόκτηση θεμάτων θα αποκτήσει κ θα εισάγει θέματα απο SVN αποθήκες \n"
-"Χρειάζεστε εγκατάστασης Υποέκδοσης πακέτου για χρησιμοποίηση αυτου του "
+"Χρειάζεστε εγκατάσταση του πακέτου Subversion για χρησιμοποίηση αυτού του "
 "χαρακτηριστικού."
 
 msgid ""
@@ -461,7 +461,7 @@ msgid ""
 "copyrights and patent laws in some countries."
 msgstr ""
 "Αυτή η αποθήκη περιέχει μη-GPL θέματα. Αυτά μπορεί να παραβιάζουν \n"
-"δικαιώματα κ νόμους πατεντών(καλά λέμε τώρα..) σε μερικές χώρες."
+"δικαιώματα και νόμους πατεντών(καλά λέμε τώρα..) σε μερικές χώρες."
 
 msgid ""
 "To activate Non-GPL repository please run the following in shell and accept "
@@ -595,7 +595,7 @@ msgid "Height Override"
 msgstr "Υπέρβαση Ύψους"
 
 msgid "Glassy effects for your windows"
-msgstr "Γυάλινα εφέ για τα παράθυρα σας"
+msgstr "Γυάλινα εφέ για τα παράθυρά σας"
 
 msgid "Glow Height"
 msgstr "Ύψος Λάμψης"
