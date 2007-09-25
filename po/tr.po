@@ -1,18 +1,18 @@
-# translation of emerald.po to Turkish
+# translation of emerald-new.po to
 # Emerald Window Decorator.
-# Copyright (C) 2006
+# Copyright (C) 2007 compiz-fusion.org
 # This file is distributed under the same license as the Emerald package.
 #
 # Suat SARIALP <muhendis.suat@gmail.com>, 2006.
 # Serdar Soytetir <tulliana@gmail.com>, 2007.
 msgid ""
 msgstr ""
-"Project-Id-Version: emerald\n"
+"Project-Id-Version: emerald-new\n"
 "Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
-"POT-Creation-Date: 2006-12-31 16:38+0530\n"
-"PO-Revision-Date: 2007-08-24 03:31+0300\n"
-"Last-Translator: Serdar Soytetir <tulliana@gmail.com>\n"
-"Language-Team: Turkish <tr@li.org>\n"
+"POT-Creation-Date: 2007-09-23 18:21+0200\n"
+"PO-Revision-Date: 2007-09-24 05:41+0300\n"
+"Last-Translator: Serdar Soytetir\n"
+"Language-Team:  <tr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -60,7 +60,9 @@ msgid "The window \"%s\" is not responding."
 msgstr "\"%s\" penceresi yanıt vermiyor."
 
 msgid "Forcing this application to quit will cause you to lose any unsaved changes."
-msgstr "Bu uygulamadan çıkmayı zorlamak, kaydedilmemiş değişikliklerin kaybedilmesine neden olur."
+msgstr ""
+"Bu uygulamadan çıkmayı zorlamak, kaydedilmemiş değişikliklerin "
+"kaybedilmesine neden olur."
 
 msgid "_Force Quit"
 msgstr "_Çıkmayı Zorla"
@@ -260,7 +262,7 @@ msgid "Name:"
 msgstr "İsim:"
 
 msgid "Untitled Theme"
-msgstr "Başlıksız tema"
+msgstr "İsimsiz tema"
 
 msgid "Export..."
 msgstr "Dışa aktar..."
@@ -278,7 +280,7 @@ msgid "Suggested Widget Theme"
 msgstr "Önerilen parçacık teması"
 
 msgid "Themer Version"
-msgstr "Tema yönetici sürümü"
+msgstr "Tema Yöneticisi Sürümü"
 
 msgid "Border"
 msgstr "Kenar"
@@ -379,13 +381,25 @@ msgid "Titlebar Double-Click Action"
 msgstr "Başlık çubuğunun çift tıklanmaya tepkisi"
 
 msgid "Button Hover Cursor"
-msgstr "Düğme üzerine gelindiğinde işaretçi"
+msgstr "Düğme Üzeri Konumunda Fare İşaretçisi"
 
 msgid "Normal"
 msgstr "Normal"
 
 msgid "Pointing Finger"
-msgstr "Parmak işaretçisi"
+msgstr "Parmak İşaretçisi"
+
+msgid "Compiz Decoration Blur Type"
+msgstr "Compiz Dekorasyonu Bulanıklık Tipi"
+
+msgid "None"
+msgstr "Hiçbiri"
+
+msgid "Titlebar only"
+msgstr "Sadece başlık çubuğu"
+
+msgid "All decoration"
+msgstr "Tüm dekorasyon"
 
 msgid "Frame Engine"
 msgstr "Çerçeve motoru"
@@ -406,21 +420,21 @@ msgid "Edit"
 msgstr "Düzenle"
 
 msgid "Import Theme..."
-msgstr "Tema içe aktar..."
+msgstr "İçeriye Tema Aktar..."
 
 msgid "Search:"
-msgstr "Bul:"
+msgstr "Ara:"
 
 msgid "Fetching Themes"
-msgstr "Temaları getirme"
+msgstr "Temalar Alınıyor"
 
 msgid ""
 "Fetching themes... \n"
 "This may take time depending on \n"
 "internet connection speed."
 msgstr ""
-"Temalar getiriliyor... \n"
-"İnternet bağlantı hızınıza bağlı olarak \n"
+"Temalar alınıyor... \n"
+"Bu işlem bağlantı hızınıza bağlı olarak \n"
 "biraz vakit alabilir."
 
 msgid ""
@@ -428,10 +442,10 @@ msgid ""
 "Fetching themes would fetch and import themes from SVN repositories \n"
 "You need Subversion package installed to use this feature."
 msgstr ""
-"Emerald temalarını getirebileceğiniz depolar. \n"
-"Temaları getirme; SVN deposundan temaların alınması \n"
-"ve içe aktarılmasını gerçekleştirecektir\n"
-"Bu özelliği kullanmak için subversion paketini kurulu olmalıdır."
+"Emerald temalarını alabileceğiniz depolar. \n"
+"Tema alımı, SVN deposundan temaların alınması \n"
+"ve içeriye aktarılması işlemlerini gerçekleştirir\n"
+"Bu özelliği kullanmak için subversion paketinin kurulu olması gerekir."
 
 msgid ""
 "This repository contains GPL'd themes that can be used under \n"
@@ -449,11 +463,11 @@ msgstr ""
 
 msgid ""
 "To activate Non-GPL repository please run the following in shell and accept "
-"the server ceritficate permanently: \n"
+"the server certificate permanently: \n"
 "svn ls https://svn.generation.no/emerald-themes."
 msgstr ""
 "GPL olmayan depoyu ekinleştirmek için şu komutu kabukta çalıştırın ve sunucu "
-"sertifikasını sürekli(permanently) olarak kabul edin: \n"
+"sertifikasını kalıcı olarak kabul edin: \n"
 "svn ls https://svn.generation.no/emerald-themes."
 
 msgid "Themes"
@@ -531,6 +545,9 @@ msgstr "İçerik gölgelendirme"
 
 msgid "Frame"
 msgstr "Çerçeve"
+
+msgid "Based on original legacy"
+msgstr "Orijinali  baz alınmıştır"
 
 msgid "Designed to be vista-ish in nature"
 msgstr "Vista gibi olması için tasarlandı"
