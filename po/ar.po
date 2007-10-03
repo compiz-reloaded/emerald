@@ -1,67 +1,67 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# emerald ar translation.
+# Copyright (C) 2007 compiz-fusion.org
+# This file is distributed under the same license as the emerald package.
+# Banxoo <banxoo+ar@gmail.com>, 2007.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: emerald 0.6\n"
 "Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
 "POT-Creation-Date: 2007-10-03 14:29+0530\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2007-09-29 00:05+0200\n"
+"Last-Translator: Banxoo <banxoo+ar@gmail.com>\n"
+"Language-Team: Compiz Fusion Translators <i18n@lists.compiz-fusion.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 msgid "Close Window"
-msgstr ""
+msgstr " النافذةإغلاق"
 
 msgid "Maximize Window"
-msgstr ""
+msgstr "تكبير النافذة"
 
 msgid "Restore Window"
-msgstr ""
+msgstr "إعادة النافذة"
 
 msgid "Minimize Window"
-msgstr ""
+msgstr "تصغير النافذة"
 
 msgid "Context Help"
-msgstr ""
+msgstr "مساعدة حسب المضمون"
 
 msgid "Window Menu"
-msgstr ""
+msgstr "لاىٔحة النافذة"
 
 msgid "Shade Window"
-msgstr ""
+msgstr "حجب النافذة"
 
 msgid "UnShade Window"
-msgstr ""
+msgstr "عدم حجب النافذة"
 
 msgid "Set Above"
-msgstr ""
+msgstr "حدد الأعلى"
 
 msgid "UnSet Above"
-msgstr ""
+msgstr "لا تحديد الأعلى"
 
 msgid "Stick Window"
-msgstr ""
+msgstr "لصق النافذة"
 
 msgid "UnStick Window"
-msgstr ""
+msgstr "إزالة تلصيق النافذة"
 
 #, c-format
 msgid "The window \"%s\" is not responding."
-msgstr ""
+msgstr "إن النافذة \"%s\" لا تتجاوب"
 
 msgid ""
 "Forcing this application to quit will cause you to lose any unsaved changes."
-msgstr ""
+msgstr "إغلاق هذا البرنامج بالقوة يسبب فقدان التغييرات غير المحفظة"
 
 msgid "_Force Quit"
-msgstr ""
+msgstr "إغلاق بالقوة"
 
 #, c-format
 msgid ""
@@ -84,19 +84,19 @@ msgid ""
 msgstr ""
 
 msgid "Unknown"
-msgstr ""
+msgstr "غير معروف"
 
 msgid "Whatever (no hint)"
-msgstr ""
+msgstr "أي يكن (بدون معرفة) ٭"
 
 msgid "No Description"
-msgstr ""
+msgstr "بدون مواصفات"
 
 msgid "Invalid Theme Name"
-msgstr ""
+msgstr "إسم الكساﺀ غير مناسب"
 
 msgid "Invalid theme file.  Does not end in .emerald"
-msgstr ""
+msgstr "إسم الكساﺀ غير مناسب. لأنه لا ينتهي ب .emerald"
 
 msgid ""
 "Invalid Theme Name\n"
@@ -112,7 +112,7 @@ msgid "Error calling tar."
 msgstr ""
 
 msgid "Theme Exported"
-msgstr ""
+msgstr "تصدير الكساﺀ"
 
 msgid ""
 "Can't save over system themes\n"
@@ -124,13 +124,13 @@ msgid "Overwrite Theme %s?"
 msgstr ""
 
 msgid "Couldn't Write Theme"
-msgstr ""
+msgstr "إستحالة في كتابة الكساﺀ"
 
 msgid "Couldn't Form Theme"
-msgstr ""
+msgstr "إستحالة في تشكيل الكساﺀ"
 
 msgid "Theme Saved"
-msgstr ""
+msgstr "حفظ الكساﺀ"
 
 msgid ""
 "Can't delete system themes\n"
@@ -151,70 +151,70 @@ msgid "Use Pixmap Buttons"
 msgstr ""
 
 msgid "Use Button Halo/Glow"
-msgstr ""
+msgstr "إستخدام هالة/توّهج الزر"
 
 msgid "Use Button Halo/Glow For Inactive Windows"
-msgstr ""
+msgstr "إستخدام هالة/توّهج الزر للنافذة الخاملة "
 
 msgid "Button Pixmaps"
 msgstr ""
 
 msgid "Button"
-msgstr ""
+msgstr "زر"
 
 msgid "File"
-msgstr ""
+msgstr "ملف"
 
 msgid "Preview"
-msgstr ""
+msgstr "إستعراض"
 
 msgid "Clear"
-msgstr ""
+msgstr "إحلاﺀ"
 
 msgid "Colors"
-msgstr ""
+msgstr "ألوان"
 
 msgid "Text Fill"
-msgstr ""
+msgstr "لون النص"
 
 msgid "Text Outline"
-msgstr ""
+msgstr "إطار النص"
 
 msgid "Button Fill"
 msgstr ""
 
 msgid "Button Outline"
-msgstr ""
+msgstr "لون الزر"
 
 msgid "Color"
-msgstr ""
+msgstr "لون"
 
 msgid "Opacity"
-msgstr ""
+msgstr "شفافية"
 
 msgid "Radius"
-msgstr ""
+msgstr "الشعاع"
 
 msgid "X Offset"
-msgstr ""
+msgstr "التوازن الأفقي"
 
 msgid "Y Offset"
-msgstr ""
+msgstr "التوازن العامودي"
 
 msgid "Title-Text Font"
-msgstr ""
+msgstr "خط العنوان"
 
 msgid "Minimum Title-bar Height"
-msgstr ""
+msgstr "الطول الأدني لعارضة العنوان"
 
 msgid "Vertical Button Offset"
-msgstr ""
+msgstr "التوازن العامودي للزر"
 
 msgid "Horizontal Button Offset"
-msgstr ""
+msgstr "التوازن الأفقي للزر"
 
 msgid "Title-bar Object Layout"
-msgstr ""
+msgstr "محطط الأشياﺀ في عارضة العنوان"
 
 msgid ""
 "Use colons to separate left, center, and right.\n"
@@ -226,25 +226,25 @@ msgid ""
 msgstr ""
 
 msgid "Export Theme..."
-msgstr ""
+msgstr "تصدير الكساﺀ..."
 
 msgid "Name:"
-msgstr ""
+msgstr "الإسم:"
 
 msgid "Untitled Theme"
-msgstr ""
+msgstr "كساﺀ بدون عنوان"
 
 msgid "Export..."
-msgstr ""
+msgstr "تصدير..."
 
 msgid "Creator"
-msgstr ""
+msgstr "الصانع"
 
 msgid "Description"
-msgstr ""
+msgstr "المواصفات"
 
 msgid "Theme Version"
-msgstr ""
+msgstr "رقم نسخة الكساﺀ"
 
 msgid "Suggested Widget Theme"
 msgstr ""
@@ -253,22 +253,22 @@ msgid "Themer Version"
 msgstr ""
 
 msgid "Border"
-msgstr ""
+msgstr "الحدود"
 
 msgid "Size"
-msgstr ""
+msgstr "الحجم"
 
 msgid "Top"
-msgstr ""
+msgstr "أعلى"
 
 msgid "Bottom"
-msgstr ""
+msgstr "أسفل"
 
 msgid "Left"
-msgstr ""
+msgstr "يسار"
 
 msgid "Right"
-msgstr ""
+msgstr "يمين"
 
 msgid ""
 "Note, when changing these values,\n"
@@ -282,30 +282,40 @@ msgid ""
 "the titlebar-min-height slider\n"
 "or the titlebar font setting.\n"
 msgstr ""
+"ملاحظة: عند تغير هذه القيم،\n"
+"it is advised that you do something\n"
+"like change viewports, as this will\n"
+"cause the position of the 'event windows'\n"
+"to update properly, and thus make\n"
+"moving/resizing windows work properly.\n"
+"This also applies to when you change\n"
+"the title-bar height through either\n"
+"the titlebar-min-height slider\n"
+"or the titlebar font setting.\n"
 
 msgid "Shadows"
-msgstr ""
+msgstr "ظلال"
 
 msgid "Frame Borders"
-msgstr ""
+msgstr "إطار الحدود"
 
 msgid "Active Window"
-msgstr ""
+msgstr "النافذة النشطة"
 
 msgid "Inactive Window"
-msgstr ""
+msgstr "النافذة الخاملة"
 
 msgid "Title Bar"
-msgstr ""
+msgstr "عارضة العنوان"
 
 msgid "Screenshot"
-msgstr ""
+msgstr "صورة الشاشة"
 
 msgid "Images"
-msgstr ""
+msgstr "صور"
 
 msgid "Information"
-msgstr ""
+msgstr "معلومات"
 
 msgid ""
 "NOTE - These settings are not part of themes, they are stored separately, "
@@ -313,79 +323,79 @@ msgid ""
 msgstr ""
 
 msgid "Show Tooltips for Buttons"
-msgstr ""
+msgstr "إظهار شريط أدوات الأزرار"
 
 msgid "Use Decoration Cropping"
-msgstr ""
+msgstr "إستخدم القص المزين"
 
 msgid "Use Button Fade"
-msgstr ""
+msgstr "إستخدم الزر المتلاشي"
 
 msgid "Use Button Fade Pulse"
-msgstr ""
+msgstr "إستخدم النبض في الزر المتلاشي"
 
 msgid "Button Fade Total Duration"
-msgstr ""
+msgstr "المدة الكاملة لتلاشي الزر"
 
 msgid "Button Fade Step Duration"
-msgstr ""
+msgstr "مدة الخطوة عند تلاشي الرز"
 
 msgid "Button Pulse Wait Duration"
-msgstr ""
+msgstr "مدة النبضة للزر"
 
 msgid "Button Pulse Min Opacity %"
-msgstr ""
+msgstr "اللاشفافية الدنيا لنبضة الرز"
 
 msgid "Titlebar Double-Click Action"
-msgstr ""
+msgstr "سلوك عارضة العنوان عند عند النقر المزدوج"
 
 msgid "Button Hover Cursor"
 msgstr ""
 
 msgid "Normal"
-msgstr ""
+msgstr "عادي"
 
 msgid "Pointing Finger"
-msgstr ""
+msgstr "الأصبع الدال"
 
 msgid "Compiz Decoration Blur Type"
 msgstr ""
 
 msgid "None"
-msgstr ""
+msgstr "لا شئ"
 
 msgid "Titlebar only"
-msgstr ""
+msgstr "عارضة العنوان فقط"
 
 msgid "All decoration"
-msgstr ""
+msgstr "كل الزينة"
 
 msgid "Frame Engine"
-msgstr ""
+msgstr "محرك الإطار"
 
 msgid "Buttons"
-msgstr ""
+msgstr "أزرار"
 
 msgid "Frame/Shadows"
-msgstr ""
+msgstr "إطار / ظلال"
 
 msgid "Titlebar"
-msgstr ""
+msgstr "عارضة العنوان"
 
 msgid "Theme"
-msgstr ""
+msgstr "كساﺀ"
 
 msgid "Edit"
-msgstr ""
+msgstr "تحرير"
 
 msgid "Import Theme..."
-msgstr ""
+msgstr "إستيراد الكساﺀ..."
 
 msgid "Search:"
-msgstr ""
+msgstr "بحث:"
 
 msgid "Fetching Themes"
-msgstr ""
+msgstr "إحضار الكساﺀات"
 
 msgid ""
 "Fetching themes... \n"
@@ -416,19 +426,19 @@ msgid ""
 msgstr ""
 
 msgid "Themes"
-msgstr ""
+msgstr "كساﺀات"
 
 msgid "Edit Themes"
-msgstr ""
+msgstr "تحرير الكساﺀات"
 
 msgid "Repositories"
 msgstr ""
 
 msgid "Themes Settings"
-msgstr ""
+msgstr "ضبط الكساﺀ"
 
 msgid "Emerald Settings"
-msgstr ""
+msgstr "ضبط ايميرالد"
 
 msgid ""
 "Select\n"
@@ -439,70 +449,70 @@ msgid "Based on original gnome-window-decorator"
 msgstr ""
 
 msgid "Round Top Left Corner"
-msgstr ""
+msgstr "تدوير الزاوية العليا على اليسار"
 
 msgid "Round Top Right Corner"
-msgstr ""
+msgstr "تدوير الزاوية العليا على اليمين"
 
 msgid "Round Bottom Left Corner"
-msgstr ""
+msgstr "تدوير الزاوية السفلى على اليسار"
 
 msgid "Round Bottom Right Corner"
-msgstr ""
+msgstr "تدوير الزاوية السفلى على اليمين"
 
 msgid "Rounding Radius"
-msgstr ""
+msgstr "شعاع التدوير"
 
 msgid "Outer Frame Blend"
-msgstr ""
+msgstr "مزج الإطار الخارجي"
 
 msgid "Inner Frame Blend"
-msgstr ""
+msgstr "مزج الإطار الداخلي"
 
 msgid "Outer Titlebar Blend"
-msgstr ""
+msgstr "مزج خارجي لعارضة العنوان"
 
 msgid "Inner Titlebar Blend"
-msgstr ""
+msgstr "مزج داخلي لعارضة العنوان"
 
 msgid "Titlebar Separator"
-msgstr ""
+msgstr "فاصل عارضة العنوان"
 
 msgid "Frame Outline"
-msgstr ""
+msgstr "مخطط الإطار"
 
 msgid "Frame Highlight"
-msgstr ""
+msgstr "إبراز الإطار"
 
 msgid "Frame Shadow"
-msgstr ""
+msgstr "ظل الإطار"
 
 msgid "Contents Outline"
-msgstr ""
+msgstr "مخطط المحتوى"
 
 msgid "Contents Highlight"
-msgstr ""
+msgstr "إبراز المحتوى"
 
 msgid "Contents Shadow"
-msgstr ""
+msgstr "ظل المحتوى"
 
 msgid "Frame"
-msgstr ""
+msgstr "إطار"
 
 msgid "Based on original legacy"
 msgstr ""
 
 msgid "Designed to be vista-ish in nature"
-msgstr ""
+msgstr "مصمم طبيعيا على نمط فيستا"
 
 msgid "Base"
-msgstr ""
+msgstr "قاعدة"
 
 msgid "Glow"
-msgstr ""
+msgstr "وهج"
 
 msgid "Sides"
-msgstr ""
+msgstr "الأطراف"
 
 msgid "Everything done with customizable pixmaps!"
 msgstr ""
@@ -536,82 +546,82 @@ msgid "Height Override"
 msgstr ""
 
 msgid "Glassy effects for your windows"
-msgstr ""
+msgstr "مؤثرات زجاجية للنوافذ"
 
 msgid "Glow Height"
-msgstr ""
+msgstr "حجم الوهج"
 
 msgid "Frame Base Color"
-msgstr ""
+msgstr "لون قاعدة الإطار"
 
 msgid "Upper Titlebar Glow"
-msgstr ""
+msgstr "وهج أعلى عارضة العنوان"
 
 msgid "Upper Glass Glow"
-msgstr ""
+msgstr "وهج أعلى الزجاج"
 
 msgid "Lower Glass Glow"
-msgstr ""
+msgstr "وهج أسفل الزجاج"
 
 msgid "Middle Glass Glow"
-msgstr ""
+msgstr "وهج وسط الزجاج"
 
 msgid "Outer Glass Glow"
-msgstr ""
+msgstr "وهج خارج الزجاج"
 
 msgid "Multiple gradients with somewhat glassy features too"
-msgstr ""
+msgstr "تدرج متعدد مع ما يشبه خصاىٔص زجاجية "
 
 msgid "Left Blend"
-msgstr ""
+msgstr "مزج على اليسار"
 
 msgid "Middle Blend"
-msgstr ""
+msgstr "مزج في الوسط"
 
 msgid "Right Blend"
-msgstr ""
+msgstr "مزج على اليمين"
 
 msgid "Contrast"
-msgstr ""
+msgstr "تباين"
 
 msgid "(Color)"
-msgstr ""
+msgstr "(لون)"
 
 msgid "(Alpha)"
-msgstr ""
+msgstr "(ألفا)"
 
 msgid "Notch"
 msgstr ""
 
 msgid "Position"
-msgstr ""
+msgstr "المكان"
 
 msgid "Curve"
-msgstr ""
+msgstr "منحنى"
 
 msgid "Offset"
-msgstr ""
+msgstr "التوازن"
 
 msgid "Use Glow"
-msgstr ""
+msgstr "استخدم الوهج"
 
 msgid "Title Glow"
-msgstr ""
+msgstr "وهج العنوان"
 
 msgid "Evolved from the legacy engine"
 msgstr ""
 
 msgid "Border Gap"
-msgstr ""
+msgstr "هوة الحدود"
 
 msgid "Show Border when maximised?"
-msgstr ""
+msgstr "أظهر الحدود عند التكبير القصوي"
 
 msgid "Show when minimised?"
-msgstr ""
+msgstr "أظهر عند التصغير؟"
 
 msgid "Minimised Border Size"
-msgstr ""
+msgstr "حجم الحدود الدنوي"
 
 msgid "Enable Left Bar Dip?"
 msgstr ""
@@ -656,19 +666,19 @@ msgid "Frame Rounding Radius"
 msgstr ""
 
 msgid "Titlebar Rounding Radius"
-msgstr ""
+msgstr "شعاع تدوير عارضة العنوان"
 
 msgid "Repeat Gradient?"
-msgstr ""
+msgstr "تكرار التدرج؟"
 
 msgid "Vertical Repeat?"
-msgstr ""
+msgstr "تدرج عامودي؟"
 
 msgid "Diagonal Repeat?"
-msgstr ""
+msgstr "تكرار قطري؟"
 
 msgid "Repeat Frequency"
-msgstr ""
+msgstr "تردد التركرار"
 
 #. /////////////////////
 msgid "Enable Title Part Pixmap?"
@@ -710,19 +720,19 @@ msgid "Choose Titlebar Pixmap"
 msgstr ""
 
 msgid "Active/Inactive"
-msgstr ""
+msgstr "نشط / خامل"
 
 msgid "Maximised"
-msgstr ""
+msgstr "الحجم الأقصى"
 
 msgid "Corners"
-msgstr ""
+msgstr "الزوايا"
 
 msgid "Border Layout"
-msgstr ""
+msgstr "مخطط الحدود"
 
 msgid "Left Bar"
-msgstr ""
+msgstr "العارضة اليسرى"
 
 msgid "Pixmaps"
 msgstr ""
