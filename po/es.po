@@ -2,18 +2,17 @@
 # Copyright (C) 2006 beryl-project
 # Copyright (C) 2007 compiz-fusion-project
 # This file is distributed under the same license as the Compiz Fusion packages.
-# Jesús Vidal Panalés <jesusvpct@ono.com>, 2006
+#
 # Festor Wailon Dacoba <festor90@gmail.com>, 2007.
-# Felipe Sáez <strikesf@gmail.com>, 2007. -> Update to 0.6.0
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Emerald\n"
-"Report-Msgid-Bugs-To: http://bugs.opencompositing.org\n"
-"POT-Creation-Date: 2007-09-17 00:03+0200\n"
-"PO-Revision-Date: 2007-10-01 22:03-0300\n"
-"Last-Translator: Felipe Saez <strikesf@gmail.com>\n"
-"Language-Team: Spanish Team <strikesf@gmail.com>\n"
+"Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
+"POT-Creation-Date: 2007-10-06 21:34+0530\n"
+"PO-Revision-Date: 2007-09-17 08:00+0100\n"
+"Last-Translator: Festor Wailon Dacoba <festor90@gmail.com>\n"
+"Language-Team:  <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -61,8 +60,11 @@ msgstr "Despegar la ventana"
 msgid "The window \"%s\" is not responding."
 msgstr "La ventana \"%s\" no responde."
 
-msgid "Forcing this application to quit will cause you to lose any unsaved changes."
-msgstr "Forzar esta aplicación a cerrar provocará que pierdas los cambios no guardados."
+msgid ""
+"Forcing this application to quit will cause you to lose any unsaved changes."
+msgstr ""
+"Forzar esta aplicación a cerrar provocará que pierdas los cambios no "
+"guardados."
 
 msgid "_Force Quit"
 msgstr "Forzar cerrar"
@@ -348,10 +350,13 @@ msgstr "Imágenes"
 msgid "Information"
 msgstr "Información"
 
-msgid "NOTE - These settings are not part of themes, they are stored separately, and control various UI preferences for Emerald."
+msgid ""
+"NOTE - These settings are not part of themes, they are stored separately, "
+"and control various UI preferences for Emerald."
 msgstr ""
 "NOTA - Estos ajustes no son parte de los temas, que están grabados de forma\n"
-"separada, y controla varias preferencias del interfaz de usuario para Emerald."
+"separada, y controla varias preferencias del interfaz de usuario para "
+"Emerald."
 
 msgid "Show Tooltips for Buttons"
 msgstr "Mostrar sugerencias para los botones"
@@ -442,8 +447,10 @@ msgid ""
 "Fetching themes would fetch and import themes from SVN repositories \n"
 "You need Subversion package installed to use this feature."
 msgstr ""
-"Aquí están los repositorios desde los que puede descargar temas de Emerald. \n"
-"Descargar los temas descargará e importará los temas desde el repositorio SVN \n"
+"Aquí están los repositorios desde los que puede descargar temas de "
+"Emerald. \n"
+"Descargar los temas descargará e importará los temas desde el repositorio "
+"SVN \n"
 "Necesita tener el paquete Subversion instalado para usar esta característica."
 
 msgid ""
@@ -461,10 +468,13 @@ msgstr ""
 "infringir la copia de derechos y las leyes patentes en algunos países."
 
 msgid ""
-"To activate Non-GPL repository please run the following in shell and accept the server certificate permanently: \n"
+"To activate Non-GPL repository please run the following in shell and accept "
+"the server certificate permanently: \n"
 "svn ls https://svn.generation.no/emerald-themes."
 msgstr ""
-"Para activar los temas No GPL del repositorio, por favor, ejecute lo siguiente en una consola y acepte el certificado del servidor permanentemente: \n"
+"Para activar los temas No GPL del repositorio, por favor, ejecute lo "
+"siguiente en una consola y acepte el certificado del servidor "
+"permanentemente: \n"
 "svn ls https://svn.generation.no/emerald-themes."
 
 msgid "Themes"
@@ -674,7 +684,8 @@ msgid "Left Bar Radius"
 msgstr "Radio de la barra izquierda"
 
 msgid "Enable Lower Bulge? (Useless at the moment, but will be used soon)"
-msgstr "¿Activar grosor inferior? (Sin uso en este momento, pero se usará pronto)"
+msgstr ""
+"¿Activar grosor inferior? (Sin uso en este momento, pero se usará pronto)"
 
 msgid "Top Corner Offset (%)"
 msgstr "Margen de la esquina superior (%)"
@@ -780,4 +791,3 @@ msgstr "Barra izquierda"
 
 msgid "Pixmaps"
 msgstr "Imágenes"
-
