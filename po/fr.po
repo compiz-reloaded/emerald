@@ -1,6 +1,7 @@
 # Emerald Window Decorator.
 # Copyright (C) 2006-2007
 # This file is distributed under the same license as the Emerald package.
+# NeoThor - Tristan Rablat <tristan.rablat@gmail.com>, 2007.
 # Éric lassauge <rpmfarm@free.fr>, 2007.
 # cyberorg <cyberorg@cyberorg.info>, 2006.
 # reggaemanu <reggaemanu@beryl-project.org>, 2006.
@@ -10,9 +11,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1\n"
 "Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
-"POT-Creation-Date: 2006-12-31 16:38+0530\n"
+"POT-Creation-Date: 2007-10-08 22:28+0530\n"
 "PO-Revision-Date: 2006-12-03 01:08+0100\n"
-"Last-Translator: Éric lassauge <rpmfarm@free.fr>\n"
+"Last-Translator: Tristan Rablat <tristan.rablat@gmail.com>\n"
 "Language-Team: French <gnomefr@traduc.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -80,7 +81,7 @@ msgstr ""
 "<i>%s</i>\n"
 "<small><b>Version</b> %s\n"
 "<b>Auteur :</b> %s\n"
-"<b>Thème GTK conseillé :</b> %s\n"
+"<b>Thème GTK/QT conseillé :</b> %s\n"
 "</small>"
 
 #, c-format
@@ -96,7 +97,7 @@ msgstr ""
 "<i>%s</i>\n"
 "<small><b>Version</b> %s\n"
 "<b>Auteur :</b> %s\n"
-"<b>Thème GTK conseillé :</b> %s\n"
+"<b>Thème GTK/QT conseillé :</b> %s\n"
 "</small>"
 
 msgid "Unknown"
@@ -205,7 +206,7 @@ msgid "Text Outline"
 msgstr "Contour du texte"
 
 msgid "Button Fill"
-msgstr "Boutons"
+msgstr "Bouton"
 
 msgid "Button Outline"
 msgstr "Contour des boutons"
@@ -226,7 +227,7 @@ msgid "Y Offset"
 msgstr "Décalage sur l'axe Y"
 
 msgid "Title-Text Font"
-msgstr "Police de caractère"
+msgstr "Police de caractère du titre"
 
 msgid "Minimum Title-bar Height"
 msgstr "Hauteur minimale de la barre de titre"
@@ -248,7 +249,7 @@ msgid ""
 "S=Shade, U/A=On Top(Up/Above)\n"
 "Y=Sticky, (#)=# pixels space, ex: (5)\n"
 msgstr ""
-"Utilise des virgules entre les caractères suivants pour séparer la gauche, "
+"Utilisez des virgules entre les caractères suivants pour séparer la gauche, "
 "le centre et la droite.\n"
 "C=Fermer, N=Minimiser, X/R=Restaurer\n"
 "I=Icône, T=Titre, H=Aide, M=Menu, S=Enrouler\n"
@@ -259,13 +260,13 @@ msgid "Export Theme..."
 msgstr "Exporter le thème…"
 
 msgid "Name:"
-msgstr "Nom :"
+msgstr "Nom :"
 
 msgid "Untitled Theme"
 msgstr "Thème sans nom"
 
 msgid "Export..."
-msgstr "Exporter…"
+msgstr "Exporter..."
 
 msgid "Creator"
 msgstr "Créateur"
@@ -312,7 +313,7 @@ msgid ""
 "the titlebar-min-height slider\n"
 "or the titlebar font setting.\n"
 msgstr ""
-"Note, lorsque vous changez ces\n"
+"Notez que lorsque vous changez ces\n"
 "valeurs, il est conseillé d'effectuer\n"
 "un changement de bureau ou\n"
 "n'importe quelle action permettant\n"
@@ -377,7 +378,7 @@ msgid "Button Pulse Min Opacity %"
 msgstr "Opacité minimum de la pulsation des boutons"
 
 msgid "Titlebar Double-Click Action"
-msgstr "Action lors d'un double clic"
+msgstr "Action lors d'un double clic sur la barre de titre"
 
 msgid "Button Hover Cursor"
 msgstr "Curseur au survol des boutons"
@@ -387,6 +388,18 @@ msgstr "Normal"
 
 msgid "Pointing Finger"
 msgstr "Main"
+
+msgid "Compiz Decoration Blur Type"
+msgstr "Type de flou des décorations de Compiz"
+
+msgid "None"
+msgstr "Aucun"
+
+msgid "Titlebar only"
+msgstr "Barre de titre seulement"
+
+msgid "All decoration"
+msgstr "Toutes les décorations"
 
 msgid "Frame Engine"
 msgstr "Moteur d'armature"
@@ -407,7 +420,7 @@ msgid "Edit"
 msgstr "Édition"
 
 msgid "Import Theme..."
-msgstr "Importer un thème…"
+msgstr "Importer un thème..."
 
 msgid "Search:"
 msgstr "Recherche :"
@@ -420,7 +433,7 @@ msgid ""
 "This may take time depending on \n"
 "internet connection speed."
 msgstr ""
-"Récupération des thèmes…\n"
+"Récupération des thèmes...\n"
 "Ceci peu prendre du temps, en fonction \n"
 "de la vitesse de votre connexion internet."
 
@@ -447,7 +460,7 @@ msgstr ""
 
 msgid ""
 "To activate Non-GPL repository please run the following in shell and accept "
-"the server ceritficate permanently: \n"
+"the server certificate permanently: \n"
 "svn ls https://svn.generation.no/emerald-themes."
 msgstr ""
 "Pour activer le dépôt non-GPL veuillez utiliser la commande suivante dans un "
@@ -501,7 +514,7 @@ msgid "Inner Frame Blend"
 msgstr "Fondu interne de l'armature"
 
 msgid "Outer Titlebar Blend"
-msgstr "Reflet externe de l'a barre de titre"
+msgstr "Reflet externe de la barre de titre"
 
 msgid "Inner Titlebar Blend"
 msgstr "Fondu interne de la barre de titre"
@@ -530,8 +543,11 @@ msgstr "Ombre du contenu"
 msgid "Frame"
 msgstr "Armature"
 
+msgid "Based on original legacy"
+msgstr "Basé sur le décorateur d'origine"
+
 msgid "Designed to be vista-ish in nature"
-msgstr "Imitation windows vista"
+msgstr "Imitation Windows Vista"
 
 msgid "Base"
 msgstr "Couleur de Base"
@@ -637,7 +653,7 @@ msgid "Title Glow"
 msgstr "Lueur du titre"
 
 msgid "Evolved from the legacy engine"
-msgstr "Moteur de thème évolué"
+msgstr "Évolution du moteur d'origine"
 
 msgid "Border Gap"
 msgstr "Espace de bordure"
@@ -658,7 +674,8 @@ msgid "Left Bar Radius"
 msgstr "Rayon de la barre de gauche"
 
 msgid "Enable Lower Bulge? (Useless at the moment, but will be used soon)"
-msgstr "Activer le renflement inférieur (inutile pour le moment mais à venir)"
+msgstr ""
+"Activer le renflement inférieur (inutile pour le moment, mais usage à venir)"
 
 msgid "Top Corner Offset (%)"
 msgstr "Décalage du coin supérieur (%)"
