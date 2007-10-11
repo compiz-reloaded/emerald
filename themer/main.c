@@ -1474,7 +1474,7 @@ void fetch_svn()
 }
 void fetch_gpl_svn()
 {
-	svnpath="svn://svn.beryl-project.org/beryl/trunk/emerald-themes-repo";
+	svnpath="http://emerald-themes.googlecode.com/svn/trunk/emerald-themes-repo";
 	themecache=g_strconcat(g_get_home_dir(),"/.emerald/themecache",NULL);
 	fetch_svn();
 }
