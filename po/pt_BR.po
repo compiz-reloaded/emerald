@@ -1,74 +1,72 @@
 # Emerald Window Decorator.
 # Copyright (C) 2006
 # This file is distributed under the same license as the Emerald package.
-# Transladed by Carlos Eduardo Ariede - DuD@ <duda@ariede.com.br>, 2006.
+# Based on Portugal Portuguese translation by Nicolau Gonçalves
+# Joel Calado <joelcalado@gmail.com>, 2007.
+# Nicolau Gonçalves <excentriko@gmail.com>, 2007.
+# Carlos Eduardo Ariede - DuD@ <duda@ariede.com.br>, 2006.
+# Emerson Ribeiro de Mello <ribmello-compiz@yahoo.com.br>, 2007.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: 0.1\n"
+"Project-Id-Version: Compiz\n"
 "Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
-"POT-Creation-Date: 2006-12-31 16:38+0530\n"
-"PO-Revision-Date: 2006-10-04 20:17+0100\n"
-"Last-Translator: DuD@ <duda@ariede.com.br>\n"
-"Language-Team: beryl-project <cyberorg@cyberorg.info>\n"
+"POT-Creation-Date: 2007-10-11 21:50+0530\n"
+"PO-Revision-Date: 2007-10-11 16:0-0300\n"
+"Last-Translator: Emerson Ribeiro de Mello <ribmello-compiz@yahoo.com.br>\n"
+"Language-Team: Portuguese <gnome-l10n-br@listas.cipsga.org.br>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#, fuzzy
 msgid "Close Window"
-msgstr "Janela Ativa"
+msgstr "Fechar Janela"
 
-#, fuzzy
 msgid "Maximize Window"
-msgstr "Janela Inativa"
+msgstr "Maximizar Janela"
 
-#, fuzzy
 msgid "Restore Window"
-msgstr "Janela Ativa"
+msgstr "Restaurar Janela"
 
-#, fuzzy
 msgid "Minimize Window"
-msgstr "Janela Inativa"
+msgstr "Minimizar Janela"
 
-#, fuzzy
 msgid "Context Help"
-msgstr "Highlight dos conteúdos"
+msgstr "Ajuda de Contexto"
 
 msgid "Window Menu"
-msgstr ""
+msgstr "Menu da Janela"
 
-#, fuzzy
 msgid "Shade Window"
-msgstr "Janela Inativa"
+msgstr "Sombrear Janela"
 
-#, fuzzy
 msgid "UnShade Window"
-msgstr "Janela Inativa"
+msgstr "Des-sombrear janela"
 
 msgid "Set Above"
-msgstr ""
+msgstr "Colocar Acima"
 
 msgid "UnSet Above"
-msgstr ""
+msgstr "Retirar de Cima"
 
-#, fuzzy
 msgid "Stick Window"
-msgstr "Janela Ativa"
+msgstr "Prender Janela"
 
-#, fuzzy
 msgid "UnStick Window"
-msgstr "Janela Inativa"
+msgstr "Soltar Janela"
 
 #, c-format
 msgid "The window \"%s\" is not responding."
-msgstr ""
+msgstr "A janela \"%s\" não está respondendo."
 
 msgid ""
 "Forcing this application to quit will cause you to lose any unsaved changes."
 msgstr ""
+"Forçar esta aplicação a sair causará perda de alterações que não tenham sido "
+"salvas."
 
 msgid "_Force Quit"
-msgstr ""
+msgstr "_Forçar Saída"
 
 #, c-format
 msgid ""
@@ -82,8 +80,8 @@ msgstr ""
 "<b><big>%s</big></b>\n"
 "<i>%s</i>\n"
 "<small><b>Versão</b> %s\n"
-"<b>Criado Por</b> %s\n"
-"<b>Usar Com</b> %s\n"
+"<b>Criado por</b> %s\n"
+"<b>Usar com</b> %s\n"
 "</small>"
 
 #, c-format
@@ -95,44 +93,44 @@ msgid ""
 "<b>Use With</b> %s\n"
 "</small>"
 msgstr ""
-"<b><big>%s</big></b> (Tema do Sistema)\n"
+"<b><big>%s</big></b> (Tema de sistema)\n"
 "<i>%s</i>\n"
 "<small><b>Versão</b> %s\n"
-"<b>Criado Por</b> %s\n"
-"<b>Usar Com</b> %s\n"
+"<b>Criado por</b> %s\n"
+"<b>Usar com</b> %s\n"
 "</small>"
 
 msgid "Unknown"
 msgstr "Desconhecido"
 
 msgid "Whatever (no hint)"
-msgstr "Qualquer (sem pista)"
+msgstr "Qualquer (sem dica)"
 
 msgid "No Description"
 msgstr "Sem descrição"
 
 msgid "Invalid Theme Name"
-msgstr "Nome do tema inválido"
+msgstr "Nome de tema inválido"
 
 msgid "Invalid theme file.  Does not end in .emerald"
-msgstr "Arquivo do tema inválido. Não termina com .emerald"
+msgstr "Arquivo de tema inválido. Ele não termina em .emerald"
 
 msgid ""
 "Invalid Theme Name\n"
 "Could Not Export"
 msgstr ""
-"Nome do tema inválido\n"
-"Não foi possível exportar"
+"Nome de tema inválido\n"
+"Impossível exportar"
 
 msgid ""
 "Invalid File Name\n"
 "Must End in .emerald"
 msgstr ""
-"Nome do arquivo inválido\n"
-"Deve terminar com .emerald"
+"Nome de arquivo inválido\n"
+"Deve Terminar em .emerald"
 
 msgid "Error calling tar."
-msgstr "Erro ao executar o tar"
+msgstr "Erro ao executar o tar."
 
 msgid "Theme Exported"
 msgstr "Tema Exportado"
@@ -142,49 +140,49 @@ msgid ""
 "(or you forgot to enter a name)"
 msgstr ""
 "Impossível sobrescrever temas do sistema\n"
-"(ou esqueceu-se de inserir um nome)"
+"(ou você esqueceu de informar um nome)"
 
 #, c-format
 msgid "Overwrite Theme %s?"
 msgstr "Sobrescrever Tema %s?"
 
 msgid "Couldn't Write Theme"
-msgstr "Impossível Escrever o Tema"
+msgstr "Impossível gravar o tema"
 
 msgid "Couldn't Form Theme"
-msgstr "Impossível Formar o Tema"
+msgstr "Impossível criar o tema"
 
 msgid "Theme Saved"
-msgstr "Tema Gravado"
+msgstr "Tema salvo"
 
 msgid ""
 "Can't delete system themes\n"
 "(or you forgot to enter a name)"
 msgstr ""
 "Impossível apagar temas do sistema\n"
-"(ou esqueceu-se de inserir um nome)"
+"(ou você esqueceu de fornecer um nome)"
 
 #, c-format
 msgid "Are you sure you want to delete %s?"
-msgstr "Tem a certeza que deseja apagar %s?"
+msgstr "Você tem certeza que deseja apagar %s?"
 
 msgid "Theme deleted"
 msgstr "Tema apagado"
 
 msgid "No such theme to delete"
-msgstr "Não existe tema para apagar"
+msgstr "Não existe tal tema para apagar"
 
 msgid "Use Pixmap Buttons"
-msgstr "Usar imagens para botões"
+msgstr "Usar Imagens de Botões"
 
 msgid "Use Button Halo/Glow"
-msgstr "Usar Halo/brilho do botão"
+msgstr "Usar Aura/Brilho do botão"
 
 msgid "Use Button Halo/Glow For Inactive Windows"
-msgstr "Usar Halo/brilho para os botões nas janelas inativas"
+msgstr "Usar Aura/brilho nos botões para janelas inativas"
 
 msgid "Button Pixmaps"
-msgstr "Imagens dos botões"
+msgstr "Imagens de botões"
 
 msgid "Button"
 msgstr "Botão"
@@ -193,7 +191,7 @@ msgid "File"
 msgstr "Arquivo"
 
 msgid "Preview"
-msgstr "Preview"
+msgstr "Previsão"
 
 msgid "Clear"
 msgstr "Limpar"
@@ -205,13 +203,13 @@ msgid "Text Fill"
 msgstr "Preenchimento do texto"
 
 msgid "Text Outline"
-msgstr "Limite do texto"
+msgstr "Delineação do texto"
 
 msgid "Button Fill"
-msgstr "Preenchimento do botão"
+msgstr "Preenchimento do Botão"
 
 msgid "Button Outline"
-msgstr "Limites do botão"
+msgstr "Delineação do botão"
 
 msgid "Color"
 msgstr "Cor"
@@ -229,16 +227,16 @@ msgid "Y Offset"
 msgstr "Margem Y"
 
 msgid "Title-Text Font"
-msgstr "Fonte do título"
+msgstr "Fonte do Texto do Título"
 
 msgid "Minimum Title-bar Height"
-msgstr "Altura mínima da barra de título"
+msgstr "Altura Mínima da Barra de título"
 
 msgid "Vertical Button Offset"
-msgstr "Margem vertical dos botões"
+msgstr "Margem Vertical dos Botões"
 
 msgid "Horizontal Button Offset"
-msgstr "Margem horizontal dos botões"
+msgstr "Margem Horizontal dos Botões"
 
 msgid "Title-bar Object Layout"
 msgstr "Esquema da barra de título"
@@ -252,32 +250,32 @@ msgid ""
 "Y=Sticky, (#)=# pixels space, ex: (5)\n"
 msgstr ""
 "Use vírgulas para separar esquerda, centro, e direita.\n"
-"Qualquer coisa depois da terceira vírgula é ignorada.\n"
+"Qualquer coisa depois da terceira vírgula é ignorada\n"
 "C=Fechar, N=Minimizar, X/R=Restaurar\n"
 "I=Ícone, T=Título, H=Ajuda, M=Menu\n"
 "S=Shade, U/A=No topo(Acima/abaixo)\n"
-"Y=Sticky, (#)= Nº de pixeis de espaço, ex: (5)\n"
+"Y=Prender, (#)= Nº de pixeis de espaço, ex: (5)\n"
 
 msgid "Export Theme..."
-msgstr "Exportar Tema..."
+msgstr "Exportar tema"
 
 msgid "Name:"
 msgstr "Nome:"
 
 msgid "Untitled Theme"
-msgstr "Tema Sem Título"
+msgstr "Tema sem nome"
 
 msgid "Export..."
 msgstr "Exportar..."
 
 msgid "Creator"
-msgstr "Criador"
+msgstr "Autor"
 
 msgid "Description"
-msgstr "Descrição"
+msgstr "Desrição"
 
 msgid "Theme Version"
-msgstr "Versão do Tema"
+msgstr "Versão do tema"
 
 msgid "Suggested Widget Theme"
 msgstr "Tema GTK sugerido"
@@ -286,24 +284,23 @@ msgid "Themer Version"
 msgstr "Versão do tema"
 
 msgid "Border"
-msgstr "Borda"
+msgstr "Bordas"
 
 msgid "Size"
 msgstr "Tamanho"
 
 msgid "Top"
-msgstr "Superior"
+msgstr "Topo"
 
 msgid "Bottom"
-msgstr "Inferior"
+msgstr "Fundo"
 
 msgid "Left"
-msgstr "Esquerdo"
+msgstr "Esquerda"
 
 msgid "Right"
-msgstr "Direito"
+msgstr "Direita"
 
-#, fuzzy
 msgid ""
 "Note, when changing these values,\n"
 "it is advised that you do something\n"
@@ -316,33 +313,34 @@ msgid ""
 "the titlebar-min-height slider\n"
 "or the titlebar font setting.\n"
 msgstr ""
-"Note, que ao mudar estes valores,\n"
-"recomenda-se que você faça algo\n"
-"como trocar de viewports, porque isto\n"
-"faz com que a posição das 'janelas de evento'\n"
-"atualizem corretamente, fazendo assim o\n"
-"mover/redimensionar de janelas funcione corretamente.\n"
-"Isto também aplica-se quando você muda a altura\n"
-"da barra de título através da opção própria\n"
-"ou do tamanho da fonte da barra."
+"Nota, quando mudar estes valores,\n"
+"é aconselhado que faça qualquer coisa\n"
+"como mudar de janela de visualização, porque isto \n"
+"faz com que a posição das 'janelas de eventos'\n"
+"atualize apropriamente, fazendo assim\n"
+"com que o mover/redimensionar de janelas funcione bem.\n"
+"Isto também se aplica a quando muda\n"
+"a altura da barra de título\n"
+"através da opção própria\n"
+"ou do tamanho da fonte da barra.\n"
 
 msgid "Shadows"
 msgstr "Sombras"
 
 msgid "Frame Borders"
-msgstr "Limites das Bordas"
+msgstr "Limites das bordas"
 
 msgid "Active Window"
 msgstr "Janela Ativa"
 
 msgid "Inactive Window"
-msgstr "Janela Inativa"
+msgstr "Janela inativa"
 
 msgid "Title Bar"
-msgstr "Barra de Título"
+msgstr "Barra de título"
 
 msgid "Screenshot"
-msgstr "Screenshot"
+msgstr "Capturar tela"
 
 msgid "Images"
 msgstr "Imagens"
@@ -354,38 +352,38 @@ msgid ""
 "NOTE - These settings are not part of themes, they are stored separately, "
 "and control various UI preferences for Emerald."
 msgstr ""
-"NOTA - Estes ajustes não são parte dos temas, são armazenados separadamente, "
-"e controlam várias preferências de UI do Emerald."
+"NOTA - Estes valores não são parte dos temas, são armazenados separadmente e "
+"controlam variadas opções do Emerald"
 
 msgid "Show Tooltips for Buttons"
-msgstr "Mostrar Nome dos botões?"
+msgstr "Mostrar dicas para os botões?"
 
 msgid "Use Decoration Cropping"
-msgstr "Usar o corte da decoração"
+msgstr "Cortar as decorações quando maximizado"
 
 msgid "Use Button Fade"
-msgstr "Usar Fade nos Botões"
+msgstr "Usar desvanecimento nos botões"
 
 msgid "Use Button Fade Pulse"
-msgstr "Usar Botões Pulsantes"
+msgstr "Usar botões pulsantes"
 
 msgid "Button Fade Total Duration"
-msgstr "Duração Total do Fade dos Botões"
+msgstr "Duração total do desvanecimento dos botões"
 
 msgid "Button Fade Step Duration"
-msgstr "Duração de Cada Passo do Fade"
+msgstr "Duração de cada passo do desvanecimento"
 
 msgid "Button Pulse Wait Duration"
-msgstr "Duração da Espera para Pulsar"
+msgstr "Duração da espera para pulsar"
 
 msgid "Button Pulse Min Opacity %"
-msgstr "Opacidade Mínima do Pulsar dos Botões em %"
+msgstr "Opacidade mínimima do pulsar dos botões"
 
 msgid "Titlebar Double-Click Action"
 msgstr "Ação de duplo clique na barra de título"
 
 msgid "Button Hover Cursor"
-msgstr "Cursor quando sobre os botões"
+msgstr "Cursor quando está sobre os botões"
 
 msgid "Normal"
 msgstr "Normal"
@@ -393,17 +391,29 @@ msgstr "Normal"
 msgid "Pointing Finger"
 msgstr "Dedo apontador"
 
+msgid "Compiz Decoration Blur Type"
+msgstr "Tipo da distorção na decoração do Compiz"
+
+msgid "None"
+msgstr "Nenhum"
+
+msgid "Titlebar only"
+msgstr "Barra de título apenas"
+
+msgid "All decoration"
+msgstr "Todas as decorações"
+
 msgid "Frame Engine"
-msgstr "Engine das Bordas"
+msgstr "Motor da moldura"
 
 msgid "Buttons"
 msgstr "Botões"
 
 msgid "Frame/Shadows"
-msgstr "Bordas/Sombras"
+msgstr "Modulra/sombra"
 
 msgid "Titlebar"
-msgstr "Barra de Título"
+msgstr "Barra de título"
 
 msgid "Theme"
 msgstr "Tema"
@@ -412,76 +422,76 @@ msgid "Edit"
 msgstr "Editar"
 
 msgid "Import Theme..."
-msgstr "Importar Tema..."
+msgstr "Importar tema"
 
 msgid "Search:"
 msgstr "Procurar:"
 
 msgid "Fetching Themes"
-msgstr "Buscando Temas"
+msgstr "Baixar temas"
 
 msgid ""
 "Fetching themes... \n"
 "This may take time depending on \n"
 "internet connection speed."
 msgstr ""
-"Buscando temas... \n"
-"Isto pode demorar alguns minutos \n"
-"dependendo da conexão da internet"
+"Baixando.... \n"
+"Isto pode demorar, dependendo da \n"
+"velocidade da sua coneção à internet."
 
 msgid ""
 "Here are the repositories that you can fetch Emerald Themes from. \n"
 "Fetching themes would fetch and import themes from SVN repositories \n"
 "You need Subversion package installed to use this feature."
 msgstr ""
-"Aqui estão os repositórios que você pode buscar temas do Emerald. \n"
-"Buscar temas buscaria e importaria temas dos repositórios de SVN \n"
-"Você necessita do pacote do Subversion instalado para usar esta "
-"característica."
+"Aqui estão os repositórios de onde você pode baixar temas para o Emerald. \n"
+"Baixar temas vai baixá-los e importá-los a partir de repositórios SVN \n"
+"É necessário ter o pacote subversion instalado para usar esta funcionalidade."
 
-#, fuzzy
 msgid ""
 "This repository contains GPL'd themes that can be used under \n"
 "the terms of GNU GPL licence v2.0 or later \n"
 msgstr ""
-"Este repositório contem os temas em GPL que podem ser usados sob \n"
-"os termos da licença v2.0 do GNU GPL ou inferiores"
+"Este repositório contém temas sob a GPL que podem ser usados \n"
+"sob os termos da GNU GPL v2.0 ou posterior \n"
 
 msgid ""
 "This repository contains non-GPL'd themes. They might infringe \n"
 "copyrights and patent laws in some countries."
 msgstr ""
-"Este repositório contem temas sem licença GPL. Você poderá infringir \n"
-"o copyright e as leis da patente em alguns países."
+"Este repositório contém temas não-GPL. Podem infrigir \n"
+"copyrights ou patentes em determinados países."
 
 msgid ""
 "To activate Non-GPL repository please run the following in shell and accept "
-"the server ceritficate permanently: \n"
+"the server certificate permanently: \n"
 "svn ls https://svn.generation.no/emerald-themes."
 msgstr ""
-"Para ativar o repositório Não-GPL, por favor execute a seguinte linha e "
-"aceite o ceritficato de usuário permanentemente: \n"
+"Para ativar os repositórios não-GPL, por favor execute o seguinte comando no "
+"terminal e aceite o certificado permanentemente: \n"
 "svn ls https://svn.generation.no/emerald-themes."
 
 msgid "Themes"
 msgstr "Temas"
 
 msgid "Edit Themes"
-msgstr "Editar Temas"
+msgstr "Editar temas"
 
 msgid "Repositories"
-msgstr "Repositórios"
+msgstr "Respositórios"
 
 msgid "Themes Settings"
-msgstr "Configurações dos Temas"
+msgstr "Opções de temas"
 
 msgid "Emerald Settings"
-msgstr "Configurações do Emerald"
+msgstr "Opções do Emerald"
 
 msgid ""
 "Select\n"
 "Engine"
 msgstr ""
+"Selecionar\n"
+"motor"
 
 msgid "Based on original gnome-window-decorator"
 msgstr "Baseado no gnome-window-decorator original"
@@ -490,55 +500,58 @@ msgid "Round Top Left Corner"
 msgstr "Arredondar canto superior esquerdo"
 
 msgid "Round Top Right Corner"
-msgstr "Arredondar canto superior direido"
+msgstr "Arredondar canto superior direito"
 
 msgid "Round Bottom Left Corner"
 msgstr "Arredondar canto inferior esquerdo"
 
 msgid "Round Bottom Right Corner"
-msgstr "Arredondar canto inferior direido"
+msgstr "Arredondar canto inferior direito"
 
 msgid "Rounding Radius"
-msgstr "Raio de Arredondamento"
+msgstr "Raio de arredondamento"
 
 msgid "Outer Frame Blend"
-msgstr "Mistura exterior das Bordas"
+msgstr "Mistura"
 
 msgid "Inner Frame Blend"
-msgstr "Mistura interior das Bordas"
+msgstr "Mistura interior dos limites"
 
 msgid "Outer Titlebar Blend"
-msgstr "Mistura exterior da Barra de Título"
+msgstr "Mistura exterior da barra de título"
 
 msgid "Inner Titlebar Blend"
-msgstr "Mistura interior da Barra de Título"
+msgstr "Mistura interior da barra de título"
 
 msgid "Titlebar Separator"
-msgstr "Separador da Barra de Título"
+msgstr "Separador da barra de título"
 
 msgid "Frame Outline"
-msgstr "Limite externo da Borda"
+msgstr "Limite exterior da moldura"
 
 msgid "Frame Highlight"
-msgstr "Highlight da Borda"
+msgstr "Realçe da moldura"
 
 msgid "Frame Shadow"
-msgstr "Sombra da Borda"
+msgstr "Sombra da moldura"
 
 msgid "Contents Outline"
 msgstr "Limite dos conteúdos"
 
 msgid "Contents Highlight"
-msgstr "Highlight dos conteúdos"
+msgstr "Realçe dos conteúdos"
 
 msgid "Contents Shadow"
 msgstr "Sombra dos conteúdos"
 
 msgid "Frame"
-msgstr "Borda"
+msgstr "Limite"
+
+msgid "Based on original legacy"
+msgstr "Baseado no gnome-window-decorator original"
 
 msgid "Designed to be vista-ish in nature"
-msgstr "Com o objetivo de ser parecido com o vista"
+msgstr "Com o objecivo de ser parecido com o Vista"
 
 msgid "Base"
 msgstr "Base"
@@ -550,23 +563,23 @@ msgid "Sides"
 msgstr "Lados"
 
 msgid "Everything done with customizable pixmaps!"
-msgstr "Tudo é feito com imagens customizáveis!"
+msgstr "Tudo é feito com imagens personalizadas!"
 
 msgid "Top Rounding Radius"
-msgstr "Raio de arredondamento Superior"
+msgstr "Raio de arredondamento do topo"
 
 msgid "Bottom Rounding Radius"
-msgstr "Grau de arredondamento Inferior"
+msgstr "Grau de arredondamento da base"
 
 #. Style : Use Tiled or Scaled pixmaps
 msgid "Scaled"
 msgstr "Adaptado"
 
 msgid "Not adjustable"
-msgstr "Não Ajustável"
+msgstr "Não ajustável"
 
 msgid "Same as Active"
-msgstr "Mesmo que ativos"
+msgstr "Mesmas que as ativas"
 
 msgid "Pixmap"
 msgstr "Imagem"
@@ -575,46 +588,46 @@ msgid "Tiled/Scaled"
 msgstr "Repetido/Adaptado"
 
 msgid "Width Override"
-msgstr "Sobrescrever Largura"
+msgstr "Sobrescrever largura"
 
 msgid "Height Override"
-msgstr "Sobrescrever Altura"
+msgstr "Sobrescrever altura"
 
 msgid "Glassy effects for your windows"
-msgstr "Efeito de vidro nas janelas"
+msgstr "Efeito envidraçado nas janelas"
 
 msgid "Glow Height"
-msgstr "Altura do Brilho"
+msgstr "Altura do brilho"
 
 msgid "Frame Base Color"
-msgstr "Cor da Borda da Base"
+msgstr "Cor base da moldura"
 
 msgid "Upper Titlebar Glow"
 msgstr "Brilho superior da barra de título"
 
 msgid "Upper Glass Glow"
-msgstr "Brilho superior de vidro"
+msgstr "Brilho superior"
 
 msgid "Lower Glass Glow"
-msgstr "Brilho inferior de vidro"
+msgstr "Brilho inferior"
 
 msgid "Middle Glass Glow"
-msgstr "Brilho central de vidro"
+msgstr "Brilho central"
 
 msgid "Outer Glass Glow"
-msgstr "Brilho Externo de vidro"
+msgstr "Brilho exterior"
 
 msgid "Multiple gradients with somewhat glassy features too"
-msgstr "Múltiplos gradientes com algum aspecto de vidro"
+msgstr "Múltiplos gradientes com algum aspecto envidraçado"
 
 msgid "Left Blend"
-msgstr "Mistura da esquerda"
+msgstr "Mistura esquerda"
 
 msgid "Middle Blend"
 msgstr "Mistura central"
 
 msgid "Right Blend"
-msgstr "Mistura da direita"
+msgstr "Mistura direita"
 
 msgid "Contrast"
 msgstr "Contraste"
@@ -626,7 +639,7 @@ msgid "(Alpha)"
 msgstr "(Alfa)"
 
 msgid "Notch"
-msgstr "Entalhe"
+msgstr "Fenda"
 
 msgid "Position"
 msgstr "Posição"
@@ -638,52 +651,53 @@ msgid "Offset"
 msgstr "Margem"
 
 msgid "Use Glow"
-msgstr "Usar Brilho"
+msgstr "Usar brilho"
 
 msgid "Title Glow"
 msgstr "Brilho do título"
 
 msgid "Evolved from the legacy engine"
-msgstr "Evoluído do engine inicial"
+msgstr "Evoluído do motor inicial"
 
 msgid "Border Gap"
-msgstr "Falha na borda"
+msgstr "Espaço entre a borda"
 
 msgid "Show Border when maximised?"
-msgstr "Mostrar bordas quando maximizada?"
+msgstr "Exibir bordas quando maximizada?"
 
 msgid "Show when minimised?"
-msgstr "Mostrar quando minimizada?"
+msgstr "Exibir quando minimizada?"
 
 msgid "Minimised Border Size"
-msgstr "Largura da Borda quando minimizada"
+msgstr "Largura da borda quando minimizada"
 
 msgid "Enable Left Bar Dip?"
-msgstr "Ativar falha na barra esquerda?"
+msgstr "Ativar inclinação na barra da esquerda?"
 
 msgid "Left Bar Radius"
 msgstr "Raio da bara esquerda"
 
 msgid "Enable Lower Bulge? (Useless at the moment, but will be used soon)"
-msgstr "Ativar falha inferior? (Sem uso de momento, mas logo será usada)"
+msgstr ""
+"Ativar saliência inferior? (Sem uso de momento, mas será usado em breve)"
 
 msgid "Top Corner Offset (%)"
 msgstr "Margens dos cantos superiores (%)"
 
 msgid "Enable Title Bar Dip?"
-msgstr "Ativar falha na barra de título?"
+msgstr "Ativar inclinação na barra de título?"
 
 msgid "Enable Button Part?"
-msgstr "Ativar parte dos botões?"
+msgstr "Ativar Parte do botão?"
 
 msgid "Title Part Width"
 msgstr "Largura da parte do título"
 
 msgid "Button Part Width)"
-msgstr "Largura da parte dos botões"
+msgstr "Imagem da parte do botão)"
 
 msgid "Dip Corners Radius)"
-msgstr "Grau de arredondamento da falha nos cantos"
+msgstr "Grau de arredondamento da inclinação nos cantos)"
 
 msgid "Round Inside Corners As well?"
 msgstr "Arredondar cantos interiores também?"
@@ -698,76 +712,76 @@ msgid "Round Top Left Corner?"
 msgstr "Arredondar canto superior esquerdo?"
 
 msgid "Frame Rounding Radius"
-msgstr "Raio de arredondamento das bordas"
+msgstr "Raio de arredondamento da moldura"
 
 msgid "Titlebar Rounding Radius"
 msgstr "Raio de arredondamento da barra de título"
 
 msgid "Repeat Gradient?"
-msgstr "Repetir Gradiente?"
+msgstr "Repetir gradiente?"
 
 msgid "Vertical Repeat?"
-msgstr "Repetir verticalmente?"
+msgstr "Repetição vertical?"
 
 msgid "Diagonal Repeat?"
-msgstr "Repetir Diagonalmente"
+msgstr "Repetição diagonal?"
 
 msgid "Repeat Frequency"
-msgstr "Reperit Frequência"
+msgstr "Frequência de repetição"
 
 #. /////////////////////
 msgid "Enable Title Part Pixmap?"
-msgstr "Ativar imagem na parte do título"
+msgstr "Ativar imagem da parte do título"
 
 msgid "Repeat Title Part Pixmap?"
-msgstr "Repetir imagem na parte do título"
+msgstr "Repetir imagem da parte da barra de título"
 
 msgid "Title Bar Part Pixmap"
-msgstr "Imagem na parte da barra de título"
+msgstr "Imagem da parte da barra de título"
 
 msgid "Choose Titlebar Part Pixmap"
-msgstr "Escolher imagem na parte da barra de título"
+msgstr "Escolher imagem da parte da barra de título"
 
 #. /////////////////////////
 msgid "Enable Button Part Pixmap?"
-msgstr "Ativar imagem na parte dos botões?"
+msgstr "Ativar imagem da parte do botão?"
 
 msgid "Repeat Button Part Pixmap?"
-msgstr "Repetir imagem na parte do botões?"
+msgstr "Repetir imagem da parte do botão?"
 
 msgid "Button Part Pixmap"
-msgstr "Imagem na parte dos botões"
+msgstr "Imagem da parte do botão"
 
 msgid "Choose Button Part Pixmap"
-msgstr "Escolher imagem na parte dos botões"
+msgstr "Escolher imagem do botão"
 
 #. /////////////////////////
 msgid "Enable Titlebar Pixmap?"
-msgstr "Ativar imagem na barra de título?"
+msgstr "Ativar imagem da barra de título?"
 
 msgid "Repeat Titlebar Pixmap?"
-msgstr "Repetir imagem na barra de título?"
+msgstr "Repetir imagem da barra de título"
 
 msgid "Titlebar Pixmap"
 msgstr "Imagem da barra de título"
 
 msgid "Choose Titlebar Pixmap"
-msgstr "Escolher imagem da barra de título"
+msgstr "Escolher imagem da barra de título "
 
 msgid "Active/Inactive"
-msgstr "Ativo/Inativo"
+msgstr "Ativa/Inativa"
 
 msgid "Maximised"
-msgstr "Maximizado"
+msgstr "Maximizada"
 
 msgid "Corners"
 msgstr "Cantos"
 
 msgid "Border Layout"
-msgstr "Layout das Bordas"
+msgstr "Estilo das bordas"
 
 msgid "Left Bar"
-msgstr "Barra Esquerda"
+msgstr "Barra esquerda"
 
 msgid "Pixmaps"
 msgstr "Imagens"
