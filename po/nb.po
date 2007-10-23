@@ -1,14 +1,13 @@
 # Emerald translation.
-# Copyright (C) 2006 compiz-fusion.org
+# Copyright (C) 2007 compiz-fusion.org
 # This file is distributed under the same license as the emerald package.
-# Frederik M.J. Vestre <freqmod AT gmail DOT com>
-# This file was based upon the Beryl-Manager translation, info given above.
+# Ketil Wendelbo Aanensen <ketil.w.aanensen@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: Emerald nb_NO\n"
 "Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
-"POT-Creation-Date: 2007-09-22 13:11+0530\n"
-"PO-Revision-Date: 2007-09-21 17:20+0100\n"
+"POT-Creation-Date: 2007-10-23 21:58+0530\n"
+"PO-Revision-Date: 2007-10-23 17:20+0100\n"
 "Last-Translator: Ketil W. Aanensen <ketil.w.aanensen@gmail.com>\n"
 "Language-Team: Norsk bokmål<ketil.w.aanensen@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -100,7 +99,6 @@ msgstr ""
 msgid "Unknown"
 msgstr "Ukjent"
 
-# fuzzy
 msgid "Whatever (no hint)"
 msgstr "Hva som helst (ingen hint)"
 
@@ -544,7 +542,6 @@ msgstr "Innholdsskygge"
 msgid "Frame"
 msgstr "Ramme"
 
-#, fuzzy
 msgid "Based on original legacy"
 msgstr "Basert på orginal gammel motor"
 
