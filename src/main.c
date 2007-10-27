@@ -3477,11 +3477,11 @@ static void active_window_changed(WnckScreen * screen)
 	WnckWindow *win;
 	decor_t *d;
 
-	win = wnck_screen_get_active_window(screen);
+	win = wnck_screen_get_previously_active_window(screen);
 	if (win)
 	{
 		d = g_object_get_data(G_OBJECT(win), "decor");
-		if (d->pixmap && d->decorated)
+		if (d && d->pixmap && d->decorated)
 		{
 			d->active = wnck_window_is_active(win);
 			d->fs = (d->active ? d->fs->ws->fs_act : d->fs->ws->fs_inact);
@@ -3493,11 +3493,11 @@ static void active_window_changed(WnckScreen * screen)
 		}
 	}
 
-	win = wnck_screen_get_previously_active_window(screen);
+	win = wnck_screen_get_active_window(screen);
 	if (win)
 	{
 		d = g_object_get_data(G_OBJECT(win), "decor");
-		if (d->pixmap && d->decorated)
+		if (d && d->pixmap && d->decorated)
 		{
 			d->active = wnck_window_is_active(win);
 			d->fs = (d->active ? d->fs->ws->fs_act : d->fs->ws->fs_inact);
@@ -3557,6 +3557,8 @@ static void window_closed(WnckScreen * screen, WnckWindow * win)
 
 	if (!get_window_prop(wnck_window_get_xid(win), select_window_atom, &window))
 		remove_frame_window(win);
+
+	g_object_set_data (G_OBJECT (win), "decor", NULL);
 
 	g_free(d);
 }
