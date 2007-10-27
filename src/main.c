@@ -5569,7 +5569,7 @@ int main(int argc, char *argv[])
 
     if (status != DECOR_ACQUIRE_STATUS_SUCCESS)
     {
-		if (status == DECOR_ACQUIRE_STATUS_OTHER_DM_RUNNING)
+		if (status == DECOR_ACQUIRE_STATUS_FAILED)
 		{
 			fprintf (stderr,
 				 "%s: Could not acquire decoration manager "
