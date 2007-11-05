@@ -1,6 +1,6 @@
 # translation of emerald-new.po to
 # Emerald Window Decorator.
-# Copyright (C) 2007 compiz-fusion.org
+# Copyright (C) 2006
 # This file is distributed under the same license as the Emerald package.
 #
 # Suat SARIALP <muhendis.suat@gmail.com>, 2006.
@@ -9,10 +9,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: emerald-new\n"
 "Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
-"POT-Creation-Date: 2007-09-23 18:21+0200\n"
+"POT-Creation-Date: 2007-11-05 17:49+0530\n"
 "PO-Revision-Date: 2007-09-24 05:41+0300\n"
 "Last-Translator: Serdar Soytetir\n"
-"Language-Team:  <tr@li.org>\n"
+"Language-Team:  Turkish <tulliana@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -59,7 +59,8 @@ msgstr "Pencereyi Yapıştırma"
 msgid "The window \"%s\" is not responding."
 msgstr "\"%s\" penceresi yanıt vermiyor."
 
-msgid "Forcing this application to quit will cause you to lose any unsaved changes."
+msgid ""
+"Forcing this application to quit will cause you to lose any unsaved changes."
 msgstr ""
 "Bu uygulamadan çıkmayı zorlamak, kaydedilmemiş değişikliklerin "
 "kaybedilmesine neden olur."
@@ -785,4 +786,3 @@ msgstr "Sol çubuk"
 
 msgid "Pixmaps"
 msgstr "Resimler"
-
