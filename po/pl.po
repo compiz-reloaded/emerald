@@ -1,67 +1,68 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Emerald polish translation.
+# Copyright (C) 2007 Maciej Warnecki
+# This file is distributed under the same license as the emerald package.
+# Maciej Warnecki <maciekw5@gmail.com>, 2007.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: 0.1\n"
 "Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
 "POT-Creation-Date: 2007-11-14 11:39+0530\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2007-11-10 21:56+0100\n"
+"Last-Translator: Maciej Warnecki <maciekw5@gmail.com>\n"
+"Language-Team: pl_PL <pl@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 msgid "Close Window"
-msgstr ""
+msgstr "Zamknij okno"
 
 msgid "Maximize Window"
-msgstr ""
+msgstr "Maksymalizuj okno"
 
 msgid "Restore Window"
-msgstr ""
+msgstr "Przywróć okno"
 
 msgid "Minimize Window"
-msgstr ""
+msgstr "Minimalizuj okno"
 
 msgid "Context Help"
-msgstr ""
+msgstr "Pomoc kontekstowa"
 
 msgid "Window Menu"
-msgstr ""
+msgstr "Menu Okna"
 
 msgid "Shade Window"
-msgstr ""
+msgstr "Zacień Okno"
 
 msgid "UnShade Window"
-msgstr ""
+msgstr "Odcień Okno"
 
 msgid "Set Above"
-msgstr ""
+msgstr "Ustaw Powyżej"
 
 msgid "UnSet Above"
 msgstr ""
 
 msgid "Stick Window"
-msgstr ""
+msgstr "Przyklej Okno"
 
 msgid "UnStick Window"
-msgstr ""
+msgstr "Odklej Okno"
 
 #, c-format
 msgid "The window \"%s\" is not responding."
-msgstr ""
+msgstr "Okno \"%s\" nie odpowiada."
 
 msgid ""
 "Forcing this application to quit will cause you to lose any unsaved changes."
 msgstr ""
+"Wymuszanie zamknięcia na tej aplikacji spowoduje że stracisz wszelkie "
+"niezapisane dane."
 
 msgid "_Force Quit"
-msgstr ""
+msgstr "_Wymuś zamknięcie"
 
 #, c-format
 msgid ""
@@ -72,6 +73,12 @@ msgid ""
 "<b>Use With</b> %s\n"
 "</small>"
 msgstr ""
+"<b><big>%s</big></b>\n"
+"<i>%s</i>\n"
+"<small><b>Wersja</b> %s\n"
+"<b>Stworzony przez</b> %s\n"
+"<b>Używać z</b> %s\n"
+"</small>"
 
 #, c-format
 msgid ""
@@ -82,37 +89,47 @@ msgid ""
 "<b>Use With</b> %s\n"
 "</small>"
 msgstr ""
+"<b><big>%s</big></b> (Motyw Systemowy)\n"
+"<i>%s</i>\n"
+"<small><b>Wersja</b> %s\n"
+"<b>Zrobony przez</b> %s\n"
+"<b>Używać z</b> %s\n"
+"</small>"
 
 msgid "Unknown"
-msgstr ""
+msgstr "Nieznany"
 
 msgid "Whatever (no hint)"
-msgstr ""
+msgstr "Cokolwiek (bez wskazówki)"
 
 msgid "No Description"
-msgstr ""
+msgstr "Brak Opisu"
 
 msgid "Invalid Theme Name"
-msgstr ""
+msgstr "Nieprawidłowa nazwa dekoracji"
 
 msgid "Invalid theme file.  Does not end in .emerald"
-msgstr ""
+msgstr "Nieprawidłowy plik dekoracji. Nie kończy się na .emerald "
 
 msgid ""
 "Invalid Theme Name\n"
 "Could Not Export"
 msgstr ""
+"Nieprawidłowa nazwa dekoracji\n"
+"Nie dało sie eksportować"
 
 msgid ""
 "Invalid File Name\n"
 "Must End in .emerald"
 msgstr ""
+"Nieprawidłowa nazwa dekoracji\n"
+"Musi kończyć się na .emerald "
 
 msgid "Error calling tar."
 msgstr ""
 
 msgid "Theme Exported"
-msgstr ""
+msgstr "Dekoracja eksportowana"
 
 msgid ""
 "Can't save over system themes\n"
@@ -121,16 +138,16 @@ msgstr ""
 
 #, c-format
 msgid "Overwrite Theme %s?"
-msgstr ""
+msgstr "Nadpisać dekorację %s?"
 
 msgid "Couldn't Write Theme"
-msgstr ""
+msgstr "Nie można zapisać dekoracji"
 
 msgid "Couldn't Form Theme"
-msgstr ""
+msgstr "Nie"
 
 msgid "Theme Saved"
-msgstr ""
+msgstr "Dekoracja zapisana"
 
 msgid ""
 "Can't delete system themes\n"
@@ -142,10 +159,10 @@ msgid "Are you sure you want to delete %s?"
 msgstr ""
 
 msgid "Theme deleted"
-msgstr ""
+msgstr "Dekoracja usunięta"
 
 msgid "No such theme to delete"
-msgstr ""
+msgstr "Nie ma takiej dekoracji do usunięcia"
 
 msgid "Use Pixmap Buttons"
 msgstr ""
@@ -160,40 +177,40 @@ msgid "Button Pixmaps"
 msgstr ""
 
 msgid "Button"
-msgstr ""
+msgstr "Przycisk"
 
 msgid "File"
-msgstr ""
+msgstr "Plik"
 
 msgid "Preview"
-msgstr ""
+msgstr "Podgląd"
 
 msgid "Clear"
-msgstr ""
+msgstr "Wyczyść"
 
 msgid "Colors"
-msgstr ""
+msgstr "Kolory"
 
 msgid "Text Fill"
-msgstr ""
+msgstr "Wypełnienie tekstu"
 
 msgid "Text Outline"
-msgstr ""
+msgstr "Zarys tekstu"
 
 msgid "Button Fill"
-msgstr ""
+msgstr "Wypełnienie przycisków"
 
 msgid "Button Outline"
-msgstr ""
+msgstr "Zarys przycisków"
 
 msgid "Color"
-msgstr ""
+msgstr "Kolor"
 
 msgid "Opacity"
-msgstr ""
+msgstr "Nieprzezroczystośc"
 
 msgid "Radius"
-msgstr ""
+msgstr "Promień"
 
 msgid "X Offset"
 msgstr ""
@@ -202,10 +219,10 @@ msgid "Y Offset"
 msgstr ""
 
 msgid "Title-Text Font"
-msgstr ""
+msgstr "Czcionka tekstu tytułowego"
 
 msgid "Minimum Title-bar Height"
-msgstr ""
+msgstr "Minimalna wysokość paska tytułowego"
 
 msgid "Vertical Button Offset"
 msgstr ""
@@ -226,16 +243,16 @@ msgid ""
 msgstr ""
 
 msgid "Export Theme..."
-msgstr ""
+msgstr "Eksportuj dekorację..."
 
 msgid "Name:"
-msgstr ""
+msgstr "Nazwa:"
 
 msgid "Untitled Theme"
-msgstr ""
+msgstr "Dekoracja bez nazwy"
 
 msgid "Export..."
-msgstr ""
+msgstr "Eksportuj..."
 
 msgid "Creator"
 msgstr ""
@@ -253,22 +270,22 @@ msgid "Themer Version"
 msgstr ""
 
 msgid "Border"
-msgstr ""
+msgstr "Granica"
 
 msgid "Size"
-msgstr ""
+msgstr "Rozmiar"
 
 msgid "Top"
-msgstr ""
+msgstr "Góra"
 
 msgid "Bottom"
-msgstr ""
+msgstr "Dół"
 
 msgid "Left"
-msgstr ""
+msgstr "Lewo"
 
 msgid "Right"
-msgstr ""
+msgstr "Prawo"
 
 msgid ""
 "Note, when changing these values,\n"
@@ -284,42 +301,44 @@ msgid ""
 msgstr ""
 
 msgid "Shadows"
-msgstr ""
+msgstr "Cienie"
 
 msgid "Frame Borders"
-msgstr ""
+msgstr "Granice ramek"
 
 msgid "Active Window"
-msgstr ""
+msgstr "Aktywne okno"
 
 msgid "Inactive Window"
-msgstr ""
+msgstr "Nieaktywne okno"
 
 msgid "Title Bar"
-msgstr ""
+msgstr "Pasek tytułowy"
 
 msgid "Screenshot"
-msgstr ""
+msgstr "Zrzut ekranu"
 
 msgid "Images"
-msgstr ""
+msgstr "Obrazki"
 
 msgid "Information"
-msgstr ""
+msgstr "Informacja"
 
 msgid ""
 "NOTE - These settings are not part of themes, they are stored separately, "
 "and control various UI preferences for Emerald."
 msgstr ""
+"UWAGA - Te ustawienia nie są częścią dekoracji, są przechowywane osobno, i "
+"kontrolują różne ustawienia Interfejsu Użytkownika w Emeraldzie."
 
 msgid "Show Tooltips for Buttons"
-msgstr ""
+msgstr "Pokazuj podpisy do przycisków"
 
 msgid "Use Decoration Cropping"
-msgstr ""
+msgstr "Używaj przycinania dekoracji"
 
 msgid "Use Button Fade"
-msgstr ""
+msgstr "Używaj zanikania przycisków"
 
 msgid "Use Button Fade Pulse"
 msgstr ""
@@ -343,7 +362,7 @@ msgid "Button Hover Cursor"
 msgstr ""
 
 msgid "Normal"
-msgstr ""
+msgstr "Normalne"
 
 msgid "Pointing Finger"
 msgstr ""
@@ -352,57 +371,67 @@ msgid "Compiz Decoration Blur Type"
 msgstr ""
 
 msgid "None"
-msgstr ""
+msgstr "Zaden"
 
 msgid "Titlebar only"
-msgstr ""
+msgstr "Tylko pasek tytułowy"
 
 msgid "All decoration"
-msgstr ""
+msgstr "Wszystkie dekoracje"
 
 msgid "Frame Engine"
-msgstr ""
+msgstr "Silnik Ramek"
 
 msgid "Buttons"
-msgstr ""
+msgstr "Przyciski"
 
 msgid "Frame/Shadows"
-msgstr ""
+msgstr "Ramka/Cienie"
 
 msgid "Titlebar"
-msgstr ""
+msgstr "Pasek tytułowy"
 
 msgid "Theme"
-msgstr ""
+msgstr "Dekoracja"
 
 msgid "Edit"
-msgstr ""
+msgstr "Edytuj"
 
 msgid "Import Theme..."
-msgstr ""
+msgstr "Importuj Dekorację..."
 
 msgid "Search:"
-msgstr ""
+msgstr "Szukaj:"
 
 msgid "Fetching Themes"
-msgstr ""
+msgstr "Aktualizacja dekoracji"
 
 msgid ""
 "Fetching themes... \n"
 "This may take time depending on \n"
 "internet connection speed."
 msgstr ""
+"Aktualizowanie dekoracji...\n"
+"To może potrwać trochę czasu\n"
+"zależnie od prędkości Twojego\n"
+"połączenia internetowego."
 
 msgid ""
 "Here are the repositories that you can fetch Emerald Themes from. \n"
 "Fetching themes would fetch and import themes from SVN repositories \n"
 "You need Subversion package installed to use this feature."
 msgstr ""
+"Tutaj są repozytoria z których możesz aktualizować Tematy Emeralda. \n"
+"Aktualizacja tematów spowoduje aktualizację i importowanie z repozytoriów "
+"SVN. \n"
+"Pakiet Subversion musi być zainstalowany by móc korzystać z tej funkcji."
 
 msgid ""
 "This repository contains GPL'd themes that can be used under \n"
 "the terms of GNU GPL licence v2.0 or later \n"
 msgstr ""
+"To repozytorium posiada dekoracje GPL'd które mogą być \n"
+"używane na warunkach licencji GNU GPL wersja v2.0 i późniejszej \n"
 
 msgid ""
 "This repository contains non-GPL'd themes. They might infringe \n"
@@ -416,42 +445,42 @@ msgid ""
 msgstr ""
 
 msgid "Themes"
-msgstr ""
+msgstr "Dekoracje"
 
 msgid "Edit Themes"
-msgstr ""
+msgstr "Edytuj dekoracje"
 
 msgid "Repositories"
-msgstr ""
+msgstr "Repozytoria"
 
 msgid "Themes Settings"
-msgstr ""
+msgstr "Ustawienia dekoracji"
 
 msgid "Emerald Settings"
-msgstr ""
+msgstr "Ustawienia Emeralda"
 
 msgid ""
 "Select\n"
 "Engine"
-msgstr ""
+msgstr "Wybierz/nSilnik"
 
 msgid "Based on original gnome-window-decorator"
-msgstr ""
+msgstr "Bazowany na oryginalnym gnome-window-decorator"
 
 msgid "Round Top Left Corner"
-msgstr ""
+msgstr "Zaokrąglaj lewy górny róg"
 
 msgid "Round Top Right Corner"
-msgstr ""
+msgstr "Zaokrąglaj prawy górny róg"
 
 msgid "Round Bottom Left Corner"
-msgstr ""
+msgstr "Zaokrągaj lewy dolny róg"
 
 msgid "Round Bottom Right Corner"
-msgstr ""
+msgstr "Zaokrąglaj prawy dolny róg"
 
 msgid "Rounding Radius"
-msgstr ""
+msgstr "Promień zaokrąglania"
 
 msgid "Outer Frame Blend"
 msgstr ""
@@ -469,13 +498,13 @@ msgid "Titlebar Separator"
 msgstr ""
 
 msgid "Frame Outline"
-msgstr ""
+msgstr "Zarys ramki"
 
 msgid "Frame Highlight"
-msgstr ""
+msgstr "Podświetlenie ramki"
 
 msgid "Frame Shadow"
-msgstr ""
+msgstr "Cień ramki"
 
 msgid "Contents Outline"
 msgstr ""
@@ -487,19 +516,19 @@ msgid "Contents Shadow"
 msgstr ""
 
 msgid "Frame"
-msgstr ""
+msgstr "Ramka"
 
 msgid "Based on original legacy"
 msgstr ""
 
 msgid "Designed to be vista-ish in nature"
-msgstr ""
+msgstr "Opracowany by być natury 'vistowatej'"
 
 msgid "Base"
-msgstr ""
+msgstr "Baza"
 
 msgid "Glow"
-msgstr ""
+msgstr "Świecenie"
 
 msgid "Sides"
 msgstr ""
@@ -508,20 +537,20 @@ msgid "Everything done with customizable pixmaps!"
 msgstr ""
 
 msgid "Top Rounding Radius"
-msgstr ""
+msgstr "Górny promień zaokrąglania"
 
 msgid "Bottom Rounding Radius"
-msgstr ""
+msgstr "Dolny promień skalowania"
 
 #. Style : Use Tiled or Scaled pixmaps
 msgid "Scaled"
 msgstr ""
 
 msgid "Not adjustable"
-msgstr ""
+msgstr "Nie dostosowalny"
 
 msgid "Same as Active"
-msgstr ""
+msgstr "Taki sam jak aktywny"
 
 msgid "Pixmap"
 msgstr ""
@@ -539,7 +568,7 @@ msgid "Glassy effects for your windows"
 msgstr ""
 
 msgid "Glow Height"
-msgstr ""
+msgstr "Wysokość świecenia"
 
 msgid "Frame Base Color"
 msgstr ""
@@ -560,7 +589,7 @@ msgid "Outer Glass Glow"
 msgstr ""
 
 msgid "Multiple gradients with somewhat glassy features too"
-msgstr ""
+msgstr "Wiele gradientów też z częściowo szklanymi funkcjami"
 
 msgid "Left Blend"
 msgstr ""
@@ -710,7 +739,7 @@ msgid "Choose Titlebar Pixmap"
 msgstr ""
 
 msgid "Active/Inactive"
-msgstr ""
+msgstr "Aktywny/Nieaktywny"
 
 msgid "Maximised"
 msgstr ""
@@ -722,7 +751,7 @@ msgid "Border Layout"
 msgstr ""
 
 msgid "Left Bar"
-msgstr ""
+msgstr "Lewy pasek"
 
 msgid "Pixmaps"
 msgstr ""
