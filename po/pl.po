@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1\n"
 "Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
-"POT-Creation-Date: 2007-11-14 11:39+0530\n"
-"PO-Revision-Date: 2007-11-10 21:56+0100\n"
+"POT-Creation-Date: 2007-11-19 18:14+0530\n"
+"PO-Revision-Date: 2007-11-16 22:37+0100\n"
 "Last-Translator: Maciej Warnecki <maciekw5@gmail.com>\n"
 "Language-Team: pl_PL <pl@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -126,7 +126,7 @@ msgstr ""
 "Musi kończyć się na .emerald "
 
 msgid "Error calling tar."
-msgstr ""
+msgstr "Błąd wzywając tar."
 
 msgid "Theme Exported"
 msgstr "Dekoracja eksportowana"
@@ -135,6 +135,8 @@ msgid ""
 "Can't save over system themes\n"
 "(or you forgot to enter a name)"
 msgstr ""
+"Nie można zapisać motywów systemowych\n"
+"(albo zapomniałeś wpisać nazwę)"
 
 #, c-format
 msgid "Overwrite Theme %s?"
@@ -153,10 +155,12 @@ msgid ""
 "Can't delete system themes\n"
 "(or you forgot to enter a name)"
 msgstr ""
+"Nie można usunąć motywów systemowych\n"
+"(albo zapomniałeś wpisać nazwę)"
 
 #, c-format
 msgid "Are you sure you want to delete %s?"
-msgstr ""
+msgstr "Jesteś pewny że chcesz usunąć %s?"
 
 msgid "Theme deleted"
 msgstr "Dekoracja usunięta"
@@ -165,16 +169,16 @@ msgid "No such theme to delete"
 msgstr "Nie ma takiej dekoracji do usunięcia"
 
 msgid "Use Pixmap Buttons"
-msgstr ""
+msgstr "Używaj pixmap przycisków"
 
 msgid "Use Button Halo/Glow"
-msgstr ""
+msgstr "Używaj poświaty/podświetlenia przycisków"
 
 msgid "Use Button Halo/Glow For Inactive Windows"
 msgstr ""
 
 msgid "Button Pixmaps"
-msgstr ""
+msgstr "Pixmapy przycisków"
 
 msgid "Button"
 msgstr "Przycisk"
@@ -213,10 +217,10 @@ msgid "Radius"
 msgstr "Promień"
 
 msgid "X Offset"
-msgstr ""
+msgstr "Przesunięcie na osi X"
 
 msgid "Y Offset"
-msgstr ""
+msgstr "Przesunięcie na osi Y"
 
 msgid "Title-Text Font"
 msgstr "Czcionka tekstu tytułowego"
@@ -225,10 +229,10 @@ msgid "Minimum Title-bar Height"
 msgstr "Minimalna wysokość paska tytułowego"
 
 msgid "Vertical Button Offset"
-msgstr ""
+msgstr "Przesunięcie pionowe przycisków"
 
 msgid "Horizontal Button Offset"
-msgstr ""
+msgstr "Przesunięcie poziome przycisków"
 
 msgid "Title-bar Object Layout"
 msgstr ""
@@ -255,19 +259,19 @@ msgid "Export..."
 msgstr "Eksportuj..."
 
 msgid "Creator"
-msgstr ""
+msgstr "Twórca"
 
 msgid "Description"
-msgstr ""
+msgstr "Opis"
 
 msgid "Theme Version"
-msgstr ""
+msgstr "Wersja dekoracji"
 
 msgid "Suggested Widget Theme"
-msgstr ""
+msgstr "Zalecany motyw widgetow"
 
 msgid "Themer Version"
-msgstr ""
+msgstr "Wersja dekoratora"
 
 msgid "Border"
 msgstr "Granica"
@@ -353,7 +357,7 @@ msgid "Button Pulse Wait Duration"
 msgstr ""
 
 msgid "Button Pulse Min Opacity %"
-msgstr ""
+msgstr "Minimalna nieprzezroczystość Pulsowania Przycisków %"
 
 msgid "Titlebar Double-Click Action"
 msgstr ""
@@ -483,19 +487,19 @@ msgid "Rounding Radius"
 msgstr "Promień zaokrąglania"
 
 msgid "Outer Frame Blend"
-msgstr ""
+msgstr "Łączenie zewnętrznej ramki"
 
 msgid "Inner Frame Blend"
-msgstr ""
+msgstr "Łączenie zewnetrznej ramki"
 
 msgid "Outer Titlebar Blend"
-msgstr ""
+msgstr "Łączenie zewnętrznego paska tytułowego"
 
 msgid "Inner Titlebar Blend"
-msgstr ""
+msgstr "Łączenie wewnętrznego paska tytułowego"
 
 msgid "Titlebar Separator"
-msgstr ""
+msgstr "Separator paska tytułowego"
 
 msgid "Frame Outline"
 msgstr "Zarys ramki"
@@ -507,13 +511,13 @@ msgid "Frame Shadow"
 msgstr "Cień ramki"
 
 msgid "Contents Outline"
-msgstr ""
+msgstr "Obrys zawartości"
 
 msgid "Contents Highlight"
-msgstr ""
+msgstr "Podświetlenie zawartości"
 
 msgid "Contents Shadow"
-msgstr ""
+msgstr "Cieniowanie zawartości"
 
 msgid "Frame"
 msgstr "Ramka"
@@ -553,19 +557,19 @@ msgid "Same as Active"
 msgstr "Taki sam jak aktywny"
 
 msgid "Pixmap"
-msgstr ""
+msgstr "Pixmapa"
 
 msgid "Tiled/Scaled"
 msgstr ""
 
 msgid "Width Override"
-msgstr ""
+msgstr "Nadpisanie szerokości"
 
 msgid "Height Override"
-msgstr ""
+msgstr "Nadpisanie wysokości"
 
 msgid "Glassy effects for your windows"
-msgstr ""
+msgstr "'Szklane' efekty dla Twoich okien"
 
 msgid "Glow Height"
 msgstr "Wysokość świecenia"
@@ -601,7 +605,7 @@ msgid "Right Blend"
 msgstr ""
 
 msgid "Contrast"
-msgstr ""
+msgstr "Kontrast"
 
 msgid "(Color)"
 msgstr ""
@@ -610,22 +614,22 @@ msgid "(Alpha)"
 msgstr ""
 
 msgid "Notch"
-msgstr ""
+msgstr "Wycięcie"
 
 msgid "Position"
-msgstr ""
+msgstr "Pozycja"
 
 msgid "Curve"
-msgstr ""
+msgstr "Zakrzywienie"
 
 msgid "Offset"
-msgstr ""
+msgstr "Przesuniecie"
 
 msgid "Use Glow"
-msgstr ""
+msgstr "Używaj Podświetlenia"
 
 msgid "Title Glow"
-msgstr ""
+msgstr "Podświetlenie tytułu"
 
 msgid "Evolved from the legacy engine"
 msgstr ""
@@ -637,7 +641,7 @@ msgid "Show Border when maximised?"
 msgstr ""
 
 msgid "Show when minimised?"
-msgstr ""
+msgstr "Pokazywać kiedy jest zminimalizowane?"
 
 msgid "Minimised Border Size"
 msgstr ""
@@ -646,13 +650,13 @@ msgid "Enable Left Bar Dip?"
 msgstr ""
 
 msgid "Left Bar Radius"
-msgstr ""
+msgstr "Promień lewego paska"
 
 msgid "Enable Lower Bulge? (Useless at the moment, but will be used soon)"
 msgstr ""
 
 msgid "Top Corner Offset (%)"
-msgstr ""
+msgstr "Przesunięcie górnego rogu (%)"
 
 msgid "Enable Title Bar Dip?"
 msgstr ""
@@ -676,35 +680,35 @@ msgid "Enable Different Maximised Colors?"
 msgstr ""
 
 msgid "Turn Off repeating gradients when maximised?"
-msgstr ""
+msgstr "Wyłączyć powtarzanie gradientów kiedy zmaksymalizowany?"
 
 msgid "Round Top Left Corner?"
-msgstr ""
+msgstr "Zaokrąglać lewy górny róg?"
 
 msgid "Frame Rounding Radius"
-msgstr ""
+msgstr "Promień zaokrąglania ramek"
 
 msgid "Titlebar Rounding Radius"
-msgstr ""
+msgstr "Promień zaokrąglania paska tytułu"
 
 msgid "Repeat Gradient?"
-msgstr ""
+msgstr "Powtarzać gradient?"
 
 msgid "Vertical Repeat?"
-msgstr ""
+msgstr "Powtarzać pionowo?"
 
 msgid "Diagonal Repeat?"
-msgstr ""
+msgstr "Powtarzać ukośne?"
 
 msgid "Repeat Frequency"
-msgstr ""
+msgstr "Częstotliwośc powtarzania"
 
 #. /////////////////////
 msgid "Enable Title Part Pixmap?"
-msgstr ""
+msgstr "Włączyć pixmapę paska tytułu?"
 
 msgid "Repeat Title Part Pixmap?"
-msgstr ""
+msgstr "Powtarzać pixmapę paska tytułu?"
 
 msgid "Title Bar Part Pixmap"
 msgstr ""
@@ -727,31 +731,31 @@ msgstr ""
 
 #. /////////////////////////
 msgid "Enable Titlebar Pixmap?"
-msgstr ""
+msgstr "Włączyć pixmapę paska tytułu?"
 
 msgid "Repeat Titlebar Pixmap?"
-msgstr ""
+msgstr "Powtarzać pixmapę paska tytulu?"
 
 msgid "Titlebar Pixmap"
-msgstr ""
+msgstr "Pixmapa paska tytułu"
 
 msgid "Choose Titlebar Pixmap"
-msgstr ""
+msgstr "Wybierz pixmapę paska tytułu"
 
 msgid "Active/Inactive"
 msgstr "Aktywny/Nieaktywny"
 
 msgid "Maximised"
-msgstr ""
+msgstr "Zmaksymalizowany"
 
 msgid "Corners"
-msgstr ""
+msgstr "Rogi"
 
 msgid "Border Layout"
-msgstr ""
+msgstr "Rozmieszczenie brzegów"
 
 msgid "Left Bar"
 msgstr "Lewy pasek"
 
 msgid "Pixmaps"
-msgstr ""
+msgstr "Pixmapy"
