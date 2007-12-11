@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: emerald es_AR\n"
 "Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
-"POT-Creation-Date: 2006-12-31 16:39+0530\n"
+"POT-Creation-Date: 2007-12-12 01:40+0530\n"
 "PO-Revision-Date: 2006-11-16 18:08-0300\n"
 "Last-Translator: Matias Ferrini <oberonking76@gmail.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
@@ -385,6 +385,19 @@ msgstr "Normal"
 msgid "Pointing Finger"
 msgstr "Dedo apuntador"
 
+msgid "Compiz Decoration Blur Type"
+msgstr ""
+
+msgid "None"
+msgstr ""
+
+#, fuzzy
+msgid "Titlebar only"
+msgstr "Barra de título"
+
+msgid "All decoration"
+msgstr ""
+
 msgid "Frame Engine"
 msgstr "Motor del marco"
 
@@ -446,9 +459,10 @@ msgstr ""
 "Este repositorio contiene temas que no son GPL'd. Estos pueden infringir \n"
 "la copia de derechos y las leyes patentes en algunos países."
 
+#, fuzzy
 msgid ""
 "To activate Non-GPL repository please run the following in shell and accept "
-"the server ceritficate permanently: \n"
+"the server certificate permanently: \n"
 "svn ls https://svn.generation.no/emerald-themes."
 msgstr ""
 "Para activar los temas No GPL del repositorio, por favor, ejecute lo "
@@ -529,6 +543,10 @@ msgstr "Sombra de los contenidos"
 
 msgid "Frame"
 msgstr "Marco"
+
+#, fuzzy
+msgid "Based on original legacy"
+msgstr "Basado en el decorador de ventanas original de gnome"
 
 msgid "Designed to be vista-ish in nature"
 msgstr "Diseñado para aparentar el estilo visual de Vista"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Emerald 0.2\n"
 "Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
-"POT-Creation-Date: 2007-03-01 22:18+0100\n"
+"POT-Creation-Date: 2007-12-12 01:40+0530\n"
 "PO-Revision-Date: 2007-03-04 22:14+0100\n"
 "Last-Translator: Antonio Cuñat i Alario <toni.cunat@gmail.com>\n"
 "Language-Team: Catalan\n"
@@ -57,8 +57,11 @@ msgstr "Soltar Finestra"
 msgid "The window \"%s\" is not responding."
 msgstr "La finestra \"%s\" no està responent."
 
-msgid "Forcing this application to quit will cause you to lose any unsaved changes."
-msgstr "Força que aquesta aplicació es tanque, açò pot causar pèrdua de les dades no desades."
+msgid ""
+"Forcing this application to quit will cause you to lose any unsaved changes."
+msgstr ""
+"Força que aquesta aplicació es tanque, açò pot causar pèrdua de les dades no "
+"desades."
 
 msgid "_Force Quit"
 msgstr "_Forçar Tancar"
@@ -342,8 +345,12 @@ msgstr "Imatges"
 msgid "Information"
 msgstr "Informació"
 
-msgid "NOTE - These settings are not part of themes, they are stored separately, and control various UI preferences for Emerald."
-msgstr "NOTA - Aquestes preferències no són part dels temes, són desades a part, i controlen varies preferències de la IU d'Emerald."
+msgid ""
+"NOTE - These settings are not part of themes, they are stored separately, "
+"and control various UI preferences for Emerald."
+msgstr ""
+"NOTA - Aquestes preferències no són part dels temes, són desades a part, i "
+"controlen varies preferències de la IU d'Emerald."
 
 msgid "Show Tooltips for Buttons"
 msgstr "Mostrar Ajudes per als Botons"
@@ -380,6 +387,19 @@ msgstr "Normal"
 
 msgid "Pointing Finger"
 msgstr "Dit apuntador"
+
+msgid "Compiz Decoration Blur Type"
+msgstr ""
+
+msgid "None"
+msgstr ""
+
+#, fuzzy
+msgid "Titlebar only"
+msgstr "Barra de Títol"
+
+msgid "All decoration"
+msgstr ""
 
 msgid "Frame Engine"
 msgstr "Motor de la Finestra"
@@ -424,7 +444,8 @@ msgid ""
 msgstr ""
 "Hi han repositoris dels que pots agafat Temes per a Emerald. \n"
 "Per a agafar temes s'ha de baixar i importar dels repositoris SVN\n"
-"Cal tindre el paquet Subversion instal·lat per a emprar aquesta característica."
+"Cal tindre el paquet Subversion instal·lat per a emprar aquesta "
+"característica."
 
 msgid ""
 "This repository contains GPL'd themes that can be used under \n"
@@ -441,10 +462,12 @@ msgstr ""
 "infringir patents i drets de còpia en alguns països."
 
 msgid ""
-"To activate Non-GPL repository please run the following in shell and accept the server certificate permanently: \n"
+"To activate Non-GPL repository please run the following in shell and accept "
+"the server certificate permanently: \n"
 "svn ls https://svn.generation.no/emerald-themes."
 msgstr ""
-"Per a activar el repositori no-GPL executa el següent en un intèrpret d'ordres i accepta el certificat del servidor permanentment: \n"
+"Per a activar el repositori no-GPL executa el següent en un intèrpret "
+"d'ordres i accepta el certificat del servidor permanentment: \n"
 "svn ls https://svn.generation.no/emerald-themes."
 
 msgid "Themes"
@@ -522,6 +545,10 @@ msgstr "Ombra dels Continguts"
 
 msgid "Frame"
 msgstr "Marc"
+
+#, fuzzy
+msgid "Based on original legacy"
+msgstr "Basat en la decoració de gnome"
 
 msgid "Designed to be vista-ish in nature"
 msgstr "Dissenyat per a semblar-se al Vista"
@@ -652,7 +679,9 @@ msgid "Left Bar Radius"
 msgstr "Radi de la Barra Esquerre"
 
 msgid "Enable Lower Bulge? (Useless at the moment, but will be used soon)"
-msgstr "Activar protuberància Inferior? (Sense cap ús de moment, però s'usarà en breu)"
+msgstr ""
+"Activar protuberància Inferior? (Sense cap ús de moment, però s'usarà en "
+"breu)"
 
 msgid "Top Corner Offset (%)"
 msgstr "Separació al Cantó superior (%)"
@@ -758,4 +787,3 @@ msgstr "Barra Esquerre"
 
 msgid "Pixmaps"
 msgstr "Mapes de Píxels"
-

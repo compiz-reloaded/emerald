@@ -7,13 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1\n"
 "Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
-"POT-Creation-Date: 2006-12-31 16:37+0530\n"
-"PO-Revision-Date: 2007-02-21 01:00+0800\n"
-"Last-Translator: Thruth <gubotruth@gmail.com>\n"
+"POT-Creation-Date: 2007-12-12 01:40+0530\n"
+"PO-Revision-Date: 2007-12-11 17:02+0100\n"
+"Last-Translator: Thruth Wang <gubotruth@gmail.com>\n"
 "Language-Team: beryl-project <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Pootle 1.0.2\n"
 
 msgid "Close Window"
 msgstr "关闭窗口"
@@ -55,7 +56,8 @@ msgstr "取消置顶"
 msgid "The window \"%s\" is not responding."
 msgstr "窗口 \"%s\" 不再响应。"
 
-msgid "Forcing this application to quit will cause you to lose any unsaved changes."
+msgid ""
+"Forcing this application to quit will cause you to lose any unsaved changes."
 msgstr "强制退出程序，所有未保存改动将丢失。"
 
 msgid "_Force Quit"
@@ -97,7 +99,7 @@ msgid "Unknown"
 msgstr "未知"
 
 msgid "Whatever (no hint)"
-msgstr "任意"
+msgstr "任意 （无提示）"
 
 msgid "No Description"
 msgstr "无描述信息"
@@ -132,8 +134,8 @@ msgid ""
 "Can't save over system themes\n"
 "(or you forgot to enter a name)"
 msgstr ""
-"无法删除系统主题\n"
-"(也可能你没有填写名称)"
+"无法替换系统主题\n"
+"(可能您忘记填写名称)"
 
 #, c-format
 msgid "Overwrite Theme %s?"
@@ -337,8 +339,12 @@ msgstr "图像"
 msgid "Information"
 msgstr "信息"
 
-msgid "NOTE - These settings are not part of themes, they are stored separately, and control various UI preferences for Emerald."
-msgstr "注意 - 这些设置并不是主题的组成部分, 他们将于主题分开存储, 并将控制一些 Emerald 用户界面设置."
+msgid ""
+"NOTE - These settings are not part of themes, they are stored separately, "
+"and control various UI preferences for Emerald."
+msgstr ""
+"注意 - 这些设置并不是主题的组成部分, 他们将于主题分开存储, 并将控制一些 "
+"Emerald 用户界面设置."
 
 msgid "Show Tooltips for Buttons"
 msgstr "显示按钮提示"
@@ -375,6 +381,18 @@ msgstr "普通"
 
 msgid "Pointing Finger"
 msgstr "指针手指"
+
+msgid "Compiz Decoration Blur Type"
+msgstr "Compiz 窗口装饰模糊类型"
+
+msgid "None"
+msgstr "无"
+
+msgid "Titlebar only"
+msgstr "仅标题栏"
+
+msgid "All decoration"
+msgstr "全部装饰"
 
 msgid "Frame Engine"
 msgstr "框架引擎"
@@ -436,10 +454,11 @@ msgstr ""
 "相关法规或专利法案。"
 
 msgid ""
-"To activate Non-GPL repository please run the following in shell and accept the server ceritficate permanently: \n"
+"To activate Non-GPL repository please run the following in shell and accept "
+"the server certificate permanently: \n"
 "svn ls https://svn.generation.no/emerald-themes."
 msgstr ""
-"要激活 Non-GPL 仓库，请在 shell 运行如下命令，永久接受服务器认证:\n"
+"要激活 Non-GPL 仓库，请在 shell 运行如下命令，并永久接受服务器认证:\n"
 "svn ls https://svn.generation.no/emerald-themes"
 
 msgid "Themes"
@@ -517,6 +536,9 @@ msgstr "内容阴影"
 
 msgid "Frame"
 msgstr "框架"
+
+msgid "Based on original legacy"
+msgstr "基于原 legacy"
 
 msgid "Designed to be vista-ish in nature"
 msgstr "按照 Vista 风格设计"
@@ -604,7 +626,7 @@ msgid "(Color)"
 msgstr "(颜色)"
 
 msgid "(Alpha)"
-msgstr ""
+msgstr "(Alpha)"
 
 msgid "Notch"
 msgstr "缺口"
@@ -752,4 +774,3 @@ msgstr "左边栏"
 
 msgid "Pixmaps"
 msgstr "位图"
-
