@@ -1,5 +1,6 @@
 # Set of available languages. Keep it alphabatical. One lingua per line.
 ar
+be
 bn
 ca
 cs
@@ -11,15 +12,19 @@ es
 fr
 gl
 gu
+hi
 hu
 it
 ja
 ko
 nl
 nb
+or
+pa
 pl
 pt_BR
 pt
+ru
 sv
 tr
 zh_CN

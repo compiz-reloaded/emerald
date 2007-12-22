@@ -1,0 +1,778 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: emeral\n"
+"Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
+"POT-Creation-Date: 2007-12-22 16:36+0530\n"
+"PO-Revision-Date: 2007-12-17 15:45+0530\n"
+"Last-Translator: \n"
+"Language-Team: gist oriya team <info.gist@cdac.in>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: oriya\n"
+
+msgid "Close Window"
+msgstr "ଉଇଣ୍ଡୋ ବନ୍ଦକର "
+
+msgid "Maximize Window"
+msgstr "ସର୍ବାଧିକ ଉଇଣ୍ଡୋ "
+
+msgid "Restore Window"
+msgstr "ଉଇଣ୍ଡୋକୁ ପୂର୍ବଅବସ୍ଥାରେ ପହଞ୍ଚାଅ "
+
+msgid "Minimize Window"
+msgstr "ସର୍ବନିମ୍ନ ଉଇଣ୍ଡୋ "
+
+msgid "Context Help"
+msgstr "ପ୍ରସଙ୍ଗ ସାହାୟ୍ଯ "
+
+msgid "Window Menu"
+msgstr "ଉଇଣ୍ଡୋ ମେନୁ "
+
+msgid "Shade Window"
+msgstr "ଛାଯା ଉଇଣ୍ଡୋ "
+
+msgid "UnShade Window"
+msgstr "ଅଛାଯା ଉଇଣ୍ଡୋ "
+
+msgid "Set Above"
+msgstr "ଉପରେ ସେଟ୍‌କର "
+
+msgid "UnSet Above"
+msgstr "ଉପରେ ଅନସେଟ୍‌କର "
+
+msgid "Stick Window"
+msgstr "ଉଇଣ୍ଡୋ ଲଟକାଅ "
+
+msgid "UnStick Window"
+msgstr "ଉଇଣ୍ଡୋ ଛଡାଅ "
+
+#, c-format
+msgid "The window \"%s\" is not responding."
+msgstr "ଉଇଣ୍ଡୋର \"%s\" ପ୍ରତିକ୍ରିଯା ହେଉ ନାହିଁ "
+
+msgid ""
+"Forcing this application to quit will cause you to lose any unsaved changes."
+msgstr ""
+"ଏହି ପ୍ରଯୋଗକୁ ମୁକ୍ତ କରିବା ପାଇଁ ବଳ ପ୍ରଯୋଗ କଲେ ତୁମର କୌଣସି ଅସଂଚିତ ପରିବର୍ତ୍ତନ ନଷ୍ଟ ହୋଇୟିବ । "
+
+msgid "_Force Quit"
+msgstr "_ଜୋରରେ ଛାଡ "
+
+#, c-format
+msgid ""
+"<b><big>%s</big></b>\n"
+"<i>%s</i>\n"
+"<small><b>Version</b> %s\n"
+"<b>Created By</b> %s\n"
+"<b>Use With</b> %s\n"
+"</small>"
+msgstr ""
+"<b><ବଡ>%s</ବଡ></b>\n"
+"<i>%s</i>\n"
+"<small><b>Version</b> %s\n"
+"<b>Created By</b> %s\n"
+"<b>Use With</b> %s\n"
+"</small>"
+
+#, fuzzy, c-format
+msgid ""
+"<b><big>%s</big></b> (System Theme)\n"
+"<i>%s</i>\n"
+"<small><b>Version</b> %s\n"
+"<b>Created By</b> %s\n"
+"<b>Use With</b> %s\n"
+"</small>"
+msgstr ""
+"<b><ବଡ>%s</ବଡ></b>\n"
+"<i>%s</i>\n"
+"<small><b>Version</b> %s\n"
+"<b>Created By</b> %s\n"
+"<b>Use With</b> %s\n"
+"</small>"
+
+msgid "Unknown"
+msgstr "ଅଜ୍ଞାତ "
+
+msgid "Whatever (no hint)"
+msgstr "ୟେ କୌଣସି (ସଂକେତ/ଇସାରା/ଇଙ୍ଗିତ ନାହିଁ) "
+
+msgid "No Description"
+msgstr "କୌଣସି ବର୍ଣ୍ଣନା ନାହିଁ "
+
+msgid "Invalid Theme Name"
+msgstr "ଅମାନ୍ଯ ବିଷଯ ନାମ "
+
+msgid "Invalid theme file.  Does not end in .emerald"
+msgstr "ଅମାନ୍ଯ ବିଷଯ ଫାଇଲ୍ । .ଏମ୍‌ରାଲଡ୍ ରେ ଶେଷ ହୁଏ ନାହିଁ "
+
+msgid ""
+"Invalid Theme Name\n"
+"Could Not Export"
+msgstr ""
+"ଅମାନ୍ଯ ବିଷଯ ନାମ \n"
+"ରପ୍ତାନୀ ହୋଇ ପାରିଲା ନାହିଁ "
+
+msgid ""
+"Invalid File Name\n"
+"Must End in .emerald"
+msgstr ""
+"ଅମାନ୍ଯ ଫାଇଲ୍ ନାମ \n"
+".ଏମ୍‌ରାଲଡ୍ ରେ ଅନିବାର୍ୟ୍ଯ ଶେଷ ହେବ "
+
+msgid "Error calling tar."
+msgstr "ତୃଟି ନିମତ୍ରଣ କରୁଥିବା ଟାର୍ । "
+
+msgid "Theme Exported"
+msgstr "ବିଷଯ ରପ୍ତାନୀ କରାୟାଇଛି "
+
+msgid ""
+"Can't save over system themes\n"
+"(or you forgot to enter a name)"
+msgstr ""
+"ସିଷ୍ଟମ୍ ବାହାରର ବିଷଯ ଗୁଡିକୁ ସଂଚଯ କରାୟାଇ ପାରିବ ନାହିଁ \n"
+"(କିମ୍ବା ତୁମେ ଏକ ନାମ ପ୍ରବିଷ୍ଟ କରିବା ଭୁଲି ଗଲ) "
+
+#, fuzzy, c-format
+msgid "Overwrite Theme %s?"
+msgstr "ବିଷଯଗୁଡିକ ସଂପାଦନା କର "
+
+msgid "Couldn't Write Theme"
+msgstr "ବିଷଯ ଲେଖା ହୋଇ ପାରିଲା ନାହିଁ "
+
+msgid "Couldn't Form Theme"
+msgstr "ବିଷଯଗଠନ ହୋଇ ପାରିଲା ନାହିଁ "
+
+msgid "Theme Saved"
+msgstr "ବିଷଯ ସଂଚଯକରାୟାଇଛି "
+
+msgid ""
+"Can't delete system themes\n"
+"(or you forgot to enter a name)"
+msgstr ""
+"ସିଷ୍ଟମ୍ ର ବିଷଯଗୁଡିକ ବିଲୋପ କରାୟାଇ ପାରିବ ନାହିଁ \n"
+"(କିମ୍ବା ତୁମେ ଏକ ନାମ ପ୍ରବିଷ୍ଟ କରିବା ଭୁଲି ଗଲ) "
+
+#, c-format
+msgid "Are you sure you want to delete %s?"
+msgstr "ତୁମେ %s କୁ ବିଲୋପ କରିବା ପାଇଁ ଚାହିଁବା ନିଶ୍ଚିତ ତ? "
+
+msgid "Theme deleted"
+msgstr "ବିଲୋପହୋଇଥିବା ବିଷଯ/ବିଷଯବିଲୋପ କରାୟାଇଛି "
+
+msgid "No such theme to delete"
+msgstr "ବିଲୋପ କରିବା ପାଇଁ ଏମିତି ବିଷଯ ନାହିଁ "
+
+msgid "Use Pixmap Buttons"
+msgstr "ପିକ୍ସମେପ୍ ବଟନ୍‌ଗୁଡିକ ବ୍ଯବହାର କର "
+
+msgid "Use Button Halo/Glow"
+msgstr "ବଟନ୍ ପ୍ରଭାମଣ୍ଡଳ /ଦୀପ୍ତି ବ୍ଯବହାର କର "
+
+msgid "Use Button Halo/Glow For Inactive Windows"
+msgstr "ନିଷ୍କ୍ରିଯ ଉଇଣ୍ଡୋଜ୍ ପାଇଁ ପ୍ରଭାମଣ୍ଡଳ /ଦୀପ୍ତି ବଟନ୍ ବ୍ଯବହାର କର "
+
+msgid "Button Pixmaps"
+msgstr "ବଟନ୍ ପିକ୍ସମେପଗୁଡିକ "
+
+msgid "Button"
+msgstr "ବଟନ୍ "
+
+msgid "File"
+msgstr "ଫାଇଲ୍ "
+
+msgid "Preview"
+msgstr "ପୂର୍ବଦୃଶ୍ଯ "
+
+msgid "Clear"
+msgstr "ପରିଷ୍କାର "
+
+msgid "Colors"
+msgstr "ରଙ୍ଗସବୁ "
+
+msgid "Text Fill"
+msgstr "ଟେକ୍ସଟ ପୂରଣ "
+
+msgid "Text Outline"
+msgstr "ଟେକ୍ସଟ ବାହ୍ଯରେଖା "
+
+msgid "Button Fill"
+msgstr "ବଟନ୍ ପୂରଣ "
+
+msgid "Button Outline"
+msgstr "ବଟନ୍ ବାହ୍ଯରେଖା "
+
+msgid "Color"
+msgstr "ରଙ୍ଗ "
+
+msgid "Opacity"
+msgstr "ଅପାରଦର୍ଶିତା "
+
+msgid "Radius"
+msgstr "ବ୍ଯାସାର୍ଦ୍ଧ "
+
+msgid "X Offset"
+msgstr "X ଅଫ୍ ସେଟ୍ "
+
+msgid "Y Offset"
+msgstr "Y ଅଫ୍ ସେଟ୍ "
+
+msgid "Title-Text Font"
+msgstr "ଶୀର୍ଷକ- ଟେକ୍ସଟ ଫଣ୍ଟ୍ "
+
+msgid "Minimum Title-bar Height"
+msgstr "ସର୍ବନିମ୍ନ ଶୀର୍ଷକ-ବାର୍ ଉଚ୍ଚତା "
+
+msgid "Vertical Button Offset"
+msgstr "ଲମ୍ବରୂପ ବଟନ୍ ଅଫ ସେଟ୍ "
+
+msgid "Horizontal Button Offset"
+msgstr "ଦିଗବଳୀଯ ବଟନ୍ ଅଫ୍ ସେଟ୍ "
+
+msgid "Title-bar Object Layout"
+msgstr "ଶୀର୍ଷକ-ବାର୍ ବସ୍ତୁ ବିରଚନା "
+
+msgid ""
+"Use colons to separate left, center, and right.\n"
+"Anything after a third colon is ignored.\n"
+"C=Close, N=Minimize, X/R=Restore\n"
+"I=Icon, T=Title, H=Help, M=Menu\n"
+"S=Shade, U/A=On Top(Up/Above)\n"
+"Y=Sticky, (#)=# pixels space, ex: (5)\n"
+msgstr ""
+"ବାମ,ମଝି,ଓ ଡାହାଣ କୁ ଅଲଗା କରିବା ପାଇଁ କଲୋନ୍ ବ୍ଯବହାର କର ।\n"
+"ତୃତୀଯ କଲୋନ୍ ପରେ କୌଣସି ଜିନିଷକୁ  ଅବଜ୍ଞା କର ।\n"
+"C=Close, N=Minimize, X/R=Restore\n"
+"I=Icon, T=Title, H=Help, M=Menu\n"
+"S=Shade, U/A=On Top(Up/Above)\n"
+"Y=Sticky, (#)=# pixels space, ex: (5)\n"
+
+msgid "Export Theme..."
+msgstr "ରପ୍ତାନୀ ବିଷଯ... "
+
+msgid "Name:"
+msgstr "ନାମ: "
+
+msgid "Untitled Theme"
+msgstr "ଶୀର୍ଷକ- ରହିତ ବିଷଯ "
+
+msgid "Export..."
+msgstr "ରପ୍ତାନୀ କର... "
+
+msgid "Creator"
+msgstr "ସୃଷ୍ଟିକର୍ତ୍ତା "
+
+msgid "Description"
+msgstr "ବର୍ଣ୍ଣନା "
+
+msgid "Theme Version"
+msgstr "ବିଷଯ ଭାଷାନ୍ତର "
+
+msgid "Suggested Widget Theme"
+msgstr "ମତାମତ ଦିଆହୋଇଥିବା Widget ବିଷଯ "
+
+msgid "Themer Version"
+msgstr "ବିଷଯକରୁଥିବା ଭାଷାନ୍ତର "
+
+msgid "Border"
+msgstr "ସୀମା "
+
+msgid "Size"
+msgstr "ଆକାର "
+
+msgid "Top"
+msgstr "ଉପର "
+
+msgid "Bottom"
+msgstr "ତଳ "
+
+msgid "Left"
+msgstr "ବାମ "
+
+msgid "Right"
+msgstr "ଡାହାଣ "
+
+msgid ""
+"Note, when changing these values,\n"
+"it is advised that you do something\n"
+"like change viewports, as this will\n"
+"cause the position of the 'event windows'\n"
+"to update properly, and thus make\n"
+"moving/resizing windows work properly.\n"
+"This also applies to when you change\n"
+"the title-bar height through either\n"
+"the titlebar-min-height slider\n"
+"or the titlebar font setting.\n"
+msgstr ""
+"ଧ୍ଯାନ ଦିଅ, ଏହି ମୂଲ୍ଯଗୁଡିକ ପରିବର୍ତ୍ତନ କରିବା ସମଯରେ ,\n"
+"ଏହା ଉପଦେଶ ଦିଆ ହେଉଛି ୟେ ତୁମେ କିଛି କର \n"
+"ୟଥା ଦୃଶ୍ଯପୋର୍ଟ ଗୁଡିକ ବଦଳାଅ,କାରଣ ଏହା 'ଘଟଣା ଉଇଣ୍ଡୋଜ୍ '\n"
+" ର ସ୍ଥାନ ଠିକ୍ ଭାବରେ ଅପ୍‌ଡେଟ୍ କରିବା ପାଇଁ ସାହାୟ୍ଯ କରିବ,ଏବଂ ଏଭଳି ଭାବରେ \n"
+" ଚାଲୁଥିବା /ପୁନଃ ଆକାର ବଦଳାଉଥିବା ଉଇଣ୍ଡୋଜ୍ ଠିକ୍ ଭାବରେ କାମ କରିବା ପାଇଁ ସାହାୟ୍ଯ କରିବ ।\n"
+"ଏହା ମଧ୍ଯ ଲାଗୁହେବ ୟଦି ତୁମେ ଶୀର୍ଷକ ବାର୍-ଅନ୍ଯୁନ -ଉଚ୍ଚତା ସ୍ଲାଇଡ୍ \n"
+" କିମ୍ବା ଶୀର୍ଷକ ବାର୍ ଫଣ୍ଟ ସେଟିଙ୍ଗ୍ ମାଧ୍ଯମରେ\n"
+" ଶୀର୍ଷକ ବାର୍ ଉଚ୍ଚତାକୁ ବଦଳାଅ  ।\n"
+
+msgid "Shadows"
+msgstr "ଛାଯାଗୁଡିକ "
+
+msgid "Frame Borders"
+msgstr "ଫ୍ରେମ୍ ସୀମାଗୁଡିକ "
+
+msgid "Active Window"
+msgstr "ସକ୍ରିଯ ଉଇଣ୍ଡୋ "
+
+msgid "Inactive Window"
+msgstr "ନିଷ୍କ୍ରିଯ ଉଇଣ୍ଡୋ "
+
+msgid "Title Bar"
+msgstr "ଶୀର୍ଷକ ବାର୍ "
+
+msgid "Screenshot"
+msgstr "ସ୍କ୍ରିନ୍ସଟ୍ "
+
+msgid "Images"
+msgstr "ଚିତ୍ରଗୁଡିକ "
+
+msgid "Information"
+msgstr "ସୂଚନା "
+
+msgid ""
+"NOTE - These settings are not part of themes, they are stored separately, "
+"and control various UI preferences for Emerald."
+msgstr ""
+"ଧ୍ଯାନ ଦିଅ- ଏହି ସେଟିଙ୍ଗ୍ଗୁଡିକ ବିଷଯ ଗୁଡିକର ଅଂଶ ନୁହନ୍ତି ,ସେଗୁଡିକ ଅଲଗା ଭାବରେ ସୁରକ୍ଷିତ ରଖା ହୋଇଥାଏ ,"
+"ଏବଂ ଏମ୍‌ରାଲ୍‌ଡ ପାଇଁ ବିଭିନ୍ନ UI ପସନ୍ଦ ଗୁଡିକ ନିଯନ୍ତ୍ରଣ କରନ୍ତି । "
+
+msgid "Show Tooltips for Buttons"
+msgstr "ବଟନ୍ଗୁଡିକ ପାଇଁ ଟୁଲ୍ଟିପ୍ଗୁଡିକୁ ଦେଖାଅ "
+
+msgid "Use Decoration Cropping"
+msgstr "ସଜାବଟ କ୍ରପିଙ୍ଗ୍ ବ୍ଯବହାର କର "
+
+msgid "Use Button Fade"
+msgstr "ଫିକାପଡିୟିବା ବଟନ୍ ବ୍ଯବହାର କର "
+
+msgid "Use Button Fade Pulse"
+msgstr "ବଟନ୍ ଫିକା ପଲ୍ସ୍ ବ୍ଯବହାର କର "
+
+msgid "Button Fade Total Duration"
+msgstr "ବଟନ୍ ଫିକା ସଂପୂର୍ଣ୍ଣ ସ୍ଥିତିକାଳ "
+
+msgid "Button Fade Step Duration"
+msgstr "ବଟନ୍ ଫିକା ସ୍ଟେପ୍ ସ୍ଥିତିକାଳ "
+
+msgid "Button Pulse Wait Duration"
+msgstr "ବଟନ୍ ପଲ୍ସ୍ ଅପେକ୍ଷା ସ୍ଥିତିକାଳ "
+
+msgid "Button Pulse Min Opacity %"
+msgstr "ବଟନ୍ ପଲ୍ସ ଅନ୍ଯୁନ ଅପାରଦର୍ଶିତା% "
+
+msgid "Titlebar Double-Click Action"
+msgstr "ଶୀର୍ଷକବାର୍ ଦ୍ବିଗୁଣିତ-କ୍ଲିକ କ୍ରିଯା "
+
+msgid "Button Hover Cursor"
+msgstr "ବଟନ୍ ହୋଭର୍ କର୍ସର୍ "
+
+msgid "Normal"
+msgstr "ସ୍ବଭାବିକ "
+
+msgid "Pointing Finger"
+msgstr "ସୂଚିତ କରୁଥିବା ଆଙ୍ଗୁଠି "
+
+msgid "Compiz Decoration Blur Type"
+msgstr "କମ୍ପିଜ ଅଳଙ୍କରଣ ଅସ୍ପଷ୍ଟ ପ୍ରକାର"
+
+msgid "None"
+msgstr "କିଛି ନୁହେଁ"
+
+msgid "Titlebar only"
+msgstr " କେବଳ ଶୀର୍ଷକ ବାର"
+
+msgid "All decoration"
+msgstr "ସବୁ ଅଳଙ୍କରଣ"
+
+msgid "Frame Engine"
+msgstr "ଫ୍ରେମ୍ ଇଞ୍ଜିନ "
+
+msgid "Buttons"
+msgstr "ବଟନ୍ଗୁଡିକ "
+
+msgid "Frame/Shadows"
+msgstr "ଫ୍ରେମ୍ /ଛାଯାସବୁ "
+
+msgid "Titlebar"
+msgstr "ଶୀର୍ଷକବାର୍ "
+
+msgid "Theme"
+msgstr "ବିଷଯ "
+
+msgid "Edit"
+msgstr "ସଂପାଦନ "
+
+msgid "Import Theme..."
+msgstr "ଆମଦାନୀ ବିଷଯ... "
+
+msgid "Search:"
+msgstr "ତଦନ୍ତ କର: "
+
+msgid "Fetching Themes"
+msgstr "ଆକର୍ଷକ/ମନୋହର/ରମଣୀଯ ବିଷଯଗୁଡିକ "
+
+msgid ""
+"Fetching themes... \n"
+"This may take time depending on \n"
+"internet connection speed."
+msgstr ""
+"ବିଷଯଗୁଡିକ ଅଣାୟାଉଛି...\n"
+"ଏହା \n"
+" ଇଣ୍ଟରନେଟ୍ ସଂୟୋଗ ବେଗ ଉପରେ ନିର୍ଭର କରୁଥିବାରୁ ସମଯ ନେଇ ପାରେ । "
+
+msgid ""
+"Here are the repositories that you can fetch Emerald Themes from. \n"
+"Fetching themes would fetch and import themes from SVN repositories \n"
+"You need Subversion package installed to use this feature."
+msgstr ""
+"ଏଠି ଭଣ୍ଡାରସବୁ ଅଛି ୟେଉଁଠାରୁ ତୁମେ ଏମ୍‌ରାଲ୍ଡ ବିଷଯ ଗୁଡିକ ପାଇପାରିବ ।\n"
+"ପାଇବାକୁ ଥିବା ବିଷଯସବୁ SVN ଭଣ୍ଡାରସବୁରୁ ବିଷଯ ଗୁଡିକ ଆଣି ପାରିବ ଏବଂ ଆମଦାନୀ କରି ପାରିବ \n"
+"ଏହି ବିଶିଷ୍ଟତାକୁ ବ୍ଯବହାର କରିବା ପାଇଁ ତୁମକୁ ପ୍ରତିଷ୍ଠା ହୋଇଥିବା ଉପ ଭାଷାନ୍ତର ପ୍ଯାକେଜ୍ ଆବଶ୍ଯକ । "
+
+msgid ""
+"This repository contains GPL'd themes that can be used under \n"
+"the terms of GNU GPL licence v2.0 or later \n"
+msgstr ""
+
+msgid ""
+"This repository contains non-GPL'd themes. They might infringe \n"
+"copyrights and patent laws in some countries."
+msgstr ""
+"ଏହି ଭଣ୍ଡାରପାତ୍ର non-GPL'd ବିଷଯଗୁଡିକ ଅନ୍ତର୍ଭୁକ୍ତ କରେ । ସେମାନେ କେତେକ ଦେଶରେ \n"
+" ନକଲସ୍ବତ୍ତ୍ବ ଅଧିକାର ଏବଂ ଏକସ୍ବ ଆଇନ ଗୁଡିକୁ ଉଲଙ୍ଘନ କରି ପାରନ୍ତି । "
+
+msgid ""
+"To activate Non-GPL repository please run the following in shell and accept "
+"the server certificate permanently: \n"
+"svn ls https://svn.generation.no/emerald-themes."
+msgstr ""
+"Non-GPL ଭଣ୍ଡାରପାତ୍ରକୁ କ୍ରିଯାଶୀଳ କରିବା ପାଇଁ ଦଯା କରି ନିମ୍ନଲିଖିତକୁ କୋଷରେ ଚଳାଅ ଏବଂ ସର୍ଭର୍ ପ୍ରମାଣ "
+"ପତ୍ର ସ୍ଥାଯୀରୂପେ ପ୍ରାପ୍ତ ହୁଅ:\n"
+"svn ls https://svn.ଜେନେରେସନ୍.no/ଏମ୍‌ରାଲ୍ଡ- ବିଷଯବସ୍ତୁ । "
+
+msgid "Themes"
+msgstr "ବିଷଯଗୁଡିକ "
+
+msgid "Edit Themes"
+msgstr "ବିଷଯଗୁଡିକ ସଂପାଦନା କର "
+
+msgid "Repositories"
+msgstr "ଭଣ୍ଡାରସବୁ "
+
+msgid "Themes Settings"
+msgstr "ବିଷଯସବୁର ସେଟିଙ୍ଗଗୁଡିକ "
+
+msgid "Emerald Settings"
+msgstr "ଏମ୍‌ରାଲ୍‌ଡ/ମରକତ ସେଟିଙ୍ଗ୍ "
+
+msgid ""
+"Select\n"
+"Engine"
+msgstr ""
+"ମନୋନୀତକର \n"
+" ଇଞ୍ଜିନ "
+
+msgid "Based on original gnome-window-decorator"
+msgstr "ମୂଳ gnome-ଉଇଣ୍ଡୋ -ସଜ୍ଜାକାରୀ ଉପରେ ପର୍ୟ୍ଯବେଶିତ "
+
+msgid "Round Top Left Corner"
+msgstr "ଗୋଲାକାର ଉପର ବାମ କୋଣ "
+
+msgid "Round Top Right Corner"
+msgstr "ଗୋଲାକାର ଉପର ଡାହାଣ କୋଣ "
+
+msgid "Round Bottom Left Corner"
+msgstr "ଗୋଲାକାର ତଳ ବାମ କୋଣ "
+
+msgid "Round Bottom Right Corner"
+msgstr "ଗୋଲାକାର ତଳ ଡାହାଣ କୋଣ "
+
+msgid "Rounding Radius"
+msgstr "ଗୋଲହେଉଥିବା ବ୍ଯାସାର୍ଦ୍ଧ "
+
+msgid "Outer Frame Blend"
+msgstr "ବାହ୍ଯ ଫ୍ରେମ ମିଶ୍ରଣ "
+
+msgid "Inner Frame Blend"
+msgstr "ଭିତର ଫ୍ରେମ ମିଶ୍ରଣ "
+
+msgid "Outer Titlebar Blend"
+msgstr "ବାହ୍ଯ ଶୀର୍ଷକବାର୍ ମିଶ୍ରଣ "
+
+msgid "Inner Titlebar Blend"
+msgstr "ଭିତର ଶୀର୍ଷକବାର୍ ମିଶ୍ରଣ "
+
+msgid "Titlebar Separator"
+msgstr "ଶୀର୍ଷକବାର୍ ସେପାରେଟର୍ / ବିଭାଜକ "
+
+msgid "Frame Outline"
+msgstr "ଫ୍ରେମ୍ ବାହ୍ଯରେଖା "
+
+msgid "Frame Highlight"
+msgstr "ଫ୍ରେମ୍ ବିଶେଷତା "
+
+msgid "Frame Shadow"
+msgstr "ଫ୍ରେମ୍ ଛାଯା "
+
+msgid "Contents Outline"
+msgstr "ସୂଚୀପତ୍ର ବାହ୍ଯରେଖା "
+
+msgid "Contents Highlight"
+msgstr "ସୂଚୀପତ୍ର ବିଶେଷତା "
+
+msgid "Contents Shadow"
+msgstr "ସୂଚୀପତ୍ର ଛାଯା "
+
+msgid "Frame"
+msgstr "ଫ୍ରେମ୍ "
+
+msgid "Based on original legacy"
+msgstr "ମୂଳଭୂତ ଉତ୍ତରଦାନ ଉପରେ ଆଧାରିତ"
+
+msgid "Designed to be vista-ish in nature"
+msgstr "ସ୍ବଭାବତଃ ଭିସ୍ତା ଭଳି ହେବା ପାଇଁ ପରିକଳ୍ପନା /ନକ୍ସା କରାହୋଇଛି "
+
+msgid "Base"
+msgstr "ଆଧାର "
+
+msgid "Glow"
+msgstr "ଉଜ୍ଜଳତା /ଦୀପ୍ତି "
+
+msgid "Sides"
+msgstr "ପାର୍ଶ୍ବଗୁଡିକ "
+
+msgid "Everything done with customizable pixmaps!"
+msgstr "ପ୍ରତ୍ଯେକ ଜିନିଷ ବ୍ଯବସ୍ଥିତ ୟୋଗ୍ଯ ପିକ୍ସମ୍ଯାପଗୁଡିକ ହିସାବରେ କରାହୋଇଛି! "
+
+msgid "Top Rounding Radius"
+msgstr "ଉପର ଗୋଲହୋଇଥିବା ବ୍ଯାସାର୍ଦ୍ଧ "
+
+msgid "Bottom Rounding Radius"
+msgstr "ତଳ ଗୋଲହୋଇଥିବା ବ୍ଯାସାର୍ଦ୍ଧ "
+
+#. Style : Use Tiled or Scaled pixmaps
+msgid "Scaled"
+msgstr "ମପାହୋଇଥିବା "
+
+msgid "Not adjustable"
+msgstr "ବ୍ଯବସ୍ଥା ୟୋଗ୍ଯ ନୁହଁ "
+
+msgid "Same as Active"
+msgstr "ସକ୍ରିଯ ଭଳି ସମାନ "
+
+msgid "Pixmap"
+msgstr "ପିକ୍ସମ୍ଯାପ "
+
+msgid "Tiled/Scaled"
+msgstr "ଟାଇଲ୍ ହୋଇଥିବା /ମପାହୋଇଥିବା "
+
+msgid "Width Override"
+msgstr "ଓସାର ରଦ୍ଦ "
+
+msgid "Height Override"
+msgstr "ଉଚ୍ଚତା ରଦ୍ଦ "
+
+msgid "Glassy effects for your windows"
+msgstr "ତୁମ ଉଇଣ୍ଡୋଜ୍ ପାଇଁ କାଚ ସ୍ବରୂପ ପ୍ରଭାବ "
+
+msgid "Glow Height"
+msgstr "ଉଜ୍ଜଳତା ଉଚ୍ଚତା "
+
+msgid "Frame Base Color"
+msgstr "ଫ୍ରେମ୍ ଆଧାର ରଙ୍ଗ "
+
+msgid "Upper Titlebar Glow"
+msgstr "ଉଚ୍ଚତର ଶୀର୍ଷକବାର୍ ଉଜ୍ଜଳତା "
+
+msgid "Upper Glass Glow"
+msgstr "ଉଚ୍ଚତର କାଚ ଉଜ୍ଜଳତା "
+
+msgid "Lower Glass Glow"
+msgstr "ତଳ କାଚ ଉଜ୍ଜଳତା "
+
+msgid "Middle Glass Glow"
+msgstr "ମଝି କାଚ ଉଜ୍ଜଳତା "
+
+msgid "Outer Glass Glow"
+msgstr "ବାହ୍ଯ କାଚ ଉଜ୍ଜଳତା "
+
+msgid "Multiple gradients with somewhat glassy features too"
+msgstr "କିଛି ପରିମାଣର କାଚ ସ୍ବରୂପ ବିଶିଷ୍ଟତା ଥିବା ବହୁବିଧ ଗ୍ରାଡିଏଣ୍ଟଗୁଡିକ ମଧ୍ଯ "
+
+msgid "Left Blend"
+msgstr "ବାମପାଖ ମିଶ୍ରଣ "
+
+msgid "Middle Blend"
+msgstr "ମଝି ମିଶ୍ରଣ "
+
+msgid "Right Blend"
+msgstr "ଡାହାଣପାଖ ମିଶ୍ରଣ "
+
+msgid "Contrast"
+msgstr "ସ୍ପଷ୍ଟତା "
+
+msgid "(Color)"
+msgstr "(ରଙ୍ଗ) "
+
+msgid "(Alpha)"
+msgstr "(ଆଲଫା) "
+
+msgid "Notch"
+msgstr "କାଟିବା "
+
+msgid "Position"
+msgstr "ସ୍ଥାନ/ସ୍ଥିତି "
+
+msgid "Curve"
+msgstr "ବକ୍ର "
+
+msgid "Offset"
+msgstr "ଅଫ୍ ସେଟ୍ "
+
+msgid "Use Glow"
+msgstr "ଉପୟୋଗ ଉଜ୍ଜଳତା "
+
+msgid "Title Glow"
+msgstr "ଶୀର୍ଷକ ଉଜ୍ଜଳତା "
+
+msgid "Evolved from the legacy engine"
+msgstr "ପୈତୃକ ଇଞ୍ଜିନଠାରୁ ଉତ୍ପନ୍ନ ହୋଇଛି "
+
+msgid "Border Gap"
+msgstr "ସୀମା ଅନ୍ତର "
+
+msgid "Show Border when maximised?"
+msgstr "ସର୍ବାଧିକଥିବା ସମଯରେ ସୀମା ଦେଖାଅ? "
+
+msgid "Show when minimised?"
+msgstr "ସର୍ବନିମ୍ନଥିବା ସମଯରେ ଦେଖାଅ? "
+
+msgid "Minimised Border Size"
+msgstr "ସର୍ବନିମ୍ନଥିବା ସୀମା ପ୍ରକାର "
+
+msgid "Enable Left Bar Dip?"
+msgstr "ବାମପାଖ ବାର୍ ଗଭୀରତା ସକ୍ଷମକର? "
+
+msgid "Left Bar Radius"
+msgstr "ବାମପାଖ ବାର୍ ବ୍ଯାସାର୍ଦ୍ଧ "
+
+msgid "Enable Lower Bulge? (Useless at the moment, but will be used soon)"
+msgstr "ତଳ ଫୁଳାକୁ ସକ୍ଷମ କର? (ବର୍ତ୍ତମାନ ପାଇଁ ଉପୟୋଗହୀନ,କିନ୍ତୁ ଶୀଘ୍ର ବ୍ଯବହୃତ ହେବ) "
+
+msgid "Top Corner Offset (%)"
+msgstr "ଉପର କୋଣ ଅଫସେଟ୍ (%) "
+
+msgid "Enable Title Bar Dip?"
+msgstr "ଶୀର୍ଷକ ବାର୍ ଗଭୀରତା ସକ୍ଷମକର? "
+
+msgid "Enable Button Part?"
+msgstr "ବଟନ୍ ଭାଗ/ଅଂଶ ସକ୍ଷମକର? "
+
+msgid "Title Part Width"
+msgstr "ଶୀର୍ଷକ ଭାଗ ଓସାର "
+
+msgid "Button Part Width)"
+msgstr "ବଟନ୍ ଭାଗ ଓସାର) "
+
+msgid "Dip Corners Radius)"
+msgstr "ଗଭୀର କୋଣଗୁଡିକର ବ୍ଯାସାର୍ଦ୍ଧ "
+
+msgid "Round Inside Corners As well?"
+msgstr "ଭିତର କୋଣଗୁଡିକ ବି ଗୋଲ? "
+
+msgid "Enable Different Maximised Colors?"
+msgstr "ବିଭିନ୍ନ ସର୍ବାଧିକ କରାହୋଇଥିବା ରଙ୍ଗସବୁ ସକ୍ଷମ କର? "
+
+msgid "Turn Off repeating gradients when maximised?"
+msgstr "ୟେତେବେଳେ ସର୍ବାଧିକ କରାହୋଇଛି ପୁନଃ ଆସୁଥିବା ଗ୍ରାଡିଏଣ୍ଟଗୁଡିକୁ ବନ୍ଦ କର? "
+
+msgid "Round Top Left Corner?"
+msgstr "ଗୋଲାକାର ଉପର ବାମପାଖ କୋଣ? "
+
+msgid "Frame Rounding Radius"
+msgstr "ଫ୍ରେମ୍ ଗୋଲାକାର କରୁଥିବା ବ୍ଯାସାର୍ଦ୍ଧ "
+
+msgid "Titlebar Rounding Radius"
+msgstr "ଶୀର୍ଷକବାର୍ ଗୋଲାକାର କରୁଥିବା ବ୍ଯାସାର୍ଦ୍ଧ "
+
+msgid "Repeat Gradient?"
+msgstr "ଗ୍ରାଡିଏଣ୍ଟ ପୁନରାବୃତିକର ? "
+
+msgid "Vertical Repeat?"
+msgstr "ଲମ୍ବରୂପ ପୁନରାବୃତି ? "
+
+msgid "Diagonal Repeat?"
+msgstr "କର୍ଣ୍ଣ ପୁନରାବୃତି ? "
+
+msgid "Repeat Frequency"
+msgstr "ଫ୍ରିକ୍ବେନସି ପୁନରାବୃତିକର "
+
+#. /////////////////////
+msgid "Enable Title Part Pixmap?"
+msgstr "ଶୀର୍ଷକ ଭାଗ ପିକ୍ସମ୍ଯାପ ସକ୍ଷମକର? "
+
+msgid "Repeat Title Part Pixmap?"
+msgstr "ଶୀର୍ଷକ ଭାଗ ପିକ୍ସମ୍ଯାପ ପୁନରାବୃତିକର? "
+
+msgid "Title Bar Part Pixmap"
+msgstr "ଶୀର୍ଷକ ବାର୍ ଭାଗ ପିକ୍ସମ୍ଯାପ "
+
+msgid "Choose Titlebar Part Pixmap"
+msgstr "ଶୀର୍ଷକ ବାର୍ ଭାଗ ପିକ୍ସମ୍ଯାପ ବାଛ "
+
+#. /////////////////////////
+msgid "Enable Button Part Pixmap?"
+msgstr "ବଟନ୍ ଭାଗ ପିକ୍ସମ୍ଯାପ ସକ୍ଷମକର? "
+
+msgid "Repeat Button Part Pixmap?"
+msgstr "ବଟନ୍ ଭାଗ ପିକ୍ସମ୍ଯାପ ପୁନରାବୃତିକର? "
+
+msgid "Button Part Pixmap"
+msgstr "ବଟନ୍ ଭାଗ ପିକ୍ସମ୍ଯାପ "
+
+msgid "Choose Button Part Pixmap"
+msgstr "ବଟନ୍ ଭାଗ ପିକ୍ସମ୍ଯାପ ବାଛ "
+
+#. /////////////////////////
+msgid "Enable Titlebar Pixmap?"
+msgstr "ଶୀର୍ଷକବାର୍ ପିକ୍ସମ୍ଯାପ ସକ୍ଷମକର ? "
+
+msgid "Repeat Titlebar Pixmap?"
+msgstr "ଶୀର୍ଷକବାର୍ ପିକ୍ସମ୍ଯାପ ପୁନରାବୃତିକର? "
+
+msgid "Titlebar Pixmap"
+msgstr "ଶୀର୍ଷକବାର୍ ପିକ୍ସମ୍ଯାପ "
+
+msgid "Choose Titlebar Pixmap"
+msgstr "ଶୀର୍ଷକବାର୍ ପିକ୍ସମ୍ଯାପ ବାଛ "
+
+msgid "Active/Inactive"
+msgstr "ସକ୍ରିଯ /ନିଷ୍କ୍ରିଯ "
+
+msgid "Maximised"
+msgstr "ସର୍ବାଧିକ କରାହୋଇଛି "
+
+msgid "Corners"
+msgstr "କୋଣଗୁଡିକ "
+
+msgid "Border Layout"
+msgstr "ସୀମା ବିରଚନା "
+
+msgid "Left Bar"
+msgstr "ବାମପାଖ ବାର୍ "
+
+msgid "Pixmaps"
+msgstr "ପିକ୍ସମ୍ଯାପଗୁଡିକ "

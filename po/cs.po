@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cs\n"
 "Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
-"POT-Creation-Date: 2007-12-12 01:40+0530\n"
-"PO-Revision-Date: 2007-11-30 23:30+0100\n"
-"Last-Translator: Mark <mr.ma@tiscali.cz>\n"
+"POT-Creation-Date: 2007-12-22 16:36+0530\n"
+"PO-Revision-Date: 2007-11-12 16:05+0100\n"
+"Last-Translator: FixExa <FixExa@seznam.cz>\n"
 "Language-Team: Czech\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -382,7 +382,7 @@ msgid "Pointing Finger"
 msgstr "Ukazovátko"
 
 msgid "Compiz Decoration Blur Type"
-msgstr ""
+msgstr "Compiz dekorace rozmazání písma"
 
 msgid "None"
 msgstr "Nic"
@@ -506,16 +506,16 @@ msgid "Rounding Radius"
 msgstr "Poloměr zakulacení"
 
 msgid "Outer Frame Blend"
-msgstr ""
+msgstr "Rozpouštění vnějšího rámu"
 
 msgid "Inner Frame Blend"
-msgstr ""
+msgstr "Rozpouštění vnitřního rámu"
 
 msgid "Outer Titlebar Blend"
-msgstr ""
+msgstr "Rozpouštění vnějšího záhlaví"
 
 msgid "Inner Titlebar Blend"
-msgstr ""
+msgstr "Rozpouštění vnitřního záhlaví"
 
 msgid "Titlebar Separator"
 msgstr "Oddělovač záhlaví"
@@ -664,22 +664,23 @@ msgid "Show when minimised?"
 msgstr "Zobrazit u minimalizovaných?"
 
 msgid "Minimised Border Size"
-msgstr ""
+msgstr "Minimalizovat velikost okraje"
 
 msgid "Enable Left Bar Dip?"
-msgstr ""
+msgstr "Povolit sklon levého okraje?"
 
 msgid "Left Bar Radius"
-msgstr ""
+msgstr "Poloměr levého okraje"
 
 msgid "Enable Lower Bulge? (Useless at the moment, but will be used soon)"
 msgstr ""
+"Povolit spodní vyklenutí? (V tento okamžik zbytečné, v budoucnu bude použito)"
 
 msgid "Top Corner Offset (%)"
 msgstr "Odsazení horního rohu (%)"
 
 msgid "Enable Title Bar Dip?"
-msgstr ""
+msgstr "Povolit sklon záhlaví?"
 
 msgid "Enable Button Part?"
 msgstr "Povolit tlačítkovou část?"
@@ -691,10 +692,10 @@ msgid "Button Part Width)"
 msgstr "Šířka části s tlačítky)"
 
 msgid "Dip Corners Radius)"
-msgstr ""
+msgstr "Sklon rohového poloměru)"
 
 msgid "Round Inside Corners As well?"
-msgstr ""
+msgstr "Zakulatit vnitřní rohy stejně?"
 
 msgid "Enable Different Maximised Colors?"
 msgstr "Povolit rozdílné barvy pro maximalizované?"
