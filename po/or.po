@@ -1,15 +1,15 @@
-# SOME DESCRIPTIVE TITLE.
+# Oriya emerald translation.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: emeral\n"
+"Project-Id-Version: emerald\n"
 "Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
-"POT-Creation-Date: 2007-12-22 16:36+0530\n"
+"POT-Creation-Date: 2008-01-10 15:57+0530\n"
 "PO-Revision-Date: 2007-12-17 15:45+0530\n"
-"Last-Translator: \n"
+"Last-Translator: gist oriya team <info.gist@cdac.in>\n"
 "Language-Team: gist oriya team <info.gist@cdac.in>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -138,9 +138,9 @@ msgstr ""
 "ସିଷ୍ଟମ୍ ବାହାରର ବିଷଯ ଗୁଡିକୁ ସଂଚଯ କରାୟାଇ ପାରିବ ନାହିଁ \n"
 "(କିମ୍ବା ତୁମେ ଏକ ନାମ ପ୍ରବିଷ୍ଟ କରିବା ଭୁଲି ଗଲ) "
 
-#, fuzzy, c-format
+#, c-format
 msgid "Overwrite Theme %s?"
-msgstr "ବିଷଯଗୁଡିକ ସଂପାଦନା କର "
+msgstr "ଓଭର୍ ରାଇଟ୍ ବିଷଯ %s? "
 
 msgid "Couldn't Write Theme"
 msgstr "ବିଷଯ ଲେଖା ହୋଇ ପାରିଲା ନାହିଁ "
@@ -446,6 +446,8 @@ msgid ""
 "This repository contains GPL'd themes that can be used under \n"
 "the terms of GNU GPL licence v2.0 or later \n"
 msgstr ""
+"ଏହି ଭଣ୍ଡାର ପାତ୍ର GPL'd ବିଷଯଗୁଡିକ ଅନ୍ତର୍ଭୁକ୍ତ କରିଛି ୟାହା \n"
+" ଭିତରେ GNU GPLଲାଇସେନସ୍‌ v2.0ର ସର୍ତ୍ତଗୁଡିକ ମଧ୍ଯରେ ବ୍ଯବହୃତ ହୋଇପାରେ କିମ୍ବା\n"
 
 msgid ""
 "This repository contains non-GPL'd themes. They might infringe \n"

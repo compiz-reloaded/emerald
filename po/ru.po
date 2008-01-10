@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: emerald\n"
 "Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
-"POT-Creation-Date: 2007-12-22 16:36+0530\n"
-"PO-Revision-Date: 2007-12-17 13:15+0100\n"
-"Last-Translator: Denis Rakhmangulov <danfocus@gmail.com>\n"
+"POT-Creation-Date: 2008-01-10 15:57+0530\n"
+"PO-Revision-Date: 2008-01-02 15:48+0100\n"
+"Last-Translator: Alyx <ceekay80@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -47,11 +47,11 @@ msgstr "Строка над"
 
 #, fuzzy
 msgid "Stick Window"
-msgstr "Окно разговора"
+msgstr "Прикрепить окно"
 
 #, fuzzy
 msgid "UnStick Window"
-msgstr "Окно разговора"
+msgstr "Открепить окно"
 
 #, c-format
 msgid "The window \"%s\" is not responding."
@@ -98,7 +98,6 @@ msgstr ""
 "<b>Используется с</b> %s\n"
 "</small>"
 
-#, fuzzy
 msgid "Unknown"
 msgstr "Неизвестно"
 
@@ -204,21 +203,18 @@ msgstr "Очистить"
 msgid "Colors"
 msgstr "Цвета"
 
-#, fuzzy
 msgid "Text Fill"
-msgstr "Цвет заполнения"
+msgstr "Цвет заливки текста"
 
-#, fuzzy
 msgid "Text Outline"
-msgstr "Только текст"
+msgstr "Цвет окантовки текста"
 
-#, fuzzy
 msgid "Button Fill"
-msgstr "Цвет заполнения"
+msgstr "Цвет заливки кнопок"
 
 #, fuzzy
 msgid "Button Outline"
-msgstr "кнопку мыши)\n"
+msgstr "Цвет окантовки кнопок"
 
 msgid "Color"
 msgstr "Цвет"
@@ -304,19 +300,15 @@ msgstr "Рамка"
 msgid "Size"
 msgstr "Размер"
 
-#, fuzzy
 msgid "Top"
-msgstr "Сверху"
+msgstr "Верх"
 
-#, fuzzy
 msgid "Bottom"
-msgstr "Снизу"
+msgstr "Низ"
 
-#, fuzzy
 msgid "Left"
 msgstr "Слева"
 
-#, fuzzy
 msgid "Right"
 msgstr "Справа"
 
@@ -365,9 +357,8 @@ msgstr ""
 "ПРИМЕЧАНИЕ - Эти настройки не являются частью тем, они хранятся отдельно, и "
 "управляются различными установками для Emerald."
 
-#, fuzzy
 msgid "Show Tooltips for Buttons"
-msgstr "Показывать кнопки заголовков столбцов"
+msgstr "Показывать подсказки для кнопок"
 
 #, fuzzy
 msgid "Use Decoration Cropping"
@@ -400,7 +391,6 @@ msgstr "Действие по двойному щелчку на заголов�
 msgid "Button Hover Cursor"
 msgstr "Выполнить до курсора"
 
-#, fuzzy
 msgid "Normal"
 msgstr "Нормальный"
 
@@ -408,7 +398,6 @@ msgstr "Нормальный"
 msgid "Pointing Finger"
 msgstr "указывает на «%s»"
 
-#, fuzzy
 msgid "Compiz Decoration Blur Type"
 msgstr "Тип размытия оформления Compiz"
 
@@ -448,9 +437,8 @@ msgstr "Импортировать тему..."
 msgid "Search:"
 msgstr "Поиск:"
 
-#, fuzzy
 msgid "Fetching Themes"
-msgstr "Директория с темами"
+msgstr "Получить темы"
 
 msgid ""
 "Fetching themes... \n"
@@ -516,7 +504,6 @@ msgstr ""
 "Выбрать\n"
 "Движок"
 
-#, fuzzy
 msgid "Based on original gnome-window-decorator"
 msgstr "Основан на оригинальном gnome-window-decorator'е"
 
@@ -590,15 +577,12 @@ msgstr "На основании загрузки процессора"
 msgid "Designed to be vista-ish in nature"
 msgstr ""
 
-#, fuzzy
 msgid "Base"
-msgstr "Base"
+msgstr "Основной"
 
-#, fuzzy
 msgid "Glow"
 msgstr "Сияние"
 
-#, fuzzy
 msgid "Sides"
 msgstr "Стороны"
 
@@ -647,9 +631,8 @@ msgstr "Эффекты прозрачности для Ваших окон"
 msgid "Glow Height"
 msgstr "Предпочтительная высота"
 
-#, fuzzy
 msgid "Frame Base Color"
-msgstr "Цвет рамки графика по умолчанию"
+msgstr "Основной цвет рамки"
 
 #, fuzzy
 msgid "Upper Titlebar Glow"
