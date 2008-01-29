@@ -3,12 +3,12 @@
 # This file is distributed under the same license as the Emerald package.
 # cyberorg <cyberorg@cyberorg.info>, 2006.
 # Original translator: atie H. <atie.at.matrix@gmail.com>\n"
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.1\n"
 "Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
-"POT-Creation-Date: 2008-01-10 15:57+0530\n"
+"POT-Creation-Date: 2008-01-29 17:06+0530\n"
 "PO-Revision-Date: 2007-12-24 12:08+0100\n"
 "Last-Translator: Jeong Seungwon <jeongseungwon@hanmail.net>\n"
 "Language-Team: beryl-project\n"

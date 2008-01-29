@@ -1,0 +1,785 @@
+# translation of eu.emerald.po to Basque
+# translation of eu.emerald.po to
+# translation of berri.emerald.po to
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Ander Elortondo <ander.elor@gmail.com>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: eu.emerald\n"
+"Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
+"POT-Creation-Date: 2008-01-29 17:06+0530\n"
+"PO-Revision-Date: 2008-01-08 20:10+0100\n"
+"Last-Translator: Ander Elortondo <ander.elor@gmail.com>\n"
+"Language-Team: Basque <librezale@librezale.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Pootle 1.0.2\n"
+
+msgid "Close Window"
+msgstr "Itxi leihoa"
+
+msgid "Maximize Window"
+msgstr "Maximizatu leihoa"
+
+msgid "Restore Window"
+msgstr "Leheneratu leihoa"
+
+msgid "Minimize Window"
+msgstr "Minimizatu leihoa"
+
+msgid "Context Help"
+msgstr "Testuinguru laguntza"
+
+msgid "Window Menu"
+msgstr "Menu leihoa"
+
+msgid "Shade Window"
+msgstr "Itzaldu leihoa"
+
+msgid "UnShade Window"
+msgstr "Itzaldura kendu leihoari"
+
+msgid "Set Above"
+msgstr "Gaitu gainjartzea"
+
+msgid "UnSet Above"
+msgstr "Ezgaitu gainjartzea"
+
+msgid "Stick Window"
+msgstr "Itsatsi leihoa"
+
+msgid "UnStick Window"
+msgstr "Askatu leihoa"
+
+#, c-format
+msgid "The window \"%s\" is not responding."
+msgstr "Leiho honek \"%s\" ez du erantzuten."
+
+msgid ""
+"Forcing this application to quit will cause you to lose any unsaved changes."
+msgstr ""
+"Aplikazio honi irtetzera behartuz gorde gabeko datuen galera ekar dezake."
+
+msgid "_Force Quit"
+msgstr "_Behartu irtetzera"
+
+#, c-format
+msgid ""
+"<b><big>%s</big></b>\n"
+"<i>%s</i>\n"
+"<small><b>Version</b> %s\n"
+"<b>Created By</b> %s\n"
+"<b>Use With</b> %s\n"
+"</small>"
+msgstr ""
+"<b><big>%s</big></b>\n"
+"<i>%s</i>\n"
+"<small><b>bertsioa</b> %s\n"
+" %s\n"
+" <b>-k egina</b> %s\n"
+" <b> erabilia</b></small>"
+
+#, c-format
+msgid ""
+"<b><big>%s</big></b> (System Theme)\n"
+"<i>%s</i>\n"
+"<small><b>Version</b> %s\n"
+"<b>Created By</b> %s\n"
+"<b>Use With</b> %s\n"
+"</small>"
+msgstr ""
+"<b><big>%s</big></b> (Sistemako Gaia)\n"
+"<i>%s</i>\n"
+"<small><b>Bertsioa</b> %s\n"
+" %s\n"
+" <b>-k egina</b>%s\n"
+" <b> erabilia</b> </small>"
+
+msgid "Unknown"
+msgstr "Ezezaguna"
+
+msgid "Whatever (no hint)"
+msgstr "Edozein (aholkurik gabe)"
+
+msgid "No Description"
+msgstr "Deskribapenik gabe"
+
+msgid "Invalid Theme Name"
+msgstr "Gaiaren izena baliogabea"
+
+msgid "Invalid theme file.  Does not end in .emerald"
+msgstr "Gai fitxategi baliogabea. Ez da amaitzen .emerald"
+
+msgid ""
+"Invalid Theme Name\n"
+"Could Not Export"
+msgstr ""
+"Gaiaren izena baliogabea\n"
+"Ezin da esportatu."
+
+msgid ""
+"Invalid File Name\n"
+"Must End in .emerald"
+msgstr ""
+"Gai fitxategi baliogabea\n"
+".emerald amaitu behar da."
+
+msgid "Error calling tar."
+msgstr "Errorea tar exekutatzean."
+
+msgid "Theme Exported"
+msgstr "Gaia esportatu da."
+
+msgid ""
+"Can't save over system themes\n"
+"(or you forgot to enter a name)"
+msgstr ""
+"Ezin da sistama gaietan gainidatzi\n"
+"(edo izena sartzea ahaztu duzu)"
+
+#, c-format
+msgid "Overwrite Theme %s?"
+msgstr "%s gaia gainidatzi?"
+
+msgid "Couldn't Write Theme"
+msgstr "Ezin da gaia idatzi"
+
+msgid "Couldn't Form Theme"
+msgstr "Ezin da gaia sortu"
+
+msgid "Theme Saved"
+msgstr "Gorde da gaia"
+
+msgid ""
+"Can't delete system themes\n"
+"(or you forgot to enter a name)"
+msgstr ""
+"Ezin da sistema gaiak ezabatu\n"
+"(edo izena sartzea ahaztu zaizu)"
+
+#, c-format
+msgid "Are you sure you want to delete %s?"
+msgstr "Ziur zaude %s ezabatu nahi duzula?"
+
+msgid "Theme deleted"
+msgstr "Gaia ezabatua"
+
+msgid "No such theme to delete"
+msgstr "Ez dago gaia ezabatzeko"
+
+msgid "Use Pixmap Buttons"
+msgstr "Erabili botoi irudiak"
+
+msgid "Use Button Halo/Glow"
+msgstr "Erabili halo/disdira botoiak"
+
+msgid "Use Button Halo/Glow For Inactive Windows"
+msgstr "Aktibo ez dagoen leihoa erabili halo/disdira botoiak"
+
+msgid "Button Pixmaps"
+msgstr "Botoi Irudiak"
+
+msgid "Button"
+msgstr "Botoia"
+
+msgid "File"
+msgstr "Fitxategia"
+
+msgid "Preview"
+msgstr "Aurrebista"
+
+msgid "Clear"
+msgstr "Garbitu"
+
+msgid "Colors"
+msgstr "Koloreak"
+
+msgid "Text Fill"
+msgstr "Testuaren betetzea"
+
+msgid "Text Outline"
+msgstr "Testuaren ingurunea"
+
+msgid "Button Fill"
+msgstr "Botoiaren betetzea"
+
+msgid "Button Outline"
+msgstr "Botoiaren ingurunea"
+
+msgid "Color"
+msgstr "Kolorea"
+
+msgid "Opacity"
+msgstr "Opakutasun"
+
+msgid "Radius"
+msgstr "Erradioa"
+
+msgid "X Offset"
+msgstr "X doiketa"
+
+msgid "Y Offset"
+msgstr "Y doiketa"
+
+msgid "Title-Text Font"
+msgstr "Tituluaren letra-tipoa"
+
+msgid "Minimum Title-bar Height"
+msgstr "Titulu-barraren altura minimoa"
+
+msgid "Vertical Button Offset"
+msgstr "Botoiaren doiketa bertikala"
+
+msgid "Horizontal Button Offset"
+msgstr "Botoiaren doiketa horizontala"
+
+msgid "Title-bar Object Layout"
+msgstr "Titulu barraren formatua"
+
+msgid ""
+"Use colons to separate left, center, and right.\n"
+"Anything after a third colon is ignored.\n"
+"C=Close, N=Minimize, X/R=Restore\n"
+"I=Icon, T=Title, H=Help, M=Menu\n"
+"S=Shade, U/A=On Top(Up/Above)\n"
+"Y=Sticky, (#)=# pixels space, ex: (5)\n"
+msgstr ""
+"Erabili komak ezkerra, erdia eta eskuma banatzeko.\n"
+"Hirugarren komatik aurreako edozer ez da kontuan hartuko.\n"
+"C=Itxi, N=Minimizatu, X/R=Restore\n"
+"I=Ikonoa, T=Titulua, H=Laguntza, M=Menua\n"
+"S=Itzala, U/A=Goian(Gainean/Azpian)\n"
+"Y=Itsatsita, (#)=# pixels space, ex: (5)\n"
+
+msgid "Export Theme..."
+msgstr "Gaia esportatu"
+
+msgid "Name:"
+msgstr "Izena:"
+
+msgid "Untitled Theme"
+msgstr "Titulugabeko gaia"
+
+msgid "Export..."
+msgstr "Esportatu..."
+
+msgid "Creator"
+msgstr "Sortzailea"
+
+msgid "Description"
+msgstr "Deskribapena"
+
+msgid "Theme Version"
+msgstr "Gaiaren bertsioa"
+
+msgid "Suggested Widget Theme"
+msgstr "Proposatutako widget gaia"
+
+msgid "Themer Version"
+msgstr "Bertsioaren gaia"
+
+msgid "Border"
+msgstr "Ertza"
+
+msgid "Size"
+msgstr "Tamaina"
+
+msgid "Top"
+msgstr "Goia"
+
+msgid "Bottom"
+msgstr "Azpia"
+
+msgid "Left"
+msgstr "Ezkerra"
+
+msgid "Right"
+msgstr "Eskuma"
+
+msgid ""
+"Note, when changing these values,\n"
+"it is advised that you do something\n"
+"like change viewports, as this will\n"
+"cause the position of the 'event windows'\n"
+"to update properly, and thus make\n"
+"moving/resizing windows work properly.\n"
+"This also applies to when you change\n"
+"the title-bar height through either\n"
+"the titlebar-min-height slider\n"
+"or the titlebar font setting.\n"
+msgstr ""
+"Oharra, Balore hauek aldatzean,\n"
+"it is advised that you do something\n"
+"like change viewports, as this will\n"
+"cause the position of the 'event windows'\n"
+"to update properly, and thus make\n"
+"moving/resizing windows work properly.\n"
+"Eraberean gertatuko da \n"
+"titulu-barraren altura aldatzean edo\n"
+"titulu-barraren altura minimoa edo\n"
+"titulu-barraren letra-tipoak aldatzean.\n"
+
+msgid "Shadows"
+msgstr "Itzalak"
+
+msgid "Frame Borders"
+msgstr "Markoaren ertzak"
+
+msgid "Active Window"
+msgstr "Leiho aktiboa"
+
+msgid "Inactive Window"
+msgstr "Leiho ez aktiboa"
+
+msgid "Title Bar"
+msgstr "Titulu-barra"
+
+msgid "Screenshot"
+msgstr "Pantaila-argazkia"
+
+msgid "Images"
+msgstr "Irudiak"
+
+msgid "Information"
+msgstr "Informazioa"
+
+msgid ""
+"NOTE - These settings are not part of themes, they are stored separately, "
+"and control various UI preferences for Emerald."
+msgstr ""
+"OHARRA - Ezarpen hauek ez dira gaiarenak, aparte gordeko dira, Emerald UIko "
+"hainbat hobespenen kontrolatzen dituzte."
+
+msgid "Show Tooltips for Buttons"
+msgstr "Erakutsi botoientzat argibideak"
+
+msgid "Use Decoration Cropping"
+msgstr ""
+
+msgid "Use Button Fade"
+msgstr "Erabili botoi iraungitzea"
+
+msgid "Use Button Fade Pulse"
+msgstr "Erabili botoi iraungitzea sakatzean"
+
+msgid "Button Fade Total Duration"
+msgstr "Botoi iraungitzearen iraupen totala"
+
+msgid "Button Fade Step Duration"
+msgstr "Botoi iraungitze pausoaren iraupena"
+
+msgid "Button Pulse Wait Duration"
+msgstr "Itxarote iraupena botoia sakatzean"
+
+msgid "Button Pulse Min Opacity %"
+msgstr "Botoia sakatzea opakutasun minimoa %"
+
+msgid "Titlebar Double-Click Action"
+msgstr "Titulu-barran klik bikoitza egitean ekintza"
+
+msgid "Button Hover Cursor"
+msgstr "Kurtsorea botoi gainean"
+
+msgid "Normal"
+msgstr "Normal"
+
+msgid "Pointing Finger"
+msgstr "Hatz erakuslea"
+
+msgid "Compiz Decoration Blur Type"
+msgstr "Lausotze motarako Compiz dekorazioa"
+
+msgid "None"
+msgstr "Bat ere ez"
+
+msgid "Titlebar only"
+msgstr "Titulu-barra bakarrik"
+
+msgid "All decoration"
+msgstr "Dekorazio guztiak"
+
+msgid "Frame Engine"
+msgstr "Marko motorea"
+
+msgid "Buttons"
+msgstr "Botoiak"
+
+msgid "Frame/Shadows"
+msgstr "Markoak/Itzalak"
+
+msgid "Titlebar"
+msgstr "Titulu-barra"
+
+msgid "Theme"
+msgstr "Gaia"
+
+msgid "Edit"
+msgstr "Editatu"
+
+msgid "Import Theme..."
+msgstr "Inportatu gaia..."
+
+msgid "Search:"
+msgstr "Bilatu:"
+
+msgid "Fetching Themes"
+msgstr "Gaiak eskuratzen"
+
+msgid ""
+"Fetching themes... \n"
+"This may take time depending on \n"
+"internet connection speed."
+msgstr ""
+"Gaiak eskuratzen... \n"
+"Internet abiaduraren arabera \n"
+"honek denbora har dezake."
+
+msgid ""
+"Here are the repositories that you can fetch Emerald Themes from. \n"
+"Fetching themes would fetch and import themes from SVN repositories \n"
+"You need Subversion package installed to use this feature."
+msgstr ""
+"Hemen daude Emerald gaiak eskuratu ditzakezun biltegiak. \n"
+"Eskuratze gaiak SVN biltegietatik eskuratu eta inportatu daitezke \n"
+"Subversion paketea instalatua izan behar da eginbide hau erabiltzeko."
+
+msgid ""
+"This repository contains GPL'd themes that can be used under \n"
+"the terms of GNU GPL licence v2.0 or later \n"
+msgstr ""
+"Biltegi honek GPLdun gaiak ditu, gai hauek GNU GPL lizentziaren\n"
+"bigarren edo ondorengo bertsioen baldintzen azpian erabili behar dira \n"
+
+msgid ""
+"This repository contains non-GPL'd themes. They might infringe \n"
+"copyrights and patent laws in some countries."
+msgstr ""
+"Biltegi hauek GPL ez dire gaiak biltzen dituzte. \n"
+"Honek hainbat herritako patente lege edo copyright urra ditzake."
+
+msgid ""
+"To activate Non-GPL repository please run the following in shell and accept "
+"the server certificate permanently: \n"
+"svn ls https://svn.generation.no/emerald-themes."
+msgstr ""
+"GPL ez diren biltegiak aktibatzeko exekutatu ondorengoa terminalean\n"
+" eta onartu zerbitzari ziurtagiria behin-betirako:\n"
+"svn ls https://svn.generation.no/emerald-themes."
+
+msgid "Themes"
+msgstr "Gaiak"
+
+msgid "Edit Themes"
+msgstr "Editatu gaiak"
+
+msgid "Repositories"
+msgstr "Biltegiak"
+
+msgid "Themes Settings"
+msgstr "Gaien ezarpenak"
+
+msgid "Emerald Settings"
+msgstr "Emerald ezarpenak"
+
+msgid ""
+"Select\n"
+"Engine"
+msgstr ""
+"Aukeratu\n"
+"motorea"
+
+msgid "Based on original gnome-window-decorator"
+msgstr "Gnome-leiho dekoratzaile originalean oinarritua"
+
+msgid "Round Top Left Corner"
+msgstr "Goiko ezker ertza borobildu"
+
+msgid "Round Top Right Corner"
+msgstr "Goiko eskuin ertza borobildu"
+
+msgid "Round Bottom Left Corner"
+msgstr "Azpiko ezker ertza borobildu"
+
+msgid "Round Bottom Right Corner"
+msgstr "Azpiko eskuin ertza borobildu"
+
+msgid "Rounding Radius"
+msgstr "Borobiltze erradioa"
+
+msgid "Outer Frame Blend"
+msgstr "Markoaren kanpoko nahastea"
+
+msgid "Inner Frame Blend"
+msgstr "Markoaren barne nahastea"
+
+msgid "Outer Titlebar Blend"
+msgstr "Titulu-barraren kanpo nahastea"
+
+msgid "Inner Titlebar Blend"
+msgstr "Titulu-barraren barne nahastea"
+
+msgid "Titlebar Separator"
+msgstr "Titulu-barra bereizlea"
+
+msgid "Frame Outline"
+msgstr "Markoaren ingurunea"
+
+msgid "Frame Highlight"
+msgstr "Marko nabarmentzea"
+
+msgid "Frame Shadow"
+msgstr "Marko itzala"
+
+msgid "Contents Outline"
+msgstr "Edukien ingurunea"
+
+msgid "Contents Highlight"
+msgstr "Edukien nabarmentzea"
+
+msgid "Contents Shadow"
+msgstr "Edukien itzala"
+
+msgid "Frame"
+msgstr "Markoa"
+
+msgid "Based on original legacy"
+msgstr "Original zaharrean oinarritua"
+
+msgid "Designed to be vista-ish in nature"
+msgstr "Vistaren itxura izateko diseinatua"
+
+msgid "Base"
+msgstr "Oinarri"
+
+msgid "Glow"
+msgstr "Disdira"
+
+msgid "Sides"
+msgstr "Aldeak"
+
+msgid "Everything done with customizable pixmaps!"
+msgstr "Edozer pertsonalizatutako irudiekin eginda!"
+
+msgid "Top Rounding Radius"
+msgstr "Goiko borobiltzearen erradioa"
+
+msgid "Bottom Rounding Radius"
+msgstr "Azpiko borobiltzearen erradioa"
+
+#. Style : Use Tiled or Scaled pixmaps
+msgid "Scaled"
+msgstr "Eskalatua"
+
+msgid "Not adjustable"
+msgstr "Ez doigarria"
+
+msgid "Same as Active"
+msgstr "Aktiboaren berdina"
+
+msgid "Pixmap"
+msgstr "Irudia"
+
+msgid "Tiled/Scaled"
+msgstr "Mosaikoan/Eskalatua"
+
+msgid "Width Override"
+msgstr "Ordezkatu zabalera"
+
+msgid "Height Override"
+msgstr "Ordezkatu altuera"
+
+msgid "Glassy effects for your windows"
+msgstr "Kristal itxura efektuak zure leihoetan"
+
+msgid "Glow Height"
+msgstr "Disdiraren altuera"
+
+msgid "Frame Base Color"
+msgstr "Markoaren oinarri kolorea"
+
+msgid "Upper Titlebar Glow"
+msgstr "Goi titulu-barraren disdira"
+
+msgid "Upper Glass Glow"
+msgstr "Goiko kristalaren disdira"
+
+msgid "Lower Glass Glow"
+msgstr "Azpiko kristalaren disdira"
+
+msgid "Middle Glass Glow"
+msgstr "Erdiko kristalaren disdira"
+
+msgid "Outer Glass Glow"
+msgstr "Kanpo kristalaren disdira"
+
+msgid "Multiple gradients with somewhat glassy features too"
+msgstr "Hainbat gradiente kristal ezaugarriekin ere"
+
+msgid "Left Blend"
+msgstr "Ezker nahastea"
+
+msgid "Middle Blend"
+msgstr "Erdiko nahastea"
+
+msgid "Right Blend"
+msgstr "Eskuin nahastea"
+
+msgid "Contrast"
+msgstr "Kontrastea"
+
+msgid "(Color)"
+msgstr "(kolorea)"
+
+msgid "(Alpha)"
+msgstr "(Alpha)"
+
+msgid "Notch"
+msgstr "Mozketa"
+
+msgid "Position"
+msgstr "Posizioa"
+
+msgid "Curve"
+msgstr "Kurba"
+
+msgid "Offset"
+msgstr "Desplazamendua"
+
+msgid "Use Glow"
+msgstr "Erabili disdira"
+
+msgid "Title Glow"
+msgstr "Tituluaren disdira"
+
+msgid "Evolved from the legacy engine"
+msgstr "Motore originaletik eratorria"
+
+msgid "Border Gap"
+msgstr "Ertzeko tartea"
+
+msgid "Show Border when maximised?"
+msgstr "Ertzak erakutsi maximizatzean?"
+
+msgid "Show when minimised?"
+msgstr "Erakutsi minimizatzean?"
+
+msgid "Minimised Border Size"
+msgstr "Minimizatutako ertzaren tamaina"
+
+msgid "Enable Left Bar Dip?"
+msgstr "Gaitu ezker-barraren malda?"
+
+msgid "Left Bar Radius"
+msgstr "Ezker-barraren erradioa"
+
+msgid "Enable Lower Bulge? (Useless at the moment, but will be used soon)"
+msgstr "Gaitu azpiko hanpadura? (oraindik ez da erabiltzen, baina laster bai)"
+
+msgid "Top Corner Offset (%)"
+msgstr "Goi izkinaren desplazamendua (%)"
+
+msgid "Enable Title Bar Dip?"
+msgstr "Gaitu titulu-barraren malda?"
+
+msgid "Enable Button Part?"
+msgstr "Gaitu botoiaren atala?"
+
+msgid "Title Part Width"
+msgstr "Titulu atalaren zabalera"
+
+msgid "Button Part Width)"
+msgstr "Botoi atalaren zabalera)"
+
+msgid "Dip Corners Radius)"
+msgstr "izkinen maldaren erradioa)"
+
+msgid "Round Inside Corners As well?"
+msgstr "izkinen barnealdea ere borobildu?"
+
+msgid "Enable Different Maximised Colors?"
+msgstr "Gaitu hainbat kolore maximizatuak?"
+
+msgid "Turn Off repeating gradients when maximised?"
+msgstr "Maximizatzean gradiente errepikatuak itzali?"
+
+msgid "Round Top Left Corner?"
+msgstr "Borobildu goiko ezker izkina?"
+
+msgid "Frame Rounding Radius"
+msgstr "Markoa borobiltzeko erradioa"
+
+msgid "Titlebar Rounding Radius"
+msgstr "Titulu-barra borobiltzeko erradioa"
+
+msgid "Repeat Gradient?"
+msgstr "errepikatu gradientea?"
+
+msgid "Vertical Repeat?"
+msgstr "errepikatu bertikala?"
+
+msgid "Diagonal Repeat?"
+msgstr "Errepikatu diagonala?"
+
+msgid "Repeat Frequency"
+msgstr "Errepikatu maiztasuna"
+
+#. /////////////////////
+msgid "Enable Title Part Pixmap?"
+msgstr "Gaitu titulu atalaren irudia?"
+
+msgid "Repeat Title Part Pixmap?"
+msgstr "Errepikatu titulu atalaren irudia?"
+
+msgid "Title Bar Part Pixmap"
+msgstr "Titulu-barraren atalaren irudia"
+
+msgid "Choose Titlebar Part Pixmap"
+msgstr "Aukeratu titulu-barraren atalaren irudia"
+
+#. /////////////////////////
+msgid "Enable Button Part Pixmap?"
+msgstr "Gaitu azpiko atalaten irudia?"
+
+msgid "Repeat Button Part Pixmap?"
+msgstr "Errepikatu azpiko atalaren irudia?"
+
+msgid "Button Part Pixmap"
+msgstr "Azpiko atalaren irudia"
+
+msgid "Choose Button Part Pixmap"
+msgstr "Aukeratu azpiko atalaren irudia"
+
+#. /////////////////////////
+msgid "Enable Titlebar Pixmap?"
+msgstr "Gaitu titulu-barraren irudia?"
+
+msgid "Repeat Titlebar Pixmap?"
+msgstr "Errepikatu titulu-barraren irudia?"
+
+msgid "Titlebar Pixmap"
+msgstr "Titulu-barraren irudia"
+
+msgid "Choose Titlebar Pixmap"
+msgstr "Aukeratu titulu-barraren irudia"
+
+msgid "Active/Inactive"
+msgstr "Aktibo/Inaktibo"
+
+msgid "Maximised"
+msgstr "Maximizatua"
+
+msgid "Corners"
+msgstr "Izkinak"
+
+msgid "Border Layout"
+msgstr "Ertz diseinua"
+
+msgid "Left Bar"
+msgstr "Ezker-barra"
+
+msgid "Pixmaps"
+msgstr "Irudiak"

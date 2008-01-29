@@ -10,13 +10,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Compiz\n"
 "Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
-"POT-Creation-Date: 2008-01-10 15:57+0530\n"
-"PO-Revision-Date: 2007-09-08 19:29+0200\n"
+"POT-Creation-Date: 2008-01-29 17:06+0530\n"
+"PO-Revision-Date: 2008-01-15 15:55+0100\n"
 "Last-Translator: Nicolau Gonçalves <excentriko@gmail.com>\n"
 "Language-Team: Portuguese\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Pootle 1.0.2\n"
 
 msgid "Close Window"
 msgstr "Fechar Janela"
@@ -249,8 +250,8 @@ msgid ""
 "Y=Sticky, (#)=# pixels space, ex: (5)\n"
 msgstr ""
 "Use vírgulas para separar esquerda, centro, e direita.\n"
-"Qualquer coisa depois da terceira vírgula é ignoradaC=Fechar, N=Minimizar, X/"
-"R=Restaurar\n"
+"Qualquer coisa depois da terceira vírgula é ignorada.\n"
+"C=Fechar,N=Minimizar, X/R=Restaurar\n"
 "I=Ícone, T=Título, H=Ajuda, M=Menu\n"
 "S=Shade, U/A=No topo(Acima/abaixo)\n"
 "Y=Sticky, (#)= Nº de pixeis de espaço, ex: (5)\n"
@@ -729,11 +730,13 @@ msgid "Repeat Frequency"
 msgstr "Frequência de repetição"
 
 #. /////////////////////
+#, fuzzy
 msgid "Enable Title Part Pixmap?"
-msgstr "Activar imagem da parte do título"
+msgstr "Activar imagem da parte do título?"
 
+#, fuzzy
 msgid "Repeat Title Part Pixmap?"
-msgstr "Repetir imagem da parte da barra de título"
+msgstr "Repetir imagem da parte da barra de título?"
 
 msgid "Title Bar Part Pixmap"
 msgstr "Imagem da parte da barra de título"
@@ -758,14 +761,15 @@ msgstr "Escolher imagem do botão"
 msgid "Enable Titlebar Pixmap?"
 msgstr "Activar imagem da barra de título?"
 
+#, fuzzy
 msgid "Repeat Titlebar Pixmap?"
-msgstr "Repetir imagem da barra de título"
+msgstr "Repetir imagem da barra de título?"
 
 msgid "Titlebar Pixmap"
 msgstr "Imagem da barra de título"
 
 msgid "Choose Titlebar Pixmap"
-msgstr "Escolher imagem da barra de título "
+msgstr "Escolher imagem da barra de título"
 
 msgid "Active/Inactive"
 msgstr "Activa/Inactiva"

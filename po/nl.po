@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1\n"
 "Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
-"POT-Creation-Date: 2008-01-10 15:57+0530\n"
-"PO-Revision-Date: 2007-11-26 10:43+0100\n"
+"POT-Creation-Date: 2008-01-29 17:06+0530\n"
+"PO-Revision-Date: 2008-01-21 15:01+0100\n"
 "Last-Translator: Rick <mailmelist@gmail.com>\n"
 "Language-Team: Dutch <ixce@beryl-project.org>\n"
 "MIME-Version: 1.0\n"
@@ -19,19 +19,19 @@ msgid "Close Window"
 msgstr "Sluit venster"
 
 msgid "Maximize Window"
-msgstr "Maximaliseer Venster"
+msgstr "Maximaliseren venster"
 
 msgid "Restore Window"
-msgstr "Herstel Venster"
+msgstr "Herstel venster"
 
 msgid "Minimize Window"
-msgstr "Minimaliseer Venster"
+msgstr "Minimaliseren venster"
 
 msgid "Context Help"
-msgstr "Context Help"
+msgstr "Context hulp"
 
 msgid "Window Menu"
-msgstr "Venster Menu"
+msgstr "Venster menu"
 
 msgid "Shade Window"
 msgstr "Venster oprollen"
@@ -106,7 +106,7 @@ msgid "No Description"
 msgstr "Geen beschrijving"
 
 msgid "Invalid Theme Name"
-msgstr "Ongeldige Thema Naam"
+msgstr "Ongeldige thema naam"
 
 msgid "Invalid theme file.  Does not end in .emerald"
 msgstr "Ongeldig thema bestand. Eindigt niet op .emerald"
@@ -115,7 +115,7 @@ msgid ""
 "Invalid Theme Name\n"
 "Could Not Export"
 msgstr ""
-"Ongeldige Thema naam\n"
+"Ongeldige thema naam\n"
 " Kon niet exporteren"
 
 msgid ""
@@ -143,7 +143,7 @@ msgid "Overwrite Theme %s?"
 msgstr "Thema %s overschrijven?"
 
 msgid "Couldn't Write Theme"
-msgstr "Kon Thema niet wegschrijven"
+msgstr "Kon thema niet wegschrijven"
 
 msgid "Couldn't Form Theme"
 msgstr "Kon thema niet vormen"
@@ -163,10 +163,10 @@ msgid "Are you sure you want to delete %s?"
 msgstr "Weet je zeker dat je %s wilt verwijderen?"
 
 msgid "Theme deleted"
-msgstr "Thema verwijderd"
+msgstr "Thema gewist"
 
 msgid "No such theme to delete"
-msgstr "Geen thema om te verwijderen"
+msgstr "Geen thema om te wissen"
 
 msgid "Use Pixmap Buttons"
 msgstr "Gebruik pixmap knoppen"
@@ -175,7 +175,7 @@ msgid "Use Button Halo/Glow"
 msgstr "Gebruik knop Halo/Glow"
 
 msgid "Use Button Halo/Glow For Inactive Windows"
-msgstr "Gebruik Knop Halo/Glow voor inactieve vensters"
+msgstr "Gebruik knop Halo/Glow voor inactieve vensters"
 
 msgid "Button Pixmaps"
 msgstr "Knop pixmaps"
@@ -187,7 +187,7 @@ msgid "File"
 msgstr "Bestand"
 
 msgid "Preview"
-msgstr "Preview"
+msgstr "Voorbeeldweergave"
 
 msgid "Clear"
 msgstr "Wissen"
@@ -196,13 +196,13 @@ msgid "Colors"
 msgstr "Kleuren"
 
 msgid "Text Fill"
-msgstr "Tekst vulling"
+msgstr "Tekst opvulling"
 
 msgid "Text Outline"
 msgstr "Text omtrek"
 
 msgid "Button Fill"
-msgstr "Knop vulling"
+msgstr "Knop opvulling"
 
 msgid "Button Outline"
 msgstr "Knop omtrek"
@@ -253,13 +253,13 @@ msgstr ""
 " Y=Sticky, (#)=# pixels ruimte, bijv.: (5)\n"
 
 msgid "Export Theme..."
-msgstr "Exporteer Thema..."
+msgstr "Exporteer thema..."
 
 msgid "Name:"
 msgstr "Naam:"
 
 msgid "Untitled Theme"
-msgstr "Naamloos Thema"
+msgstr "Naamloos thema"
 
 msgid "Export..."
 msgstr "Exporteren..."
@@ -271,16 +271,16 @@ msgid "Description"
 msgstr "Beschrijving"
 
 msgid "Theme Version"
-msgstr "Thema Versie"
+msgstr "Thema versie"
 
 msgid "Suggested Widget Theme"
-msgstr "Suggestie voor Widget Thema"
+msgstr "Suggestie voor Widget thema"
 
 msgid "Themer Version"
 msgstr "Themer Versie"
 
 msgid "Border"
-msgstr "Rand"
+msgstr "Omranding"
 
 msgid "Size"
 msgstr "Grootte"
@@ -324,19 +324,19 @@ msgid "Shadows"
 msgstr "Schaduwen"
 
 msgid "Frame Borders"
-msgstr "Frame Randen"
+msgstr "Frame randen"
 
 msgid "Active Window"
-msgstr "Active Vensters"
+msgstr "Active vensters"
 
 msgid "Inactive Window"
-msgstr "Inactieve Vensters"
+msgstr "Inactieve vensters"
 
 msgid "Title Bar"
 msgstr "Titel Balk"
 
 msgid "Screenshot"
-msgstr "Schermafdruk"
+msgstr "Schermafbeelding"
 
 msgid "Images"
 msgstr "Afbeeldingen"
@@ -355,7 +355,7 @@ msgid "Show Tooltips for Buttons"
 msgstr "Toon gereedschap tips voor knoppen"
 
 msgid "Use Decoration Cropping"
-msgstr "Gebruik Decoratie Afsnijding"
+msgstr "Gebruik Decoration Cropping"
 
 msgid "Use Button Fade"
 msgstr "Gebruik Knop Fade"
@@ -418,13 +418,13 @@ msgid "Edit"
 msgstr "Bewerken"
 
 msgid "Import Theme..."
-msgstr "Importeer Thema..."
+msgstr "Importeer thema..."
 
 msgid "Search:"
 msgstr "Zoeken:"
 
 msgid "Fetching Themes"
-msgstr "Verkrijgen van Thema's"
+msgstr "Verkrijgen van thema's"
 
 msgid ""
 "Fetching themes... \n"
@@ -439,7 +439,7 @@ msgid ""
 "Fetching themes would fetch and import themes from SVN repositories \n"
 "You need Subversion package installed to use this feature."
 msgstr ""
-"Hier zijn de repositories waar je Emerald Thema's van kunt verkrijgen\n"
+"Hier zijn de repositories waar je Emerald thema's kunt krijgen\n"
 "Het verkrijgen van thema's houdt in het verkrijgen en importeren uit SVN "
 "repositories\n"
 "Het Subversion pakket dient geïnstalleerd te zijn voor deze mogelijkheid"
@@ -477,10 +477,10 @@ msgid "Repositories"
 msgstr "Repositories"
 
 msgid "Themes Settings"
-msgstr "Thema Instellingen"
+msgstr "Thema instellingen"
 
 msgid "Emerald Settings"
-msgstr "Emerald Instellingen"
+msgstr "Emerald instellingen"
 
 msgid ""
 "Select\n"
