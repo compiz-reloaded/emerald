@@ -2342,9 +2342,9 @@ update_default_decorations(GdkScreen * screen, frame_settings * fs_act,
 
     xroot = RootWindowOfScreen(gdk_x11_screen_get_xscreen(screen));
 
-    bareAtom = XInternAtom(xdisplay, "_NET_WINDOW_DECOR_BARE", FALSE);
-    normalAtom = XInternAtom(xdisplay, "_NET_WINDOW_DECOR_NORMAL", FALSE);
-    activeAtom = XInternAtom(xdisplay, "_NET_WINDOW_DECOR_ACTIVE", FALSE);
+    bareAtom = XInternAtom(xdisplay, "_COMPIZ_WINDOW_DECOR_BARE", FALSE);
+    normalAtom = XInternAtom(xdisplay, "_COMPIZ_WINDOW_DECOR_NORMAL", FALSE);
+    activeAtom = XInternAtom(xdisplay, "_COMPIZ_WINDOW_DECOR_ACTIVE", FALSE);
 
     if (ws->shadow_pixmap)
     {
@@ -5521,11 +5521,11 @@ int main(int argc, char *argv[])
     gdkscreen = gdk_display_get_default_screen(gdkdisplay);
 
     frame_window_atom = XInternAtom(xdisplay, "_NET_FRAME_WINDOW", FALSE);
-    win_decor_atom = XInternAtom(xdisplay, "_NET_WINDOW_DECOR", FALSE);
+    win_decor_atom = XInternAtom(xdisplay, "_COMPIZ_WINDOW_DECOR", FALSE);
     win_blur_decor_atom = XInternAtom (xdisplay, "_COMPIZ_WM_WINDOW_BLUR_DECOR", FALSE);
     wm_move_resize_atom = XInternAtom(xdisplay, "_NET_WM_MOVERESIZE", FALSE);
     restack_window_atom = XInternAtom(xdisplay, "_NET_RESTACK_WINDOW", FALSE);
-    select_window_atom = XInternAtom(xdisplay, "_SWITCH_SELECT_WINDOW",
+    select_window_atom = XInternAtom(xdisplay, "_COMPIZ_SWITCH_SELECT_WINDOW",
 				     FALSE);
     mwm_hints_atom = XInternAtom(xdisplay, "_MOTIF_WM_HINTS", FALSE);
     wm_protocols_atom = XInternAtom(xdisplay, "WM_PROTOCOLS", FALSE);
@@ -5562,7 +5562,7 @@ int main(int argc, char *argv[])
 
     utf8_string_atom = XInternAtom(xdisplay, "UTF8_STRING", FALSE);
 
-    dm_name_atom = XInternAtom(xdisplay, "_NET_DM_NAME", FALSE);
+    dm_name_atom = XInternAtom(xdisplay, "_COMPIZ_DM_NAME", FALSE);
 
     status = decor_acquire_dm_session (xdisplay, DefaultScreen(xdisplay),
 				       "emerald", replace, &dm_sn_timestamp);
