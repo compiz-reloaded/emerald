@@ -268,9 +268,9 @@ void send_reload_signal()
     char buffer[128];
     char *part = display_part(getenv("DISPLAY"));
 
-    sprintf(buffer, "DM_S%s", part);
+    sprintf(buffer, "_COMPIZ_DM_S%s", part);
     free(part);
-    
+
     if (dpy)
         wmAtom = XInternAtom(dpy,buffer,0);
 
