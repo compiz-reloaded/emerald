@@ -94,17 +94,9 @@ static Atom panel_action_atom;
 static Atom panel_action_main_menu_atom;
 static Atom panel_action_run_dialog_atom;
 
-static Atom manager_atom;
-static Atom targets_atom;
-static Atom multiple_atom;
-static Atom timestamp_atom;
-static Atom version_atom;
-static Atom atom_pair_atom;
 static Atom emerald_sigusr1_atom;
 
 static Atom utf8_string_atom;
-
-static Atom dm_name_atom;
 
 static Time dm_sn_timestamp;
 
@@ -5551,18 +5543,9 @@ int main(int argc, char *argv[])
     panel_action_run_dialog_atom =
 	XInternAtom(xdisplay, "_GNOME_PANEL_ACTION_RUN_DIALOG", FALSE);
 
-    manager_atom = XInternAtom(xdisplay, "MANAGER", FALSE);
-    targets_atom = XInternAtom(xdisplay, "TARGETS", FALSE);
-    multiple_atom = XInternAtom(xdisplay, "MULTIPLE", FALSE);
-    timestamp_atom = XInternAtom(xdisplay, "TIMESTAMP", FALSE);
-    version_atom = XInternAtom(xdisplay, "VERSION", FALSE);
-    atom_pair_atom = XInternAtom(xdisplay, "ATOM_PAIR", FALSE);
     emerald_sigusr1_atom = XInternAtom(xdisplay, "emerald-sigusr1", FALSE);
 
-
     utf8_string_atom = XInternAtom(xdisplay, "UTF8_STRING", FALSE);
-
-    dm_name_atom = XInternAtom(xdisplay, "_COMPIZ_DM_NAME", FALSE);
 
     status = decor_acquire_dm_session (xdisplay, DefaultScreen(xdisplay),
 				       "emerald", replace, &dm_sn_timestamp);
