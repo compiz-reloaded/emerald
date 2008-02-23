@@ -8,13 +8,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1\n"
 "Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
-"POT-Creation-Date: 2008-01-29 17:06+0530\n"
-"PO-Revision-Date: 2006-12-06 15:28+0100\n"
+"POT-Creation-Date: 2008-02-23 23:22+0530\n"
+"PO-Revision-Date: 2008-02-17 16:47+0100\n"
 "Last-Translator: Sebastian Parborg <zedDB@hotmail.com>\n"
 "Language-Team: Compiz Fusion Translators <i18n@lists.compiz-fusion.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Pootle 1.0.2\n"
 
 msgid "Close Window"
 msgstr "Stäng fönster"
@@ -349,7 +350,7 @@ msgid ""
 "NOTE - These settings are not part of themes, they are stored separately, "
 "and control various UI preferences for Emerald."
 msgstr ""
-"OBS! - Dessa inställningar är skilda från temana. De sparas separat och styr "
+"OBS! - Dessa inställningar är skilda från temat. De sparas separat och styr "
 "diverse gränssnittsinställningar åt Emerald"
 
 msgid "Show Tooltips for Buttons"
@@ -362,7 +363,7 @@ msgid "Use Button Fade"
 msgstr "Använd knapptoning"
 
 msgid "Use Button Fade Pulse"
-msgstr "Använd knapptoningspulsation"
+msgstr "Använd knapptoningspuls"
 
 msgid "Button Fade Total Duration"
 msgstr "Knapptoningens totallängd"
@@ -371,10 +372,10 @@ msgid "Button Fade Step Duration"
 msgstr "Knapptoningens intervallängd"
 
 msgid "Button Pulse Wait Duration"
-msgstr "Knappulsationens väntelängd"
+msgstr "Knappulsens väntelängd"
 
 msgid "Button Pulse Min Opacity %"
-msgstr "Knappulsationens minimiopacitet %"
+msgstr "Knappulsens miniopacitet %"
 
 msgid "Titlebar Double-Click Action"
 msgstr "Dubbelklicksåtgärd för titelraden"
@@ -388,18 +389,15 @@ msgstr "Normal"
 msgid "Pointing Finger"
 msgstr "Pekande finger"
 
-#, fuzzy
 msgid "Compiz Decoration Blur Type"
-msgstr "Compiz dekorations suddighets typ"
+msgstr "Compiz-dekorationernas suddighetstyp"
 
 msgid "None"
 msgstr "Ingen"
 
-#, fuzzy
 msgid "Titlebar only"
 msgstr "Endast Titelrad"
 
-#, fuzzy
 msgid "All decoration"
 msgstr "Alla dekorationer"
 
@@ -462,7 +460,6 @@ msgstr ""
 "Detta förråd innehåller teman som inte är GPL. De kan inkräkta\n"
 "på vissa länders upphovsrätts- och patentlagar."
 
-#, fuzzy
 msgid ""
 "To activate Non-GPL repository please run the following in shell and accept "
 "the server certificate permanently: \n"
@@ -495,7 +492,7 @@ msgstr ""
 "motor"
 
 msgid "Based on original gnome-window-decorator"
-msgstr "Baseras på ursprungliga gnome-window-decorator"
+msgstr "Baserad på ursprungliga gnome-window-decorator"
 
 msgid "Round Top Left Corner"
 msgstr "Runda övre vänstra hörnet"
@@ -548,9 +545,8 @@ msgstr "Innehållets skugga"
 msgid "Frame"
 msgstr "Ram"
 
-#, fuzzy
 msgid "Based on original legacy"
-msgstr "Baseras på ursprungliga gnome-window-decorator"
+msgstr "Baserad på den ursprungliga "
 
 msgid "Designed to be vista-ish in nature"
 msgstr "Utformad att likna Vista"

@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Compiz\n"
 "Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
-"POT-Creation-Date: 2008-01-29 17:06+0530\n"
-"PO-Revision-Date: 2008-01-15 15:55+0100\n"
+"POT-Creation-Date: 2008-02-23 23:22+0530\n"
+"PO-Revision-Date: 2008-01-30 13:44+0100\n"
 "Last-Translator: Nicolau Gonçalves <excentriko@gmail.com>\n"
 "Language-Team: Portuguese\n"
 "MIME-Version: 1.0\n"
@@ -730,46 +730,43 @@ msgid "Repeat Frequency"
 msgstr "Frequência de repetição"
 
 #. /////////////////////
-#, fuzzy
 msgid "Enable Title Part Pixmap?"
-msgstr "Activar imagem da parte do título?"
+msgstr "Activar Imagem da Parte do Título?"
 
-#, fuzzy
 msgid "Repeat Title Part Pixmap?"
-msgstr "Repetir imagem da parte da barra de título?"
+msgstr "Repetir Imagem da Parte do Título?"
 
 msgid "Title Bar Part Pixmap"
-msgstr "Imagem da parte da barra de título"
+msgstr "Mapa de Pixeis da Barra de Título"
 
 msgid "Choose Titlebar Part Pixmap"
-msgstr "Escolher imagem da parte da barra de título"
+msgstr "Escolher Mapa de Pixeis da Parte da Barra de Título"
 
 #. /////////////////////////
 msgid "Enable Button Part Pixmap?"
-msgstr "Activar imagem da parte do botão?"
+msgstr "Activar Mapa de pixeis da Parte do Botão?"
 
 msgid "Repeat Button Part Pixmap?"
-msgstr "Repetir imagem da parte do botão?"
+msgstr "Repetir Mapa de pixeis da Parte do Botão?"
 
 msgid "Button Part Pixmap"
-msgstr "Imagem da parte do botão"
+msgstr "Mapa de pixeis da Parte do Botão"
 
 msgid "Choose Button Part Pixmap"
-msgstr "Escolher imagem do botão"
+msgstr "Escolher Mapa de pixeis da Parte do Botão"
 
 #. /////////////////////////
 msgid "Enable Titlebar Pixmap?"
-msgstr "Activar imagem da barra de título?"
+msgstr "Activar Mapa de pixeis da Barra de Título?"
 
-#, fuzzy
 msgid "Repeat Titlebar Pixmap?"
-msgstr "Repetir imagem da barra de título?"
+msgstr "Repetir Mapa de Pixeis da Barra de Título?"
 
 msgid "Titlebar Pixmap"
-msgstr "Imagem da barra de título"
+msgstr "Mapa de Pixeis da Barra de Título"
 
 msgid "Choose Titlebar Pixmap"
-msgstr "Escolher imagem da barra de título"
+msgstr "Escolher Mapa de Pixeis da Barra de Título"
 
 msgid "Active/Inactive"
 msgstr "Activa/Inactiva"
@@ -781,10 +778,10 @@ msgid "Corners"
 msgstr "Cantos"
 
 msgid "Border Layout"
-msgstr "Desgin dos limites"
+msgstr "Design Bordas"
 
 msgid "Left Bar"
-msgstr "Barra esquerda"
+msgstr "Barra Esquerda"
 
 msgid "Pixmaps"
-msgstr "Imagens"
+msgstr "Mapa de Pixeis"
