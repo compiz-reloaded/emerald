@@ -385,10 +385,10 @@ void write_setting(SettingItem * item, gpointer p)
             //g_key_file_set_string(f,item->section,item->key,get_img_file(item));
             {
                 gchar * s = g_strdup_printf("%s/.emerald/theme/%s.%s.png",g_get_home_dir(),item->section,item->key);
-                GdkPixbuf * p = gtk_image_get_pixbuf(item->image);
-                if (p)
+                GdkPixbuf * pbuf = gtk_image_get_pixbuf(item->image);
+                if (pbuf)
                 {
-                    gdk_pixbuf_savev(p,s,"png",NULL,NULL,NULL);
+                    gdk_pixbuf_savev(pbuf,s,"png",NULL,NULL,NULL);
                 }
                 else
                 {
@@ -868,7 +868,8 @@ static gboolean engine_is_unique (gchar * canname)
 static void append_engine(gchar * dlname)
 {
     gchar * can;
-    gchar * err = dlerror();
+    gchar * err;
+    (void) dlerror();
     void * hand = dlopen(dlname,RTLD_NOW);
     err = dlerror();
     if (!hand || err)

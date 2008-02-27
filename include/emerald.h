@@ -12,6 +12,10 @@
 #include <X11/cursorfont.h>
 #include <X11/extensions/Xrender.h>
 
+#ifndef GDK_DISABLE_DEPRECATED
+#define GDK_DISABLE_DEPRECATED
+#endif
+
 #ifndef GTK_DISABLE_DEPRECATED
 #define GTK_DISABLE_DEPRECATED
 #endif
@@ -312,6 +316,7 @@ typedef struct _decor
     gchar	      *name;
     cairo_pattern_t   *icon;
     GdkPixmap	      *icon_pixmap;
+    GdkPixbuf	      *icon_pixbuf;
     WnckWindowState   state;
     WnckWindowActions actions;
     XID		      prop_xid;

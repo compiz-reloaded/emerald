@@ -589,19 +589,19 @@ static void cb_delete(GtkWidget *w, gpointer d)
         }
         else
         {
-            GDir * d;
+            GDir * dir;
             gchar * ot, * mt, * pt;
             pt = g_strdup_printf("%s/.emerald/themes/%s/",g_get_home_dir(),at);
-            d = g_dir_open(pt,0,NULL);
-            while (d && (ot = (gchar *)g_dir_read_name(d)))
+            dir = g_dir_open(pt,0,NULL);
+            while (dir && (ot = (gchar *)g_dir_read_name(dir)))
             {
                 mt = g_strdup_printf("%s/%s",pt,ot);
                 g_unlink(mt);
                 g_free(mt);
             }
-            if (d)
+            if (dir)
             {
-                g_dir_close(d);
+                g_dir_close(dir);
                 g_rmdir(pt);
             }
             g_free(pt);
@@ -1490,9 +1490,9 @@ void cb_quit(GtkWidget * w, gpointer p)
 }
 void layout_upper_pane(GtkWidget * vbox)
 {
-    GtkWidget * hbox;
+    //GtkWidget * hbox;
 
-    hbox = gtk_hbox_new(FALSE,2);
+    //hbox = gtk_hbox_new(FALSE,2);
     //gtk_box_pack_startC(vbox,hbox,TRUE,TRUE,0);
 
     gtk_box_pack_startC(vbox,build_tree_view(),TRUE,TRUE,0);

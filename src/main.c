@@ -60,12 +60,12 @@ static GdkPixmap *create_pixmap(int w, int h)
     colormap = gdk_colormap_new(visual, FALSE);
     if (!colormap)
     {
-	gdk_pixmap_unref(pixmap);
+	g_object_unref (G_OBJECT (pixmap));
 	return NULL;
     }
 
     gdk_drawable_set_colormap(GDK_DRAWABLE(pixmap), colormap);
-    gdk_colormap_unref(colormap);
+    g_object_unref (G_OBJECT (colormap));
 
     return pixmap;
 }
@@ -141,7 +141,7 @@ static gchar *engine = NULL;
 
 static gint get_b_offset(gint b)
 {
-    static int boffset[B_COUNT];
+    static int boffset[B_COUNT+1];
     gint i, b_t = 0;
 
     for (i = 0; i < B_COUNT; i++)
@@ -1109,12 +1109,12 @@ static void reset_buttons_bg_and_fade(decor_t * d)
 	d->button_region[b_t].base_x1 = -100;
 	d->button_region[b_t].glow_x1 = -100;
 	if (d->button_region[b_t].bg_pixmap)
-	    gdk_pixmap_unref(d->button_region[b_t].bg_pixmap);
+	    g_object_unref (G_OBJECT (d->button_region[b_t].bg_pixmap));
 	d->button_region[b_t].bg_pixmap = NULL;
 	d->button_region_inact[b_t].base_x1 = -100;
 	d->button_region_inact[b_t].glow_x1 = -100;
 	if (d->button_region_inact[b_t].bg_pixmap)
-	    gdk_pixmap_unref(d->button_region_inact[b_t].bg_pixmap);
+	    g_object_unref (G_OBJECT (d->button_region_inact[b_t].bg_pixmap));
 	d->button_region_inact[b_t].bg_pixmap = NULL;
 	d->button_last_drawn_state[b_t] = 0;
     }
@@ -1485,12 +1485,12 @@ static void update_button_regions(decor_t * d)
 
 	if (button_region->bg_pixmap)
 	{
-	    gdk_pixmap_unref(button_region->bg_pixmap);
+	    g_object_unref (G_OBJECT (button_region->bg_pixmap));
 	    button_region->bg_pixmap = NULL;
 	}
 	if (d->button_region_inact[b_t].bg_pixmap)
 	{
-	    gdk_pixmap_unref(d->button_region_inact[b_t].bg_pixmap);
+	    g_object_unref (G_OBJECT (d->button_region_inact[b_t].bg_pixmap));
 	    d->button_region_inact[b_t].bg_pixmap = NULL;
 	}
 	// Reset overlaps
@@ -1829,7 +1829,7 @@ static void draw_window_decoration_real(decor_t * d, gboolean shadow_time)
 
 
 	cairo_destroy(cr);
-	gdk_pixmap_unref(pbuff);
+	g_object_unref (G_OBJECT (pbuff));
 	cairo_surface_destroy(csur);
     }
     */
@@ -2382,9 +2382,9 @@ update_default_decorations(GdkScreen * screen, frame_settings * fs_act,
     reset_buttons_bg_and_fade(&d);
 
     if (ws->decor_normal_pixmap)
-	gdk_pixmap_unref(ws->decor_normal_pixmap);
+	g_object_unref (G_OBJECT (ws->decor_normal_pixmap));
     if (ws->decor_active_pixmap)
-	gdk_pixmap_unref(ws->decor_active_pixmap);
+	g_object_unref (G_OBJECT (ws->decor_active_pixmap));
 
     nQuad = my_set_window_quads(quads, d.width, d.height, ws, FALSE, FALSE);
 
@@ -2393,7 +2393,7 @@ update_default_decorations(GdkScreen * screen, frame_settings * fs_act,
 		      ws->top_space + ws->left_space + ws->right_space +
 		      ws->bottom_space + ws->titlebar_height);
 
-    gdk_pixmap_ref(ws->decor_active_pixmap);
+    g_object_ref (G_OBJECT (ws->decor_active_pixmap));
 
     if (ws->decor_normal_pixmap && ws->decor_active_pixmap)
     {
@@ -2850,7 +2850,6 @@ static void update_window_decoration_name(WnckWindow * win)
 static void update_window_decoration_icon(WnckWindow * win)
 {
     decor_t *d = g_object_get_data(G_OBJECT(win), "decor");
-    GdkPixbuf *icon;
 
     if (d->icon)
     {
@@ -2860,16 +2859,20 @@ static void update_window_decoration_icon(WnckWindow * win)
 
     if (d->icon_pixmap)
     {
-	gdk_pixmap_unref(d->icon_pixmap);
+	g_object_unref (G_OBJECT (d->icon_pixmap));
 	d->icon_pixmap = NULL;
     }
+    if (d->icon_pixbuf) 
+      g_object_unref (G_OBJECT (d->icon_pixbuf));
 
-    icon = wnck_window_get_mini_icon(win);
-    if (icon)
+    d->icon_pixbuf = wnck_window_get_mini_icon(win);
+    if (d->icon_pixbuf)
     {
 	cairo_t *cr;
 
-	d->icon_pixmap = pixmap_new_from_pixbuf(icon);
+        g_object_ref (G_OBJECT (d->icon_pixbuf));
+
+	d->icon_pixmap = pixmap_new_from_pixbuf(d->icon_pixbuf);
 	cr = gdk_cairo_create(GDK_DRAWABLE(d->icon_pixmap));
 	d->icon = cairo_pattern_create_for_surface(cairo_get_target(cr));
 	cairo_destroy(cr);
@@ -2982,7 +2985,7 @@ static gboolean update_window_decoration_size(WnckWindow * win)
 		      ws->bottom_space);
     if (!buffer_pixmap)
     {
-	gdk_pixmap_unref(pixmap);
+	g_object_unref (G_OBJECT (pixmap));
 	return FALSE;
     }
 
@@ -2997,19 +3000,19 @@ static gboolean update_window_decoration_size(WnckWindow * win)
 				   ws->bottom_space);
 
     if (d->p_active)
-	gdk_pixmap_unref(d->p_active);
+	g_object_unref (G_OBJECT (d->p_active));
 
     if (d->p_active_buffer)
-	gdk_pixmap_unref(d->p_active_buffer);
+	g_object_unref (G_OBJECT (d->p_active_buffer));
 
     if (d->p_inactive)
-	gdk_pixmap_unref(d->p_inactive);
+	g_object_unref (G_OBJECT (d->p_inactive));
 
     if (d->p_inactive_buffer)
-	gdk_pixmap_unref(d->p_inactive_buffer);
+	g_object_unref (G_OBJECT (d->p_inactive_buffer));
 
     if (d->gc)
-	gdk_gc_unref(d->gc);
+      g_object_unref (G_OBJECT (d->gc));
 
     d->only_change_active = FALSE;
 
@@ -3133,13 +3136,13 @@ static gboolean update_switcher_window(WnckWindow * win, Window selected)
 
     if (!d->pixmap && ws->switcher_pixmap)
     {
-	gdk_pixmap_ref(ws->switcher_pixmap);
+	g_object_ref (G_OBJECT (ws->switcher_pixmap));
 	d->pixmap = ws->switcher_pixmap;
     }
 
     if (!d->buffer_pixmap && ws->switcher_buffer_pixmap)
     {
-	gdk_pixmap_ref(ws->switcher_buffer_pixmap);
+	g_object_ref (G_OBJECT (ws->switcher_buffer_pixmap));
 	d->buffer_pixmap = ws->switcher_buffer_pixmap;
     }
 
@@ -3227,24 +3230,24 @@ static gboolean update_switcher_window(WnckWindow * win, Window selected)
     buffer_pixmap = create_pixmap(width, height);
     if (!buffer_pixmap)
     {
-	gdk_pixmap_unref(pixmap);
+	g_object_unref (G_OBJECT (pixmap));
 	return FALSE;
     }
 
     if (ws->switcher_pixmap)
-	gdk_pixmap_unref(ws->switcher_pixmap);
+	g_object_unref (G_OBJECT (ws->switcher_pixmap));
 
     if (ws->switcher_buffer_pixmap)
-	gdk_pixmap_unref(ws->switcher_buffer_pixmap);
+	g_object_unref (G_OBJECT (ws->switcher_buffer_pixmap));
 
     if (d->pixmap)
-	gdk_pixmap_unref(d->pixmap);
+	g_object_unref (G_OBJECT (d->pixmap));
 
     if (d->buffer_pixmap)
-	gdk_pixmap_unref(d->buffer_pixmap);
+	g_object_unref (G_OBJECT (d->buffer_pixmap));
 
     if (d->gc)
-	gdk_gc_unref(d->gc);
+        g_object_unref (G_OBJECT (d->gc));
 
     ws->switcher_pixmap = pixmap;
     ws->switcher_buffer_pixmap = buffer_pixmap;
@@ -3252,8 +3255,8 @@ static gboolean update_switcher_window(WnckWindow * win, Window selected)
     ws->switcher_width = width;
     ws->switcher_height = height;
 
-    gdk_pixmap_ref(pixmap);
-    gdk_pixmap_ref(buffer_pixmap);
+    g_object_ref (G_OBJECT (pixmap));
+    g_object_ref (G_OBJECT (buffer_pixmap));
 
     d->pixmap = pixmap;
     d->buffer_pixmap = buffer_pixmap;
@@ -3277,31 +3280,31 @@ static void remove_frame_window(WnckWindow * win)
 
     if (d->p_active)
     {
-	gdk_pixmap_unref(d->p_active);
+	g_object_unref (G_OBJECT (d->p_active));
 	d->p_active = NULL;
     }
 
     if (d->p_active_buffer)
     {
-	gdk_pixmap_unref(d->p_active_buffer);
+	g_object_unref (G_OBJECT (d->p_active_buffer));
 	d->p_active_buffer = NULL;
     }
 
     if (d->p_inactive)
     {
-	gdk_pixmap_unref(d->p_inactive);
+	g_object_unref (G_OBJECT (d->p_inactive));
 	d->p_inactive = NULL;
     }
 
     if (d->p_inactive_buffer)
     {
-	gdk_pixmap_unref(d->p_inactive_buffer);
+	g_object_unref (G_OBJECT (d->p_inactive_buffer));
 	d->p_inactive_buffer = NULL;
     }
 
     if (d->gc)
     {
-	gdk_gc_unref(d->gc);
+        g_object_unref (G_OBJECT (d->gc));
 	d->gc = NULL;
     }
 
@@ -3311,12 +3314,12 @@ static void remove_frame_window(WnckWindow * win)
     {
 	if (d->button_region[b_t].bg_pixmap)
 	{
-	    gdk_pixmap_unref(d->button_region[b_t].bg_pixmap);
+	    g_object_unref (G_OBJECT (d->button_region[b_t].bg_pixmap));
 	    d->button_region[b_t].bg_pixmap = NULL;
 	}
 	if (d->button_region_inact[b_t].bg_pixmap)
 	{
-	    gdk_pixmap_unref(d->button_region_inact[b_t].bg_pixmap);
+	    g_object_unref (G_OBJECT (d->button_region_inact[b_t].bg_pixmap));
 	    d->button_region_inact[b_t].bg_pixmap = NULL;
 	}
     }
@@ -3352,9 +3355,16 @@ static void remove_frame_window(WnckWindow * win)
 
     if (d->icon_pixmap)
     {
-	gdk_pixmap_unref(d->icon_pixmap);
+	g_object_unref (G_OBJECT (d->icon_pixmap));
 	d->icon_pixmap = NULL;
     }
+
+    if (d->icon_pixbuf)
+    {
+        g_object_unref (G_OBJECT (d->icon_pixbuf));
+        d->icon_pixbuf = NULL;
+    }
+
 
     if (d->force_quit_dialog)
     {
@@ -4835,7 +4845,7 @@ static int update_shadow(frame_settings * fs)
 
     if (ws->large_shadow_pixmap)
     {
-	gdk_pixmap_unref(ws->large_shadow_pixmap);
+	g_object_unref (G_OBJECT (ws->large_shadow_pixmap));
 	ws->large_shadow_pixmap = NULL;
     }
 
@@ -4847,7 +4857,7 @@ static int update_shadow(frame_settings * fs)
 
     if (ws->shadow_pixmap)
     {
-	gdk_pixmap_unref(ws->shadow_pixmap);
+	g_object_unref (G_OBJECT (ws->shadow_pixmap));
 	ws->shadow_pixmap = NULL;
     }
 
@@ -4891,7 +4901,7 @@ static int update_shadow(frame_settings * fs)
 		"convolution filters\n");
 
 	g_free(params);
-	gdk_pixmap_unref(pixmap);
+	g_object_unref (G_OBJECT (pixmap));
 	return 1;
     }
 
@@ -4901,7 +4911,7 @@ static int update_shadow(frame_settings * fs)
     if (!d.pixmap)
     {
 	g_free(params);
-	gdk_pixmap_unref(pixmap);
+	g_object_unref (G_OBJECT (pixmap));
 	return 0;
     }
 
@@ -4936,7 +4946,7 @@ static int update_shadow(frame_settings * fs)
     XRenderFreePicture(xdisplay, tmp);
     XRenderFreePicture(xdisplay, dst);
 
-    gdk_pixmap_unref(pixmap);
+    g_object_unref (G_OBJECT (pixmap));
 
     ws->large_shadow_pixmap = d.pixmap;
 
@@ -4964,7 +4974,7 @@ static int update_shadow(frame_settings * fs)
     d.pixmap = create_pixmap(d.width, d.height);
     if (!d.pixmap)
     {
-	gdk_pixmap_unref(pixmap);
+	g_object_unref (G_OBJECT (pixmap));
 	g_free(params);
 	return 0;
     }
@@ -5010,7 +5020,7 @@ static int update_shadow(frame_settings * fs)
     XRenderFreePicture(xdisplay, dst);
     XRenderFreePicture(xdisplay, src);
 
-    gdk_pixmap_unref(pixmap);
+    g_object_unref (G_OBJECT (pixmap));
 
     g_free(params);
 
@@ -5377,16 +5387,10 @@ gboolean reload_if_needed(gpointer p)
     return TRUE;
 }
 
-#define ACOLOR(idn,zr,zg,zb,za) \
-    fs->idn.color.r = (zr);\
-fs->idn.color.g = (zg);\
-fs->idn.color.b = (zb);\
-fs->idn.alpha   = (za);
 int main(int argc, char *argv[])
 {
     GdkDisplay *gdkdisplay;
     Display *xdisplay;
-    GdkScreen *gdkscreen;
     WnckScreen *screen;
     int status;
 
@@ -5394,7 +5398,7 @@ int main(int argc, char *argv[])
     gboolean replace = FALSE;
     PangoFontMetrics *metrics;
     PangoLanguage *lang;
-    frame_settings *fs;
+    frame_settings *pfs;
     window_settings *ws;
 
     ws = malloc(sizeof(window_settings));
@@ -5424,23 +5428,23 @@ int main(int argc, char *argv[])
     ws->tobj_layout = g_strdup("IT::HNXC");	// DEFAULT TITLE OBJECT LAYOUT, does not use any odd buttons
     //ws->tobj_layout=g_strdup("CNX:IT:HM");
 
-    fs = malloc(sizeof(frame_settings));
-    bzero(fs, sizeof(frame_settings));
-    fs->ws = ws;
+    pfs = malloc(sizeof(frame_settings));
+    bzero(pfs, sizeof(frame_settings));
+    pfs->ws = ws;
     ACOLOR(text, 1.0, 1.0, 1.0, 1.0);
     ACOLOR(text_halo, 0.0, 0.0, 0.0, 0.2);
     ACOLOR(button, 1.0, 1.0, 1.0, 0.8);
     ACOLOR(button_halo, 0.0, 0.0, 0.0, 0.2);
-    ws->fs_act = fs;
+    ws->fs_act = pfs;
 
-    fs = malloc(sizeof(frame_settings));
-    bzero(fs, sizeof(frame_settings));
-    fs->ws = ws;
+    pfs = malloc(sizeof(frame_settings));
+    bzero(pfs, sizeof(frame_settings));
+    pfs->ws = ws;
     ACOLOR(text, 0.8, 0.8, 0.8, 0.8);
     ACOLOR(text_halo, 0.0, 0.0, 0.0, 0.2);
     ACOLOR(button, 0.8, 0.8, 0.8, 0.8);
     ACOLOR(button_halo, 0.0, 0.0, 0.0, 0.2);
-    ws->fs_inact = fs;
+    ws->fs_inact = pfs;
 
     ws->round_top_left = TRUE;
     ws->round_top_right = TRUE;
@@ -5510,7 +5514,6 @@ int main(int argc, char *argv[])
 
     gdkdisplay = gdk_display_get_default();
     xdisplay = gdk_x11_display_get_xdisplay(gdkdisplay);
-    gdkscreen = gdk_display_get_default_screen(gdkdisplay);
 
     frame_window_atom = XInternAtom(xdisplay, "_NET_FRAME_WINDOW", FALSE);
     win_decor_atom = XInternAtom(xdisplay, DECOR_WINDOW_ATOM_NAME, FALSE);
@@ -5622,7 +5625,7 @@ int main(int argc, char *argv[])
     pango_font_metrics_unref(metrics);
 
     update_window_extents(ws);
-    update_shadow(fs);
+    update_shadow(pfs);
 
     decor_set_dm_check_hint(xdisplay, DefaultScreen(xdisplay));
 
