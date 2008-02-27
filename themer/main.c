@@ -1555,7 +1555,7 @@ void layout_themes_pane(GtkWidget * vbox)
     gtk_box_pack_startC(vbox,notebook,TRUE,TRUE,0);
     layout_upper_pane(build_notebook_page(_("Themes"),notebook));
     layout_lower_pane(build_notebook_page(_("Edit Themes"),notebook));
-	layout_repo_pane(build_notebook_page(_("Repositories"),notebook));
+//	layout_repo_pane(build_notebook_page(_("Repositories"),notebook));
 	
 }
 GtkWidget* create_filechooserdialog1 (char *input)
