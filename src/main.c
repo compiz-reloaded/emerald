@@ -3216,11 +3216,17 @@ static gboolean update_switcher_window(WnckWindow * win, Window selected)
 
     if (width == d->width && height == d->height)
     {
-	if (!d->gc)
-	    d->gc = gdk_gc_new(d->pixmap);
+	if (!d->gc) {
+	    if (d->pixmap->parent_instance.ref_count) 
+		d->gc = gdk_gc_new(d->pixmap);
+	    else 
+		d->pixmap = NULL;
+	}
 
-	queue_decor_draw(d);
-	return FALSE;
+	if (d->pixmap) {
+	    queue_decor_draw(d);
+	    return FALSE;
+	}
     }
 
     pixmap = create_pixmap(width, height);
