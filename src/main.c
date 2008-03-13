@@ -1181,7 +1181,7 @@ static void draw_button_backgrounds(decor_t * d, int *necessary_update_type)
 	else
 	    return;
 	if (button_region->bg_pixmap)
-	    gdk_draw_drawable(d->buffer_pixmap ? d->buffer_pixmap : d->pixmap,
+	    gdk_draw_drawable(IS_VALID(d->buffer_pixmap) ? d->buffer_pixmap : d->pixmap,
 			      d->gc, button_region->bg_pixmap, src_x, src_y,
 			      dest_x, dest_y, w, h);
 	d->min_drawn_buttons_region.x1 =
@@ -1211,7 +1211,7 @@ gint draw_buttons_timer_func(gpointer data)
     {
 	fade_info->cr =
 	    gdk_cairo_create(GDK_DRAWABLE
-			     (d->buffer_pixmap ? d->buffer_pixmap : d->
+			     (IS_VALID(d->buffer_pixmap) ? d->buffer_pixmap : d->
 			      pixmap));
 	cairo_set_operator(fade_info->cr, CAIRO_OPERATOR_OVER);
     }
@@ -1324,7 +1324,7 @@ gint draw_buttons_timer_func(gpointer data)
 	    break;
 	}
 
-    if (d->buffer_pixmap && !d->button_fade_info.first_draw && d->min_drawn_buttons_region.x1 < 10000)	// if region is updated at least once
+    if (IS_VALID(d->buffer_pixmap) && !d->button_fade_info.first_draw && d->min_drawn_buttons_region.x1 < 10000)	// if region is updated at least once
     {
 	gdk_draw_drawable(d->pixmap,
 			  d->gc,
@@ -1635,7 +1635,7 @@ static void draw_window_decoration_real(decor_t * d, gboolean shadow_time)
     if (!d->draw_only_buttons_region)	// if not only drawing buttons
     {
 	cr = gdk_cairo_create(GDK_DRAWABLE
-			      (d->buffer_pixmap ? d->buffer_pixmap : d->
+			      (IS_VALID(d->buffer_pixmap) ? d->buffer_pixmap : d->
 			       pixmap));
 	cairo_set_operator(cr, CAIRO_OPERATOR_SOURCE);
 	cairo_set_line_width(cr, 1.0);
@@ -1751,7 +1751,7 @@ static void draw_window_decoration_real(decor_t * d, gboolean shadow_time)
 		else
 		{
 		    gdk_draw_drawable(button_region->bg_pixmap, d->gc,
-				      d->buffer_pixmap ? d->
+				      IS_VALID(d->buffer_pixmap) ? d->
 				      buffer_pixmap : d->pixmap, rx, ry, 0, 0,
 				      rw, rh);
 		}
@@ -1837,7 +1837,7 @@ static void draw_window_decoration_real(decor_t * d, gboolean shadow_time)
     // Draw buttons
 
     cr = gdk_cairo_create(GDK_DRAWABLE
-			  (d->buffer_pixmap ? d->buffer_pixmap : d->pixmap));
+			  (IS_VALID(d->buffer_pixmap) ? d->buffer_pixmap : d->pixmap));
 
     cairo_set_operator(cr, CAIRO_OPERATOR_OVER);
 
@@ -1848,7 +1848,7 @@ static void draw_window_decoration_real(decor_t * d, gboolean shadow_time)
 
     cairo_destroy(cr);
 
-    if (d->buffer_pixmap)
+    if (IS_VALID(d->buffer_pixmap))
     {
 	/*if (d->draw_only_buttons_region && d->min_drawn_buttons_region.x1 < 10000)	// if region is updated at least once
 	  {
@@ -1956,8 +1956,10 @@ static void draw_switcher_background(decor_t * d)
     ushort a = SWITCHER_ALPHA;
     window_settings *ws = d->fs->ws;
 
-    if (!d->buffer_pixmap)
+    if (!IS_VALID(d->buffer_pixmap))
 	return;
+
+    
 
     style = gtk_widget_get_style(style_window);
 
@@ -1984,7 +1986,7 @@ static void draw_switcher_background(decor_t * d)
     cairo_set_line_width(cr, 1.0);
 
     cairo_set_operator(cr, CAIRO_OPERATOR_SOURCE);
-    if (d->prop_xid || !d->buffer_pixmap)
+    if (d->prop_xid || !IS_VALID(d->buffer_pixmap))
     {
 	draw_shadow_background(d, cr);
     }
@@ -2138,7 +2140,7 @@ static void draw_switcher_foreground(decor_t * d)
     int top;
     window_settings *ws = d->fs->ws;
 
-    if (!d->pixmap || !d->buffer_pixmap)
+    if (!IS_VALID(d->pixmap) || !IS_VALID(d->buffer_pixmap))
 	return;
 
     style = gtk_widget_get_style(style_window);
@@ -3134,13 +3136,13 @@ static gboolean update_switcher_window(WnckWindow * win, Window selected)
     d->decorated = FALSE;
     d->draw = draw_switcher_decoration;
 
-    if (!d->pixmap && ws->switcher_pixmap)
+    if (!IS_VALID(d->pixmap) && IS_VALID(ws->switcher_pixmap))
     {
 	g_object_ref (G_OBJECT (ws->switcher_pixmap));
 	d->pixmap = ws->switcher_pixmap;
     }
 
-    if (!d->buffer_pixmap && ws->switcher_buffer_pixmap)
+    if (!IS_VALID(d->buffer_pixmap) && IS_VALID(ws->switcher_buffer_pixmap))
     {
 	g_object_ref (G_OBJECT (ws->switcher_buffer_pixmap));
 	d->buffer_pixmap = ws->switcher_buffer_pixmap;
