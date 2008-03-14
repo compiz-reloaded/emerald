@@ -24,7 +24,7 @@
 #include <gtk/gtkwindow.h>
 #include <gdk/gdkx.h>
 
-#define IS_VALID(o) (o&&o->parent_instance.ref_count)
+#define IS_VALID(o) (o && o->parent_instance.ref_count)
 
 #ifdef USE_DBUS
 #define DBUS_API_SUBJECT_TO_CHANGE
