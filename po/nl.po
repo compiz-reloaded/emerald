@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1\n"
 "Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
-"POT-Creation-Date: 2008-02-23 23:22+0530\n"
+"POT-Creation-Date: 2008-03-15 19:41+0530\n"
 "PO-Revision-Date: 2008-01-21 15:01+0100\n"
 "Last-Translator: Rick <mailmelist@gmail.com>\n"
 "Language-Team: Dutch <ixce@beryl-project.org>\n"
@@ -473,9 +473,6 @@ msgstr "Thema's"
 msgid "Edit Themes"
 msgstr "Thema's bewerken"
 
-msgid "Repositories"
-msgstr "Repositories"
-
 msgid "Themes Settings"
 msgstr "Thema instellingen"
 
@@ -782,3 +779,6 @@ msgstr "Linker Balk"
 
 msgid "Pixmaps"
 msgstr "Pixmaps"
+
+#~ msgid "Repositories"
+#~ msgstr "Repositories"

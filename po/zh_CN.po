@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1\n"
 "Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
-"POT-Creation-Date: 2008-02-23 23:22+0530\n"
-"PO-Revision-Date: 2007-12-11 17:02+0100\n"
-"Last-Translator: Thruth Wang <gubotruth@gmail.com>\n"
+"POT-Creation-Date: 2008-03-15 19:41+0530\n"
+"PO-Revision-Date: 2008-03-09 07:30+0100\n"
+"Last-Translator: Wang Nan <pi3orama@gmail.com>\n"
 "Language-Team: beryl-project <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -467,9 +467,6 @@ msgstr "主题"
 msgid "Edit Themes"
 msgstr "编辑主题"
 
-msgid "Repositories"
-msgstr "仓库"
-
 msgid "Themes Settings"
 msgstr "主题设置"
 
@@ -499,7 +496,7 @@ msgid "Round Bottom Right Corner"
 msgstr "右下角圆滑"
 
 msgid "Rounding Radius"
-msgstr "圆角辐射"
+msgstr "圆角半径"
 
 msgid "Outer Frame Blend"
 msgstr "外框架复合"
@@ -555,11 +552,12 @@ msgstr "侧边"
 msgid "Everything done with customizable pixmaps!"
 msgstr "用自定义位图处理一切！"
 
+# Radius 明显不是指"辐射"
 msgid "Top Rounding Radius"
-msgstr "顶圆角辐射"
+msgstr "顶圆角半径"
 
 msgid "Bottom Rounding Radius"
-msgstr "底圆角辐射"
+msgstr "底圆角半径"
 
 #. Style : Use Tiled or Scaled pixmaps
 msgid "Scaled"
@@ -686,7 +684,7 @@ msgid "Button Part Width)"
 msgstr "按钮部分宽度)"
 
 msgid "Dip Corners Radius)"
-msgstr "倾斜角辐射)"
+msgstr "倾斜角半径)"
 
 msgid "Round Inside Corners As well?"
 msgstr "内角圆滑？"
@@ -701,10 +699,10 @@ msgid "Round Top Left Corner?"
 msgstr "圆滑左上角？"
 
 msgid "Frame Rounding Radius"
-msgstr "框架圆角辐射"
+msgstr "框架圆角半径"
 
 msgid "Titlebar Rounding Radius"
-msgstr "标题栏圆角辐射"
+msgstr "标题栏圆角半径"
 
 msgid "Repeat Gradient?"
 msgstr "重复渐变？"
@@ -774,3 +772,6 @@ msgstr "左边栏"
 
 msgid "Pixmaps"
 msgstr "位图"
+
+#~ msgid "Repositories"
+#~ msgstr "仓库"

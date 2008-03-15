@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: emerald\n"
 "Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
-"POT-Creation-Date: 2008-02-23 23:22+0530\n"
+"POT-Creation-Date: 2008-03-15 19:41+0530\n"
 "PO-Revision-Date: 2007-12-17 15:45+0530\n"
 "Last-Translator: gist oriya team <info.gist@cdac.in>\n"
 "Language-Team: gist oriya team <info.gist@cdac.in>\n"
@@ -471,9 +471,6 @@ msgstr "ବିଷଯଗୁଡିକ "
 msgid "Edit Themes"
 msgstr "ବିଷଯଗୁଡିକ ସଂପାଦନା କର "
 
-msgid "Repositories"
-msgstr "ଭଣ୍ଡାରସବୁ "
-
 msgid "Themes Settings"
 msgstr "ବିଷଯସବୁର ସେଟିଙ୍ଗଗୁଡିକ "
 
@@ -778,3 +775,6 @@ msgstr "ବାମପାଖ ବାର୍ "
 
 msgid "Pixmaps"
 msgstr "ପିକ୍ସମ୍ଯାପଗୁଡିକ "
+
+#~ msgid "Repositories"
+#~ msgstr "ଭଣ୍ଡାରସବୁ "

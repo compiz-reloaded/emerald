@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: emerald\n"
 "Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
-"POT-Creation-Date: 2008-02-23 23:22+0530\n"
+"POT-Creation-Date: 2008-03-15 19:41+0530\n"
 "PO-Revision-Date: 2007-12-17 12:26+0530\n"
 "Last-Translator: \n"
 "Language-Team: gist gujarati team <info.gist@cdac.in>\n"
@@ -478,9 +478,6 @@ msgstr "વિષય આધારિત સાજ-સજ્જાઓ (Themes)"
 msgid "Edit Themes"
 msgstr "વિષય આધારિત સાજ-સજ્જાઓ (Themes)"
 
-msgid "Repositories"
-msgstr "રીપોઝીટરીઓ"
-
 #, fuzzy
 msgid "Themes Settings"
 msgstr "એમરલ્ડ(Emerald) ગોઠવણીોોોોોાાાાાાાોોોોોોાાાોોાોોાાાાાાાાાાઓ "
@@ -790,6 +787,9 @@ msgstr "ડાબી બાજુ ની પટ્ટી"
 
 msgid "Pixmaps"
 msgstr "ચિત્રો"
+
+#~ msgid "Repositories"
+#~ msgstr "રીપોઝીટરીઓ"
 
 #~ msgid "Pixmaps (Active))"
 #~ msgstr "ચિત્રો (કાર્યરત)"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Punjabi\n"
 "Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
-"POT-Creation-Date: 2008-02-23 23:22+0530\n"
+"POT-Creation-Date: 2008-03-15 19:41+0530\n"
 "PO-Revision-Date: 2007-12-17 12:47+0530\n"
 "Last-Translator: \n"
 "Language-Team: Gist Punjabi team <info.gist@cdac.in>\n"
@@ -472,9 +472,6 @@ msgstr "ਥੀਮ "
 msgid "Edit Themes"
 msgstr "ਥੀਮ ਸੋਧ "
 
-msgid "Repositories"
-msgstr "ਰਿਪੋਜ਼ਟਰੀਆਂ "
-
 msgid "Themes Settings"
 msgstr "ਥੀਮ ਸੈਟਿੰਗ "
 
@@ -779,3 +776,6 @@ msgstr "ਖੱਬੀ ਬਾਰ "
 
 msgid "Pixmaps"
 msgstr "ਪਿਕਸਮੈਪ "
+
+#~ msgid "Repositories"
+#~ msgstr "ਰਿਪੋਜ਼ਟਰੀਆਂ "

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: emerald-new\n"
 "Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
-"POT-Creation-Date: 2008-02-23 23:22+0530\n"
+"POT-Creation-Date: 2008-03-15 19:41+0530\n"
 "PO-Revision-Date: 2007-09-24 05:41+0300\n"
 "Last-Translator: Serdar Soytetir\n"
 "Language-Team:  Turkish <tulliana@gmail.com>\n"
@@ -477,9 +477,6 @@ msgstr "Temalar"
 msgid "Edit Themes"
 msgstr "Temaları düzenle"
 
-msgid "Repositories"
-msgstr "Depolar"
-
 msgid "Themes Settings"
 msgstr "Tema ayarları"
 
@@ -786,3 +783,6 @@ msgstr "Sol çubuk"
 
 msgid "Pixmaps"
 msgstr "Resimler"
+
+#~ msgid "Repositories"
+#~ msgstr "Depolar"

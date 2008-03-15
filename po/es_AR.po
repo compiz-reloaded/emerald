@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: emerald es_AR\n"
 "Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
-"POT-Creation-Date: 2008-02-23 23:22+0530\n"
+"POT-Creation-Date: 2008-03-15 19:41+0530\n"
 "PO-Revision-Date: 2006-11-16 18:08-0300\n"
 "Last-Translator: Matias Ferrini <oberonking76@gmail.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
@@ -477,9 +477,6 @@ msgstr "Temas"
 msgid "Edit Themes"
 msgstr "Editar temas"
 
-msgid "Repositories"
-msgstr "Repositorios"
-
 msgid "Themes Settings"
 msgstr "Ajustes de los temas"
 
@@ -784,3 +781,6 @@ msgstr "Barra izquierda"
 
 msgid "Pixmaps"
 msgstr "Imágenes"
+
+#~ msgid "Repositories"
+#~ msgstr "Repositorios"

@@ -45,7 +45,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: it_IT\n"
 "Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
-"POT-Creation-Date: 2008-02-23 23:22+0530\n"
+"POT-Creation-Date: 2008-03-15 19:41+0530\n"
 "PO-Revision-Date: 2007-08-31 23:27+0200\n"
 "Last-Translator: Milo Casagrande <milo_casagrande@yahoo.it>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
@@ -533,9 +533,6 @@ msgstr "Temi"
 msgid "Edit Themes"
 msgstr "Modifica temi"
 
-msgid "Repositories"
-msgstr "Repository"
-
 msgid "Themes Settings"
 msgstr "Impostazioni dei temi"
 
@@ -871,3 +868,6 @@ msgstr "Barra sinistra"
 
 msgid "Pixmaps"
 msgstr "Pixmap"
+
+#~ msgid "Repositories"
+#~ msgstr "Repository"

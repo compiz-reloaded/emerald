@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1\n"
 "Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
-"POT-Creation-Date: 2008-02-23 23:22+0530\n"
-"PO-Revision-Date: 2008-02-18 18:59+0100\n"
+"POT-Creation-Date: 2008-03-15 19:41+0530\n"
+"PO-Revision-Date: 2008-02-27 23:54+0100\n"
 "Last-Translator: Sebastian Wołkowicz <sebbii1mail@gmail.com>\n"
 "Language-Team: pl_PL <pl@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -146,7 +146,6 @@ msgstr "Nadpisać dekorację %s?"
 msgid "Couldn't Write Theme"
 msgstr "Nie można zapisać dekoracji"
 
-#, fuzzy
 msgid "Couldn't Form Theme"
 msgstr "Nie można wypełnić dekoracji"
 
@@ -240,7 +239,6 @@ msgstr "Przesunięcie poziome przycisków"
 msgid "Title-bar Object Layout"
 msgstr "Wygląd obiektów na pasku tytułowym"
 
-#, fuzzy
 msgid ""
 "Use colons to separate left, center, and right.\n"
 "Anything after a third colon is ignored.\n"
@@ -249,14 +247,6 @@ msgid ""
 "S=Shade, U/A=On Top(Up/Above)\n"
 "Y=Sticky, (#)=# pixels space, ex: (5)\n"
 msgstr ""
-"Użyj znaku dwukropka, aby rozdzielić elementy na lewą stronę, środek i prawą "
-"stronę.\n"
-"Znaki po trzecim dwukropku są ignorowane.\n"
-"C=Zamknij, M=Minimalizuj, X/R=Przywróć\n"
-"I=Ikona, T=Tytuł, H=Pomoc, M=Menu\n"
-"S=Przycień, U/A=Na wierzchu(Góra/Ponad)\n"
-"Y=Przyciągaj, (#)=odstęp # pikseli, np. (5)\n"
-" "
 
 msgid "Export Theme..."
 msgstr "Eksportuj dekorację..."
@@ -362,29 +352,26 @@ msgstr "Używaj zanikania pulsujących przycisków"
 msgid "Button Fade Total Duration"
 msgstr "Całkowity czas zanikania przycisku"
 
-#, fuzzy
 msgid "Button Fade Step Duration"
-msgstr "Czas kroku zanikania"
+msgstr "Czas kroku zanikania przycisku"
 
-#, fuzzy
 msgid "Button Pulse Wait Duration"
 msgstr "Czas oczekiwania pulsującego przycisku"
 
 msgid "Button Pulse Min Opacity %"
 msgstr "Minimalna nieprzezroczystość Pulsowania Przycisków %"
 
-#, fuzzy
 msgid "Titlebar Double-Click Action"
 msgstr "Akcja podwójnego kliknięcia na pasku tytułowym"
 
 msgid "Button Hover Cursor"
-msgstr ""
+msgstr "Unoszenie kursora nad przyciskiem"
 
 msgid "Normal"
 msgstr "Normalne"
 
 msgid "Pointing Finger"
-msgstr ""
+msgstr "Palec wskazujący"
 
 msgid "Compiz Decoration Blur Type"
 msgstr "Typ rozmycia dekoracji"
@@ -476,9 +463,6 @@ msgstr "Dekoracje"
 msgid "Edit Themes"
 msgstr "Edytuj dekoracje"
 
-msgid "Repositories"
-msgstr "Repozytoria"
-
 msgid "Themes Settings"
 msgstr "Ustawienia dekoracji"
 
@@ -556,11 +540,9 @@ msgstr "Baza"
 msgid "Glow"
 msgstr "Świecenie"
 
-#, fuzzy
 msgid "Sides"
 msgstr "Strony"
 
-#, fuzzy
 msgid "Everything done with customizable pixmaps!"
 msgstr "Wszystko zrobione z przystosowalnymi pixmapami!"
 
@@ -572,7 +554,7 @@ msgstr "Dolny promień skalowania"
 
 #. Style : Use Tiled or Scaled pixmaps
 msgid "Scaled"
-msgstr ""
+msgstr "Skalowane"
 
 msgid "Not adjustable"
 msgstr "Nie dostosowalny"
@@ -584,7 +566,7 @@ msgid "Pixmap"
 msgstr "Pixmapa"
 
 msgid "Tiled/Scaled"
-msgstr ""
+msgstr "Skalowane/sąsiadujące"
 
 msgid "Width Override"
 msgstr "Nadpisanie szerokości"
@@ -598,24 +580,23 @@ msgstr "'Szklane' efekty dla Twoich okien"
 msgid "Glow Height"
 msgstr "Wysokość świecenia"
 
-#, fuzzy
 msgid "Frame Base Color"
 msgstr "Kolor bazowy ramki"
 
 msgid "Upper Titlebar Glow"
-msgstr ""
+msgstr "Żarzenie górnego paska tytułowego"
 
 msgid "Upper Glass Glow"
-msgstr ""
+msgstr "Żarzenie górnego szkła"
 
 msgid "Lower Glass Glow"
-msgstr ""
+msgstr "Żarzenie dolnego szkła"
 
 msgid "Middle Glass Glow"
-msgstr ""
+msgstr "Żarzenie środkowego szkła"
 
 msgid "Outer Glass Glow"
-msgstr ""
+msgstr "Żarzenie zewnętrznego szkła"
 
 msgid "Multiple gradients with somewhat glassy features too"
 msgstr "Wiele gradientów też z częściowo szklanymi funkcjami"
@@ -656,7 +637,6 @@ msgstr "Używaj Poświaty"
 msgid "Title Glow"
 msgstr "Poświata Tytułu"
 
-#, fuzzy
 msgid "Evolved from the legacy engine"
 msgstr "Pochodzący ze starego silnika"
 
@@ -664,13 +644,13 @@ msgid "Border Gap"
 msgstr ""
 
 msgid "Show Border when maximised?"
-msgstr ""
+msgstr "Pokazuj ramkę gdy zmaksymalizowany?"
 
 msgid "Show when minimised?"
 msgstr "Pokazywać kiedy jest zminimalizowane?"
 
 msgid "Minimised Border Size"
-msgstr ""
+msgstr "Rozmiar ramki gdy zminimalizowany"
 
 msgid "Enable Left Bar Dip?"
 msgstr ""
@@ -702,7 +682,6 @@ msgstr ""
 msgid "Round Inside Corners As well?"
 msgstr ""
 
-#, fuzzy
 msgid "Enable Different Maximised Colors?"
 msgstr "Włączyć zróżnicowane kolory maksymalizacji?"
 
@@ -788,3 +767,6 @@ msgstr "Lewy pasek"
 
 msgid "Pixmaps"
 msgstr "Pixmapy"
+
+#~ msgid "Repositories"
+#~ msgstr "Repozytoria"

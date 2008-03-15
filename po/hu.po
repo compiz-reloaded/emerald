@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Emerald-0.2.0\n"
 "Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
-"POT-Creation-Date: 2008-02-23 23:22+0530\n"
+"POT-Creation-Date: 2008-03-15 19:41+0530\n"
 "PO-Revision-Date: 2008-02-14 14:38+0100\n"
 "Last-Translator: KAMI <kamihir@freemail.hu>\n"
 "Language-Team: Gentoo-hu Team <gentoo-doc-hu@gentoo.org>\n"
@@ -479,9 +479,6 @@ msgstr "Témák"
 msgid "Edit Themes"
 msgstr "Témák szerkesztése"
 
-msgid "Repositories"
-msgstr "Témakészlet"
-
 msgid "Themes Settings"
 msgstr "Témák beállítása"
 
@@ -788,3 +785,6 @@ msgstr "Bal oldal"
 
 msgid "Pixmaps"
 msgstr "Képek"
+
+#~ msgid "Repositories"
+#~ msgstr "Témakészlet"

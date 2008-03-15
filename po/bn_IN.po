@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Compiz-Emerald 0.5.5\n"
 "Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
-"POT-Creation-Date: 2008-02-23 23:22+0530\n"
+"POT-Creation-Date: 2008-03-15 19:41+0530\n"
 "PO-Revision-Date: 2007-12-04 16:54+0100\n"
 "Last-Translator: Mahdee Jameel <mahdee.jameel@yahoo.com>\n"
 "Language-Team: BANGLA <mahdee.jameel@gmail.com>\n"
@@ -471,9 +471,6 @@ msgstr "থিম"
 msgid "Edit Themes"
 msgstr "থিম সম্পাদনা"
 
-msgid "Repositories"
-msgstr "ভান্ডার"
-
 msgid "Themes Settings"
 msgstr "থিমের পছন্দ"
 
@@ -779,3 +776,6 @@ msgstr "বাম অংশ"
 
 msgid "Pixmaps"
 msgstr "পিক্সম্যাপ"
+
+#~ msgid "Repositories"
+#~ msgstr "ভান্ডার"
