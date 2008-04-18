@@ -2909,13 +2909,29 @@ static void update_event_windows(WnckWindow * win)
 
 	for (j = 0; j < 3; j++)
 	{
+	    w = 0;
+	    h = 0;
+
 	    if (d->actions & event_window_actions[i][j] && i >= k && i <= l)
 	    {
 		x = ws->pos[i][j].x + ws->pos[i][j].xw * width;
 		y = ws->pos[i][j].y + ws->pos[i][j].yh * height;
-		w = ws->pos[i][j].w + ws->pos[i][j].ww * width;
-		h = ws->pos[i][j].h + ws->pos[i][j].hh * height;
 
+		if ((d->state & WNCK_WINDOW_STATE_MAXIMIZED_HORIZONTALLY) &&
+		    (j == 0 || j == 2))
+		    w = 0;
+		else
+		    w = ws->pos[i][j].w + ws->pos[i][j].ww * width;
+
+		if ((d->state & WNCK_WINDOW_STATE_MAXIMIZED_VERTICALLY) &&
+		    (i == 0 || i == 2))
+		    h = 0;
+		else
+		    h = ws->pos[i][j].h + ws->pos[i][j].hh * height;
+	    }
+
+	    if (w != 0 && h != 0)
+	    {
 		XMapWindow(xdisplay, d->event_windows[i][j]);
 		XMoveResizeWindow(xdisplay, d->event_windows[i][j], x -
 				  ((ws->use_decoration_cropping &&
