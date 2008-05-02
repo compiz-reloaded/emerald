@@ -1,17 +1,20 @@
+# translation of emerald-new.po to Russian
+#
+# Dimitriy Ryazantcev <DJm00n@mail.ru>, 2008.
 msgid ""
 msgstr ""
-"Project-Id-Version: emerald\n"
+"Project-Id-Version: emerald-new\n"
 "Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
-"POT-Creation-Date: 2008-04-03 12:53+0530\n"
-"PO-Revision-Date: 2008-01-16 16:24+0100\n"
-"Last-Translator: Andrei Zhekov <_apj@mail.ru>\n"
-"Language-Team: \n"
+"POT-Creation-Date: 2008-05-02 13:49+0530\n"
+"PO-Revision-Date: 2008-04-24 22:15+0300\n"
+"Last-Translator: Dimitriy Ryazantcev <DJm00n@mail.ru>\n"
+"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Pootle 1.0.2\n"
-"X-Poedit-Language: Russian\n"
-"X-Poedit-Country: RUSSIAN FEDERATION\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 msgid "Close Window"
 msgstr "Закрыть окно"
@@ -20,7 +23,7 @@ msgid "Maximize Window"
 msgstr "Развернуть окно"
 
 msgid "Restore Window"
-msgstr "Восстановить прежний размер окна"
+msgstr "Восстановить окно"
 
 msgid "Minimize Window"
 msgstr "Свернуть окно"
@@ -32,24 +35,20 @@ msgid "Window Menu"
 msgstr "Меню окна"
 
 msgid "Shade Window"
-msgstr "Окно с тенью"
+msgstr "Свернуть окно в заголовок"
 
 msgid "UnShade Window"
-msgstr "Окно без тени"
+msgstr "Развернуть окно из заголовка"
 
-#, fuzzy
 msgid "Set Above"
-msgstr "Пиксели над строками"
+msgstr "Установить поверх"
 
-#, fuzzy
 msgid "UnSet Above"
-msgstr "Строка над"
+msgstr "Не устанавливать повер"
 
-#, fuzzy
 msgid "Stick Window"
-msgstr "Прикрепить окно"
+msgstr "Закрепить окно"
 
-#, fuzzy
 msgid "UnStick Window"
 msgstr "Открепить окно"
 
@@ -60,11 +59,10 @@ msgstr "Окно \"%s\" не отвечает."
 msgid ""
 "Forcing this application to quit will cause you to lose any unsaved changes."
 msgstr ""
-"Принудительное завершение этого приложения приведет к потере всех не "
-"сохраненных изменений."
+"При принудительном завершении приложения теряются не сохранённые данные"
 
 msgid "_Force Quit"
-msgstr "Принудительное завершение"
+msgstr "_Принудительно выйти"
 
 #, c-format
 msgid ""
@@ -78,8 +76,8 @@ msgstr ""
 "<b><big>%s</big></b>\n"
 "<i>%s</i>\n"
 "<small><b>Версия</b> %s\n"
-"<b>Создатель</b> %s\n"
-"<b>Используется с</b> %s\n"
+"<b>Создана</b> %s\n"
+"<b>С использованием</b> %s\n"
 "</small>"
 
 #, c-format
@@ -94,63 +92,61 @@ msgstr ""
 "<b><big>%s</big></b> (Системная тема)\n"
 "<i>%s</i>\n"
 "<small><b>Версия</b> %s\n"
-"<b>Создатель</b> %s\n"
-"<b>Используется с</b> %s\n"
+"<b>Создана</b> %s\n"
+"<b></b> %s\n"
 "</small>"
 
 msgid "Unknown"
-msgstr "Неизвестно"
+msgstr "Неизвестный"
 
-#, fuzzy
 msgid "Whatever (no hint)"
-msgstr "Подсказка недоступна"
+msgstr "Что угодно (нет подсказок)"
 
 msgid "No Description"
 msgstr "Нет описания"
 
 msgid "Invalid Theme Name"
-msgstr "Неверное имя темы"
+msgstr "Неправильное название темы"
 
 msgid "Invalid theme file.  Does not end in .emerald"
-msgstr "Неверное имя файла.  Не заканчивается на .emerald"
+msgstr "Неправильный файл темы. Не заканчивается на .emerald"
 
 msgid ""
 "Invalid Theme Name\n"
 "Could Not Export"
 msgstr ""
-"Неверное имя темы\n"
-"Не удается проэкспортировать"
+"Неправильное название темы\n"
+"Не удалось экспртировать"
 
 msgid ""
 "Invalid File Name\n"
 "Must End in .emerald"
 msgstr ""
-"Неверное имя файла\n"
+"Неправильное имя файла\n"
 "Должно заканчиваться на .emerald"
 
 msgid "Error calling tar."
 msgstr "Ошибка вызова tar."
 
 msgid "Theme Exported"
-msgstr "Тема проэкспортирована"
+msgstr "Тема экспортирована"
 
 msgid ""
 "Can't save over system themes\n"
 "(or you forgot to enter a name)"
 msgstr ""
-"Невозможно перезаписать системные темы\n"
-"(или Вы забыли ввести имя)"
+"Нельзя перезаписывать системные темы\n"
+"(или вы забыли ввести имя)"
 
 #, c-format
 msgid "Overwrite Theme %s?"
-msgstr "Переписать тему %s?"
+msgstr "Перезаписать тему %s?"
 
 msgid "Couldn't Write Theme"
-msgstr "Не удается записать тему"
+msgstr "Не удалось записать тему"
 
-#, fuzzy
 msgid "Couldn't Form Theme"
-msgstr "Ошибка: невозможно получить статус темы"
+msgstr "Не удалось сформировать тему"
 
 msgid "Theme Saved"
 msgstr "Тема сохранена"
@@ -159,34 +155,30 @@ msgid ""
 "Can't delete system themes\n"
 "(or you forgot to enter a name)"
 msgstr ""
-"Невозможно удалить системные темы\n"
-"(или Вы забыли ввести имя)"
+"Нельзя удалять системные темы\n"
+"(или вы забыли ввести имя)"
 
 #, c-format
 msgid "Are you sure you want to delete %s?"
-msgstr "Вы действительно хотите удалить %s?"
+msgstr "Вы уверены, что хотите уалить %s?"
 
 msgid "Theme deleted"
 msgstr "Тема удалена"
 
 msgid "No such theme to delete"
-msgstr "Не существует темы для удаления"
+msgstr "Не найдена тема для удаления"
 
-#, fuzzy
 msgid "Use Pixmap Buttons"
-msgstr "Использовать кнопки с пиксельными картами"
+msgstr "Использовать растровые кнопки"
 
-#, fuzzy
 msgid "Use Button Halo/Glow"
-msgstr "Использовать кнопку Ореол/Свечение"
+msgstr "Использовать Сияние/Подсвечивание кнопок"
 
-#, fuzzy
 msgid "Use Button Halo/Glow For Inactive Windows"
-msgstr "Использовать кнопку Ореол/Свечение для неактивных окон"
+msgstr "Использовать Сияние/Подсвечивание кнопок для неактивных око"
 
-#, fuzzy
 msgid "Button Pixmaps"
-msgstr "Пиксельные карты кнопки"
+msgstr "Изображения кнопок"
 
 msgid "Button"
 msgstr "Кнопка"
@@ -195,7 +187,7 @@ msgid "File"
 msgstr "Файл"
 
 msgid "Preview"
-msgstr "Предпросмотр"
+msgstr "Предварительный просмотр"
 
 msgid "Clear"
 msgstr "Очистить"
@@ -204,52 +196,47 @@ msgid "Colors"
 msgstr "Цвета"
 
 msgid "Text Fill"
-msgstr "Цвет заливки текста"
+msgstr "Заполнение текста"
 
 msgid "Text Outline"
-msgstr "Цвет окантовки текста"
+msgstr "Контур текста"
 
 msgid "Button Fill"
-msgstr "Цвет заливки кнопок"
+msgstr "Заполнение кнопок"
 
-#, fuzzy
 msgid "Button Outline"
-msgstr "Цвет окантовки кнопок"
+msgstr "Контур кнопок"
 
 msgid "Color"
 msgstr "Цвет"
 
 msgid "Opacity"
-msgstr "Прозрачность"
+msgstr "Непрозрачность"
 
 msgid "Radius"
 msgstr "Радиус"
 
 msgid "X Offset"
-msgstr "Смещение по оси X"
+msgstr "Смещение по X"
 
 msgid "Y Offset"
-msgstr "Смещение по оси Y"
+msgstr "Смещение по Y"
 
 msgid "Title-Text Font"
-msgstr "Шрифт для текста заголовка окна"
+msgstr "Шрифт заголовка"
 
 msgid "Minimum Title-bar Height"
-msgstr "Минимальная высота строки заголовка"
+msgstr "Минимальная высота заголовка"
 
-#, fuzzy
 msgid "Vertical Button Offset"
-msgstr "Вертикальное смещение кнопки"
+msgstr "Вертикальный сдвиг кнопок"
 
-#, fuzzy
 msgid "Horizontal Button Offset"
-msgstr "Горизонтальное смещение кнопки"
+msgstr "Горизонтальный сдвиг кнопок"
 
-#, fuzzy
 msgid "Title-bar Object Layout"
-msgstr "От_ображать заголовок"
+msgstr "Расположение объектов заголока"
 
-#, fuzzy
 msgid ""
 "Use colons to separate left, center, and right.\n"
 "Anything after a third colon is ignored.\n"
@@ -258,27 +245,28 @@ msgid ""
 "S=Shade, U/A=On Top(Up/Above)\n"
 "Y=Sticky, (#)=# pixels space, ex: (5)\n"
 msgstr ""
-"Используйте двоеточия для разделения лево, центр, право.\n"
-"Остальное, после третьего двоеточия игнорируется.\n"
+"Используйте двоеточия для отделения\n"
+"левой части, центра и правой части.\n"
+"Всё, после третьего двоеточия игнорируется.\n"
 "C=Закрыть, N=Свернуть, X/R=Восстановить\n"
-"I=Иконка, T=Заголовок, H=Помощь, M=Меню\n"
-"S=Shade, U/A=On Top(Up/Above)\n"
-"Y=Sticky, (#)=# pixels space, ex: (5)\n"
+"I=Значёк, T=Заголовок, H=Справка, M=Меню\n"
+"S=Свернуть в заголовок, U/A=Поверх всех окон\n"
+"Y=Закрепить, (#)=# пикселей пропуска, например: (5)\n"
 
 msgid "Export Theme..."
-msgstr "Экспортировать тему..."
+msgstr "Экспортирование темы..."
 
 msgid "Name:"
-msgstr "Имя:"
+msgstr "Название:"
 
 msgid "Untitled Theme"
-msgstr "Тема БезНазвания"
+msgstr "Безымянная тема"
 
 msgid "Export..."
-msgstr "Экспортировать..."
+msgstr "Экспорт..."
 
 msgid "Creator"
-msgstr "Создатель"
+msgstr "Автор"
 
 msgid "Description"
 msgstr "Описание"
@@ -286,13 +274,11 @@ msgstr "Описание"
 msgid "Theme Version"
 msgstr "Версия темы"
 
-#, fuzzy
 msgid "Suggested Widget Theme"
-msgstr "Глянцевая, блестящая тема"
+msgstr "Предпочитаемая тема виджетов"
 
-#, fuzzy
 msgid "Themer Version"
-msgstr "версия сервера: %s; версия %s: %s\n"
+msgstr "Версия темы"
 
 msgid "Border"
 msgstr "Рамка"
@@ -301,10 +287,10 @@ msgid "Size"
 msgstr "Размер"
 
 msgid "Top"
-msgstr "Верх"
+msgstr "Сверху"
 
 msgid "Bottom"
-msgstr "Низ"
+msgstr "Снизу"
 
 msgid "Left"
 msgstr "Слева"
@@ -324,13 +310,23 @@ msgid ""
 "the titlebar-min-height slider\n"
 "or the titlebar font setting.\n"
 msgstr ""
+"Примечание: после изменения этих\n"
+"значений, было бы хорошо изменить\n"
+"рабочее место, что заставит правильно\n"
+"обновить позицию каждого окна, и\n"
+"правильно перемещать/изменять\n"
+"размер окон.\n"
+"Это также следует делать, когда вы\n"
+"изменяете высоту заголовка окна с\n"
+"помощью ползунка Минимальная \n"
+"высота заголовка или опции Шрифт\n"
+"заголовка.\n"
 
 msgid "Shadows"
 msgstr "Тени"
 
-#, fuzzy
 msgid "Frame Borders"
-msgstr "Рисовать границы"
+msgstr "Границы окна"
 
 msgid "Active Window"
 msgstr "Активное окно"
@@ -339,7 +335,7 @@ msgid "Inactive Window"
 msgstr "Неактивное окно"
 
 msgid "Title Bar"
-msgstr "Заголовок окна"
+msgstr "Заголовок"
 
 msgid "Screenshot"
 msgstr "Снимок экрана"
@@ -354,49 +350,44 @@ msgid ""
 "NOTE - These settings are not part of themes, they are stored separately, "
 "and control various UI preferences for Emerald."
 msgstr ""
-"ПРИМЕЧАНИЕ - Эти настройки не являются частью тем, они хранятся отдельно, и "
-"управляются различными установками для Emerald."
+"ПРИМЕЧАНИЕ - Эти настройки не часть темы, они хранятся отдельно, и "
+"контролируют различные свойства пользовательского интерфейса для Emerald."
 
 msgid "Show Tooltips for Buttons"
-msgstr "Показывать подсказки для кнопок"
+msgstr "Показывать всплывающие подсказки для темы"
 
-#, fuzzy
 msgid "Use Decoration Cropping"
-msgstr "Дисплей системы X, который надо использовать"
+msgstr "Использовать обрезку декораций"
 
-#, fuzzy
 msgid "Use Button Fade"
-msgstr "Скорость проявления/исчезания окна"
+msgstr "Использовать затухание кнопок"
 
-#, fuzzy
 msgid "Use Button Fade Pulse"
-msgstr "Использовать другой значок для кнопки объекта"
+msgstr "Использовать пульсирующее затухание кнопок"
 
 msgid "Button Fade Total Duration"
-msgstr ""
+msgstr "Общее время затухания кнопок"
 
 msgid "Button Fade Step Duration"
-msgstr ""
+msgstr "Общее время шага затухания"
 
 msgid "Button Pulse Wait Duration"
-msgstr ""
+msgstr "Задержка пульсации кнопок"
 
 msgid "Button Pulse Min Opacity %"
-msgstr ""
+msgstr "Минимальная прозрачность пульсации %"
 
 msgid "Titlebar Double-Click Action"
-msgstr "Действие по двойному щелчку на заголовке окна"
+msgstr "Действие при двойном щелчке на заголовке"
 
-#, fuzzy
 msgid "Button Hover Cursor"
-msgstr "Выполнить до курсора"
+msgstr "Курсор при наведении на кнопку"
 
 msgid "Normal"
-msgstr "Нормальный"
+msgstr "Обычный"
 
-#, fuzzy
 msgid "Pointing Finger"
-msgstr "указывает на «%s»"
+msgstr "Палец"
 
 msgid "Compiz Decoration Blur Type"
 msgstr "Тип размытия оформления Compiz"
@@ -405,25 +396,22 @@ msgid "None"
 msgstr "Нет"
 
 msgid "Titlebar only"
-msgstr "Только заголовок окна"
+msgstr "Только заголовки"
 
-#, fuzzy
 msgid "All decoration"
-msgstr "Оформление окна"
+msgstr "Все оформления"
 
-#, fuzzy
 msgid "Frame Engine"
-msgstr "Пожарная машина"
+msgstr "Движок окна"
 
 msgid "Buttons"
 msgstr "Кнопки"
 
-#, fuzzy
 msgid "Frame/Shadows"
-msgstr "Частота кадров"
+msgstr "Окно/Тени"
 
 msgid "Titlebar"
-msgstr "Заголовок окна"
+msgstr "Заголовок"
 
 msgid "Theme"
 msgstr "Тема"
@@ -432,13 +420,13 @@ msgid "Edit"
 msgstr "Изменить"
 
 msgid "Import Theme..."
-msgstr "Импортировать тему..."
+msgstr "Импортровать тему..."
 
 msgid "Search:"
 msgstr "Поиск:"
 
 msgid "Fetching Themes"
-msgstr "Получить темы"
+msgstr "Получение тем"
 
 msgid ""
 "Fetching themes... \n"
@@ -446,47 +434,46 @@ msgid ""
 "internet connection speed."
 msgstr ""
 "Получение тем... \n"
-"Это займет некоторое время, которое зависит от \n"
-"скорости подключения к Интернет."
+"Это может занять некоторое время, \n"
+"в зависимости от скорости интернет."
 
 msgid ""
 "Here are the repositories that you can fetch Emerald Themes from. \n"
 "Fetching themes would fetch and import themes from SVN repositories \n"
 "You need Subversion package installed to use this feature."
 msgstr ""
-"Здесь указаны репозитарии из которых Вы можете скачать темы для Emerald. \n"
-"Скачивание тем начнет скачивание и импорт тем из SVN-репозитариев \n"
-"Вам необходим установленный пакет Subversion для использования этой "
-"возможности."
+"Это список репозиториев, откуда вы можете получить темы Emerald.\n"
+"Получение тем происходит с помощью протокола SVN, \n"
+"Поэтому для использования требуется установленный пакет Subversion."
 
 msgid ""
 "This repository contains GPL'd themes that can be used under \n"
 "the terms of GNU GPL licence v2.0 or later \n"
 msgstr ""
-"Этот репозитарий содержит GPL-темы, которые могут быть использованы под \n"
-"понятиями GNU GPL лицензии v2.0 или позже \n"
+"Этот репозиторий хранит GPL темы, которые могут \n"
+"использоваться по лицензией GNU GPL v2.0 или новее \n"
 
 msgid ""
 "This repository contains non-GPL'd themes. They might infringe \n"
 "copyrights and patent laws in some countries."
 msgstr ""
-"Этот репозитарий содержит не-GPL темы. Они могут нарушать \n"
-"авторские права и законы о патентах в некоторых странах."
+"Этот репозиторий хранит не GPL темы. Они могут нарушать \n"
+"патентные права в некоторых странах."
 
 msgid ""
 "To activate Non-GPL repository please run the following in shell and accept "
 "the server certificate permanently: \n"
 "svn ls https://svn.generation.no/emerald-themes."
 msgstr ""
-"Для активации не-GPL репозитория, пожалуйста выполните следующее в терминале "
-"и примите сертификат сервера на постоянно: \n"
+"Для активации Не-GPL репозитория запустите единоразово в консоли вот это и "
+"примите сертификат сервера: \n"
 "svn ls https://svn.generation.no/emerald-themes."
 
 msgid "Themes"
 msgstr "Темы"
 
 msgid "Edit Themes"
-msgstr "Изменение тем"
+msgstr "Изменить темы"
 
 msgid "Themes Settings"
 msgstr "Настройки тем"
@@ -498,359 +485,297 @@ msgid ""
 "Select\n"
 "Engine"
 msgstr ""
-"Выбрать\n"
+"Выберите\n"
 "Движок"
 
 msgid "Based on original gnome-window-decorator"
-msgstr "Основан на оригинальном gnome-window-decorator'е"
+msgstr "Базируется на оригинальном gnome-window-decorator"
 
 msgid "Round Top Left Corner"
-msgstr "Закруглять верхний левый угол"
+msgstr "Сглаживать верхний левый угол"
 
 msgid "Round Top Right Corner"
-msgstr "Закруглять верхний правый угол"
+msgstr "Сглаживать верхний правый угол"
 
 msgid "Round Bottom Left Corner"
-msgstr "Закруглять нижний левый угол"
+msgstr "Сглаживать нижний левый угол"
 
 msgid "Round Bottom Right Corner"
-msgstr "Закруглять нижний правый угол"
+msgstr "Сглаживать нижний правый угол"
 
 msgid "Rounding Radius"
-msgstr "Радиус закругления"
+msgstr "Радиус сглаживания"
 
-#, fuzzy
 msgid "Outer Frame Blend"
-msgstr "Текущий _кадр стека"
+msgstr "Мягкость внешней рамки"
 
-#, fuzzy
 msgid "Inner Frame Blend"
-msgstr "Текущий _кадр стека"
+msgstr "Мягкость внутренней рамки"
 
-#, fuzzy
 msgid "Outer Titlebar Blend"
-msgstr "_Мигание заголовка окна"
+msgstr "Внешняя мягкость заголовка"
 
-#, fuzzy
 msgid "Inner Titlebar Blend"
-msgstr "_Мигание заголовка окна"
+msgstr "Внутренняя мягкость заголовка"
 
-#, fuzzy
 msgid "Titlebar Separator"
-msgstr "Разделители, строки"
+msgstr "Разделитель заголовка"
 
-#, fuzzy
 msgid "Frame Outline"
-msgstr "Частота кадров"
+msgstr "Контур окна"
 
-#, fuzzy
 msgid "Frame Highlight"
-msgstr "Цвет выделения"
+msgstr "Подсветка окна"
 
-#, fuzzy
 msgid "Frame Shadow"
-msgstr "Тень рамки"
+msgstr "Тель окна"
 
-#, fuzzy
 msgid "Contents Outline"
-msgstr "Содержание Справки"
+msgstr "Содержимое контура"
 
-#, fuzzy
 msgid "Contents Highlight"
-msgstr "Цвет выделения"
+msgstr "Содержимое подсветки"
 
-#, fuzzy
 msgid "Contents Shadow"
-msgstr "Тип тени"
+msgstr "Содержимое тени"
 
-#, fuzzy
 msgid "Frame"
-msgstr "Кадр"
+msgstr "Окно"
 
-#, fuzzy
 msgid "Based on original legacy"
-msgstr "На основании загрузки процессора"
+msgstr "Базируется на оригинальном старом"
 
 msgid "Designed to be vista-ish in nature"
-msgstr ""
+msgstr "Разработано для подражания vista"
 
 msgid "Base"
-msgstr "Основной"
+msgstr "База"
 
 msgid "Glow"
-msgstr "Сияние"
+msgstr "Подсветка"
 
 msgid "Sides"
-msgstr "Стороны"
+msgstr "Бока"
 
 msgid "Everything done with customizable pixmaps!"
-msgstr ""
+msgstr "Всё работает с настраиваемыми рисунками!"
 
 msgid "Top Rounding Radius"
-msgstr "Верхний радиус закругления"
+msgstr "Верхний радиус скругления"
 
 msgid "Bottom Rounding Radius"
-msgstr "Нижний радиус закругления"
+msgstr "Нижний радиус скругления"
 
 #. Style : Use Tiled or Scaled pixmaps
-#, fuzzy
 msgid "Scaled"
-msgstr "Масштабировать"
+msgstr "Масштабируемый"
 
-#, fuzzy
 msgid "Not adjustable"
-msgstr "Внешний"
+msgstr "Не настраиваемый"
 
-#, fuzzy
 msgid "Same as Active"
-msgstr "эквивалент pax"
+msgstr "Такой как активный"
 
-#, fuzzy
 msgid "Pixmap"
-msgstr "Пиксельная карта"
+msgstr "Изображение"
 
-#, fuzzy
 msgid "Tiled/Scaled"
-msgstr "Масштабированный растр"
+msgstr "Повторение/Масштаб"
 
-#, fuzzy
 msgid "Width Override"
-msgstr "Директива `override'"
+msgstr "Переназначить ширину"
 
-#, fuzzy
 msgid "Height Override"
-msgstr "Директива `override'"
+msgstr "Переназначить высоту"
 
 msgid "Glassy effects for your windows"
-msgstr "Эффекты прозрачности для Ваших окон"
+msgstr "Эффект стекла для ваших окон"
 
-#, fuzzy
 msgid "Glow Height"
-msgstr "Предпочтительная высота"
+msgstr "Высота подсветки"
 
 msgid "Frame Base Color"
-msgstr "Основной цвет рамки"
+msgstr "Основной цвет окна"
 
-#, fuzzy
 msgid "Upper Titlebar Glow"
-msgstr "_Мигание заголовка окна"
+msgstr "Верхнее свечение заголовка"
 
-#, fuzzy
 msgid "Upper Glass Glow"
-msgstr "Всё в _верхнем регистре"
+msgstr "Верхнее свечение стекла"
 
-#, fuzzy
 msgid "Lower Glass Glow"
-msgstr "Счёт меньше, чем"
+msgstr "Нижнее свечение стекла"
 
-#, fuzzy
 msgid "Middle Glass Glow"
-msgstr "Средняя кнопка мыши"
+msgstr "Среднее свечение стекла"
 
-#, fuzzy
 msgid "Outer Glass Glow"
-msgstr "Внешнее стекляное сияние"
+msgstr "Внешнее свечение стекла"
 
 msgid "Multiple gradients with somewhat glassy features too"
-msgstr ""
+msgstr "Несколько градиентов, похожих по свойствам со стеклом"
 
-#, fuzzy
 msgid "Left Blend"
-msgstr "Повернуть в_лево"
+msgstr "Левый градиент"
 
-#, fuzzy
 msgid "Middle Blend"
-msgstr "Отчество"
+msgstr "Средний градиент"
 
-#, fuzzy
 msgid "Right Blend"
-msgstr "Повернуть в_право"
+msgstr "Правый градиент"
 
 msgid "Contrast"
-msgstr "Контраст"
+msgstr "Контрастность"
 
 msgid "(Color)"
 msgstr "(Цвет)"
 
 msgid "(Alpha)"
-msgstr "(Прозрачность)"
+msgstr "(Прозрачност)"
 
 msgid "Notch"
-msgstr ""
+msgstr "Вырез"
 
 msgid "Position"
-msgstr "Положение"
+msgstr "Позиция"
 
-#, fuzzy
 msgid "Curve"
 msgstr "Кривая"
 
 msgid "Offset"
-msgstr "Смещение"
+msgstr "Сдвиг"
 
-#, fuzzy
 msgid "Use Glow"
 msgstr "Использовать свечение"
 
-#, fuzzy
 msgid "Title Glow"
 msgstr "Свечение заголовка"
 
 msgid "Evolved from the legacy engine"
-msgstr "Развит из старого движка"
+msgstr "Развитие предыдущего движка"
 
-#, fuzzy
 msgid "Border Gap"
-msgstr "Граница (устаревший)"
+msgstr "Промежуток границы окна"
 
-#, fuzzy
 msgid "Show Border when maximised?"
-msgstr "Когда отображать значок уведомления"
+msgstr "Показывать границу когда окно развёрнуто?"
 
-#, fuzzy
 msgid "Show when minimised?"
-msgstr "Когда отображать значок уведомления"
+msgstr "Показывать когда свёрнуто?"
 
-#, fuzzy
 msgid "Minimised Border Size"
-msgstr "Размер окна текстового диалога"
+msgstr "Размер границы при минимизированном"
 
 msgid "Enable Left Bar Dip?"
-msgstr ""
+msgstr "Разрешить погружение левой полосы?"
 
-#, fuzzy
 msgid "Left Bar Radius"
-msgstr "Радиус закруглений"
+msgstr "Радиус левой полосы"
 
 msgid "Enable Lower Bulge? (Useless at the moment, but will be used soon)"
-msgstr ""
+msgstr "Разрешить меньшую выпуклость? (Пока не работает, скоро будет)"
 
 msgid "Top Corner Offset (%)"
-msgstr "Смещение верхнего угла (%)"
+msgstr "Сдвиг верхнего угла (%)"
 
-#, fuzzy
 msgid "Enable Title Bar Dip?"
-msgstr "Включить Dip строки заколовка?"
+msgstr "Разрешить погружение заголовка?"
 
-#, fuzzy
 msgid "Enable Button Part?"
-msgstr "<Не является частью сертификата>"
+msgstr "Разрешить часть кнопки?"
 
-#, fuzzy
 msgid "Title Part Width"
-msgstr "По ширине страницы"
+msgstr "Ширина части заголовка"
 
-#, fuzzy
 msgid "Button Part Width)"
-msgstr "По ширине страницы"
+msgstr "Ширина части кнопок)"
 
-#, fuzzy
 msgid "Dip Corners Radius)"
-msgstr "Радиус закруглений"
+msgstr "Радиус погружения углов)"
 
 msgid "Round Inside Corners As well?"
-msgstr ""
+msgstr "Округлять также вокруг углов?"
 
 msgid "Enable Different Maximised Colors?"
-msgstr "Включить различные цвета развертывания?"
+msgstr "Разрешить разные цвета максимизации?"
 
 msgid "Turn Off repeating gradients when maximised?"
-msgstr "Отключить повторяющиеся градиенты при развертывании?"
+msgstr "Выключить повторение градиентов при развёрнутом?"
 
 msgid "Round Top Left Corner?"
-msgstr "Закруглять верхний левый угол?"
+msgstr "Округлять верхний левый угол?"
 
-#, fuzzy
 msgid "Frame Rounding Radius"
-msgstr "Радиус закруглений"
+msgstr "Радиус скругления углов"
 
-#, fuzzy
 msgid "Titlebar Rounding Radius"
-msgstr "Радиус закруглений"
+msgstr "Радиус скругления заголовка"
 
 msgid "Repeat Gradient?"
 msgstr "Повторять градиент?"
 
-#, fuzzy
 msgid "Vertical Repeat?"
 msgstr "Вертикальное повторение?"
 
-#, fuzzy
 msgid "Diagonal Repeat?"
 msgstr "Диагональное повторение?"
 
 msgid "Repeat Frequency"
-msgstr "Частота повторения"
+msgstr "Частота повторений"
 
 #. /////////////////////
-#, fuzzy
 msgid "Enable Title Part Pixmap?"
-msgstr "Включить пиксельную карту части заголовка?"
+msgstr "Разрешить изображение части заголовка?"
 
-#, fuzzy
 msgid "Repeat Title Part Pixmap?"
-msgstr "Повторять пиксельную карту части заголовка?"
+msgstr "Повторять изображение части заголовка?"
 
-#, fuzzy
 msgid "Title Bar Part Pixmap"
-msgstr "От_ображать заголовок"
+msgstr "Изображение части заголовка"
 
 msgid "Choose Titlebar Part Pixmap"
-msgstr ""
+msgstr "Выбрать изображение части заголовка"
 
 #. /////////////////////////
-#, fuzzy
 msgid "Enable Button Part Pixmap?"
-msgstr "Если отображена переключающая часть кнопки"
+msgstr "Разрешить изображение части кнопок?"
 
-#, fuzzy
 msgid "Repeat Button Part Pixmap?"
-msgstr "Если отображена переключающая часть кнопки"
+msgstr "Повторять изображение части кнопок?"
 
-#, fuzzy
 msgid "Button Part Pixmap"
-msgstr "Анимированное изображение рыбки"
+msgstr "Изображение части кнопок"
 
-#, fuzzy
 msgid "Choose Button Part Pixmap"
-msgstr "Нажать кнопку, чтобы выбрать профиль"
+msgstr "Выбрать изображение части кнопок"
 
 #. /////////////////////////
-#, fuzzy
 msgid "Enable Titlebar Pixmap?"
-msgstr "Анимированное изображение рыбки"
+msgstr "Разрешить изображение панели заголовка?"
 
-#, fuzzy
 msgid "Repeat Titlebar Pixmap?"
-msgstr "Анимированное изображение рыбки"
+msgstr "Повторять изображение панели заголовка?"
 
-#, fuzzy
 msgid "Titlebar Pixmap"
-msgstr "Файл растрового изображения"
+msgstr "Изображение панели заголовка"
 
-#, fuzzy
 msgid "Choose Titlebar Pixmap"
-msgstr "Анимированное изображение рыбки"
+msgstr "Выбрать изображение панели заголовка"
 
 msgid "Active/Inactive"
-msgstr "Включено/Отключено"
+msgstr "Включить/Выключить"
 
 msgid "Maximised"
-msgstr ""
+msgstr "Развёрнуто"
 
 msgid "Corners"
 msgstr "Углы"
 
-#, fuzzy
 msgid "Border Layout"
-msgstr "Редактор меню"
+msgstr "Расположение границ"
 
-#, fuzzy
 msgid "Left Bar"
-msgstr "Строка меню"
+msgstr "Левая полоса"
 
 msgid "Pixmaps"
-msgstr ""
-
-#~ msgid "Repositories"
-#~ msgstr "Репозитарии"
+msgstr "Изображения"

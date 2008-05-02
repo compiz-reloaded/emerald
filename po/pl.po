@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1\n"
 "Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
-"POT-Creation-Date: 2008-04-03 12:53+0530\n"
-"PO-Revision-Date: 2008-03-27 00:23+0100\n"
-"Last-Translator: lukasz deren <lukaszderen@gmail.com>\n"
+"POT-Creation-Date: 2008-05-02 13:49+0530\n"
+"PO-Revision-Date: 2008-04-15 02:26+0200\n"
+"Last-Translator: Jarek Sobolewski <r@sledinmay.com>\n"
 "Language-Team: pl_PL <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Pootle 1.0.2\n"
+"X-Generator: Pootle 1.1.0\n"
 
 msgid "Close Window"
 msgstr "Zamknij okno"
@@ -32,25 +32,25 @@ msgid "Context Help"
 msgstr "Pomoc kontekstowa"
 
 msgid "Window Menu"
-msgstr "Menu Okna"
+msgstr "Menu okna"
 
 msgid "Shade Window"
-msgstr "Zacień Okno"
+msgstr "Zacień okno"
 
 msgid "UnShade Window"
-msgstr "Odcień Okno"
+msgstr "Odcień okno"
 
 msgid "Set Above"
-msgstr "Ustaw Powyżej"
+msgstr "Ustaw powyżej"
 
 msgid "UnSet Above"
 msgstr "Nie ustawiaj powyżej"
 
 msgid "Stick Window"
-msgstr "Przyklej Okno"
+msgstr "Przyklej okno"
 
 msgid "UnStick Window"
-msgstr "Odklej Okno"
+msgstr "Odklej okno"
 
 #, c-format
 msgid "The window \"%s\" is not responding."
@@ -59,8 +59,8 @@ msgstr "Okno \"%s\" nie odpowiada."
 msgid ""
 "Forcing this application to quit will cause you to lose any unsaved changes."
 msgstr ""
-"Wymuszanie zamknięcia na tej aplikacji spowoduje że stracisz wszelkie "
-"niezapisane dane."
+"Wymuszenie zamknięcia tej aplikacji spowoduje utratę wszystkich "
+"niezapisanych danych."
 
 msgid "_Force Quit"
 msgstr "_Wymuś zamknięcie"
@@ -93,7 +93,7 @@ msgstr ""
 "<b><big>%s</big></b> (Motyw Systemowy)\n"
 "<i>%s</i>\n"
 "<small><b>Wersja</b> %s\n"
-"<b>Zrobony przez</b> %s\n"
+"<b>Stworzony przez</b> %s\n"
 "<b>Używać z</b> %s\n"
 "</small>"
 
@@ -123,20 +123,20 @@ msgid ""
 "Invalid File Name\n"
 "Must End in .emerald"
 msgstr ""
-"Nieprawidłowa nazwa dekoracji\n"
+"Nieprawidłowa nazwa pliku\n"
 "Musi kończyć się na .emerald "
 
 msgid "Error calling tar."
-msgstr "Wystąpił błąd przy uruchamiania tar'a."
+msgstr "Wystąpił błąd przy uruchamianiu tara."
 
 msgid "Theme Exported"
-msgstr "Dekoracja eksportowana"
+msgstr "Dekoracja wyeksportowana"
 
 msgid ""
 "Can't save over system themes\n"
 "(or you forgot to enter a name)"
 msgstr ""
-"Nie można zapisać motywów systemowych\n"
+"Nie można nadpisać motywów systemowych\n"
 "(albo zapomniałeś wpisać nazwę)"
 
 #, c-format
@@ -162,7 +162,7 @@ msgstr ""
 
 #, c-format
 msgid "Are you sure you want to delete %s?"
-msgstr "Jesteś pewny że chcesz usunąć %s?"
+msgstr "Czy na pewno chcesz usunąć %s?"
 
 msgid "Theme deleted"
 msgstr "Dekoracja usunięta"
@@ -171,7 +171,7 @@ msgid "No such theme to delete"
 msgstr "Nie ma takiej dekoracji do usunięcia"
 
 msgid "Use Pixmap Buttons"
-msgstr "Używaj pixmap przycisków"
+msgstr "Używaj przycisków z obrazków rastrowych"
 
 msgid "Use Button Halo/Glow"
 msgstr "Używaj poświaty/podświetlenia przycisków"
@@ -180,7 +180,7 @@ msgid "Use Button Halo/Glow For Inactive Windows"
 msgstr "Używaj poświaty/podświetlenia przycisków dla nieaktywnych okien"
 
 msgid "Button Pixmaps"
-msgstr "Pixmapy przycisków"
+msgstr "Obrazki rastrowe przycisków"
 
 msgid "Button"
 msgstr "Przycisk"
@@ -201,13 +201,13 @@ msgid "Text Fill"
 msgstr "Wypełnienie tekstu"
 
 msgid "Text Outline"
-msgstr "Zarys tekstu"
+msgstr "Obrys tekstu"
 
 msgid "Button Fill"
 msgstr "Wypełnienie przycisków"
 
 msgid "Button Outline"
-msgstr "Zarys przycisków"
+msgstr "Obrys przycisków"
 
 msgid "Color"
 msgstr "Kolor"
@@ -280,7 +280,7 @@ msgid "Theme Version"
 msgstr "Wersja dekoracji"
 
 msgid "Suggested Widget Theme"
-msgstr "Zalecany motyw widgetow"
+msgstr "Proponowany motyw dekoracji widgetów"
 
 msgid "Themer Version"
 msgstr "Wersja dekoratora"
@@ -303,6 +303,7 @@ msgstr "Lewo"
 msgid "Right"
 msgstr "Prawo"
 
+#, fuzzy
 msgid ""
 "Note, when changing these values,\n"
 "it is advised that you do something\n"
@@ -315,6 +316,16 @@ msgid ""
 "the titlebar-min-height slider\n"
 "or the titlebar font setting.\n"
 msgstr ""
+"Uwaga, zmieniając te wartości,\n"
+"wskazane jest zrobienie czegoś\n"
+"jak n.p. zmiana okna roboczego,\n"
+"dzięki czemu pozycja wybranego okna\n"
+"zostanie uaktualniona prawidłowo, przez co\n"
+"zmieniane okna będą działać włąściwie.\n"
+"To ma również zastosowanie przy zmianie\n"
+"wysokości pasków tytułu przez zarówno\n"
+"przez suwak wysokości tytułu jak i ustawienia\n"
+"czcionki tytułu"
 
 msgid "Shadows"
 msgstr "Cienie"
@@ -344,11 +355,11 @@ msgid ""
 "NOTE - These settings are not part of themes, they are stored separately, "
 "and control various UI preferences for Emerald."
 msgstr ""
-"UWAGA - Te ustawienia nie są częścią dekoracji, są przechowywane osobno, i "
-"kontrolują różne ustawienia Interfejsu Użytkownika w Emeraldzie."
+"UWAGA - Te ustawienia nie są częścią dekoracji, są przechowywane osobno i "
+"kontrolują różne ustawienia interfejsu użytkownika w Emeraldzie."
 
 msgid "Show Tooltips for Buttons"
-msgstr "Pokazuj podpisy do przycisków"
+msgstr "Pokazuj podpisy przycisków"
 
 msgid "Use Decoration Cropping"
 msgstr "Używaj przycinania dekoracji"
@@ -362,9 +373,8 @@ msgstr "Używaj zanikania pulsujących przycisków"
 msgid "Button Fade Total Duration"
 msgstr "Całkowity czas zanikania przycisku"
 
-#, fuzzy
 msgid "Button Fade Step Duration"
-msgstr "Czas kroku zanikania"
+msgstr "Czas kroku zanikania przycisku"
 
 #, fuzzy
 msgid "Button Pulse Wait Duration"
@@ -373,18 +383,15 @@ msgstr "Czas oczekiwania pulsującego przycisku"
 msgid "Button Pulse Min Opacity %"
 msgstr "Minimalna nieprzezroczystość Pulsowania Przycisków %"
 
-#, fuzzy
 msgid "Titlebar Double-Click Action"
 msgstr "Akcja podwójnego kliknięcia na pasku tytułowym"
 
-#, fuzzy
 msgid "Button Hover Cursor"
-msgstr "Kursor Migajacego Przycisku"
+msgstr "Kursor wyświetlany nad przyciskami"
 
 msgid "Normal"
 msgstr "Normalne"
 
-#, fuzzy
 msgid "Pointing Finger"
 msgstr "Wskazujacy Palec"
 
@@ -402,7 +409,7 @@ msgid "All decoration"
 msgstr "Wszystkie dekoracje"
 
 msgid "Frame Engine"
-msgstr "Silnik Ramek"
+msgstr "Silnik ramek"
 
 msgid "Buttons"
 msgstr "Przyciski"
@@ -420,7 +427,7 @@ msgid "Edit"
 msgstr "Edytuj"
 
 msgid "Import Theme..."
-msgstr "Importuj Dekorację..."
+msgstr "Importuj dekorację..."
 
 msgid "Search:"
 msgstr "Szukaj:"
@@ -434,8 +441,8 @@ msgid ""
 "internet connection speed."
 msgstr ""
 "Aktualizowanie dekoracji...\n"
-"To może potrwać trochę czasu\n"
-"zależnie od prędkości Twojego\n"
+"To może trochę potrwać,\n"
+"zależnie od prędkości\n"
 "połączenia internetowego."
 
 msgid ""
@@ -443,25 +450,26 @@ msgid ""
 "Fetching themes would fetch and import themes from SVN repositories \n"
 "You need Subversion package installed to use this feature."
 msgstr ""
-"Tutaj są repozytoria z których możesz aktualizować Tematy Emeralda. \n"
-"Aktualizacja tematów spowoduje aktualizację i importowanie z repozytoriów "
-"SVN. \n"
-"Pakiet Subversion musi być zainstalowany by móc korzystać z tej funkcji."
+"Tutaj są repozytoria, z których możesz aktualizować tematy Emeralda. \n"
+"Aktualizacja tematów spowoduje ściągnięcie i zaimportowanie tematów z "
+"repozytoriów SVN. \n"
+"Pakiet Subversion musi być zainstalowany, by można było korzystać z tej "
+"funkcji."
 
 msgid ""
 "This repository contains GPL'd themes that can be used under \n"
 "the terms of GNU GPL licence v2.0 or later \n"
 msgstr ""
-"To repozytorium posiada dekoracje GPL'd które mogą być \n"
-"używane na warunkach licencji GNU GPL wersja v2.0 i późniejszej \n"
+"W tym repozytorium znajdują się dekoracje, które mogą być \n"
+"używane na warunkach licencji GNU GPL w wersji 2.0 i późniejszych \n"
 
 msgid ""
 "This repository contains non-GPL'd themes. They might infringe \n"
 "copyrights and patent laws in some countries."
 msgstr ""
-"To repozytorium posiada dekoracje które nie są na licencji GPL. Mogą "
+"To repozytorium posiada dekoracje które nie są na licencji GPL. Mogą one "
 "naruszać \n"
-" patenty i prawa autorskie w niektórych krajach"
+"patenty i prawa autorskie w niektórych krajach."
 
 msgid ""
 "To activate Non-GPL repository please run the following in shell and accept "
@@ -469,7 +477,7 @@ msgid ""
 "svn ls https://svn.generation.no/emerald-themes."
 msgstr ""
 "Aby aktywować repozytoria nie będące na licencji GPL proszę wpisać "
-"następujące polecenie oraz zaakceptować certyfikat serwera: \n"
+"następujące polecenie i zaakceptować certyfikat serwera: \n"
 "svn ls https://svn.generation.no/emerald-themes."
 
 msgid "Themes"
@@ -487,7 +495,9 @@ msgstr "Ustawienia Emeralda"
 msgid ""
 "Select\n"
 "Engine"
-msgstr "Wybierz/nSilnik"
+msgstr ""
+"Wybierz\n"
+"Silnik"
 
 msgid "Based on original gnome-window-decorator"
 msgstr "Bazowany na oryginalnym gnome-window-decorator"
@@ -545,7 +555,7 @@ msgstr "Ramka"
 
 #, fuzzy
 msgid "Based on original legacy"
-msgstr "Bazuj na oryginalnych ustawieniach"
+msgstr "Bazujące na oryginalnych zapisach"
 
 msgid "Designed to be vista-ish in nature"
 msgstr "Opracowany by być natury 'vistowatej'"
@@ -556,13 +566,11 @@ msgstr "Baza"
 msgid "Glow"
 msgstr "Świecenie"
 
-#, fuzzy
 msgid "Sides"
 msgstr "Strony"
 
-#, fuzzy
 msgid "Everything done with customizable pixmaps!"
-msgstr "Wszystko zrobione z przystosowalnymi pixmapami!"
+msgstr "Wykonane w całości z przystosowalnymi obrazkami rastrowymi!"
 
 msgid "Top Rounding Radius"
 msgstr "Górny promień zaokrąglania"
@@ -581,7 +589,7 @@ msgid "Same as Active"
 msgstr "Taki sam jak aktywny"
 
 msgid "Pixmap"
-msgstr "Pixmapa"
+msgstr "Obrazek rastrowy"
 
 #, fuzzy
 msgid "Tiled/Scaled"
@@ -594,44 +602,40 @@ msgid "Height Override"
 msgstr "Nadpisanie wysokości"
 
 msgid "Glassy effects for your windows"
-msgstr "'Szklane' efekty dla Twoich okien"
+msgstr "Szkliste efekty dla twoich okien"
 
 msgid "Glow Height"
 msgstr "Wysokość świecenia"
 
-#, fuzzy
 msgid "Frame Base Color"
-msgstr "Kolor bazowy ramki"
+msgstr "Bazowy kolor ramki"
 
-#, fuzzy
 msgid "Upper Titlebar Glow"
-msgstr "Górna Poświata Paska Tytułowego"
+msgstr "Górna poświata paska tytułowego"
 
 msgid "Upper Glass Glow"
-msgstr "Górna Poświata Okna"
+msgstr "Górna szklana poświata okna"
 
 msgid "Lower Glass Glow"
-msgstr "Dola Poświata Okna"
+msgstr "Dolna szklana poświata okna"
 
-#, fuzzy
 msgid "Middle Glass Glow"
-msgstr "Środkowa Poświata (blask) Okna"
+msgstr "Środkowa szklana poświata okna"
 
-#, fuzzy
 msgid "Outer Glass Glow"
-msgstr "Zewnętrzna Poświata Okna"
+msgstr "Zewnętrzna szklana poświata okna"
 
 msgid "Multiple gradients with somewhat glassy features too"
-msgstr "Wiele gradientów też z częściowo szklanymi funkcjami"
+msgstr "Wiele gradientów również z częściowo szklanymi funkcjami"
 
 msgid "Left Blend"
-msgstr ""
+msgstr "Lewa Mieszanka"
 
 msgid "Middle Blend"
-msgstr ""
+msgstr "Środkowa Mieszanka"
 
 msgid "Right Blend"
-msgstr ""
+msgstr "Prawa Mieszanka"
 
 msgid "Contrast"
 msgstr "Kontrast"
@@ -655,62 +659,62 @@ msgid "Offset"
 msgstr "Przesuniecie"
 
 msgid "Use Glow"
-msgstr "Używaj Poświaty"
+msgstr "Używaj poświaty"
 
 msgid "Title Glow"
-msgstr "Poświata Tytułu"
+msgstr "Poświata tytułu"
 
 #, fuzzy
 msgid "Evolved from the legacy engine"
-msgstr "Pochodzący ze starego silnika"
-
-msgid "Border Gap"
-msgstr ""
+msgstr "Rozwinięty ze starego silnika"
 
 #, fuzzy
+msgid "Border Gap"
+msgstr "Luka brzegowa"
+
 msgid "Show Border when maximised?"
-msgstr "Pokazuj Plansze kiedy zmaksymilizowano"
+msgstr "Pokazywać Brzeg gdy zmaksymilizowano?"
 
 msgid "Show when minimised?"
-msgstr "Pokazywać kiedy jest zminimalizowane?"
+msgstr "Pokazywać gdy zminimalizowano?"
 
 #, fuzzy
 msgid "Minimised Border Size"
-msgstr "Zminimalizowany Rozmiar Planszy"
+msgstr "Zminimalizowany Rozmiar Brzegu"
 
-#, fuzzy
 msgid "Enable Left Bar Dip?"
-msgstr "Włączyć lewy pasek?"
+msgstr "Włączyć zanurzenie lewego paska?"
 
 msgid "Left Bar Radius"
 msgstr "Promień lewego paska"
 
 msgid "Enable Lower Bulge? (Useless at the moment, but will be used soon)"
 msgstr ""
+"Włączyć niższe wybrzuszenie? (Aktualnie bezużyteczne, ale wkrótce będzie w "
+"użyciu)"
 
 msgid "Top Corner Offset (%)"
 msgstr "Przesunięcie górnego rogu (%)"
 
-#, fuzzy
 msgid "Enable Title Bar Dip?"
-msgstr "Włączyć Tytułowy Pasek?"
+msgstr "Włączyć zanurzenie paska tytułowegok?"
 
 msgid "Enable Button Part?"
-msgstr ""
+msgstr "Włączyć część przycisku?"
 
 msgid "Title Part Width"
 msgstr "Szerokość części tytułowej"
 
+#, fuzzy
 msgid "Button Part Width)"
-msgstr ""
+msgstr "Wysokość części przycisku)"
 
 msgid "Dip Corners Radius)"
-msgstr ""
+msgstr "Zanurzenie kąta narożnika)"
 
 msgid "Round Inside Corners As well?"
-msgstr ""
+msgstr "Zaokrąglić również wewnętrzne narożniki?"
 
-#, fuzzy
 msgid "Enable Different Maximised Colors?"
 msgstr "Włączyć zróżnicowane kolory maksymalizacji?"
 
@@ -740,42 +744,42 @@ msgstr "Częstotliwośc powtarzania"
 
 #. /////////////////////
 msgid "Enable Title Part Pixmap?"
-msgstr "Włączyć pixmapę paska tytułu?"
+msgstr "Włączyć obrazek rastrowy części tytułowej?"
 
 msgid "Repeat Title Part Pixmap?"
-msgstr "Powtarzać pixmapę paska tytułu?"
+msgstr "Powtarzać obrazek rastrowy części tytułowej?"
 
 msgid "Title Bar Part Pixmap"
-msgstr ""
+msgstr "Obrazek rastrowy części paska tytułowego"
 
 msgid "Choose Titlebar Part Pixmap"
-msgstr ""
+msgstr "Wybierz obrazek rastrowy części paska tytułowego"
 
 #. /////////////////////////
 msgid "Enable Button Part Pixmap?"
-msgstr ""
+msgstr "Włączyć obrazek rastrowy części przycisków?"
 
 msgid "Repeat Button Part Pixmap?"
-msgstr ""
+msgstr "Powtarzać obrazek rastrowy części przycisków?"
 
 msgid "Button Part Pixmap"
-msgstr ""
+msgstr "Obrazek rastrowy części przycisków"
 
 msgid "Choose Button Part Pixmap"
-msgstr ""
+msgstr "Wybierz obrazek rastrowy części przycisków"
 
 #. /////////////////////////
 msgid "Enable Titlebar Pixmap?"
-msgstr "Włączyć pixmapę paska tytułu?"
+msgstr "Włączyć obrazek rastrowy paska tytułu?"
 
 msgid "Repeat Titlebar Pixmap?"
-msgstr "Powtarzać pixmapę paska tytulu?"
+msgstr "Powtarzać obrazek rastrowy paska tytulu?"
 
 msgid "Titlebar Pixmap"
-msgstr "Pixmapa paska tytułu"
+msgstr "Obrazek rastrowy paska tytułu"
 
 msgid "Choose Titlebar Pixmap"
-msgstr "Wybierz pixmapę paska tytułu"
+msgstr "Wybierz obrazek rastrowy paska tytułu"
 
 msgid "Active/Inactive"
 msgstr "Aktywny/Nieaktywny"
@@ -795,7 +799,7 @@ msgid "Left Bar"
 msgstr "Lewy pasek"
 
 msgid "Pixmaps"
-msgstr "Pixmapy"
+msgstr "Obrazki rastrowe"
 
 #~ msgid "Repositories"
 #~ msgstr "Repozytoria"
