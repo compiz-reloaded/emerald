@@ -670,8 +670,10 @@ void layout_button_pane(GtkWidget * vbox)
     GtkWidget * scroller;
     GtkWidget * hbox;
     gint i;
-    
-    hbox = gtk_hbox_new(FALSE,2);
+    /* Yeah, the names should probably be renamed from hbox since it's now
+     * a vbox...
+     */ 
+    hbox = gtk_vbox_new(FALSE,2);
     gtk_box_pack_startC(vbox,hbox,FALSE,FALSE,0);
     layout_general_buttons_frame(hbox);
     
