@@ -1,50 +1,50 @@
-# emerald fi translation.
+# Emerald da translation.
 # Copyright (C) 2008 compiz-fusion.org
 # This file is distributed under the same license as the emerald package.
-# Birunthan Mohanathas <biru@inbox.com>, 2008.
+# Ulrik F. Damm <ulrik04@yahoo.dk>.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: emerald 0.6\n"
+"Project-Id-Version: emerald\n"
 "Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
 "POT-Creation-Date: 2008-06-16 16:15+0530\n"
-"PO-Revision-Date: 2008-02-10 13:56+0100\n"
-"Last-Translator: Birunthan Mohanathas <biru@inbox.com>\n"
-"Language-Team: Birunthan Mohanathas <biru@inbox.com>\n"
+"PO-Revision-Date: 2008-04-25 19:35+0200\n"
+"Last-Translator: Ulrik F. Damm <ulrik04@yahoo.dk>\n"
+"Language-Team: Ulrik F. Damm <ulrik04@yahoo.dk>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Pootle 1.0.2\n"
+"X-Generator: Pootle 1.1.0\n"
 
 msgid "Close Window"
-msgstr "Sulje ikkuna"
+msgstr "Luk vindue"
 
 msgid "Maximize Window"
-msgstr "Suurenna ikkuna"
+msgstr ""
 
 msgid "Restore Window"
-msgstr "Palauta ikkuna"
+msgstr "Gendan vindue"
 
 msgid "Minimize Window"
-msgstr "Pienennä ikkuna"
+msgstr "Minimer vindue"
 
 msgid "Context Help"
-msgstr "Ohjeen aiheet"
+msgstr ""
 
 msgid "Window Menu"
-msgstr "Ikkunavalikko"
+msgstr "Vindue menu"
 
 msgid "Shade Window"
-msgstr "Varjosta ikkuna"
+msgstr ""
 
 msgid "UnShade Window"
-msgstr "Poista varjostus ikkunasta"
+msgstr ""
 
 msgid "Set Above"
-msgstr "Aseta päälle"
+msgstr "Put øverst"
 
 msgid "UnSet Above"
-msgstr "Älä aseta päälle"
+msgstr ""
 
 msgid "Stick Window"
 msgstr ""
@@ -54,14 +54,14 @@ msgstr ""
 
 #, c-format
 msgid "The window \"%s\" is not responding."
-msgstr "Ikkunna \"%s\" ei vastaa"
+msgstr "Vinduet \"%s\" svarer ikke"
 
 msgid ""
 "Forcing this application to quit will cause you to lose any unsaved changes."
-msgstr "Jos suljet ikkunan väkisin, menentät kaikki tallentamattomat muutokset"
+msgstr ""
 
 msgid "_Force Quit"
-msgstr "_Sulje väkisin"
+msgstr ""
 
 #, c-format
 msgid ""
@@ -72,12 +72,6 @@ msgid ""
 "<b>Use With</b> %s\n"
 "</small>"
 msgstr ""
-"<b><big>%s</big></b>\n"
-"<i>%s</i>\n"
-"<small><b>Versio</b> %s\n"
-"<b>Tekijä</b> %s\n"
-"<b>Käytä</b> %s kanssa\n"
-"</small>"
 
 #, c-format
 msgid ""
@@ -88,150 +82,140 @@ msgid ""
 "<b>Use With</b> %s\n"
 "</small>"
 msgstr ""
-"<b><big>%s</big></b> (Järjestelmäteema)\n"
-"<i>%s</i>\n"
-"<small><b>Versio</b> %s\n"
-"<b>Tekijä</b> %s\n"
-"<b>Käytä</b> %s kanssa\n"
-"</small>"
 
 msgid "Unknown"
-msgstr "Tuntematon"
+msgstr "Ukendt"
 
 msgid "Whatever (no hint)"
-msgstr "Mikä tahansa (ei vihjettä)"
+msgstr ""
 
 msgid "No Description"
-msgstr "Ei kuvausta"
+msgstr "Ingen beskrivelse"
 
 msgid "Invalid Theme Name"
-msgstr "Teeman nimi on kelvoton"
+msgstr ""
 
 msgid "Invalid theme file.  Does not end in .emerald"
-msgstr "Teeman tiedosto on kelvoton, koska ei ole lopu .emerald"
+msgstr ""
 
 msgid ""
 "Invalid Theme Name\n"
 "Could Not Export"
 msgstr ""
-"Teeman nimi on kelvoton\n"
-"Vienti epäonnistui"
 
 msgid ""
 "Invalid File Name\n"
 "Must End in .emerald"
 msgstr ""
-"Teeman tiedostonimi on kelvoton\n"
-"Pitää loppua .emerald"
 
 msgid "Error calling tar."
-msgstr ""
+msgstr "kunne ikke kalde tar."
 
 msgid "Theme Exported"
-msgstr "Teeman vienti onnistui"
+msgstr ""
 
 msgid ""
 "Can't save over system themes\n"
 "(or you forgot to enter a name)"
 msgstr ""
-"Järjestelmän teemojen pääkirjoittaminen on estetty\n"
-"(tai unohdit kirjoittaa nimen)"
+"kan ikke overskrive systemtemaer\n"
+"(eller du har glemt at indtaste et navn)"
 
 #, c-format
 msgid "Overwrite Theme %s?"
-msgstr "Päällekirjoita teema %s?"
+msgstr "Overskriv temaet %s?"
 
 msgid "Couldn't Write Theme"
-msgstr "Teeman asennus epäonnistui"
+msgstr ""
 
 msgid "Couldn't Form Theme"
 msgstr ""
 
 msgid "Theme Saved"
-msgstr "Teema tallennettu"
+msgstr "Tema gemt"
 
 msgid ""
 "Can't delete system themes\n"
 "(or you forgot to enter a name)"
 msgstr ""
-"Järjestelmän teemojen poistaminen on estetty\n"
-"(tai unohdit kirjoittaa nimen)"
+"Kan ikke slette systemtemaer\n"
+"(eller du har glemt at indtaste et navn)"
 
 #, c-format
 msgid "Are you sure you want to delete %s?"
-msgstr "Oletko varma että haluat poistaa %s?"
+msgstr "Er du sikker på du vil slette %s?"
 
 msgid "Theme deleted"
-msgstr "Teema poistettu"
+msgstr "Tema slettet"
 
 msgid "No such theme to delete"
-msgstr "Poistettavaa teemaa ei löydy"
+msgstr "Der er ikke noget tema at slette"
 
 msgid "Use Pixmap Buttons"
-msgstr "Käytä pixmap painikkeita"
+msgstr ""
 
 msgid "Use Button Halo/Glow"
-msgstr "Käytä painikkeiden hehkua/haloa"
+msgstr ""
 
 msgid "Use Button Halo/Glow For Inactive Windows"
-msgstr "Käytä painikkeiden hehkua/haloa passiivisiin ikkuinoihin"
+msgstr ""
 
 msgid "Button Pixmaps"
-msgstr "Painikkeen pixmapit"
+msgstr ""
 
 msgid "Button"
-msgstr "Painike"
+msgstr "Knap"
 
 msgid "File"
-msgstr "Tiedosto"
+msgstr "Fil"
 
 msgid "Preview"
-msgstr "Esikatselu"
+msgstr ""
 
 msgid "Clear"
-msgstr "Tyhjennä"
+msgstr ""
 
 msgid "Colors"
-msgstr "Värit"
+msgstr "Farver"
 
 msgid "Text Fill"
-msgstr "Tekstin täyttöväri"
+msgstr "Tekst fyld"
 
 msgid "Text Outline"
-msgstr "Tekstin ääriviivat"
+msgstr "Tekst kant"
 
 msgid "Button Fill"
-msgstr "Painikkeiden täyttöväri"
+msgstr "Knap fyld"
 
 msgid "Button Outline"
-msgstr "Painikkeiden ääriviivat"
+msgstr "Knap kant"
 
 msgid "Color"
-msgstr "Väri"
+msgstr "Farve"
 
 msgid "Opacity"
-msgstr "Läpinäkyvyys"
+msgstr "Gennemsigtighed"
 
 msgid "Radius"
-msgstr "Säde"
+msgstr "Radius"
 
 msgid "X Offset"
-msgstr "X poikkeama"
+msgstr ""
 
 msgid "Y Offset"
-msgstr "Y poikkeama"
+msgstr ""
 
 msgid "Title-Text Font"
-msgstr "Otsikon kirjaisin"
+msgstr "Titel-tekst skrifttype"
 
 msgid "Minimum Title-bar Height"
-msgstr "Otsikon vähimmäis korkeus"
+msgstr "Minimum titellinje højde"
 
 msgid "Vertical Button Offset"
-msgstr "Painikkeen poikkeama pystysuorassa"
+msgstr ""
 
 msgid "Horizontal Button Offset"
-msgstr "Painikkeen poikkeama vaakasuorassa"
+msgstr ""
 
 msgid "Title-bar Object Layout"
 msgstr ""
@@ -246,49 +230,49 @@ msgid ""
 msgstr ""
 
 msgid "Export Theme..."
-msgstr "Vie teema..."
+msgstr ""
 
 msgid "Name:"
-msgstr "Nimi:"
+msgstr "Navn:"
 
 msgid "Untitled Theme"
-msgstr "Nimetön teema"
+msgstr "Unavngivet tema"
 
 msgid "Export..."
-msgstr "Vie..."
+msgstr "Eksporter..."
 
 msgid "Creator"
-msgstr "Tekijä"
+msgstr ""
 
 msgid "Description"
-msgstr "Kuvaus"
+msgstr "Beskrivelse"
 
 msgid "Theme Version"
-msgstr "Teeman versio"
+msgstr "Tema version"
 
 msgid "Suggested Widget Theme"
-msgstr "Suositeltu Widget teema"
+msgstr ""
 
 msgid "Themer Version"
 msgstr ""
 
 msgid "Border"
-msgstr "Reunat"
+msgstr "Kant"
 
 msgid "Size"
-msgstr "Koko"
+msgstr "Størrelse"
 
 msgid "Top"
-msgstr "Yläreuna"
+msgstr "Top"
 
 msgid "Bottom"
-msgstr "Alareuna"
+msgstr "Bund"
 
 msgid "Left"
-msgstr "Vasen"
+msgstr "Venstre"
 
 msgid "Right"
-msgstr "Oikea"
+msgstr "Højre"
 
 msgid ""
 "Note, when changing these values,\n"
@@ -304,136 +288,127 @@ msgid ""
 msgstr ""
 
 msgid "Shadows"
-msgstr "Varjot"
+msgstr "Skygger"
 
 msgid "Frame Borders"
-msgstr "Kehyksen reunat"
+msgstr ""
 
 msgid "Active Window"
-msgstr "Aktiivinen ikkuna"
+msgstr "Aktivt vindue"
 
 msgid "Inactive Window"
-msgstr "Passiivinen ikkuna"
+msgstr "Inaktivt vindue"
 
 msgid "Title Bar"
-msgstr "Otsikkopalkki"
+msgstr "Titellinje"
 
 msgid "Screenshot"
-msgstr "Teeman kuvakaappaus"
+msgstr "Skærmbillede"
 
 msgid "Images"
-msgstr "Kuvat"
+msgstr "Billeder"
 
 msgid "Information"
-msgstr "Tietoa"
+msgstr "Information"
 
 msgid ""
 "NOTE - These settings are not part of themes, they are stored separately, "
 "and control various UI preferences for Emerald."
 msgstr ""
-"HUOMIO - Nämä asetukset eivät liity teemaan. Ne ovat tallenettu erikseen ja "
-"ne määrittävät useita Emeraldin käyttöliittymän asetuksia."
+"HUSK - Disse indstillinger er ikke en del af temaet, de er lagret seperat, "
+"og styrer forskellige brugerfladeindstillinger for Emerald"
 
 msgid "Show Tooltips for Buttons"
-msgstr "Näytä työkaluvihjeet painikkeille"
+msgstr ""
 
 msgid "Use Decoration Cropping"
-msgstr "Käytä koristelujen rajamamista"
+msgstr ""
 
 msgid "Use Button Fade"
-msgstr "Käytä painikkeen häivytystä"
+msgstr ""
 
 msgid "Use Button Fade Pulse"
-msgstr "Käytä painikkeen häivytystä sykkeellä"
+msgstr ""
 
 msgid "Button Fade Total Duration"
-msgstr "Painikkeen häivytyksen kesto"
+msgstr ""
 
 msgid "Button Fade Step Duration"
-msgstr "Painikkeen häivytyksen laatu"
+msgstr ""
 
 msgid "Button Pulse Wait Duration"
-msgstr "Painikkeen häivytyksen alkamisviive"
+msgstr ""
 
 msgid "Button Pulse Min Opacity %"
-msgstr "Sykkeen maksimi läpinäkyvyys"
+msgstr ""
 
 msgid "Titlebar Double-Click Action"
-msgstr "Otsikkopalkin kaksoisnapautuksen toimenpide"
+msgstr "Titellinje dobbeltklik handling"
 
 msgid "Button Hover Cursor"
-msgstr "Painikkeen päällä käytettävä osoitin"
+msgstr ""
 
 msgid "Normal"
-msgstr "Normaali"
+msgstr "Normal"
 
 msgid "Pointing Finger"
-msgstr "Osoittava sormi"
+msgstr ""
 
 msgid "Compiz Decoration Blur Type"
-msgstr "Compiz koristelujen sumennus"
+msgstr ""
 
 msgid "None"
-msgstr "Pois käytöstä"
+msgstr "Ingen"
 
 msgid "Titlebar only"
-msgstr "Vain otsikkopalkkille"
+msgstr "Kun titellinje"
 
 msgid "All decoration"
-msgstr "Kaikille koristeille"
+msgstr ""
 
 msgid "Frame Engine"
-msgstr "Kehyksen moottori"
+msgstr ""
 
 msgid "Buttons"
-msgstr "Painikkeet"
+msgstr "Knapper"
 
 msgid "Frame/Shadows"
-msgstr "Kehys ja varjot"
+msgstr "Ramme/Skygger"
 
 msgid "Titlebar"
-msgstr "Otsikkopalkki"
+msgstr "Titellinje"
 
 msgid "Theme"
-msgstr "Teema"
+msgstr "Tema"
 
 msgid "Edit"
-msgstr "Muokkaa"
+msgstr "Rediger"
 
 msgid "Import Theme..."
-msgstr "Tuo teema..."
+msgstr "Impoter tema..."
 
 msgid "Search:"
-msgstr "Haku:"
+msgstr "Søg:"
 
 msgid "Fetching Themes"
-msgstr "Haetaan teemoja"
+msgstr ""
 
 msgid ""
 "Fetching themes... \n"
 "This may take time depending on \n"
 "internet connection speed."
 msgstr ""
-"Haetaan teemoja... \n"
-"Tämä saattaa kestää useita minuutteja riippuen \n"
-"internet yhteyden nopeudesta"
 
-#, fuzzy
 msgid ""
 "Here are the repositories that you can fetch Emerald Themes from. \n"
 "Fetching themes would fetch and import themes from SVN repositories \n"
 "You need Subversion package installed to use this feature."
 msgstr ""
-"Tässä ovat lähteet, joilta voit ladata Emerald teemoja. \n"
-"Teemojen lataus toisi teemoja SVN lähteistä \n"
-"You need Subversion package installed to use this feature."
 
 msgid ""
 "This repository contains GPL'd themes that can be used under \n"
 "the terms of GNU GPL licence v2.0 or later \n"
 msgstr ""
-"Tämä lähde sisältää GPLöityjä teemoja, joita voi käyttää\n"
-"GNU GPL (versio 2 tai uudempi) lisenssin ehtojen alaisuudessa \n"
 
 msgid ""
 "This repository contains non-GPL'd themes. They might infringe \n"
@@ -447,118 +422,112 @@ msgid ""
 msgstr ""
 
 msgid "Themes"
-msgstr "Teemoja"
+msgstr "Temaer"
 
 msgid "Edit Themes"
-msgstr "Muokkaa teemoja"
+msgstr "Rediger Temaer"
 
 msgid "Themes Settings"
-msgstr "Teeman asetukset"
+msgstr "Tema indstillinger"
 
 msgid "Emerald Settings"
-msgstr "Emeraldin asetukset"
+msgstr "Emerald indstillinger"
 
 msgid ""
 "Select\n"
 "Engine"
 msgstr ""
-"Valitse\n"
-"moottori"
 
 msgid "Based on original gnome-window-decorator"
-msgstr "Perustuu alkuperäiseen gnome-window-decoratoriin"
+msgstr ""
 
 msgid "Round Top Left Corner"
-msgstr "Pyöristetty vasen yläkulma"
+msgstr ""
 
 msgid "Round Top Right Corner"
-msgstr "Pyöristetty oikea yläkulma"
+msgstr ""
 
 msgid "Round Bottom Left Corner"
-msgstr "Pyöristetty vasen alakulma"
+msgstr ""
 
 msgid "Round Bottom Right Corner"
-msgstr "Pyöristetty oikea alakulma"
+msgstr ""
 
 msgid "Rounding Radius"
-msgstr "Pyöristyksen säde"
+msgstr ""
 
-#, fuzzy
 msgid "Outer Frame Blend"
-msgstr "Kehyksen seos"
+msgstr ""
 
-#, fuzzy
 msgid "Inner Frame Blend"
-msgstr "Sisäisin kehys"
+msgstr ""
 
-#, fuzzy
 msgid "Outer Titlebar Blend"
-msgstr "Ulkoisen otsikkopalkin sekoitus"
+msgstr ""
 
-#, fuzzy
 msgid "Inner Titlebar Blend"
-msgstr "Sisäisen otsikkopalkin sekoitus"
+msgstr ""
 
 msgid "Titlebar Separator"
-msgstr "Otsikkopalkin erotin"
+msgstr ""
 
 msgid "Frame Outline"
-msgstr "Kehyksen ääriviiva"
+msgstr ""
 
 msgid "Frame Highlight"
-msgstr "Kehyksen Korostus"
+msgstr ""
 
 msgid "Frame Shadow"
-msgstr "Kehyksen Varjo"
+msgstr ""
 
 msgid "Contents Outline"
-msgstr "Sisällön ääriviiva"
+msgstr ""
 
 msgid "Contents Highlight"
-msgstr "Sisällön korostus"
+msgstr ""
 
 msgid "Contents Shadow"
-msgstr "Sisällön varjo"
+msgstr ""
 
 msgid "Frame"
-msgstr "Kehys"
+msgstr ""
 
 msgid "Based on original legacy"
-msgstr "Perustuu alkuperäiseen legacy moottoriin"
+msgstr ""
 
 msgid "Designed to be vista-ish in nature"
-msgstr "Suuninteltu Vistamaiseksi"
+msgstr ""
 
 msgid "Base"
-msgstr "Pohja"
+msgstr ""
 
 msgid "Glow"
-msgstr "Hehku"
+msgstr ""
 
 msgid "Sides"
-msgstr "Sivut"
+msgstr ""
 
 msgid "Everything done with customizable pixmaps!"
-msgstr "Kaikki tehty muokattavilla pixmapeilla!"
+msgstr ""
 
 msgid "Top Rounding Radius"
-msgstr "Yläkulman pyöristyksen säde"
+msgstr ""
 
 msgid "Bottom Rounding Radius"
-msgstr "Alakulman pyöristyksen säde"
+msgstr ""
 
 #. Style : Use Tiled or Scaled pixmaps
 msgid "Scaled"
-msgstr "Skaalattu"
+msgstr ""
 
 msgid "Not adjustable"
-msgstr "Säätämätön"
+msgstr ""
 
 msgid "Same as Active"
-msgstr "Samanlainen kuin aktiivinen"
+msgstr ""
 
 msgid "Pixmap"
-msgstr "Pixmap"
+msgstr ""
 
 msgid "Tiled/Scaled"
 msgstr ""
@@ -570,10 +539,10 @@ msgid "Height Override"
 msgstr ""
 
 msgid "Glassy effects for your windows"
-msgstr "Lasimaiset efektit ikkunoille"
+msgstr ""
 
 msgid "Glow Height"
-msgstr "Hehkun korkeus"
+msgstr ""
 
 msgid "Frame Base Color"
 msgstr ""
@@ -606,7 +575,7 @@ msgid "Right Blend"
 msgstr ""
 
 msgid "Contrast"
-msgstr "Kontrasti"
+msgstr ""
 
 msgid "(Color)"
 msgstr ""
@@ -618,7 +587,7 @@ msgid "Notch"
 msgstr ""
 
 msgid "Position"
-msgstr "Sijainti"
+msgstr ""
 
 msgid "Curve"
 msgstr ""
@@ -627,22 +596,22 @@ msgid "Offset"
 msgstr ""
 
 msgid "Use Glow"
-msgstr "Käytä hehkua"
+msgstr ""
 
 msgid "Title Glow"
-msgstr "Otsikon hehku"
+msgstr ""
 
 msgid "Evolved from the legacy engine"
 msgstr ""
 
 msgid "Border Gap"
-msgstr "Reunan väli"
+msgstr ""
 
 msgid "Show Border when maximised?"
-msgstr "Näytä reuna kun suurenettuna?"
+msgstr ""
 
 msgid "Show when minimised?"
-msgstr "Näytä kun pienenetty?"
+msgstr ""
 
 msgid "Minimised Border Size"
 msgstr ""
@@ -651,13 +620,13 @@ msgid "Enable Left Bar Dip?"
 msgstr ""
 
 msgid "Left Bar Radius"
-msgstr "Vasemman palkin säde"
+msgstr ""
 
 msgid "Enable Lower Bulge? (Useless at the moment, but will be used soon)"
 msgstr ""
 
 msgid "Top Corner Offset (%)"
-msgstr "Yläkulman poikkeama (%)"
+msgstr ""
 
 msgid "Enable Title Bar Dip?"
 msgstr ""
@@ -738,28 +707,25 @@ msgid "Repeat Titlebar Pixmap?"
 msgstr ""
 
 msgid "Titlebar Pixmap"
-msgstr "Otsikkopalkin pixmap"
+msgstr ""
 
 msgid "Choose Titlebar Pixmap"
-msgstr "Valitse otsikkopalkin pixmap"
+msgstr ""
 
 msgid "Active/Inactive"
-msgstr "Aktiivinen/Passiivinen"
+msgstr ""
 
 msgid "Maximised"
-msgstr "Suurenettu"
+msgstr ""
 
 msgid "Corners"
-msgstr "Kulmat"
+msgstr ""
 
 msgid "Border Layout"
 msgstr ""
 
 msgid "Left Bar"
-msgstr "Vasen palkki"
+msgstr ""
 
 msgid "Pixmaps"
-msgstr "Pixmapit"
-
-#~ msgid "Repositories"
-#~ msgstr "Lähteet"
+msgstr ""

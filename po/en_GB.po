@@ -5,15 +5,16 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: 0.1 \n"
+"Project-Id-Version: 0.1\n"
 "Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
-"POT-Creation-Date: 2008-05-24 22:09+0530\n"
-"PO-Revision-Date: 2006-10-04 21:06+0200\n"
-"Last-Translator: Bruce Cowan <bruce.cowan@dsl.pipex.com>\n"
+"POT-Creation-Date: 2008-06-16 16:15+0530\n"
+"PO-Revision-Date: 2008-05-26 15:34+0200\n"
+"Last-Translator: David Lodge <dave@cirt.net>\n"
 "Language-Team: beryl-project <ixce@beryl-project.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Pootle 1.1.0\n"
 
 msgid "Close Window"
 msgstr "Close Window"
@@ -387,17 +388,16 @@ msgid "Pointing Finger"
 msgstr "Pointing Finger"
 
 msgid "Compiz Decoration Blur Type"
-msgstr ""
+msgstr "Compiz Decoration Blur Type"
 
 msgid "None"
-msgstr ""
+msgstr "None"
 
-#, fuzzy
 msgid "Titlebar only"
-msgstr "Titlebar"
+msgstr "Titlebar only"
 
 msgid "All decoration"
-msgstr ""
+msgstr "All decoration"
 
 msgid "Frame Engine"
 msgstr "Frame Engine"
@@ -458,13 +458,12 @@ msgstr ""
 "This repository contains non-GPL'd themes. They might infringe \n"
 "copyrights and patent laws in some countries."
 
-#, fuzzy
 msgid ""
 "To activate Non-GPL repository please run the following in shell and accept "
 "the server certificate permanently: \n"
 "svn ls https://svn.generation.no/emerald-themes."
 msgstr ""
-"To activate the non-GPL repository please run the following in a shell and "
+"To activate Non-GPL repository please run the following in a shell and "
 "accept the server certificate permanently: \n"
 "svn ls https://svn.generation.no/emerald-themes."
 
@@ -541,9 +540,8 @@ msgstr "Contents Shadow"
 msgid "Frame"
 msgstr "Frame"
 
-#, fuzzy
 msgid "Based on original legacy"
-msgstr "Based on original gnome-window-decorator"
+msgstr "Based on original legacy"
 
 msgid "Designed to be vista-ish in nature"
 msgstr "Designed to be vista-ish in nature"
