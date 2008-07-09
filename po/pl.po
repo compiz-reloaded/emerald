@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1\n"
 "Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
-"POT-Creation-Date: 2008-06-16 16:16+0530\n"
-"PO-Revision-Date: 2008-05-09 22:07+0200\n"
-"Last-Translator: Jarek Sobolewski <r@sledinmay.com>\n"
+"POT-Creation-Date: 2008-07-09 16:46+0530\n"
+"PO-Revision-Date: 2008-06-19 15:11+0200\n"
+"Last-Translator: Michal Kaluzniak <the_hooltay@o2.pl>\n"
 "Language-Team: pl_PL <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -146,7 +146,6 @@ msgstr "Nadpisać dekorację %s?"
 msgid "Couldn't Write Theme"
 msgstr "Nie można zapisać dekoracji"
 
-#, fuzzy
 msgid "Couldn't Form Theme"
 msgstr "Nie można wypełnić dekoracji"
 
@@ -240,7 +239,6 @@ msgstr "Przesunięcie poziome przycisków"
 msgid "Title-bar Object Layout"
 msgstr "Wygląd obiektów na pasku tytułowym"
 
-#, fuzzy
 msgid ""
 "Use colons to separate left, center, and right.\n"
 "Anything after a third colon is ignored.\n"
@@ -249,14 +247,6 @@ msgid ""
 "S=Shade, U/A=On Top(Up/Above)\n"
 "Y=Sticky, (#)=# pixels space, ex: (5)\n"
 msgstr ""
-"Użyj znaku dwukropka, aby rozdzielić elementy na lewą stronę, środek i prawą "
-"stronę.\n"
-"Znaki po trzecim dwukropku są ignorowane.\n"
-"C=Zamknij, M=Minimalizuj, X/R=Przywróć\n"
-"I=Ikona, T=Tytuł, H=Pomoc, M=Menu\n"
-"S=Przycień, U/A=Na wierzchu(Góra/Ponad)\n"
-"Y=Przyciągaj, (#)=odstęp # pikseli, np. (5)\n"
-" "
 
 msgid "Export Theme..."
 msgstr "Eksportuj dekorację..."
@@ -303,7 +293,6 @@ msgstr "Lewo"
 msgid "Right"
 msgstr "Prawo"
 
-#, fuzzy
 msgid ""
 "Note, when changing these values,\n"
 "it is advised that you do something\n"
@@ -316,16 +305,6 @@ msgid ""
 "the titlebar-min-height slider\n"
 "or the titlebar font setting.\n"
 msgstr ""
-"Uwaga, zmieniając te wartości,\n"
-"wskazane jest zrobienie czegoś\n"
-"jak n.p. zmiana okna roboczego,\n"
-"dzięki czemu pozycja wybranego okna\n"
-"zostanie uaktualniona prawidłowo, przez co\n"
-"zmieniane okna będą działać włąściwie.\n"
-"To ma również zastosowanie przy zmianie\n"
-"wysokości pasków tytułu przez zarówno\n"
-"przez suwak wysokości tytułu jak i ustawienia\n"
-"czcionki tytułu"
 
 msgid "Shadows"
 msgstr "Cienie"
@@ -376,7 +355,6 @@ msgstr "Całkowity czas zanikania przycisku"
 msgid "Button Fade Step Duration"
 msgstr "Czas kroku zanikania przycisku"
 
-#, fuzzy
 msgid "Button Pulse Wait Duration"
 msgstr "Czas oczekiwania pulsującego przycisku"
 
@@ -664,11 +642,9 @@ msgstr "Używaj poświaty"
 msgid "Title Glow"
 msgstr "Poświata tytułu"
 
-#, fuzzy
 msgid "Evolved from the legacy engine"
 msgstr "Rozwinięty ze starego silnika"
 
-#, fuzzy
 msgid "Border Gap"
 msgstr "Luka brzegowa"
 

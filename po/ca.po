@@ -8,13 +8,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Emerald 0.2\n"
 "Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
-"POT-Creation-Date: 2008-06-16 16:15+0530\n"
-"PO-Revision-Date: 2007-03-04 22:14+0100\n"
-"Last-Translator: Antonio Cuñat i Alario <toni.cunat@gmail.com>\n"
+"POT-Creation-Date: 2008-07-09 16:46+0530\n"
+"PO-Revision-Date: 2008-06-28 16:24+0200\n"
+"Last-Translator: berylog <berylog@gmail.com>\n"
 "Language-Team: Catalan\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Pootle 1.1.0\n"
 "X-Poedit-Language: Catalan\n"
 
 msgid "Close Window"
@@ -60,8 +61,8 @@ msgstr "La finestra \"%s\" no està responent."
 msgid ""
 "Forcing this application to quit will cause you to lose any unsaved changes."
 msgstr ""
-"Força que aquesta aplicació es tanque, açò pot causar pèrdua de les dades no "
-"desades."
+"Força que aquesta aplicació es tanqui, això pot causar pèrdua de les dades "
+"no desades."
 
 msgid "_Force Quit"
 msgstr "_Forçar Tancar"
@@ -94,7 +95,7 @@ msgstr ""
 "<b><big>%s</big></b> (Tema de Sistema)\n"
 "<i>%s</i>\n"
 "<small><b>Versió</b> %s\n"
-"<b>Creat per</b> %s\n"
+"<b>Creat Per</b> %s\n"
 "<b>Emprar amb</b> %s\n"
 "</small>"
 
@@ -107,11 +108,12 @@ msgstr "Qualsevol (cap ajuda)"
 msgid "No Description"
 msgstr "Sense descripció"
 
+# berylog: més que desconegut hauria de ser invàlid
 msgid "Invalid Theme Name"
-msgstr "Nom del tema desconegut"
+msgstr "Nom del tema no vàlid"
 
 msgid "Invalid theme file.  Does not end in .emerald"
-msgstr "Arxiu de tema no vàlid. no acaba amb .emerald"
+msgstr "Arxiu de tema no vàlid. No acaba amb .emerald"
 
 msgid ""
 "Invalid Theme Name\n"
@@ -125,7 +127,7 @@ msgid ""
 "Must End in .emerald"
 msgstr ""
 "Nom d'arxiu no vàlid\n"
-"Deuria acabar amb .emerald"
+"Hauria d'acabar amb .emerald"
 
 msgid "Error calling tar."
 msgstr "Error al cridar l'ordre tar."
@@ -225,7 +227,7 @@ msgid "Y Offset"
 msgstr "Valor Y"
 
 msgid "Title-Text Font"
-msgstr "Títol- Font del Text"
+msgstr "Font del Títol"
 
 msgid "Minimum Title-bar Height"
 msgstr "Alçada mínima de la barra de títol"
@@ -388,18 +390,20 @@ msgstr "Normal"
 msgid "Pointing Finger"
 msgstr "Dit apuntador"
 
+#, fuzzy
 msgid "Compiz Decoration Blur Type"
-msgstr ""
+msgstr "Tipus de la decoració Blur"
 
 msgid "None"
-msgstr ""
+msgstr "Cap"
 
 #, fuzzy
 msgid "Titlebar only"
-msgstr "Barra de Títol"
+msgstr "Només barra de títol"
 
+#, fuzzy
 msgid "All decoration"
-msgstr ""
+msgstr "Tota la decoració"
 
 msgid "Frame Engine"
 msgstr "Motor de la Finestra"
@@ -493,16 +497,16 @@ msgid "Based on original gnome-window-decorator"
 msgstr "Basat en la decoració de gnome"
 
 msgid "Round Top Left Corner"
-msgstr "Arredonir cantó esquerre superior"
+msgstr "Arrodonir cantó esquerre superior"
 
 msgid "Round Top Right Corner"
-msgstr "Arredonir cantó dret superior"
+msgstr "Arrodonir cantó dret superior"
 
 msgid "Round Bottom Left Corner"
-msgstr "Arredonir cantó esquerre inferior"
+msgstr "Arrodonir cantó esquerre inferior"
 
 msgid "Round Bottom Right Corner"
-msgstr "Arredonir cantó dret inferior"
+msgstr "Arrodonir cantó dret inferior"
 
 msgid "Rounding Radius"
 msgstr "Radi"
@@ -699,7 +703,7 @@ msgid "Dip Corners Radius)"
 msgstr "Radi d'enfonsament dels Cantons)"
 
 msgid "Round Inside Corners As well?"
-msgstr "Arredonir també els cantons Interiors?"
+msgstr "Arrodonir també els cantons Interiors?"
 
 msgid "Enable Different Maximised Colors?"
 msgstr "Activar Diferents Colors en Maximitzar?"
@@ -708,13 +712,13 @@ msgid "Turn Off repeating gradients when maximised?"
 msgstr "Desactivar repetició en els gradients quan estan maximitzats?"
 
 msgid "Round Top Left Corner?"
-msgstr "Arredonir Cantó superior Esquerre?"
+msgstr "Arrodonir Cantó superior Esquerre?"
 
 msgid "Frame Rounding Radius"
-msgstr "Radi d'arredonir Marc"
+msgstr "Radi d'arrodonir Marc"
 
 msgid "Titlebar Rounding Radius"
-msgstr "Radi d'arredonir Barra de Títol"
+msgstr "Radi d'arrodonir Barra de Títol"
 
 msgid "Repeat Gradient?"
 msgstr "Repetir Gradient?"
