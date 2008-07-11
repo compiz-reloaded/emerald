@@ -5,10 +5,9 @@ Name[fr]=Gestionnaire de thèmes Emerald
 Comment=Configure Emerald themes
 Comment[fr]=Configurerer les options des thèmes Emerald
 Icon=/usr/share/pixmaps/emerald-theme-manager-icon.png
-Exec=emerald-theme-manager
 Terminal=false
 Type=Application
 Categories=Settings;DesktopSettings;
-Exec=emerald-theme-manager -i 
+Exec=emerald-theme-manager -i %f
 MimeType=application/x-emerald-theme;
 
