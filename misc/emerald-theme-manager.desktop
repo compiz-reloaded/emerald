@@ -8,7 +8,7 @@ Icon=/usr/share/pixmaps/emerald-theme-manager-icon.png
 Exec=emerald-theme-manager
 Terminal=false
 Type=Application
-Categories=Settings;
+Categories=Settings;DesktopSettings;
 Exec=emerald-theme-manager -i 
 MimeType=application/x-emerald-theme;
 
