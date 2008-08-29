@@ -1203,6 +1203,13 @@ gint draw_buttons_timer_func(gpointer data)
     window_settings *ws = d->fs->ws;
     int num_steps = ws->button_fade_num_steps;
 
+    /* decorations no longer available? */
+    if (!d->buffer_pixmap && !d->pixmap)
+    {
+	stop_button_fade(d);
+	return FALSE;
+    }
+
     d->min_drawn_buttons_region.x1 = 10000;
     d->min_drawn_buttons_region.y1 = 10000;
     d->min_drawn_buttons_region.x2 = -100;
