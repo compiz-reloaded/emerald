@@ -2671,7 +2671,7 @@ static unsigned int get_mwm_prop(Window xwindow)
     if (err != Success || result != Success)
 	return decor;
 
-    if (n && mwm_hints)
+    if (mwm_hints)
     {
 	if (n >= PROP_MOTIF_WM_HINT_ELEMENTS &&
 	    mwm_hints->flags & MWM_HINTS_DECORATIONS)
