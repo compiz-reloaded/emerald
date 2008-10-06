@@ -3138,6 +3138,8 @@ static void add_frame_window(WnckWindow * win, Window frame)
 
     xdisplay = GDK_DISPLAY_XDISPLAY(gdk_display_get_default());
 
+    d->active = wnck_window_is_active(win);
+
     bzero(&attr, sizeof(XSetWindowAttributes));
     attr.event_mask = ButtonPressMask | EnterWindowMask | LeaveWindowMask;
     attr.override_redirect = TRUE;
@@ -3618,7 +3620,6 @@ static void window_opened(WnckScreen * screen, WnckWindow * win)
     bzero(d, sizeof(decor_t));
 
     wnck_window_get_geometry(win, NULL, NULL, &d->client_width, &d->client_height);
-    d->active = wnck_window_is_active(win);
 
     d->draw = draw_window_decoration;
     d->fs = d->active ? global_ws->fs_act : global_ws->fs_inact;
