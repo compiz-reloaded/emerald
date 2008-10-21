@@ -2788,6 +2788,7 @@ gint max_window_name_width(WnckWindow * win)
 	pango_layout_set_wrap(d->layout, PANGO_WRAP_CHAR);
     }
 
+    pango_layout_set_auto_dir (d->layout, FALSE);
     pango_layout_set_width(d->layout, -1);
     pango_layout_set_text(d->layout, name, strlen(name));
     pango_layout_get_pixel_size(d->layout, &w, NULL);
@@ -2817,6 +2818,7 @@ static void update_window_decoration_name(WnckWindow * win)
     {
 	gint w, n_line;
 
+	pango_layout_set_auto_dir (d->layout, FALSE);
 	pango_layout_set_text(d->layout, "", 0);
 	pango_layout_set_width(d->layout, 0);
 	layout_title_objects(win);
@@ -3190,6 +3192,7 @@ static gboolean update_switcher_window(WnckWindow * win, Window selected)
 
 	    if (d->layout)
 	    {
+		pango_layout_set_auto_dir (d->layout, FALSE);
 		pango_layout_set_width(d->layout, -1);
 		pango_layout_set_text(d->layout, name, name_length);
 
