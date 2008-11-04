@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: emerald 0.6\n"
 "Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
-"POT-Creation-Date: 2008-10-14 14:32+0530\n"
-"PO-Revision-Date: 2008-02-10 13:56+0100\n"
-"Last-Translator: Birunthan Mohanathas <biru@inbox.com>\n"
+"POT-Creation-Date: 2008-11-04 12:15+0530\n"
+"PO-Revision-Date: 2008-10-27 16:46+0100\n"
+"Last-Translator: Birunthan Mohanathas <legace@inbox.com>\n"
 "Language-Team: Birunthan Mohanathas <biru@inbox.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Pootle 1.0.2\n"
+"X-Generator: Pootle 1.1.0\n"
 
 msgid "Close Window"
 msgstr "Sulje ikkuna"
@@ -47,10 +47,10 @@ msgid "UnSet Above"
 msgstr "Älä aseta päälle"
 
 msgid "Stick Window"
-msgstr ""
+msgstr "Kiinnitä ikkuna"
 
 msgid "UnStick Window"
-msgstr ""
+msgstr "Poista ikkunan kiinnitys"
 
 #, c-format
 msgid "The window \"%s\" is not responding."
@@ -125,7 +125,7 @@ msgstr ""
 "Pitää loppua .emerald"
 
 msgid "Error calling tar."
-msgstr ""
+msgstr "Virheellinen pakkaus."
 
 msgid "Theme Exported"
 msgstr "Teeman vienti onnistui"
@@ -145,7 +145,7 @@ msgid "Couldn't Write Theme"
 msgstr "Teeman asennus epäonnistui"
 
 msgid "Couldn't Form Theme"
-msgstr ""
+msgstr "Teeman muotoilu epäonnistui"
 
 msgid "Theme Saved"
 msgstr "Teema tallennettu"
@@ -234,7 +234,7 @@ msgid "Horizontal Button Offset"
 msgstr "Painikkeen poikkeama vaakasuorassa"
 
 msgid "Title-bar Object Layout"
-msgstr ""
+msgstr "Otsikkipalkin esineiden sommittelu"
 
 msgid ""
 "Use colons to separate left, center, and right.\n"
@@ -244,6 +244,12 @@ msgid ""
 "S=Shade, U/A=On Top(Up/Above)\n"
 "Y=Sticky, (#)=# pixels space, ex: (5)\n"
 msgstr ""
+"Käytä kaksoispistettä erottaakseen vasenta, keskustaa, ja oikeaa.\n"
+"Kaikki kolmannen kaksoispisteen jälkeen jätetään huomiotta\n"
+"C=Sulje, N=Pienennä, X/R=Palauta\n"
+"I=Kuvake, T=Otsikko, H=Apua, M=Valikko\n"
+"S=Varjo, U/A=Päällimmäinen(Ylös/Päällä)\n"
+"Y=Sticky[käännös?], (#)=# pixeliä tyhjää, esim. (5)\n"
 
 msgid "Export Theme..."
 msgstr "Vie teema..."
@@ -270,7 +276,7 @@ msgid "Suggested Widget Theme"
 msgstr "Suositeltu Widget teema"
 
 msgid "Themer Version"
-msgstr ""
+msgstr "Teemoijan versio"
 
 msgid "Border"
 msgstr "Reunat"
@@ -302,6 +308,16 @@ msgid ""
 "the titlebar-min-height slider\n"
 "or the titlebar font setting.\n"
 msgstr ""
+"Huomaa, että näitä asetuksia vaihtaessa,\n"
+"on suositeltua tehdä jotakin kuten\n"
+"työtilan vaihtaminen, sillä tämä johtaa\n"
+"'tapahtuma ikkunoiden' onnistuneeseen\n"
+"päivttämiseen, joka taas varmistaa ikkunoiden\n"
+"siirtämisen/koon muuttamisen toimivuuden.\n"
+"Tämä on suositeltua myös silloin, kun\n"
+"otsikkopalkin korkeus muutetaan joko\n"
+"otsikkopalkin korkeuden liukusäätimellä\n"
+"tai otsikkopalkin kirjaisin asetuksilla.\n"
 
 msgid "Shadows"
 msgstr "Varjot"
@@ -418,15 +434,14 @@ msgstr ""
 "Tämä saattaa kestää useita minuutteja riippuen \n"
 "internet yhteyden nopeudesta"
 
-#, fuzzy
 msgid ""
 "Here are the repositories that you can fetch Emerald Themes from. \n"
 "Fetching themes would fetch and import themes from SVN repositories \n"
 "You need Subversion package installed to use this feature."
 msgstr ""
-"Tässä ovat lähteet, joilta voit ladata Emerald teemoja. \n"
-"Teemojen lataus toisi teemoja SVN lähteistä \n"
-"You need Subversion package installed to use this feature."
+"Tässä ovat lähteet, joilta voi ladata Emerald teemoja. \n"
+"Teemojen lataus lataisi teemoja SVN lähteistä \n"
+"Käyttääksesi tätä toimintia, Subversion paketin tulee olla asenettuna."
 
 msgid ""
 "This repository contains GPL'd themes that can be used under \n"
@@ -439,12 +454,17 @@ msgid ""
 "This repository contains non-GPL'd themes. They might infringe \n"
 "copyrights and patent laws in some countries."
 msgstr ""
+"Tämä lähde sisältää teemoja, jotka eivät ole GPL lisenssin mukaisia.\n"
+"Ne saattavat rikkoa patentteja ja tekijänoikeuksia joissakin maissa."
 
 msgid ""
 "To activate Non-GPL repository please run the following in shell and accept "
 "the server certificate permanently: \n"
 "svn ls https://svn.generation.no/emerald-themes."
 msgstr ""
+"Aktivoitaaksesi ei-GPL lähteen, suorita seuraava komento ja hyväksy serveri "
+"sertifikaatti pysyvästi: \n"
+"svn ls https://svn.generation.no/emerald-themes."
 
 msgid "Themes"
 msgstr "Teemoja"
@@ -483,19 +503,15 @@ msgstr "Pyöristetty oikea alakulma"
 msgid "Rounding Radius"
 msgstr "Pyöristyksen säde"
 
-#, fuzzy
 msgid "Outer Frame Blend"
-msgstr "Kehyksen seos"
+msgstr "Ulkoisen kehyksen sekoitus"
 
-#, fuzzy
 msgid "Inner Frame Blend"
-msgstr "Sisäisin kehys"
+msgstr "Sisäisen kehyksen sekoitus"
 
-#, fuzzy
 msgid "Outer Titlebar Blend"
 msgstr "Ulkoisen otsikkopalkin sekoitus"
 
-#, fuzzy
 msgid "Inner Titlebar Blend"
 msgstr "Sisäisen otsikkopalkin sekoitus"
 
@@ -561,13 +577,13 @@ msgid "Pixmap"
 msgstr "Pixmap"
 
 msgid "Tiled/Scaled"
-msgstr ""
+msgstr "Laatoitettu/Skaalattu"
 
 msgid "Width Override"
-msgstr ""
+msgstr "Leveyden ohitus"
 
 msgid "Height Override"
-msgstr ""
+msgstr "Pituuden ohitus"
 
 msgid "Glassy effects for your windows"
 msgstr "Lasimaiset efektit ikkunoille"
@@ -576,55 +592,55 @@ msgid "Glow Height"
 msgstr "Hehkun korkeus"
 
 msgid "Frame Base Color"
-msgstr ""
+msgstr "Kehyksen pohjaväri"
 
 msgid "Upper Titlebar Glow"
-msgstr ""
+msgstr "Ylemmän otsikkopalkin hehku"
 
 msgid "Upper Glass Glow"
-msgstr ""
+msgstr "Ylä-lasihehku"
 
 msgid "Lower Glass Glow"
-msgstr ""
+msgstr "Ala-lasihehku"
 
 msgid "Middle Glass Glow"
-msgstr ""
+msgstr "Keski-lasihehku"
 
 msgid "Outer Glass Glow"
-msgstr ""
+msgstr "Ulko-lasihehku"
 
 msgid "Multiple gradients with somewhat glassy features too"
-msgstr ""
+msgstr "Moni-väriliuku lasimaisilla ominaisuuksilla"
 
 msgid "Left Blend"
-msgstr ""
+msgstr "Vasen sekoitus"
 
 msgid "Middle Blend"
-msgstr ""
+msgstr "Keski-sekoitus"
 
 msgid "Right Blend"
-msgstr ""
+msgstr "Oikea sekoitus"
 
 msgid "Contrast"
 msgstr "Kontrasti"
 
 msgid "(Color)"
-msgstr ""
+msgstr "(Väri)"
 
 msgid "(Alpha)"
-msgstr ""
+msgstr "(Alfa)"
 
 msgid "Notch"
-msgstr ""
+msgstr "Lovi"
 
 msgid "Position"
 msgstr "Sijainti"
 
 msgid "Curve"
-msgstr ""
+msgstr "Kaarre"
 
 msgid "Offset"
-msgstr ""
+msgstr "Poikkeama"
 
 msgid "Use Glow"
 msgstr "Käytä hehkua"
@@ -633,7 +649,7 @@ msgid "Title Glow"
 msgstr "Otsikon hehku"
 
 msgid "Evolved from the legacy engine"
-msgstr ""
+msgstr "Kehitetty perintömoottorista"
 
 msgid "Border Gap"
 msgstr "Reunan väli"
@@ -645,97 +661,98 @@ msgid "Show when minimised?"
 msgstr "Näytä kun pienenetty?"
 
 msgid "Minimised Border Size"
-msgstr ""
+msgstr "Pienennetyn reunan koko"
 
 msgid "Enable Left Bar Dip?"
-msgstr ""
+msgstr "Käytä vasemman palkin leikkausta?"
 
 msgid "Left Bar Radius"
 msgstr "Vasemman palkin säde"
 
 msgid "Enable Lower Bulge? (Useless at the moment, but will be used soon)"
 msgstr ""
+"Käytä alempaa kohoumaa? (Tällä hetkellä turha, mutta tullaan käyttämään pian)"
 
 msgid "Top Corner Offset (%)"
 msgstr "Yläkulman poikkeama (%)"
 
 msgid "Enable Title Bar Dip?"
-msgstr ""
+msgstr "Käytä otsikkopalkin leikkausta?"
 
 msgid "Enable Button Part?"
-msgstr ""
+msgstr "Käytä painikkeiden jakoa?"
 
 msgid "Title Part Width"
-msgstr ""
+msgstr "Otsikon jaon leveys"
 
 msgid "Button Part Width)"
-msgstr ""
+msgstr "Painikkeen jaon leveys"
 
 msgid "Dip Corners Radius)"
-msgstr ""
+msgstr "Leikattujen kulmien säde"
 
 msgid "Round Inside Corners As well?"
-msgstr ""
+msgstr "Pyöristetä myös sisemmät kulmat?"
 
 msgid "Enable Different Maximised Colors?"
-msgstr ""
+msgstr "Käytä eri värejä maksimoituissa ikkunoissa?"
 
 msgid "Turn Off repeating gradients when maximised?"
-msgstr ""
+msgstr "Sulje väriliukujen toisto suurenutuissa ikkunoissa?"
 
 msgid "Round Top Left Corner?"
-msgstr ""
+msgstr "Pyöristä ylävasen kulma?"
 
 msgid "Frame Rounding Radius"
-msgstr ""
+msgstr "Kehyksen pyöristyksen säde"
 
 msgid "Titlebar Rounding Radius"
-msgstr ""
+msgstr "Otsikkopalkin pyöristyksen säde"
 
 msgid "Repeat Gradient?"
-msgstr ""
+msgstr "Toista väriliuku?"
 
 msgid "Vertical Repeat?"
-msgstr ""
+msgstr "Pystysuora toisto?"
 
 msgid "Diagonal Repeat?"
-msgstr ""
+msgstr "Viistomainen toisto?"
 
 msgid "Repeat Frequency"
-msgstr ""
+msgstr "Toistotiheys"
 
 #. /////////////////////
 msgid "Enable Title Part Pixmap?"
-msgstr ""
+msgstr "Käytä otsikon jakopixmappia?"
 
 msgid "Repeat Title Part Pixmap?"
-msgstr ""
+msgstr "Toista otsikon jakopixmap?"
 
 msgid "Title Bar Part Pixmap"
-msgstr ""
+msgstr "Otsikkopalkin jakopixmap"
 
 msgid "Choose Titlebar Part Pixmap"
-msgstr ""
+msgstr "Valitse otsikkopalkin jakopixmap"
 
 #. /////////////////////////
 msgid "Enable Button Part Pixmap?"
-msgstr ""
+msgstr "Käytä painikkeiden jakopixmappia?"
 
 msgid "Repeat Button Part Pixmap?"
-msgstr ""
+msgstr "Toista painikkeiden jakopixmap?"
 
 msgid "Button Part Pixmap"
-msgstr ""
+msgstr "Painikkeiden jakopixmap"
 
 msgid "Choose Button Part Pixmap"
-msgstr ""
+msgstr "Valitse painkkeiden jakopixmap"
 
 #. /////////////////////////
 msgid "Enable Titlebar Pixmap?"
-msgstr ""
+msgstr "Käytä otsikkopalkin pixmappia?"
 
 msgid "Repeat Titlebar Pixmap?"
-msgstr ""
+msgstr "Toista otsikkopalkin pixmap?"
 
 msgid "Titlebar Pixmap"
 msgstr "Otsikkopalkin pixmap"
@@ -753,7 +770,7 @@ msgid "Corners"
 msgstr "Kulmat"
 
 msgid "Border Layout"
-msgstr ""
+msgstr "Reunan sommittelu"
 
 msgid "Left Bar"
 msgstr "Vasen palkki"
