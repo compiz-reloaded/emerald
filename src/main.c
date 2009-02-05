@@ -85,14 +85,8 @@ static Atom wm_protocols_atom;
 static Atom mwm_hints_atom;
 
 static Atom toolkit_action_atom;
-static Atom toolkit_action_main_menu_atom;
-static Atom toolkit_action_run_dialog_atom;
 static Atom toolkit_action_window_menu_atom;
 static Atom toolkit_action_force_quit_dialog_atom;
-
-static Atom panel_action_atom;
-static Atom panel_action_main_menu_atom;
-static Atom panel_action_run_dialog_atom;
 
 static Atom emerald_sigusr1_atom;
 
@@ -4235,25 +4229,6 @@ static void bottom_right_event(WnckWindow * win, XEvent * xevent)
 	move_resize_window(win, WM_MOVERESIZE_SIZE_BOTTOMRIGHT, xevent);
 }
 
-static void
-panel_action(Display * xdisplay,
-	     Window root, Atom panel_action, Time event_time)
-{
-    XEvent ev;
-
-    ev.type = ClientMessage;
-    ev.xclient.window = root;
-    ev.xclient.message_type = panel_action_atom;
-    ev.xclient.format = 32;
-    ev.xclient.data.l[0] = panel_action;
-    ev.xclient.data.l[1] = event_time;
-    ev.xclient.data.l[2] = 0;
-    ev.xclient.data.l[3] = 0;
-    ev.xclient.data.l[4] = 0;
-
-    XSendEvent(xdisplay, root, FALSE, StructureNotifyMask, &ev);
-}
-
 static void force_quit_dialog_realize(GtkWidget * dialog, void *data)
 {
     WnckWindow *win = data;
@@ -4533,19 +4508,7 @@ event_filter_func(GdkXEvent * gdkxevent, GdkEvent * event, gpointer data)
 		unsigned long action;
 
 		action = xevent->xclient.data.l[0];
-		if (action == toolkit_action_main_menu_atom)
-		{
-		    panel_action(xdisplay, xevent->xclient.window,
-				 panel_action_main_menu_atom,
-				 xevent->xclient.data.l[1]);
-		}
-		else if (action == toolkit_action_run_dialog_atom)
-		{
-		    panel_action(xdisplay, xevent->xclient.window,
-				 panel_action_run_dialog_atom,
-				 xevent->xclient.data.l[1]);
-		}
-		else if (action == toolkit_action_window_menu_atom)
+		if (action == toolkit_action_window_menu_atom)
 		{
 		    WnckWindow *win;
 
@@ -5551,22 +5514,12 @@ int main(int argc, char *argv[])
 
     toolkit_action_atom =
 	XInternAtom(xdisplay, "_COMPIZ_TOOLKIT_ACTION", FALSE);
-    toolkit_action_main_menu_atom =
-	XInternAtom(xdisplay, "_COMPIZ_TOOLKIT_ACTION_MAIN_MENU", FALSE);
-    toolkit_action_run_dialog_atom =
-	XInternAtom(xdisplay, "_COMPIZ_TOOLKIT_ACTION_RUN_DIALOG", FALSE);
     toolkit_action_window_menu_atom =
 	XInternAtom(xdisplay, "_COMPIZ_TOOLKIT_ACTION_WINDOW_MENU",
 		    FALSE);
     toolkit_action_force_quit_dialog_atom =
 	XInternAtom(xdisplay, "_COMPIZ_TOOLKIT_ACTION_FORCE_QUIT_DIALOG",
 		    FALSE);
-
-    panel_action_atom = XInternAtom(xdisplay, "_GNOME_PANEL_ACTION", FALSE);
-    panel_action_main_menu_atom =
-	XInternAtom(xdisplay, "_GNOME_PANEL_ACTION_MAIN_MENU", FALSE);
-    panel_action_run_dialog_atom =
-	XInternAtom(xdisplay, "_GNOME_PANEL_ACTION_RUN_DIALOG", FALSE);
 
     emerald_sigusr1_atom = XInternAtom(xdisplay, "emerald-sigusr1", FALSE);
 
