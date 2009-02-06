@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Emerald-0.2.0\n"
 "Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
-"POT-Creation-Date: 2008-12-26 12:28+0530\n"
-"PO-Revision-Date: 2008-11-30 12:27+0100\n"
+"POT-Creation-Date: 2009-02-06 11:35+0530\n"
+"PO-Revision-Date: 2009-01-02 10:42+0100\n"
 "Last-Translator: KAMI <kamihir@freemail.hu>\n"
 "Language-Team: Gentoo-hu Team <gentoo-doc-hu@gentoo.org>\n"
 "MIME-Version: 1.0\n"
@@ -258,7 +258,6 @@ msgstr ""
 "S=Háttérbe, U/A=Felülre (a többi fölé)\n"
 "Y=Ragadós, (#)=# Képpont kihagyása, például: (5)\n"
 
-#, fuzzy
 msgid "Export Theme..."
 msgstr "Téma exportálása…"
 
@@ -268,7 +267,6 @@ msgstr "Név:"
 msgid "Untitled Theme"
 msgstr "Névtelen téma"
 
-#, fuzzy
 msgid "Export..."
 msgstr "Export…"
 
@@ -423,7 +421,6 @@ msgstr "Téma"
 msgid "Edit"
 msgstr "Szerkesztés"
 
-#, fuzzy
 msgid "Import Theme..."
 msgstr "Téma importálása…"
 
@@ -433,7 +430,6 @@ msgstr "Keresés:"
 msgid "Fetching Themes"
 msgstr "Témák letöltése"
 
-#, fuzzy
 msgid ""
 "Fetching themes... \n"
 "This may take time depending on \n"

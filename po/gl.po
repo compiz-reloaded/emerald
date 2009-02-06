@@ -9,9 +9,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: emerald\n"
 "Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
-"POT-Creation-Date: 2008-12-26 12:28+0530\n"
-"PO-Revision-Date: 2008-12-07 23:06+0100\n"
-"Last-Translator: Fran Diéguez  <fran dot dieguez at glug dot es>\n"
+"POT-Creation-Date: 2009-02-06 11:35+0530\n"
+"PO-Revision-Date: 2009-02-01 01:12+0100\n"
+"Last-Translator: Fran Diéguez Souto <fran.dieguez@glug.es>\n"
 "Language-Team: Galician <en@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -30,16 +30,16 @@ msgid "Minimize Window"
 msgstr "Minimizar Fiestra"
 
 msgid "Context Help"
-msgstr "Axuda do contexto"
+msgstr "Axuda contextual"
 
 msgid "Window Menu"
-msgstr "Menú da Fiestra"
+msgstr "Menú de Fiestra"
 
 msgid "Shade Window"
 msgstr "Enrolar Fiestra"
 
 msgid "UnShade Window"
-msgstr "Desenrolar Fiestra"
+msgstr "Desenrrolar Fiestra"
 
 msgid "Set Above"
 msgstr "Poñer Enriba"
@@ -60,7 +60,7 @@ msgstr "A Fiestra \"%s\" non está respondendo."
 msgid ""
 "Forcing this application to quit will cause you to lose any unsaved changes."
 msgstr ""
-"Forzar o peche de esta aplicación pode causar a perda dos cambios non "
+"Se forza o peche de esta aplicación pode causar que se perdan os cambios non "
 "gardados."
 
 msgid "_Force Quit"
@@ -102,13 +102,13 @@ msgid "Unknown"
 msgstr "Descoñecido"
 
 msgid "Whatever (no hint)"
-msgstr "Calqueira (sen consello)"
+msgstr "Calquera (sen recomendación)"
 
 msgid "No Description"
 msgstr "Sen Descrición"
 
 msgid "Invalid Theme Name"
-msgstr "O nome para o tema é incorrecto"
+msgstr "Nome de Tema Inválido"
 
 msgid "Invalid theme file.  Does not end in .emerald"
 msgstr "Ficheiro de tema inválido. Non remata en .emerald"
@@ -137,15 +137,15 @@ msgid ""
 "Can't save over system themes\n"
 "(or you forgot to enter a name)"
 msgstr ""
-"Non se pode sobreescribir os temas do escritorio\n"
-"(ou esquenceches inserir un nome)"
+"Non se poden sobre-escribir os temas do sistema\n"
+"(ou esqueceu inserir un nome)"
 
 #, c-format
 msgid "Overwrite Theme %s?"
-msgstr "¿Sobreescribir o Tema %s?"
+msgstr "¿Sobre-escribir o Tema %s?"
 
 msgid "Couldn't Write Theme"
-msgstr "Non se puido grabar o Tema"
+msgstr "Non se puido gravar o Tema"
 
 msgid "Couldn't Form Theme"
 msgstr "Non se puido crear o tema"
@@ -158,14 +158,14 @@ msgid ""
 "(or you forgot to enter a name)"
 msgstr ""
 "Non se poden borrar os temas do sistemas\n"
-"(ou esquenceches inserir oun nome)"
+"(ou esqueceu inserir un nome)"
 
 #, c-format
 msgid "Are you sure you want to delete %s?"
-msgstr "¿Estás seguro de que queres borrar %s?"
+msgstr "¿Estás seguro de que quere borrar %s?"
 
 msgid "Theme deleted"
-msgstr "Tema Borrado"
+msgstr "Tema borrado"
 
 msgid "No such theme to delete"
 msgstr "Non existe o tema para borralo"
@@ -174,10 +174,10 @@ msgid "Use Pixmap Buttons"
 msgstr "Empregar imaxes dos botóns"
 
 msgid "Use Button Halo/Glow"
-msgstr "Empregar halo/brillo do botón"
+msgstr "Empregar halo/brillo nos botóns"
 
 msgid "Use Button Halo/Glow For Inactive Windows"
-msgstr "Empregar Halo/Brillo do botón nas fiestras inactivas"
+msgstr "Empregar Halo/Brillo nos botóns das fiestras inactivas"
 
 msgid "Button Pixmaps"
 msgstr "Imaxes dos botóns"
@@ -207,7 +207,7 @@ msgid "Button Fill"
 msgstr "Recheo do Botón"
 
 msgid "Button Outline"
-msgstr "Bordo do Botón"
+msgstr "Borde do Botón"
 
 msgid "Color"
 msgstr "Cor"
@@ -231,13 +231,13 @@ msgid "Minimum Title-bar Height"
 msgstr "Altura Mínima da Barra de Título"
 
 msgid "Vertical Button Offset"
-msgstr "Desprazamento vertical dos Botóns"
+msgstr "Desprazamento Vertical dos Botóns"
 
 msgid "Horizontal Button Offset"
-msgstr "Desprazamento horizontal dos Botóns"
+msgstr "Desprazamento Horizontal dos Botóns"
 
 msgid "Title-bar Object Layout"
-msgstr "Disposición do obxeto da barra de título"
+msgstr "Disposición do Obxeto na barra de título"
 
 msgid ""
 "Use colons to separate left, center, and right.\n"
@@ -247,12 +247,12 @@ msgid ""
 "S=Shade, U/A=On Top(Up/Above)\n"
 "Y=Sticky, (#)=# pixels space, ex: (5)\n"
 msgstr ""
-"Emprega comas para separar esquerda, centro, e dereita. \n"
-"Calqueira cousa despois da terceira coma é ignorada.\n"
+"Empregue comas para separar esquerda, centro, e dereita. \n"
+"Calquera cousa despois da terceira coma será ignorada.\n"
 "C=Pechar, N=Minimizar, X/R=Restaurar\n"
 "I=Icona, T=Título, H=Axuda, M=Menu\n"
 "S=Enrolar, U/A=En primeiro plano(Enriba)\n"
-"Y=Pegañento, (#)=# espazo en pixeles, ex: (5)\n"
+"Y=Pegañento, (#)=# espazo en pixeis, ex: (5)\n"
 
 msgid "Export Theme..."
 msgstr "Exportar tema..."
@@ -276,10 +276,10 @@ msgid "Theme Version"
 msgstr "Versión do Tema"
 
 msgid "Suggested Widget Theme"
-msgstr "Tema de Widget Suxerido"
+msgstr "Tema de Widgets Suxerido"
 
 msgid "Themer Version"
-msgstr "Versión do xestor de temas"
+msgstr "Versión do Xestor de Temas"
 
 msgid "Border"
 msgstr "Borde"
@@ -311,15 +311,17 @@ msgid ""
 "the titlebar-min-height slider\n"
 "or the titlebar font setting.\n"
 msgstr ""
-"Nota, cando cambie estos valores, aconséllaselle que faga\n"
-"algunha acción cambiar de escritorio, xa que isto fará que a\n"
-"posición das fiestras de eventos se actualicen correctamente,\n"
-"e así conséguese que mover/redimensionar as fiestras funcione\n"
-"correctamente.\n"
-"\n"
-"Isto también se aplica cando cambia a altura da barra de\n"
-"título a través da propia opción ou do axuste da fonte da\n"
-"barra de título.\n"
+"Nota, cando cambie estes valores,\n"
+"aconséllase que faga algún cambio\n"
+"no escritorio, xa que isto fará que a\n"
+"posición das fiestras de eventos se \n"
+"actualicen correctamente, e con isto\n"
+"conséguese que mover/redimensionar\n"
+"as fiestras funcione correctamente. \n"
+"Isto tamén se aplica cando cambia a\n"
+"altura da barra de título a través da\n"
+"propia opción ou do axuste da fonte\n"
+"da barra de título.\n"
 
 msgid "Shadows"
 msgstr "Sombras"
@@ -328,10 +330,10 @@ msgid "Frame Borders"
 msgstr "Bordes do marco"
 
 msgid "Active Window"
-msgstr "Fiestra activa"
+msgstr "Fiestra Activa"
 
 msgid "Inactive Window"
-msgstr "Fiestra inactiva"
+msgstr "Fiestra Inactiva"
 
 msgid "Title Bar"
 msgstr "Barra de Título"
@@ -353,10 +355,10 @@ msgstr ""
 "forma separada, e controlan algunhas preferencias da UI para Emerald."
 
 msgid "Show Tooltips for Buttons"
-msgstr "Mostrar Diálogos nos Botóns"
+msgstr "Mostrar diálogos nos botóns"
 
 msgid "Use Decoration Cropping"
-msgstr "Empregar Recorte da Decoración"
+msgstr "Empregar recorte da decoración"
 
 msgid "Use Button Fade"
 msgstr "Empregar atenuación nos botóns"
@@ -368,19 +370,19 @@ msgid "Button Fade Total Duration"
 msgstr "Duración total da atenuación do botón"
 
 msgid "Button Fade Step Duration"
-msgstr "DDuración da atenuación do botón"
+msgstr "Duración dos pasos de atenuación do botón"
 
 msgid "Button Pulse Wait Duration"
-msgstr "Duración da espera da atenuación do botón"
+msgstr "Duración de espera do pulso do botón"
 
 msgid "Button Pulse Min Opacity %"
 msgstr "Opacidade mínima da atenuación do botón %"
 
 msgid "Titlebar Double-Click Action"
-msgstr "Acción ó facer dobre click sobre a barra de título"
+msgstr "Acción ó facer dobre clic sobre a barra de título"
 
 msgid "Button Hover Cursor"
-msgstr "Cursos sobre o botón"
+msgstr "Botón cando o cursor está enriba"
 
 msgid "Normal"
 msgstr "Normal"
@@ -389,10 +391,10 @@ msgid "Pointing Finger"
 msgstr "Dedo apuntador"
 
 msgid "Compiz Decoration Blur Type"
-msgstr "Tipo de decoración de Compiz para o Blur"
+msgstr "Tipo de desenfoque para a decoración de Compiz"
 
 msgid "None"
-msgstr "Nada"
+msgstr "Ningún"
 
 msgid "Titlebar only"
 msgstr "Só a barra de título"
@@ -434,17 +436,16 @@ msgid ""
 msgstr ""
 "Descargando temas... \n"
 "Isto pode levar tempo dependendo da\n"
-"velocidade da conexión a internet."
+"velocidade da súa conexión a internet."
 
 msgid ""
 "Here are the repositories that you can fetch Emerald Themes from. \n"
 "Fetching themes would fetch and import themes from SVN repositories \n"
 "You need Subversion package installed to use this feature."
 msgstr ""
-"Aquí están os repositorios dos cales podes descargar os Temas de Emerald. \n"
-"Descargar os temas descargará e importará os temas dende os repositorios "
-"SVN \n"
-"Precisas que o pacote Subversion estea instalado para empregar esta "
+"Aquí están os repositorios dos que pode descargar os Temas de Emerald. \n"
+"Ao descargar os temas importaránse dende os repositorios SVN \n"
+"Precisa que o paquete Subversion estea instalado para empregar esta "
 "característica."
 
 msgid ""
@@ -458,7 +459,7 @@ msgid ""
 "This repository contains non-GPL'd themes. They might infringe \n"
 "copyrights and patent laws in some countries."
 msgstr ""
-"Este repositorio contén temas non GPL. Istos poden infringir\n"
+"Este repositorio contén temas non GPL. Istos poden infrinxir\n"
 "os copyrights e leis de patentes nalgúns países. "
 
 msgid ""
@@ -486,11 +487,11 @@ msgid ""
 "Select\n"
 "Engine"
 msgstr ""
-"Seleccionar\n"
-"Motor"
+"Seleccione\n"
+"o Motor"
 
 msgid "Based on original gnome-window-decorator"
-msgstr "Baseado no gnome-window-decorator orixinal"
+msgstr "Baseado no decorador de fiestras orixinal de gnome"
 
 msgid "Round Top Left Corner"
 msgstr "Redondear a esquina superior esquerda"
@@ -544,7 +545,7 @@ msgid "Frame"
 msgstr "Marco"
 
 msgid "Based on original legacy"
-msgstr "Baseado no decorador de fiestras orixinal de gnome"
+msgstr "Baseado no orixinal"
 
 msgid "Designed to be vista-ish in nature"
 msgstr "Deseñado para aparentar o estilo visual de Vista"
@@ -559,7 +560,7 @@ msgid "Sides"
 msgstr "Lados"
 
 msgid "Everything done with customizable pixmaps!"
-msgstr "¡Calqueira cousa feita con imaxes personalizadas!"
+msgstr "¡Todo feito con imaxes personalizadas!"
 
 msgid "Top Rounding Radius"
 msgstr "Radio de redondeo da parte superior"
@@ -584,13 +585,13 @@ msgid "Tiled/Scaled"
 msgstr "Mosaico/Escalado"
 
 msgid "Width Override"
-msgstr "Sobreescribir anchura"
+msgstr "Sobrescribir anchura"
 
 msgid "Height Override"
-msgstr "Sobreescribir altura"
+msgstr "Sobrescribir altura"
 
 msgid "Glassy effects for your windows"
-msgstr "Efectos cristalinos para as fiestras"
+msgstr "Efectos cristalinos para as súas fiestras"
 
 msgid "Glow Height"
 msgstr "Altura do brillo"
@@ -614,7 +615,7 @@ msgid "Outer Glass Glow"
 msgstr "Brillo da parte externa"
 
 msgid "Multiple gradients with somewhat glassy features too"
-msgstr "Múltiples degradados con algúnas características de cristal tamén"
+msgstr "Múltiples degradados con algunhas características de cristal"
 
 msgid "Left Blend"
 msgstr "Mistura esquerda"
@@ -653,60 +654,60 @@ msgid "Title Glow"
 msgstr "Brillo do título"
 
 msgid "Evolved from the legacy engine"
-msgstr "Desenrrolado dende o motor herdado"
+msgstr "Evolución o motor herdado"
 
 msgid "Border Gap"
 msgstr "Espazo do borde"
 
 msgid "Show Border when maximised?"
-msgstr "¿Mostrar o borde cando maximice?"
+msgstr "Mostrar o borde cando maximice?"
 
 msgid "Show when minimised?"
-msgstr "¿Mostrar cando minimice?"
+msgstr "Mostrar cando se minimice?"
 
 msgid "Minimised Border Size"
 msgstr "Tamaño do borde minimizado"
 
 msgid "Enable Left Bar Dip?"
-msgstr "¿Activar desnivel da barra esquerda?"
+msgstr "Activar desnivel da barra esquerda?"
 
 msgid "Left Bar Radius"
 msgstr "Radio da barra esquerda"
 
 msgid "Enable Lower Bulge? (Useless at the moment, but will be used soon)"
 msgstr ""
-"¿Activar grosor inferior? (Sen uso ata o momento, pero será empregado "
+"Activar grosor inferior? (Sen uso ata o momento, pero será empregado "
 "proximamente)"
 
 msgid "Top Corner Offset (%)"
 msgstr "Desprazamento da esquina superior (%)"
 
 msgid "Enable Title Bar Dip?"
-msgstr "¿Activar desnivel da barra de título?"
+msgstr "Activar desnivel da barra de título?"
 
 msgid "Enable Button Part?"
-msgstr "¿Activar peza do botón?"
+msgstr "Activar peza do botón?"
 
 msgid "Title Part Width"
-msgstr "Anchura da peza do título"
+msgstr "Ancho da peza do título"
 
 msgid "Button Part Width)"
-msgstr "Anchura da parte inferior)"
+msgstr "Ancho da parte inferior)"
 
 msgid "Dip Corners Radius)"
 msgstr "Radio de desnivel das esquinas)"
 
 msgid "Round Inside Corners As well?"
-msgstr "¿Redondear as esquinas interiores tamén?"
+msgstr "Redondear as esquinas interiores tamén?"
 
 msgid "Enable Different Maximised Colors?"
-msgstr "¿Activar diferentes cores en fiestras maximizadas?"
+msgstr "Activar diferentes cores en fiestras maximizadas?"
 
 msgid "Turn Off repeating gradients when maximised?"
-msgstr "¿Desactivar os gradientes repetidos cando maximice?"
+msgstr "Desactivar os gradientes repetidos cando maximice?"
 
 msgid "Round Top Left Corner?"
-msgstr "¿Redondear a esquina superior esquerda?"
+msgstr "Redondear a esquina superior esquerda?"
 
 msgid "Frame Rounding Radius"
 msgstr "Radio de redondeo do marco"
@@ -715,55 +716,55 @@ msgid "Titlebar Rounding Radius"
 msgstr "Radio de redondeo da barra de título"
 
 msgid "Repeat Gradient?"
-msgstr "¿Repetir gradiente?"
+msgstr "Repetir gradiente?"
 
 msgid "Vertical Repeat?"
-msgstr "¿Repetición vertical?"
+msgstr "Repetir verticalmente?"
 
 msgid "Diagonal Repeat?"
-msgstr "¿Repetición diagonal?"
+msgstr "Repetir diagonalmente?"
 
 msgid "Repeat Frequency"
 msgstr "Frecuencia de repetición"
 
 #. /////////////////////
 msgid "Enable Title Part Pixmap?"
-msgstr "¿Activar a peza de imaxe do botón?"
+msgstr "Activar a parte de imaxe do título?"
 
 msgid "Repeat Title Part Pixmap?"
-msgstr "¿Repetir imaxe da peza do título?"
+msgstr "Repetir imaxe da parte do título?"
 
 msgid "Title Bar Part Pixmap"
-msgstr "Imaxe da peza da barra de título"
+msgstr "Imaxe da parte da barra de título"
 
 msgid "Choose Titlebar Part Pixmap"
-msgstr "Elexir imaxe da peza de barra de título"
+msgstr "Escolla a imaxe da parte inferior de barra de título"
 
 #. /////////////////////////
 msgid "Enable Button Part Pixmap?"
-msgstr "¿Activar imaxe da peza da parte de botón?"
+msgstr "Activar imaxe da parte do botón?"
 
 msgid "Repeat Button Part Pixmap?"
-msgstr "¿Repetir imaxe da parte de botón?"
+msgstr "Repetir imaxe da parte de botón?"
 
 msgid "Button Part Pixmap"
 msgstr "Imaxe da parte de botón"
 
 msgid "Choose Button Part Pixmap"
-msgstr "Elexir imaxe da parte de botón"
+msgstr "Escolla a imaxe da parte inferior de botón"
 
 #. /////////////////////////
 msgid "Enable Titlebar Pixmap?"
-msgstr "¿Activar imaxe da barra de título?"
+msgstr "Activar imaxe da barra de título?"
 
 msgid "Repeat Titlebar Pixmap?"
-msgstr "¿Repetir imaxe da barra de título?"
+msgstr "Repetir imaxe da barra de título?"
 
 msgid "Titlebar Pixmap"
 msgstr "Imaxe da barra de título"
 
 msgid "Choose Titlebar Pixmap"
-msgstr "Elexir imaxe da barra de título"
+msgstr "Escolla a imaxe para a barra de título"
 
 msgid "Active/Inactive"
 msgstr "Activar/Desactivar"
