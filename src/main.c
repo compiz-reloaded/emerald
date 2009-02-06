@@ -83,6 +83,7 @@ static Atom select_window_atom;
 static Atom net_wm_context_help_atom;
 static Atom wm_protocols_atom;
 static Atom mwm_hints_atom;
+static Atom switcher_fg_atom;
 
 static Atom toolkit_action_atom;
 static Atom toolkit_action_window_menu_atom;
@@ -626,30 +627,6 @@ set_switcher_quads(decor_quad_t * q, int width, int height, window_settings * ws
     nQuad++;
 
     return nQuad;
-}
-
-static void decor_update_switcher_property(decor_t * d)
-{
-    long data[256];
-    Display *xdisplay = GDK_DISPLAY_XDISPLAY(gdk_display_get_default());
-    gint nQuad;
-    decor_quad_t quads[N_QUADS_MAX];
-    window_settings *ws = d->fs->ws;
-    decor_extents_t extents = ws->switcher_extents;
-
-    nQuad = set_switcher_quads(quads, d->width, d->height, ws);
-
-    decor_quads_to_property(data, GDK_PIXMAP_XID(d->pixmap),
-			    &extents, &extents, 0, 0, quads, nQuad);
-
-    gdk_error_trap_push();
-    XChangeProperty(xdisplay, d->prop_xid,
-		    win_decor_atom,
-		    XA_INTEGER,
-		    32, PropModeReplace, (guchar *) data,
-		    BASE_PROP_SIZE + QUAD_PROP_SIZE * nQuad);
-    XSync(xdisplay, FALSE);
-    gdk_error_trap_pop();
 }
 
 static int
@@ -1945,6 +1922,41 @@ static void draw_shadow_window(decor_t * d)
 }
 
 #define SWITCHER_ALPHA 0xa0a0
+
+static void decor_update_switcher_property(decor_t * d)
+{
+    long data[256];
+    Display *xdisplay = GDK_DISPLAY_XDISPLAY(gdk_display_get_default());
+    gint nQuad;
+    decor_quad_t quads[N_QUADS_MAX];
+    window_settings *ws = d->fs->ws;
+    decor_extents_t extents = ws->switcher_extents;
+    GtkStyle *style;
+    long fgColor[4];
+
+    nQuad = set_switcher_quads(quads, d->width, d->height, ws);
+
+    decor_quads_to_property(data, GDK_PIXMAP_XID(d->pixmap),
+			    &extents, &extents, 0, 0, quads, nQuad);
+
+    style = gtk_widget_get_style (style_window);
+
+    fgColor[0] = style->fg[GTK_STATE_NORMAL].red;
+    fgColor[1] = style->fg[GTK_STATE_NORMAL].green;
+    fgColor[2] = style->fg[GTK_STATE_NORMAL].blue;
+    fgColor[3] = SWITCHER_ALPHA;
+
+    gdk_error_trap_push();
+    XChangeProperty(xdisplay, d->prop_xid,
+		    win_decor_atom,
+		    XA_INTEGER,
+		    32, PropModeReplace, (guchar *) data,
+		    BASE_PROP_SIZE + QUAD_PROP_SIZE * nQuad);
+    XChangeProperty (xdisplay, d->prop_xid, switcher_fg_atom,
+		     XA_INTEGER, 32, PropModeReplace, (guchar *) fgColor, 4);
+    XSync(xdisplay, FALSE);
+    gdk_error_trap_pop();
+}
 
 static void draw_switcher_background(decor_t * d)
 {
@@ -5508,6 +5520,9 @@ int main(int argc, char *argv[])
     select_window_atom = XInternAtom(xdisplay, DECOR_SWITCH_WINDOW_ATOM_NAME,
 				     FALSE);
     mwm_hints_atom = XInternAtom(xdisplay, "_MOTIF_WM_HINTS", FALSE);
+    switcher_fg_atom = XInternAtom (xdisplay,
+				    DECOR_SWITCH_FOREGROUND_COLOR_ATOM_NAME,
+				    FALSE);
     wm_protocols_atom = XInternAtom(xdisplay, "WM_PROTOCOLS", FALSE);
     net_wm_context_help_atom =
 	XInternAtom(xdisplay, "_NET_WM_CONTEXT_HELP", FALSE);
