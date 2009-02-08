@@ -264,6 +264,7 @@ static void info_dialog(gchar * val)
             GTK_DIALOG_DESTROY_WITH_PARENT,
             GTK_MESSAGE_INFO,
             GTK_BUTTONS_CLOSE,
+            "%s",
             val);
     gtk_dialog_run(GTK_DIALOG(w));
     gtk_widget_destroy(w);
@@ -275,6 +276,7 @@ static void error_dialog(gchar * val)
             GTK_DIALOG_DESTROY_WITH_PARENT,
             GTK_MESSAGE_ERROR,
             GTK_BUTTONS_CLOSE,
+            "%s",
             val);
     gtk_dialog_run(GTK_DIALOG(w));
     gtk_widget_destroy(w);

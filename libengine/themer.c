@@ -874,7 +874,7 @@ static void append_engine(gchar * dlname)
     err = dlerror();
     if (!hand || err)
     {
-        g_warning(err);
+        g_warning("%s", err);
         if (hand)
             dlclose(hand);
         return;
@@ -885,7 +885,7 @@ static void append_engine(gchar * dlname)
         layout_settings_proc lay;
         lay = dlsym(hand,"layout_engine_settings");
         if ((err=dlerror()))
-            g_warning(err);
+            g_warning("%s", err);
         if (lay)
         {
             get_meta_info_proc meta;
@@ -896,7 +896,7 @@ static void append_engine(gchar * dlname)
                 "<i><small>%s</small></i>";
             meta = dlsym(hand,"get_meta_info");
             if ((err=dlerror()))
-                g_warning(err);
+                g_warning("%s", err);
                 d->meta.description=g_strdup("No Description");
                 d->meta.version=g_strdup("0.0");
                 d->meta.last_compat=g_strdup("0.0");

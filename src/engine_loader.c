@@ -54,7 +54,7 @@ gboolean load_engine(gchar * engine_name, window_settings * ws)
         newengine = dlopen(path,RTLD_NOW);
         if (!newengine)
         {
-            g_warning(dlerror());
+            g_warning("%s", dlerror());
             //here's where we should bail out somehow
         }
     }
