@@ -5646,6 +5646,7 @@ int main(int argc, char *argv[])
     }
 
     screen = wnck_screen_get_default();
+    wnck_set_client_type(WNCK_CLIENT_TYPE_PAGER);
 
     gdk_window_add_filter(NULL, selection_event_filter_func, NULL);
 
