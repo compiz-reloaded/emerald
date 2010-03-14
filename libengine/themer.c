@@ -461,7 +461,7 @@ gboolean get_bool(SettingItem * item)
 }
 gdouble get_float(SettingItem * item)
 {
-    if(!strcmp(GTK_OBJECT_TYPE_NAME(item->widget),"GtkSpinButton")) {
+    if(!strcmp(G_OBJECT_TYPE_NAME(item->widget),"GtkSpinButton")) {
          return gtk_spin_button_get_value((GtkSpinButton *)item->widget);
     }
     else {
@@ -647,7 +647,7 @@ void set_bool(SettingItem * item, gboolean b)
 }
 void set_float(SettingItem * item, gdouble f)
 {
-    if(!strcmp(GTK_OBJECT_TYPE_NAME(item->widget),"GtkSpinButton")) {
+    if(!strcmp(G_OBJECT_TYPE_NAME(item->widget),"GtkSpinButton")) {
          gtk_spin_button_set_value((GtkSpinButton *)item->widget, f);
     } 
     else {
