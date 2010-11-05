@@ -27,8 +27,8 @@
 #include <emerald.h>
 #include <engine.h>
 
-#define BASE_PROP_SIZE 12
-#define QUAD_PROP_SIZE 9
+//#define BASE_PROP_SIZE 12
+//#define QUAD_PROP_SIZE 9
 
 #ifndef DECOR_INTERFACE_VERSION
 #define DECOR_INTERFACE_VERSION 0
@@ -2457,7 +2457,7 @@ static gboolean get_window_prop(Window xwindow, Atom atom, Window * val)
     gdk_error_trap_push();
 
     type = None;
-    result = XGetWindowProperty(gdk_display,
+    result = XGetWindowProperty(GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()),
 				xwindow,
 				atom,
 				0, G_MAXLONG,
@@ -4246,10 +4246,10 @@ static void force_quit_dialog_realize(GtkWidget * dialog, void *data)
     WnckWindow *win = data;
 
     gdk_error_trap_push();
-    XSetTransientForHint(gdk_display,
+    XSetTransientForHint(GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()),
 			 GDK_WINDOW_XID(dialog->window),
 			 wnck_window_get_xid(win));
-    XSync(gdk_display, FALSE);
+    XSync(GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()), FALSE);
     gdk_error_trap_pop();
 }
 
@@ -4262,11 +4262,11 @@ static char *get_client_machine(Window xwindow)
     int format, result;
     char *retval;
 
-    atom = XInternAtom(gdk_display, "WM_CLIENT_MACHINE", FALSE);
+    atom = XInternAtom(GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()), "WM_CLIENT_MACHINE", FALSE);
 
     gdk_error_trap_push();
 
-    result = XGetWindowProperty(gdk_display,
+    result = XGetWindowProperty(GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()),
 				xwindow, atom,
 				0, G_MAXLONG,
 				FALSE, XA_STRING, &type, &format, &nitems,
@@ -4318,8 +4318,8 @@ static void kill_window(WnckWindow * win)
     }
 
     gdk_error_trap_push();
-    XKillClient(gdk_display, wnck_window_get_xid(win));
-    XSync(gdk_display, FALSE);
+    XKillClient(GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()), wnck_window_get_xid(win));
+    XSync(GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()), FALSE);
     gdk_error_trap_pop();
 }
 
@@ -4739,7 +4739,7 @@ static XFixed *create_gaussian_kernel(double radius,
 
 static int update_shadow(frame_settings * fs)
 {
-    Display *xdisplay = gdk_display;
+    Display *xdisplay = GDK_DISPLAY_XDISPLAY (gdk_display_get_default ());
     XRenderPictFormat *format;
     GdkPixmap *pixmap;
     Picture src, dst, tmp;
