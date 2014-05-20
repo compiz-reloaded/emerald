@@ -17,6 +17,8 @@
  *
  */
 
+#include <gdk/gdk.h>
+
 #ifdef HAVE_CONFIG_H
 #include <config.h>
 #endif
@@ -4740,6 +4742,7 @@ static XFixed *create_gaussian_kernel(double radius,
 static int update_shadow(frame_settings * fs)
 {
     Display *xdisplay = GDK_DISPLAY_XDISPLAY (gdk_display_get_default ());
+    GdkVisual *visual = gdk_visual_get_best_with_depth(32);
     XRenderPictFormat *format;
     GdkPixmap *pixmap;
     Picture src, dst, tmp;
@@ -4752,6 +4755,11 @@ static int update_shadow(frame_settings * fs)
 
     bzero(&d, sizeof(decor_t));
     window_settings *ws = fs->ws;
+
+    // TODO shadows show strong artefacts with 30-bit setups
+    // meanwhile disable here as a workaround
+    if (gdk_visual_get_bits_per_rgb(visual) == 10)
+	ws->shadow_radius = 0;
 
     //    double        save_decoration_alpha;
     static XRenderColor color;
