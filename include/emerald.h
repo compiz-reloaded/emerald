@@ -12,6 +12,7 @@
 #include <X11/cursorfont.h>
 #include <X11/extensions/Xrender.h>
 
+/*
 #ifndef GDK_DISABLE_DEPRECATED
 #define GDK_DISABLE_DEPRECATED
 #endif
@@ -19,6 +20,7 @@
 #ifndef GTK_DISABLE_DEPRECATED
 #define GTK_DISABLE_DEPRECATED
 #endif
+*/
 
 #include <gtk/gtk.h>
 #include <gtk/gtkwindow.h>
