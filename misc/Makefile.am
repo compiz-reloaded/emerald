@@ -20,6 +20,7 @@ EXTRA_DIST = \
 if MIMEUPDATE
 install-data-local: install-desktopDATA
 	$(UPDATE_MIME_DATABASE) $(datadir)/mime
+	$(UPDATE_ICON_CACHE) $(datadir)/icons/mate
 	$(UPDATE_ICON_CACHE) $(datadir)/icons/gnome
 	$(UPDATE_DESKTOP_DATABASE)
 endif
