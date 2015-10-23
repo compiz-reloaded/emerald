@@ -4,7 +4,7 @@ emerald_SOURCES = main.c \
 			   engine_loader.c
 emerald_program = emerald
 
-INCLUDES = @EMERALD_CFLAGS@ -I$(top_srcdir)/include \
+AM_CPPFLAGS = @EMERALD_CFLAGS@ -I$(top_srcdir)/include \
 		   -DLOCALEDIR="\"@datadir@/locale"\"\
 		   -DENGINE_DIR=\"$(enginesdir)\"
 

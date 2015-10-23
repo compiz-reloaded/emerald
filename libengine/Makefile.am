@@ -1,5 +1,5 @@
 ## Process this file with automake to produce Makefile.in
-INCLUDES = @EMERALD_CFLAGS@ -I$(top_srcdir)/include\
+AM_CPPFLAGS = @EMERALD_CFLAGS@ -I$(top_srcdir)/include\
 		   -DENGINE_DIR=\"$(enginesdir)\" \
 		   -DDEFTHEMEDIR='"@datadir@/emerald/theme/"' \
 		   -DDEFSETTINGSFILE='"@datadir@/emerald/settings.ini"'
