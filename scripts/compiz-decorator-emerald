@@ -1,0 +1,15 @@
+#!/bin/bash
+
+compiz=`ps ax | grep 'compiz --replace' | grep -v 'grep' | awk '{print $5}'`
+
+
+
+if [ "$compiz" = "compiz" ] ; then
+	emerald --replace &
+	echo "$compiz with Emerald windows-decorator"
+	else
+	exit 0
+fi
+
+exit 0
+

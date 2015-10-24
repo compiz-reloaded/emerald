@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+_Name=Compiz Emerald Decorator
+Comment=switch to Emerald windows-decorator if compiz is running
+TryExec=compiz-decorator-emerald
+Exec=compiz-decorator-emerald
+Icon=emerald-decorator
+NoDisplay=false
+StartupNotify=false
+Categories=Utility;Application;
+OnlyShowIn=MATE;XFCE;LXDE;
