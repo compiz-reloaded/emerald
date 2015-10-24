@@ -3,7 +3,7 @@ AC_PREREQ(2.57)
 m4_define([emerald_version], [esyscmd(. ./VERSION;echo -n $VERSION)])
 AC_INIT([emerald],[emerald_version], [livinglatexkali@gmail.com])
 
-AM_INIT_AUTOMAKE([1.9 dist-bzip2])
+AM_INIT_AUTOMAKE([1.9 tar-ustar dist-xz no-dist-gzip check-news])
 AC_CONFIG_HEADER([config.h])
 
 AC_ISC_POSIX
