@@ -12,7 +12,6 @@ Comment[de]=Konfiguriert Emerald Motive
 Comment[es]=Configura los temas del Emerald
 Icon=emerald-theme-manager-icon
 Terminal=false
-Type=Application
 Categories=Settings;DesktopSettings;
 Exec=emerald-theme-manager %f
 MimeType=application/x-emerald-theme;
