@@ -7,7 +7,7 @@ Exec=compiz-mate-emerald
 Icon=compiz-mate-emerald
 NoDisplay=false
 StartupNotify=true
-Categories=Utility;Application;
+Categories=Utility;
 OnlyShowIn=MATE;
 # autostart phase
 X-MATE-Autostart-Phase=WindowManager

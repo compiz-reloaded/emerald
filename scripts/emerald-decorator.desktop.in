@@ -7,5 +7,5 @@ Exec=compiz-decorator-emerald
 Icon=emerald-decorator
 NoDisplay=false
 StartupNotify=false
-Categories=Utility;Application;
+Categories=Utility;
 OnlyShowIn=MATE;XFCE;LXDE;

@@ -9,4 +9,3 @@ NoDisplay=false
 StartupNotify=true
 Categories=Utility;
 OnlyShowIn=XFCE;
-Name[de_DE]=Compiz XFCE Emerald
