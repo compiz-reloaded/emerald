@@ -6,7 +6,6 @@ engines/truglass.c
 engines/vrunner.c
 engines/zootreeves.c
 libengine/themer.c
-scripts/emerald-decorator.desktop.in
 src/main.c
 themer/main.c
 

@@ -14,7 +14,6 @@ SUBDIRS = \
 	defaults \
 	doc \
 	po \
-	scripts \
 	icons
 
 EXTRA_DIST = \

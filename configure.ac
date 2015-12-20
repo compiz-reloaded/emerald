@@ -90,6 +90,5 @@ doc/Makefile
 po/Makefile.in
 defaults/Makefile
 defaults/theme/Makefile
-scripts/Makefile
 icons/Makefile
 ])
