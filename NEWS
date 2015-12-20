@@ -1,1 +1,8 @@
-0.8.9
+Release 0.8.9 (2015-11-01 Wolfgang Ulbrich <chat-to-me@raveit.de>)
+==============================================================
+Maintenance release.
+
+add start scripts and menu entries
+improve man page
+adjustments for mate desktop
+more minor improvements, see git log
