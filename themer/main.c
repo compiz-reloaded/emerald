@@ -67,7 +67,7 @@ static void theme_list_append(gchar * value,gchar * dir, gchar * fil)
             val2 = g_strdup("0.0.0");
         tver = g_key_file_get_string(f,"theme","version",NULL);
         if (!tver)
-            tver = g_strup("0.0.0");
+            tver = g_strdup("0.0.0");
         elc=emi.last_compat;
         if (!emi.last_compat)
             elc="0.0.0";
@@ -797,9 +797,9 @@ void layout_title_frame(GtkWidget * vbox)
     hbox = gtk_hbox_new(FALSE,2);
     gtk_box_pack_startC(vbox,hbox,FALSE,FALSE,0);
     gtk_box_pack_startC(hbox,gtk_label_new(_("Title-bar Object Layout")),FALSE,FALSE,0);
-    junk = gtk_combo_box_entry_new_text();
-    gtk_combo_box_append_text(GTK_COMBO_BOX(junk),"IT::HNXC:Normal Layout");
-    gtk_combo_box_append_text(GTK_COMBO_BOX(junk),"CNX:IT:HM:OSX Layout");
+    junk = gtk_combo_box_text_new_with_entry();
+    gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(junk),"IT::HNXC:Normal Layout");
+    gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(junk),"CNX:IT:HM:OSX Layout");
     register_setting(junk,ST_STRING_COMBO,"titlebar","title_object_layout");
     gtk_box_pack_startC(hbox,junk,FALSE,FALSE,0);
     
@@ -1105,10 +1105,10 @@ void layout_settings_pane(GtkWidget * vbox)
     register_setting(junk,ST_SFILE_INT,"buttons","button_fade_pulse_min_opacity");
 
     table_append(gtk_label_new(_("Titlebar Double-Click Action")),FALSE);
-    combo = gtk_combo_box_new_text();
+    combo = gtk_combo_box_text_new();
     for (i=0;i<TITLEBAR_ACTION_COUNT;i++)
     {
-        gtk_combo_box_append_text(GTK_COMBO_BOX(combo),titlebar_action_name[i]);
+        gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(combo),titlebar_action_name[i]);
     }
     gtk_combo_box_set_active(GTK_COMBO_BOX(combo),0);
     table_append(combo,TRUE);
@@ -1116,37 +1116,37 @@ void layout_settings_pane(GtkWidget * vbox)
             "double_click_action");
 
     table_append(gtk_label_new(_("Button Hover Cursor")),FALSE);
-    combo = gtk_combo_box_new_text();
-    gtk_combo_box_append_text(GTK_COMBO_BOX(combo),_("Normal"));
-    gtk_combo_box_append_text(GTK_COMBO_BOX(combo),_("Pointing Finger"));
+    combo = gtk_combo_box_text_new();
+    gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(combo),_("Normal"));
+    gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(combo),_("Pointing Finger"));
     gtk_combo_box_set_active(GTK_COMBO_BOX(combo),1);
     table_append(combo,TRUE);
     register_setting(combo,ST_SFILE_INT_COMBO,"buttons",
             "hover_cursor");
 
     table_append(gtk_label_new(_("Compiz Decoration Blur Type")),FALSE);
-    combo = gtk_combo_box_new_text();
-    gtk_combo_box_append_text(GTK_COMBO_BOX(combo),_("None"));
-    gtk_combo_box_append_text(GTK_COMBO_BOX(combo),_("Titlebar only"));
-    gtk_combo_box_append_text(GTK_COMBO_BOX(combo),_("All decoration"));    
+    combo = gtk_combo_box_text_new();
+    gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(combo),_("None"));
+    gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(combo),_("Titlebar only"));
+    gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(combo),_("All decoration"));
     gtk_combo_box_set_active(GTK_COMBO_BOX(combo), BLUR_TYPE_NONE);
     table_append(combo,TRUE);
     register_setting(combo,ST_SFILE_INT_COMBO,"decorations",
             "blur_type");
     
     /*table_append(gtk_label_new("Icon Click Action"),FALSE);
-    combo = gtk_combo_box_new_text();
-    gtk_combo_box_append_text(GTK_COMBO_BOX(combo),"None");
-    gtk_combo_box_append_text(GTK_COMBO_BOX(combo),"Window Menu");
+    combo = gtk_combo_box_text_new();
+    gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(combo),"None");
+    gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(combo),"Window Menu");
     gtk_combo_box_set_active(GTK_COMBO_BOX(combo),0);
     table_append(combo,FALSE);
     register_setting(combo,ST_SFILE_INT_COMBO,"window_icon",
             "click_action");
     
     table_append(gtk_label_new("Icon Double-Click Action"),FALSE);
-    combo = gtk_combo_box_new_text();
-    gtk_combo_box_append_text(GTK_COMBO_BOX(combo),"None");
-    gtk_combo_box_append_text(GTK_COMBO_BOX(combo),"Close Window");
+    combo = gtk_combo_box_text_new();
+    gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(combo),"None");
+    gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(combo),"Close Window");
     gtk_combo_box_set_active(GTK_COMBO_BOX(combo),0);
     table_append(combo,FALSE);
     register_setting(combo,ST_SFILE_INT_COMBO,"window_icon",
