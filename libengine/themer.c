@@ -276,7 +276,6 @@ void send_reload_signal()
 
     if (wmAtom) {
         XEvent clientEvent;
-	Status missed;
         Window w = XGetSelectionOwner(dpy,wmAtom);
 	Atom ReloadIt = XInternAtom(dpy, "emerald-sigusr1", 0);
 	clientEvent.xclient.type = ClientMessage;
@@ -289,10 +288,10 @@ void send_reload_signal()
 	clientEvent.xclient.data.l[2]    = 0;
 	clientEvent.xclient.data.l[3]    = 0;
 	clientEvent.xclient.data.l[4]    = 0;
-	missed = XSendEvent(dpy,w, 
-			    False,
-			    NoEventMask, 
-			    &clientEvent);
+	XSendEvent(dpy,w,
+		   False,
+		   NoEventMask,
+		   &clientEvent);
 	XSync (dpy, False);
     } else {
         /* The old way */

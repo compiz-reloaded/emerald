@@ -2189,7 +2189,6 @@ static void draw_switcher_foreground(decor_t * d)
 {
     cairo_t *cr;
     GtkStyle *style;
-    decor_color_t color;
     double alpha = SWITCHER_ALPHA / 65535.0;
     double x1, y1, x2;
     int top;
@@ -2199,10 +2198,6 @@ static void draw_switcher_foreground(decor_t * d)
 	return;
 
     style = gtk_widget_get_style(style_window);
-
-    color.r = style->bg[GTK_STATE_NORMAL].red / 65535.0;
-    color.g = style->bg[GTK_STATE_NORMAL].green / 65535.0;
-    color.b = style->bg[GTK_STATE_NORMAL].blue / 65535.0;
 
     top = ws->win_extents.bottom;
 
@@ -2900,7 +2895,7 @@ static void update_window_decoration_name(WnckWindow * win)
     name = wnck_window_get_name(win);
     if (name && (name_length = strlen(name)))
     {
-	gint w, n_line;
+	gint w;
 
 	pango_layout_set_auto_dir (d->layout, FALSE);
 	pango_layout_set_text(d->layout, "", 0);
@@ -2913,8 +2908,6 @@ static void update_window_decoration_name(WnckWindow * win)
 
 	pango_layout_set_width(d->layout, w * PANGO_SCALE);
 	pango_layout_set_text(d->layout, name, name_length);
-
-	n_line = pango_layout_get_line_count(d->layout);
 
 	line = pango_layout_get_line(d->layout, 0);
 
@@ -3265,8 +3258,6 @@ static gboolean update_switcher_window(WnckWindow * win, Window selected)
 	name = wnck_window_get_name(selected_win);
 	if (name && (name_length = strlen(name)))
 	{
-	    gint n_line;
-
 	    if (!d->layout)
 	    {
 		d->layout = pango_layout_new(ws->pango_context);
@@ -3279,8 +3270,6 @@ static gboolean update_switcher_window(WnckWindow * win, Window selected)
 		pango_layout_set_auto_dir (d->layout, FALSE);
 		pango_layout_set_width(d->layout, -1);
 		pango_layout_set_text(d->layout, name, name_length);
-
-		n_line = pango_layout_get_line_count(d->layout);
 
 		line = pango_layout_get_line(d->layout, 0);
 
