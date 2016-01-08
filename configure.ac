@@ -42,6 +42,10 @@ export PKG_CONFIG_PATH
 AC_SUBST(PKG_CONFIG_PATH)
 AC_MSG_NOTICE([Using PKG_CONFIG_PATH=$PKG_CONFIG_PATH])
 
+AC_ARG_ENABLE(decor09,
+  [  --enable-decor09        Use libdecoration 0.9.x support],
+  [use_decor09=$enableval], [use_decor09=no])
+
 PKG_CHECK_MODULES(EMERALD, $EMERALD_REQUIRES)
 PKG_CHECK_EXISTS(libwnck-1.0 >= 2.19.3,
 		 [have_libwnck_2_19_3=yes], [have_libwnck_2_19_3=no])
@@ -61,6 +65,11 @@ PKG_CHECK_EXISTS(libwnck-1.0 >= 2.19.4,
 if test "$have_libwnck_2_19_4" = yes; then
     AC_DEFINE(HAVE_LIBWNCK_2_19_4, 1,
 	      [Define to 1 if libwnck version >= 2_19_4])
+fi
+
+AM_CONDITIONAL(DECOR_INTERFACE_VERSION, test "x$use_decor09" = "xyes")
+if test "$use_decor09" = yes; then
+  AC_DEFINE(DECOR_INTERFACE_VERSION, 20110504, [Build with libdecoration 0.9.x support])
 fi
 
 AC_ARG_ENABLE(mime-update,
