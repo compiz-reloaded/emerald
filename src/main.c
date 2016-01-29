@@ -465,7 +465,7 @@ decor_update_blur_property (decor_t *d,
 	XSync(xdisplay, FALSE);
 	gdk_error_trap_pop ();
 
-	free (data);
+	free(data);
     }
     else
     {
@@ -511,7 +511,7 @@ static void decor_update_window_property(decor_t * d)
 	maxextents = extents;
 
 #if DECOR_INTERFACE_VERSION < 20110504
-    data = malloc(sizeof(unsigned int) * 256);
+    data = malloc(sizeof(long) * 256);
 
     decor_quads_to_property(data, GDK_PIXMAP_XID(d->pixmap),
 			    &extents, &maxextents, 0, 0, quads, nQuad);
@@ -576,7 +576,7 @@ static void decor_update_window_property(decor_t * d)
 				&right, h / 2);	
 
     if (data)
-	free (data);
+	free(data);
 }
 
 static int
@@ -1960,7 +1960,7 @@ static void decor_update_switcher_property(decor_t * d)
     nQuad = set_switcher_quads(quads, d->width, d->height, ws);
 
 #if DECOR_INTERFACE_VERSION < 20110504
-    data = malloc(sizeof(unsigned int) * 256);
+    data = malloc(sizeof(long) * 256);
 
     decor_quads_to_property(data, GDK_PIXMAP_XID(d->pixmap),
 			    &extents, &extents, 0, 0, quads, nQuad);
@@ -1995,7 +1995,7 @@ static void decor_update_switcher_property(decor_t * d)
     gdk_error_trap_pop();
 
     if (data)
-	free (data);
+	free(data);
 }
 
 static void draw_switcher_background(decor_t * d)
@@ -2404,7 +2404,7 @@ update_default_decorations(GdkScreen * screen, frame_settings * fs_act,
 	nQuad = set_shadow_quads(quads, width, height, ws);
 
 #if DECOR_INTERFACE_VERSION < 20110504
-	data = malloc(sizeof(unsigned int) * 256);
+	data = malloc(sizeof(long) * 256);
 
 	decor_quads_to_property(data, GDK_PIXMAP_XID(ws->shadow_pixmap),
 				&ws->shadow_extents, &ws->shadow_extents, 0, 0,
@@ -2513,7 +2513,7 @@ update_default_decorations(GdkScreen * screen, frame_settings * fs_act,
     }
 
     if (data)
-	free (data);
+	free(data);
 }
 
 static gboolean get_window_prop(Window xwindow, Atom atom, Window * val)
