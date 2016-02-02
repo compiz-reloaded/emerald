@@ -138,6 +138,24 @@ static GdkPixmap *create_pixmap(int w, int h)
     return pixmap;
 }
 
+static void draw_pixmap(GdkPixmap *pixmap, GdkPixmap *src,
+			int xsrc, int ysrc, int xdest, int ydest, int w, int h)
+{
+    cairo_t *cr = NULL;
+
+    if (!IS_VALID(src))
+	return;
+    if (!IS_VALID(pixmap))
+	abort();
+
+    cr = gdk_cairo_create(pixmap);
+    cairo_set_operator(cr, CAIRO_OPERATOR_SOURCE);
+    gdk_cairo_set_source_pixmap(cr, src, xdest - xsrc, ydest - ysrc);
+    cairo_rectangle(cr, xdest, ydest, w, h);
+    cairo_fill(cr);
+    cairo_destroy(cr);
+}
+
 static gint get_b_offset(gint b)
 {
     static int boffset[B_COUNT+1];
@@ -1166,9 +1184,9 @@ static void draw_button_backgrounds(decor_t * d, int *necessary_update_type)
 	else
 	    return;
 	if (button_region->bg_pixmap)
-	    gdk_draw_drawable(IS_VALID(d->buffer_pixmap) ? d->buffer_pixmap : d->pixmap,
-			      d->gc, button_region->bg_pixmap, src_x, src_y,
-			      dest_x, dest_y, w, h);
+	    draw_pixmap(IS_VALID(d->buffer_pixmap) ? d->buffer_pixmap : d->pixmap,
+			button_region->bg_pixmap, src_x, src_y,
+			dest_x, dest_y, w, h);
 	d->min_drawn_buttons_region.x1 =
 	    MIN(d->min_drawn_buttons_region.x1, dest_x);
 	d->min_drawn_buttons_region.y1 =
@@ -1318,15 +1336,14 @@ gint draw_buttons_timer_func(gpointer data)
 	d->min_drawn_buttons_region.x1 < 10000)
     {
 	// if region is updated at least once
-	gdk_draw_drawable(d->pixmap,
-			  d->gc,
-			  d->buffer_pixmap,
-			  d->min_drawn_buttons_region.x1,
-			  d->min_drawn_buttons_region.y1,
-			  d->min_drawn_buttons_region.x1,
-			  d->min_drawn_buttons_region.y1,
-			  d->min_drawn_buttons_region.x2 - d->min_drawn_buttons_region.x1,
-			  d->min_drawn_buttons_region.y2 - d->min_drawn_buttons_region.y1);
+	draw_pixmap(d->pixmap,
+		    d->buffer_pixmap,
+		    d->min_drawn_buttons_region.x1,
+		    d->min_drawn_buttons_region.y1,
+		    d->min_drawn_buttons_region.x1,
+		    d->min_drawn_buttons_region.y1,
+		    d->min_drawn_buttons_region.x2 - d->min_drawn_buttons_region.x1,
+		    d->min_drawn_buttons_region.y2 - d->min_drawn_buttons_region.y1);
     }
     fade_info->first_draw = FALSE;
     if (!any_active_buttons)
@@ -1738,10 +1755,9 @@ static void draw_window_decoration_real(decor_t * d, gboolean shadow_time)
 		}
 		else
 		{
-		    gdk_draw_drawable(button_region->bg_pixmap,
-				      d->gc,
-				      IS_VALID(d->buffer_pixmap) ? d->buffer_pixmap : d->pixmap,
-				      rx, ry, 0, 0, rw, rh);
+		    draw_pixmap(button_region->bg_pixmap,
+				IS_VALID(d->buffer_pixmap) ? d->buffer_pixmap : d->pixmap,
+				rx, ry, 0, 0, rw, rh);
 		}
 	    }
 	}
@@ -1842,8 +1858,7 @@ static void draw_window_decoration_real(decor_t * d, gboolean shadow_time)
     {
 	/*if (d->draw_only_buttons_region && d->min_drawn_buttons_region.x1 < 10000)	// if region is updated at least once
 	  {
-	  gdk_draw_drawable(d->pixmap,
-	  d->gc,
+	  draw_pixmap(d->pixmap,
 	  d->buffer_pixmap,
 	  d->min_drawn_buttons_region.x1,
 	  d->min_drawn_buttons_region.y1,
@@ -1854,9 +1869,8 @@ static void draw_window_decoration_real(decor_t * d, gboolean shadow_time)
 	  }
 	  else*/
 	{
-	    gdk_draw_drawable(d->pixmap,
-			      d->gc,
-			      d->buffer_pixmap, 0, 0, 0, 0, d->width, d->height);
+	    draw_pixmap(d->pixmap,
+			d->buffer_pixmap, 0, 0, 0, 0, d->width, d->height);
 	    //ws->top_space + ws->bottom_space +
 	    //ws->titlebar_height + 2);
 	}
@@ -2142,9 +2156,8 @@ static void draw_switcher_background(decor_t * d)
 
     cairo_destroy(cr);
 
-    gdk_draw_drawable(d->pixmap,
-		      d->gc,
-		      d->buffer_pixmap, 0, 0, 0, 0, d->width, d->height);
+    draw_pixmap(d->pixmap,
+		d->buffer_pixmap, 0, 0, 0, 0, d->width, d->height);
 
     pixel =  (((a * style->bg[GTK_STATE_NORMAL].red) >> 24) & 0x0000ff);
     pixel |= (((a * style->bg[GTK_STATE_NORMAL].green) >> 16) & 0x00ff00);
@@ -2264,9 +2277,8 @@ static void draw_switcher_foreground(decor_t * d)
 
     cairo_destroy(cr);
 
-    gdk_draw_drawable(d->pixmap,
-		      d->gc,
-		      d->buffer_pixmap, 0, 0, 0, 0, d->width, d->height);
+    draw_pixmap(d->pixmap,
+		d->buffer_pixmap, 0, 0, 0, 0, d->width, d->height);
 }
 
 static void draw_switcher_decoration(decor_t * d)
