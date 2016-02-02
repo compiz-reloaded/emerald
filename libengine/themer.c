@@ -60,6 +60,7 @@ GKeyFile * global_settings_file;
 DBusConnection *dbcon;
 #endif
 gchar * active_engine = NULL;
+gint cb_apply_setting_timer_tag = 0;
 
 static gchar* display_part(const gchar *p)
 {
@@ -89,7 +90,6 @@ GtkWidget * scaler_new(gdouble low, gdouble high, gdouble prec)
     GtkWidget * w;
     w = gtk_hscale_new_with_range(low,high,prec);
     gtk_scale_set_value_pos(GTK_SCALE(w),GTK_POS_RIGHT);
-    gtk_range_set_update_policy(GTK_RANGE(w),GTK_UPDATE_DISCONTINUOUS);
     gtk_widget_set_size_request(w,100,-1);
     return w;
 }
@@ -322,18 +322,19 @@ void apply_settings()
     g_free(path);
     send_reload_signal();
 }
-void cb_apply_setting(GtkWidget * w, gpointer p)
+static gboolean cb_apply_setting_real(gpointer p)
 {
     SettingItem * item = p;
+    cb_apply_setting_timer_tag = 0;
     if (item->type == ST_IMG_FILE)
     {
         gchar * s;
         if (!(s=gtk_file_chooser_get_filename(GTK_FILE_CHOOSER(item->widget))))
-            return; // for now just ignore setting it to an invalid name
+            return FALSE; // for now just ignore setting it to an invalid name
         if (!strcmp(s,item->fvalue))
         {
             g_free(s);
-            return;
+            return FALSE;
         }
         g_free(item->fvalue);
         item->fvalue=s;
@@ -346,6 +347,14 @@ void cb_apply_setting(GtkWidget * w, gpointer p)
     {
         changed=TRUE;
     }
+    return FALSE;
+}
+void cb_apply_setting(GtkWidget * w, gpointer p)
+{
+    if (cb_apply_setting_timer_tag != 0)
+	return;
+
+    cb_apply_setting_timer_tag = g_timeout_add(500, cb_apply_setting_real,p);
 }
 #ifdef USE_DBUS
 void setup_dbus()

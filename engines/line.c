@@ -64,7 +64,7 @@ static void draw_shadow_background(decor_t * d, cairo_t * cr)
 	gint left, right, top, bottom;
 	window_settings *ws = d->fs->ws;
 
-	if (!ws->large_shadow_pixmap)
+	if (!ws->large_shadow_surface)
 	{
 		cairo_set_source_rgba(cr, 0.0, 0.0, 0.0, 0.0);
 		cairo_paint(cr);
@@ -72,7 +72,8 @@ static void draw_shadow_background(decor_t * d, cairo_t * cr)
 		return;
 	}
 
-	gdk_drawable_get_size(ws->large_shadow_pixmap, &width, &height);
+	width = cairo_xlib_surface_get_width(ws->large_shadow_surface);
+	height = cairo_xlib_surface_get_height(ws->large_shadow_surface);
 
 	left = ws->left_space + ws->left_corner_space;
 	right = ws->right_space + ws->right_corner_space;

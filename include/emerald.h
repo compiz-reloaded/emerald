@@ -26,7 +26,7 @@
 #include <gtk/gtkwindow.h>
 #include <gdk/gdkx.h>
 
-#define IS_VALID(o) (o && o->parent_instance.ref_count)
+#define IS_VALID_SURFACE(o) (o && cairo_surface_get_reference_count(o) > 0)
 
 #ifdef USE_DBUS
 #define DBUS_API_SUBJECT_TO_CHANGE
@@ -39,7 +39,6 @@
 
 #define WNCK_I_KNOW_THIS_IS_UNSTABLE
 #include <libwnck/libwnck.h>
-#include <libwnck/window-action-menu.h>
 
 #include <cairo.h>
 #include <cairo-xlib.h>
@@ -228,24 +227,19 @@ typedef struct _window_settings
     gint shadow_bottom_corner_space;// = 0;
 
 
-    GdkPixmap *shadow_pixmap;// = NULL;
-    GdkPixmap *large_shadow_pixmap;// = NULL;
-    GdkPixmap *decor_normal_pixmap;// = NULL;
-    GdkPixmap *decor_active_pixmap;// = NULL;
+    cairo_surface_t *shadow_surface;// = NULL;
+    cairo_surface_t *large_shadow_surface;// = NULL;
+    cairo_surface_t *decor_normal_surface;// = NULL;
+    cairo_surface_t *decor_active_surface;// = NULL;
 
     cairo_pattern_t *shadow_pattern;// = NULL;
 
-    gint		    text_height;
+    gint	    text_height;
 
     PangoFontDescription *font_desc;
     PangoContext * pango_context;
 
     decor_extents_t switcher_extents;// = { 0, 0, 0, 0 };
-    GdkPixmap *switcher_pixmap;// = NULL;
-    GdkPixmap *switcher_buffer_pixmap;// = NULL;
-    gint      switcher_width;
-    gint      switcher_height;
-
     gint switcher_top_corner_space;//    = 0;
     gint switcher_bottom_corner_space;// = 0;
 
@@ -294,7 +288,7 @@ typedef struct _button_region_t {
 
     // holds whether this button's glow overlap with the other button's non-glow (base) area
     gboolean    overlap_buttons[B_T_COUNT];
-    GdkPixmap *bg_pixmap;
+    cairo_surface_t *bg_surface;
 } button_region_t;
 
 typedef struct _decor
@@ -307,9 +301,9 @@ typedef struct _decor
     gint tobj_item_pos[11];
     gint tobj_item_state[11];
     gint tobj_item_width[11];
-    GdkPixmap	      *pixmap;
-    GdkPixmap	      *buffer_pixmap;
-    GdkGC	      *gc;
+    cairo_surface_t   *surface;
+    cairo_surface_t   *buffer_surface;
+    cairo_t	      *cr;
     gint	      width;
     gint	      height;
     gint              client_width;
@@ -319,21 +313,21 @@ typedef struct _decor
     PangoLayout	      *layout;
     gchar	      *name;
     cairo_pattern_t   *icon;
-    GdkPixmap	      *icon_pixmap;
+    cairo_surface_t	      *icon_surface;
     GdkPixbuf	      *icon_pixbuf;
     WnckWindowState   state;
     WnckWindowActions actions;
     XID		      prop_xid;
     GtkWidget	      *force_quit_dialog;
-    frame_settings    *fs;
+    frame_settings * fs;
     void	      (*draw) (struct _decor *d);
     button_region_t   button_region[B_T_COUNT];
     rectangle_t       min_drawn_buttons_region; // minimal rectangle enclosing all drawn regions
     gboolean          draw_only_buttons_region;
     gint              button_last_drawn_state[B_T_COUNT]; // last drawn state or fade counter
     button_fade_info_t button_fade_info;
-    GdkPixmap	      *p_active, *p_active_buffer;
-    GdkPixmap	      *p_inactive, *p_inactive_buffer;
+    cairo_surface_t * p_active, * p_active_buffer;
+    cairo_surface_t * p_inactive, * p_inactive_buffer;
     button_region_t   button_region_inact[B_T_COUNT];
     gboolean only_change_active;
 } decor_t;
