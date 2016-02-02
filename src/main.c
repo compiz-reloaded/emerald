@@ -46,35 +46,7 @@
 
 void reload_all_settings(int sig);
 
-GdkPixmap *pdeb;
 static gboolean do_reload = FALSE;
-
-static GdkPixmap *create_pixmap(int w, int h)
-{
-    GdkPixmap *pixmap;
-    GdkVisual *visual;
-    GdkColormap *colormap;
-
-    visual = gdk_visual_get_best_with_depth(32);
-    if (!visual)
-	return NULL;
-
-    pixmap = gdk_pixmap_new(NULL, w, h, 32);
-    if (!pixmap)
-	return NULL;
-
-    colormap = gdk_colormap_new(visual, FALSE);
-    if (!colormap)
-    {
-	g_object_unref (G_OBJECT (pixmap));
-	return NULL;
-    }
-
-    gdk_drawable_set_colormap(GDK_DRAWABLE(pixmap), colormap);
-    g_object_unref (G_OBJECT (colormap));
-
-    return pixmap;
-}
 
 void engine_draw_frame(decor_t * d, cairo_t * cr);
 gboolean load_engine(gchar * engine_name, window_settings * ws);
@@ -138,6 +110,33 @@ static guint draw_idle_id = 0;
 
 static gboolean enable_tooltips = TRUE;
 static gchar *engine = NULL;
+
+static GdkPixmap *create_pixmap(int w, int h)
+{
+    GdkPixmap *pixmap;
+    GdkVisual *visual;
+    GdkColormap *colormap;
+
+    visual = gdk_visual_get_best_with_depth(32);
+    if (!visual)
+       return NULL;
+
+    pixmap = gdk_pixmap_new(NULL, w, h, 32);
+    if (!pixmap)
+	return NULL;
+
+    colormap = gdk_colormap_new(visual, FALSE);
+    if (!colormap)
+    {
+	g_object_unref(G_OBJECT(pixmap));
+	return NULL;
+    }
+
+    gdk_drawable_set_colormap(GDK_DRAWABLE(pixmap), colormap);
+    g_object_unref(G_OBJECT(colormap));
+
+    return pixmap;
+}
 
 static gint get_b_offset(gint b)
 {
@@ -407,20 +406,13 @@ my_set_window_quads(decor_quad_t * q,
     return mnq;
 }
 
-static void
-decor_update_blur_property (decor_t *d,
-			    int     width,
-			    int     height,
-			    Region  top_region,
-			    int     top_offset,
-			    Region  bottom_region,
-			    int     bottom_offset,
-			    Region  left_region,
-			    int     left_offset,
-			    Region  right_region,
-			    int     right_offset)
+static void decor_update_blur_property(decor_t *d, int width, int height,
+				       Region top_region, int top_offset,
+				       Region bottom_region, int bottom_offset,
+				       Region left_region, int left_offset,
+				       Region right_region, int right_offset)
 {
-    Display *xdisplay = GDK_DISPLAY_XDISPLAY (gdk_display_get_default ());
+    Display *xdisplay = GDK_DISPLAY_XDISPLAY(gdk_display_get_default());
     long    *data = NULL;
     int     size = 0;
     window_settings *ws = d->fs->ws;
@@ -445,33 +437,33 @@ decor_update_blur_property (decor_t *d,
 	size += right_region->numRects;
 
     if (size)
-	data = malloc (sizeof (long) * (2 + size * 6));
+	data = malloc(sizeof(long) * (2 + size * 6));
 
     if (data)
     {
-	decor_region_to_blur_property (data, 4, 0, width, height,
-				       top_region, top_offset,
-				       bottom_region, bottom_offset,
-				       left_region, left_offset,
-				       right_region, right_offset);
+	decor_region_to_blur_property(data, 4, 0, width, height,
+				      top_region, top_offset,
+				      bottom_region, bottom_offset,
+				      left_region, left_offset,
+				      right_region, right_offset);
 
-	gdk_error_trap_push ();
-	XChangeProperty (xdisplay, d->prop_xid,
+	gdk_error_trap_push();
+	XChangeProperty(xdisplay, d->prop_xid,
 			 win_blur_decor_atom,
 			 XA_INTEGER,
 			 32, PropModeReplace, (guchar *) data,
 			 2 + size * 6);
 	XSync(xdisplay, FALSE);
-	gdk_error_trap_pop ();
+	gdk_error_trap_pop();
 
 	free(data);
     }
     else
     {
-	gdk_error_trap_push ();
-	XDeleteProperty (xdisplay, d->prop_xid, win_blur_decor_atom);
+	gdk_error_trap_push();
+	XDeleteProperty(xdisplay, d->prop_xid, win_blur_decor_atom);
 	XSync(xdisplay, FALSE);
-	gdk_error_trap_pop ();
+	gdk_error_trap_pop();
     }
 }
 
@@ -567,12 +559,12 @@ static void decor_update_window_property(decor_t * d)
     right.extents.x2 = extents.right;
     right.extents.y2 = h;
 
-    decor_update_blur_property (d,
-				w, h,
-				&top, stretch_offset,
-				&bottom, w / 2,
-				&left, h / 2,
-				&right, h / 2);	
+    decor_update_blur_property(d,
+			       w, h,
+			       &top, stretch_offset,
+			       &bottom, w / 2,
+			       &left, h / 2,
+			       &right, h / 2);
 
     if (data)
 	free(data);
@@ -1051,7 +1043,7 @@ draw_button_with_glow_alpha_bstate(gint b_t, decor_t * d, cairo_t * cr,
 	y += 3;
 	cairo_set_line_width(cr, 2.0);
 	cairo_move_to(cr, x, y);
-	switch (b)
+	switch(b)
 	{
 	    case B_CLOSE:
 		draw_close_button(d, cr, 3.1);
@@ -1102,12 +1094,12 @@ static void reset_buttons_bg_and_fade(decor_t * d)
 	d->button_region[b_t].base_x1 = -100;
 	d->button_region[b_t].glow_x1 = -100;
 	if (d->button_region[b_t].bg_pixmap)
-	    g_object_unref (G_OBJECT (d->button_region[b_t].bg_pixmap));
+	    g_object_unref(G_OBJECT(d->button_region[b_t].bg_pixmap));
 	d->button_region[b_t].bg_pixmap = NULL;
 	d->button_region_inact[b_t].base_x1 = -100;
 	d->button_region_inact[b_t].glow_x1 = -100;
 	if (d->button_region_inact[b_t].bg_pixmap)
-	    g_object_unref (G_OBJECT (d->button_region_inact[b_t].bg_pixmap));
+	    g_object_unref(G_OBJECT(d->button_region_inact[b_t].bg_pixmap));
 	d->button_region_inact[b_t].bg_pixmap = NULL;
 	d->button_last_drawn_state[b_t] = 0;
     }
@@ -1174,8 +1166,7 @@ static void draw_button_backgrounds(decor_t * d, int *necessary_update_type)
 	else
 	    return;
 	if (button_region->bg_pixmap)
-	    gdk_draw_drawable(IS_VALID(d->buffer_pixmap) ? d->buffer_pixmap :
-			                                   d->pixmap,
+	    gdk_draw_drawable(IS_VALID(d->buffer_pixmap) ? d->buffer_pixmap : d->pixmap,
 			      d->gc, button_region->bg_pixmap, src_x, src_y,
 			      dest_x, dest_y, w, h);
 	d->min_drawn_buttons_region.x1 =
@@ -1211,9 +1202,7 @@ gint draw_buttons_timer_func(gpointer data)
     if (!fade_info->cr)
     {
 	fade_info->cr =
-	    gdk_cairo_create(GDK_DRAWABLE
-			     (IS_VALID(d->buffer_pixmap) ? d->buffer_pixmap :
-			                                   d->pixmap));
+	    gdk_cairo_create(GDK_DRAWABLE(IS_VALID(d->buffer_pixmap) ? d->buffer_pixmap : d->pixmap));
 	cairo_set_operator(fade_info->cr, CAIRO_OPERATOR_OVER);
     }
 
@@ -1222,7 +1211,7 @@ gint draw_buttons_timer_func(gpointer data)
     int necessary_update_type[B_T_COUNT];	// 0: none, 1: only base, 2: base+glow
 
     for (b_t = 0; b_t < B_T_COUNT; b_t++)
-	necessary_update_type[b_t] = (ws->use_button_glow && d->active) || 
+	necessary_update_type[b_t] = (ws->use_button_glow && d->active) ||
 	    (ws->use_button_inactive_glow && !d->active) ? 2:1;
     draw_button_backgrounds(d, necessary_update_type);
 
@@ -1336,10 +1325,8 @@ gint draw_buttons_timer_func(gpointer data)
 			  d->min_drawn_buttons_region.y1,
 			  d->min_drawn_buttons_region.x1,
 			  d->min_drawn_buttons_region.y1,
-			  d->min_drawn_buttons_region.x2 -
-			  d->min_drawn_buttons_region.x1,
-			  d->min_drawn_buttons_region.y2 -
-			  d->min_drawn_buttons_region.y1);
+			  d->min_drawn_buttons_region.x2 - d->min_drawn_buttons_region.x1,
+			  d->min_drawn_buttons_region.y2 - d->min_drawn_buttons_region.y1);
     }
     fade_info->first_draw = FALSE;
     if (!any_active_buttons)
@@ -1440,7 +1427,7 @@ static void draw_buttons_without_fade(decor_t * d, cairo_t * cr, double y1)
     int necessary_update_type[B_T_COUNT];	// 0: none, 1: only base, 2: base+glow
 
     for (b_t = 0; b_t < B_T_COUNT; b_t++)
-	necessary_update_type[b_t] = (ws->use_button_glow && d->active) || 
+	necessary_update_type[b_t] = (ws->use_button_glow && d->active) ||
 	    (ws->use_button_inactive_glow && !d->active) ? 2:1;
     //necessary_update_type[b_t] = 2;
 
@@ -1488,12 +1475,12 @@ static void update_button_regions(decor_t * d)
 
 	if (button_region->bg_pixmap)
 	{
-	    g_object_unref (G_OBJECT (button_region->bg_pixmap));
+	    g_object_unref(G_OBJECT(button_region->bg_pixmap));
 	    button_region->bg_pixmap = NULL;
 	}
 	if (d->button_region_inact[b_t].bg_pixmap)
 	{
-	    g_object_unref (G_OBJECT (d->button_region_inact[b_t].bg_pixmap));
+	    g_object_unref(G_OBJECT(d->button_region_inact[b_t].bg_pixmap));
 	    d->button_region_inact[b_t].bg_pixmap = NULL;
 	}
 	// Reset overlaps
@@ -1637,9 +1624,7 @@ static void draw_window_decoration_real(decor_t * d, gboolean shadow_time)
 
     if (!d->draw_only_buttons_region)	// if not only drawing buttons
     {
-	cr = gdk_cairo_create(GDK_DRAWABLE
-			      (IS_VALID(d->buffer_pixmap) ? d->buffer_pixmap :
-			                                    d->pixmap));
+	cr = gdk_cairo_create(GDK_DRAWABLE(IS_VALID(d->buffer_pixmap) ? d->buffer_pixmap : d->pixmap));
 	cairo_set_operator(cr, CAIRO_OPERATOR_SOURCE);
 	cairo_set_line_width(cr, 1.0);
 	cairo_save(cr);
@@ -1753,11 +1738,10 @@ static void draw_window_decoration_real(decor_t * d, gboolean shadow_time)
 		}
 		else
 		{
-		    gdk_draw_drawable(button_region->bg_pixmap, d->gc,
-				      IS_VALID(d->buffer_pixmap) ?
-				      d->buffer_pixmap : d->pixmap,
-				      rx, ry, 0, 0,
-				      rw, rh);
+		    gdk_draw_drawable(button_region->bg_pixmap,
+				      d->gc,
+				      IS_VALID(d->buffer_pixmap) ? d->buffer_pixmap : d->pixmap,
+				      rx, ry, 0, 0, rw, rh);
 		}
 	    }
 	}
@@ -1771,12 +1755,12 @@ static void draw_window_decoration_real(decor_t * d, gboolean shadow_time)
 	cairo_matrix_t cm;
 	cairo_destroy(cr);
 	gint topspace = ws->top_space + ws->titlebar_height;
-	cr = gdk_cairo_create (GDK_DRAWABLE (d->buffer_pixmap ? d->buffer_pixmap : d->pixmap));
+	cr = gdk_cairo_create(GDK_DRAWABLE(d->buffer_pixmap ? d->buffer_pixmap : d->pixmap));
 	cairo_set_operator(cr, CAIRO_OPERATOR_SOURCE);
 
 	gdk_drawable_get_size(pbuff,&w,&h);
 	csur = cairo_xlib_surface_create(
-	GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()),
+	GDK_DISPLAY_XDISPLAY(gdk_display_get_default()),
 	GDK_PIXMAP_XID(pbuff),
 	GDK_VISUAL_XVISUAL(gdk_drawable_get_visual(pbuff)),
 	w,h);
@@ -1833,15 +1817,16 @@ static void draw_window_decoration_real(decor_t * d, gboolean shadow_time)
 
 
 	cairo_destroy(cr);
-	g_object_unref (G_OBJECT (pbuff));
+	cr = NULL;
+	g_object_unref(G_OBJECT(pbuff));
 	cairo_surface_destroy(csur);
+	csur = NULL;
     }
     */
     }
     // Draw buttons
 
-    cr = gdk_cairo_create(GDK_DRAWABLE (IS_VALID(d->buffer_pixmap) ?
-					d->buffer_pixmap : d->pixmap));
+    cr = gdk_cairo_create(GDK_DRAWABLE(IS_VALID(d->buffer_pixmap) ? d->buffer_pixmap : d->pixmap));
 
     cairo_set_operator(cr, CAIRO_OPERATOR_OVER);
 
@@ -1851,6 +1836,7 @@ static void draw_window_decoration_real(decor_t * d, gboolean shadow_time)
 	draw_buttons_without_fade(d, cr, y1);
 
     cairo_destroy(cr);
+    cr = NULL;
 
     if (IS_VALID(d->buffer_pixmap))
     {
@@ -1863,22 +1849,14 @@ static void draw_window_decoration_real(decor_t * d, gboolean shadow_time)
 	  d->min_drawn_buttons_region.y1,
 	  d->min_drawn_buttons_region.x1,
 	  d->min_drawn_buttons_region.y1,
-	  d->min_drawn_buttons_region.x2 -
-	  d->min_drawn_buttons_region.x1,
-	  d->min_drawn_buttons_region.y2 -
-	  d->min_drawn_buttons_region.y1);
+	  d->min_drawn_buttons_region.x2 - d->min_drawn_buttons_region.x1,
+	  d->min_drawn_buttons_region.y2 - d->min_drawn_buttons_region.y1);
 	  }
 	  else*/
 	{
 	    gdk_draw_drawable(d->pixmap,
 			      d->gc,
-			      d->buffer_pixmap,
-			      0,
-			      0,
-			      0,
-			      0,
-			      d->width,
-			      d->height);
+			      d->buffer_pixmap, 0, 0, 0, 0, d->width, d->height);
 	    //ws->top_space + ws->bottom_space +
 	    //ws->titlebar_height + 2);
 	}
@@ -1971,7 +1949,7 @@ static void decor_update_switcher_property(decor_t * d)
 			    0, 0, quads, nQuad, 0xffffff, 0, 0);
 #endif
 
-    style = gtk_widget_get_style (style_window);
+    style = gtk_widget_get_style(style_window);
 
     fgColor[0] = style->fg[GTK_STATE_NORMAL].red;
     fgColor[1] = style->fg[GTK_STATE_NORMAL].green;
@@ -2168,10 +2146,10 @@ static void draw_switcher_background(decor_t * d)
 		      d->gc,
 		      d->buffer_pixmap, 0, 0, 0, 0, d->width, d->height);
 
-    pixel = ((((a * style->bg[GTK_STATE_NORMAL].red) >> 24) & 0x0000ff) |
-	     (((a * style->bg[GTK_STATE_NORMAL].green) >> 16) & 0x00ff00) |
-	     (((a * style->bg[GTK_STATE_NORMAL].blue) >> 8) & 0xff0000) |
-	     (((a & 0xff00) << 16)));
+    pixel =  (((a * style->bg[GTK_STATE_NORMAL].red) >> 24) & 0x0000ff);
+    pixel |= (((a * style->bg[GTK_STATE_NORMAL].green) >> 16) & 0x00ff00);
+    pixel |= (((a * style->bg[GTK_STATE_NORMAL].blue) >> 8) & 0xff0000);
+    pixel |= ((a & 0xff00) << 16);
 
     decor_update_switcher_property(d);
 
@@ -2452,9 +2430,9 @@ update_default_decorations(GdkScreen * screen, frame_settings * fs_act,
     reset_buttons_bg_and_fade(&d);
 
     if (ws->decor_normal_pixmap)
-	g_object_unref (G_OBJECT (ws->decor_normal_pixmap));
+	g_object_unref(G_OBJECT(ws->decor_normal_pixmap));
     if (ws->decor_active_pixmap)
-	g_object_unref (G_OBJECT (ws->decor_active_pixmap));
+	g_object_unref(G_OBJECT(ws->decor_active_pixmap));
 
     nQuad = my_set_window_quads(quads, d.width, d.height, ws, FALSE, FALSE);
 
@@ -2948,18 +2926,18 @@ static void update_window_decoration_icon(WnckWindow * win)
 
     if (d->icon_pixmap)
     {
-	g_object_unref (G_OBJECT (d->icon_pixmap));
+	g_object_unref(G_OBJECT(d->icon_pixmap));
 	d->icon_pixmap = NULL;
     }
-    if (d->icon_pixbuf) 
-      g_object_unref (G_OBJECT (d->icon_pixbuf));
+    if (d->icon_pixbuf)
+	g_object_unref(G_OBJECT(d->icon_pixbuf));
 
     d->icon_pixbuf = wnck_window_get_mini_icon(win);
     if (d->icon_pixbuf)
     {
 	cairo_t *cr;
 
-        g_object_ref (G_OBJECT (d->icon_pixbuf));
+        g_object_ref(G_OBJECT(d->icon_pixbuf));
 
 	d->icon_pixmap = pixmap_new_from_pixbuf(d->icon_pixbuf);
 	cr = gdk_cairo_create(GDK_DRAWABLE(d->icon_pixmap));
@@ -2995,8 +2973,8 @@ static void update_window_decoration_actions(WnckWindow * win)
 
     gdkdisplay = gdk_display_get_default();
     xdisplay = GDK_DISPLAY_XDISPLAY(gdkdisplay);
-    //screen     = gdk_display_get_default_screen (gdkdisplay);
-    //xroot      = RootWindowOfScreen (gdk_x11_screen_get_xscreen (screen));
+    //screen     = gdk_display_get_default_screen(gdkdisplay);
+    //xroot      = RootWindowOfScreen(gdk_x11_screen_get_xscreen(screen));
 
     d->actions = wnck_window_get_actions(win);
     data = NULL;
@@ -3032,8 +3010,8 @@ static void update_window_decoration_actions(WnckWindow * win)
 static gboolean update_window_decoration_size(WnckWindow * win)
 {
     decor_t *d = g_object_get_data(G_OBJECT(win), "decor");
-    GdkPixmap *pixmap, *buffer_pixmap = NULL;
-    GdkPixmap *ipixmap, *ibuffer_pixmap = NULL;
+    GdkPixmap *pixmap = NULL, *buffer_pixmap = NULL;
+    GdkPixmap *ipixmap = NULL, *ibuffer_pixmap = NULL;
     gint width, height;
     gint w;
     gint h;
@@ -3074,7 +3052,7 @@ static gboolean update_window_decoration_size(WnckWindow * win)
 		      ws->bottom_space);
     if (!buffer_pixmap)
     {
-	g_object_unref (G_OBJECT (pixmap));
+	g_object_unref(G_OBJECT(pixmap));
 	return FALSE;
     }
 
@@ -3089,19 +3067,19 @@ static gboolean update_window_decoration_size(WnckWindow * win)
 				   ws->bottom_space);
 
     if (d->p_active)
-	g_object_unref (G_OBJECT (d->p_active));
+	g_object_unref(G_OBJECT(d->p_active));
 
     if (d->p_active_buffer)
-	g_object_unref (G_OBJECT (d->p_active_buffer));
+	g_object_unref(G_OBJECT(d->p_active_buffer));
 
     if (d->p_inactive)
-	g_object_unref (G_OBJECT (d->p_inactive));
+	g_object_unref(G_OBJECT(d->p_inactive));
 
     if (d->p_inactive_buffer)
-	g_object_unref (G_OBJECT (d->p_inactive_buffer));
+	g_object_unref(G_OBJECT(d->p_inactive_buffer));
 
     if (d->gc)
-      g_object_unref (G_OBJECT (d->gc));
+	g_object_unref(G_OBJECT(d->gc));
 
     d->only_change_active = FALSE;
 
@@ -3210,7 +3188,7 @@ static void add_frame_window(WnckWindow * win, Window frame)
 static gboolean update_switcher_window(WnckWindow * win, Window selected)
 {
     decor_t *d = g_object_get_data(G_OBJECT(win), "decor");
-    GdkPixmap *pixmap, *buffer_pixmap = NULL;
+    GdkPixmap *pixmap = NULL, *buffer_pixmap = NULL;
     gint height, width = 0;
     WnckWindow *selected_win;
     window_settings *ws = d->fs->ws;
@@ -3227,13 +3205,13 @@ static gboolean update_switcher_window(WnckWindow * win, Window selected)
 
     if (!IS_VALID(d->pixmap) && IS_VALID(ws->switcher_pixmap))
     {
-	g_object_ref (G_OBJECT (ws->switcher_pixmap));
+	g_object_ref(G_OBJECT(ws->switcher_pixmap));
 	d->pixmap = ws->switcher_pixmap;
     }
 
     if (!IS_VALID(d->buffer_pixmap) && IS_VALID(ws->switcher_buffer_pixmap))
     {
-	g_object_ref (G_OBJECT (ws->switcher_buffer_pixmap));
+	g_object_ref(G_OBJECT(ws->switcher_buffer_pixmap));
 	d->buffer_pixmap = ws->switcher_buffer_pixmap;
     }
 
@@ -3326,24 +3304,24 @@ static gboolean update_switcher_window(WnckWindow * win, Window selected)
     buffer_pixmap = create_pixmap(width, height);
     if (!buffer_pixmap)
     {
-	g_object_unref (G_OBJECT (pixmap));
+	g_object_unref(G_OBJECT(pixmap));
 	return FALSE;
     }
 
     if (ws->switcher_pixmap)
-	g_object_unref (G_OBJECT (ws->switcher_pixmap));
+	g_object_unref(G_OBJECT(ws->switcher_pixmap));
 
     if (ws->switcher_buffer_pixmap)
-	g_object_unref (G_OBJECT (ws->switcher_buffer_pixmap));
+	g_object_unref(G_OBJECT(ws->switcher_buffer_pixmap));
 
     if (d->pixmap)
-	g_object_unref (G_OBJECT (d->pixmap));
+	g_object_unref(G_OBJECT(d->pixmap));
 
     if (d->buffer_pixmap)
-	g_object_unref (G_OBJECT (d->buffer_pixmap));
+	g_object_unref(G_OBJECT(d->buffer_pixmap));
 
     if (d->gc)
-        g_object_unref (G_OBJECT (d->gc));
+        g_object_unref(G_OBJECT(d->gc));
 
     ws->switcher_pixmap = pixmap;
     ws->switcher_buffer_pixmap = buffer_pixmap;
@@ -3351,8 +3329,8 @@ static gboolean update_switcher_window(WnckWindow * win, Window selected)
     ws->switcher_width = width;
     ws->switcher_height = height;
 
-    g_object_ref (G_OBJECT (pixmap));
-    g_object_ref (G_OBJECT (buffer_pixmap));
+    g_object_ref(G_OBJECT(pixmap));
+    g_object_ref(G_OBJECT(buffer_pixmap));
 
     d->pixmap = pixmap;
     d->buffer_pixmap = buffer_pixmap;
@@ -3376,31 +3354,31 @@ static void remove_frame_window(WnckWindow * win)
 
     if (d->p_active)
     {
-	g_object_unref (G_OBJECT (d->p_active));
+	g_object_unref(G_OBJECT(d->p_active));
 	d->p_active = NULL;
     }
 
     if (d->p_active_buffer)
     {
-	g_object_unref (G_OBJECT (d->p_active_buffer));
+	g_object_unref(G_OBJECT(d->p_active_buffer));
 	d->p_active_buffer = NULL;
     }
 
     if (d->p_inactive)
     {
-	g_object_unref (G_OBJECT (d->p_inactive));
+	g_object_unref(G_OBJECT(d->p_inactive));
 	d->p_inactive = NULL;
     }
 
     if (d->p_inactive_buffer)
     {
-	g_object_unref (G_OBJECT (d->p_inactive_buffer));
+	g_object_unref(G_OBJECT(d->p_inactive_buffer));
 	d->p_inactive_buffer = NULL;
     }
 
     if (d->gc)
     {
-        g_object_unref (G_OBJECT (d->gc));
+	g_object_unref(G_OBJECT(d->gc));
 	d->gc = NULL;
     }
 
@@ -3410,12 +3388,12 @@ static void remove_frame_window(WnckWindow * win)
     {
 	if (d->button_region[b_t].bg_pixmap)
 	{
-	    g_object_unref (G_OBJECT (d->button_region[b_t].bg_pixmap));
+	    g_object_unref(G_OBJECT(d->button_region[b_t].bg_pixmap));
 	    d->button_region[b_t].bg_pixmap = NULL;
 	}
 	if (d->button_region_inact[b_t].bg_pixmap)
 	{
-	    g_object_unref (G_OBJECT (d->button_region_inact[b_t].bg_pixmap));
+	    g_object_unref(G_OBJECT(d->button_region_inact[b_t].bg_pixmap));
 	    d->button_region_inact[b_t].bg_pixmap = NULL;
 	}
     }
@@ -3451,14 +3429,14 @@ static void remove_frame_window(WnckWindow * win)
 
     if (d->icon_pixmap)
     {
-	g_object_unref (G_OBJECT (d->icon_pixmap));
+	g_object_unref(G_OBJECT(d->icon_pixmap));
 	d->icon_pixmap = NULL;
     }
 
     if (d->icon_pixbuf)
     {
-        g_object_unref (G_OBJECT (d->icon_pixbuf));
-        d->icon_pixbuf = NULL;
+	g_object_unref(G_OBJECT (d->icon_pixbuf));
+	d->icon_pixbuf = NULL;
     }
 
 
@@ -3501,7 +3479,7 @@ static void window_geometry_changed(WnckWindow * win)
 	int width, height;
 
 	wnck_window_get_geometry(win, NULL, NULL, &width, &height);
-	if ((width != d->client_width) || (height != d->client_height)) 
+	if ((width != d->client_width) || (height != d->client_height))
 	{
 	    d->client_width = width;
 	    d->client_height = height;
@@ -3655,7 +3633,7 @@ static void window_closed(WnckScreen * screen, WnckWindow * win)
     if (!get_window_prop(wnck_window_get_xid(win), select_window_atom, &window))
 	remove_frame_window(win);
 
-    g_object_set_data (G_OBJECT (win), "decor", NULL);
+    g_object_set_data(G_OBJECT(win), "decor", NULL);
 
     g_free(d);
 }
@@ -3924,6 +3902,7 @@ handle_tooltip_event(WnckWindow * win,
 	    break;
     }
 }
+
 static void action_menu_unmap(GObject * object)
 {
     action_menu_mapped = FALSE;
@@ -3990,7 +3969,7 @@ static void action_menu_map(WnckWindow * win, long button, Time time)
 static gint generic_button_event(WnckWindow * win, XEvent * xevent,
 				 gint button, gint bpict)
 {
-    // Display *xdisplay = GDK_DISPLAY_XDISPLAY (gdk_display_get_default ());
+    // Display *xdisplay = GDK_DISPLAY_XDISPLAY(gdk_display_get_default());
     const gchar *tooltips[B_COUNT] = {
 	_("Close Window"),
 	_("Maximize Window"),
@@ -4131,8 +4110,8 @@ static void send_help_message(WnckWindow * win)
 
     gdkdisplay = gdk_display_get_default();
     xdisplay = GDK_DISPLAY_XDISPLAY(gdkdisplay);
-    //screen     = gdk_display_get_default_screen (gdkdisplay);
-    //xroot      = RootWindowOfScreen (gdk_x11_screen_get_xscreen (screen));
+    //screen     = gdk_display_get_default_screen(gdkdisplay);
+    //xroot      = RootWindowOfScreen(gdk_x11_screen_get_xscreen(screen));
     id = wnck_window_get_xid(win);
 
     ev.xclient.type = ClientMessage;
@@ -4299,7 +4278,7 @@ static void force_quit_dialog_realize(GtkWidget * dialog, void *data)
 
     gdk_error_trap_push();
     XSetTransientForHint(GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()),
-			 GDK_WINDOW_XID(dialog->window),
+			 GDK_WINDOW_XID(gtk_widget_get_window(dialog)),
 			 wnck_window_get_xid(win));
     XSync(GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()), FALSE);
     gdk_error_trap_pop();
@@ -4314,11 +4293,11 @@ static char *get_client_machine(Window xwindow)
     int format, result;
     char *retval;
 
-    atom = XInternAtom(GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()), "WM_CLIENT_MACHINE", FALSE);
+    atom = XInternAtom(GDK_DISPLAY_XDISPLAY(gdk_display_get_default()), "WM_CLIENT_MACHINE", FALSE);
 
     gdk_error_trap_push();
 
-    result = XGetWindowProperty(GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()),
+    result = XGetWindowProperty(GDK_DISPLAY_XDISPLAY(gdk_display_get_default()),
 				xwindow, atom,
 				0, G_MAXLONG,
 				FALSE, XA_STRING, &type, &format, &nitems,
@@ -4370,8 +4349,8 @@ static void kill_window(WnckWindow * win)
     }
 
     gdk_error_trap_push();
-    XKillClient(GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()), wnck_window_get_xid(win));
-    XSync(GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()), FALSE);
+    XKillClient(GDK_DISPLAY_XDISPLAY(gdk_display_get_default()), wnck_window_get_xid(win));
+    XSync(GDK_DISPLAY_XDISPLAY(gdk_display_get_default()), FALSE);
     gdk_error_trap_pop();
 }
 
@@ -4396,7 +4375,7 @@ static void show_force_quit_dialog(WnckWindow * win, Time timestamp)
     decor_t *d = g_object_get_data(G_OBJECT(win), "decor");
     GtkWidget *dialog;
     gchar *str, *tmp;
-    const gchar *name;
+    const gchar *name, *message;
 
     if (d->force_quit_dialog)
 	return;
@@ -4410,25 +4389,19 @@ static void show_force_quit_dialog(WnckWindow * win, Time timestamp)
 
     g_free(tmp);
 
-    dialog = gtk_message_dialog_new(NULL, 0,
-				    GTK_MESSAGE_WARNING,
-				    GTK_BUTTONS_NONE,
-				    "<b>%s</b>\n\n%s",
-				    str,
-				    _("Forcing this application to "
-				      "quit will cause you to lose any "
-				      "unsaved changes."));
+    message = _("Forcing this application to quit will cause you to lose any unsaved changes.");
+    dialog = gtk_message_dialog_new_with_markup(NULL, 0,
+						GTK_MESSAGE_WARNING,
+						GTK_BUTTONS_NONE,
+						"<b>%s</b>\n\n%s",
+						str,
+						message);
     g_free(str);
 
     gtk_window_set_icon_name(GTK_WINDOW(dialog), "force-quit");
 
-    gtk_label_set_use_markup(GTK_LABEL(GTK_MESSAGE_DIALOG(dialog)->label),
-			     TRUE);
-    gtk_label_set_line_wrap(GTK_LABEL(GTK_MESSAGE_DIALOG(dialog)->label),
-			    TRUE);
-
     gtk_dialog_add_buttons(GTK_DIALOG(dialog),
-			   GTK_STOCK_CANCEL,
+			   _("_Cancel"),
 			   GTK_RESPONSE_REJECT,
 			   _("_Force Quit"), GTK_RESPONSE_ACCEPT, NULL);
 
@@ -4444,7 +4417,7 @@ static void show_force_quit_dialog(WnckWindow * win, Time timestamp)
 
     gtk_widget_realize(dialog);
 
-    gdk_x11_window_set_user_time(dialog->window, timestamp);
+    gdk_x11_window_set_user_time(gtk_widget_get_window(dialog), timestamp);
 
     gtk_widget_show(dialog);
 
@@ -4791,7 +4764,7 @@ static XFixed *create_gaussian_kernel(double radius,
 
 static int update_shadow(frame_settings * fs)
 {
-    Display *xdisplay = GDK_DISPLAY_XDISPLAY (gdk_display_get_default ());
+    Display *xdisplay = GDK_DISPLAY_XDISPLAY(gdk_display_get_default());
     GdkVisual *visual = gdk_visual_get_best_with_depth(32);
     XRenderPictFormat *format;
     GdkPixmap *pixmap;
@@ -4900,7 +4873,7 @@ static int update_shadow(frame_settings * fs)
 
     if (ws->large_shadow_pixmap)
     {
-	g_object_unref (G_OBJECT (ws->large_shadow_pixmap));
+	g_object_unref(G_OBJECT(ws->large_shadow_pixmap));
 	ws->large_shadow_pixmap = NULL;
     }
 
@@ -4912,7 +4885,7 @@ static int update_shadow(frame_settings * fs)
 
     if (ws->shadow_pixmap)
     {
-	g_object_unref (G_OBJECT (ws->shadow_pixmap));
+	g_object_unref(G_OBJECT(ws->shadow_pixmap));
 	ws->shadow_pixmap = NULL;
     }
 
@@ -4956,7 +4929,7 @@ static int update_shadow(frame_settings * fs)
 		"convolution filters\n");
 
 	g_free(params);
-	g_object_unref (G_OBJECT (pixmap));
+	g_object_unref(G_OBJECT(pixmap));
 	return 1;
     }
 
@@ -4966,7 +4939,7 @@ static int update_shadow(frame_settings * fs)
     if (!d.pixmap)
     {
 	g_free(params);
-	g_object_unref (G_OBJECT (pixmap));
+	g_object_unref(G_OBJECT(pixmap));
 	return 0;
     }
 
@@ -5001,7 +4974,7 @@ static int update_shadow(frame_settings * fs)
     XRenderFreePicture(xdisplay, tmp);
     XRenderFreePicture(xdisplay, dst);
 
-    g_object_unref (G_OBJECT (pixmap));
+    g_object_unref(G_OBJECT(pixmap));
 
     ws->large_shadow_pixmap = d.pixmap;
 
@@ -5029,7 +5002,7 @@ static int update_shadow(frame_settings * fs)
     d.pixmap = create_pixmap(d.width, d.height);
     if (!d.pixmap)
     {
-	g_object_unref (G_OBJECT (pixmap));
+	g_object_unref(G_OBJECT(pixmap));
 	g_free(params);
 	return 0;
     }
@@ -5075,7 +5048,7 @@ static int update_shadow(frame_settings * fs)
     XRenderFreePicture(xdisplay, dst);
     XRenderFreePicture(xdisplay, src);
 
-    g_object_unref (G_OBJECT (pixmap));
+    g_object_unref(G_OBJECT(pixmap));
 
     g_free(params);
 
@@ -5378,7 +5351,7 @@ static void update_settings(window_settings * ws)
     load_settings(ws);
 
     gdkdisplay = gdk_display_get_default();
-    // xdisplay   = gdk_x11_display_get_xdisplay (gdkdisplay);
+    // xdisplay   = gdk_x11_display_get_xdisplay(gdkdisplay);
     gdkscreen = gdk_display_get_default_screen(gdkdisplay);
 
     titlebar_font_changed(ws);
@@ -5572,15 +5545,15 @@ int main(int argc, char *argv[])
 
     frame_window_atom = XInternAtom(xdisplay, DECOR_INPUT_FRAME_ATOM_NAME, FALSE);
     win_decor_atom = XInternAtom(xdisplay, DECOR_WINDOW_ATOM_NAME, FALSE);
-    win_blur_decor_atom = XInternAtom (xdisplay, DECOR_BLUR_ATOM_NAME, FALSE);
+    win_blur_decor_atom = XInternAtom(xdisplay, DECOR_BLUR_ATOM_NAME, FALSE);
     wm_move_resize_atom = XInternAtom(xdisplay, "_NET_WM_MOVERESIZE", FALSE);
     restack_window_atom = XInternAtom(xdisplay, "_NET_RESTACK_WINDOW", FALSE);
     select_window_atom = XInternAtom(xdisplay, DECOR_SWITCH_WINDOW_ATOM_NAME,
 				     FALSE);
     mwm_hints_atom = XInternAtom(xdisplay, "_MOTIF_WM_HINTS", FALSE);
-    switcher_fg_atom = XInternAtom (xdisplay,
-				    DECOR_SWITCH_FOREGROUND_COLOR_ATOM_NAME,
-				    FALSE);
+    switcher_fg_atom = XInternAtom(xdisplay,
+				   DECOR_SWITCH_FOREGROUND_COLOR_ATOM_NAME,
+				   FALSE);
     wm_protocols_atom = XInternAtom(xdisplay, "WM_PROTOCOLS", FALSE);
     net_wm_context_help_atom =
 	XInternAtom(xdisplay, "_NET_WM_CONTEXT_HELP", FALSE);
@@ -5598,28 +5571,28 @@ int main(int argc, char *argv[])
 
     utf8_string_atom = XInternAtom(xdisplay, "UTF8_STRING", FALSE);
 
-    status = decor_acquire_dm_session (xdisplay, DefaultScreen(xdisplay),
-				       "emerald", replace, &dm_sn_timestamp);
+    status = decor_acquire_dm_session(xdisplay, DefaultScreen(xdisplay),
+				      "emerald", replace, &dm_sn_timestamp);
 
     if (status != DECOR_ACQUIRE_STATUS_SUCCESS)
     {
 	if (status == DECOR_ACQUIRE_STATUS_FAILED)
 	{
-	    fprintf (stderr,
-		     "%s: Could not acquire decoration manager "
-		     "selection on screen %d display \"%s\"\n",
-		     program_name, DefaultScreen(xdisplay),
-		     DisplayString (xdisplay));
+	    fprintf(stderr,
+		    "%s: Could not acquire decoration manager "
+		    "selection on screen %d display \"%s\"\n",
+		    program_name, DefaultScreen(xdisplay),
+		    DisplayString(xdisplay));
 	}
 	else if (status == DECOR_ACQUIRE_STATUS_OTHER_DM_RUNNING)
 	{
-	    fprintf (stderr,
-		     "%s: Screen %d on display \"%s\" already "
-		     "has a decoration manager; try using the "
-		     "--replace option to replace the current "
-		     "decoration manager.\n",
-		     program_name, DefaultScreen(xdisplay),
-		     DisplayString (xdisplay));
+	    fprintf(stderr,
+		    "%s: Screen %d on display \"%s\" already "
+		    "has a decoration manager; try using the "
+		    "--replace option to replace the current "
+		    "decoration manager.\n",
+		    program_name, DefaultScreen(xdisplay),
+		    DisplayString(xdisplay));
 	}
 
 	return 1;

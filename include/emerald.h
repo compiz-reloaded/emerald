@@ -294,7 +294,7 @@ typedef struct _button_region_t {
 
     // holds whether this button's glow overlap with the other button's non-glow (base) area
     gboolean    overlap_buttons[B_T_COUNT];
-    GdkPixmap * bg_pixmap;
+    GdkPixmap *bg_pixmap;
 } button_region_t;
 
 typedef struct _decor
@@ -325,15 +325,15 @@ typedef struct _decor
     WnckWindowActions actions;
     XID		      prop_xid;
     GtkWidget	      *force_quit_dialog;
-    frame_settings * fs;
+    frame_settings    *fs;
     void	      (*draw) (struct _decor *d);
     button_region_t   button_region[B_T_COUNT];
     rectangle_t       min_drawn_buttons_region; // minimal rectangle enclosing all drawn regions
     gboolean          draw_only_buttons_region;
     gint              button_last_drawn_state[B_T_COUNT]; // last drawn state or fade counter
     button_fade_info_t button_fade_info;
-    GdkPixmap * p_active, * p_active_buffer;
-    GdkPixmap * p_inactive, * p_inactive_buffer;
+    GdkPixmap	      *p_active, *p_active_buffer;
+    GdkPixmap	      *p_inactive, *p_inactive_buffer;
     button_region_t   button_region_inact[B_T_COUNT];
     gboolean only_change_active;
 } decor_t;

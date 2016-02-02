@@ -45,7 +45,7 @@ void copy_from_defaults_if_needed()
         d = g_dir_open(DEFTHEMEDIR,0,NULL);
         if (d)
         {
-            gchar * n;
+            const gchar * n;
             while(n=g_dir_read_name(d))
             {
                 gchar * ipath = g_strdup_printf("%s/%s",DEFTHEMEDIR,n);
