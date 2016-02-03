@@ -32,11 +32,8 @@ GtkWidget * ThemeEnable;
 GtkWidget * ReloadButton;
 GtkWidget * DeleteButton;
 GtkWidget * ImportButton;
-GtkWidget * FetchButton;
-GtkWidget * FetchButton2;
 GtkWidget * ExportButton;
 GtkWidget * QuitButton;
-gchar * svnpath;
 gchar * themecache;
 
 static void theme_list_append(gchar * value,gchar * dir, gchar * fil)
@@ -1464,44 +1461,6 @@ gboolean watcher_func(gpointer p)
     }
     return TRUE;
 }
-void fetch_svn()
-{
-    gchar* themefetcher[] = {g_strdup("svn"), g_strdup("co"), g_strdup(svnpath), g_strdup(themecache), NULL };
-    GtkWidget * w;
-    GtkWidget * l;
-    GPid pd;
-    FetcherInfo * fe = malloc(sizeof(FetcherInfo));
-    w = gtk_dialog_new_with_buttons(_("Fetching Themes"),
-            GTK_WINDOW(mainWindow),
-            GTK_DIALOG_DESTROY_WITH_PARENT | GTK_DIALOG_MODAL, NULL);
-    l = gtk_label_new(_("Fetching themes... \n"
-                       "This may take time depending on \n"
-                       "internet connection speed."));
-    gtk_box_pack_start(GTK_BOX(gtk_dialog_get_content_area(GTK_DIALOG(w))),l,FALSE,FALSE,0);
-    l = gtk_progress_bar_new();
-    gtk_box_pack_start(GTK_BOX(gtk_dialog_get_action_area(GTK_DIALOG(w))),l,TRUE,TRUE,0);
-    gtk_widget_show_all(w);
-    g_spawn_async(NULL,themefetcher,NULL,
-            G_SPAWN_SEARCH_PATH | G_SPAWN_DO_NOT_REAP_CHILD,
-            NULL,NULL,&pd,NULL);
-    g_free(themefetcher[4]);
-    fe->dialog=w;
-    fe->progbar=l;
-    fe->pd=pd;
-    g_timeout_add(100,watcher_func,fe);
-}
-void fetch_gpl_svn()
-{
-	svnpath="http://emerald-themes.googlecode.com/svn/trunk/emerald-themes-repo";
-	themecache=g_strconcat(g_get_home_dir(),"/.emerald/themecache",NULL);
-	fetch_svn();
-}
-void fetch_ngpl_svn()
-{
-	svnpath="https://svn.generation.no/emerald-themes";
-	themecache=g_strconcat(g_get_home_dir(),"/.emerald/ngplthemecache",NULL);
-	fetch_svn();
-}
 void cb_quit(GtkWidget * w, gpointer p)
 {
     gtk_widget_destroy(mainWindow);
@@ -1520,52 +1479,6 @@ void layout_upper_pane(GtkWidget * vbox)
     
 
 }
-void layout_repo_pane(GtkWidget * vbox)
-{
-	GtkWidget * hbox;
-	GtkWidget * rlabel;
-	gtk_box_pack_startC(vbox,gtk_label_new(
-		_("Here are the repositories that you can fetch Emerald Themes from. \n"
-	"Fetching themes would fetch and import themes from SVN repositories \n"
-	"You need Subversion package installed to use this feature."
-	)),FALSE,FALSE,0);
-    gtk_box_pack_startC(vbox,gtk_hseparator_new(),FALSE,FALSE,0);
-    hbox = gtk_hbox_new(FALSE,2);
-    gtk_box_pack_startC(vbox,hbox,TRUE,TRUE,0);
-
-
-    table_new(2,TRUE,FALSE);
-    gtk_box_pack_startC(hbox,get_current_table(),FALSE,FALSE,0);
-       
-    FetchButton = gtk_button_new_with_label("Fetch GPL'd Themes");
-    gtk_button_set_image(GTK_BUTTON(FetchButton),
-            gtk_image_new_from_stock(GTK_STOCK_CONNECT,GTK_ICON_SIZE_BUTTON));
-    table_append(FetchButton,FALSE);
-    g_signal_connect(FetchButton,"clicked",G_CALLBACK(fetch_gpl_svn),NULL);
-	
-	rlabel = gtk_label_new(
-		_("This repository contains GPL'd themes that can be used under \n"
-	"the terms of GNU GPL licence v2.0 or later \n"));
-	table_append(rlabel,FALSE);
-	
-	FetchButton2 = gtk_button_new_with_label("Fetch non GPL'd Themes");
-    gtk_button_set_image(GTK_BUTTON(FetchButton2),
-            gtk_image_new_from_stock(GTK_STOCK_CONNECT,GTK_ICON_SIZE_BUTTON));
-    table_append(FetchButton2,FALSE);
-    g_signal_connect(FetchButton2,"clicked",G_CALLBACK(fetch_ngpl_svn),NULL);
-	
-	rlabel = gtk_label_new(
-		_("This repository contains non-GPL'd themes. They might infringe \n"
-		"copyrights and patent laws in some countries."));
-	table_append(rlabel,FALSE);
-	
-	gtk_box_pack_startC(vbox,gtk_hseparator_new(),FALSE,FALSE,0);
-	
-		gtk_box_pack_startC(vbox,gtk_label_new(
-		_("To activate Non-GPL repository please run the following in shell and accept the server certificate permanently: \n"
-		"svn ls https://svn.generation.no/emerald-themes."
-	)),FALSE,FALSE,0);
-}
 void layout_themes_pane(GtkWidget * vbox)
 {
     GtkWidget * notebook;  
@@ -1573,7 +1486,6 @@ void layout_themes_pane(GtkWidget * vbox)
     gtk_box_pack_startC(vbox,notebook,TRUE,TRUE,0);
     layout_upper_pane(build_notebook_page(_("Themes"),notebook));
     layout_lower_pane(build_notebook_page(_("Edit Themes"),notebook));
-//	layout_repo_pane(build_notebook_page(_("Repositories"),notebook));
 	
 }
 GtkWidget* create_filechooserdialog1 (char *input)
