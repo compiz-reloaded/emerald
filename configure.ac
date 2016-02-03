@@ -25,12 +25,6 @@ AC_SUBST(enginesdir)
 
 AC_C_BIGENDIAN
 
-EMERALD_REQUIRES=" xrender >= 0.8.4    \
-		    gtk+-2.0 >= 2.10.0  \
-		    libwnck-1.0	>= 2.22 \
-		    libdecoration       \
-		    pangocairo"
-
 dnl ============================================================
 dnl Check for the pkg-config path.
 if test x"$PKG_CONFIG_PATH" = x; then
@@ -42,30 +36,46 @@ export PKG_CONFIG_PATH
 AC_SUBST(PKG_CONFIG_PATH)
 AC_MSG_NOTICE([Using PKG_CONFIG_PATH=$PKG_CONFIG_PATH])
 
-AC_ARG_ENABLE(decor09,
-  [  --enable-decor09        Use libdecoration 0.9.x support],
-  [use_decor09=$enableval], [use_decor09=no])
+AC_MSG_CHECKING([which gtk+ version to compile against])
+AC_ARG_WITH([gtk],
+  AC_HELP_STRING([--with-gtk=2.0|3.0],
+                 [Which gtk+ version to compile against (default: 3.0)]),
+  [case "$with_gtk" in
+      2.0|3.0) ;;
+      *) AC_MSG_ERROR([invalid gtk+ version specified]);;
+  esac],
+  [with_gtk=3.0])
+AC_MSG_RESULT([$with_gtk])
+
+case "$with_gtk" in
+  2.0) GTK_API_VERSION=2.0
+       GTK_MIN_VERSION=2.10.0
+       WNCK_API_VERSION=1.0
+       WNCK_MIN_VERSION=2.22.0
+       ;;
+  3.0) GTK_API_VERSION=3.0
+       GTK_MIN_VERSION=3.0.0
+       WNCK_API_VERSION=3.0
+       WNCK_MIN_VERSION=3.0.0
+       ;;
+esac
+
+EMERALD_REQUIRES=" xrender >= 0.8.4				  \
+		    gtk+-$GTK_API_VERSION >= $GTK_MIN_VERSION	   \
+		    libwnck-$WNCK_API_VERSION >= $WNCK_MIN_VERSION \
+		    libdecoration				   \
+		    pangocairo"
 
 PKG_CHECK_MODULES(EMERALD, $EMERALD_REQUIRES)
-PKG_CHECK_EXISTS(libwnck-1.0 >= 2.19.3,
-		 [have_libwnck_2_19_3=yes], [have_libwnck_2_19_3=no])
-
-if test "$have_libwnck_2_19_3" = yes; then
-  AC_DEFINE(HAVE_LIBWNCK_2_19_3, 1,
-      [Define to 1 if libwnck version >= 2_19_3])
-fi
 
 AC_SUBST(EMERALD_REQUIRES)
 CFLAGS="$CFLAGS $EMERALD_CFLAGS"
 LIBS="$LIBS $EMERALD_LIBS -lm -ldl"
 AC_CHECK_FUNCS(wnck_window_has_name)
 
-PKG_CHECK_EXISTS(libwnck-1.0 >= 2.19.4,
-		     [have_libwnck_2_19_4=yes], [have_libwnck_2_19_4=no])
-if test "$have_libwnck_2_19_4" = yes; then
-    AC_DEFINE(HAVE_LIBWNCK_2_19_4, 1,
-	      [Define to 1 if libwnck version >= 2_19_4])
-fi
+AC_ARG_ENABLE(decor09,
+  [  --enable-decor09        Use libdecoration 0.9.x support],
+  [use_decor09=$enableval], [use_decor09=no])
 
 AM_CONDITIONAL(DECOR_INTERFACE_VERSION, test "x$use_decor09" = "xyes")
 if test "$use_decor09" = yes; then

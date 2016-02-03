@@ -1396,7 +1396,11 @@ void layout_maximised_colors(GtkWidget * vbox)
     gtk_box_pack_startC(vbox,scroller,TRUE,TRUE,0);
     table_new(3,FALSE,FALSE);
 
-    gtk_scrolled_window_add_with_viewport(GTK_SCROLLED_WINDOW(scroller),GTK_WIDGET(get_current_table()));
+#if GTK_CHECK_VERSION(3, 8, 0)
+    gtk_container_add(GTK_SCROLLED_WINDOW(scroller), GTK_WIDGET(get_current_table()));
+#else
+    gtk_scrolled_window_add_with_viewport(GTK_SCROLLED_WINDOW(scroller), GTK_WIDGET(get_current_table()));
+#endif
 
     make_labels("Colors");
     table_append_separator();
@@ -1493,7 +1497,11 @@ void my_engine_settings(GtkWidget * hbox, gboolean active)
     
     table_new(3,FALSE,FALSE);
 
+#if GTK_CHECK_VERSION(3, 8, 0)
+    gtk_container_add(GTK_SCROLLED_WINDOW(scroller),GTK_WIDGET(get_current_table()));
+#else
     gtk_scrolled_window_add_with_viewport(GTK_SCROLLED_WINDOW(scroller),GTK_WIDGET(get_current_table()));
+#endif
     
     make_labels(_("Colors"));
     table_append_separator();

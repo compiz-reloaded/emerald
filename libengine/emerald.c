@@ -74,27 +74,49 @@ void cairo_set_source_alpha_color(cairo_t * cr, alpha_color * c)
 }
 void load_color_setting(GKeyFile * f, decor_color_t * color, gchar * key, gchar * sect)
 {
+#if GTK_CHECK_VERSION(3, 0, 0)
+    GdkRGBA c;
+#else
     GdkColor c;
+#endif
     gchar * s = g_key_file_get_string(f,sect,key,NULL);
     if (s)
     {
+#if GTK_CHECK_VERSION(3, 0, 0)
+        gdk_rgba_parse(&c,s);
+        color->r = c.red;
+        color->g = c.green;
+        color->b = c.blue;
+#else
         gdk_color_parse(s,&c);
         color->r = c.red/65536.0;
         color->g = c.green/65536.0;
         color->b = c.blue/65536.0;
+#endif
         g_free(s);
     }
 }
 void load_shadow_color_setting(GKeyFile * f, gint sc[3], gchar * key, gchar * sect)
 {
+#if GTK_CHECK_VERSION(3, 0, 0)
+    GdkRGBA c;
+#else
     GdkColor c;
+#endif
     gchar * s = g_key_file_get_string(f,sect,key,NULL);
     if (s)
     {
+#if GTK_CHECK_VERSION(3, 0, 0)
+        gdk_rgba_parse(&c,s);
+        sc[0]=c.red*65536.0;
+        sc[1]=c.green*65536.0;
+        sc[2]=c.blue*65536.0;
+#else
         gdk_color_parse(s,&c);
         sc[0]=c.red;
         sc[1]=c.green;
         sc[2]=c.blue;
+#endif
         g_free(s);
     }
 }

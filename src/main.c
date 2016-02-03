@@ -475,7 +475,11 @@ static void decor_update_blur_property(decor_t *d, int width, int height,
 			 32, PropModeReplace, (guchar *) data,
 			 2 + size * 6);
 	XSync(xdisplay, FALSE);
+#if GTK_CHECK_VERSION(3, 0, 0)
+	gdk_error_trap_pop_ignored();
+#else
 	gdk_error_trap_pop();
+#endif
 
 	free(data);
     }
@@ -484,7 +488,11 @@ static void decor_update_blur_property(decor_t *d, int width, int height,
 	gdk_error_trap_push();
 	XDeleteProperty(xdisplay, d->prop_xid, win_blur_decor_atom);
 	XSync(xdisplay, FALSE);
+#if GTK_CHECK_VERSION(3, 0, 0)
+	gdk_error_trap_pop_ignored();
+#else
 	gdk_error_trap_pop();
+#endif
     }
 }
 
@@ -546,7 +554,11 @@ static void decor_update_window_property(decor_t * d)
 		    PROP_HEADER_SIZE + BASE_PROP_SIZE + QUAD_PROP_SIZE * N_QUADS_MAX);
 #endif
     XSync(xdisplay, FALSE);
+#if GTK_CHECK_VERSION(3, 0, 0)
+    gdk_error_trap_pop_ignored();
+#else
     gdk_error_trap_pop();
+#endif
 
     top.rects = &top.extents;
     top.numRects = top.size = 1;
@@ -716,6 +728,7 @@ set_shadow_quads(decor_quad_t * q, gint width, gint height, window_settings * ws
     return nQuad;
 }
 
+#if !GTK_CHECK_VERSION(3, 0, 0)
 static void
 gdk_cairo_set_source_color_alpha(cairo_t * cr, GdkColor * color, double alpha)
 {
@@ -724,6 +737,7 @@ gdk_cairo_set_source_color_alpha(cairo_t * cr, GdkColor * color, double alpha)
 			  color->green / 65535.0,
 			  color->blue / 65535.0, alpha);
 }
+#endif
 
 static void draw_shadow_background(decor_t * d, cairo_t * cr)
 {
@@ -1952,7 +1966,12 @@ static void decor_update_switcher_property(decor_t * d)
     decor_quad_t quads[N_QUADS_MAX];
     window_settings *ws = d->fs->ws;
     decor_extents_t extents = ws->switcher_extents;
+#if GTK_CHECK_VERSION(3, 0, 0)
+    GtkStyleContext *context;
+    GdkRGBA fg;
+#else
     GtkStyle *style;
+#endif
     long fgColor[4];
 
     nQuad = set_switcher_quads(quads, d->width, d->height, ws);
@@ -1970,11 +1989,20 @@ static void decor_update_switcher_property(decor_t * d)
 			    0, 0, quads, nQuad, 0xffffff, 0, 0);
 #endif
 
+#if GTK_CHECK_VERSION(3, 0, 0)
+    context = gtk_widget_get_style_context(style_window);
+    gtk_style_context_get_color(context, GTK_STATE_FLAG_NORMAL, &fg);
+
+    fgColor[0] = fg.red;
+    fgColor[1] = fg.green;
+    fgColor[2] = fg.blue;
+#else
     style = gtk_widget_get_style(style_window);
 
     fgColor[0] = style->fg[GTK_STATE_NORMAL].red;
     fgColor[1] = style->fg[GTK_STATE_NORMAL].green;
     fgColor[2] = style->fg[GTK_STATE_NORMAL].blue;
+#endif
     fgColor[3] = SWITCHER_ALPHA;
 
     gdk_error_trap_push();
@@ -1990,7 +2018,11 @@ static void decor_update_switcher_property(decor_t * d)
     XChangeProperty (xdisplay, d->prop_xid, switcher_fg_atom,
 		     XA_INTEGER, 32, PropModeReplace, (guchar *) fgColor, 4);
     XSync(xdisplay, FALSE);
+#if GTK_CHECK_VERSION(3, 0, 0)
+    gdk_error_trap_pop_ignored();
+#else
     gdk_error_trap_pop();
+#endif
 
     if (data)
 	free(data);
@@ -2000,7 +2032,12 @@ static void draw_switcher_background(decor_t * d)
 {
     Display *xdisplay = GDK_DISPLAY_XDISPLAY(gdk_display_get_default());
     cairo_t *cr;
+#if GTK_CHECK_VERSION(3, 0, 0)
+    GtkStyleContext *context;
+    GdkRGBA bg, fg;
+#else
     GtkStyle *style;
+#endif
     decor_color_t color;
     alpha_color acolor;
     alpha_color acolor2;
@@ -2014,11 +2051,21 @@ static void draw_switcher_background(decor_t * d)
     if (!IS_VALID_SURFACE(d->buffer_surface))
 	return;
 
+#if GTK_CHECK_VERSION(3, 0, 0)
+    context = gtk_widget_get_style_context(style_window);
+    gtk_style_context_get_background_color(context, GTK_STATE_FLAG_NORMAL, &bg);
+    gtk_style_context_get_color(context, GTK_STATE_FLAG_NORMAL, &fg);
+
+    color.r = bg.red;
+    color.g = bg.green;
+    color.b = bg.blue;
+#else
     style = gtk_widget_get_style(style_window);
 
     color.r = style->bg[GTK_STATE_NORMAL].red / 65535.0;
     color.g = style->bg[GTK_STATE_NORMAL].green / 65535.0;
     color.b = style->bg[GTK_STATE_NORMAL].blue / 65535.0;
+#endif
     acolor.color = acolor2.color = color;
     acolor.alpha = alpha;
     acolor2.alpha = alpha * 0.75;
@@ -2112,7 +2159,12 @@ static void draw_switcher_background(decor_t * d)
 		    y1 + top,
 		    x2 - x1 - ws->win_extents.left - ws->win_extents.right,
 		    h);
+#if GTK_CHECK_VERSION(3, 0, 0)
+    bg.alpha = alpha;
+    gdk_cairo_set_source_rgba(cr, &bg);
+#else
     gdk_cairo_set_source_color_alpha(cr, &style->bg[GTK_STATE_NORMAL], alpha);
+#endif
     cairo_fill(cr);
 
     cairo_set_operator(cr, CAIRO_OPERATOR_OVER);
@@ -2157,7 +2209,12 @@ static void draw_switcher_background(decor_t * d)
 		      CORNER_TOPLEFT | CORNER_TOPRIGHT | CORNER_BOTTOMLEFT |
 		      CORNER_BOTTOMRIGHT, ws, 5.0);
 
+#if GTK_CHECK_VERSION(3, 0, 0)
+    fg.alpha = alpha;
+    gdk_cairo_set_source_rgba(cr, &fg);
+#else
     gdk_cairo_set_source_color_alpha(cr, &style->fg[GTK_STATE_NORMAL], alpha);
+#endif
 
     cairo_stroke(cr);
 
@@ -2166,9 +2223,15 @@ static void draw_switcher_background(decor_t * d)
     draw_surface(d->surface,
 		 d->buffer_surface, 0, 0, 0, 0, d->width, d->height);
 
-    pixel =  (((a * style->bg[GTK_STATE_NORMAL].red) >> 24) & 0x0000ff);
+#if GTK_CHECK_VERSION(3, 0, 0)
+    pixel  = (((a * (int) (bg.blue * 65535.0)) >> 24) & 0x0000ff);
+    pixel |= (((a * (int) (bg.green * 65535.0)) >> 16) & 0x00ff00);
+    pixel |= (((a * (int) (bg.red * 65535.0)) >> 8) & 0xff0000);
+#else
+    pixel  = (((a * style->bg[GTK_STATE_NORMAL].red) >> 24) & 0x0000ff);
     pixel |= (((a * style->bg[GTK_STATE_NORMAL].green) >> 16) & 0x00ff00);
     pixel |= (((a * style->bg[GTK_STATE_NORMAL].blue) >> 8) & 0xff0000);
+#endif
     pixel |= ((a & 0xff00) << 16);
 
     decor_update_switcher_property(d);
@@ -2177,7 +2240,11 @@ static void draw_switcher_background(decor_t * d)
     XSetWindowBackground(xdisplay, d->prop_xid, pixel);
     XClearWindow(xdisplay, d->prop_xid);
     XSync(xdisplay, FALSE);
+#if GTK_CHECK_VERSION(3, 0, 0)
+    gdk_error_trap_pop_ignored();
+#else
     gdk_error_trap_pop();
+#endif
 
     d->prop_xid = 0;
 }
@@ -2185,7 +2252,12 @@ static void draw_switcher_background(decor_t * d)
 static void draw_switcher_foreground(decor_t * d)
 {
     cairo_t *cr;
+#if GTK_CHECK_VERSION(3, 0, 0)
+    GtkStyleContext *context;
+    GdkRGBA bg, fg;
+#else
     GtkStyle *style;
+#endif
     double alpha = SWITCHER_ALPHA / 65535.0;
     double x1, y1, x2;
     int top;
@@ -2194,7 +2266,13 @@ static void draw_switcher_foreground(decor_t * d)
     if (!IS_VALID_SURFACE(d->surface) || !IS_VALID_SURFACE(d->buffer_surface))
 	return;
 
+#if GTK_CHECK_VERSION(3, 0, 0)
+    context = gtk_widget_get_style_context(style_window);
+    gtk_style_context_get_background_color(context, GTK_STATE_FLAG_NORMAL, &bg);
+    gtk_style_context_get_color(context, GTK_STATE_FLAG_NORMAL, &fg);
+#else
     style = gtk_widget_get_style(style_window);
+#endif
 
     top = ws->win_extents.bottom;
 
@@ -2211,7 +2289,12 @@ static void draw_switcher_foreground(decor_t * d)
 		    x2 - x1 - ws->win_extents.left - ws->win_extents.right,
 		    SWITCHER_SPACE);
 
+#if GTK_CHECK_VERSION(3, 0, 0)
+    bg.alpha = alpha;
+    gdk_cairo_set_source_rgba(cr, &bg);
+#else
     gdk_cairo_set_source_color_alpha(cr, &style->bg[GTK_STATE_NORMAL], alpha);
+#endif
     cairo_fill(cr);
 
     if (d->layout)
@@ -2270,8 +2353,13 @@ static void draw_switcher_foreground(decor_t * d)
 
 	cairo_set_operator(cr, CAIRO_OPERATOR_OVER);
 
+#if GTK_CHECK_VERSION(3, 0, 0)
+	fg.alpha = 1.0;
+	gdk_cairo_set_source_rgba(cr, &fg);
+#else
 	gdk_cairo_set_source_color_alpha(cr,
 					 &style->fg[GTK_STATE_NORMAL], 1.0);
+#endif
 
 	pango_layout_get_pixel_size(d->layout, &w, NULL);
 
@@ -2679,7 +2767,11 @@ void position_title_object(gchar obj, WnckWindow * win, window_settings * ws,
 		XUndefineCursor(xdisplay, d->button_windows[i]);
 	}
 	XSync(xdisplay, FALSE);
+#if GTK_CHECK_VERSION(3, 0, 0)
+	gdk_error_trap_pop_ignored();
+#else
 	gdk_error_trap_pop();
+#endif
     }
     d->tobj_item_pos[i] = x - d->tobj_pos[s];
     d->tobj_item_state[i] = s;
@@ -2833,7 +2925,11 @@ static void update_event_windows(WnckWindow * win)
     }
     layout_title_objects(win);
     XSync(xdisplay, FALSE);
+#if GTK_CHECK_VERSION(3, 0, 0)
+    gdk_error_trap_pop_ignored();
+#else
     gdk_error_trap_pop();
+#endif
 }
 
 #if HAVE_WNCK_WINDOW_HAS_NAME
@@ -3601,7 +3697,11 @@ static void window_closed(WnckScreen * screen, WnckWindow * win)
     gdk_error_trap_push();
     XDeleteProperty(xdisplay, wnck_window_get_xid(win), win_decor_atom);
     XSync(xdisplay, FALSE);
+#if GTK_CHECK_VERSION(3, 0, 0)
+    gdk_error_trap_pop_ignored();
+#else
     gdk_error_trap_pop();
+#endif
 
     if (!get_window_prop(wnck_window_get_xid(win), select_window_atom, &window))
 	remove_frame_window(win);
@@ -3726,6 +3826,10 @@ static void restack_window(WnckWindow * win, int stack_mode)
 
 static void show_tooltip(const char *text)
 {
+#if GTK_CHECK_VERSION(3, 0, 0)
+    GdkDeviceManager *device_manager;
+    GdkDevice *pointer;
+#endif
     gint x, y, w, h;
     GdkScreen *screen;
     gint monitor_num;
@@ -3741,7 +3845,14 @@ static void show_tooltip(const char *text)
 
 	gtk_window_get_size(GTK_WINDOW(tip_window), &w, &h);
 
+#if GTK_CHECK_VERSION(3, 0, 0)
+	device_manager = gdk_display_get_device_manager(gdk_display_get_default());
+	pointer = gdk_device_manager_get_client_pointer(device_manager);
+
+	gdk_device_get_position(pointer, &screen, &x, &y);
+#else
 	gdk_display_get_pointer(gdk_display_get_default(), &screen, &x, &y, NULL);
+#endif
 
 	x -= (w / 2 + 4);
 
@@ -3792,18 +3903,29 @@ static void tooltip_start_delay(const char *text)
 				      tooltip_timeout, (gpointer) text);
 }
 
-static gboolean tooltip_paint_window(GtkWidget *tooltip)
+static gboolean tooltip_paint_window(GtkWidget *tooltip,
+				     cairo_t *cr)
 {
     GtkRequisition req;
 
     if (!tooltip)
 	return FALSE;
 
+#if GTK_CHECK_VERSION(3, 0, 0)
+    req.width = gtk_widget_get_allocated_width(tooltip);
+    req.height = gtk_widget_get_allocated_height(tooltip);
+
+    gtk_render_background(gtk_widget_get_style_context(tooltip),
+			  cr, 0, 0, req.width, req.height);
+    gtk_render_frame(gtk_widget_get_style_context(tooltip),
+		     cr, 0, 0, req.width, req.height);
+#else
     gtk_widget_size_request(tooltip, &req);
     gtk_paint_flat_box(gtk_widget_get_style(tooltip), gtk_widget_get_window(tooltip),
 		       GTK_STATE_NORMAL, GTK_SHADOW_OUT,
 		       NULL, GTK_WIDGET(tooltip), "tooltip",
 		       0, 0, req.width, req.height);
+#endif
 
     return FALSE;
 }
@@ -3811,7 +3933,11 @@ static gboolean tooltip_paint_window(GtkWidget *tooltip)
 static gboolean create_tooltip_window(void)
 {
     GdkScreen *screen;
+#if GTK_CHECK_VERSION(3, 0, 0)
+    GdkVisual *visual;
+#else
     GdkColormap *colormap;
+#endif
 
     screen = gdk_screen_get_default();
 
@@ -3820,7 +3946,12 @@ static gboolean create_tooltip_window(void)
     gtk_widget_set_app_paintable(tip_window, TRUE);
     gtk_window_set_resizable(GTK_WINDOW(tip_window), FALSE);
     gtk_widget_set_redraw_on_allocate(tip_window, TRUE);
+#if GTK_CHECK_VERSION(3, 0, 0)
+    gtk_style_context_add_class(gtk_widget_get_style_context(tip_window),
+				GTK_STYLE_CLASS_TOOLTIP);
+#else
     gtk_widget_set_name(tip_window, "gtk-tooltips");
+#endif
     gtk_container_set_border_width(GTK_CONTAINER(tip_window), 4);
 
     gtk_window_set_type_hint(GTK_WINDOW(tip_window),
@@ -3828,6 +3959,16 @@ static gboolean create_tooltip_window(void)
 
     gtk_window_set_screen(GTK_WINDOW(tip_window), screen);
 
+#if GTK_CHECK_VERSION(3, 0, 0)
+    visual = gdk_screen_get_rgba_visual(screen);
+    if (!visual)
+	gtk_widget_set_visual(tip_window, visual);
+
+    g_signal_connect(G_OBJECT(tip_window),
+		     "draw",
+		     G_CALLBACK(tooltip_paint_window),
+		     NULL);
+#else
     colormap = gdk_screen_get_rgba_colormap(screen);
     if (!colormap)
 	gtk_widget_set_colormap(tip_window, colormap);
@@ -3836,15 +3977,23 @@ static gboolean create_tooltip_window(void)
 			     "expose_event",
 			     G_CALLBACK(tooltip_paint_window),
 			     NULL);
+#endif
 
     tip_label = gtk_label_new(NULL);
     gtk_label_set_line_wrap(GTK_LABEL(tip_label), TRUE);
+#if GTK_CHECK_VERSION(3, 0, 0)
+    gtk_widget_set_halign(tip_label, GTK_ALIGN_CENTER);
+    gtk_widget_set_valign(tip_label, GTK_ALIGN_CENTER);
+#else
     gtk_misc_set_alignment(GTK_MISC(tip_label), 0.5, 0.5);
+#endif
     gtk_widget_show(tip_label);
 
     gtk_container_add(GTK_CONTAINER(tip_window), tip_label);
 
+#if !GTK_CHECK_VERSION(3, 0, 0)
     gtk_widget_ensure_style(tip_window);
+#endif
 
     return TRUE;
 }
@@ -3891,9 +4040,15 @@ static void action_menu_map(WnckWindow *win, long button, Time time)
 {
     GdkDisplay *gdkdisplay;
     GdkScreen *screen;
+#if GTK_CHECK_VERSION(3, 0, 0)
+    Display *display;
+#endif
 
     gdkdisplay = gdk_display_get_default();
     screen = gdk_display_get_default_screen(gdkdisplay);
+#if GTK_CHECK_VERSION(3, 0, 0)
+    display = gdk_x11_display_get_xdisplay (gdkdisplay);
+#endif
 
     if (action_menu)
     {
@@ -3935,6 +4090,12 @@ static void action_menu_map(WnckWindow *win, long button, Time time)
 		     G_CALLBACK(action_menu_unmap), NULL);
 
     gtk_widget_show(action_menu);
+
+#if GTK_CHECK_VERSION(3, 0, 0)
+    XUngrabPointer(display, time);
+    XUngrabKeyboard(display, time);
+#endif
+
     gtk_menu_popup(GTK_MENU(action_menu),
 		   NULL, NULL, NULL, NULL, button, time);
 
@@ -4260,7 +4421,11 @@ static void force_quit_dialog_realize(GtkWidget * dialog, void *data)
 			 GDK_WINDOW_XID(gtk_widget_get_window(dialog)),
 			 wnck_window_get_xid(win));
     XSync(GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()), FALSE);
+#if GTK_CHECK_VERSION(3, 0, 0)
+    gdk_error_trap_pop_ignored();
+#else
     gdk_error_trap_pop();
+#endif
 }
 
 static char *get_client_machine(Window xwindow)
@@ -4283,7 +4448,11 @@ static char *get_client_machine(Window xwindow)
 				&bytes_after, &sstr);
 
     str = (gchar *) sstr;
+#if GTK_CHECK_VERSION(3, 0, 0)
+    gdk_error_trap_pop_ignored();
+#else
     gdk_error_trap_pop();
+#endif
 
     if (result != Success)
 	return NULL;
@@ -4330,7 +4499,11 @@ static void kill_window(WnckWindow * win)
     gdk_error_trap_push();
     XKillClient(GDK_DISPLAY_XDISPLAY(gdk_display_get_default()), wnck_window_get_xid(win));
     XSync(GDK_DISPLAY_XDISPLAY(gdk_display_get_default()), FALSE);
+#if GTK_CHECK_VERSION(3, 0, 0)
+    gdk_error_trap_pop_ignored();
+#else
     gdk_error_trap_pop();
+#endif
 }
 
 static void
@@ -4493,7 +4666,11 @@ event_filter_func(GdkXEvent * gdkxevent, GdkEvent * event, gpointer data)
 			    gdk_error_trap_push();
 			    XDeleteProperty(xdisplay, xid, win_decor_atom);
 			    XSync(xdisplay, FALSE);
+#if GTK_CHECK_VERSION(3, 0, 0)
+			    gdk_error_trap_pop_ignored();
+#else
 			    gdk_error_trap_pop();
+#endif
 			}
 		    }
 		}
@@ -5640,7 +5817,11 @@ int main(int argc, char *argv[])
     g_timeout_add(500, reload_if_needed, NULL);
 
     gtk_main();
+#if GTK_CHECK_VERSION(3, 0, 0)
+    gdk_error_trap_pop_ignored();
+#else
     gdk_error_trap_pop();
+#endif
 
     return 0;
 }

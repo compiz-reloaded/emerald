@@ -488,11 +488,20 @@ const gchar * get_float_str(SettingItem * item)
 }
 const gchar * get_color(SettingItem * item)
 {
+#if GTK_CHECK_VERSION(3, 4, 0)
+    GdkRGBA c;
+#else
     GdkColor c;
+#endif
     if (globalStr)
         g_free(globalStr);
+#if GTK_CHECK_VERSION(3, 4, 0)
+    gtk_color_chooser_get_rgba(GTK_COLOR_CHOOSER(item->widget),&c);
+    globalStr = g_strdup_printf("#%02x%02x%02x",((guint16)(c.red*65535.0))>>8,((guint16)(c.green*65535.0))>>8,((guint16)(c.blue*65535.0))>>8);
+#else
     gtk_color_button_get_color(GTK_COLOR_BUTTON(item->widget),&c);
     globalStr = g_strdup_printf("#%02x%02x%02x",c.red>>8,c.green>>8,c.blue>>8);
+#endif
     return globalStr;
 }
 const gchar * get_font(SettingItem * item)
@@ -672,9 +681,15 @@ void set_float_str(SettingItem * item, gchar * s)
 }
 void set_color(SettingItem * item, gchar * s)
 {
+#if GTK_CHECK_VERSION(3, 4, 0)
+    GdkRGBA c;
+    gdk_rgba_parse(&c,s);
+    gtk_color_chooser_set_rgba(GTK_COLOR_BUTTON(item->widget),&c);
+#else
     GdkColor c;
     gdk_color_parse(s,&c);
     gtk_color_button_set_color(GTK_COLOR_BUTTON(item->widget),&c);
+#endif
 }
 void set_font(SettingItem * item, gchar * f)
 {

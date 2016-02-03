@@ -553,7 +553,11 @@ void my_engine_settings(GtkWidget * hbox,  gboolean active)
     
     table_new(3, FALSE, FALSE);
 
+#if GTK_CHECK_VERSION(3, 8, 0)
+    gtk_container_add(GTK_SCROLLED_WINDOW(scroller), GTK_WIDGET(get_current_table()));
+#else
     gtk_scrolled_window_add_with_viewport(GTK_SCROLLED_WINDOW(scroller), GTK_WIDGET(get_current_table()));
+#endif
     
     make_labels("Colors");
     table_append_separator();
@@ -609,8 +613,11 @@ static void layout_pixmap_box(GtkWidget * vbox, gint b_t, gboolean active)
 
     image = gtk_image_new();
     item = register_img_file_setting(filesel, "pixmaps",  g_strdup_printf("%s_%s", pre, p_types[b_t]), (GtkImage *)image);
-    gtk_scrolled_window_add_with_viewport(
-            GTK_SCROLLED_WINDOW(scroller), GTK_WIDGET(image));
+#if GTK_CHECK_VERSION(3, 8, 0)
+    gtk_container_add(GTK_SCROLLED_WINDOW(scroller), GTK_WIDGET(image));
+#else
+    gtk_scrolled_window_add_with_viewport(GTK_SCROLLED_WINDOW(scroller), GTK_WIDGET(image));
+#endif
     table_append(scroller, TRUE);
 
     clearer = gtk_button_new_from_stock(GTK_STOCK_CLEAR);
@@ -678,8 +685,11 @@ void layout_engine_pixmaps(GtkWidget * vbox, gboolean active)
     gtk_box_pack_startC(vbox, scroller, TRUE, TRUE, 0);
     
     table_new(7, FALSE, FALSE);
-    gtk_scrolled_window_add_with_viewport(
-            GTK_SCROLLED_WINDOW(scroller), GTK_WIDGET(get_current_table()));
+#if GTK_CHECK_VERSION(3, 8, 0)
+    gtk_container_add(GTK_SCROLLED_WINDOW(scroller), GTK_WIDGET(get_current_table()));
+#else
+    gtk_scrolled_window_add_with_viewport(GTK_SCROLLED_WINDOW(scroller), GTK_WIDGET(get_current_table()));
+#endif
     
     table_append(gtk_label_new(_("Pixmap")), FALSE);
     table_append(gtk_label_new(_("File")), FALSE);

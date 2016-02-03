@@ -689,8 +689,11 @@ void layout_button_pane(GtkWidget * vbox)
     gtk_box_pack_startC(vbox,scroller,TRUE,TRUE,0);
     
     table_new(4,FALSE,FALSE);
-    gtk_scrolled_window_add_with_viewport(
-            GTK_SCROLLED_WINDOW(scroller),GTK_WIDGET(get_current_table()));
+#if GTK_CHECK_VERSION(3, 8, 0)
+    gtk_container_add(GTK_SCROLLED_WINDOW(scroller),GTK_WIDGET(get_current_table()));
+#else
+    gtk_scrolled_window_add_with_viewport(GTK_SCROLLED_WINDOW(scroller),GTK_WIDGET(get_current_table()));
+#endif
     
     table_append(gtk_label_new(_("Button")),FALSE);
     table_append(gtk_label_new(_("File")),FALSE);
@@ -711,8 +714,11 @@ void layout_window_frame(GtkWidget * vbox,gboolean active)
             GTK_POLICY_NEVER,GTK_POLICY_ALWAYS);
     
     table_new(3,FALSE,FALSE);
-    gtk_scrolled_window_add_with_viewport(GTK_SCROLLED_WINDOW(scrollwin),
-            GTK_WIDGET(get_current_table()));
+#if GTK_CHECK_VERSION(3, 8, 0)
+    gtk_container_add(GTK_SCROLLED_WINDOW(scrollwin),GTK_WIDGET(get_current_table()));
+#else
+    gtk_scrolled_window_add_with_viewport(GTK_SCROLLED_WINDOW(scrollwin),GTK_WIDGET(get_current_table()));
+#endif
     make_labels(_("Colors"));
     ACAV(_("Text Fill"),"text","titlebar");
     ACAV(_("Text Outline"),"text_halo","titlebar");
@@ -1005,7 +1011,11 @@ void layout_screenshot_frame(GtkWidget * vbox)
     scrollwin = gtk_scrolled_window_new(NULL,NULL);
     gtk_scrolled_window_set_policy(GTK_SCROLLED_WINDOW(scrollwin),
             GTK_POLICY_AUTOMATIC,GTK_POLICY_AUTOMATIC);
+#if GTK_CHECK_VERSION(3, 8, 0)
+    gtk_container_add(GTK_SCROLLED_WINDOW(scrollwin),image);
+#else
     gtk_scrolled_window_add_with_viewport(GTK_SCROLLED_WINDOW(scrollwin),image);
+#endif
     gtk_widget_set_size_request(scrollwin,300,160);
     
     gtk_box_pack_startC(vbox,scrollwin,TRUE,TRUE,0);
@@ -1161,7 +1171,11 @@ void layout_engine_pane(GtkWidget * vbox)
     gtk_box_pack_startC(vbox,scwin,TRUE,TRUE,0);
     gtk_scrolled_window_set_policy(GTK_SCROLLED_WINDOW(scwin),
             GTK_POLICY_AUTOMATIC,GTK_POLICY_AUTOMATIC);
+#if GTK_CHECK_VERSION(3, 8, 0)
+    gtk_container_add(GTK_SCROLLED_WINDOW(scwin),nvbox);
+#else
     gtk_scrolled_window_add_with_viewport(GTK_SCROLLED_WINDOW(scwin),nvbox);
+#endif
     layout_engine_list(nvbox);
     init_engine_list();
 }
@@ -1463,9 +1477,9 @@ void fetch_svn()
     l = gtk_label_new(_("Fetching themes... \n"
                        "This may take time depending on \n"
                        "internet connection speed."));
-    gtk_box_pack_start(GTK_BOX(GTK_DIALOG(w)->vbox),l,FALSE,FALSE,0);
+    gtk_box_pack_start(GTK_BOX(gtk_dialog_get_content_area(GTK_DIALOG(w))),l,FALSE,FALSE,0);
     l = gtk_progress_bar_new();
-    gtk_box_pack_start(GTK_BOX(GTK_DIALOG(w)->action_area),l,TRUE,TRUE,0);
+    gtk_box_pack_start(GTK_BOX(gtk_dialog_get_action_area(GTK_DIALOG(w))),l,TRUE,TRUE,0);
     gtk_widget_show_all(w);
     g_spawn_async(NULL,themefetcher,NULL,
             G_SPAWN_SEARCH_PATH | G_SPAWN_DO_NOT_REAP_CHILD,
