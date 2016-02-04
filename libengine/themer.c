@@ -94,7 +94,11 @@ GSList * get_setting_list()
 GtkWidget * scaler_new(gdouble low, gdouble high, gdouble prec)
 {
     GtkWidget * w;
+#if GTK_CHECK_VERSION(3, 2, 0)
+    w = gtk_scale_new_with_range(GTK_ORIENTATION_HORIZONTAL,low,high,prec);
+#else
     w = gtk_hscale_new_with_range(low,high,prec);
+#endif
     gtk_scale_set_value_pos(GTK_SCALE(w),GTK_POS_RIGHT);
     gtk_widget_set_size_request(w,100,-1);
     return w;
