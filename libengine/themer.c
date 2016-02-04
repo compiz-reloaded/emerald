@@ -249,7 +249,11 @@ void table_append_separator()
     current_table_row++;
 //    gtk_table_resize(current_table,current_table_width,current_table_row+1);
     gtk_table_attach_defaults(current_table,
+#if GTK_CHECK_VERSION(3, 2, 0)
+            gtk_separator_new (GTK_ORIENTATION_HORIZONTAL),
+#else
             gtk_hseparator_new(),
+#endif
             0,current_table_width,
             current_table_row,
             current_table_row+1);
@@ -864,7 +868,11 @@ void layout_engine_list(GtkWidget * vbox)
     gtk_box_pack_startC(vbox,hbox,FALSE,FALSE,0);
     gtk_box_pack_startC(hbox,gtk_label_new(_("Select\nEngine")),FALSE,FALSE,0);
     gtk_box_pack_startC(hbox,EngineCombo,FALSE,FALSE,0);
+#if GTK_CHECK_VERSION(3, 2, 0)
+    gtk_box_pack_startC(vbox,gtk_separator_new (GTK_ORIENTATION_HORIZONTAL),FALSE,FALSE,0);
+#else
     gtk_box_pack_startC(vbox,gtk_hseparator_new(),FALSE,FALSE,0);
+#endif
     EngineContainer = gtk_alignment_new(0,0,1,1); // really only needed for the bin-ness
     gtk_box_pack_startC(vbox,EngineContainer,TRUE,TRUE,0);
 }

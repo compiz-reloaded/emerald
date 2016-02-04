@@ -1493,7 +1493,11 @@ void my_engine_settings(GtkWidget * hbox, gboolean active)
     vbox = gtk_vbox_new(FALSE,2);
     gtk_box_pack_startC(hbox,vbox,TRUE,TRUE,0);
     gtk_box_pack_startC(vbox,gtk_label_new(active?"Active Window":"Inactive Window"),FALSE,FALSE,0);
+#if GTK_CHECK_VERSION(3, 2, 0)
+    gtk_box_pack_startC(vbox,gtk_separator_new (GTK_ORIENTATION_HORIZONTAL),FALSE,FALSE,0);
+#else
     gtk_box_pack_startC(vbox,gtk_hseparator_new(),FALSE,FALSE,0);
+#endif
     scroller = gtk_scrolled_window_new(NULL,NULL);
     gtk_scrolled_window_set_policy(GTK_SCROLLED_WINDOW(scroller),
             GTK_POLICY_NEVER,GTK_POLICY_AUTOMATIC);
@@ -1574,7 +1578,11 @@ void layout_engine_colors(GtkWidget * vbox)
     hbox = gtk_hbox_new(FALSE,2);
     gtk_box_pack_startC(vbox,hbox,TRUE,TRUE,0);
     my_engine_settings(hbox,TRUE);
+#if GTK_CHECK_VERSION(3, 2, 0)
+    gtk_box_pack_startC(hbox,gtk_separator_new (GTK_ORIENTATION_VERTICAL),FALSE,FALSE,0);
+#else
     gtk_box_pack_startC(hbox,gtk_vseparator_new(),FALSE,FALSE,0);
+#endif
     my_engine_settings(hbox,FALSE);
 }
 
@@ -1615,7 +1623,11 @@ void layout_pixmaps(GtkWidget * vbox) {
     
     /* set =*/ register_img_file_setting(file_selector,"pixmaps","titlebarpart",GTK_IMAGE(title_bar_image));
 ///////////////////////////
+#if GTK_CHECK_VERSION(3, 2, 0)
+    gtk_box_pack_startC(hbox,gtk_separator_new (GTK_ORIENTATION_VERTICAL),FALSE,FALSE,0);
+#else
     gtk_box_pack_startC(hbox,gtk_vseparator_new(),FALSE,FALSE,0);
+#endif
 ///////////////////////////
 
     junk = gtk_check_button_new_with_label(_("Enable Button Part Pixmap?"));
@@ -1646,7 +1658,11 @@ void layout_pixmaps(GtkWidget * vbox) {
     
     /*set =*/ register_img_file_setting(file_selector,"pixmaps","buttonpart",GTK_IMAGE(title_bar_image));
 ///////////////////////////////////////
+#if GTK_CHECK_VERSION(3, 2, 0)
+    gtk_box_pack_startC(hbox,gtk_separator_new (GTK_ORIENTATION_VERTICAL),FALSE,FALSE,0);
+#else
     gtk_box_pack_startC(hbox,gtk_vseparator_new(),FALSE,FALSE,0);
+#endif
 ///////////////////////////
 
     junk = gtk_check_button_new_with_label(_("Enable Titlebar Pixmap?"));

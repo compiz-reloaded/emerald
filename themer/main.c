@@ -680,8 +680,12 @@ void layout_button_pane(GtkWidget * vbox)
     hbox = gtk_vbox_new(FALSE,2);
     gtk_box_pack_startC(vbox,hbox,FALSE,FALSE,0);
     layout_general_buttons_frame(hbox);
-    
+
+#if GTK_CHECK_VERSION(3, 2, 0)
+    gtk_box_pack_startC(vbox,gtk_separator_new (GTK_ORIENTATION_HORIZONTAL),FALSE,FALSE,0);
+#else
     gtk_box_pack_startC(vbox,gtk_hseparator_new(),FALSE,FALSE,0);
+#endif
 
     gtk_box_pack_startC(vbox,gtk_label_new(_("Button Pixmaps")),FALSE,FALSE,0);
     
@@ -1071,7 +1075,11 @@ void layout_settings_pane(GtkWidget * vbox)
                 "they are stored separately, and control various UI "
                 "preferences for Emerald.")
                 ),FALSE,FALSE,0);
+#if GTK_CHECK_VERSION(3, 2, 0)
+    gtk_box_pack_startC(vbox,gtk_separator_new (GTK_ORIENTATION_HORIZONTAL),FALSE,FALSE,0);
+#else
     gtk_box_pack_startC(vbox,gtk_hseparator_new(),FALSE,FALSE,0);
+#endif
 
     junk = gtk_check_button_new_with_label(_("Show Tooltips for Buttons"));
     gtk_box_pack_startC(vbox,junk,FALSE,FALSE,0);
@@ -1306,7 +1314,11 @@ GtkWidget * build_tree_view()
     g_signal_connect(clearbut,"clicked",G_CALLBACK(cb_clearbox),searchbox);
     gtk_box_pack_startC(hbox,clearbut,FALSE,FALSE,0);
 
+#if GTK_CHECK_VERSION(3, 2, 0)
+	gtk_box_pack_startC(hbox,gtk_separator_new (GTK_ORIENTATION_VERTICAL),FALSE,FALSE,0);
+#else
 	gtk_box_pack_startC(hbox,gtk_vseparator_new(),FALSE,FALSE,0);
+#endif
 
     ReloadButton = gtk_button_new_from_stock(GTK_STOCK_REFRESH);
     gtk_box_pack_startC(hbox,ReloadButton,FALSE,FALSE,0);
@@ -1322,8 +1334,12 @@ GtkWidget * build_tree_view()
             gtk_image_new_from_stock(GTK_STOCK_OPEN,GTK_ICON_SIZE_BUTTON));
     gtk_box_pack_startC(hbox,ImportButton,FALSE,FALSE,0);
     g_signal_connect(ImportButton,"clicked",G_CALLBACK(cb_import),NULL);
- 
+
+#if GTK_CHECK_VERSION(3, 2, 0)
+	gtk_box_pack_startC(vbox,gtk_separator_new (GTK_ORIENTATION_HORIZONTAL),FALSE,FALSE,0);
+#else
 	gtk_box_pack_startC(vbox,gtk_hseparator_new(),FALSE,FALSE,0);
+#endif
 
     filt = GTK_TREE_MODEL_FILTER(
             gtk_tree_model_filter_new(GTK_TREE_MODEL(ThemeList),NULL));
