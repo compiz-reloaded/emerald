@@ -1401,7 +1401,7 @@ void layout_maximised_colors(GtkWidget * vbox)
     table_new(3,FALSE,FALSE);
 
 #if GTK_CHECK_VERSION(3, 8, 0)
-    gtk_container_add(GTK_SCROLLED_WINDOW(scroller), GTK_WIDGET(get_current_table()));
+    gtk_container_add(GTK_CONTAINER(scroller), GTK_WIDGET(get_current_table()));
 #else
     gtk_scrolled_window_add_with_viewport(GTK_SCROLLED_WINDOW(scroller), GTK_WIDGET(get_current_table()));
 #endif
@@ -1506,7 +1506,7 @@ void my_engine_settings(GtkWidget * hbox, gboolean active)
     table_new(3,FALSE,FALSE);
 
 #if GTK_CHECK_VERSION(3, 8, 0)
-    gtk_container_add(GTK_SCROLLED_WINDOW(scroller),GTK_WIDGET(get_current_table()));
+    gtk_container_add(GTK_CONTAINER(scroller),GTK_WIDGET(get_current_table()));
 #else
     gtk_scrolled_window_add_with_viewport(GTK_SCROLLED_WINDOW(scroller),GTK_WIDGET(get_current_table()));
 #endif

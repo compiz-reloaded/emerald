@@ -696,7 +696,7 @@ void layout_button_pane(GtkWidget * vbox)
     
     table_new(4,FALSE,FALSE);
 #if GTK_CHECK_VERSION(3, 8, 0)
-    gtk_container_add(GTK_SCROLLED_WINDOW(scroller),GTK_WIDGET(get_current_table()));
+    gtk_container_add(GTK_CONTAINER(scroller),GTK_WIDGET(get_current_table()));
 #else
     gtk_scrolled_window_add_with_viewport(GTK_SCROLLED_WINDOW(scroller),GTK_WIDGET(get_current_table()));
 #endif
@@ -721,7 +721,7 @@ void layout_window_frame(GtkWidget * vbox,gboolean active)
     
     table_new(3,FALSE,FALSE);
 #if GTK_CHECK_VERSION(3, 8, 0)
-    gtk_container_add(GTK_SCROLLED_WINDOW(scrollwin),GTK_WIDGET(get_current_table()));
+    gtk_container_add(GTK_CONTAINER(scrollwin),GTK_WIDGET(get_current_table()));
 #else
     gtk_scrolled_window_add_with_viewport(GTK_SCROLLED_WINDOW(scrollwin),GTK_WIDGET(get_current_table()));
 #endif
@@ -1018,7 +1018,7 @@ void layout_screenshot_frame(GtkWidget * vbox)
     gtk_scrolled_window_set_policy(GTK_SCROLLED_WINDOW(scrollwin),
             GTK_POLICY_AUTOMATIC,GTK_POLICY_AUTOMATIC);
 #if GTK_CHECK_VERSION(3, 8, 0)
-    gtk_container_add(GTK_SCROLLED_WINDOW(scrollwin),image);
+    gtk_container_add(GTK_CONTAINER(scrollwin),image);
 #else
     gtk_scrolled_window_add_with_viewport(GTK_SCROLLED_WINDOW(scrollwin),image);
 #endif
@@ -1182,7 +1182,7 @@ void layout_engine_pane(GtkWidget * vbox)
     gtk_scrolled_window_set_policy(GTK_SCROLLED_WINDOW(scwin),
             GTK_POLICY_AUTOMATIC,GTK_POLICY_AUTOMATIC);
 #if GTK_CHECK_VERSION(3, 8, 0)
-    gtk_container_add(GTK_SCROLLED_WINDOW(scwin),nvbox);
+    gtk_container_add(GTK_CONTAINER(scwin),nvbox);
 #else
     gtk_scrolled_window_add_with_viewport(GTK_SCROLLED_WINDOW(scwin),nvbox);
 #endif

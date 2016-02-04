@@ -563,7 +563,7 @@ void my_engine_settings(GtkWidget * hbox,  gboolean active)
     table_new(3, FALSE, FALSE);
 
 #if GTK_CHECK_VERSION(3, 8, 0)
-    gtk_container_add(GTK_SCROLLED_WINDOW(scroller), GTK_WIDGET(get_current_table()));
+    gtk_container_add(GTK_CONTAINER(scroller), GTK_WIDGET(get_current_table()));
 #else
     gtk_scrolled_window_add_with_viewport(GTK_SCROLLED_WINDOW(scroller), GTK_WIDGET(get_current_table()));
 #endif
@@ -627,7 +627,7 @@ static void layout_pixmap_box(GtkWidget * vbox, gint b_t, gboolean active)
     image = gtk_image_new();
     item = register_img_file_setting(filesel, "pixmaps",  g_strdup_printf("%s_%s", pre, p_types[b_t]), (GtkImage *)image);
 #if GTK_CHECK_VERSION(3, 8, 0)
-    gtk_container_add(GTK_SCROLLED_WINDOW(scroller), GTK_WIDGET(image));
+    gtk_container_add(GTK_CONTAINER(scroller), GTK_WIDGET(image));
 #else
     gtk_scrolled_window_add_with_viewport(GTK_SCROLLED_WINDOW(scroller), GTK_WIDGET(image));
 #endif
@@ -699,7 +699,7 @@ void layout_engine_pixmaps(GtkWidget * vbox, gboolean active)
     
     table_new(7, FALSE, FALSE);
 #if GTK_CHECK_VERSION(3, 8, 0)
-    gtk_container_add(GTK_SCROLLED_WINDOW(scroller), GTK_WIDGET(get_current_table()));
+    gtk_container_add(GTK_CONTAINER(scroller), GTK_WIDGET(get_current_table()));
 #else
     gtk_scrolled_window_add_with_viewport(GTK_SCROLLED_WINDOW(scroller), GTK_WIDGET(get_current_table()));
 #endif
