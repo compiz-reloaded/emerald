@@ -22,7 +22,7 @@
 #include <engine.h>
 #include <signal.h>
 
-#if GTK_CHECK_VERSION (3, 0, 0)
+#if GTK_CHECK_VERSION(3, 0, 0)
 #define gtk_hbox_new(X,Y) gtk_box_new(GTK_ORIENTATION_HORIZONTAL,Y)
 #define gtk_vbox_new(X,Y) gtk_box_new(GTK_ORIENTATION_VERTICAL,Y)
 #endif
@@ -698,7 +698,7 @@ void set_color(SettingItem * item, gchar * s)
 #if GTK_CHECK_VERSION(3, 4, 0)
     GdkRGBA c;
     gdk_rgba_parse(&c,s);
-    gtk_color_chooser_set_rgba(GTK_COLOR_BUTTON(item->widget),&c);
+    gtk_color_chooser_set_rgba(GTK_COLOR_CHOOSER(item->widget),&c);
 #else
     GdkColor c;
     gdk_color_parse(s,&c);
@@ -1018,4 +1018,3 @@ GtkWidget * build_notebook_page(gchar * title, GtkWidget * notebook)
             gtk_label_new(title));
     return vbox;
 }
-

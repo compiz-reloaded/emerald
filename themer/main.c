@@ -9,7 +9,7 @@
 
 #define LAST_COMPAT_VER "0.1.0"
 
-#if GTK_CHECK_VERSION (3, 0, 0)
+#if GTK_CHECK_VERSION(3, 0, 0)
 #define gtk_hbox_new(X,Y) gtk_box_new(GTK_ORIENTATION_HORIZONTAL,Y)
 #define gtk_vbox_new(X,Y) gtk_box_new(GTK_ORIENTATION_VERTICAL,Y)
 #endif
@@ -621,7 +621,7 @@ static void cb_delete(GtkWidget *w, gpointer d)
     g_free(at);
     g_free(fn);
 }
-static void cb_main_destroy (GtkWidget * w, gpointer d)
+static void cb_main_destroy(GtkWidget * w, gpointer d)
 {
     gtk_main_quit();
 }
@@ -682,7 +682,7 @@ void layout_button_pane(GtkWidget * vbox)
     layout_general_buttons_frame(hbox);
 
 #if GTK_CHECK_VERSION(3, 2, 0)
-    gtk_box_pack_startC(vbox,gtk_separator_new (GTK_ORIENTATION_HORIZONTAL),FALSE,FALSE,0);
+    gtk_box_pack_startC(vbox,gtk_separator_new(GTK_ORIENTATION_HORIZONTAL),FALSE,FALSE,0);
 #else
     gtk_box_pack_startC(vbox,gtk_hseparator_new(),FALSE,FALSE,0);
 #endif
@@ -853,9 +853,9 @@ static void cb_export(GtkWidget * w, gpointer p)
     gtk_file_filter_set_name(filter,"Theme Packages");
     gtk_file_filter_add_pattern(filter,"*.emerald");
     gtk_file_chooser_add_filter(GTK_FILE_CHOOSER(dialog),filter);
-    gtk_file_chooser_set_do_overwrite_confirmation (
-            GTK_FILE_CHOOSER (dialog), TRUE);
-    gtk_file_chooser_set_current_folder (GTK_FILE_CHOOSER(dialog),
+    gtk_file_chooser_set_do_overwrite_confirmation(
+            GTK_FILE_CHOOSER(dialog), TRUE);
+    gtk_file_chooser_set_current_folder(GTK_FILE_CHOOSER(dialog),
             pth);
     g_free(pth);
     pth = g_strdup_printf("%s.emerald",gtk_entry_get_text(
@@ -1076,7 +1076,7 @@ void layout_settings_pane(GtkWidget * vbox)
                 "preferences for Emerald.")
                 ),FALSE,FALSE,0);
 #if GTK_CHECK_VERSION(3, 2, 0)
-    gtk_box_pack_startC(vbox,gtk_separator_new (GTK_ORIENTATION_HORIZONTAL),FALSE,FALSE,0);
+    gtk_box_pack_startC(vbox,gtk_separator_new(GTK_ORIENTATION_HORIZONTAL),FALSE,FALSE,0);
 #else
     gtk_box_pack_startC(vbox,gtk_hseparator_new(),FALSE,FALSE,0);
 #endif
@@ -1271,7 +1271,7 @@ static void cb_import(GtkWidget * w, gpointer p)
     gtk_file_filter_set_name(filter,"Theme Packages");
     gtk_file_filter_add_pattern(filter,"*.emerald");
     gtk_file_chooser_add_filter(GTK_FILE_CHOOSER(dialog),filter);
-    gtk_file_chooser_set_current_folder (GTK_FILE_CHOOSER(dialog),
+    gtk_file_chooser_set_current_folder(GTK_FILE_CHOOSER(dialog),
             pth);
     g_free(pth);
     if (gtk_dialog_run(GTK_DIALOG(dialog))==GTK_RESPONSE_ACCEPT)
@@ -1315,7 +1315,7 @@ GtkWidget * build_tree_view()
     gtk_box_pack_startC(hbox,clearbut,FALSE,FALSE,0);
 
 #if GTK_CHECK_VERSION(3, 2, 0)
-	gtk_box_pack_startC(hbox,gtk_separator_new (GTK_ORIENTATION_VERTICAL),FALSE,FALSE,0);
+	gtk_box_pack_startC(hbox,gtk_separator_new(GTK_ORIENTATION_VERTICAL),FALSE,FALSE,0);
 #else
 	gtk_box_pack_startC(hbox,gtk_vseparator_new(),FALSE,FALSE,0);
 #endif
@@ -1336,7 +1336,7 @@ GtkWidget * build_tree_view()
     g_signal_connect(ImportButton,"clicked",G_CALLBACK(cb_import),NULL);
 
 #if GTK_CHECK_VERSION(3, 2, 0)
-	gtk_box_pack_startC(vbox,gtk_separator_new (GTK_ORIENTATION_HORIZONTAL),FALSE,FALSE,0);
+	gtk_box_pack_startC(vbox,gtk_separator_new(GTK_ORIENTATION_HORIZONTAL),FALSE,FALSE,0);
 #else
 	gtk_box_pack_startC(vbox,gtk_hseparator_new(),FALSE,FALSE,0);
 #endif
@@ -1509,7 +1509,7 @@ void layout_themes_pane(GtkWidget * vbox)
     layout_lower_pane(build_notebook_page(_("Edit Themes"),notebook));
 	
 }
-GtkWidget* create_filechooserdialog1 (char *input)
+GtkWidget* create_filechooserdialog1(char *input)
 {
    	
     //get a filename
@@ -1525,7 +1525,7 @@ GtkWidget* create_filechooserdialog1 (char *input)
     gtk_file_filter_set_name(filter,"Theme Packages");
     gtk_file_filter_add_pattern(filter,"*.emerald");
     gtk_file_chooser_add_filter(GTK_FILE_CHOOSER(dialog_startup),filter);
-    gtk_file_chooser_set_filename (GTK_FILE_CHOOSER(dialog_startup),
+    gtk_file_chooser_set_filename(GTK_FILE_CHOOSER(dialog_startup),
             pth);
     g_free(pth);
     if (gtk_dialog_run(GTK_DIALOG(dialog_startup))==GTK_RESPONSE_ACCEPT)
@@ -1562,17 +1562,17 @@ void layout_main_window()
     gtk_box_pack_endC(hbox,QuitButton,FALSE,FALSE,0);
     g_signal_connect(QuitButton,"clicked",G_CALLBACK(cb_quit),NULL);
  
-    gtk_container_addC(GTK_CONTAINER (mainWindow), vbox);
+    gtk_container_addC(GTK_CONTAINER(mainWindow), vbox);
 }
-int main (int argc, char * argv[])
+int main(int argc, char * argv[])
 {
     set_changed(FALSE);
     set_apply(FALSE);
     gchar *input_file=NULL;
-    setlocale (LC_ALL, "");
-    bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
-    bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
-    textdomain (GETTEXT_PACKAGE);
+    setlocale(LC_ALL, "");
+    bindtextdomain(GETTEXT_PACKAGE, LOCALEDIR);
+    bind_textdomain_codeset(GETTEXT_PACKAGE, "UTF-8");
+    textdomain(GETTEXT_PACKAGE);
     int install_file = 0;
     int loop_count = 0;
 
@@ -1591,7 +1591,7 @@ int main (int argc, char * argv[])
     }
 
 
-    gtk_init (&argc, &argv);
+    gtk_init(&argc, &argv);
 #ifdef USE_DBUS
     if (!g_thread_supported()) g_thread_init(NULL);
     dbus_g_thread_init();
@@ -1602,28 +1602,28 @@ int main (int argc, char * argv[])
 
     init_key_files();
     
-    mainWindow = gtk_window_new (GTK_WINDOW_TOPLEVEL);
+    mainWindow = gtk_window_new(GTK_WINDOW_TOPLEVEL);
 
     if (install_file == 1) {
-    		GtkWidget *filechooserdialog1;
-    		filechooserdialog1 = create_filechooserdialog1 (input_file);
-    		gtk_widget_show (filechooserdialog1);
+	GtkWidget *filechooserdialog1;
+	filechooserdialog1 = create_filechooserdialog1(input_file);
+	gtk_widget_show(filechooserdialog1);
     }
 
 #ifdef USE_DBUS
     setup_dbus();
 #endif
 
-    gtk_window_set_title (GTK_WINDOW (mainWindow), "Emerald Themer " VERSION);
+    gtk_window_set_title(GTK_WINDOW(mainWindow), "Emerald Themer " VERSION);
 
-    gtk_window_set_resizable (GTK_WINDOW (mainWindow), TRUE);
-    gtk_window_set_default_size (GTK_WINDOW(mainWindow), 700, 500);
+    gtk_window_set_resizable(GTK_WINDOW(mainWindow), TRUE);
+    gtk_window_set_default_size(GTK_WINDOW(mainWindow), 700, 500);
 
-    g_signal_connect(G_OBJECT (mainWindow), "destroy", G_CALLBACK(cb_main_destroy), NULL);
+    g_signal_connect(G_OBJECT(mainWindow), "destroy", G_CALLBACK(cb_main_destroy), NULL);
     
-    gtk_window_set_default_icon_from_file (PIXMAPS_DIR "/emerald-theme-manager-icon.png", NULL);
+    gtk_window_set_default_icon_from_file(PIXMAPS_DIR "/emerald-theme-manager-icon.png", NULL);
 
-    gtk_container_set_border_widthC (GTK_CONTAINER (mainWindow), 5);
+    gtk_container_set_border_widthC(GTK_CONTAINER(mainWindow), 5);
 
     layout_main_window();
     gtk_widget_show_all(mainWindow);

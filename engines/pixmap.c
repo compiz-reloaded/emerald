@@ -30,7 +30,7 @@
 #define TEXTURE_FROM_PNG(surface, png) \
         surface = (cairo_surface_t*) cairo_image_surface_create_from_png(png);
 
-#if GTK_CHECK_VERSION (3, 0, 0)
+#if GTK_CHECK_VERSION(3, 0, 0)
 #define gtk_hbox_new(X,Y) gtk_box_new(GTK_ORIENTATION_HORIZONTAL,Y)
 #define gtk_vbox_new(X,Y) gtk_box_new(GTK_ORIENTATION_VERTICAL,Y)
 #endif
