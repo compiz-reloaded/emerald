@@ -498,7 +498,11 @@ static void decor_update_blur_property(decor_t *d, int width, int height,
 
 static void decor_update_window_property(decor_t * d)
 {
-    long* data = NULL;
+#if DECOR_INTERFACE_VERSION < 20110504
+    long data[256];
+#else
+    long *data = NULL;
+#endif
     Display *xdisplay = GDK_DISPLAY_XDISPLAY(gdk_display_get_default());
     window_settings *ws = d->fs->ws;
     decor_extents_t maxextents;
@@ -531,8 +535,6 @@ static void decor_update_window_property(decor_t * d)
 	maxextents = extents;
 
 #if DECOR_INTERFACE_VERSION < 20110504
-    data = malloc(sizeof(long) * 256);
-
     decor_quads_to_property(data, cairo_xlib_surface_get_drawable(d->surface),
 			    &extents, &maxextents, 0, 0, quads, nQuad);
 #else
@@ -599,8 +601,10 @@ static void decor_update_window_property(decor_t * d)
 			       &left, h / 2,
 			       &right, h / 2);
 
+#if DECOR_INTERFACE_VERSION >= 20110504
     if (data)
 	free(data);
+#endif
 }
 
 static int
@@ -1960,7 +1964,11 @@ static void draw_shadow_window(decor_t * d)
 
 static void decor_update_switcher_property(decor_t * d)
 {
-    long* data = NULL;
+#if DECOR_INTERFACE_VERSION < 20110504
+    long data[256];
+#else
+    long *data = NULL;
+#endif
     Display *xdisplay = GDK_DISPLAY_XDISPLAY(gdk_display_get_default());
     unsigned int nQuad;
     decor_quad_t quads[N_QUADS_MAX];
@@ -1977,8 +1985,6 @@ static void decor_update_switcher_property(decor_t * d)
     nQuad = set_switcher_quads(quads, d->width, d->height, ws);
 
 #if DECOR_INTERFACE_VERSION < 20110504
-    data = malloc(sizeof(long) * 256);
-
     decor_quads_to_property(data, cairo_xlib_surface_get_drawable(d->surface),
 			    &extents, &extents, 0, 0, quads, nQuad);
 #else
@@ -2024,8 +2030,10 @@ static void decor_update_switcher_property(decor_t * d)
     gdk_error_trap_pop();
 #endif
 
+#if DECOR_INTERFACE_VERSION >= 20110504
     if (data)
 	free(data);
+#endif
 }
 
 static void draw_switcher_background(decor_t * d)
@@ -2455,7 +2463,11 @@ static void
 update_default_decorations(GdkScreen * screen, frame_settings * fs_act,
 			   frame_settings * fs_inact)
 {
+#if DECOR_INTERFACE_VERSION < 20110504
+    long data[256];
+#else
     long *data = NULL;
+#endif
     Window xroot;
     GdkDisplay *gdkdisplay = gdk_display_get_default();
     Display *xdisplay = gdk_x11_display_get_xdisplay(gdkdisplay);
@@ -2489,8 +2501,6 @@ update_default_decorations(GdkScreen * screen, frame_settings * fs_act,
 	nQuad = set_shadow_quads(quads, width, height, ws);
 
 #if DECOR_INTERFACE_VERSION < 20110504
-	data = malloc(sizeof(long) * 256);
-
 	decor_quads_to_property(data, cairo_xlib_surface_get_drawable(ws->shadow_surface),
 				&ws->shadow_extents, &ws->shadow_extents, 0, 0,
 				quads, nQuad);
@@ -2597,8 +2607,10 @@ update_default_decorations(GdkScreen * screen, frame_settings * fs_act,
 #endif
     }
 
+#if DECOR_INTERFACE_VERSION >= 20110504
     if (data)
 	free(data);
+#endif
 }
 
 static gboolean get_window_prop(Window xwindow, Atom atom, Window * val)
