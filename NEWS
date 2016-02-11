@@ -1,12 +1,14 @@
-Release 0.8.10.1
-==============================================================
-Maintenance release.
+Release 0.8.12
+==================================================================
 
 Release 0.8.9 (2015-11-01 Wolfgang Ulbrich <chat-to-me@raveit.de>)
-==============================================================
-Maintenance release.
+==================================================================
+COMPIZ-RELOADED
 
-add start scripts and menu entries
-improve man page
-adjustments for mate desktop
-more minor improvements, see git log
+Add start scripts and menu entries.
+
+Improve man page.
+
+Adjustments for MATE desktop.
+
+More minor improvements, see git log.
