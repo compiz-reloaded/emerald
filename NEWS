@@ -1,5 +1,17 @@
-Release 0.8.12
-==================================================================
+Release 0.8.12 (2016-02-12 Sorokin Alexei <sor.alexei@meowr.ru>)
+================================================================
+COMPIZ-RELOADED
+
+Remove start scripts: no longer make sense.
+
+Add Gtk3 support (by default).
+
+Add additional Compiz 0.9.x support (configure --enable-decor09
+argument).
+
+Fix resize glitches on some GPU's.
+
+Fix wrong size of button tooltips when hovering from one to another.
 
 Release 0.8.9 (2015-11-01 Wolfgang Ulbrich <chat-to-me@raveit.de>)
 ==================================================================
