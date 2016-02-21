@@ -9,12 +9,11 @@ SUBDIRS = \
 	include \
 	engines \
 	themer \
-	pixmaps \
+	icons \
 	misc \
 	defaults \
 	doc \
-	po \
-	icons
+	po
 
 EXTRA_DIST = \
     VERSION

@@ -101,12 +101,11 @@ src/Makefile
 include/Makefile
 engines/Makefile
 themer/Makefile
-pixmaps/Makefile
+icons/Makefile
 libengine/Makefile
 misc/Makefile
 doc/Makefile
 po/Makefile.in
 defaults/Makefile
 defaults/theme/Makefile
-icons/Makefile
 ])

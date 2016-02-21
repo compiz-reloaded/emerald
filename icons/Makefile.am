@@ -5,17 +5,12 @@ public_icons_themes = \
 	$(NULL)
 
 public_icons = \
-	hicolor_apps_16x16_compiz-mate-emerald.png \
-	hicolor_apps_22x22_compiz-mate-emerald.png \
-	hicolor_apps_24x24_compiz-mate-emerald.png \
-	hicolor_apps_32x32_compiz-mate-emerald.png \
-	hicolor_apps_48x48_compiz-mate-emerald.png \
-	hicolor_apps_scalable_compiz-mate-emerald.svg \
-	hicolor_apps_16x16_emerald-decorator.png \
-	hicolor_apps_22x22_emerald-decorator.png \
-	hicolor_apps_24x24_emerald-decorator.png \
-	hicolor_apps_32x32_emerald-decorator.png \
-	hicolor_apps_scalable_emerald-decorator.svg
+	hicolor_apps_16x16_emerald-theme-manager.png    \
+	hicolor_apps_22x22_emerald-theme-manager.png    \
+	hicolor_apps_24x24_emerald-theme-manager.png    \
+	hicolor_apps_32x32_emerald-theme-manager.png    \
+	hicolor_apps_48x48_emerald-theme-manager.png    \
+	hicolor_apps_scalable_emerald-theme-manager.svg
 
 noinst_DATA = \
 	$(NULL)
