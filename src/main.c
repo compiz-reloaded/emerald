@@ -747,7 +747,7 @@ static void draw_shadow_background(decor_t * d, cairo_t * cr)
     gint left, right, top, bottom;
     window_settings *ws = d->fs->ws;
 
-    if (!ws->large_shadow_surface)
+    if (!IS_VALID_SURFACE(ws->large_shadow_surface))
     {
 	cairo_set_source_rgba(cr, 0.0, 0.0, 0.0, 0.0);
 	cairo_paint(cr);
@@ -1129,12 +1129,12 @@ static void reset_buttons_bg_and_fade(decor_t * d)
 	d->button_fade_info.pulsating[b_t] = 0;
 	d->button_region[b_t].base_x1 = -100;
 	d->button_region[b_t].glow_x1 = -100;
-	if (d->button_region[b_t].bg_surface)
+	if (IS_VALID_SURFACE(d->button_region[b_t].bg_surface))
 	    cairo_surface_destroy(d->button_region[b_t].bg_surface);
 	d->button_region[b_t].bg_surface = NULL;
 	d->button_region_inact[b_t].base_x1 = -100;
 	d->button_region_inact[b_t].glow_x1 = -100;
-	if (d->button_region_inact[b_t].bg_surface)
+	if (IS_VALID_SURFACE(d->button_region_inact[b_t].bg_surface))
 	    cairo_surface_destroy(d->button_region_inact[b_t].bg_surface);
 	d->button_region_inact[b_t].bg_surface = NULL;
 	d->button_last_drawn_state[b_t] = 0;
@@ -1201,7 +1201,7 @@ static void draw_button_backgrounds(decor_t * d, int *necessary_update_type)
 	}
 	else
 	    return;
-	if (button_region->bg_surface)
+	if (IS_VALID_SURFACE(button_region->bg_surface))
 	    draw_surface(IS_VALID_SURFACE(d->buffer_surface) ? d->buffer_surface : d->surface,
 			 button_region->bg_surface, src_x, src_y,
 			 dest_x, dest_y, w, h);
@@ -1224,7 +1224,7 @@ gint draw_buttons_timer_func(gpointer data)
     int num_steps = ws->button_fade_num_steps;
 
     /* decorations no longer available? */
-    if (!d->buffer_surface && !d->surface)
+    if (!IS_VALID_SURFACE(d->buffer_surface) && !IS_VALID_SURFACE(d->surface))
     {
 	stop_button_fade(d);
 	return FALSE;
@@ -1508,7 +1508,7 @@ static void update_button_regions(decor_t * d)
 	    continue;
 	button_region_t *button_region = &(d->button_region[b_t]);
 
-	if (button_region->bg_surface)
+	if (IS_VALID_SURFACE(button_region->bg_surface))
 	{
 	    cairo_surface_destroy(button_region->bg_surface);
 	    button_region->bg_surface = NULL;
@@ -1645,7 +1645,7 @@ static void draw_window_decoration_real(decor_t * d, gboolean shadow_time)
     frame_settings *fs = d->fs;
     window_settings *ws = fs->ws;
 
-    if (!d->surface)
+    if (!IS_VALID_SURFACE(d->surface))
 	return;
 
     top = ws->win_extents.top + ws->titlebar_height;
@@ -1723,7 +1723,7 @@ static void draw_window_decoration_real(decor_t * d, gboolean shadow_time)
 		 button_region_inact[b_t]);
 	    if (BUTTON_NOT_VISIBLE(d, b_t))
 		continue;
-	    if (!button_region->bg_surface && button_region->base_x1 >= 0)	// if region is valid
+	    if (!IS_VALID_SURFACE(button_region->bg_surface) && button_region->base_x1 >= 0)	// if region is valid
 	    {
 		bg_surfaces_update_needed = TRUE;
 		break;
@@ -1766,9 +1766,9 @@ static void draw_window_decoration_real(decor_t * d, gboolean shadow_time)
 		    rw = button_region->base_x2 - button_region->base_x1;
 		    rh = button_region->base_y2 - button_region->base_y1;
 		}
-		if (!button_region->bg_surface)
+		if (!IS_VALID_SURFACE(button_region->bg_surface))
 		    button_region->bg_surface = create_surface(rw, rh);
-		if (!button_region->bg_surface)
+		if (!IS_VALID_SURFACE(button_region->bg_surface))
 		{
 		    fprintf(stderr,
 			    "%s: Error allocating buffer.\n", program_name);
@@ -2485,7 +2485,7 @@ update_default_decorations(GdkScreen * screen, frame_settings * fs_act,
     data = decor_alloc_property(1, WINDOW_DECORATION_TYPE_PIXMAP);
 #endif
 
-    if (ws->shadow_surface)
+    if (IS_VALID_SURFACE(ws->shadow_surface))
     {
 	int width, height;
 
@@ -2553,7 +2553,7 @@ update_default_decorations(GdkScreen * screen, frame_settings * fs_act,
 
     ws->decor_active_surface = cairo_surface_reference(ws->decor_active_surface);
 
-    if (ws->decor_normal_surface && ws->decor_active_surface)
+    if (IS_VALID_SURFACE(ws->decor_normal_surface) && IS_VALID_SURFACE(ws->decor_active_surface))
     {
 	d.p_inactive = ws->decor_normal_surface;
 	d.p_active = ws->decor_active_surface;
@@ -3042,7 +3042,7 @@ static void update_window_decoration_icon(WnckWindow * win)
 	d->icon = NULL;
     }
 
-    if (d->icon_surface)
+    if (IS_VALID_SURFACE(d->icon_surface))
     {
 	cairo_surface_destroy(d->icon_surface);
 	d->icon_surface = NULL;
@@ -3160,7 +3160,7 @@ static gboolean update_window_decoration_size(WnckWindow * win)
 			   ws->top_space + ws->titlebar_height +
 			   ws->left_space + ws->right_space +
 			   ws->bottom_space);
-    if (!surface)
+    if (!IS_VALID_SURFACE(surface))
 	return FALSE;
 
     buffer_surface =
@@ -3168,7 +3168,7 @@ static gboolean update_window_decoration_size(WnckWindow * win)
 		       ws->top_space + ws->titlebar_height +
 		       ws->left_space + ws->right_space +
 		       ws->bottom_space);
-    if (!buffer_surface)
+    if (!IS_VALID_SURFACE(buffer_surface))
     {
 	cairo_surface_destroy(surface);
 	return FALSE;
@@ -3381,20 +3381,20 @@ static gboolean update_switcher_window(WnckWindow * win, Window selected)
     }
 
     surface = create_native_surface_and_wrap(width, height);
-    if (!surface)
+    if (!IS_VALID_SURFACE(surface))
 	return FALSE;
 
     buffer_surface = create_surface(width, height);
-    if (!buffer_surface)
+    if (!IS_VALID_SURFACE(buffer_surface))
     {
 	cairo_surface_destroy(surface);
 	return FALSE;
     }
 
-    if (d->surface)
+    if (IS_VALID_SURFACE(d->surface))
 	cairo_surface_destroy(d->surface);
 
-    if (d->buffer_surface)
+    if (IS_VALID_SURFACE(d->buffer_surface))
 	cairo_surface_destroy(d->buffer_surface);
 
     if (d->cr)
@@ -3457,12 +3457,12 @@ static void remove_frame_window(WnckWindow * win)
 
     for (b_t = 0; b_t < B_T_COUNT; b_t++)
     {
-	if (d->button_region[b_t].bg_surface)
+	if (IS_VALID_SURFACE(d->button_region[b_t].bg_surface))
 	{
 	    cairo_surface_destroy(d->button_region[b_t].bg_surface);
 	    d->button_region[b_t].bg_surface = NULL;
 	}
-	if (d->button_region_inact[b_t].bg_surface)
+	if (IS_VALID_SURFACE(d->button_region_inact[b_t].bg_surface))
 	{
 	    cairo_surface_destroy(d->button_region_inact[b_t].bg_surface);
 	    d->button_region_inact[b_t].bg_surface = NULL;
@@ -3498,11 +3498,9 @@ static void remove_frame_window(WnckWindow * win)
 	d->icon = NULL;
     }
 
-    if (d->icon_surface)
-    {
+    if (IS_VALID_SURFACE(d->icon_surface))
 	cairo_surface_destroy(d->icon_surface);
-	d->icon_surface = NULL;
-    }
+    d->icon_surface = NULL;
 
     if (d->icon_pixbuf)
     {
@@ -3628,7 +3626,7 @@ static void active_window_changed(WnckScreen * screen)
     if (win)
     {
 	d = g_object_get_data(G_OBJECT(win), "decor");
-	if (d && d->surface && d->decorated)
+	if (d && IS_VALID_SURFACE(d->surface) && d->decorated)
 	{
 	    d->active = wnck_window_is_active(win);
 	    d->fs = (d->active ? d->fs->ws->fs_act : d->fs->ws->fs_inact);
@@ -3644,7 +3642,7 @@ static void active_window_changed(WnckScreen * screen)
     if (win)
     {
 	d = g_object_get_data(G_OBJECT(win), "decor");
-	if (d && d->surface && d->decorated)
+	if (d && IS_VALID_SURFACE(d->surface) && d->decorated)
 	{
 	    d->active = wnck_window_is_active(win);
 	    d->fs = (d->active ? d->fs->ws->fs_act : d->fs->ws->fs_inact);
@@ -5029,11 +5027,10 @@ static int update_shadow(frame_settings * fs)
     /* shadow color */
     src = XRenderCreateSolidFill(xdisplay, &color);
 
-    if (ws->large_shadow_surface)
-    {
+    if (IS_VALID_SURFACE(ws->large_shadow_surface))
 	cairo_surface_destroy(ws->large_shadow_surface);
-	ws->large_shadow_surface = NULL;
-    }
+    ws->large_shadow_surface = NULL;
+
 
     if (ws->shadow_pattern)
     {
@@ -5041,11 +5038,9 @@ static int update_shadow(frame_settings * fs)
 	ws->shadow_pattern = NULL;
     }
 
-    if (ws->shadow_surface)
-    {
+    if (IS_VALID_SURFACE(ws->shadow_surface))
 	cairo_surface_destroy(ws->shadow_surface);
-	ws->shadow_surface = NULL;
-    }
+    ws->shadow_surface = NULL;
 
     /* no shadow */
     if (size <= 0)
@@ -5057,7 +5052,7 @@ static int update_shadow(frame_settings * fs)
     }
 
     surface = create_surface(d.width, d.height);
-    if (!surface)
+    if (!IS_VALID_SURFACE(surface))
     {
 	g_free(params);
 	return 0;
@@ -5151,14 +5146,14 @@ static int update_shadow(frame_settings * fs)
 	ws->shadow_bottom_space + ws->shadow_bottom_corner_space;
 
     surface = create_surface(d.width, d.height);
-    if (!surface)
+    if (!IS_VALID_SURFACE(surface))
     {
 	g_free(params);
 	return 0;
     }
 
     d.surface = create_surface(d.width, d.height);
-    if (!d.surface)
+    if (!IS_VALID_SURFACE(d.surface))
     {
 	cairo_surface_destroy(surface);
 	g_free(params);
