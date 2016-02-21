@@ -1,8 +1,8 @@
 AC_PREREQ(2.57)
 
-AC_INIT([emerald],[0.8.12], [livinglatexkali@gmail.com])
+AC_INIT([emerald],[0.8.12.1], [livinglatexkali@gmail.com])
 
-AM_INIT_AUTOMAKE([1.9 tar-ustar dist-xz no-dist-gzip check-news])
+AM_INIT_AUTOMAKE([1.9 foreign tar-ustar dist-xz no-dist-gzip check-news])
 AC_CONFIG_HEADER([config.h])
 
 AC_ISC_POSIX
