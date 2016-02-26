@@ -1991,7 +1991,10 @@ static void decor_update_switcher_property(decor_t * d)
 
 #if GTK_CHECK_VERSION(3, 0, 0)
     context = gtk_widget_get_style_context(style_window);
-    gtk_style_context_get_color(context, GTK_STATE_FLAG_NORMAL, &fg);
+    gtk_style_context_save(context);
+    gtk_style_context_set_state(context, GTK_STATE_FLAG_NORMAL);
+    gtk_style_context_get_color(context, gtk_style_context_get_state(context), &fg);
+    gtk_style_context_restore(context);
 
     fgColor[0] = fg.red;
     fgColor[1] = fg.green;
@@ -2053,8 +2056,11 @@ static void draw_switcher_background(decor_t * d)
 
 #if GTK_CHECK_VERSION(3, 0, 0)
     context = gtk_widget_get_style_context(style_window);
-    gtk_style_context_get_background_color(context, GTK_STATE_FLAG_NORMAL, &bg);
-    gtk_style_context_get_color(context, GTK_STATE_FLAG_NORMAL, &fg);
+    gtk_style_context_save(context);
+    gtk_style_context_set_state(context, GTK_STATE_FLAG_NORMAL);
+    gtk_style_context_get_background_color(context, gtk_style_context_get_state(context), &bg);
+    gtk_style_context_get_color(context, gtk_style_context_get_state(context), &fg);
+    gtk_style_context_restore(context);
 
     color.r = bg.red;
     color.g = bg.green;
@@ -2268,8 +2274,11 @@ static void draw_switcher_foreground(decor_t * d)
 
 #if GTK_CHECK_VERSION(3, 0, 0)
     context = gtk_widget_get_style_context(style_window);
-    gtk_style_context_get_background_color(context, GTK_STATE_FLAG_NORMAL, &bg);
-    gtk_style_context_get_color(context, GTK_STATE_FLAG_NORMAL, &fg);
+    gtk_style_context_save(context);
+    gtk_style_context_set_state(context, GTK_STATE_FLAG_NORMAL);
+    gtk_style_context_get_background_color(context, gtk_style_context_get_state(context), &bg);
+    gtk_style_context_get_color(context, gtk_style_context_get_state(context), &fg);
+    gtk_style_context_restore(context);
 #else
     style = gtk_widget_get_style(style_window);
 #endif
