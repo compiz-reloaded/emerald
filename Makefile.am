@@ -3,17 +3,22 @@ AM_CPPFLAGS = -I$(top_srcdir)/include
 
 ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
 
-SUBDIRS = \
-	libengine \
-	src \
-	include \
-	engines \
-	themer \
-	icons \
-	misc \
-	defaults \
-	doc \
+SUBDIRS =		\
+	libengine	\
+	src		\
+	include		\
+	engines		\
+	themer		\
+	icons		\
+	misc		\
+	defaults	\
+	doc		\
 	po
 
-EXTRA_DIST = \
-    VERSION
+EXTRA_DIST =		\
+	AUTHORS		\
+	COPYING		\
+	NEWS		\
+	README.md	\
+	VERSION		\
+	autogen.sh
