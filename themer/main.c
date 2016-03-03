@@ -1620,8 +1620,8 @@ int main(int argc, char * argv[])
     gtk_window_set_default_size(GTK_WINDOW(mainWindow), 700, 500);
 
     g_signal_connect(G_OBJECT(mainWindow), "destroy", G_CALLBACK(cb_main_destroy), NULL);
-    
-    gtk_window_set_default_icon_from_file(PIXMAPS_DIR "/emerald-theme-manager-icon.png", NULL);
+
+    gtk_window_set_default_icon_name("emerald-theme-manager");
 
     gtk_container_set_border_widthC(GTK_CONTAINER(mainWindow), 5);
 
