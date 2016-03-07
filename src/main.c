@@ -2932,6 +2932,8 @@ static void update_event_windows(WnckWindow * win)
 
 	    if (w != 0 && h != 0)
 	    {
+		if (d->state & WNCK_WINDOW_STATE_MAXIMIZED_VERTICALLY)
+		    y = 0;
 		XMapWindow(xdisplay, d->event_windows[i][j]);
 		XMoveResizeWindow(xdisplay, d->event_windows[i][j], x -
 				  ((ws->use_decoration_cropping &&
