@@ -1103,6 +1103,9 @@ draw_button_with_glow_alpha_bstate(gint b_t, decor_t * d, cairo_t * cr,
 	    case B_RESTORE:
 		draw_unmax_button(d, cr, 4.0);
 		break;
+	    case B_SUPERMAXIMIZE:
+		draw_max_button(d, cr, 4.0);
+		break;
 	    case B_MINIMIZE:
 		draw_min_button(d, cr, 4.0);
 		break;
@@ -2721,6 +2724,8 @@ gint get_title_object_type(gchar obj)
 	case 'X':					// maXimize/Restore
 	case 'R':					// ""
 	    return TBT_MAXIMIZE;
+	case 'F':
+	    return TBT_SUPERMAXIMIZE;
 	case 'H':					// Help
 	    return TBT_HELP;
 	case 'M':					// not implemented menu
@@ -4160,6 +4165,7 @@ static gint generic_button_event(WnckWindow * win, XEvent * xevent,
 	_("UnSet Above"),
 	_("Stick Window"),
 	_("UnStick Window"),
+	_("Super Maximize Window"),
     };
 
     decor_t *d = g_object_get_data(G_OBJECT(win), "decor");
@@ -4240,6 +4246,12 @@ static void max_button_event(WnckWindow * win, XEvent * xevent)
 		wnck_window_maximize_horizontally(win);
 	    break;
     }
+}
+
+static void supermax_button_event(WnckWindow * win, XEvent * xevent)
+{
+    if (generic_button_event(win, xevent, B_T_SUPERMAXIMIZE, B_SUPERMAXIMIZE))
+	wnck_window_set_fullscreen(win, TRUE);
 }
 
 static void min_button_event(WnckWindow * win, XEvent * xevent)
@@ -4795,6 +4807,7 @@ event_filter_func(GdkXEvent * gdkxevent, GdkEvent * event, gpointer data)
 		shade_button_event,
 		above_button_event,
 		sticky_button_event,
+		supermax_button_event,
 	    };
 	    decor_t *d = g_object_get_data(G_OBJECT(win), "decor");
 

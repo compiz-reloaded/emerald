@@ -820,7 +820,8 @@ void layout_title_frame(GtkWidget * vbox)
                 "C=Close, N=Minimize, X/R=Restore\n"
                 "I=Icon, T=Title, H=Help, M=Menu\n"
                 "S=Shade, U/A=On Top(Up/Above)\n"
-                "Y=Sticky, (#)=# pixels space, ex: (5)\n")
+                "Y=Sticky, (#)=# pixels space, ex: (5)\n"
+                "F=SuperMaximize\n")
                 //"U=On Top, D=On Bottom, S=Shade\n"
                 //"Y=Sticky (on All Desktops)\n"
                 ),FALSE,FALSE,0);
