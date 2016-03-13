@@ -312,7 +312,7 @@ static int my_add_quad_row(decor_quad_t * q,
     q->p2.x = 0;
     q->p2.y = p2y;
     q->p2.gravity = vgrav | GRAVITY_EAST;
-    q->align = ALIGN_LEFT | ALIGN_TOP;	
+    q->align = ALIGN_LEFT | ALIGN_TOP;
     q->clamp = 0;
     q->stretch = STRETCH_X;
     q->max_width = fwidth;

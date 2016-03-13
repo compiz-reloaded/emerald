@@ -92,9 +92,9 @@ draw_closed_curve (cairo_t *cr,
         gboolean tophalf)
 {
     cairo_move_to (cr, x, y);
-    if(tophalf || ch == 0) 
+    if(tophalf || ch == 0)
        cairo_line_to (cr, x + w, y);
-    else 
+    else
        cairo_curve_to (cr, x, y, x + w/2, y + ch, x + w, y);
 
     cairo_line_to (cr, x + w, y + h);
@@ -137,7 +137,7 @@ draw_filled_closed_curve (cairo_t *cr,
 }
 
 void create_glow(decor_t *d, cairo_t *cr,
-                 double x, double y, double w, double h, 
+                 double x, double y, double w, double h,
                  alpha_color * c0, double p)
 {
        double r = 0.0;
@@ -163,35 +163,35 @@ void create_glow(decor_t *d, cairo_t *cr,
        cairo_set_operator (cr, CAIRO_OPERATOR_OVER);
 
        fill_rounded_rectangle (cr,
-            x-wp, y-hp, wp, hp, CORNER_TOPLEFT, 
+            x-wp, y-hp, wp, hp, CORNER_TOPLEFT,
 	     c0, &c1, (SHADE_LEFT | SHADE_TOP ), ws, r);
        fill_rounded_rectangle (cr,
-            x, y-hp, w, hp, 0, 
+            x, y-hp, w, hp, 0,
 	    c0, &c1, SHADE_TOP, ws, r);
        fill_rounded_rectangle (cr,
-            x+w, y-hp, wp, hp, CORNER_TOPRIGHT, 
+            x+w, y-hp, wp, hp, CORNER_TOPRIGHT,
 	     c0, &c1, (SHADE_RIGHT | SHADE_TOP ), ws, r);
        fill_rounded_rectangle (cr,
-            x-wp, y, wp, h, 0, 
+            x-wp, y, wp, h, 0,
 	    c0, &c1, SHADE_LEFT, ws, r);
        fill_rounded_rectangle (cr,
-            x+w, y, wp, h, 0, 
+            x+w, y, wp, h, 0,
 	    c0, &c1, SHADE_RIGHT, ws, r);
        fill_rounded_rectangle (cr,
-            x-wp, y+h, wp, hp, CORNER_BOTTOMLEFT, 
+            x-wp, y+h, wp, hp, CORNER_BOTTOMLEFT,
 	     c0, &c1, (SHADE_LEFT | SHADE_BOTTOM ), ws, r);
        fill_rounded_rectangle (cr,
-            x, y+h, w, hp, 0, 
+            x, y+h, w, hp, 0,
 	    c0, &c1, SHADE_BOTTOM, ws, r);
        fill_rounded_rectangle (cr,
-            x+w, y+h, wp, hp, CORNER_BOTTOMRIGHT, 
+            x+w, y+h, wp, hp, CORNER_BOTTOMRIGHT,
 	     c0, &c1, (SHADE_RIGHT | SHADE_BOTTOM ), ws, r);
 
        cairo_rectangle (cr, x, y, w, h);
        cairo_set_source_alpha_color (cr, c0);
        cairo_fill (cr);
 }
-                                        
+
 static gint get_real_pos(window_settings * ws, gint tobj, decor_t * d)
 {
     gint width = d->width;
@@ -215,8 +215,8 @@ static gint get_real_pos(window_settings * ws, gint tobj, decor_t * d)
 
 void engine_draw_frame (decor_t * d, cairo_t * cr)
 {
-    double        x1, y1, x2, y2, h, 
-                  top_title_height, bottom_title_height, 
+    double        x1, y1, x2, y2, h,
+                  top_title_height, bottom_title_height,
                   top_left, top_right;
     int           top, title_width = 0, title_height = 0, title_pos;
     // double        curve_offset;
@@ -241,12 +241,12 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
 
     h = d->height - ws->top_space - ws->titlebar_height - ws->bottom_space;
 
-    int corners = 
+    int corners =
         ((pws->round_top_left)     ? CORNER_TOPLEFT     : 0) |
         ((pws->round_top_right)    ? CORNER_TOPRIGHT    : 0) |
         ((pws->round_bottom_left)  ? CORNER_BOTTOMLEFT  : 0) |
         ((pws->round_bottom_right) ? CORNER_BOTTOMRIGHT : 0);
-    
+
 	// maximize work-a-round
 	if (d->state & (WNCK_WINDOW_STATE_MAXIMIZED_HORIZONTALLY |
                 WNCK_WINDOW_STATE_MAXIMIZED_VERTICALLY))
@@ -578,7 +578,7 @@ void layout_corners_frame(GtkWidget * vbox)
 
     hbox = gtk_hbox_new(FALSE, 2);
     gtk_box_pack_startC(vbox, hbox, FALSE, FALSE, 0);
-    
+
     gtk_box_pack_startC(hbox, gtk_label_new(_("Rounding Radius")), FALSE, FALSE, 0);
 
     junk = scaler_new(0, 20, 0.5);
@@ -601,17 +601,17 @@ void my_engine_settings(GtkWidget * hbox,  gboolean active)
     gtk_box_pack_startC(vbox, gtk_hseparator_new(), FALSE, FALSE, 0);
 #endif
     scroller = gtk_scrolled_window_new(NULL, NULL);
-    gtk_scrolled_window_set_policy(GTK_SCROLLED_WINDOW(scroller), 
+    gtk_scrolled_window_set_policy(GTK_SCROLLED_WINDOW(scroller),
             GTK_POLICY_NEVER, GTK_POLICY_AUTOMATIC);
     gtk_box_pack_startC(vbox, scroller, TRUE, TRUE, 0);
-    
+
     table_new(3, FALSE, FALSE);
 
 #if GTK_CHECK_VERSION(3, 8, 0)
     gtk_container_add(GTK_CONTAINER(scroller), GTK_WIDGET(get_current_table()));
 #else
     gtk_scrolled_window_add_with_viewport(GTK_SCROLLED_WINDOW(scroller), GTK_WIDGET(get_current_table()));
-#endif    
+#endif
 
     make_labels(_("Colors"));
     table_append_separator();

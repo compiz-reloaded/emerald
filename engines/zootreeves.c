@@ -28,7 +28,7 @@
 #include <engine.h>
 #include <zootreeves_icon.h>
 
-#define SECT "zootreeves_settings"  
+#define SECT "zootreeves_settings"
 
 #define DIP_ROUND_TRI  (1 << 4)
 
@@ -37,7 +37,7 @@
 #define gtk_vbox_new(X,Y) gtk_box_new(GTK_ORIENTATION_VERTICAL,Y)
 #endif
 
-typedef struct _pixmaps { 
+typedef struct _pixmaps {
     cairo_surface_t *titlebar_surface;
     cairo_surface_t *titlebar_surface_large;
     cairo_surface_t *titlebar_surface_buttons;
@@ -47,7 +47,6 @@ typedef struct _pixmaps {
     gboolean	titlebarpart_enabled;
     gboolean	titlebar_enabled;
     gboolean	titlebar_repeat_enabled;
-    
 } pixmaps;
 
 typedef struct _private_fs
@@ -100,7 +99,6 @@ typedef struct _private_ws
     int		title_bar_dip_button_width;
     int		left_bar_dip_radius;
     pixmaps     pixmaps;
-    
 } private_ws;
 
 void get_meta_info (EngineMetaInfo * emi)
@@ -171,11 +169,6 @@ rounded_rectangle_independent (cairo_t *cr,
         	cairo_move_to (cr, x, y);
     }
 
-
-   
-
-
-
     if (radius_tri_on == 1 && (corner & DIP_ROUND_TRI)) {
 
 	if (radius_tri > title_bar_height) {
@@ -233,7 +226,7 @@ rounded_rectangle_independent (cairo_t *cr,
 	}
 
 
-     if (enable_button_part == TRUE) {	
+     if (enable_button_part == TRUE) {
 	if (right_top_radius_on == 1) {
     		if ((corner & CORNER_TOPRIGHT)) {
         		cairo_arc (cr, x + w - right_top_radius, y + right_top_radius, right_top_radius,
@@ -268,14 +261,13 @@ rounded_rectangle_independent (cairo_t *cr,
         		cairo_arc (cr, x + left_top_radius, y + left_top_radius, left_top_radius, M_PI, M_PI * 1.5);
     		} else
         		cairo_line_to (cr, x, y);
-	    }  
+	    }
 	 }
-
 
   if (left_bar_dip == TRUE) {
 	left_bar_dip_offset =  (((h - bottom_border_width - title_bar_height + 1)  /100) * (100 - left_bar_dip_offset));
 
-	cairo_get_current_point (cr, &cx, &cy);        
+	cairo_get_current_point (cr, &cx, &cy);
 	cairo_line_to (cr, cx, cy - bottom_border_width + 2);
 	cairo_get_current_point (cr, &cx, &cy);
 
@@ -296,17 +288,14 @@ rounded_rectangle_independent (cairo_t *cr,
 
 	cairo_get_current_point (cr, &cx, &cy);
         cairo_arc (cr, cx, cy - left_bar_dip_radius, left_bar_dip_radius, M_PI * 2.5, M_PI * 3.0);
-	
 
 	     if (left_top_radius_on == 1) {
     		if ((corner & CORNER_TOPLEFT)) {
         		cairo_arc (cr, x + left_top_radius, y + left_top_radius, left_top_radius, M_PI, M_PI * 1.5);
     		} else
         		cairo_line_to (cr, x, y);
-	    } 
-	
-	
-    } 
+	    }
+    }
 }
 
 
@@ -318,9 +307,9 @@ rounded_square (cairo_t *cr,
         double  h,
         int	   corner,
         window_settings * ws,
-        double  radius_top_left, 
+        double  radius_top_left,
 	double  radius_top_right,
-        double  radius_bottom_left, 
+        double  radius_bottom_left,
 	double  radius_bottom_right,
 	double  radius_top_right_tri,
 	double  radius_top_left_tri,
@@ -377,7 +366,7 @@ rounded_square (cairo_t *cr,
 
 	left_bar_dip_offset = (h /100) * left_bar_dip_offset;
 	//printf("Left bar heigth = %f, Dip bar offset = %f\n", h, left_bar_dip_offset);
-	
+
 	width = w;
 	height = h;
 
@@ -428,11 +417,6 @@ rounded_square (cairo_t *cr,
 		cairo_get_current_point (cr, &cx, &cy);
 		cairo_line_to (cr, cx - width + (2* left_bar_dip_radius), cy);
 	}
-	
-
-
-	
-
 
      } else {
 
@@ -481,7 +465,7 @@ rounded_square (cairo_t *cr,
     }
 
 
-    if (radius_top_left_on == 0) {	
+    if (radius_top_left_on == 0) {
         cairo_move_to (cr, x + radius_top_left, y);
     } else
         cairo_move_to (cr, x, y);
@@ -504,7 +488,7 @@ rounded_square (cairo_t *cr,
     } else
         cairo_line_to (cr, x, y + h);
 
-    if (radius_top_left_on == 0) {		
+    if (radius_top_left_on == 0) {
         cairo_arc (cr, x + radius_top_left, y + radius_top_left, radius_top_left, M_PI, M_PI * 1.5);
     } else
         cairo_line_to (cr, x, y);
@@ -523,9 +507,9 @@ fill_rounded_square (cairo_t       *cr,
         alpha_color * c1,
         int	      gravity,
         window_settings * ws,
-        double  radius_top_left, 
+        double  radius_top_left,
 	double  radius_top_right,
-        double  radius_bottom_left, 
+        double  radius_bottom_left,
 	double  radius_bottom_right,
 	double  radius_top_right_tri,
 	double	radius_top_left_tri,
@@ -577,7 +561,7 @@ gboolean pattern_vert = TRUE;
     else if (!(gravity & SHADE_TOP))
     {
         common_gradient_starting_point_y = h = 0;
-    } 
+    }
 
   /*  if (w && h)
     {
@@ -621,7 +605,7 @@ gboolean pattern_vert = TRUE;
     pattern = cairo_pattern_reference(cairo_get_source(cr));
 	if (repeat_pixmap == TRUE) {
     	   cairo_pattern_set_extend(pattern, CAIRO_EXTEND_REPEAT);
-	} else { 
+	} else {
     	   cairo_pattern_set_extend(pattern, CAIRO_EXTEND_NONE);
 	}
    }
@@ -674,11 +658,11 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
     //x offset due to left dip bar
     int left_bar_dip_offset = 0;
     gboolean maximised;
-    gboolean enable_left_bar_dip = FALSE;	
+    gboolean enable_left_bar_dip = FALSE;
 
     cairo_set_operator (cr, CAIRO_OPERATOR_SOURCE);
 
-   int corners = 
+   int corners =
         ((pws->round_top_left)?CORNER_TOPLEFT:0) |
         ((pws->round_top_right)?CORNER_TOPRIGHT:0) |
         ((pws->round_tri)?DIP_ROUND_TRI:0) |
@@ -709,7 +693,7 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
 
 	minimised_border = 0;
 	window_gap = 0.5;
-	
+
     } else {
 	maximised = FALSE;
   	minimised_border = pws->minimised_border;
@@ -723,26 +707,22 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
 	if(pws->enable_left_bar_dip == TRUE && !(d->state & (WNCK_WINDOW_STATE_SHADED))) {
 	   enable_left_bar_dip = TRUE;
    	   left_bar_dip_offset = (2 * pws->left_bar_dip_radius);
-	   
+
 	   if (pws->done_indent == FALSE && ws->tobj_layout[0] != '(') {
 	   	char *layout;
 		layout = g_strdup_printf("(-%i)%s", left_bar_dip_offset,ws->tobj_layout);
         g_free(ws->tobj_layout);
         ws->tobj_layout = layout;
-	    pws->done_indent = TRUE; 
+	    pws->done_indent = TRUE;
 	   }
 
 	   //sprintf(ws->tobj_layout, "(-%i)%s", left_bar_dip_offset, layout); 89
 	   //pango_layout_set_indent(d->layout, 20000);
-	   //pws->round_bottom_left = FALSE; 
+	   //pws->round_bottom_left = FALSE;
 	}
     }
 
-
- 
 //   pfs->title_outer.alpha = 0.0;
-   
-
 
 ////////////DRAW FRAME///////////////////////////////////////////
 	// always_allow 1 = radius_top_left
@@ -787,7 +767,6 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
 
 
 ////////////////////////////////////
-	
 
 /*   ORDER radius_top_left, radius_top_right, radius_bottom_left, radius_bottom_right, radius_tri_left, radius_tri_right */
 
@@ -962,7 +941,7 @@ if (pws->pixmaps.buttonpart_enabled == TRUE) {
 if (pfs->window_highlight.alpha != 0) {
    if (enable_dip == TRUE) {
     rounded_rectangle_independent (cr,
-            x1 + 0.5 - minimised_border - window_gap - left_bar_dip_offset, 
+            x1 + 0.5 - minimised_border - window_gap - left_bar_dip_offset,
 	    y1 - minimised_border,
             x2 - x1 + ( 2* (minimised_border +window_gap)) + left_bar_dip_offset,
 	    y2 - y1 - 1.0 + window_gap + ( 2* (minimised_border)),
@@ -973,7 +952,7 @@ if (pfs->window_highlight.alpha != 0) {
    } else {
 
     rounded_rectangle_independent (cr,
-            x1 + 0.5 - minimised_border - window_gap - left_bar_dip_offset, 
+            x1 + 0.5 - minimised_border - window_gap - left_bar_dip_offset,
 	    y1 - minimised_border,
             x2 - x1 + ( 2* (minimised_border +window_gap)) + left_bar_dip_offset,
 	    y2 - y1 - 1.0 + window_gap + ( 2* (minimised_border)),
@@ -981,10 +960,7 @@ if (pfs->window_highlight.alpha != 0) {
             (CORNER_TOPLEFT | CORNER_TOPRIGHT | CORNER_BOTTOMLEFT |
              CORNER_BOTTOMRIGHT | DIP_ROUND_TRI) & corners, ws,
             pws->titlebar_radius, pws->titlebar_radius, pws->frame_radius, pws->frame_radius, 0, 0, 0, FALSE, do_button_part, enable_left_bar_dip, minimised_border + ws->win_extents.bottom, pws->left_bar_dip_radius, pws->enable_left_bar_dip_lower_part, pws->left_bar_dip_offset);
-
-   } 
-
-
+   }
 
 
     //HIGHLIGHT HERE
@@ -999,7 +975,7 @@ if (pfs->window_shadow.alpha != 0) {
 
    if (enable_dip == TRUE) {
     rounded_rectangle_independent (cr,
-            x1 + 0.5 - minimised_border - window_gap - left_bar_dip_offset, 
+            x1 + 0.5 - minimised_border - window_gap - left_bar_dip_offset,
 	    y1 + 1.5 - minimised_border,
             x2 - x1 + ( 2* (minimised_border +window_gap)) + left_bar_dip_offset,
 	    y2 - y1 - 1.0 + window_gap + ( 2* (minimised_border)),
@@ -1010,7 +986,7 @@ if (pfs->window_shadow.alpha != 0) {
    } else {
 
     rounded_rectangle_independent (cr,
-            x1 + 0.5 - minimised_border - window_gap - left_bar_dip_offset, 
+            x1 + 0.5 - minimised_border - window_gap - left_bar_dip_offset,
 	    y1 + 1.5 - minimised_border,
             x2 - x1 + ( 2* (minimised_border +window_gap)) + left_bar_dip_offset,
 	    y2 - y1 - 1.0 + window_gap + ( 2* (minimised_border)),
@@ -1036,7 +1012,7 @@ if (pfs->window_frame_halo.alpha != 0) {
 
    if (enable_dip == TRUE) {
     rounded_rectangle_independent (cr,
-            x1 + 0.5 - minimised_border - window_gap - left_bar_dip_offset, 
+            x1 + 0.5 - minimised_border - window_gap - left_bar_dip_offset,
 	    y1 + 0.5 - minimised_border,
             x2 - x1 + ( 2* (minimised_border +window_gap)) + left_bar_dip_offset,
 	    y2 - y1 - 1.0 + window_gap + ( 2* (minimised_border)),
@@ -1047,7 +1023,7 @@ if (pfs->window_frame_halo.alpha != 0) {
    } else {
 
     rounded_rectangle_independent (cr,
-            x1 + 0.5 - minimised_border - window_gap - left_bar_dip_offset, 
+            x1 + 0.5 - minimised_border - window_gap - left_bar_dip_offset,
 	    y1 + 0.5 - minimised_border,
             x2 - x1 + ( 2* (minimised_border +window_gap)) + left_bar_dip_offset,
 	    y2 - y1 - 1.5 + window_gap + ( 2* (minimised_border)),
@@ -1062,8 +1038,6 @@ if (pfs->window_frame_halo.alpha != 0) {
     cairo_stroke (cr);
 
 }
-
- 
 
     //INNER STUFF
 
@@ -1502,7 +1476,7 @@ void my_engine_settings(GtkWidget * hbox, gboolean active)
     gtk_scrolled_window_set_policy(GTK_SCROLLED_WINDOW(scroller),
             GTK_POLICY_NEVER,GTK_POLICY_AUTOMATIC);
     gtk_box_pack_startC(vbox,scroller,TRUE,TRUE,0);
-    
+
     table_new(3,FALSE,FALSE);
 
 #if GTK_CHECK_VERSION(3, 8, 0)
@@ -1510,7 +1484,7 @@ void my_engine_settings(GtkWidget * hbox, gboolean active)
 #else
     gtk_scrolled_window_add_with_viewport(GTK_SCROLLED_WINDOW(scroller),GTK_WIDGET(get_current_table()));
 #endif
-    
+
     make_labels(_("Colors"));
     table_append_separator();
     ACAV(_("Outer Frame Blend"),"outer",SECT);
@@ -1560,7 +1534,6 @@ void my_engine_settings(GtkWidget * hbox, gboolean active)
     register_setting(junk,ST_FLOAT,SECT,key_line);
     table_append_separator();
 
-	
 
     ACAV(_("Titlebar Separator"),"separator_line",SECT);
     table_append_separator();
@@ -1606,7 +1579,7 @@ void layout_pixmaps(GtkWidget * vbox) {
 
     hbox = gtk_hbox_new(FALSE,2);
     gtk_box_pack_startC(vbox,hbox,FALSE,FALSE,0);
-    
+
     junk = gtk_label_new(_("Title Bar Part Pixmap"));
     gtk_box_pack_startC(hbox,junk,FALSE,FALSE,0);
 
@@ -1618,9 +1591,9 @@ void layout_pixmaps(GtkWidget * vbox) {
     gtk_file_filter_set_name(filter,"PNG Images");
     gtk_file_filter_add_pixbuf_formats(filter);
     gtk_file_chooser_add_filter(GTK_FILE_CHOOSER(file_selector),filter);
-    
+
     title_bar_image = gtk_image_new();
-    
+
     /* set =*/ register_img_file_setting(file_selector,"pixmaps","titlebarpart",GTK_IMAGE(title_bar_image));
 ///////////////////////////
 #if GTK_CHECK_VERSION(3, 2, 0)
@@ -1641,7 +1614,7 @@ void layout_pixmaps(GtkWidget * vbox) {
 
     hbox = gtk_hbox_new(FALSE,2);
     gtk_box_pack_startC(vbox,hbox,FALSE,FALSE,0);
-    
+
     junk = gtk_label_new(_("Button Part Pixmap"));
     gtk_box_pack_startC(hbox,junk,FALSE,FALSE,0);
 
@@ -1653,9 +1626,9 @@ void layout_pixmaps(GtkWidget * vbox) {
     gtk_file_filter_set_name(filter,"PNG Images");
     gtk_file_filter_add_pixbuf_formats(filter);
     gtk_file_chooser_add_filter(GTK_FILE_CHOOSER(file_selector),filter);
-    
+
     title_bar_image = gtk_image_new();
-    
+
     /*set =*/ register_img_file_setting(file_selector,"pixmaps","buttonpart",GTK_IMAGE(title_bar_image));
 ///////////////////////////////////////
 #if GTK_CHECK_VERSION(3, 2, 0)
@@ -1676,7 +1649,7 @@ void layout_pixmaps(GtkWidget * vbox) {
 
     hbox = gtk_hbox_new(FALSE,2);
     gtk_box_pack_startC(vbox,hbox,FALSE,FALSE,0);
-    
+
     junk = gtk_label_new(_("Titlebar Pixmap"));
     gtk_box_pack_startC(hbox,junk,FALSE,FALSE,0);
 
@@ -1688,12 +1661,12 @@ void layout_pixmaps(GtkWidget * vbox) {
     gtk_file_filter_set_name(filter,"PNG Images");
     gtk_file_filter_add_pixbuf_formats(filter);
     gtk_file_chooser_add_filter(GTK_FILE_CHOOSER(file_selector),filter);
-    
+
     title_bar_image = gtk_image_new();
-    
+
     /* set =*/ register_img_file_setting(file_selector,"pixmaps","titlebar",GTK_IMAGE(title_bar_image));
 ///////////////////////////////////////
-    
+
 }
 void layout_engine_settings(GtkWidget * vbox)
 {

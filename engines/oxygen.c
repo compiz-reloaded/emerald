@@ -89,12 +89,12 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
 
     h = d->height - ws->top_space - ws->titlebar_height - ws->bottom_space;
 
-    int corners = 
+    int corners =
         ((pws->round_top_left)?CORNER_TOPLEFT:0) |
         ((pws->round_top_right)?CORNER_TOPRIGHT:0) |
         ((pws->round_bottom_left)?CORNER_BOTTOMLEFT:0) |
         ((pws->round_bottom_right)?CORNER_BOTTOMRIGHT:0);
-    
+
 	// maximize work-a-round
 	if (d->state & (WNCK_WINDOW_STATE_MAXIMIZED_HORIZONTALLY |
                 WNCK_WINDOW_STATE_MAXIMIZED_VERTICALLY))
@@ -264,7 +264,7 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
 
 	// ======= NEW LAYER =======
     cairo_set_operator (cr, CAIRO_OPERATOR_OVER);
-   
+
 	// titlebar separator line
     cairo_set_source_alpha_color(cr, &pfs->separator_line);
     cairo_move_to (cr, x1 + 0.5, y1 + top - 0.5);
@@ -311,7 +311,7 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
     cairo_translate (cr, 1.0, 1.0);
 
     cairo_reset_clip (cr);
-	
+
 	// halo
     rounded_rectangle (cr,
             x1 + 0.5, y1 + 0.5,
@@ -448,7 +448,7 @@ void layout_corners_frame(GtkWidget * vbox)
 
     hbox = gtk_hbox_new(FALSE, 2);
     gtk_box_pack_startC(vbox, hbox, FALSE, FALSE, 0);
-    
+
     gtk_box_pack_startC(hbox, gtk_label_new(_("Rounding Radius")), FALSE, FALSE, 0);
 
     junk = scaler_new(0, 20, 0.5);
@@ -469,10 +469,10 @@ void my_engine_settings(GtkWidget * hbox, gboolean active)
     gtk_box_pack_startC(vbox, gtk_hseparator_new(), FALSE, FALSE, 0);
 #endif
     scroller = gtk_scrolled_window_new(NULL, NULL);
-    gtk_scrolled_window_set_policy(GTK_SCROLLED_WINDOW(scroller), 
+    gtk_scrolled_window_set_policy(GTK_SCROLLED_WINDOW(scroller),
             GTK_POLICY_NEVER, GTK_POLICY_AUTOMATIC);
     gtk_box_pack_startC(vbox, scroller, TRUE, TRUE, 0);
-    
+
     table_new(3, FALSE, FALSE);
 
 #if GTK_CHECK_VERSION(3, 8, 0)
@@ -480,7 +480,7 @@ void my_engine_settings(GtkWidget * hbox, gboolean active)
 #else
     gtk_scrolled_window_add_with_viewport(GTK_SCROLLED_WINDOW(scroller), GTK_WIDGET(get_current_table()));
 #endif
-    
+
     make_labels(_("Colors"));
     table_append_separator();
     ACAV(_("Base"), "base", SECT);

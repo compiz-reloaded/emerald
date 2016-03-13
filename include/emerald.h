@@ -156,7 +156,7 @@ typedef struct _window_settings
     gint button_offset;
     gint button_hoffset;
     gchar * tobj_layout;
-    
+
     gint double_click_action;
     gint button_hover_cursor;
 
@@ -249,7 +249,7 @@ typedef struct _window_settings
                    // active and inactive glow pixmaps are assumed to be of same size
     gboolean stretch_sides;
     gint blur_type;// = BLUR_TYPE_NONE;
-	
+
 } window_settings;
 
 struct _frame_settings
