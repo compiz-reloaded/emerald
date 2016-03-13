@@ -35,8 +35,6 @@
 #include <dbus/dbus-glib-lowlevel.h>
 #endif
 
-//#include <gconf/gconf-client.h>
-
 #define WNCK_I_KNOW_THIS_IS_UNSTABLE
 #include <libwnck/libwnck.h>
 
@@ -178,7 +176,7 @@ typedef struct _window_settings
 
     gboolean    use_button_glow;
     gboolean    use_button_inactive_glow;
-	gboolean	use_decoration_cropping;
+    gboolean	use_decoration_cropping;
     gboolean    use_button_fade;
     GdkPixbuf * ButtonGlowPix[B_COUNT];
     GdkPixbuf * ButtonGlowArray;
@@ -313,7 +311,7 @@ typedef struct _decor
     PangoLayout	      *layout;
     gchar	      *name;
     cairo_pattern_t   *icon;
-    cairo_surface_t	      *icon_surface;
+    cairo_surface_t   *icon_surface;
     GdkPixbuf	      *icon_pixbuf;
     WnckWindowState   state;
     WnckWindowActions actions;
@@ -326,8 +324,8 @@ typedef struct _decor
     gboolean          draw_only_buttons_region;
     gint              button_last_drawn_state[B_T_COUNT]; // last drawn state or fade counter
     button_fade_info_t button_fade_info;
-    cairo_surface_t * p_active, * p_active_buffer;
-    cairo_surface_t * p_inactive, * p_inactive_buffer;
+    cairo_surface_t  *p_active_surface, *p_active_buffer_surface;
+    cairo_surface_t  *p_inactive_surface, *p_inactive_buffer_surface;
     button_region_t   button_region_inact[B_T_COUNT];
     gboolean only_change_active;
 } decor_t;
