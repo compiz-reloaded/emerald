@@ -296,9 +296,9 @@ typedef struct _decor
     guint	      button_states[B_T_COUNT];
     gint tobj_pos[3];
     gint tobj_size[3];
-    gint tobj_item_pos[11];
-    gint tobj_item_state[11];
-    gint tobj_item_width[11];
+    gint tobj_item_pos[TBT_COUNT];
+    gint tobj_item_state[TBT_COUNT];
+    gint tobj_item_width[TBT_COUNT];
     cairo_surface_t   *surface;
     cairo_surface_t   *buffer_surface;
     cairo_t	      *cr;
