@@ -1784,7 +1784,10 @@ static void draw_window_decoration_real(decor_t * d, gboolean shadow_time)
 		}
 	    }
 	}
-	cairo_restore(cr);		// and restore the state for button drawing
+	// cairo_restore(cr);		// and restore the state for button drawing
+  // No. Do not restore, please. This causing massive memleaks.
+  cairo_destroy(cr);
+  cr = NULL;
 	/*if (!shadow_time)
 	  {
 	//workaround for slowness, will grab and rotate the two side-pieces
