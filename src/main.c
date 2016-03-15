@@ -1687,9 +1687,6 @@ static void draw_window_decoration_real(decor_t * d, gboolean shadow_time)
 	  color.g = 1;
 	  color.b = 1; */
 
-	// the buttons were previously drawn here, so we need to save the cairo state here
-	cairo_save(cr);
-
 	if (d->layout && d->tobj_item_state[TBT_TITLE] != 3)
 	{
 	    pango_layout_set_alignment(d->layout, ws->title_text_align);
@@ -1793,7 +1790,9 @@ static void draw_window_decoration_real(decor_t * d, gboolean shadow_time)
 		}
 	    }
 	}
-	cairo_restore(cr);		// and restore the state for button drawing
+	cairo_destroy(cr);
+	cr = NULL;
+
 	/*if (!shadow_time)
 	  {
 	//workaround for slowness, will grab and rotate the two side-pieces
@@ -1801,7 +1800,6 @@ static void draw_window_decoration_real(decor_t * d, gboolean shadow_time)
 	cairo_surface_t * csur;
 	cairo_pattern_t * sr;
 	cairo_matrix_t cm;
-	cairo_destroy(cr);
 	gint topspace = ws->top_space + ws->titlebar_height;
 	cr = cairo_create(IS_VALID_SURFACE(d->buffer_surface) ? d->buffer_surface : d->surface);
 	cairo_set_operator(cr, CAIRO_OPERATOR_SOURCE);
