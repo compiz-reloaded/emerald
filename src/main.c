@@ -299,7 +299,7 @@ static int my_add_quad_row(decor_quad_t * q,
     q->p2.x = 0;
     q->p2.y = p2y;
     q->p2.gravity = vgrav | GRAVITY_EAST;
-    q->align = ALIGN_LEFT | ALIGN_TOP;	
+    q->align = ALIGN_LEFT | ALIGN_TOP;
     q->clamp = 0;
     q->stretch = STRETCH_X;
     q->max_width = fwidth;
@@ -1090,6 +1090,9 @@ draw_button_with_glow_alpha_bstate(gint b_t, decor_t * d, cairo_t * cr,
 	    case B_RESTORE:
 		draw_unmax_button(d, cr, 4.0);
 		break;
+	    case B_SUPERMAXIMIZE:
+		draw_max_button(d, cr, 4.0);
+		break;
 	    case B_MINIMIZE:
 		draw_min_button(d, cr, 4.0);
 		break;
@@ -1675,9 +1678,6 @@ static void draw_window_decoration_real(decor_t * d, gboolean shadow_time)
 	  color.g = 1;
 	  color.b = 1; */
 
-	// the buttons were previously drawn here, so we need to save the cairo state here
-	cairo_save(cr);
-
 	if (d->layout && d->tobj_item_state[TBT_TITLE] != 3)
 	{
 	    pango_layout_set_alignment(d->layout, ws->title_text_align);
@@ -1781,7 +1781,10 @@ static void draw_window_decoration_real(decor_t * d, gboolean shadow_time)
 		}
 	    }
 	}
-	cairo_restore(cr);		// and restore the state for button drawing
+	// cairo_restore(cr);		// and restore the state for button drawing
+	// No. Do not restore, please. This causing massive memleaks.
+	cairo_destroy(cr);
+	cr = NULL;
 	/*if (!shadow_time)
 	  {
 	//workaround for slowness, will grab and rotate the two side-pieces
@@ -1789,7 +1792,6 @@ static void draw_window_decoration_real(decor_t * d, gboolean shadow_time)
 	cairo_surface_t * csur;
 	cairo_pattern_t * sr;
 	cairo_matrix_t cm;
-	cairo_destroy(cr);
 	gint topspace = ws->top_space + ws->titlebar_height;
 	cr = cairo_create(IS_VALID_SURFACE(d->buffer_surface) ? d->buffer_surface : d->surface);
 	cairo_set_operator(cr, CAIRO_OPERATOR_SOURCE);
@@ -2699,6 +2701,8 @@ gint get_title_object_type(gchar obj)
 	case 'X':					// maXimize/Restore
 	case 'R':					// ""
 	    return TBT_MAXIMIZE;
+	case 'F':
+	    return TBT_SUPERMAXIMIZE;
 	case 'H':					// Help
 	    return TBT_HELP;
 	case 'M':					// not implemented menu
@@ -4153,6 +4157,7 @@ static gint generic_button_event(WnckWindow * win, XEvent * xevent,
 	_("UnSet Above"),
 	_("Stick Window"),
 	_("UnStick Window"),
+	_("Super Maximize Window"),
     };
 
     decor_t *d = g_object_get_data(G_OBJECT(win), "decor");
@@ -4233,6 +4238,12 @@ static void max_button_event(WnckWindow * win, XEvent * xevent)
 		wnck_window_maximize_horizontally(win);
 	    break;
     }
+}
+
+static void supermax_button_event(WnckWindow * win, XEvent * xevent)
+{
+    if (generic_button_event(win, xevent, B_T_SUPERMAXIMIZE, B_SUPERMAXIMIZE))
+	wnck_window_set_fullscreen(win, TRUE);
 }
 
 static void min_button_event(WnckWindow * win, XEvent * xevent)
@@ -4788,6 +4799,7 @@ event_filter_func(GdkXEvent * gdkxevent, GdkEvent * event, gpointer data)
 		shade_button_event,
 		above_button_event,
 		sticky_button_event,
+		supermax_button_event,
 	    };
 	    decor_t *d = g_object_get_data(G_OBJECT(win), "decor");
 

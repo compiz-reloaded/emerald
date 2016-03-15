@@ -17,6 +17,7 @@ enum buttons
     B_UNABOVE,
     B_STICK,
     B_UNSTICK,
+    B_SUPERMAXIMIZE,
     B_COUNT
 };
 enum states
@@ -39,6 +40,7 @@ enum btypes
     B_T_SHADE,
     B_T_ABOVE,
     B_T_STICKY,
+    B_T_SUPERMAXIMIZE,
     B_T_COUNT
 };
 #ifdef NEED_BUTTON_BISTATES
@@ -51,6 +53,7 @@ static const gboolean btbistate[B_T_COUNT]={
     TRUE,
     TRUE,
     TRUE,
+    FALSE,
 };
 #endif
 #ifdef NEED_BUTTON_STATE_FLAGS
@@ -64,6 +67,7 @@ static const int btstateflag[B_T_COUNT] =
     WNCK_WINDOW_STATE_SHADED,
     WNCK_WINDOW_STATE_ABOVE,
     WNCK_WINDOW_STATE_STICKY,
+    0,
 };
 #endif
 enum tbtypes
@@ -76,6 +80,7 @@ enum tbtypes
     TBT_SHADE=B_T_SHADE,
     TBT_ONTOP=B_T_ABOVE,
     TBT_STICKY=B_T_STICKY,
+    TBT_SUPERMAXIMIZE=B_T_SUPERMAXIMIZE,
     TBT_TITLE=B_T_COUNT,
     TBT_ICON,
     TBT_ONBOTTOM,
@@ -92,6 +97,7 @@ static guint button_actions[B_T_COUNT] = {
     WNCK_WINDOW_ACTION_SHADE,
     0xFFFFFFFF,//WNCK_WINDOW_ACTION_ABOVE,
     WNCK_WINDOW_ACTION_STICK,
+    WNCK_WINDOW_ACTION_FULLSCREEN,
 };
 #endif
 #ifdef NEED_BUTTON_FILE_NAMES
@@ -109,6 +115,7 @@ static gchar * b_types[]=
     "unabove",
     "sticky",
     "unsticky",
+    "supermax",
     "glow",
     "inactive_glow"
 };
@@ -127,6 +134,7 @@ static gchar * b_names[]={
     "Un-Set Above",
     "Stick",
     "Un-Stick",
+    "Super Maximize",
     "Glow(Halo)",
     "Inactive Glow"
 };
