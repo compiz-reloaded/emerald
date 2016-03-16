@@ -302,7 +302,6 @@ typedef struct _decor
     gint tobj_item_width[TBT_COUNT];
     cairo_surface_t   *surface;
     cairo_surface_t   *buffer_surface;
-    cairo_t	      *cr;
     gint	      width;
     gint	      height;
     gint              client_width;

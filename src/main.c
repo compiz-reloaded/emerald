@@ -3238,10 +3238,6 @@ static gboolean update_window_decoration_size(WnckWindow * win)
 				     ws->left_space + ws->right_space +
 				     ws->bottom_space);
 
-    if (d->cr)
-	cairo_destroy(d->cr);
-    d->cr = NULL;
-
     if (IS_VALID_SURFACE(d->p_active_surface))
 	cairo_surface_destroy(d->p_active_surface);
 
@@ -3262,7 +3258,6 @@ static gboolean update_window_decoration_size(WnckWindow * win)
     d->p_active_buffer_surface = buffer_surface;
     d->p_inactive_surface = isurface;
     d->p_inactive_buffer_surface = ibuffer_surface;
-    d->cr = cairo_create(surface);
 
     d->width = width;
     d->height = height;
@@ -3446,9 +3441,6 @@ static gboolean update_switcher_window(WnckWindow * win, Window selected)
 	return FALSE;
     }
 
-    if (d->cr)
-	cairo_destroy(d->cr);
-
     if (IS_VALID_SURFACE(d->surface))
 	cairo_surface_destroy(d->surface);
 
@@ -3457,7 +3449,6 @@ static gboolean update_switcher_window(WnckWindow * win, Window selected)
 
     d->surface = surface;
     d->buffer_surface = buffer_surface;
-    d->cr = cairo_create(surface);
 
     d->width = width;
     d->height = height;
@@ -3490,12 +3481,6 @@ static void remove_frame_window(WnckWindow * win)
     if (IS_VALID_SURFACE(d->p_inactive_buffer_surface))
 	cairo_surface_destroy(d->p_inactive_buffer_surface);
     d->p_inactive_buffer_surface = NULL;
-
-    if (d->cr)
-    {
-	cairo_destroy(d->cr);
-	d->cr = NULL;
-    }
 
     int b_t;
 
