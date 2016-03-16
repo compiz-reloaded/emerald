@@ -123,32 +123,6 @@ static cairo_surface_t *create_surface(int w, int h)
 	return NULL;
 }
 
-static cairo_surface_t *create_native_surface_and_wrap(int w, int h)
-{
-    GdkWindow *window;
-    GdkVisual *visual;
-    cairo_surface_t *surface;
-    Display *display;
-    Pixmap pixmap;
-
-    if (w <= 0 || h <= 0)
-	abort();
-
-    display = GDK_DISPLAY_XDISPLAY(gdk_display_get_default());
-    window = gtk_widget_get_window(style_window);
-    visual = gdk_window_get_visual(window);
-    pixmap = XCreatePixmap(display, GDK_WINDOW_XID(window), w, h, gdk_visual_get_depth(visual));
-    surface = cairo_xlib_surface_create(display, pixmap, GDK_VISUAL_XVISUAL(visual), w, h);
-
-    if (IS_VALID_SURFACE(surface))
-	return surface;
-    else
-    {
-	XFreePixmap(display, pixmap);
-	return NULL;
-    }
-}
-
 static void draw_surface(cairo_surface_t *surface, cairo_surface_t *src,
 			 int xsrc, int ysrc, int xdest, int ydest, int w, int h)
 {
@@ -3430,7 +3404,7 @@ static gboolean update_switcher_window(WnckWindow * win, Window selected)
 	}
     }
 
-    surface = create_native_surface_and_wrap(width, height);
+    surface = create_surface(width, height);
     if (!IS_VALID_SURFACE(surface))
 	return FALSE;
 
