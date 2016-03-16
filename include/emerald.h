@@ -159,6 +159,7 @@ typedef struct _window_settings
 
     gint double_click_action;
     gint button_hover_cursor;
+    gboolean titlebar_no_scroll_shade;
 
     gboolean round_top_left;
     gboolean round_top_right;
@@ -176,7 +177,7 @@ typedef struct _window_settings
 
     gboolean    use_button_glow;
     gboolean    use_button_inactive_glow;
-    gboolean	use_decoration_cropping;
+    gboolean    use_decoration_cropping;
     gboolean    use_button_fade;
     GdkPixbuf * ButtonGlowPix[B_COUNT];
     GdkPixbuf * ButtonGlowArray;

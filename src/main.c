@@ -4425,12 +4425,12 @@ static void title_event(WnckWindow * win, XEvent * xevent)
     }
     else if (xevent->xbutton.button == 4)
     {
-	if (!wnck_window_is_shaded(win))
+	if (!ws->titlebar_no_scroll_shade && !wnck_window_is_shaded(win))
 	    wnck_window_shade(win);
     }
     else if (xevent->xbutton.button == 5)
     {
-	if (wnck_window_is_shaded(win))
+	if (!ws->titlebar_no_scroll_shade && wnck_window_is_shaded(win))
 	    wnck_window_unshade(win);
     }
 }
@@ -5448,6 +5448,8 @@ static void load_settings(window_settings * ws)
     load_int_setting(f, &ws->double_click_action, "double_click_action",
 		     "titlebars");
     load_int_setting(f, &ws->button_hover_cursor, "hover_cursor", "buttons");
+    load_bool_setting(f, &ws->titlebar_no_scroll_shade,
+		      "no_scroll_shade", "titlebars");
     load_bool_setting(f, &ws->use_decoration_cropping,
 		      "use_decoration_cropping", "decorations");
     load_bool_setting(f, &ws->use_button_fade, "use_button_fade", "buttons");

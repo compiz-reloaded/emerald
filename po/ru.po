@@ -359,6 +359,9 @@ msgstr "Показывать всплывающие подсказки для т
 msgid "Use Decoration Cropping"
 msgstr "Использовать обрезку декораций"
 
+msgid "No Shade on Titlebar Scroll"
+msgstr "Не сворачивать окно в заголовок при его прокрутке"
+
 msgid "Use Button Fade"
 msgstr "Использовать затухание кнопок"
 

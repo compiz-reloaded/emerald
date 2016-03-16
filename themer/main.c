@@ -1089,6 +1089,10 @@ void layout_settings_pane(GtkWidget * vbox)
     gtk_box_pack_startC(vbox,junk,FALSE,FALSE,0);
     register_setting(junk,ST_SFILE_BOOL,"decorations","use_decoration_cropping");
 
+    junk = gtk_check_button_new_with_label(_("No Shade on Titlebar Scroll"));
+    gtk_box_pack_startC(vbox,junk,FALSE,FALSE,0);
+    register_setting(junk,ST_SFILE_BOOL,"titlebars","no_scroll_shade");
+
     junk = gtk_check_button_new_with_label(_("Use Button Fade"));
     gtk_box_pack_startC(vbox,junk,FALSE,FALSE,0);
     register_setting(junk,ST_SFILE_BOOL,"buttons","use_button_fade");
