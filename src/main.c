@@ -3185,9 +3185,9 @@ static gboolean update_window_decoration_size(WnckWindow * win)
     reset_buttons_bg_and_fade(d);
 
     surface = create_surface(MAX(width, height),
-			   ws->top_space + ws->titlebar_height +
-			   ws->left_space + ws->right_space +
-			   ws->bottom_space);
+			     ws->top_space + ws->titlebar_height +
+			     ws->left_space + ws->right_space +
+			     ws->bottom_space);
     if (!IS_VALID_SURFACE(surface))
 	return FALSE;
 
@@ -3206,20 +3206,35 @@ static gboolean update_window_decoration_size(WnckWindow * win)
 			      ws->top_space + ws->titlebar_height +
 			      ws->left_space + ws->right_space +
 			      ws->bottom_space);
+    if (!IS_VALID_SURFACE(isurface))
+    {
+	cairo_surface_destroy(surface);
+	cairo_surface_destroy(buffer_surface);
+	return FALSE;
+    }
 
     ibuffer_surface = create_surface(MAX(width, height),
 				     ws->top_space + ws->titlebar_height +
 				     ws->left_space + ws->right_space +
 				     ws->bottom_space);
+    if (!IS_VALID_SURFACE(ibuffer_surface))
+    {
+	cairo_surface_destroy(isurface);
+	cairo_surface_destroy(surface);
+	cairo_surface_destroy(buffer_surface);
+	return FALSE;
+    }
 
-    if (IS_VALID_SURFACE(d->p_active_surface))
-	cairo_surface_destroy(d->p_active_surface);
+    if (IS_VALID_SURFACE(d->p_active_old_surface))
+	cairo_surface_destroy(d->p_active_old_surface);
+    d->p_active_old_surface = d->p_active_surface;
+
+    if (IS_VALID_SURFACE(d->p_inactive_old_surface))
+	cairo_surface_destroy(d->p_inactive_old_surface);
+    d->p_inactive_old_surface = d->p_inactive_surface;
 
     if (IS_VALID_SURFACE(d->p_active_buffer_surface))
 	cairo_surface_destroy(d->p_active_buffer_surface);
-
-    if (IS_VALID_SURFACE(d->p_inactive_surface))
-	cairo_surface_destroy(d->p_inactive_surface);
 
     if (IS_VALID_SURFACE(d->p_inactive_buffer_surface))
 	cairo_surface_destroy(d->p_inactive_buffer_surface);
@@ -3455,6 +3470,14 @@ static void remove_frame_window(WnckWindow * win)
     if (IS_VALID_SURFACE(d->p_inactive_buffer_surface))
 	cairo_surface_destroy(d->p_inactive_buffer_surface);
     d->p_inactive_buffer_surface = NULL;
+
+    if (IS_VALID_SURFACE(d->p_active_old_surface))
+	cairo_surface_destroy(d->p_active_old_surface);
+    d->p_active_old_surface = NULL;
+
+    if (IS_VALID_SURFACE(d->p_inactive_old_surface))
+	cairo_surface_destroy(d->p_inactive_old_surface);
+    d->p_inactive_old_surface = NULL;
 
     int b_t;
 
