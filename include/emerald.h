@@ -326,7 +326,6 @@ typedef struct _decor
     button_fade_info_t button_fade_info;
     cairo_surface_t   *p_active_surface, *p_active_buffer_surface;
     cairo_surface_t   *p_inactive_surface, *p_inactive_buffer_surface;
-    cairo_surface_t   *p_active_old_surface, *p_inactive_old_surface;
     button_region_t   button_region_inact[B_T_COUNT];
     gboolean only_change_active;
 } decor_t;
