@@ -57,9 +57,9 @@ static gchar * names[]={
     "Top Left",
     "Top Right",
     "Left",
-    "Right", 
-    "Bottom", 
-    "Bottom Left", 
+    "Right",
+    "Bottom",
+    "Bottom Left",
     "Bottom Right",
     "Title",
     "Title Left",
@@ -215,12 +215,12 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
 
     h = d->height - ws->top_space - ws->titlebar_height - ws->bottom_space;
 
-    int corners = 
+    int corners =
         ((pws->round_top_left)?CORNER_TOPLEFT:0) |
         ((pws->round_top_right)?CORNER_TOPRIGHT:0) |
         ((pws->round_bottom_left)?CORNER_BOTTOMLEFT:0) |
         ((pws->round_bottom_right)?CORNER_BOTTOMRIGHT:0);
-    
+
 	// maximize work-a-round
 	if (d->state & (WNCK_WINDOW_STATE_MAXIMIZED_HORIZONTALLY |
                 WNCK_WINDOW_STATE_MAXIMIZED_VERTICALLY))
@@ -230,15 +230,15 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
     right_width = top_right_width = bottom_right_width = ws->win_extents.right;
     title_width = title_left_width = title_right_width = 0;
 
-    if(cairo_surface_status(pfs->pixmaps[TITLE].surface) == CAIRO_STATUS_SUCCESS) 
+    if(cairo_surface_status(pfs->pixmaps[TITLE].surface) == CAIRO_STATUS_SUCCESS)
        title_left_width = cairo_image_surface_get_width(pfs->pixmaps[TITLE].surface);
-    if(cairo_surface_status(pfs->pixmaps[TITLE_LEFT].surface) == CAIRO_STATUS_SUCCESS) 
+    if(cairo_surface_status(pfs->pixmaps[TITLE_LEFT].surface) == CAIRO_STATUS_SUCCESS)
        title_right_width = cairo_image_surface_get_width(pfs->pixmaps[TITLE_LEFT].surface);
 
     top_left_height = top_right_height = top;
     bottom_left_height = bottom_right_height = ws->win_extents.bottom;
 
-    // Adjustments of the (top/bottom)-(left/right) bar 
+    // Adjustments of the (top/bottom)-(left/right) bar
     // if the radius is bigger than left/right extents
     if((ws->win_extents.left < pws->top_corner_radius) &&
         (CORNER_TOPLEFT & corners)) {
@@ -308,9 +308,9 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
 
     // Left Bar
     fill_rounded_rectangle_pixmap_blend (cr,
-        x1 + ws->win_extents.left - left_width, 
+        x1 + ws->win_extents.left - left_width,
 	    y1 + top_left_height - 1,
-        left_width, 
+        left_width,
 	    h+1 - (top_left_height - top),
 	    0,
         &pfs->inner, &pfs->outer,
@@ -319,9 +319,9 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
 
     // Right Bar
     fill_rounded_rectangle_pixmap_blend (cr,
-        x2 - ws->win_extents.right, 
-	    y1 + top_right_height - 1, 
-	    right_width, 
+        x2 - ws->win_extents.right,
+	    y1 + top_right_height - 1,
+	    right_width,
 	    h+1 - (top_right_height - top),
 	    0,
         &pfs->inner, &pfs->outer,
@@ -368,7 +368,7 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
     title_pos = get_real_pos(ws, TBT_TITLE, d);
 
     // Check that it doesn't overflow
-    if((title_width + title_left_width + title_right_width) > 
+    if((title_width + title_left_width + title_right_width) >
        (x2 - x1 - top_left_width - top_right_width - 10)) {
        double scaledown = (x2 - x1 - top_left_width - top_right_width - 10) /
                           (title_width + title_left_width + title_right_width);
@@ -436,15 +436,15 @@ void load_engine_settings(GKeyFile * f, window_settings * ws)
         junk = g_strdup_printf("%s_%s", pre, p_types[i]);
         TEXTURE_FROM_PNG(pfs->pixmaps[i].surface, make_filename("pixmaps", junk, "png"));
 
-        load_bool_setting(f, &pfs->pixmaps[i].use_scaled,  
+        load_bool_setting(f, &pfs->pixmaps[i].use_scaled,
 		g_strdup_printf("%s_%s_use_scaled", pre, p_types[i]), SECT);
-        load_bool_setting(f, &pfs->pixmaps[i].use_width, 
+        load_bool_setting(f, &pfs->pixmaps[i].use_width,
 		g_strdup_printf("%s_%s_use_width", pre, p_types[i]), SECT);
-        load_float_setting(f, &pfs->pixmaps[i].width, 
+        load_float_setting(f, &pfs->pixmaps[i].width,
 		g_strdup_printf("%s_%s_width", pre, p_types[i]), SECT);
-        load_bool_setting(f, &pfs->pixmaps[i].use_height, 
+        load_bool_setting(f, &pfs->pixmaps[i].use_height,
 		g_strdup_printf("%s_%s_use_height", pre, p_types[i]), SECT);
-        load_float_setting(f, &pfs->pixmaps[i].height, 
+        load_float_setting(f, &pfs->pixmaps[i].height,
 		g_strdup_printf("%s_%s_height", pre, p_types[i]), SECT);
     }
 
@@ -455,15 +455,15 @@ void load_engine_settings(GKeyFile * f, window_settings * ws)
         junk = g_strdup_printf("%s_%s", pre, p_types[i]);
         TEXTURE_FROM_PNG(pfs->pixmaps[i].surface, make_filename("pixmaps", junk, "png"));
 
-        load_bool_setting(f, &pfs->pixmaps[i].use_scaled, 
+        load_bool_setting(f, &pfs->pixmaps[i].use_scaled,
 		g_strdup_printf("%s_%s_use_scaled", pre, p_types[i]),SECT);
-        load_bool_setting(f, &pfs->pixmaps[i].use_width, 
+        load_bool_setting(f, &pfs->pixmaps[i].use_width,
 		g_strdup_printf("%s_%s_use_width", pre, p_types[i]),SECT);
-        load_float_setting(f, &pfs->pixmaps[i].width, 
+        load_float_setting(f, &pfs->pixmaps[i].width,
 		g_strdup_printf("%s_%s_width", pre, p_types[i]),SECT);
-        load_bool_setting(f, &pfs->pixmaps[i].use_height, 
+        load_bool_setting(f, &pfs->pixmaps[i].use_height,
 		g_strdup_printf("%s_%s_use_height", pre, p_types[i]),SECT);
-        load_float_setting(f, &pfs->pixmaps[i].height, 
+        load_float_setting(f, &pfs->pixmaps[i].height,
 		g_strdup_printf("%s_%s_height", pre, p_types[i]),SECT);
     }
 }
@@ -556,10 +556,10 @@ void my_engine_settings(GtkWidget * hbox,  gboolean active)
     gtk_box_pack_startC(vbox, gtk_hseparator_new(), FALSE, FALSE, 0);
 #endif
     scroller = gtk_scrolled_window_new(NULL, NULL);
-    gtk_scrolled_window_set_policy(GTK_SCROLLED_WINDOW(scroller), 
+    gtk_scrolled_window_set_policy(GTK_SCROLLED_WINDOW(scroller),
             GTK_POLICY_NEVER, GTK_POLICY_AUTOMATIC);
     gtk_box_pack_startC(vbox, scroller, TRUE, TRUE, 0);
-    
+
     table_new(3, FALSE, FALSE);
 
 #if GTK_CHECK_VERSION(3, 8, 0)
@@ -567,7 +567,7 @@ void my_engine_settings(GtkWidget * hbox,  gboolean active)
 #else
     gtk_scrolled_window_add_with_viewport(GTK_SCROLLED_WINDOW(scroller), GTK_WIDGET(get_current_table()));
 #endif
-    
+
     make_labels("Colors");
     table_append_separator();
     ACAV(_("Outer Frame Blend"), "outer", SECT);
@@ -610,17 +610,17 @@ static void layout_pixmap_box(GtkWidget * vbox, gint b_t, gboolean active)
     if(!active) pre = "inactive";
 
     table_append(gtk_label_new(names[b_t]), FALSE);
-    
-    filesel = gtk_file_chooser_button_new(g_strdup_printf("%s Pixmap", names[b_t]), 
+
+    filesel = gtk_file_chooser_button_new(g_strdup_printf("%s Pixmap", names[b_t]),
             GTK_FILE_CHOOSER_ACTION_OPEN);
     table_append(filesel, FALSE);
     imgfilter = gtk_file_filter_new();
     gtk_file_filter_set_name(imgfilter, "Images");
     gtk_file_filter_add_pixbuf_formats(imgfilter);
     gtk_file_chooser_add_filter(GTK_FILE_CHOOSER(filesel), imgfilter);
-    
+
     scroller = gtk_scrolled_window_new(NULL, NULL);
-    gtk_scrolled_window_set_policy(GTK_SCROLLED_WINDOW(scroller), 
+    gtk_scrolled_window_set_policy(GTK_SCROLLED_WINDOW(scroller),
             GTK_POLICY_AUTOMATIC, GTK_POLICY_AUTOMATIC);
     gtk_widget_set_size_request(scroller,  150, 50);
 
@@ -682,7 +682,7 @@ void layout_engine_pixmaps(GtkWidget * vbox, gboolean active)
     GtkWidget * hbox;
     GtkWidget * junk;
     gint i;
-   
+
     hbox = gtk_hbox_new(TRUE, 2);
     gtk_box_pack_startC(vbox, hbox, FALSE, FALSE, 0);
 
@@ -693,17 +693,17 @@ void layout_engine_pixmaps(GtkWidget * vbox, gboolean active)
     }
 
     scroller=gtk_scrolled_window_new(NULL, NULL);
-    gtk_scrolled_window_set_policy(GTK_SCROLLED_WINDOW(scroller), 
+    gtk_scrolled_window_set_policy(GTK_SCROLLED_WINDOW(scroller),
             GTK_POLICY_AUTOMATIC, GTK_POLICY_AUTOMATIC);
     gtk_box_pack_startC(vbox, scroller, TRUE, TRUE, 0);
-    
+
     table_new(7, FALSE, FALSE);
 #if GTK_CHECK_VERSION(3, 8, 0)
     gtk_container_add(GTK_CONTAINER(scroller), GTK_WIDGET(get_current_table()));
 #else
     gtk_scrolled_window_add_with_viewport(GTK_SCROLLED_WINDOW(scroller), GTK_WIDGET(get_current_table()));
 #endif
-    
+
     table_append(gtk_label_new(_("Pixmap")), FALSE);
     table_append(gtk_label_new(_("File")), FALSE);
     table_append(gtk_label_new(_("Preview")), FALSE);
@@ -711,7 +711,7 @@ void layout_engine_pixmaps(GtkWidget * vbox, gboolean active)
     table_append(gtk_label_new(_("Tiled/Scaled")), FALSE);
     table_append(gtk_label_new(_("Width Override")), FALSE);
     table_append(gtk_label_new(_("Height Override")), FALSE);
-    
+
     for(i=0;i<11;i++)
     {
         layout_pixmap_box(vbox, i, active);

@@ -16,7 +16,7 @@ void cairo_set_source_alpha_color(cairo_t * cr, alpha_color * c);
     load_float_setting(f,&((private_fs *)ws->fs_act->engine_fs)->zc.alpha,"active_" #zc "_alpha",SECT);\
     load_float_setting(f,&((private_fs *)ws->fs_inact->engine_fs)->zc.alpha,"inactive_" #zc "_alpha",SECT);
 
-void 
+void
 fill_rounded_rectangle (cairo_t       *cr,
         double        x,
         double        y,
@@ -69,7 +69,7 @@ typedef struct _SettingItem
     gchar * key;
     gchar * section;
     GtkWidget * widget;
-    
+
     gchar * fvalue;
     GtkImage * image;
     GtkImage * preview;

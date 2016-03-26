@@ -357,6 +357,9 @@ msgstr "Show Tooltips for Buttons"
 msgid "Use Decoration Cropping"
 msgstr "Use Decoration Cropping"
 
+msgid "No Shade on Titlebar Scroll"
+msgstr "No Shade on Titlebar Scroll"
+
 msgid "Use Button Fade"
 msgstr "Use Button Fade"
 

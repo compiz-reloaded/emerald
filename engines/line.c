@@ -120,7 +120,6 @@ static void draw_shadow_background(decor_t * d, cairo_t * cr)
 		cairo_fill(cr);
 	}
 
-	
 	/* top right */
 	cairo_matrix_init_translate(&matrix, width - right - x2, 0.0);
 	cairo_pattern_set_matrix(ws->shadow_pattern, &matrix);
@@ -148,12 +147,12 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
 
 	double m1 = MIN(ws->win_extents.left, ws->win_extents.right);
 	double m2 = MIN(ws->win_extents.top,  ws->win_extents.bottom);
-	
+
 	double border_width = MIN(m1, m2);
 	double border_offset = border_width/2.0;
 
     cairo_set_line_width (cr, border_width);
-	
+
 	cairo_set_operator (cr, CAIRO_OPERATOR_SOURCE);
 
     rounded_rectangle (cr,
@@ -243,7 +242,7 @@ void my_engine_settings(GtkWidget * hbox, gboolean active)
     scroller = gtk_scrolled_window_new(NULL,NULL);
     gtk_scrolled_window_set_policy(GTK_SCROLLED_WINDOW(scroller), GTK_POLICY_NEVER, GTK_POLICY_AUTOMATIC);
     gtk_box_pack_startC(vbox, scroller, TRUE, TRUE, 0);
-    
+
     table_new(3, FALSE, FALSE);
 
 #if GTK_CHECK_VERSION(3, 8, 0)
@@ -251,7 +250,7 @@ void my_engine_settings(GtkWidget * hbox, gboolean active)
 #else
     gtk_scrolled_window_add_with_viewport(GTK_SCROLLED_WINDOW(scroller), GTK_WIDGET(get_current_table()));
 #endif
-    
+
     make_labels(_("Colors"));
     table_append_separator();
     ACAV(_("Outer Frame Blend"), "border", SECT);

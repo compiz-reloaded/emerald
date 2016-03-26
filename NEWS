@@ -1,3 +1,26 @@
+Release 0.8.12.3 (2016-03-17 Sorokin Alexei <sor.alexei@meowr.ru>)
+==================================================================
+COMPIZ-RELOADED
+
+Probably fix "white glitches" that happen on resize.
+
+Fix a X11 Drawable leakage.
+
+Release 0.8.12.2 (2016-03-16 Sorokin Alexei <sor.alexei@meowr.ru>)
+==================================================================
+COMPIZ-RELOADED
+
+Fix having resize cursor activated for maximized windows.
+
+Fix right click near top edge of maximized windows.
+
+Add an option to emerald-theme-manager to disable shading when
+titlebar is scrolled.
+
+Add support for a Super Maximize button (toggles fullscreen).
+
+Fix some memory leaks (big thanks to Sergey Ukolov).
+
 Release 0.8.12.1 (2016-02-21 Sorokin Alexei <sor.alexei@meowr.ru>)
 ==================================================================
 COMPIZ-RELOADED
@@ -18,7 +41,8 @@ Add Gtk3 support (by default).
 Add additional Compiz 0.9.x support (configure --enable-decor09
 argument).
 
-Fix resize glitches on some GPU's.
+Fix "white" glitches in conditions like title caption change on
+some GPU's.
 
 Fix wrong size of button tooltips when hovering from one to another.
 

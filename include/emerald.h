@@ -35,8 +35,6 @@
 #include <dbus/dbus-glib-lowlevel.h>
 #endif
 
-//#include <gconf/gconf-client.h>
-
 #define WNCK_I_KNOW_THIS_IS_UNSTABLE
 #include <libwnck/libwnck.h>
 
@@ -158,9 +156,10 @@ typedef struct _window_settings
     gint button_offset;
     gint button_hoffset;
     gchar * tobj_layout;
-    
+
     gint double_click_action;
     gint button_hover_cursor;
+    gboolean titlebar_no_scroll_shade;
 
     gboolean round_top_left;
     gboolean round_top_right;
@@ -178,7 +177,7 @@ typedef struct _window_settings
 
     gboolean    use_button_glow;
     gboolean    use_button_inactive_glow;
-	gboolean	use_decoration_cropping;
+    gboolean    use_decoration_cropping;
     gboolean    use_button_fade;
     GdkPixbuf * ButtonGlowPix[B_COUNT];
     GdkPixbuf * ButtonGlowArray;
@@ -251,7 +250,7 @@ typedef struct _window_settings
                    // active and inactive glow pixmaps are assumed to be of same size
     gboolean stretch_sides;
     gint blur_type;// = BLUR_TYPE_NONE;
-	
+
 } window_settings;
 
 struct _frame_settings
@@ -298,12 +297,11 @@ typedef struct _decor
     guint	      button_states[B_T_COUNT];
     gint tobj_pos[3];
     gint tobj_size[3];
-    gint tobj_item_pos[11];
-    gint tobj_item_state[11];
-    gint tobj_item_width[11];
+    gint tobj_item_pos[TBT_COUNT];
+    gint tobj_item_state[TBT_COUNT];
+    gint tobj_item_width[TBT_COUNT];
     cairo_surface_t   *surface;
     cairo_surface_t   *buffer_surface;
-    cairo_t	      *cr;
     gint	      width;
     gint	      height;
     gint              client_width;
@@ -313,7 +311,7 @@ typedef struct _decor
     PangoLayout	      *layout;
     gchar	      *name;
     cairo_pattern_t   *icon;
-    cairo_surface_t	      *icon_surface;
+    cairo_surface_t   *icon_surface;
     GdkPixbuf	      *icon_pixbuf;
     WnckWindowState   state;
     WnckWindowActions actions;
@@ -326,8 +324,8 @@ typedef struct _decor
     gboolean          draw_only_buttons_region;
     gint              button_last_drawn_state[B_T_COUNT]; // last drawn state or fade counter
     button_fade_info_t button_fade_info;
-    cairo_surface_t * p_active, * p_active_buffer;
-    cairo_surface_t * p_inactive, * p_inactive_buffer;
+    cairo_surface_t   *p_active_surface, *p_active_buffer_surface;
+    cairo_surface_t   *p_inactive_surface, *p_inactive_buffer_surface;
     button_region_t   button_region_inact[B_T_COUNT];
     gboolean only_change_active;
 } decor_t;

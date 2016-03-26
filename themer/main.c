@@ -785,7 +785,6 @@ void layout_title_frame(GtkWidget * vbox)
     gtk_box_pack_endC(hbox,junk,FALSE,FALSE,0);
     register_setting(junk,ST_FONT,"titlebar","titlebar_font");
 
-
     table_new(2,FALSE,FALSE);
     gtk_box_pack_startC(vbox,get_current_table(),FALSE,FALSE,0);
     table_append(gtk_label_new(_("Minimum Title-bar Height")),FALSE);
@@ -1089,6 +1088,10 @@ void layout_settings_pane(GtkWidget * vbox)
     junk = gtk_check_button_new_with_label(_("Use Decoration Cropping"));
     gtk_box_pack_startC(vbox,junk,FALSE,FALSE,0);
     register_setting(junk,ST_SFILE_BOOL,"decorations","use_decoration_cropping");
+
+    junk = gtk_check_button_new_with_label(_("No Shade on Titlebar Scroll"));
+    gtk_box_pack_startC(vbox,junk,FALSE,FALSE,0);
+    register_setting(junk,ST_SFILE_BOOL,"titlebars","no_scroll_shade");
 
     junk = gtk_check_button_new_with_label(_("Use Button Fade"));
     gtk_box_pack_startC(vbox,junk,FALSE,FALSE,0);
@@ -1451,7 +1454,6 @@ void import_cache(GtkWidget * progbar)
         gchar * n;
         while((n = (gchar *) g_dir_read_name(d)))
         {
-
             gchar * fn;
             if (g_str_has_suffix(n,".emerald"))
             {
@@ -1498,8 +1500,6 @@ void layout_upper_pane(GtkWidget * vbox)
 
     //table_new(1,TRUE,FALSE);
     //gtk_box_pack_startC(hbox,get_current_table(),FALSE,FALSE,0);
-
-
 }
 void layout_themes_pane(GtkWidget * vbox)
 {
@@ -1508,11 +1508,9 @@ void layout_themes_pane(GtkWidget * vbox)
     gtk_box_pack_startC(vbox,notebook,TRUE,TRUE,0);
     layout_upper_pane(build_notebook_page(_("Themes"),notebook));
     layout_lower_pane(build_notebook_page(_("Edit Themes"),notebook));
-
 }
 GtkWidget* create_filechooserdialog1(char *input)
 {
-
     //get a filename
     GtkWidget * dialog_startup = gtk_file_chooser_dialog_new(
             _("Import Theme..."),NULL,

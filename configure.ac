@@ -1,6 +1,6 @@
 AC_PREREQ(2.57)
 
-AC_INIT([emerald],[0.8.12.1], [livinglatexkali@gmail.com])
+AC_INIT([emerald],[0.8.12.3], [chat-to-me@raveit.de])
 
 AM_INIT_AUTOMAKE([1.9 foreign tar-ustar dist-xz no-dist-gzip check-news])
 AC_CONFIG_HEADER([config.h])
