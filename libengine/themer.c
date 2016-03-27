@@ -160,7 +160,7 @@ SettingItem * register_setting(GtkWidget * widget, SettingType type, gchar * sec
     item->key = g_strdup(key);
     item->section = g_strdup(section);
     item->widget = widget;
-    item->fvalue = g_strdup("");
+    item->fvalue = NULL;
     SettingList = g_slist_append(SettingList,item);
     switch(item->type)
     {
@@ -345,7 +345,7 @@ static gboolean cb_apply_setting_real(gpointer p)
         gchar * s;
         if (!(s=gtk_file_chooser_get_filename(GTK_FILE_CHOOSER(item->widget))))
             return FALSE; // for now just ignore setting it to an invalid name
-        if (!strcmp(s,item->fvalue))
+        if (g_strcmp0(s,item->fvalue) == 0)
         {
             g_free(s);
             return FALSE;
@@ -854,7 +854,8 @@ void cb_clear_file(GtkWidget * button, gpointer p)
 {
     SettingItem * item = p;
     check_file(item,"");
-    item->fvalue="";
+    g_free(item->fvalue);
+    item->fvalue = NULL;
     gtk_file_chooser_unselect_all(GTK_FILE_CHOOSER(item->widget));
     write_setting(p,global_theme_file);
     if (apply) apply_settings();
