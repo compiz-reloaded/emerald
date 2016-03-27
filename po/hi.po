@@ -484,7 +484,7 @@ msgstr ""
 "चुनें\n"
 "इंजिन"
 
-msgid "Based on original gnome-window-decorator"
+msgid "Based on original gtk-window-decorator"
 msgstr "मौलिक गनोम विंडो सजावटकर्ता पर आधारित"
 
 msgid "Round Top Left Corner"

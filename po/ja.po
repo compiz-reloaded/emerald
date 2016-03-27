@@ -488,8 +488,8 @@ msgstr ""
 "エンジンを\n"
 "選択"
 
-msgid "Based on original gnome-window-decorator"
-msgstr "オリジナルの gnome-window-decorator に基づいています。"
+msgid "Based on original gtk-window-decorator"
+msgstr "オリジナルの gtk-window-decorator に基づいています。"
 
 msgid "Round Top Left Corner"
 msgstr "左上の角を丸める"
@@ -544,7 +544,7 @@ msgstr "フレーム"
 
 #, fuzzy
 msgid "Based on original legacy"
-msgstr "オリジナルの gnome-window-decorator に基づいています。"
+msgstr "オリジナルの gtk-window-decorator に基づいています。"
 
 msgid "Designed to be vista-ish in nature"
 msgstr "元来 Vista のようにデザインされています"

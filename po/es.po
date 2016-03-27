@@ -496,7 +496,7 @@ msgstr ""
 "Seleccionar\n"
 "Motor"
 
-msgid "Based on original gnome-window-decorator"
+msgid "Based on original gtk-window-decorator"
 msgstr "Basado en el decorador de ventanas original de gnome"
 
 msgid "Round Top Left Corner"

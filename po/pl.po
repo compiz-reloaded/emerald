@@ -492,8 +492,8 @@ msgstr ""
 "Wybierz\n"
 "Silnik"
 
-msgid "Based on original gnome-window-decorator"
-msgstr "Bazowany na oryginalnym gnome-window-decorator"
+msgid "Based on original gtk-window-decorator"
+msgstr "Bazowany na oryginalnym gtk-window-decorator"
 
 msgid "Round Top Left Corner"
 msgstr "Zaokrąglaj lewy górny róg"

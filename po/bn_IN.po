@@ -485,7 +485,7 @@ msgstr ""
 "পছন্দ\n"
 "করুন"
 
-msgid "Based on original gnome-window-decorator"
+msgid "Based on original gtk-window-decorator"
 msgstr "জিনোমের নিজস্ব উইন্ডো সাজসজ্জার মতো"
 
 msgid "Round Top Left Corner"

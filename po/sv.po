@@ -488,8 +488,8 @@ msgstr ""
 "Välj\n"
 "motor"
 
-msgid "Based on original gnome-window-decorator"
-msgstr "Baserad på ursprungliga gnome-window-decorator"
+msgid "Based on original gtk-window-decorator"
+msgstr "Baserad på ursprungliga gtk-window-decorator"
 
 msgid "Round Top Left Corner"
 msgstr "Runda övre vänstra hörnet"

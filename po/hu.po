@@ -492,8 +492,8 @@ msgstr ""
 "Kiválaszt\n"
 "Motor"
 
-msgid "Based on original gnome-window-decorator"
-msgstr "Eredeti gnome-window-decorator alapú"
+msgid "Based on original gtk-window-decorator"
+msgstr "Eredeti gtk-window-decorator alapú"
 
 msgid "Round Top Left Corner"
 msgstr "Lekerekített bal felső sarok"
@@ -547,7 +547,7 @@ msgid "Frame"
 msgstr "Keret"
 
 msgid "Based on original legacy"
-msgstr "Eredeti gnome-window-decorator alapú"
+msgstr "Eredeti gtk-window-decorator alapú"
 
 msgid "Designed to be vista-ish in nature"
 msgstr "Tájkép kinézet"

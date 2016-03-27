@@ -490,8 +490,8 @@ msgstr ""
 "Seç\n"
 "Motor"
 
-msgid "Based on original gnome-window-decorator"
-msgstr "Orjinal gnome-window-decorator baz alınmıştır"
+msgid "Based on original gtk-window-decorator"
+msgstr "Orjinal gtk-window-decorator baz alınmıştır"
 
 msgid "Round Top Left Corner"
 msgstr "Üst sol köşeyi yuvarla"

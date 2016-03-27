@@ -487,7 +487,7 @@ msgstr ""
 "엔진\n"
 "선택"
 
-msgid "Based on original gnome-window-decorator"
+msgid "Based on original gtk-window-decorator"
 msgstr "그놈 기본 창 테두리에 기반"
 
 msgid "Round Top Left Corner"

@@ -452,7 +452,7 @@ msgid "Emerald Settings"
 msgstr ""
 
 #: engines/legacy.c:54
-msgid "Based on original gnome-window-decorator"
+msgid "Based on original gtk-window-decorator"
 msgstr ""
 
 #: engines/legacy.c:342 engines/oxygen.c:402 engines/pixmap.c:494

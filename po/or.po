@@ -484,7 +484,7 @@ msgstr ""
 "ମନୋନୀତକର \n"
 " ଇଞ୍ଜିନ "
 
-msgid "Based on original gnome-window-decorator"
+msgid "Based on original gtk-window-decorator"
 msgstr "ମୂଳ gnome-ଉଇଣ୍ଡୋ -ସଜ୍ଜାକାରୀ ଉପରେ ପର୍ୟ୍ଯବେଶିତ "
 
 msgid "Round Top Left Corner"

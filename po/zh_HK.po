@@ -481,8 +481,8 @@ msgstr ""
 "選取\n"
 "引擎"
 
-msgid "Based on original gnome-window-decorator"
-msgstr "基于原來的 gnome-window-decorator"
+msgid "Based on original gtk-window-decorator"
+msgstr "基于原來的 gtk-window-decorator"
 
 msgid "Round Top Left Corner"
 msgstr "左上角圓滑"
@@ -537,7 +537,7 @@ msgstr "框架"
 
 #, fuzzy
 msgid "Based on original legacy"
-msgstr "基于原來的 gnome-window-decorator"
+msgstr "基于原來的 gtk-window-decorator"
 
 msgid "Designed to be vista-ish in nature"
 msgstr "按照 Vista 風格設計"

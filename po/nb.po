@@ -485,8 +485,8 @@ msgstr ""
 "Velg\n"
 "Motor"
 
-msgid "Based on original gnome-window-decorator"
-msgstr "Basert på den originale gnome-window-decorator"
+msgid "Based on original gtk-window-decorator"
+msgstr "Basert på den originale gtk-window-decorator"
 
 msgid "Round Top Left Corner"
 msgstr "Rund av øverste høyre hjørne"
