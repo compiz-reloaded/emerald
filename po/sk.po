@@ -487,8 +487,8 @@ msgstr ""
 "Vyberte\n"
 "systém"
 
-msgid "Based on original gnome-window-decorator"
-msgstr "Založené na pôvodnom gnome-window-decorator"
+msgid "Based on original gtk-window-decorator"
+msgstr "Založené na pôvodnom gtk-window-decorator"
 
 msgid "Round Top Left Corner"
 msgstr "Zaoblený ľavý horný roh"

@@ -63,7 +63,7 @@ typedef struct _private_ws
 void get_meta_info (EngineMetaInfo * emi)
 {
     emi->version = g_strdup("0.1");
-    emi->description = g_strdup(_("Based on original gnome-window-decorator"));
+    emi->description = g_strdup(_("Based on original gtk-window-decorator"));
     emi->last_compat = g_strdup("0.0"); // old themes still compatible
     emi->icon = gdk_pixbuf_new_from_inline(-1, my_pixbuf, TRUE, NULL);
 }

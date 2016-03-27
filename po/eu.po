@@ -489,7 +489,7 @@ msgstr ""
 "Aukeratu\n"
 "motorea"
 
-msgid "Based on original gnome-window-decorator"
+msgid "Based on original gtk-window-decorator"
 msgstr "Gnome-leiho dekoratzaile originalean oinarritua"
 
 msgid "Round Top Left Corner"

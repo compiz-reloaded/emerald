@@ -435,7 +435,7 @@ msgid ""
 "Engine"
 msgstr ""
 
-msgid "Based on original gnome-window-decorator"
+msgid "Based on original gtk-window-decorator"
 msgstr ""
 
 msgid "Round Top Left Corner"

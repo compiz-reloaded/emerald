@@ -486,8 +486,8 @@ msgstr ""
 "Selecteer\n"
 "Engine"
 
-msgid "Based on original gnome-window-decorator"
-msgstr "Gebaseerd op originele gnome-window-decorator"
+msgid "Based on original gtk-window-decorator"
+msgstr "Gebaseerd op originele gtk-window-decorator"
 
 msgid "Round Top Left Corner"
 msgstr "Ronde Linksboven Hoek"

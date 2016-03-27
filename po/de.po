@@ -488,7 +488,7 @@ msgstr ""
 "Kern\n"
 "auswählen"
 
-msgid "Based on original gnome-window-decorator"
+msgid "Based on original gtk-window-decorator"
 msgstr "Basiert auf dem original Gnome Fensterdekorator"
 
 msgid "Round Top Left Corner"

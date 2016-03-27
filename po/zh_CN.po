@@ -480,8 +480,8 @@ msgstr ""
 "选择\n"
 "引擎"
 
-msgid "Based on original gnome-window-decorator"
-msgstr "基于原来的gnome-window-decorator"
+msgid "Based on original gtk-window-decorator"
+msgstr "基于原来的gtk-window-decorator"
 
 msgid "Round Top Left Corner"
 msgstr "左上角圆滑"

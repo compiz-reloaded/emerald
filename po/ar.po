@@ -485,7 +485,7 @@ msgstr ""
 "إختيار\n"
 "المحرّك"
 
-msgid "Based on original gnome-window-decorator"
+msgid "Based on original gtk-window-decorator"
 msgstr "مبنى على مزين نوافذ جنوم"
 
 msgid "Round Top Left Corner"

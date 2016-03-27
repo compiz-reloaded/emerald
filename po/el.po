@@ -491,7 +491,7 @@ msgstr ""
 "Επιλογή\n"
 "Μηχανής"
 
-msgid "Based on original gnome-window-decorator"
+msgid "Based on original gtk-window-decorator"
 msgstr "Βασισμένο στον γνήσιο gnome-διακοσμητή-παραθύρων"
 
 msgid "Round Top Left Corner"

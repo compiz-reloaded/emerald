@@ -491,8 +491,8 @@ msgstr ""
 "Seleccionar\n"
 "motor"
 
-msgid "Based on original gnome-window-decorator"
-msgstr "Baseado no gnome-window-decorator original"
+msgid "Based on original gtk-window-decorator"
+msgstr "Baseado no gtk-window-decorator original"
 
 msgid "Round Top Left Corner"
 msgstr "Arredondar canto superior esquerdo"
@@ -546,7 +546,7 @@ msgid "Frame"
 msgstr "Limite"
 
 msgid "Based on original legacy"
-msgstr "Baseado no gnome-window-decorator original"
+msgstr "Baseado no gtk-window-decorator original"
 
 msgid "Designed to be vista-ish in nature"
 msgstr "Com o objectivo de ser parecido com o vista"

@@ -483,8 +483,8 @@ msgstr ""
 "Vyberte\n"
 "zobrazovací jádro"
 
-msgid "Based on original gnome-window-decorator"
-msgstr "Založený na originálním gnome-window-decorator"
+msgid "Based on original gtk-window-decorator"
+msgstr "Založený na originálním gtk-window-decorator"
 
 msgid "Round Top Left Corner"
 msgstr "Zakulatit horní levý roh"
@@ -539,7 +539,7 @@ msgstr "Rám"
 
 #, fuzzy
 msgid "Based on original legacy"
-msgstr "Založený na originálním gnome-window-decorator"
+msgstr "Založený na originálním gtk-window-decorator"
 
 msgid "Designed to be vista-ish in nature"
 msgstr "Navržen, aby Vistě z oka vypadl"

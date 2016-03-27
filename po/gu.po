@@ -492,7 +492,7 @@ msgstr ""
 "એંજીન\n"
 "પસંદ કરો"
 
-msgid "Based on original gnome-window-decorator"
+msgid "Based on original gtk-window-decorator"
 msgstr "અસલ gnome(જિનોમ)-ચોકઠુ-શણગારક  આધારિત"
 
 msgid "Round Top Left Corner"

@@ -485,8 +485,8 @@ msgstr ""
 "Valitse\n"
 "moottori"
 
-msgid "Based on original gnome-window-decorator"
-msgstr "Perustuu alkuperäiseen gnome-window-decoratoriin"
+msgid "Based on original gtk-window-decorator"
+msgstr "Perustuu alkuperäiseen gtk-window-decoratoriin"
 
 msgid "Round Top Left Corner"
 msgstr "Pyöristetty vasen yläkulma"

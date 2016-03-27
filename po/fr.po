@@ -488,8 +488,8 @@ msgstr ""
 "Sélectionnez un\n"
 "moteur de rendu"
 
-msgid "Based on original gnome-window-decorator"
-msgstr "Basé sur gnome-window-decorator"
+msgid "Based on original gtk-window-decorator"
+msgstr "Basé sur gtk-window-decorator"
 
 msgid "Round Top Left Corner"
 msgstr "Arrondi du coin supérieur gauche"
