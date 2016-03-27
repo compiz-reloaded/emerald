@@ -3237,8 +3237,10 @@ static gboolean update_window_decoration_size(WnckWindow * win)
 
     /* wait until old surfaces are not used for sure,
        one second should be enough */
-    g_timeout_add_seconds(1, destroy_surface_idled, d->p_active_surface);
-    g_timeout_add_seconds(1, destroy_surface_idled, d->p_inactive_surface);
+    if (IS_VALID_SURFACE(d->p_active_surface))
+	g_timeout_add_seconds(1, destroy_surface_idled, d->p_active_surface);
+    if (IS_VALID_SURFACE(d->p_inactive_surface))
+	g_timeout_add_seconds(1, destroy_surface_idled, d->p_inactive_surface);
 
     if (IS_VALID_SURFACE(d->p_active_buffer_surface))
 	cairo_surface_destroy(d->p_active_buffer_surface);
