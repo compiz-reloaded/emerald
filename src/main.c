@@ -1005,17 +1005,30 @@ static int get_b_state(decor_t * d, int button)
     }
     return ret;
 }
-static void
-draw_pixbuf(GdkPixbuf * pixbuf, cairo_t * cr,
-	    gdouble x, gdouble y, gdouble x2, gdouble y2, gdouble alpha)
+
+static void draw_pixbuf(cairo_t *cr, GdkPixbuf *src,
+			int xsrc, int ysrc, int xdest, int ydest, int w, int h,
+			double alpha)
 {
+    if (!src)
+	return;
+    if (!cr)
+	abort();
+
+    if (w < 0)
+	w = gdk_pixbuf_get_width(src);
+    if (h < 0)
+	h = gdk_pixbuf_get_height(src);
+
     cairo_save(cr);
-    cairo_rectangle(cr, x, y, x2-x, y2-y);
+    cairo_set_operator(cr, CAIRO_OPERATOR_OVER);
+    gdk_cairo_set_source_pixbuf(cr, src, xdest - xsrc, ydest - ysrc);
+    cairo_rectangle(cr, xdest, ydest, w, h);
     cairo_clip(cr);
-    gdk_cairo_set_source_pixbuf(cr, pixbuf, x, y);
     cairo_paint_with_alpha(cr, alpha);
     cairo_restore(cr);
 }
+
 static void
 draw_button_with_glow_alpha_bstate(gint b_t, decor_t * d, cairo_t * cr,
 				   gint y1, gdouble button_alpha,
@@ -1049,25 +1062,26 @@ draw_button_with_glow_alpha_bstate(gint b_t, decor_t * d, cairo_t * cr,
     {
 	x2 = button_region->base_x2;
 	y2 = button_region->base_y2;
-	draw_pixbuf(ws->ButtonPix[b_state + b * S_COUNT], cr, x, y, x2, y2,
-		    button_alpha);
+	draw_pixbuf(cr, ws->ButtonPix[b_state + b * S_COUNT], 0, 0, x, y,
+		    x2 - x, y2 - y, button_alpha);
 
-	if (glow_alpha > 1e-5)	// i.e. glow is on
+	if (glow_alpha > 1e-5)	/* i.e. glow is on */
 	{
 	    glow_x = button_region->glow_x1;
 	    glow_y = button_region->glow_y1;
 	    glow_x2 = button_region->glow_x2;
 	    glow_y2 = button_region->glow_y2;
 	    if (d->active)
-	    {					// Draw glow
-		draw_pixbuf(ws->ButtonGlowPix[b], cr, glow_x, glow_y, glow_x2,
-			    glow_y2, glow_alpha);
+	    {
+		/* draw glow */
+		draw_pixbuf(cr, ws->ButtonGlowPix[b], 0, 0, glow_x, glow_y,
+			    glow_x2 - glow_x, glow_y2 - glow_y, glow_alpha);
 	    }
-	    else				// assume this function won't be called with glow_alpha>0
-	    {					// if ws->use_inactive_glow is false
-		// Draw inactive glow
-		draw_pixbuf(ws->ButtonInactiveGlowPix[b], cr, glow_x, glow_y,
-			    glow_x2, glow_y2, glow_alpha);
+	    else				/* assume this function won't be called with glow_alpha>0 */
+	    {					/* if ws->use_inactive_glow is false */
+		/* draw inactive glow */
+		draw_pixbuf(cr, ws->ButtonInactiveGlowPix[b], 0, 0, glow_x, glow_y,
+			    glow_x2 - glow_x, glow_y2 - glow_y, glow_alpha);
 	    }
 	}
     }
