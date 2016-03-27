@@ -5321,10 +5321,10 @@ static void load_buttons_glow_images(window_settings * ws)
     }
     if (success1 && success2)
     {
-	pix_width = gdk_pixbuf_get_width(ws->ButtonGlowArray) / B_COUNT;
+	pix_width = gdk_pixbuf_get_width(ws->ButtonGlowArray) / (B_COUNT - 1);
 	pix_height = gdk_pixbuf_get_height(ws->ButtonGlowArray);
 	pix_width2 =
-	    gdk_pixbuf_get_width(ws->ButtonInactiveGlowArray) / B_COUNT;
+	    gdk_pixbuf_get_width(ws->ButtonInactiveGlowArray) / (B_COUNT - 1);
 	pix_height2 = gdk_pixbuf_get_height(ws->ButtonInactiveGlowArray);
 
 	if (pix_width != pix_width2 || pix_height != pix_height2)
@@ -5339,12 +5339,12 @@ static void load_buttons_glow_images(window_settings * ws)
 			       TRUE,
 			       gdk_pixbuf_get_bits_per_sample(ws->
 							      ButtonGlowArray),
-			       pix_width * B_COUNT,
+			       pix_width * (B_COUNT - 1),
 			       pix_height);
 
 	    gdk_pixbuf_scale(ws->ButtonInactiveGlowArray, tmp_pixbuf,
 			     0, 0,
-			     pix_width * B_COUNT, pix_height,
+			     pix_width * (B_COUNT - 1), pix_height,
 			     0, 0,
 			     pix_width / (double)pix_width2,
 			     pix_height / (double)pix_height2,
@@ -5359,14 +5359,14 @@ static void load_buttons_glow_images(window_settings * ws)
 	pix_height = 16;
 	if (success1)
 	{
-	    pix_width = gdk_pixbuf_get_width(ws->ButtonGlowArray) / B_COUNT;
+	    pix_width = gdk_pixbuf_get_width(ws->ButtonGlowArray) / (B_COUNT - 1);
 	    pix_height = gdk_pixbuf_get_height(ws->ButtonGlowArray);
 	}
 	else if (success2)
 	{
 	    pix_width =
 		gdk_pixbuf_get_width(ws->ButtonInactiveGlowArray) /
-		B_COUNT;
+		(B_COUNT - 1);
 	    pix_height = gdk_pixbuf_get_height(ws->ButtonInactiveGlowArray);
 	}
 	if (!success1 && ws->use_button_glow)
@@ -5384,10 +5384,15 @@ static void load_buttons_glow_images(window_settings * ws)
 	{
 	    if (ws->ButtonGlowPix[x])
 		g_object_unref(ws->ButtonGlowPix[x]);
-	    ws->ButtonGlowPix[x] =
-		gdk_pixbuf_new_subpixbuf(ws->ButtonGlowArray,
-					 x * pix_width, 0, pix_width,
-					 pix_height);
+	    if (x != B_COUNT - 1) {
+		ws->ButtonGlowPix[x] =
+			gdk_pixbuf_new_subpixbuf(ws->ButtonGlowArray,
+				x * pix_width, 0, pix_width,
+				pix_height);
+	    } else {
+		ws->ButtonGlowPix[x] = gdk_pixbuf_new(GDK_COLORSPACE_RGB, TRUE, 8, pix_width, pix_height);
+		gdk_pixbuf_fill(ws->ButtonGlowPix[x], 0x00000000);
+	    }
 	}
     }
     if (ws->use_button_inactive_glow)
@@ -5397,10 +5402,15 @@ static void load_buttons_glow_images(window_settings * ws)
 	{
 	    if (ws->ButtonInactiveGlowPix[x])
 		g_object_unref(ws->ButtonInactiveGlowPix[x]);
-	    ws->ButtonInactiveGlowPix[x] =
-		gdk_pixbuf_new_subpixbuf(ws->ButtonInactiveGlowArray,
-					 x * pix_width, 0, pix_width,
-					 pix_height);
+	    if (x != B_COUNT - 1) {
+		ws->ButtonInactiveGlowPix[x] =
+			gdk_pixbuf_new_subpixbuf(ws->ButtonInactiveGlowArray,
+				x * pix_width, 0, pix_width,
+				pix_height);
+	    } else {
+		ws->ButtonInactiveGlowPix[x] = gdk_pixbuf_new(GDK_COLORSPACE_RGB, TRUE, 8, pix_width, pix_height);
+		gdk_pixbuf_fill(ws->ButtonInactiveGlowPix[x], 0x00000000);
+	    }
 	}
     }
 }
