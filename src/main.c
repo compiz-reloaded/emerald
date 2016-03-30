@@ -1029,16 +1029,16 @@ static void draw_pixbuf(cairo_t *cr, GdkPixbuf *src,
     cairo_restore(cr);
 }
 
-static void
-draw_button_with_glow_alpha_bstate(gint b_t, decor_t * d, cairo_t * cr,
-				   gint y1, gdouble button_alpha,
-				   gdouble glow_alpha, int b_state)
+static void draw_button_with_glow_alpha_bstate(gint b_t, decor_t * d,
+					       cairo_t * cr, gint y1,
+					       gdouble button_alpha,
+					       gdouble glow_alpha, int b_state)
 {
     gint b = b_t;
     gdouble x, y;
-    gdouble x2, y2;
-    gdouble glow_x, glow_y;		// glow top left coordinates
-    gdouble glow_x2, glow_y2;	// glow bottom right coordinates
+    gdouble w, h;
+    gdouble glow_x, glow_y;	/* glow start coordinates */
+    gdouble glow_w, glow_h;	/* glow width and height  */
     window_settings *ws = d->fs->ws;
 
     if (b_state < 0)
@@ -1052,36 +1052,37 @@ draw_button_with_glow_alpha_bstate(gint b_t, decor_t * d, cairo_t * cr,
 
     if (BUTTON_NOT_VISIBLE(d, b_t))
 	return;
-    button_region_t *button_region =
-	(d->active ? &d->button_region[b_t] : &d->
-	 button_region_inact[b_t]);
+    button_region_t *button_region = (d->active ? &d->button_region[b_t] :
+      &d->button_region_inact[b_t]);
     x = button_region->base_x1;
     y = button_region->base_y1;
 
     if (ws->use_pixmap_buttons)
     {
-	x2 = button_region->base_x2;
-	y2 = button_region->base_y2;
-	draw_pixbuf(cr, ws->ButtonPix[b_state + b * S_COUNT], 0, 0, x, y,
-		    x2 - x, y2 - y, button_alpha);
+	w = button_region->base_x2 - x;
+	h = button_region->base_y2 - y;
+	draw_pixbuf(cr, ws->ButtonPix[b_state + b * S_COUNT], 0, 0, x, y, w, h,
+		    button_alpha);
 
 	if (glow_alpha > 1e-5)	/* i.e. glow is on */
 	{
 	    glow_x = button_region->glow_x1;
 	    glow_y = button_region->glow_y1;
-	    glow_x2 = button_region->glow_x2;
-	    glow_y2 = button_region->glow_y2;
-	    if (d->active)
+	    glow_w = button_region->glow_x2 - button_region->glow_x1;
+	    glow_h = button_region->glow_y2 - button_region->glow_y1;
+	    if (d->active && ws->use_button_glow)
 	    {
 		/* draw glow */
-		draw_pixbuf(cr, ws->ButtonGlowPix[b], 0, 0, glow_x, glow_y,
-			    glow_x2 - glow_x, glow_y2 - glow_y, glow_alpha);
+		if (ws->ButtonGlowPix[b])
+		    draw_pixbuf(cr, ws->ButtonGlowPix[b], 0, 0,
+				glow_x, glow_y, glow_w, glow_h, glow_alpha);
 	    }
-	    else				/* assume this function won't be called with glow_alpha>0 */
-	    {					/* if ws->use_inactive_glow is false */
+	    else if (!d->active && ws->use_button_inactive_glow)
+	    {
 		/* draw inactive glow */
-		draw_pixbuf(cr, ws->ButtonInactiveGlowPix[b], 0, 0, glow_x, glow_y,
-			    glow_x2 - glow_x, glow_y2 - glow_y, glow_alpha);
+		if (ws->ButtonInactiveGlowPix[b])
+		    draw_pixbuf(cr, ws->ButtonInactiveGlowPix[b], 0, 0,
+				glow_x, glow_y, glow_w, glow_h, glow_alpha);
 	    }
 	}
     }
@@ -1112,16 +1113,16 @@ draw_button_with_glow_alpha_bstate(gint b_t, decor_t * d, cairo_t * cr,
 		draw_help_button(d, cr, 3.1);
 		break;
 	    default:
-		//FIXME - do something here
+		/* FIXME: do something here */
 		break;
 	}
 	button_state_paint(cr, &d->fs->button, &d->fs->button_halo,
 			   d->button_states[b_t]);
     }
 }
-static void
-draw_button_with_glow(gint b_t, decor_t * d, cairo_t * cr, gint y1,
-		      gboolean with_glow)
+
+static void draw_button_with_glow(gint b_t, decor_t * d, cairo_t * cr, gint y1,
+				  gboolean with_glow)
 {
     draw_button_with_glow_alpha_bstate(b_t, d, cr, y1, 1.0,
 				       (with_glow ? 1.0 : 0.0), -1);
@@ -1575,13 +1576,7 @@ static void update_button_regions(decor_t * d)
 			continue;
 		    if ((button_region->base_x1 > d->button_region[b_t2].base_x1 &&	//right of b_t2
 			 button_region->glow_x1 <= d->button_region[b_t2].base_x2) || (button_region->base_x1 < d->button_region[b_t2].base_x1 &&	//left of b_t2
-										       button_region->
-										       glow_x2
-										       >=
-										       d->
-										       button_region
-										       [b_t2].
-										       base_x1))
+										       button_region->glow_x2 >= d->button_region[b_t2].base_x1))
 		    {
 			button_region->overlap_buttons[b_t2] = TRUE;
 		    }
@@ -1591,13 +1586,7 @@ static void update_button_regions(decor_t * d)
 		    // buttons' protruding glow length might be asymmetric
 		    if ((d->button_region[b_t2].base_x1 > button_region->base_x1 &&	//left of b_t2
 			 d->button_region[b_t2].glow_x1 <= button_region->base_x2) || (d->button_region[b_t2].base_x1 < button_region->base_x1 &&	//right of b_t2
-										       d->
-										       button_region
-										       [b_t2].
-										       glow_x2
-										       >=
-										       button_region->
-										       base_x1))
+										       d->button_region[b_t2].glow_x2 >= button_region->base_x1))
 		    {
 			d->button_region[b_t2].overlap_buttons[b_t] = TRUE;
 		    }
@@ -1621,6 +1610,11 @@ static void update_button_regions(decor_t * d)
 		button_region->base_y2 = MIN(y + ws->c_icon_size[b_t].h,
 					     ws->top_space +
 					     ws->titlebar_height);
+		/* these coordinates still can mess things up */
+		button_region->glow_x1 = button_region->base_x1;
+		button_region->glow_y1 = button_region->base_y1;
+		button_region->glow_x2 = button_region->base_x2;
+		button_region->glow_y2 = button_region->base_y2;
 	    }
 	}
     }
@@ -5307,63 +5301,62 @@ static void load_buttons_image(window_settings * ws, gint y)
 				     pix_width, pix_height);
     }
 }
+
 static void load_buttons_glow_images(window_settings * ws)
 {
-    gchar *file1 = NULL;
-    gchar *file2 = NULL;
-    int x, pix_width, pix_height;
-    int pix_width2, pix_height2;
-    gboolean success1 = FALSE;
-    gboolean success2 = FALSE;
+    gchar *file = NULL, *ifile = NULL;
+    gint i, pix_width, pix_height, pix_width2, pix_height2;
+    /* buttons.glow.png is only designed for 12 elements */
+    gint b_glow_count = 12;
+
+    if (ws->ButtonGlowArray)
+	g_object_unref(ws->ButtonGlowArray);
+    ws->ButtonGlowArray = NULL;
+    if (ws->ButtonInactiveGlowArray)
+	g_object_unref(ws->ButtonInactiveGlowArray);
+    ws->ButtonInactiveGlowArray = NULL;
 
     if (ws->use_button_glow)
     {
-	if (ws->ButtonGlowArray)
-	    g_object_unref(ws->ButtonGlowArray);
-	file1 = make_filename("buttons", "glow", "png");
-	if (file1 &&
-	    (ws->ButtonGlowArray = gdk_pixbuf_new_from_file(file1, NULL)))
-	    success1 = TRUE;
+	file = make_filename("buttons", "glow", "png");
+	if (file)
+	    ws->ButtonGlowArray = gdk_pixbuf_new_from_file(file, NULL);
     }
     if (ws->use_button_inactive_glow)
     {
-	if (ws->ButtonInactiveGlowArray)
-	    g_object_unref(ws->ButtonInactiveGlowArray);
-	file2 = make_filename("buttons", "inactive_glow", "png");
-	if (file2 &&
-	    (ws->ButtonInactiveGlowArray =
-	     gdk_pixbuf_new_from_file(file2, NULL)))
-	    success2 = TRUE;
+	ifile = make_filename("buttons", "inactive_glow", "png");
+	if (ifile)
+	    ws->ButtonInactiveGlowArray = gdk_pixbuf_new_from_file(ifile, NULL);
     }
-    if (success1 && success2)
+    if (ws->ButtonGlowArray && ws->ButtonInactiveGlowArray)
     {
-	pix_width = gdk_pixbuf_get_width(ws->ButtonGlowArray) / (B_COUNT - 1);
+	pix_width = gdk_pixbuf_get_width(ws->ButtonGlowArray) / b_glow_count;
 	pix_height = gdk_pixbuf_get_height(ws->ButtonGlowArray);
 	pix_width2 =
-	    gdk_pixbuf_get_width(ws->ButtonInactiveGlowArray) / (B_COUNT - 1);
+	  gdk_pixbuf_get_width(ws->ButtonInactiveGlowArray) / b_glow_count;
 	pix_height2 = gdk_pixbuf_get_height(ws->ButtonInactiveGlowArray);
 
 	if (pix_width != pix_width2 || pix_height != pix_height2)
 	{
+	    GdkPixbuf *tmp_pixbuf = NULL;
 	    g_warning
 		("Choose same size glow images for active and inactive windows."
 		 "\nInactive glow image is scaled for now.");
-	    // Scale the inactive one
-	    GdkPixbuf *tmp_pixbuf =
-		gdk_pixbuf_new(gdk_pixbuf_get_colorspace
-			       (ws->ButtonGlowArray),
+	    /* scale the inactive one */
+	    tmp_pixbuf =
+		gdk_pixbuf_new(gdk_pixbuf_get_colorspace(ws->ButtonGlowArray),
 			       TRUE,
-			       gdk_pixbuf_get_bits_per_sample(ws->
-							      ButtonGlowArray),
-			       pix_width * (B_COUNT - 1),
+			       gdk_pixbuf_get_bits_per_sample
+				 (ws->ButtonGlowArray),
+			       pix_width * b_glow_count,
 			       pix_height);
 
 	    gdk_pixbuf_scale(ws->ButtonInactiveGlowArray, tmp_pixbuf,
 			     0, 0,
-			     pix_width * (B_COUNT - 1), pix_height,
+			     pix_width * b_glow_count, pix_height,
 			     0, 0,
-			     pix_width / (double)pix_width2,
-			     pix_height / (double)pix_height2,
+			     pix_width / (double) pix_width2,
+			     pix_height / (double) pix_height2,
 			     GDK_INTERP_BILINEAR);
 	    g_object_unref(ws->ButtonInactiveGlowArray);
 	    ws->ButtonInactiveGlowArray = tmp_pixbuf;
@@ -5373,63 +5366,74 @@ static void load_buttons_glow_images(window_settings * ws)
     {
 	pix_width = 16;
 	pix_height = 16;
-	if (success1)
+	if (ws->ButtonGlowArray)
 	{
-	    pix_width = gdk_pixbuf_get_width(ws->ButtonGlowArray) / (B_COUNT - 1);
+	    pix_width = gdk_pixbuf_get_width(ws->ButtonGlowArray)
+	      / b_glow_count;
 	    pix_height = gdk_pixbuf_get_height(ws->ButtonGlowArray);
 	}
-	else if (success2)
+	else if (ws->ButtonInactiveGlowArray)
 	{
 	    pix_width =
-		gdk_pixbuf_get_width(ws->ButtonInactiveGlowArray) /
-		(B_COUNT - 1);
+	      gdk_pixbuf_get_width(ws->ButtonInactiveGlowArray) / b_glow_count;
 	    pix_height = gdk_pixbuf_get_height(ws->ButtonInactiveGlowArray);
 	}
-	if (!success1 && ws->use_button_glow)
-	    ws->ButtonGlowArray = gdk_pixbuf_new(GDK_COLORSPACE_RGB, TRUE, 8, pix_width * B_COUNT, pix_height);	// create a blank pixbuf
-	if (!success2 && ws->use_button_inactive_glow)
-	    ws->ButtonInactiveGlowArray = gdk_pixbuf_new(GDK_COLORSPACE_RGB, TRUE, 8, pix_width * B_COUNT, pix_height);	// create a blank pixbuf
+	if (!ws->ButtonGlowArray && ws->use_button_glow)
+	{
+	    /* create a blank pixbuf */
+	    ws->ButtonGlowArray = gdk_pixbuf_new(GDK_COLORSPACE_RGB,
+	      TRUE, 8, pix_width * b_glow_count, pix_height);
+	    gdk_pixbuf_fill(ws->ButtonGlowArray, 0x00000000);
+	}
+	if (!ws->ButtonInactiveGlowArray && ws->use_button_inactive_glow)
+	{
+	    /* create a blank pixbuf */
+	    ws->ButtonInactiveGlowArray = gdk_pixbuf_new(GDK_COLORSPACE_RGB,
+	      TRUE, 8, pix_width * b_glow_count, pix_height);
+	    gdk_pixbuf_fill(ws->ButtonInactiveGlowArray, 0x00000000);
+	}
     }
     ws->c_glow_size.w = pix_width;
     ws->c_glow_size.h = pix_height;
 
     if (ws->use_button_glow)
     {
-	g_free(file1);
-	for (x = 0; x < B_COUNT; x++)
+	g_free(file);
+	for (i = 0; i < B_COUNT; i++)
 	{
-	    if (ws->ButtonGlowPix[x])
-		g_object_unref(ws->ButtonGlowPix[x]);
-	    if (x != B_COUNT - 1) {
-		ws->ButtonGlowPix[x] =
+	    if (ws->ButtonGlowPix[i])
+		g_object_unref(ws->ButtonGlowPix[i]);
+	    ws->ButtonGlowPix[i] = NULL;
+
+	    if (i < b_glow_count)
+	    {
+		ws->ButtonGlowPix[i] =
 			gdk_pixbuf_new_subpixbuf(ws->ButtonGlowArray,
-				x * pix_width, 0, pix_width,
-				pix_height);
-	    } else {
-		ws->ButtonGlowPix[x] = gdk_pixbuf_new(GDK_COLORSPACE_RGB, TRUE, 8, pix_width, pix_height);
-		gdk_pixbuf_fill(ws->ButtonGlowPix[x], 0x00000000);
+						 i * pix_width, 0, pix_width,
+						 pix_height);
 	    }
 	}
     }
     if (ws->use_button_inactive_glow)
     {
-	g_free(file2);
-	for (x = 0; x < B_COUNT; x++)
+	g_free(ifile);
+	for (i = 0; i < B_COUNT; i++)
 	{
-	    if (ws->ButtonInactiveGlowPix[x])
-		g_object_unref(ws->ButtonInactiveGlowPix[x]);
-	    if (x != B_COUNT - 1) {
-		ws->ButtonInactiveGlowPix[x] =
+	    if (ws->ButtonInactiveGlowPix[i])
+		g_object_unref(ws->ButtonInactiveGlowPix[i]);
+	    ws->ButtonInactiveGlowPix[i] = NULL;
+
+	    if (i < b_glow_count)
+	    {
+		ws->ButtonInactiveGlowPix[i] =
 			gdk_pixbuf_new_subpixbuf(ws->ButtonInactiveGlowArray,
-				x * pix_width, 0, pix_width,
-				pix_height);
-	    } else {
-		ws->ButtonInactiveGlowPix[x] = gdk_pixbuf_new(GDK_COLORSPACE_RGB, TRUE, 8, pix_width, pix_height);
-		gdk_pixbuf_fill(ws->ButtonInactiveGlowPix[x], 0x00000000);
+						 i * pix_width, 0, pix_width,
+						 pix_height);
 	    }
 	}
     }
 }
+
 void load_button_image_setting(window_settings * ws)
 {
     gint i;
