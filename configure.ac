@@ -63,6 +63,7 @@ EMERALD_REQUIRES=" xrender >= 0.8.4				  \
 		    gtk+-$GTK_API_VERSION >= $GTK_MIN_VERSION	   \
 		    libwnck-$WNCK_API_VERSION >= $WNCK_MIN_VERSION \
 		    libdecoration				   \
+		    cairo >= 1.4				   \
 		    pangocairo"
 
 PKG_CHECK_MODULES(EMERALD, $EMERALD_REQUIRES)
