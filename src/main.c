@@ -133,10 +133,21 @@ static void draw_surface(cairo_surface_t *surface, cairo_surface_t *src,
     if (!IS_VALID_SURFACE(surface))
 	abort();
 
-    if (w < 0)
-	w = cairo_xlib_surface_get_width(src);
-    if (h < 0)
-	h = cairo_xlib_surface_get_height(src);
+    if (w < 0 || h < 0)
+    {
+	int src_w = 0, src_h = 0;
+
+	if (cairo_surface_get_type(src) == CAIRO_SURFACE_TYPE_XLIB)
+	{
+	    src_w = cairo_xlib_surface_get_width(src);
+	    src_h = cairo_xlib_surface_get_height(src);
+	}
+
+	if (w < 0)
+	    w = src_w;
+	if (h < 0)
+	    h = src_h;
+    }
 
     cr = cairo_create(surface);
     cairo_set_operator(cr, CAIRO_OPERATOR_SOURCE);
@@ -740,7 +751,7 @@ static void draw_shadow_background(decor_t * d, cairo_t * cr)
 {
     cairo_matrix_t matrix;
     double w, h, x2, y2;
-    int width, height;
+    int width = 0, height = 0;
     gint left, right, top, bottom;
     window_settings *ws = d->fs->ws;
 
@@ -752,8 +763,12 @@ static void draw_shadow_background(decor_t * d, cairo_t * cr)
 	return;
     }
 
-    width = cairo_xlib_surface_get_width(ws->large_shadow_surface);
-    height = cairo_xlib_surface_get_height(ws->large_shadow_surface);
+    if (cairo_surface_get_type(ws->large_shadow_surface) ==
+      CAIRO_SURFACE_TYPE_XLIB)
+    {
+	width = cairo_xlib_surface_get_width(ws->large_shadow_surface);
+	height = cairo_xlib_surface_get_height(ws->large_shadow_surface);
+    }
 
     left = ws->left_space + ws->left_corner_space;
     right = ws->right_space + ws->right_corner_space;
@@ -1641,6 +1656,7 @@ static void update_button_regions(decor_t * d)
 	memcpy(button_region_inact, button_region, sizeof(button_region_t));
     }
 }
+
 static void draw_window_decoration_real(decor_t * d, gboolean shadow_time)
 {
     cairo_t *cr;
@@ -1788,7 +1804,7 @@ static void draw_window_decoration_real(decor_t * d, gboolean shadow_time)
 	/*if (!shadow_time)
 	  {
 	//workaround for slowness, will grab and rotate the two side-pieces
-	gint w, h;
+	gint w = 0, h = 0;
 	cairo_surface_t * csur;
 	cairo_pattern_t * sr;
 	cairo_matrix_t cm;
@@ -1796,8 +1812,11 @@ static void draw_window_decoration_real(decor_t * d, gboolean shadow_time)
 	cr = cairo_create(IS_VALID_SURFACE(d->buffer_surface) ? d->buffer_surface : d->surface);
 	cairo_set_operator(cr, CAIRO_OPERATOR_SOURCE);
 
-	w = cairo_xlib_surface_get_width(pbuff);
-	h = cairo_xlib_surface_get_height(pbuff);
+	if (cairo_surface_get_type(pbuff) == CAIRO_SURFACE_TYPE_XLIB)
+	{
+	    w = cairo_xlib_surface_get_width(pbuff);
+	    h = cairo_xlib_surface_get_height(pbuff);
+	}
 	csur = cairo_xlib_surface_create(
 	GDK_DISPLAY_XDISPLAY(gdk_display_get_default()),
 	GDK_PIXMAP_XID(pbuff),
@@ -2498,10 +2517,13 @@ static void update_default_decorations(GdkScreen * screen, frame_settings *fs_ac
 
     if (IS_VALID_SURFACE(ws->shadow_surface))
     {
-	int width, height;
+	int width = 0, height = 0;
 
-	width = cairo_xlib_surface_get_width(ws->shadow_surface);
-	height = cairo_xlib_surface_get_height(ws->shadow_surface);
+	if (cairo_surface_get_type(ws->shadow_surface) == CAIRO_SURFACE_TYPE_XLIB)
+	{
+	    width = cairo_xlib_surface_get_width(ws->shadow_surface);
+	    height = cairo_xlib_surface_get_height(ws->shadow_surface);
+	}
 
 	nQuad = set_shadow_quads(quads, width, height, ws);
 

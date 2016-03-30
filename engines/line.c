@@ -65,7 +65,7 @@ static void draw_shadow_background(decor_t * d, cairo_t * cr)
 {
 	cairo_matrix_t matrix;
 	double w, x2;
-	gint width, height;
+	gint width = 0, height = 0;
 	gint left, right, top, bottom;
 	window_settings *ws = d->fs->ws;
 
@@ -77,8 +77,12 @@ static void draw_shadow_background(decor_t * d, cairo_t * cr)
 		return;
 	}
 
-	width = cairo_xlib_surface_get_width(ws->large_shadow_surface);
-	height = cairo_xlib_surface_get_height(ws->large_shadow_surface);
+	if (cairo_surface_get_type(ws->large_shadow_surface) ==
+	  CAIRO_SURFACE_TYPE_XLIB)
+	{
+	    width = cairo_xlib_surface_get_width(ws->large_shadow_surface);
+	    height = cairo_xlib_surface_get_height(ws->large_shadow_surface);
+	}
 
 	left = ws->left_space + ws->left_corner_space;
 	right = ws->right_space + ws->right_corner_space;
