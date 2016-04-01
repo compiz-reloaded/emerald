@@ -1121,8 +1121,8 @@ static void draw_button_with_glow_alpha_bstate(gint b_t, decor_t * d,
 		    surface =
 		      new_surface_from_pixbuf(ws->ButtonInactiveGlowPix[b]);
 		    draw_surface(cairo_get_target(cr), CAIRO_OPERATOR_OVER,
-				 ws->ButtonInactiveGlowPix[b], 0, 0,
-				 glow_x, glow_y, glow_w, glow_h, glow_alpha);
+				 surface, 0, 0, glow_x, glow_y,
+				 glow_w, glow_h, glow_alpha);
 		    cairo_surface_destroy(surface);
 		    surface = NULL;
 		}
