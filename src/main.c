@@ -136,17 +136,27 @@ static void draw_surface(cairo_surface_t *surface, cairo_surface_t *src,
     if (w < 0 || h < 0)
     {
 	int src_w = 0, src_h = 0;
+	int dest_w = 0, dest_h = 0;
 
 	if (cairo_surface_get_type(src) == CAIRO_SURFACE_TYPE_XLIB)
 	{
 	    src_w = cairo_xlib_surface_get_width(src);
 	    src_h = cairo_xlib_surface_get_height(src);
 	}
+	if (cairo_surface_get_type(surface) == CAIRO_SURFACE_TYPE_XLIB)
+	{
+	    dest_w = cairo_xlib_surface_get_width(surface);
+	    dest_h = cairo_xlib_surface_get_height(surface);
+	}
 
-	if (w < 0)
-	    w = src_w;
-	if (h < 0)
-	    h = src_h;
+	if (w < 0 && xsrc + src_w <= xdest + dest_w)
+	    w = src_w - xsrc;
+	else
+	    w = dest_w - xdest;
+	if (h < 0 && ysrc + src_h <= ydest + dest_h)
+	    h = src_h - ysrc;
+	else
+	    h = dest_h - ydest;
     }
 
     cr = cairo_create(surface);
@@ -1030,10 +1040,31 @@ static void draw_pixbuf(cairo_t *cr, GdkPixbuf *src,
     if (!cr)
 	abort();
 
-    if (w < 0)
-	w = gdk_pixbuf_get_width(src);
-    if (h < 0)
-	h = gdk_pixbuf_get_height(src);
+    if (w < 0 || h < 0)
+    {
+	cairo_surface_t *surface;
+	gint src_w, src_h;
+	int dest_w = 0, dest_h = 0;
+
+	surface = cairo_get_target(cr);
+	src_w = gdk_pixbuf_get_width(src);
+	src_h = gdk_pixbuf_get_height(src);
+
+	if (cairo_surface_get_type(surface) == CAIRO_SURFACE_TYPE_XLIB)
+	{
+	    dest_w = cairo_xlib_surface_get_width(surface);
+	    dest_h = cairo_xlib_surface_get_height(surface);
+	}
+
+	if (w < 0 && xsrc + src_w <= xdest + dest_w)
+	    w = src_w - xsrc;
+	else
+	    w = dest_w - xdest;
+	if (h < 0 && ysrc + src_h <= ydest + dest_h)
+	    h = src_h - ysrc;
+	else
+	    h = dest_h - ydest;
+    }
 
     cairo_save(cr);
     cairo_set_operator(cr, CAIRO_OPERATOR_OVER);
