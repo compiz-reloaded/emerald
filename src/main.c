@@ -123,21 +123,24 @@ static cairo_surface_t *create_surface(int w, int h)
 	return NULL;
 }
 
-static cairo_surface_t *new_surface_from_pixbuf(GdkPixbuf *pixbuf)
+static cairo_surface_t *new_surface_from_pixbuf(GdkPixbuf *src)
 {
     cairo_surface_t *surface;
     guint width, height;
     cairo_t *cr;
 
-    width = gdk_pixbuf_get_width(pixbuf);
-    height = gdk_pixbuf_get_height(pixbuf);
+    if (!src)
+	return NULL;
+
+    width = gdk_pixbuf_get_width(src);
+    height = gdk_pixbuf_get_height(src);
 
     surface = create_surface(width, height);
     if (!IS_VALID_SURFACE(surface))
 	return NULL;
 
     cr = cairo_create(surface);
-    gdk_cairo_set_source_pixbuf(cr, pixbuf, 0, 0);
+    gdk_cairo_set_source_pixbuf(cr, src, 0, 0);
     cairo_set_operator(cr, CAIRO_OPERATOR_SOURCE);
     cairo_paint(cr);
     cairo_destroy(cr);
