@@ -653,22 +653,52 @@ static void layout_button_box(GtkWidget * vbox, gint b_t)
     g_signal_connect(clearer,"clicked",G_CALLBACK(cb_clear_file),item);
     table_append(clearer,FALSE);
 }
-void layout_general_buttons_frame(GtkWidget * hbox)
+
+static void cb_pixmap_button_toggle(GtkWidget *w, gpointer d)
 {
-    GtkWidget * junk;
+    GtkWidget *glow_w = NULL, *glow_iw = NULL;
 
-    junk = gtk_check_button_new_with_label(_("Use Pixmap Buttons"));
-    gtk_box_pack_startC(hbox,junk,TRUE,TRUE,0);
-    register_setting(junk,ST_BOOL,"buttons","use_pixmap_buttons");
+    glow_w = g_object_get_data(G_OBJECT(w), "glow_widget");
+    glow_iw =
+      g_object_get_data(G_OBJECT(w), "glow_inactive_widget");
 
-    junk = gtk_check_button_new_with_label(_("Use Button Halo/Glow"));
-    gtk_box_pack_startC(hbox,junk,TRUE,TRUE,0);
-    register_setting(junk,ST_BOOL,"buttons","use_button_glow");
-
-    junk = gtk_check_button_new_with_label(_("Use Button Halo/Glow For Inactive Windows"));
-    gtk_box_pack_startC(hbox,junk,TRUE,TRUE,0);
-    register_setting(junk,ST_BOOL,"buttons","use_button_inactive_glow");
+    if (gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(w)))
+    {
+	gtk_widget_set_sensitive(GTK_WIDGET(glow_w), TRUE);
+	gtk_widget_set_sensitive(GTK_WIDGET(glow_iw), TRUE);
+    }
+    else
+    {
+	gtk_widget_set_sensitive(GTK_WIDGET(glow_w), FALSE);
+	gtk_widget_set_sensitive(GTK_WIDGET(glow_iw), FALSE);
+    }
 }
+
+void layout_general_buttons_frame(GtkWidget *hbox)
+{
+    GtkWidget *pixmap_w = NULL, *glow_w = NULL, *glow_iw = NULL;
+
+    pixmap_w = gtk_check_button_new_with_label(_("Use Pixmap Buttons"));
+    gtk_box_pack_startC(hbox, pixmap_w, TRUE, TRUE, 0);
+    register_setting(pixmap_w, ST_BOOL, "buttons", "use_pixmap_buttons");
+
+    glow_w = gtk_check_button_new_with_label(_("Use Button Halo/Glow"));
+    gtk_box_pack_startC(hbox, glow_w, TRUE, TRUE, 0);
+    register_setting(glow_w, ST_BOOL, "buttons", "use_button_glow");
+
+    glow_iw =
+      gtk_check_button_new_with_label(_("Use Button Halo/Glow For Inactive Windows"));
+    gtk_box_pack_startC(hbox, glow_iw, TRUE, TRUE, 0);
+    register_setting(glow_iw, ST_BOOL, "buttons", "use_button_inactive_glow");
+
+    g_object_set_data(G_OBJECT(pixmap_w), "glow_widget",
+		      (gpointer) glow_w);
+    g_object_set_data(G_OBJECT(pixmap_w), "glow_inactive_widget",
+		      (gpointer) glow_iw);
+    g_signal_connect(G_OBJECT(pixmap_w), "toggled",
+		     G_CALLBACK(cb_pixmap_button_toggle), NULL);
+}
+
 void layout_button_pane(GtkWidget * vbox)
 {
     GtkWidget * scroller;

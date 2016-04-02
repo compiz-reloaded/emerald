@@ -5621,12 +5621,20 @@ static void load_settings(window_settings * ws)
     load_font_setting(f, &ws->font_desc, "titlebar_font", "titlebar");
     load_bool_setting(f, &ws->use_pixmap_buttons, "use_pixmap_buttons",
 		      "buttons");
-    load_bool_setting(f, &ws->use_button_glow, "use_button_glow", "buttons");
-    load_bool_setting(f, &ws->use_button_inactive_glow,
-		      "use_button_inactive_glow", "buttons");
 
     if (ws->use_pixmap_buttons)
+    {
+	load_bool_setting(f, &ws->use_button_glow, "use_button_glow", "buttons");
+	load_bool_setting(f, &ws->use_button_inactive_glow,
+			  "use_button_inactive_glow", "buttons");
 	load_button_image_setting(ws);
+    }
+    else
+    {
+	/* glow is for pixmap buttons */
+	ws->use_button_glow = FALSE;
+	ws->use_button_inactive_glow = FALSE;
+    }
     load_shadow_color_setting(f, ws->shadow_color, "shadow_color", "shadow");
     load_int_setting(f, &ws->shadow_offset_x, "shadow_offset_x", "shadow");
     load_int_setting(f, &ws->shadow_offset_y, "shadow_offset_y", "shadow");
