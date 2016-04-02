@@ -169,24 +169,24 @@ typedef struct _window_settings
     frame_settings * fs_act;
     frame_settings * fs_inact;
     gint min_titlebar_height;
-    gboolean use_pixmap_buttons;// = FALSE;
-    double	corner_radius;//	=	5.0;
-    PangoAlignment title_text_align;// = PANGO_ALIGN_CENTER;
-    GdkPixbuf * ButtonPix[S_COUNT*B_COUNT];
-    GdkPixbuf * ButtonArray[B_COUNT];
+    gboolean        use_pixmap_buttons;/* = FALSE; */
+    double          corner_radius; /* = 5.0; */
+    PangoAlignment  title_text_align; /* = PANGO_ALIGN_CENTER; */
+    cairo_surface_t *button_surface[S_COUNT*B_COUNT];
+    cairo_surface_t *button_array[B_COUNT];
 
-    gboolean    use_button_glow;
-    gboolean    use_button_inactive_glow;
-    gboolean    use_decoration_cropping;
-    gboolean    use_button_fade;
-    GdkPixbuf * ButtonGlowPix[B_COUNT];
-    GdkPixbuf * ButtonGlowArray;
-    GdkPixbuf * ButtonInactiveGlowArray;
-    GdkPixbuf * ButtonInactiveGlowPix[B_COUNT];
-    int         button_fade_num_steps;        // number of steps
-    int         button_fade_step_duration;    // step duration in milliseconds
-    int         button_fade_pulse_len_steps;  // length of pulse (number of steps)
-    int         button_fade_pulse_wait_steps; // how much pulse waits before fade out
+    gboolean	    use_button_glow;
+    gboolean	    use_button_inactive_glow;
+    gboolean	    use_decoration_cropping;
+    gboolean	    use_button_fade;
+    cairo_surface_t *button_glow_surface[B_COUNT];
+    cairo_surface_t *button_glow_array;
+    cairo_surface_t *button_inactive_glow_surface[B_COUNT];
+    cairo_surface_t *button_inactive_glow_array;
+    int		    button_fade_num_steps;        /* number of steps */
+    int		    button_fade_step_duration;    /* step duration in milliseconds */
+    int		    button_fade_pulse_len_steps;  /* length of pulse (number of steps) */
+    int		    button_fade_pulse_wait_steps; /* how much pulse waits before fade out */
     /* = {
     { 0, 6, 16, 16,   1, 0, 0, 0 },
     { 0, 6, 16, 16,   1, 0, 0, 0 },

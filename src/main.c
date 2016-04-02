@@ -169,6 +169,7 @@ static void draw_surface(cairo_surface_t *surface, cairo_operator_t operator,
 	    src_w = cairo_xlib_surface_get_width(src);
 	    src_h = cairo_xlib_surface_get_height(src);
 	}
+
 	if (cairo_surface_get_type(surface) == CAIRO_SURFACE_TYPE_XLIB)
 	{
 	    dest_w = cairo_xlib_surface_get_width(surface);
@@ -1088,14 +1089,14 @@ static void draw_button_with_glow_alpha_bstate(gint b_t, decor_t * d,
 
     if (ws->use_pixmap_buttons)
     {
-	cairo_surface_t *surface = NULL;
 	w = button_region->base_x2 - x;
 	h = button_region->base_y2 - y;
-	surface = new_surface_from_pixbuf(ws->ButtonPix[b_state + b * S_COUNT]);
-	draw_surface(cairo_get_target(cr), CAIRO_OPERATOR_OVER, surface, 0, 0,
-		     x, y, w, h, button_alpha);
-	cairo_surface_destroy(surface);
-	surface = NULL;
+	if (IS_VALID_SURFACE(ws->button_surface[b_state + b * S_COUNT]))
+	{
+	    draw_surface(cairo_get_target(cr), CAIRO_OPERATOR_OVER,
+			 ws->button_surface[b_state + b * S_COUNT], 0, 0,
+			 x, y, w, h, button_alpha);
+	}
 
 	if (glow_alpha > 1e-5)	/* i.e. glow is on */
 	{
@@ -1106,28 +1107,21 @@ static void draw_button_with_glow_alpha_bstate(gint b_t, decor_t * d,
 	    if (d->active && ws->use_button_glow)
 	    {
 		/* draw glow */
-		if (ws->ButtonGlowPix[b])
+		if (IS_VALID_SURFACE(ws->button_glow_surface[b]))
 		{
-		    surface = new_surface_from_pixbuf(ws->ButtonGlowPix[b]);
 		    draw_surface(cairo_get_target(cr), CAIRO_OPERATOR_OVER,
-				 surface, 0, 0, glow_x, glow_y, glow_w, glow_h,
-				 glow_alpha);
-		    cairo_surface_destroy(surface);
-		    surface = NULL;
+				 ws->button_glow_surface[b], 0, 0,
+				 glow_x, glow_y, glow_w, glow_h, glow_alpha);
 		}
 	    }
 	    else if (!d->active && ws->use_button_inactive_glow)
 	    {
 		/* draw inactive glow */
-		if (ws->ButtonInactiveGlowPix[b])
+		if (IS_VALID_SURFACE(ws->button_inactive_glow_surface[b]))
 		{
-		    surface =
-		      new_surface_from_pixbuf(ws->ButtonInactiveGlowPix[b]);
 		    draw_surface(cairo_get_target(cr), CAIRO_OPERATOR_OVER,
-				 surface, 0, 0, glow_x, glow_y,
-				 glow_w, glow_h, glow_alpha);
-		    cairo_surface_destroy(surface);
-		    surface = NULL;
+				 ws->button_inactive_glow_surface[b], 0, 0,
+				 glow_x, glow_y, glow_w, glow_h, glow_alpha);
 		}
 	    }
 	}
@@ -5317,123 +5311,174 @@ static void titlebar_font_changed(window_settings * ws)
 static void load_buttons_image(window_settings * ws, gint y)
 {
     gchar *file;
-    int x, pix_width, pix_height, rel_button;
+    int i, pix_width = 0, pix_height = 0, rel_button;
 
     rel_button = get_b_offset(y);
 
-
-
-    if (ws->ButtonArray[y])
-	g_object_unref(ws->ButtonArray[y]);
+    if (IS_VALID_SURFACE(ws->button_array[y]))
+	cairo_surface_destroy(ws->button_array[y]);
+    ws->button_array[y] = NULL;
     file = make_filename("buttons", b_types[y], "png");
-    if (!file || !(ws->ButtonArray[y] = gdk_pixbuf_new_from_file(file, NULL)))
-	ws->ButtonArray[y] = gdk_pixbuf_new(GDK_COLORSPACE_RGB, TRUE, 8, 16 * S_COUNT, 16);	// create a blank pixbuf
-    g_free(file);
 
-    pix_width = gdk_pixbuf_get_width(ws->ButtonArray[y]) / S_COUNT;
-    pix_height = gdk_pixbuf_get_height(ws->ButtonArray[y]);
+    if (file)
+    {
+	GdkPixbuf *pixbuf = gdk_pixbuf_new_from_file(file, NULL);
+	if (pixbuf)
+	{
+	    ws->button_array[y] = new_surface_from_pixbuf(pixbuf);
+	    g_object_unref(pixbuf);
+	}
+    }
+    g_free(file);
+    if (!IS_VALID_SURFACE(ws->button_array[y]))
+    {
+	/* create an empty surface */
+	ws->button_array[y] = create_surface(16 * S_COUNT, 16);
+    }
+    if (cairo_surface_get_type(ws->button_array[y]) == CAIRO_SURFACE_TYPE_XLIB)
+    {
+	pix_width = cairo_xlib_surface_get_width(ws->button_array[y]) / S_COUNT;
+	pix_height = cairo_xlib_surface_get_height(ws->button_array[y]);
+    }
     ws->c_icon_size[rel_button].w = pix_width;
     ws->c_icon_size[rel_button].h = pix_height;
-    for (x = 0; x < S_COUNT; x++)
+    for (i = 0; i < S_COUNT; i++)
     {
-	if (ws->ButtonPix[x + y * S_COUNT])
-	    g_object_unref(ws->ButtonPix[x + y * S_COUNT]);
+	if (IS_VALID_SURFACE(ws->button_surface[i + y * S_COUNT]))
+	    cairo_surface_destroy(ws->button_surface[i + y * S_COUNT]);
+	ws->button_surface[i + y * S_COUNT] = NULL;
 
-	ws->ButtonPix[x + y * S_COUNT] =
-	    gdk_pixbuf_new_subpixbuf(ws->ButtonArray[y], x * pix_width, 0,
-				     pix_width, pix_height);
+	ws->button_surface[i + y * S_COUNT] =
+	  create_surface(pix_width, pix_height);
+	draw_surface(ws->button_surface[i + y * S_COUNT],
+		     CAIRO_OPERATOR_SOURCE,
+		     ws->button_array[y], i * pix_width, 0, 0, 0,
+		     pix_width, pix_height, 1.0);
     }
 }
 
 static void load_buttons_glow_images(window_settings * ws)
 {
     gchar *file = NULL, *ifile = NULL;
-    gint i, pix_width, pix_height, pix_width2, pix_height2;
+    gint i;
+    int pix_width = 0, pix_height = 0;
+    int pix_width2 = 0, pix_height2 = 0;
     /* buttons.glow.png is only designed for 12 elements */
     gint b_glow_count = 12;
 
-    if (ws->ButtonGlowArray)
-	g_object_unref(ws->ButtonGlowArray);
-    ws->ButtonGlowArray = NULL;
-    if (ws->ButtonInactiveGlowArray)
-	g_object_unref(ws->ButtonInactiveGlowArray);
-    ws->ButtonInactiveGlowArray = NULL;
+    if (IS_VALID_SURFACE(ws->button_glow_array))
+	cairo_surface_destroy(ws->button_glow_array);
+    ws->button_glow_array = NULL;
+    if (IS_VALID_SURFACE(ws->button_inactive_glow_array))
+	cairo_surface_destroy(ws->button_inactive_glow_array);
+    ws->button_inactive_glow_array = NULL;
 
     if (ws->use_button_glow)
     {
 	file = make_filename("buttons", "glow", "png");
 	if (file)
-	    ws->ButtonGlowArray = gdk_pixbuf_new_from_file(file, NULL);
+	{
+	    GdkPixbuf *pixbuf = gdk_pixbuf_new_from_file(file, NULL);
+	    if (pixbuf)
+	    {
+		ws->button_glow_array = new_surface_from_pixbuf(pixbuf);
+		g_object_unref(pixbuf);
+	    }
+	}
     }
     if (ws->use_button_inactive_glow)
     {
 	ifile = make_filename("buttons", "inactive_glow", "png");
 	if (ifile)
-	    ws->ButtonInactiveGlowArray = gdk_pixbuf_new_from_file(ifile, NULL);
+	{
+	    GdkPixbuf *pixbuf = gdk_pixbuf_new_from_file(ifile, NULL);
+	    if (pixbuf)
+	    {
+		ws->button_inactive_glow_array = new_surface_from_pixbuf(pixbuf);
+		g_object_unref(pixbuf);
+	    }
+	}
     }
-    if (ws->ButtonGlowArray && ws->ButtonInactiveGlowArray)
+    if (IS_VALID_SURFACE(ws->button_glow_array) &&
+      IS_VALID_SURFACE(ws->button_inactive_glow_array))
     {
-	pix_width = gdk_pixbuf_get_width(ws->ButtonGlowArray) / b_glow_count;
-	pix_height = gdk_pixbuf_get_height(ws->ButtonGlowArray);
-	pix_width2 =
-	  gdk_pixbuf_get_width(ws->ButtonInactiveGlowArray) / b_glow_count;
-	pix_height2 = gdk_pixbuf_get_height(ws->ButtonInactiveGlowArray);
+	if (cairo_surface_get_type(ws->button_glow_array) ==
+	  CAIRO_SURFACE_TYPE_XLIB)
+	{
+	    pix_width = cairo_xlib_surface_get_width(ws->button_glow_array) /
+	      b_glow_count;
+	    pix_height = cairo_xlib_surface_get_height(ws->button_glow_array);
+	}
+	if (cairo_surface_get_type(ws->button_inactive_glow_array) ==
+	  CAIRO_SURFACE_TYPE_XLIB)
+	{
+	    pix_width2 =
+	      cairo_xlib_surface_get_width(ws->button_inactive_glow_array) /
+	      b_glow_count;
+	    pix_height2 =
+	      cairo_xlib_surface_get_height(ws->button_inactive_glow_array);
+	}
 
 	if (pix_width != pix_width2 || pix_height != pix_height2)
 	{
-	    GdkPixbuf *tmp_pixbuf = NULL;
+	    cairo_t *tmp_cr = NULL;
+	    cairo_surface_t *tmp_surface = NULL;
 	    g_warning
 		("Choose same size glow images for active and inactive windows."
 		 "\nInactive glow image is scaled for now.");
-	    /* scale the inactive one */
-	    tmp_pixbuf =
-		gdk_pixbuf_new(gdk_pixbuf_get_colorspace(ws->ButtonGlowArray),
-			       TRUE,
-			       gdk_pixbuf_get_bits_per_sample
-				 (ws->ButtonGlowArray),
-			       pix_width * b_glow_count,
-			       pix_height);
 
-	    gdk_pixbuf_scale(ws->ButtonInactiveGlowArray, tmp_pixbuf,
-			     0, 0,
-			     pix_width * b_glow_count, pix_height,
-			     0, 0,
-			     pix_width / (double) pix_width2,
-			     pix_height / (double) pix_height2,
-			     GDK_INTERP_BILINEAR);
-	    g_object_unref(ws->ButtonInactiveGlowArray);
-	    ws->ButtonInactiveGlowArray = tmp_pixbuf;
+	    /* scale the inactive one */
+	    tmp_surface = cairo_surface_create_similar(ws->button_glow_array,
+	      CAIRO_CONTENT_COLOR_ALPHA, pix_width * b_glow_count, pix_height);
+	    tmp_cr = cairo_create(tmp_surface);
+	    cairo_scale(tmp_cr,
+			pix_width / (double) pix_width2,
+			pix_height / (double) pix_height2);
+	    cairo_set_source_surface(tmp_cr, ws->button_inactive_glow_array,
+				     0, 0);
+	    cairo_pattern_set_extend(cairo_get_source(tmp_cr), CAIRO_EXTEND_PAD);
+	    cairo_paint(tmp_cr);
+	    cairo_destroy(tmp_cr);
+
+	    cairo_surface_destroy(ws->button_inactive_glow_array);
+	    ws->button_inactive_glow_array = tmp_surface;
+	    tmp_surface = NULL;
 	}
     }
     else
     {
 	pix_width = 16;
 	pix_height = 16;
-	if (ws->ButtonGlowArray)
+	if (IS_VALID_SURFACE(ws->button_glow_array) &&
+	  cairo_surface_get_type(ws->button_glow_array) ==
+	  CAIRO_SURFACE_TYPE_XLIB)
 	{
-	    pix_width = gdk_pixbuf_get_width(ws->ButtonGlowArray)
+	    pix_width = cairo_xlib_surface_get_width(ws->button_glow_array)
 	      / b_glow_count;
-	    pix_height = gdk_pixbuf_get_height(ws->ButtonGlowArray);
+	    pix_height = cairo_xlib_surface_get_height(ws->button_glow_array);
 	}
-	else if (ws->ButtonInactiveGlowArray)
+	else if (IS_VALID_SURFACE(ws->button_inactive_glow_array) &&
+	  cairo_surface_get_type(ws->button_inactive_glow_array) ==
+	  CAIRO_SURFACE_TYPE_XLIB)
 	{
 	    pix_width =
-	      gdk_pixbuf_get_width(ws->ButtonInactiveGlowArray) / b_glow_count;
-	    pix_height = gdk_pixbuf_get_height(ws->ButtonInactiveGlowArray);
+	      cairo_xlib_surface_get_width(ws->button_inactive_glow_array) /
+	      b_glow_count;
+	    pix_height =
+	      cairo_xlib_surface_get_height(ws->button_inactive_glow_array);
 	}
-	if (!ws->ButtonGlowArray && ws->use_button_glow)
+	if (!IS_VALID_SURFACE(ws->button_glow_array) && ws->use_button_glow)
 	{
-	    /* create a blank pixbuf */
-	    ws->ButtonGlowArray = gdk_pixbuf_new(GDK_COLORSPACE_RGB,
-	      TRUE, 8, pix_width * b_glow_count, pix_height);
-	    gdk_pixbuf_fill(ws->ButtonGlowArray, 0x00000000);
+	    /* create an empty surface */
+	    ws->button_glow_array =
+	      create_surface(pix_width * b_glow_count, pix_height);;
 	}
-	if (!ws->ButtonInactiveGlowArray && ws->use_button_inactive_glow)
+	if (!IS_VALID_SURFACE(ws->button_inactive_glow_array) &&
+	  ws->use_button_inactive_glow)
 	{
-	    /* create a blank pixbuf */
-	    ws->ButtonInactiveGlowArray = gdk_pixbuf_new(GDK_COLORSPACE_RGB,
-	      TRUE, 8, pix_width * b_glow_count, pix_height);
-	    gdk_pixbuf_fill(ws->ButtonInactiveGlowArray, 0x00000000);
+	    /* create an empty surface */
+	    ws->button_inactive_glow_array =
+	      create_surface(pix_width * b_glow_count, pix_height);;
 	}
     }
     ws->c_glow_size.w = pix_width;
@@ -5444,16 +5489,17 @@ static void load_buttons_glow_images(window_settings * ws)
 	g_free(file);
 	for (i = 0; i < B_COUNT; i++)
 	{
-	    if (ws->ButtonGlowPix[i])
-		g_object_unref(ws->ButtonGlowPix[i]);
-	    ws->ButtonGlowPix[i] = NULL;
+	    if (IS_VALID_SURFACE(ws->button_glow_surface[i]))
+		cairo_surface_destroy(ws->button_glow_surface[i]);
+	    ws->button_glow_surface[i] = NULL;
 
 	    if (i < b_glow_count)
 	    {
-		ws->ButtonGlowPix[i] =
-			gdk_pixbuf_new_subpixbuf(ws->ButtonGlowArray,
-						 i * pix_width, 0, pix_width,
-						 pix_height);
+		ws->button_glow_surface[i] =
+		  create_surface(pix_width, pix_height);
+		draw_surface(ws->button_glow_surface[i], CAIRO_OPERATOR_SOURCE,
+		  ws->button_glow_array, i * pix_width, 0, 0, 0,
+		  pix_width, pix_height, 1.0);
 	    }
 	}
     }
@@ -5462,16 +5508,17 @@ static void load_buttons_glow_images(window_settings * ws)
 	g_free(ifile);
 	for (i = 0; i < B_COUNT; i++)
 	{
-	    if (ws->ButtonInactiveGlowPix[i])
-		g_object_unref(ws->ButtonInactiveGlowPix[i]);
-	    ws->ButtonInactiveGlowPix[i] = NULL;
+	    if (IS_VALID_SURFACE(ws->button_inactive_glow_surface[i]))
+		cairo_surface_destroy(ws->button_inactive_glow_surface[i]);
+	    ws->button_inactive_glow_surface[i] = NULL;
 
 	    if (i < b_glow_count)
 	    {
-		ws->ButtonInactiveGlowPix[i] =
-			gdk_pixbuf_new_subpixbuf(ws->ButtonInactiveGlowArray,
-						 i * pix_width, 0, pix_width,
-						 pix_height);
+		ws->button_inactive_glow_surface[i] =
+		  create_surface(pix_width, pix_height);
+		draw_surface(ws->button_inactive_glow_surface[i],
+		  CAIRO_OPERATOR_SOURCE, ws->button_inactive_glow_array,
+		  i * pix_width, 0, 0, 0, pix_width, pix_height, 1.0);
 	    }
 	}
     }
@@ -5747,7 +5794,7 @@ int main(int argc, char *argv[])
     //ws->ButtonBase = NULL;
     for (i = 0; i < (S_COUNT * B_COUNT); i++)
     {
-	ws->ButtonPix[i] = NULL;
+	ws->button_surface[i] = NULL;
     }
     gtk_init(&argc, &argv);
     gdk_error_trap_push();
