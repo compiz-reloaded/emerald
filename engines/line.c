@@ -78,6 +78,12 @@ static void draw_shadow_background(decor_t * d, cairo_t * cr)
 	}
 
 	if (cairo_surface_get_type(ws->large_shadow_surface) ==
+	  CAIRO_SURFACE_TYPE_IMAGE)
+	{
+	    width = cairo_image_surface_get_width(ws->large_shadow_surface);
+	    height = cairo_image_surface_get_height(ws->large_shadow_surface);
+	}
+	else if (cairo_surface_get_type(ws->large_shadow_surface) ==
 	  CAIRO_SURFACE_TYPE_XLIB)
 	{
 	    width = cairo_xlib_surface_get_width(ws->large_shadow_surface);
