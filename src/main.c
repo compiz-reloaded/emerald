@@ -5382,6 +5382,8 @@ static void load_buttons_glow_images(window_settings * ws)
 	    if (pixbuf)
 	    {
 		ws->button_glow_array = new_surface_from_pixbuf(pixbuf);
+		pix_width = gdk_pixbuf_get_width(pixbuf) / b_glow_count;
+		pix_height = gdk_pixbuf_get_height(pixbuf);
 		g_object_unref(pixbuf);
 	    }
 	}
@@ -5395,6 +5397,8 @@ static void load_buttons_glow_images(window_settings * ws)
 	    if (pixbuf)
 	    {
 		ws->button_inactive_glow_array = new_surface_from_pixbuf(pixbuf);
+		pix_width2 = gdk_pixbuf_get_width(pixbuf) / b_glow_count;
+		pix_height2 = gdk_pixbuf_get_height(pixbuf);
 		g_object_unref(pixbuf);
 	    }
 	}
@@ -5402,23 +5406,6 @@ static void load_buttons_glow_images(window_settings * ws)
     if (IS_VALID_SURFACE(ws->button_glow_array) &&
       IS_VALID_SURFACE(ws->button_inactive_glow_array))
     {
-	if (cairo_surface_get_type(ws->button_glow_array) ==
-	  CAIRO_SURFACE_TYPE_XLIB)
-	{
-	    pix_width = cairo_xlib_surface_get_width(ws->button_glow_array) /
-	      b_glow_count;
-	    pix_height = cairo_xlib_surface_get_height(ws->button_glow_array);
-	}
-	if (cairo_surface_get_type(ws->button_inactive_glow_array) ==
-	  CAIRO_SURFACE_TYPE_XLIB)
-	{
-	    pix_width2 =
-	      cairo_xlib_surface_get_width(ws->button_inactive_glow_array) /
-	      b_glow_count;
-	    pix_height2 =
-	      cairo_xlib_surface_get_height(ws->button_inactive_glow_array);
-	}
-
 	if (pix_width != pix_width2 || pix_height != pix_height2)
 	{
 	    cairo_t *tmp_cr = NULL;
@@ -5447,38 +5434,31 @@ static void load_buttons_glow_images(window_settings * ws)
     }
     else
     {
-	pix_width = 16;
-	pix_height = 16;
-	if (IS_VALID_SURFACE(ws->button_glow_array) &&
-	  cairo_surface_get_type(ws->button_glow_array) ==
-	  CAIRO_SURFACE_TYPE_XLIB)
+	if (!IS_VALID_SURFACE(ws->button_glow_array))
 	{
-	    pix_width = cairo_xlib_surface_get_width(ws->button_glow_array)
-	      / b_glow_count;
-	    pix_height = cairo_xlib_surface_get_height(ws->button_glow_array);
-	}
-	else if (IS_VALID_SURFACE(ws->button_inactive_glow_array) &&
-	  cairo_surface_get_type(ws->button_inactive_glow_array) ==
-	  CAIRO_SURFACE_TYPE_XLIB)
-	{
-	    pix_width =
-	      cairo_xlib_surface_get_width(ws->button_inactive_glow_array) /
-	      b_glow_count;
-	    pix_height =
-	      cairo_xlib_surface_get_height(ws->button_inactive_glow_array);
+	    if (IS_VALID_SURFACE(ws->button_inactive_glow_array))
+	    {
+		pix_width = pix_width2;
+		pix_height = pix_width2;
+	    }
+	    else
+	    {
+		pix_width = 16;
+		pix_height = 16;
+	    }
 	}
 	if (!IS_VALID_SURFACE(ws->button_glow_array) && ws->use_button_glow)
 	{
 	    /* create an empty surface */
 	    ws->button_glow_array =
-	      create_surface(pix_width * b_glow_count, pix_height);;
+	      create_surface(pix_width * b_glow_count, pix_height);
 	}
 	if (!IS_VALID_SURFACE(ws->button_inactive_glow_array) &&
 	  ws->use_button_inactive_glow)
 	{
 	    /* create an empty surface */
 	    ws->button_inactive_glow_array =
-	      create_surface(pix_width * b_glow_count, pix_height);;
+	      create_surface(pix_width * b_glow_count, pix_height);
 	}
     }
     ws->c_glow_size.w = pix_width;
