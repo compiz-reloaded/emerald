@@ -175,7 +175,7 @@ msgid "Use Button Halo/Glow"
 msgstr "Использовать Сияние/Подсвечивание кнопок"
 
 msgid "Use Button Halo/Glow For Inactive Windows"
-msgstr "Использовать Сияние/Подсвечивание кнопок для неактивных око"
+msgstr "Использовать Сияние/Подсвечивание кнопок для неактивных окон"
 
 msgid "Button Pixmaps"
 msgstr "Изображения кнопок"
