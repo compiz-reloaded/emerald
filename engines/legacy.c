@@ -21,7 +21,7 @@
  *
  */
 
-//legacy engine
+/* legacy engine */
 #include <emerald.h>
 #include <engine.h>
 #include <legacy_icon.h>
@@ -64,7 +64,7 @@ void get_meta_info (EngineMetaInfo * emi)
 {
     emi->version = g_strdup("0.1");
     emi->description = g_strdup(_("Based on original gtk-window-decorator"));
-    emi->last_compat = g_strdup("0.0"); // old themes still compatible
+    emi->last_compat = g_strdup("0.0"); /* old themes still compatible */
     emi->icon = gdk_pixbuf_new_from_inline(-1, my_pixbuf, TRUE, NULL);
 }
 
@@ -99,7 +99,7 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
         ((pws->round_bottom_left)  ? CORNER_BOTTOMLEFT  : 0) |
         ((pws->round_bottom_right) ? CORNER_BOTTOMRIGHT : 0);
 
-	// maximize work-a-round
+	/* maximize work-a-round */
 	if (d->state & (WNCK_WINDOW_STATE_MAXIMIZED_HORIZONTALLY |
                 WNCK_WINDOW_STATE_MAXIMIZED_VERTICALLY))
         corners = 0;
@@ -190,17 +190,17 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
             SHADE_BOTTOM | SHADE_RIGHT, ws,
             pws->corner_radius);
 
-	// ======= NEW LAYER =======
+    /* ======= NEW LAYER ======= */
     cairo_set_operator (cr, CAIRO_OPERATOR_OVER);
 
-	// titlebar separator line
+    /* titlebar separator line */
     cairo_set_source_alpha_color(cr, &pfs->separator_line);
     cairo_move_to (cr, x1 + 0.5, y1 + top - 0.5);
     cairo_rel_line_to (cr, x2 - x1 - 1.0, 0.0);
     cairo_stroke (cr);
 
 
-	// do not draw outside the decoration area
+    /* do not draw outside the decoration area */
     rounded_rectangle (cr,
             x1 + 0.5, y1 + 0.5,
             x2 - x1 - 1.0, y2 - y1 - 1.0,
@@ -211,7 +211,7 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
 
     cairo_translate (cr, 1.0, 1.0);
 
-	// highlight
+    /* highlight */
     rounded_rectangle (cr,
             x1 + 0.5, y1 + 0.5,
             x2 - x1 - 1.0, y2 - y1 - 1.0,
@@ -225,7 +225,7 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
     cairo_translate (cr, -2.0, -2.0);
 
 
-	// shadow
+    /* shadow */
     rounded_rectangle (cr,
             x1 + 0.5, y1 + 0.5,
             x2 - x1 - 1.0, y2 - y1 - 1.0,
@@ -240,7 +240,7 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
 
     cairo_reset_clip (cr);
 
-	// halo
+    /* halo */
     rounded_rectangle (cr,
             x1 + 0.5, y1 + 0.5,
             x2 - x1 - 1.0, y2 - y1 - 1.0,
@@ -251,8 +251,8 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
     cairo_set_source_alpha_color (cr, &pfs->window_halo);
     cairo_stroke (cr);
 
-    // inner border
-    //TODO - make this a bit more pixel-perfect...but it works for now
+    /* inner border
+       TODO: make this a bit more pixel-perfect... but it works for now */
 
     cairo_set_line_width (cr, 1.0);
 
@@ -281,7 +281,7 @@ void load_engine_settings(GKeyFile * f, window_settings * ws)
 {
     private_ws * pws = ws->engine_ws;
 
-	// parse color settings
+    /* parse color settings */
     PFACS(outer);
     PFACS(inner);
     PFACS(title_outer);
@@ -294,7 +294,7 @@ void load_engine_settings(GKeyFile * f, window_settings * ws)
     PFACS(contents_highlight);
     PFACS(contents_halo);
 
-	// parse border settings
+    /* parse border settings */
     load_bool_setting(f, &pws->round_top_left, "round_top_left", SECT);
     load_bool_setting(f, &pws->round_top_right, "round_top_right", SECT);
     load_bool_setting(f, &pws->round_bottom_left, "round_bottom_left", SECT);
@@ -308,7 +308,7 @@ void init_engine(window_settings * ws)
     private_fs * pfs;
     private_ws * pws;
 
-	// private window settings
+    /* private window settings */
     pws = malloc(sizeof(private_ws));
     ws->engine_ws = pws;
     bzero(pws,sizeof(private_ws));
@@ -318,7 +318,7 @@ void init_engine(window_settings * ws)
     pws->round_bottom_right = TRUE;
     pws->corner_radius = 5.0;
 
-	// private frame settings for active frames
+    /* private frame settings for active frames */
     pfs = malloc(sizeof(private_fs));
     ws->fs_act->engine_fs = pfs;
     bzero(pfs,sizeof(private_fs));
@@ -334,7 +334,7 @@ void init_engine(window_settings * ws)
     ACOLOR(contents_shadow, 0.6, 0.6, 0.6, 0.8);
     ACOLOR(contents_halo, 0.8, 0.8, 0.8, 0.8);
 
-	// private frame settings for inactive frames
+    /* private frame settings for inactive frames */
     pfs = malloc(sizeof(private_fs));
     bzero(pfs, sizeof(private_fs));
     ws->fs_inact->engine_fs = pfs;

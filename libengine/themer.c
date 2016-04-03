@@ -17,8 +17,7 @@
  *
  */
 
-////////////////////////////////////////////////////
-//themer stuff
+/* themer stuff */
 #include <engine.h>
 #include <signal.h>
 
@@ -56,8 +55,8 @@ GSList * EngineList = NULL;
 GtkWidget * EngineCombo;
 GtkListStore * EngineModel;
 GtkWidget * EngineContainer;
-//GtkWidget * PreviewImage[BX_COUNT];
-//GtkWidget * ButtonImage[BX_COUNT];
+/* GtkWidget * PreviewImage[BX_COUNT];
+   GtkWidget * ButtonImage[BX_COUNT]; */
 gboolean apply=FALSE;
 gboolean changed=FALSE;
 GKeyFile * global_theme_file;
@@ -122,7 +121,7 @@ void add_color_alpha_value(gchar * caption, gchar * basekey, gchar * sect, gbool
     w = scaler_new(0.0,1.0,0.01);
     table_append(w,TRUE);
     register_setting(w,ST_FLOAT,sect,alphakey);
-    //we don't g_free because they are registered with register_setting
+    /* we don't g_free because they are registered with register_setting */
 }
 void make_labels(gchar * header)
 {
@@ -212,7 +211,7 @@ SettingItem * register_setting(GtkWidget * widget, SettingType type, gchar * sec
                     item);
         default:
             break;
-            //unconnected types
+            /* unconnected types */
     }
     return item;
 }
@@ -224,7 +223,7 @@ static gint current_table_row;
 
 void table_new(gint width, gboolean same, gboolean labels)
 {
-    //WARNING - clobbers all the current_table_ vars.
+    /* WARNING: clobbers all the current_table_ vars. */
     current_table = GTK_TABLE(gtk_table_new(width,1,same));
     gtk_table_set_row_spacings(current_table,8);
     gtk_table_set_col_spacings(current_table,8);
@@ -244,14 +243,14 @@ void table_append(GtkWidget * child,gboolean stretch)
     {
         current_table_col=0;
         current_table_row++;
-//        gtk_table_resize(current_table,current_table_width,current_table_row+1);
+        /* gtk_table_resize(current_table,current_table_width,current_table_row+1); */
     }
 }
 void table_append_separator()
 {
     current_table_col=0;
     current_table_row++;
-//    gtk_table_resize(current_table,current_table_width,current_table_row+1);
+    /* gtk_table_resize(current_table,current_table_width,current_table_row+1); */
     gtk_table_attach_defaults(current_table,
 #if GTK_CHECK_VERSION(3, 2, 0)
             gtk_separator_new (GTK_ORIENTATION_HORIZONTAL),
@@ -262,7 +261,7 @@ void table_append_separator()
             current_table_row,
             current_table_row+1);
     current_table_row++;
-//    gtk_table_resize(current_table,current_table_width,current_table_row+1);
+    /* gtk_table_resize(current_table,current_table_width,current_table_row+1); */
 }
 GtkTable * get_current_table()
 {
@@ -343,8 +342,9 @@ static gboolean cb_apply_setting_real(gpointer p)
     if (item->type == ST_IMG_FILE)
     {
         gchar * s;
+        /* for now just ignore setting it to an invalid name */
         if (!(s=gtk_file_chooser_get_filename(GTK_FILE_CHOOSER(item->widget))))
-            return FALSE; // for now just ignore setting it to an invalid name
+            return FALSE;
         if (g_strcmp0(s,item->fvalue) == 0)
         {
             g_free(s);
@@ -404,7 +404,7 @@ void write_setting(SettingItem * item, gpointer p)
             g_key_file_set_string(f,item->section,item->key,get_string_combo(item));
             break;
         case ST_IMG_FILE:
-            //g_key_file_set_string(f,item->section,item->key,get_img_file(item));
+            /* g_key_file_set_string(f,item->section,item->key,get_img_file(item)); */
             {
                 gchar * s = g_strdup_printf("%s/.emerald/theme/%s.%s.png",g_get_home_dir(),item->section,item->key);
                 GdkPixbuf * pbuf = gtk_image_get_pixbuf(item->image);
@@ -414,7 +414,7 @@ void write_setting(SettingItem * item, gpointer p)
                 }
                 else
                 {
-                    g_unlink(s); // to really clear out a clear'd image
+                    g_unlink(s); /* to really clear out a clear'd image */
                 }
                 g_free(s);
             }
@@ -455,7 +455,7 @@ void write_setting(SettingItem * item, gpointer p)
             break;
         default:
             break;
-            //unhandled types
+            /* unhandled types */
     }
 }
 void write_setting_file()
@@ -631,7 +631,7 @@ const gchar * get_engine_combo(SettingItem * item)
     static gchar * s = NULL;
     GtkTreeIter i;
     if(s) g_free(s);
-    //s = gtk_combo_box_get_active_text(GTK_COMBO_BOX(item->widget));
+    /* s = gtk_combo_box_get_active_text(GTK_COMBO_BOX(item->widget)); */
     if (gtk_combo_box_get_active_iter(GTK_COMBO_BOX(item->widget),&i))
     {
         gtk_tree_model_get(GTK_TREE_MODEL(EngineModel),&i,ENGINE_COL_NAME,&s,-1);
@@ -828,7 +828,7 @@ void read_setting(SettingItem * item, gpointer * p)
             break;
         default:
             break;
-            //unhandled types
+            /* unhandled types */
     }
 }
 void init_settings()
@@ -878,7 +878,8 @@ void layout_engine_list(GtkWidget * vbox)
 #else
     gtk_box_pack_startC(vbox,gtk_hseparator_new(),FALSE,FALSE,0);
 #endif
-    EngineContainer = gtk_alignment_new(0,0,1,1); // really only needed for the bin-ness
+    /* really only needed for the bin-ness */
+    EngineContainer = gtk_alignment_new(0,0,1,1);
     gtk_box_pack_startC(vbox,EngineContainer,TRUE,TRUE,0);
 }
 static gchar * canonize_name(gchar * dlname)
@@ -962,7 +963,7 @@ static void append_engine(gchar * dlname)
                     ENGINE_COL_ICON,d->meta.icon,ENGINE_COL_MARKUP,
                     g_markup_printf_escaped(format,d->canname,d->meta.version,d->meta.description),
                     -1);
-            //gtk_combo_box_prepend_text(GTK_COMBO_BOX(EngineCombo),d->canname);
+            /* gtk_combo_box_prepend_text(GTK_COMBO_BOX(EngineCombo),d->canname); */
         }
     }
     dlclose(hand);
@@ -990,8 +991,8 @@ static void engine_scan_dir(gchar * dir)
 }
 void init_engine_list()
 {
-    //presumes the container & combo are created
-    //presumes the combo is NOT registered
+    /*presumes the container & combo are created
+      presumes the combo is NOT registered       */
     GtkCellRenderer * r;
     
     EngineModel = gtk_list_store_new(ENGINE_COL_COUNT,G_TYPE_STRING,

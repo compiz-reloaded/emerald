@@ -21,7 +21,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-//pixmap engine
+/* pixmap engine */
 #include <emerald.h>
 #include <engine.h>
 #include <pixmap_icon.h>
@@ -115,7 +115,7 @@ void get_meta_info (EngineMetaInfo * emi)
 {
     emi->version = g_strdup("0.2");
     emi->description = g_strdup(_("Everything done with customizable pixmaps!"));
-    emi->last_compat = g_strdup("0.0"); // old themes marked still compatible
+    emi->last_compat = g_strdup("0.0"); /* old themes marked still compatible */
     emi->icon = gdk_pixbuf_new_from_inline(-1,my_pixbuf,TRUE,NULL);
 }
 
@@ -143,7 +143,7 @@ fill_rounded_rectangle_pixmap_blend (cairo_t       *cr,
         cairo_set_operator (cr, CAIRO_OPERATOR_SOURCE);
         cairo_set_line_width (cr, 0.0);
 
-        // While using scaled pixmaps
+        /* while using scaled pixmaps */
         if(pix->use_scaled) {
             cairo_matrix_t matrix;
             cairo_matrix_init_scale(&matrix, iw/w, ih/h);
@@ -154,7 +154,7 @@ fill_rounded_rectangle_pixmap_blend (cairo_t       *cr,
             cairo_set_source (cr, pattern);
             cairo_pattern_set_extend(pattern, CAIRO_EXTEND_REPEAT);
         } else {
-        // While using tiled pixmaps
+            /* while using tiled pixmaps */
             cairo_set_source_surface (cr, pix->surface, x, y);
             pattern = cairo_pattern_reference(cairo_get_source(cr));
             cairo_pattern_set_extend(pattern, CAIRO_EXTEND_REPEAT);
@@ -168,7 +168,7 @@ fill_rounded_rectangle_pixmap_blend (cairo_t       *cr,
 
     cairo_set_operator (cr, CAIRO_OPERATOR_OVER);
     if(w > 0 && blend) {
-       // Now blend in the gradients
+       /* now blend in the gradients */
        fill_rounded_rectangle (cr, x, y, w, h, corner, c0, c1, gravity, ws, radius);
     }
 }
@@ -221,7 +221,7 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
         ((pws->round_bottom_left)?CORNER_BOTTOMLEFT:0) |
         ((pws->round_bottom_right)?CORNER_BOTTOMRIGHT:0);
 
-	// maximize work-a-round
+	/* maximize work-a-round */
 	if (d->state & (WNCK_WINDOW_STATE_MAXIMIZED_HORIZONTALLY |
                 WNCK_WINDOW_STATE_MAXIMIZED_VERTICALLY))
         corners = 0;
@@ -238,8 +238,8 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
     top_left_height = top_right_height = top;
     bottom_left_height = bottom_right_height = ws->win_extents.bottom;
 
-    // Adjustments of the (top/bottom)-(left/right) bar
-    // if the radius is bigger than left/right extents
+    /* adjustments of the (top/bottom)-(left/right) bar
+       if the radius is bigger than left/right extents */
     if((ws->win_extents.left < pws->top_corner_radius) &&
         (CORNER_TOPLEFT & corners)) {
 	    top_left_width = pws->top_corner_radius;
@@ -257,7 +257,7 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
 	    bottom_right_width = pws->bottom_corner_radius;
     }
 
-    // Manual Width overrides
+    /* manual width overrides */
     if(pfs->pixmaps[TOP_LEFT].use_width) top_left_width = pfs->pixmaps[TOP_LEFT].width;
     if(pfs->pixmaps[TOP_RIGHT].use_width) top_right_width = pfs->pixmaps[TOP_RIGHT].width;
     if(pfs->pixmaps[LEFT].use_width) left_width = pfs->pixmaps[LEFT].width;
@@ -273,7 +273,7 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
     if(pfs->pixmaps[BOTTOM_LEFT].use_height) bottom_left_height = pfs->pixmaps[BOTTOM_LEFT].height;
     if(pfs->pixmaps[BOTTOM_RIGHT].use_height) bottom_right_height = pfs->pixmaps[BOTTOM_RIGHT].height;
 
-    // Top Left Bar
+    /* top left bar */
     fill_rounded_rectangle_pixmap_blend (cr,
             x1,
             y1,
@@ -284,7 +284,7 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
             SHADE_TOP | SHADE_LEFT, &pfs->pixmaps[TOP_LEFT], ws,
             pws->top_corner_radius, TRUE);
 
-    // Top Bar
+    /* top bar */
     fill_rounded_rectangle_pixmap_blend (cr,
             x1 + top_left_width,
             y1,
@@ -295,7 +295,7 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
             SHADE_TOP, &pfs->pixmaps[TOP], ws,
             pws->top_corner_radius, TRUE);
 
-    // Top Right Bar
+    /* top right bar */
     fill_rounded_rectangle_pixmap_blend (cr,
             x2 - top_right_width,
             y1,
@@ -306,7 +306,7 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
             SHADE_TOP | SHADE_RIGHT, &pfs->pixmaps[TOP_RIGHT], ws,
             pws->top_corner_radius, TRUE);
 
-    // Left Bar
+    /* left bar */
     fill_rounded_rectangle_pixmap_blend (cr,
         x1 + ws->win_extents.left - left_width,
 	    y1 + top_left_height - 1,
@@ -317,7 +317,7 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
 		SHADE_LEFT, &pfs->pixmaps[LEFT], ws,
 	    pws->top_corner_radius, FALSE);
 
-    // Right Bar
+    /* right bar */
     fill_rounded_rectangle_pixmap_blend (cr,
         x2 - ws->win_extents.right,
 	    y1 + top_right_height - 1,
@@ -328,7 +328,7 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
         SHADE_RIGHT, &pfs->pixmaps[RIGHT], ws,
         pws->top_corner_radius, FALSE);
 
-    // Bottom Left Bar
+    /* bottom left bar */
     fill_rounded_rectangle_pixmap_blend (cr,
             x1,
             y2 - bottom_left_height,
@@ -339,7 +339,7 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
             SHADE_BOTTOM | SHADE_LEFT, &pfs->pixmaps[BOTTOM_LEFT], ws,
             pws->bottom_corner_radius, FALSE);
 
-    // Bottom Bar
+    /* bottom bar */
     fill_rounded_rectangle_pixmap_blend (cr,
             x1 + bottom_left_width,
             y2 - ws->win_extents.bottom,
@@ -349,7 +349,7 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
             SHADE_BOTTOM, &pfs->pixmaps[BOTTOM], ws,
             pws->bottom_corner_radius, FALSE);
 
-    // Bottom Right Bar
+    /* bottom right bar */
     fill_rounded_rectangle_pixmap_blend (cr,
             x2 - bottom_right_width,
             y2 - bottom_right_height,
@@ -362,12 +362,12 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
 
     cairo_set_operator (cr, CAIRO_OPERATOR_OVER);
 
-    // Draw Title pixmaps
+    /* draw title pixmaps */
     if(PANGO_IS_LAYOUT(d->layout))
        pango_layout_get_pixel_size(d->layout, &title_width, NULL);
     title_pos = get_real_pos(ws, TBT_TITLE, d);
 
-    // Check that it doesn't overflow
+    /* check that it doesn't overflow */
     if((title_width + title_left_width + title_right_width) >
        (x2 - x1 - top_left_width - top_right_width - 10)) {
        double scaledown = (x2 - x1 - top_left_width - top_right_width - 10) /
@@ -377,7 +377,7 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
        title_right_width = scaledown*title_right_width;
     }
 
-    // Title Left
+    /* title left */
     fill_rounded_rectangle_pixmap_blend (cr,
             title_pos - title_left_width - 1,
             y1,
@@ -388,7 +388,7 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
             SHADE_TOP, &pfs->pixmaps[TITLE_LEFT], ws,
             pws->top_corner_radius, TRUE);
 
-    // Title
+    /* title */
     fill_rounded_rectangle_pixmap_blend (cr,
             title_pos - 0.5,
             y1,
@@ -399,7 +399,7 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
             SHADE_TOP, &pfs->pixmaps[TITLE], ws,
             pws->top_corner_radius, TRUE);
 
-    // Title Right
+    /* title right */
     fill_rounded_rectangle_pixmap_blend (cr,
             title_pos + title_width - 1,
             y1,
@@ -430,7 +430,7 @@ void load_engine_settings(GKeyFile * f, window_settings * ws)
     load_float_setting(f, &pws->top_corner_radius, "top_radius", SECT);
     load_float_setting(f, &pws->bottom_corner_radius, "bottom_radius", SECT);
 
-    // Active window
+    /* active window */
     private_fs * pfs = ws->fs_act->engine_fs;
     for(i = 0; i < 11; i++) {
         junk = g_strdup_printf("%s_%s", pre, p_types[i]);
@@ -448,7 +448,7 @@ void load_engine_settings(GKeyFile * f, window_settings * ws)
 		g_strdup_printf("%s_%s_height", pre, p_types[i]), SECT);
     }
 
-    // Inactive window
+    /* inactive window */
     pfs = ws->fs_inact->engine_fs;
     if(!pws->inactive_use_active_pixmaps) pre = "inactive";
     for(i = 0; i < 11; i++) {
@@ -473,7 +473,7 @@ void init_engine(window_settings * ws)
     private_fs * pfs;
     private_ws * pws;
 
-    // private window settings
+    /* private window settings */
     pws = malloc(sizeof(private_ws));
     ws->engine_ws = pws;
     bzero(pws,sizeof(private_ws));
@@ -484,7 +484,7 @@ void init_engine(window_settings * ws)
     pws->top_corner_radius = 5.0;
     pws->bottom_corner_radius = 5.0;
 
-	// private frame settings for active frames
+    /* private frame settings for active frames */
     pfs = malloc(sizeof(private_fs));
     ws->fs_act->engine_fs = pfs;
     bzero(pfs, sizeof(private_fs));
@@ -493,7 +493,7 @@ void init_engine(window_settings * ws)
     ACOLOR(title_inner, 0.8, 0.8, 0.8, 0.8);
     ACOLOR(title_outer, 0.8, 0.8, 0.8, 0.8);
 
-	// private frame settings for inactive frames
+    /* private frame settings for inactive frames */
     pfs = malloc(sizeof(private_fs));
     bzero(pfs, sizeof(private_fs));
     ws->fs_inact->engine_fs = pfs;
@@ -637,12 +637,12 @@ static void layout_pixmap_box(GtkWidget * vbox, gint b_t, gboolean active)
     g_signal_connect(clearer, "clicked", G_CALLBACK(cb_clear_file), item);
     table_append(clearer, FALSE);
 
-    // Style : Use Tiled or Scaled pixmaps
+    /* style: use tiled or scaled pixmaps */
     use_scaled = gtk_check_button_new_with_label(_("Scaled"));
     register_setting(use_scaled,  ST_BOOL,  SECT,  g_strdup_printf("%s_%s_use_scaled", pre, p_types[b_t]));
     table_append(use_scaled, FALSE);
 
-    // Width : Checkbox (Use my width) + Number (0-500)
+    /* width: checkbox (use my width) + number (0-500) */
     if(b_t == 0 || b_t == 5 || b_t == 8) {
         table_append(gtk_label_new(_("Not adjustable")), FALSE);
     } else {
@@ -659,7 +659,7 @@ static void layout_pixmap_box(GtkWidget * vbox, gint b_t, gboolean active)
         table_append(tbox, FALSE);
     }
 
-    // Height : Checkbox (Use my width) + Number (0-500)
+    /* height: checkbox (use my width) + number (0-500) */
     if(b_t == 1 || b_t == 2 || b_t == 6 || b_t == 7) {
         height = gtk_spin_button_new_with_range(0,500,1);
         register_setting(height, ST_INT, SECT, g_strdup_printf("%s_%s_height", pre, p_types[b_t]));

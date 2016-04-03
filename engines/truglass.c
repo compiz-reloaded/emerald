@@ -22,7 +22,7 @@
  *
  */
 
-//truglass
+/* truglass */
 #include <emerald.h>
 #include <engine.h>
 #include <truglass_icon.h>
@@ -68,7 +68,8 @@ void get_meta_info (EngineMetaInfo * emi)
 {
     emi->version = g_strdup("0.5");
     emi->description = g_strdup(_("Glassy effects for your windows"));
-    emi->last_compat = g_strdup("0.0"); // old themes marked still compatible for now
+    /* old themes marked still compatible for now */
+    emi->last_compat = g_strdup("0.0");
     emi->icon = gdk_pixbuf_new_from_inline(-1, my_pixbuf, TRUE, NULL);
 }
 
@@ -103,7 +104,7 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
         ((pws->round_bottom_left)  ? CORNER_BOTTOMLEFT  : 0) |
         ((pws->round_bottom_right) ? CORNER_BOTTOMRIGHT : 0);
 
-	// maximize work-a-round
+	/* maximize work-a-round */
 	if (d->state & (WNCK_WINDOW_STATE_MAXIMIZED_HORIZONTALLY |
                 WNCK_WINDOW_STATE_MAXIMIZED_VERTICALLY))
         corners = 0;
@@ -111,7 +112,7 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
     cairo_set_operator (cr, CAIRO_OPERATOR_SOURCE);
     cairo_set_line_width (cr, 1.0);
 
-    // Top Top Glow
+    /* top top glow */
     fill_rounded_rectangle (cr,
             x1 + 0.5,
             y1 + 0.5,
@@ -121,7 +122,7 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
             &pfs->upper_glow, &pfs->lower_glow,
             SHADE_BOTTOM, ws,
             pws->corner_radius);
-    // Top Bottom Glow
+    /* top bottom glow */
     fill_rounded_rectangle (cr,
             x1 + 0.5,
             y1 + pws->glow_height + 0.5,
@@ -131,7 +132,7 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
             &pfs->lower_glow, &pfs->lower_glow,
             SHADE_BOTTOM, ws,
             pws->corner_radius);
-    // Top Left
+    /* top left */
     fill_rounded_rectangle (cr,
             x1 + 0.5,
             y1 + pws->glow_height + 0.5,
@@ -141,7 +142,7 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
             &pfs->base, &pfs->upper_title_glow,
             SHADE_TOP, ws,
             pws->corner_radius);
-    // Top
+    /* top */
     fill_rounded_rectangle (cr,
             x1 + ws->win_extents.left,
             y1 + pws->glow_height + 0.5,
@@ -152,7 +153,7 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
             &pfs->base, &pfs->upper_title_glow,
             SHADE_TOP, ws,
             pws->corner_radius);
-    // Top Right
+    /* top right */
     fill_rounded_rectangle (cr,
             x2 - ws->win_extents.right,
             y1 + pws->glow_height + 0.5,
@@ -162,7 +163,7 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
             &pfs->base, &pfs->upper_title_glow,
             SHADE_TOP, ws,
             pws->corner_radius);
-    // Left
+    /* left */
     fill_rounded_rectangle (cr,
             x1 + 0.5,
             y1 + top,
@@ -172,7 +173,7 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
             &pfs->base, &pfs->base,
             SHADE_LEFT, ws,
             pws->corner_radius);
-    // Right
+    /* right */
     fill_rounded_rectangle (cr,
             x2 - ws->win_extents.right,
             y1 + top,
@@ -183,7 +184,7 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
             SHADE_RIGHT, ws,
             pws->corner_radius);
 
-    // Bottom Left
+    /* bottom left */
     fill_rounded_rectangle (cr,
             x1 + 0.5,
             y2 - ws->win_extents.bottom,
@@ -193,7 +194,7 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
             &pfs->base, &pfs->base,
             SHADE_BOTTOM | SHADE_LEFT, ws,
             pws->corner_radius);
-    // Bottom
+    /* bottom */
     fill_rounded_rectangle (cr,
             x1 + ws->win_extents.left,
             y2 - ws->win_extents.bottom,
@@ -204,7 +205,7 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
             &pfs->base, &pfs->base,
             SHADE_BOTTOM,ws,
             pws->corner_radius);
-    // Bottom Right
+    /* bottom right */
     fill_rounded_rectangle (cr,
             x2 - ws->win_extents.right,
             y2 - ws->win_extents.bottom,
@@ -215,10 +216,10 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
             SHADE_BOTTOM | SHADE_RIGHT,ws,
             pws->corner_radius);
 
-	// ======= SECOND LAYER =======
+    /* ======= SECOND LAYER ======= */
     cairo_set_operator (cr, CAIRO_OPERATOR_OVER);
 
-    // Top Left
+    /* top left */
     fill_rounded_rectangle (cr,
             x1 + 0.5,
             y1 + 0.5,
@@ -228,7 +229,7 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
             &pfs->outer_glow, &pfs->outer_glow,
             SHADE_LEFT, ws,
             pws->corner_radius);
-    // Top
+    /* top */
     fill_rounded_rectangle (cr,
             x1 + ws->win_extents.left,
             y1 + 0.5,
@@ -251,7 +252,7 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
             &pfs->middle_glow, &pfs->outer_glow,
             SHADE_RIGHT, ws,
             pws->corner_radius);
-    // Top Right
+    /* top right */
     fill_rounded_rectangle (cr,
             x2 - ws->win_extents.right,
             y1 + 0.5,
@@ -261,7 +262,7 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
             &pfs->outer_glow, &pfs->outer_glow,
             SHADE_RIGHT, ws,
             pws->corner_radius);
-    // Left
+    /* left */
     fill_rounded_rectangle (cr,
             x1 + 0.5,
             y1 + top,
@@ -271,7 +272,7 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
             &pfs->outer_glow,&pfs->outer_glow,
             SHADE_LEFT, ws,
             pws->corner_radius);
-    // Right
+    /* right */
     fill_rounded_rectangle (cr,
             x2 - ws->win_extents.right,
             y1 + top,
@@ -282,7 +283,7 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
             SHADE_RIGHT, ws,
             pws->corner_radius);
 
-    // Bottom Left
+    /* bottom left */
     fill_rounded_rectangle (cr,
             x1 + 0.5,
             y2 - ws->win_extents.bottom,
@@ -292,7 +293,7 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
             &pfs->outer_glow, &pfs->outer_glow,
             SHADE_LEFT, ws,
             pws->corner_radius);
-    // Bottom
+    /* bottom */
     fill_rounded_rectangle (cr,
             x1 + ws->win_extents.left,
             y2 - ws->win_extents.bottom,
@@ -315,7 +316,7 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
             &pfs->middle_glow, &pfs->outer_glow,
             SHADE_RIGHT,ws,
             pws->corner_radius);
-    // Bottom Right
+    /* bottom right */
     fill_rounded_rectangle (cr,
             x2 - ws->win_extents.right,
             y2 - ws->win_extents.bottom,
@@ -326,16 +327,16 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
             SHADE_RIGHT,ws,
             pws->corner_radius);
 
-    // ======= THIRD LAYER =======
+    /* ======= THIRD LAYER ======= */
 
-	// titlebar separator line
+    /* titlebar separator line */
     cairo_set_source_alpha_color(cr, &pfs->separator_line);
     cairo_move_to (cr, x1 + 0.5, y1 + top - 0.5);
     cairo_rel_line_to (cr, x2 - x1 - 1.0, 0.0);
     cairo_stroke (cr);
 
 
-	// do not draw outside the decoration area
+    /* do not draw outside the decoration area */
     rounded_rectangle (cr,
             x1 + 0.5, y1 + 0.5,
             x2 - x1 - 1.0, y2 - y1 - 1.0,
@@ -346,7 +347,7 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
 
     cairo_translate (cr, 1.0, 1.0);
 
-	// highlight
+    /* highlight */
     rounded_rectangle (cr,
             x1 + 0.5, y1 + 0.5,
             x2 - x1 - 1.0, y2 - y1 - 1.0,
@@ -360,7 +361,7 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
     cairo_translate (cr, -2.0, -2.0);
 
 
-	// shadow
+    /* shadow */
     rounded_rectangle (cr,
             x1 + 0.5, y1 + 0.5,
             x2 - x1 - 1.0, y2 - y1 - 1.0,
@@ -375,7 +376,7 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
 
     cairo_reset_clip (cr);
 
-	// halo
+    /* halo */
     rounded_rectangle (cr,
             x1 + 0.5, y1 + 0.5,
             x2 - x1 - 1.0, y2 - y1 - 1.0,
@@ -386,8 +387,8 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
     cairo_set_source_alpha_color (cr, &pfs->window_halo);
     cairo_stroke (cr);
 
-    // inner border
-    //TODO - make this a bit more pixel-perfect...but it works for now
+    /* inner border
+       TODO: make this a bit more pixel-perfect... but it works for now */
 
     cairo_set_line_width (cr, 1.0);
 
@@ -416,7 +417,7 @@ void load_engine_settings(GKeyFile * f, window_settings * ws)
 {
     private_ws * pws = ws->engine_ws;
 
-	// color settings
+    /* color settings */
     PFACS(base);
     PFACS(upper_glow);
     PFACS(lower_glow);
@@ -431,14 +432,14 @@ void load_engine_settings(GKeyFile * f, window_settings * ws)
     PFACS(contents_highlight);
     PFACS(contents_halo);
 
-	// border settings
+    /* border settings */
     load_bool_setting(f, &pws->round_top_left, "round_top_left", SECT);
     load_bool_setting(f, &pws->round_top_right, "round_top_right", SECT);
     load_bool_setting(f, &pws->round_bottom_left, "round_bottom_left", SECT);
     load_bool_setting(f, &pws->round_bottom_right, "round_bottom_right", SECT);
     load_float_setting(f, &pws->corner_radius, "radius", SECT);
 
-	// glow settings
+    /* glow settings */
     load_float_setting(f, &pws->glow_height, "glow_height", SECT);
 }
 
@@ -447,7 +448,7 @@ void init_engine(window_settings * ws)
     private_fs * pfs;
     private_ws * pws;
 
-	// private window settings
+    /* private window settings */
     pws = malloc(sizeof(private_ws));
     ws->engine_ws = pws;
     bzero(pws, sizeof(private_ws));
@@ -458,8 +459,8 @@ void init_engine(window_settings * ws)
     pws->corner_radius=5.0;
     pws->glow_height=10;
 
-	// private frame settings for active frames
-	pfs = malloc(sizeof(private_fs));
+    /* private frame settings for active frames */
+    pfs = malloc(sizeof(private_fs));
     ws->fs_act->engine_fs = pfs;
     bzero(pfs, sizeof(private_fs));
     ACOLOR(base, 0.8, 0.8, 0.8, 0.5);
@@ -476,7 +477,7 @@ void init_engine(window_settings * ws)
     ACOLOR(contents_shadow, 0.6, 0.6, 0.6, 0.8);
     ACOLOR(contents_halo, 0.8, 0.8, 0.8, 0.8);
 
-	// private frame settings for inactive frames
+    /* private frame settings for inactive frames */
     pfs = malloc(sizeof(private_fs));
     bzero(pfs, sizeof(private_fs));
     ws->fs_inact->engine_fs = pfs;

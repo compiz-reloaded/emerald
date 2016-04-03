@@ -22,7 +22,7 @@
  *
  */
 
-//zootreeves engine
+/* zootreeves engine */
 
 #include <emerald.h>
 #include <engine.h>
@@ -85,7 +85,7 @@ typedef struct _private_ws
     gboolean enable_left_bar_dip;
     gboolean enable_left_bar_dip_lower_part;
     gboolean gradient_repeat_disabled_maximised;
-    int 	left_bar_dip_offset;
+    int		left_bar_dip_offset;
     double      outer_maximised_alpha;
     decor_color_t outer_maximised_color;
     double      inner_maximised_alpha;
@@ -105,7 +105,8 @@ void get_meta_info (EngineMetaInfo * emi)
 {
     emi->version = g_strdup("0.1");
     emi->description = g_strdup(_("Evolved from the legacy engine"));
-    emi->last_compat = g_strdup("0.0"); // old themes marked still compatible for testing-NeOS
+    /* old themes marked still compatible for testing-NeOS */
+    emi->last_compat = g_strdup("0.0");
     emi->icon = gdk_pixbuf_new_from_inline(-1,my_pixbuf,TRUE,NULL);
 }
 
@@ -131,141 +132,154 @@ rounded_rectangle_independent (cairo_t *cr,
 	int	bottom_border_width,
 	int	left_bar_dip_radius,
         gboolean enable_left_bar_dip_lower_part,
-	double 	left_bar_dip_offset
+	double	left_bar_dip_offset
 )
 {
 
-	int left_top_radius_on = 1;
-	int right_top_radius_on = 1;
-	int left_bottom_radius_on = 1;
-	int right_bottom_radius_on = 1;
-	int radius_tri_on = 0;
+    int left_top_radius_on = 1;
+    int right_top_radius_on = 1;
+    int left_bottom_radius_on = 1;
+    int right_bottom_radius_on = 1;
+    int radius_tri_on = 0;
 
 
-    if (left_top_radius==0)
-        left_top_radius_on=0;
+    if (left_top_radius == 0)
+	left_top_radius_on = 0;
 
-    if (right_top_radius==0)
-        right_top_radius_on=0;
+    if (right_top_radius == 0)
+	right_top_radius_on = 0;
 
-    if (left_bottom_radius==0)
-        left_bottom_radius_on=0;
+    if (left_bottom_radius == 0)
+	left_bottom_radius_on = 0;
 
-    if (right_bottom_radius==0)
-        right_bottom_radius_on=0;
+    if (right_bottom_radius == 0)
+	right_bottom_radius_on = 0;
 
-    if (radius_tri!=0) {
-        radius_tri_on=1;
-    }
+    if (radius_tri != 0)
+	radius_tri_on = 1;
 
 
     int curve, radius2;
     double cx, cy;
 
-    if (left_top_radius_on == 1) {
-    	if ((corner & CORNER_TOPLEFT))
-       	 	cairo_move_to (cr, x + left_top_radius, y);
-    	else
-        	cairo_move_to (cr, x, y);
+    if (left_top_radius_on == 1)
+    {
+	if ((corner & CORNER_TOPLEFT))
+	    cairo_move_to(cr, x + left_top_radius, y);
+	else
+	    cairo_move_to(cr, x, y);
     }
 
-    if (radius_tri_on == 1 && (corner & DIP_ROUND_TRI)) {
-
-	if (radius_tri > title_bar_height) {
-	  radius_tri = title_bar_height;
-	}
+    if (radius_tri_on == 1 && (corner & DIP_ROUND_TRI))
+    {
+	if (radius_tri > title_bar_height)
+	    radius_tri = title_bar_height;
 
 	curve = 2;
 
 	radius2 = title_bar_height - radius_tri;
 
-        cairo_arc (cr, x + pane_1_width, y  + radius_tri, radius_tri, M_PI * 1.5, M_PI * curve);
-	cairo_get_current_point (cr, &cx, &cy);
-        cairo_arc_negative (cr, x +pane_1_width + (title_bar_height), cy, radius2, M_PI* (curve - 1), M_PI * 2.5);
-
+	cairo_arc(cr, x + pane_1_width, y  + radius_tri, radius_tri,
+		  M_PI * 1.5, M_PI * curve);
+	cairo_get_current_point(cr, &cx, &cy);
+	cairo_arc_negative(cr, x +pane_1_width + (title_bar_height), cy,
+			   radius2, M_PI* (curve - 1), M_PI * 2.5);
 
 	radius2 = title_bar_height - radius_tri;
 
 	if (enable_button_part == TRUE) {
-	//Can use h to offset x because it is a square - would be radius - radius2
-        cairo_arc_negative (cr, x + pane_1_width + dip_gap - radius_tri - radius2, y + radius_tri, radius2, M_PI * 2.5, M_PI * 2.0);
-	cairo_get_current_point (cr, &cx, &cy);
-        cairo_arc (cr, cx + radius_tri, cy, radius_tri, M_PI * 1.0, M_PI * 1.5);
-	} else {
-	 cairo_get_current_point (cr, &cx, &cy);
-         cairo_line_to (cr, x + w, cy);
-        }
-
+	    /* can use h to offset x because it is a square - would be
+	       radius - radius2 */
+	    cairo_arc_negative(cr, x + pane_1_width + dip_gap - radius_tri - radius2,
+			       y + radius_tri, radius2, M_PI * 2.5, M_PI * 2.0);
+	    cairo_get_current_point(cr, &cx, &cy);
+	    cairo_arc(cr, cx + radius_tri, cy, radius_tri, M_PI * 1.0, M_PI * 1.5);
+	}
+	else
+	{
+	    cairo_get_current_point(cr, &cx, &cy);
+	    cairo_line_to(cr, x + w, cy);
+	}
     }
 
-
-    if (enable_dip == TRUE && !(corner & DIP_ROUND_TRI)) {
-
+    if (enable_dip == TRUE && !(corner & DIP_ROUND_TRI))
+    {
 	curve = 2;
 
 	radius2 = title_bar_height - radius_tri;
 
-        cairo_arc (cr, x + pane_1_width - radius_tri, y  + radius_tri, radius_tri, M_PI * 1.5, M_PI * curve);
-	cairo_get_current_point (cr, &cx, &cy);
-        cairo_line_to (cr, cx, cy + radius2);
-        cairo_line_to (cr, cx + dip_gap, cy + radius2);
-        //cairo_arc_negative (cr, x +pane_1_width + (title_bar_height), cy, radius2, M_PI* (curve - 1), M_PI * 2.5);
-
+	cairo_arc(cr, x + pane_1_width - radius_tri, y  + radius_tri,
+		  radius_tri, M_PI * 1.5, M_PI * curve);
+	cairo_get_current_point(cr, &cx, &cy);
+	cairo_line_to(cr, cx, cy + radius2);
+	cairo_line_to(cr, cx + dip_gap, cy + radius2);
+	/* cairo_arc_negative(cr, x +pane_1_width + (title_bar_height), cy,
+			      radius2, M_PI* (curve - 1), M_PI * 2.5); */
 
 	if (enable_button_part == TRUE) {
-	 cairo_get_current_point (cr, &cx, &cy);
-         cairo_line_to (cr, cx, cy - radius2);
-	 cairo_get_current_point (cr, &cx, &cy);
-         cairo_arc (cr, cx + radius_tri, cy, radius_tri, M_PI, M_PI * 1.5);
-         //cairo_arc (cr, cx + radius_tri, cy, radius_tri, M_PI * 1.0, M_PI * 1.5);
-	} else {
-	 cairo_get_current_point (cr, &cx, &cy);
-         cairo_line_to (cr, x + w, cy);
-        }
-
+	    cairo_get_current_point(cr, &cx, &cy);
+	    cairo_line_to(cr, cx, cy - radius2);
+	    cairo_get_current_point(cr, &cx, &cy);
+	    cairo_arc(cr, cx + radius_tri, cy, radius_tri, M_PI, M_PI * 1.5);
+	    /* cairo_arc(cr, cx + radius_tri, cy, radius_tri, M_PI * 1.0,
+			 M_PI * 1.5); */
 	}
+	else
+	{
+	    cairo_get_current_point(cr, &cx, &cy);
+	    cairo_line_to(cr, x + w, cy);
+        }
+    }
 
 
-     if (enable_button_part == TRUE) {
+    if (enable_button_part == TRUE)
+    {
 	if (right_top_radius_on == 1) {
-    		if ((corner & CORNER_TOPRIGHT)) {
-        		cairo_arc (cr, x + w - right_top_radius, y + right_top_radius, right_top_radius,
-                M_PI * 1.5, M_PI * 2.0);
-    		} else
-        		cairo_line_to (cr, x + w, y);
+	    if ((corner & CORNER_TOPRIGHT))
+	    {
+		cairo_arc(cr, x + w - right_top_radius, y + right_top_radius,
+			  right_top_radius, M_PI * 1.5, M_PI * 2.0);
+	    }
+	    else
+		cairo_line_to(cr, x + w, y);
 	}
-     }
+    }
 
-    if (right_bottom_radius_on == 1) {
-    if ((corner & CORNER_BOTTOMRIGHT))
-        cairo_arc (cr, x + w - right_bottom_radius, y + h - right_bottom_radius, right_bottom_radius,
-                0.0, M_PI * 0.5);
-    else
-        cairo_line_to (cr, x + w, y + h);
+    if (right_bottom_radius_on == 1)
+    {
+	if ((corner & CORNER_BOTTOMRIGHT))
+	    cairo_arc(cr, x + w - right_bottom_radius,
+		      y + h - right_bottom_radius, right_bottom_radius,
+		      0.0, M_PI * 0.5);
+	else
+	    cairo_line_to(cr, x + w, y + h);
     }
 
     if (left_bottom_radius_on == 1 && (corner & CORNER_BOTTOMLEFT))
-        cairo_arc (cr, x + left_bottom_radius, y + h - left_bottom_radius, left_bottom_radius,
-                M_PI * 0.5, M_PI);
+	cairo_arc(cr, x + left_bottom_radius, y + h - left_bottom_radius,
+		  left_bottom_radius, M_PI * 0.5, M_PI);
     else
 
-  if (enable_left_bar_dip_lower_part == FALSE && left_bar_dip == TRUE) {
-        cairo_line_to (cr, x + (2 * left_bar_dip_radius), y + h);
-  } else {
-        cairo_line_to (cr, x, y + h);
-  }
+    if (enable_left_bar_dip_lower_part == FALSE && left_bar_dip == TRUE)
+	cairo_line_to(cr, x + (2 * left_bar_dip_radius), y + h);
+    else
+	cairo_line_to (cr, x, y + h);
 
-	 if (left_bar_dip == FALSE) {
-	     if (left_top_radius_on == 1) {
-    		if ((corner & CORNER_TOPLEFT)) {
-        		cairo_arc (cr, x + left_top_radius, y + left_top_radius, left_top_radius, M_PI, M_PI * 1.5);
-    		} else
-        		cairo_line_to (cr, x, y);
-	    }
-	 }
+    if (left_bar_dip == FALSE)
+    {
+	if (left_top_radius_on == 1)
+	{
+	    if ((corner & CORNER_TOPLEFT))
+		cairo_arc(cr, x + left_top_radius, y + left_top_radius,
+			  left_top_radius, M_PI, M_PI * 1.5);
+	    else
+		cairo_line_to(cr, x, y);
+	}
+    }
 
-  if (left_bar_dip == TRUE) {
-	left_bar_dip_offset =  (((h - bottom_border_width - title_bar_height + 1)  /100) * (100 - left_bar_dip_offset));
+    if (left_bar_dip == TRUE) {
+	left_bar_dip_offset =
+	  (((h - bottom_border_width - title_bar_height + 1) /100) * (100 - left_bar_dip_offset));
 
 	cairo_get_current_point (cr, &cx, &cy);
 	cairo_line_to (cr, cx, cy - bottom_border_width + 2);
@@ -289,12 +303,14 @@ rounded_rectangle_independent (cairo_t *cr,
 	cairo_get_current_point (cr, &cx, &cy);
         cairo_arc (cr, cx, cy - left_bar_dip_radius, left_bar_dip_radius, M_PI * 2.5, M_PI * 3.0);
 
-	     if (left_top_radius_on == 1) {
-    		if ((corner & CORNER_TOPLEFT)) {
-        		cairo_arc (cr, x + left_top_radius, y + left_top_radius, left_top_radius, M_PI, M_PI * 1.5);
-    		} else
-        		cairo_line_to (cr, x, y);
-	    }
+	if (left_top_radius_on == 1)
+	{
+	    if ((corner & CORNER_TOPLEFT))
+		cairo_arc(cr, x + left_top_radius, y + left_top_radius,
+			  left_top_radius, M_PI, M_PI * 1.5);
+	    else
+		cairo_line_to (cr, x, y);
+	}
     }
 }
 
@@ -321,10 +337,10 @@ rounded_square (cairo_t *cr,
 )
 {
 
-	// always_allow 1 = radius_top_left
-	// always_allow 2 = radius_top_right
-	// always_allow 3 = radius_bottom_left
-	// always_allow 4 = radius_bottom_right
+	/* always_allow 1 = radius_top_left
+	   always_allow 2 = radius_top_right
+	   always_allow 3 = radius_bottom_left
+	   always_allow 4 = radius_bottom_right */
 
 	int	radius_top_left_on = 1;
 	int	radius_top_right_on = 1;
@@ -347,13 +363,13 @@ rounded_square (cairo_t *cr,
         radius_bottom_right_on=0;
 
     if (radius_top_right_tri!=0 && (corner & DIP_ROUND_TRI)) {
-	//Can't have both on at the same time!
+	/* can't have both on at the same time! */
         radius_top_right_tri_on=0;
         radius_top_right_on=1;
     }
 
     if (radius_top_left_tri!=0 && (corner & DIP_ROUND_TRI)) {
-	//Can't have both on at the same time!
+	/* can't have both on at the same time! */
         radius_top_left_tri_on=0;
         radius_top_left_on=1;
     }
@@ -365,36 +381,33 @@ rounded_square (cairo_t *cr,
     if (left_bar_dip == TRUE) {
 
 	left_bar_dip_offset = (h /100) * left_bar_dip_offset;
-	//printf("Left bar heigth = %f, Dip bar offset = %f\n", h, left_bar_dip_offset);
 
 	width = w;
 	height = h;
 
-	//if ((left_bar_dip_radius * 2) > left_bar_dip_radius) {
-	//	radius_top_left = 0.5 * (radius_top_left - 1);
-	//}
+	/* if ((left_bar_dip_radius * 2) > left_bar_dip_radius) {
+		radius_top_left = 0.5 * (radius_top_left - 1);
+	} */
 
-	//Fix this curve malarcy
+	/* fix this curve malarcy */
 	curve = 0.5;
 
         cairo_move_to (cr, x, y);
-        //cairo_line_to (cr, x + 5, y + 5);
+        /* cairo_line_to (cr, x + 5, y + 5); */
 
 	cairo_line_to(cr, x, y + left_bar_dip_offset);
 	cairo_get_current_point (cr, &cx, &cy);
         cairo_arc_negative (cr, cx + left_bar_dip_radius, cy, left_bar_dip_radius, M_PI * 1.0, M_PI * curve);
 	cairo_get_current_point (cr, &cx, &cy);
-	//x_width = radius - x_width;
-	//printf("Width %f\n", a_width);
-	//printf("Height %f\n", a_height);
-
+	/* x_width = radius - x_width;
+	   printf("Width %f\n", a_width);
+	   printf("Height %f\n", a_height); */
 
         cairo_arc (cr, cx, cy + left_bar_dip_radius, left_bar_dip_radius, M_PI * (curve + 1), M_PI * 2.0);
-
 	cairo_get_current_point (cr, &cx, &cy);
 
-
-        //cairo_arc_negative (cr, cx, cy, radius, M_PI * (curve + 2.5), M_PI * 2.5);
+        /* cairo_arc_negative (cr, cx, cy, radius, M_PI * (curve + 2.5),
+           M_PI * 2.5); */
 
 	if (enable_left_bar_dip_lower_part == TRUE) {
         	cairo_line_to (cr, cx, cy + height - left_bar_dip_offset  - (4* left_bar_dip_radius));
@@ -449,13 +462,14 @@ rounded_square (cairo_t *cr,
 
 	radius2 = h - radius_top_left_tri;
 
-	//Can use h to offset x because it is a square - would be radius - radius2
+	/* can use h to offset x because it is a square - would be
+	   radius - radius2 */
         cairo_arc_negative (cr, x - radius2 - radius_top_left_tri, y + radius_top_left_tri, radius2, M_PI * 2.5, M_PI * 2.0);
 	cairo_get_current_point (cr, &cx, &cy);
         cairo_arc (cr, cx + radius_top_left_tri, cy, radius_top_left_tri, M_PI * 1.0, M_PI * 1.5);
 
 
-	//cairo_get_current_point (cr, &cx, &cy);
+	/* cairo_get_current_point (cr, &cx, &cy); */
 	cairo_get_current_point (cr, &cx, &cy);
         cairo_line_to (cr, cx, cy + radius2 + radius_top_left_tri);
         cairo_line_to (cr, cx - radius2 - radius_top_left_tri , cy + radius2 + radius_top_left_tri);
@@ -582,7 +596,7 @@ gboolean pattern_vert = TRUE;
    if (enable_pixmaps == FALSE) {
 	if (gradient_repeat_direction == 1 && pattern_vert == TRUE) {
            pattern = cairo_pattern_create_linear (common_gradient_starting_point_x, common_gradient_starting_point_y, common_gradient_starting_point_x + pattern_size, common_gradient_starting_point_y);
-           //pattern = cairo_pattern_create_linear (x + w, y + pattern_size, x, y);
+           /* pattern = cairo_pattern_create_linear (x + w, y + pattern_size, x, y); */
 	} else if (gradient_repeat_direction == 2 && pattern_vert == TRUE) {
            pattern = cairo_pattern_create_linear (common_gradient_starting_point_x, common_gradient_starting_point_y, common_gradient_starting_point_x + pattern_size, common_gradient_starting_point_y + pattern_size);
 	} else  {
@@ -629,10 +643,8 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
     window_settings * ws = fs->ws;
     private_ws * pws = ws->engine_ws;
 
-   //printf("Higher - Red: %i, Green %i, Blue %i \n", pfs->window_frame_halo.color.r, pfs->window_frame_halo.color.g, pfs->window_frame_halo.color.b);
-   //The bug has already appeared here, even though I havn't done anything to the color code so far
-
-
+    /* The bug has already appeared here, even though I haven't done anything to
+       the color code so far */
 
     gdouble pleft;
     gdouble ptop;
@@ -651,18 +663,16 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
 
     h = d->height - ws->top_space - ws->titlebar_height - ws->bottom_space;
 
-
-
-    int minimised_border;
+    int minimized_border;
     float window_gap = 0;
-    //x offset due to left dip bar
+    /* x offset due to left dip bar */
     int left_bar_dip_offset = 0;
-    gboolean maximised;
+    gboolean maximized;
     gboolean enable_left_bar_dip = FALSE;
 
     cairo_set_operator (cr, CAIRO_OPERATOR_SOURCE);
 
-   int corners =
+    int corners =
         ((pws->round_top_left)?CORNER_TOPLEFT:0) |
         ((pws->round_top_right)?CORNER_TOPRIGHT:0) |
         ((pws->round_tri)?DIP_ROUND_TRI:0) |
@@ -672,405 +682,473 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
 
     if (d->state & (WNCK_WINDOW_STATE_MAXIMIZED_HORIZONTALLY | WNCK_WINDOW_STATE_MAXIMIZED_VERTICALLY)) {
 	corners = 0;
-	maximised = TRUE;
+	maximized = TRUE;
 	enable_left_bar_dip = FALSE;
 
-	if (pws->enable_maximised_colors == TRUE) {
-	  inner_color.alpha = pws->inner_maximised_alpha;
-	  inner_color.color = pws->inner_maximised_color;
-	  outer_color.alpha = pws->outer_maximised_alpha;
-	  outer_color.color = pws->outer_maximised_color;
-	  inner_title_color.alpha = pws->inner_maximised_alpha;
-	  inner_title_color.color = pws->inner_maximised_color;
-	  outer_title_color.alpha = pws->outer_maximised_alpha;
-	  outer_title_color.color = pws->outer_maximised_color;
-	} else {
-	  inner_color = pfs->inner;
-	  outer_color = pfs->outer;
-	  inner_title_color = pfs->title_inner;
-	  outer_title_color = pfs->title_outer;
+	if (pws->enable_maximised_colors == TRUE)
+	{
+	    inner_color.alpha = pws->inner_maximised_alpha;
+	    inner_color.color = pws->inner_maximised_color;
+	    outer_color.alpha = pws->outer_maximised_alpha;
+	    outer_color.color = pws->outer_maximised_color;
+	    inner_title_color.alpha = pws->inner_maximised_alpha;
+	    inner_title_color.color = pws->inner_maximised_color;
+	    outer_title_color.alpha = pws->outer_maximised_alpha;
+	    outer_title_color.color = pws->outer_maximised_color;
+	}
+	else
+	{
+	    inner_color = pfs->inner;
+	    outer_color = pfs->outer;
+	    inner_title_color = pfs->title_inner;
+	    outer_title_color = pfs->title_outer;
 	}
 
-	minimised_border = 0;
+	minimized_border = 0;
 	window_gap = 0.5;
 
-    } else {
-	maximised = FALSE;
-  	minimised_border = pws->minimised_border;
-	//printf("Setting large border widths");
+    }
+    else
+    {
+	maximized = FALSE;
+	minimized_border = pws->minimised_border;
 	window_gap = pws->window_gap;
 	inner_color = pfs->inner;
 	outer_color = pfs->outer;
         inner_title_color = pfs->title_inner;
 	outer_title_color = pfs->title_outer;
 
-	if(pws->enable_left_bar_dip == TRUE && !(d->state & (WNCK_WINDOW_STATE_SHADED))) {
-	   enable_left_bar_dip = TRUE;
-   	   left_bar_dip_offset = (2 * pws->left_bar_dip_radius);
+	if (pws->enable_left_bar_dip == TRUE &&
+	  !(d->state & (WNCK_WINDOW_STATE_SHADED)))
+	{
+	    enable_left_bar_dip = TRUE;
+	    left_bar_dip_offset = (2 * pws->left_bar_dip_radius);
 
-	   if (pws->done_indent == FALSE && ws->tobj_layout[0] != '(') {
-	   	char *layout;
+	    if (pws->done_indent == FALSE && ws->tobj_layout[0] != '(')
+	    {
+		char *layout;
 		layout = g_strdup_printf("(-%i)%s", left_bar_dip_offset,ws->tobj_layout);
-        g_free(ws->tobj_layout);
-        ws->tobj_layout = layout;
-	    pws->done_indent = TRUE;
-	   }
+		g_free(ws->tobj_layout);
+		ws->tobj_layout = layout;
+		pws->done_indent = TRUE;
+	    }
 
-	   //sprintf(ws->tobj_layout, "(-%i)%s", left_bar_dip_offset, layout); 89
-	   //pango_layout_set_indent(d->layout, 20000);
-	   //pws->round_bottom_left = FALSE;
+	    /* sprintf(ws->tobj_layout, "(-%i)%s", left_bar_dip_offset, layout);
+	       pango_layout_set_indent(d->layout, 20000);
+	       pws->round_bottom_left = FALSE; */
 	}
     }
 
-//   pfs->title_outer.alpha = 0.0;
+    /* pfs->title_outer.alpha = 0.0; */
 
-////////////DRAW FRAME///////////////////////////////////////////
-	// always_allow 1 = radius_top_left
-	// always_allow 2 = radius_top_right
-	// always_allow 3 = radius_bottom_left
-	// always_allow 4 = radius_bottom_right
+    /* ======= DRAW FRAME ======= */
+    /* always_allow 1 = radius_top_left
+       always_allow 2 = radius_top_right
+       always_allow 3 = radius_bottom_left
+       always_allow 4 = radius_bottom_right */
 
-	double width = x2 - x1 + (window_gap * 2);
-	double x_start = x1 - window_gap;
-	double x_end = x2 + window_gap;
-	double pane_1_width = pws->title_bar_dip_title_width;
-	double title_bar_dip_dip_width = width - (pws->title_bar_dip_title_width + pws->title_bar_dip_button_width);
-	gboolean enable_dip;
+    double width = x2 - x1 + (window_gap * 2);
+    double x_start = x1 - window_gap;
+    double x_end = x2 + window_gap;
+    double pane_1_width = pws->title_bar_dip_title_width;
+    double title_bar_dip_dip_width = width -
+      (pws->title_bar_dip_title_width + pws->title_bar_dip_button_width);
+    gboolean enable_dip;
 
-	//printf("Frame width: %f - Pane Width: %f\n", width, pane_1_width);
-        //fflush(stdout);
+    enable_dip = FALSE;
+     gboolean do_button_part= TRUE;
+    double title_bar_dip_radius = 0;
+    double title_bar_dip_radius_offset = 0;
 
-	enable_dip = FALSE;
- 	gboolean do_button_part= TRUE;
-	double title_bar_dip_radius = 0;
-	double title_bar_dip_radius_offset = 0;
+    /* if ((owidth=get_title_object_width(ws->tobj_layout[i],ws,d))==-1) */
 
-//	  printf("%s\n", d->tobj_item_state[TBT_TITLE]);
-//        if ((owidth=get_title_object_width(ws->tobj_layout[i],ws,d))==-1)
+    /* TIDY ALL THIS UP! -lazy */
+    /* maximized causes problems */
+    if (maximized == FALSE && pws->enable_bar_dip_button_part == FALSE)
+	do_button_part = FALSE;
 
-//TIDY ALL THIS UP! -lazy
- //Maximised causes problems
-  if (maximised == FALSE && pws->enable_bar_dip_button_part == FALSE) {
-    do_button_part = FALSE;
-  }
-
-
-	  if (pws->enable_title_bar_dip == TRUE && maximised == FALSE && ((pws->title_bar_dip_title_width + pws->title_bar_dip_button_width) < width)) {
-	    enable_dip = TRUE;
-	    title_bar_dip_radius = pws->title_bar_dip_radius;
-	  	if(pws->round_tri == TRUE) {
-	    	  title_bar_dip_radius_offset = top - 0.5 + minimised_border;
-	  	}
-	  } else {
- 	    do_button_part= TRUE;
-	  }
-
-
-////////////////////////////////////
-
-/*   ORDER radius_top_left, radius_top_right, radius_bottom_left, radius_bottom_right, radius_tri_left, radius_tri_right */
-
-
-int gradient_repeat_height;
-int gradient_repeat_direction=0;
-alpha_color lower_frame_gradient_inner;
-alpha_color lower_frame_gradient_outer;
-  if ((pfs->gradient_repeat_enabled == TRUE && maximised == FALSE) | (pfs->gradient_repeat_enabled == TRUE && pws->gradient_repeat_disabled_maximised == FALSE && maximised == TRUE)) {
-    gradient_repeat_height = pfs->gradient_repeat_height;
-    //The bottom gradient is reversed so you have to flip it round
-            lower_frame_gradient_inner = outer_color;
-	    lower_frame_gradient_outer = inner_color;
-    if (pfs->gradient_repeat_direction_vertical == TRUE) {
-       gradient_repeat_direction = 1;
-    } else if (pfs->gradient_repeat_direction_diagonal == TRUE) {
-       gradient_repeat_direction = 2;
-    } else {
-       gradient_repeat_direction = 0;
+    if (pws->enable_title_bar_dip == TRUE && maximized == FALSE &&
+      ((pws->title_bar_dip_title_width + pws->title_bar_dip_button_width) < width))
+    {
+	enable_dip = TRUE;
+	title_bar_dip_radius = pws->title_bar_dip_radius;
+	if(pws->round_tri == TRUE)
+	    title_bar_dip_radius_offset = top - 0.5 + minimized_border;
     }
-  } else {
-            lower_frame_gradient_inner = inner_color;
-	    lower_frame_gradient_outer = outer_color;
-    	    gradient_repeat_height = 0;
-  }
+    else
+	do_button_part= TRUE;
+
+    /* ========================== */
 
 
-   if (enable_dip == TRUE) {
+    /* ORDER radius_top_left, radius_top_right, radius_bottom_left,
+       radius_bottom_right, radius_tri_left, radius_tri_right */
 
-
-////////////////////////////////Trim text//////////////////////////////////////////
-        PangoLayoutLine *line;
-
-   int name_length = pane_1_width * 1000 - (2000 * ptop);
-   pango_layout_set_width(d->layout, name_length);
-   //char name[strlen(pango_layout_get_text(d->layout)) + 3];
-   const char *name;
-   name = pango_layout_get_text(d->layout);
-   pango_layout_set_wrap (d->layout, PANGO_WRAP_CHAR);
-
-//////// //if anyone reports segfaults look at this first///////////////////////////
-   if (pango_layout_get_line_count (d->layout) > 1) {
-        line = pango_layout_get_line (d->layout, 0);
-        name = g_strndup (name, line->length - 3);
-	//name = strcat(name, "...");
-	pango_layout_set_text (d->layout, name, line->length);
+    int gradient_repeat_height;
+    int gradient_repeat_direction = 0;
+    alpha_color lower_frame_gradient_inner;
+    alpha_color lower_frame_gradient_outer;
+    if ((pfs->gradient_repeat_enabled == TRUE && maximized == FALSE) |
+        (pfs->gradient_repeat_enabled == TRUE &&
+         pws->gradient_repeat_disabled_maximised == FALSE && maximized == TRUE))
+    {
+	gradient_repeat_height = pfs->gradient_repeat_height;
+	/* the bottom gradient is reversed so you have to flip it round */
+	lower_frame_gradient_inner = outer_color;
+	lower_frame_gradient_outer = inner_color;
+	if (pfs->gradient_repeat_direction_vertical == TRUE)
+	    gradient_repeat_direction = 1;
+	else if (pfs->gradient_repeat_direction_diagonal == TRUE)
+	    gradient_repeat_direction = 2;
+	else
+	    gradient_repeat_direction = 0;
     }
- ///////////////////////////////////////////////////////////////////////////////////
+    else
+    {
+	lower_frame_gradient_inner = inner_color;
+	lower_frame_gradient_outer = outer_color;
+	gradient_repeat_height = 0;
+    }
 
 
-///////////////////////////////Pixmaps//////////////////////////////////////////
-gboolean pixmaps_titlebarpart_enabled = FALSE;
-gboolean pixmaps_buttonpart_enabled = FALSE;
-if (pws->pixmaps.titlebarpart_enabled == TRUE) {
-	pixmaps_titlebarpart_enabled = TRUE;
-}
+    if (enable_dip == TRUE)
+    {
 
-if (pws->pixmaps.buttonpart_enabled == TRUE) {
-	pixmaps_buttonpart_enabled = TRUE;
-}
+	/* ======= TRIM TEXT ======= */
+	PangoLayoutLine *line;
 
-///////////////////////////////////////////////////////////////////////////////////
+	int name_length = pane_1_width * 1000 - (2000 * ptop);
+	pango_layout_set_width(d->layout, name_length);
+	/* char name[strlen(pango_layout_get_text(d->layout)) + 3]; */
+	const char *name;
+	name = pango_layout_get_text(d->layout);
+	pango_layout_set_wrap (d->layout, PANGO_WRAP_CHAR);
 
+	/* ===== if anyone reports segfaults look at this first ===== */
+	if (pango_layout_get_line_count (d->layout) > 1)
+	{
+	    line = pango_layout_get_line (d->layout, 0);
+	    name = g_strndup (name, line->length - 3);
+	    /* name = strcat(name, "..."); */
+	    pango_layout_set_text (d->layout, name, line->length);
+	}
 
-    fill_rounded_square (cr,
-            x_start - minimised_border - left_bar_dip_offset,
-            y1 + 0.5 - minimised_border,
-            pane_1_width + minimised_border - title_bar_dip_radius_offset,
-            top - 0.5 + minimised_border,
-            (CORNER_TOPRIGHT | CORNER_TOPLEFT | DIP_ROUND_TRI)  & corners,
-            &inner_title_color,&outer_title_color,
-            SHADE_TOP, ws,
-            pws->titlebar_radius, title_bar_dip_radius, 0, 0, title_bar_dip_radius, 0, 2, FALSE, 0, FALSE, 0, gradient_repeat_height, gradient_repeat_direction, x1, y1, pws->pixmaps.titlebar_surface, pixmaps_titlebarpart_enabled, pws->pixmaps.titlebarpart_repeat_enabled);
-
-  if (pws->enable_bar_dip_button_part == TRUE) {
-   fill_rounded_square (cr,
-            x_end - pws->title_bar_dip_button_width - left_bar_dip_offset + title_bar_dip_radius_offset,
-            y1 + 0.5 - minimised_border,
-            pws->title_bar_dip_button_width + minimised_border + left_bar_dip_offset - title_bar_dip_radius_offset,
-            top - 0.5 + minimised_border,
-            (CORNER_TOPLEFT | CORNER_TOPRIGHT | DIP_ROUND_TRI) & corners,
-            &inner_title_color,&outer_title_color,
-            SHADE_TOP, ws,
-            title_bar_dip_radius, pws->titlebar_radius, 0, 0, 0, title_bar_dip_radius, 1, FALSE, 0, FALSE, 0, gradient_repeat_height, gradient_repeat_direction, x1, y1, pws->pixmaps.titlebar_surface_buttons, pixmaps_buttonpart_enabled, pws->pixmaps.buttonpart_repeat_enabled);
-  }
+	/* ========================= */
 
 
+	/* ======== PIXMAPS ======== */
+	gboolean pixmaps_titlebarpart_enabled = FALSE;
+	gboolean pixmaps_buttonpart_enabled = FALSE;
+	if (pws->pixmaps.titlebarpart_enabled == TRUE)
+	    pixmaps_titlebarpart_enabled = TRUE;
 
-   } else {
+	if (pws->pixmaps.buttonpart_enabled == TRUE)
+	    pixmaps_buttonpart_enabled = TRUE;
 
-    fill_rounded_square (cr,
-            x_start - minimised_border  - left_bar_dip_offset,
-            y1 + 0.5 - minimised_border,
-            width + (2* minimised_border) + left_bar_dip_offset,
-            top - 0.5 + minimised_border,
-            (CORNER_TOPLEFT | CORNER_TOPRIGHT) & corners,
-            &inner_title_color,&outer_title_color,
-            SHADE_TOP, ws,
-            pws->titlebar_radius, pws->titlebar_radius, 0, 0, 0, 0, 0, FALSE, 0, FALSE, 0, gradient_repeat_height, gradient_repeat_direction, x1, y1, pws->pixmaps.titlebar_surface_large, pws->pixmaps.titlebar_enabled, pws->pixmaps.titlebar_repeat_enabled);
+	/* ========================= */
 
-   }
+	fill_rounded_square(cr,
+			    x_start - minimized_border - left_bar_dip_offset,
+			    y1 + 0.5 - minimized_border,
+			    pane_1_width + minimized_border -
+			      title_bar_dip_radius_offset,
+			    top - 0.5 + minimized_border,
+			    (CORNER_TOPRIGHT | CORNER_TOPLEFT | DIP_ROUND_TRI)
+			      & corners,
+			    &inner_title_color, &outer_title_color, SHADE_TOP,
+			    ws, pws->titlebar_radius, title_bar_dip_radius, 0, 0,
+			    title_bar_dip_radius, 0, 2, FALSE, 0, FALSE, 0,
+			    gradient_repeat_height, gradient_repeat_direction,
+			    x1, y1, pws->pixmaps.titlebar_surface,
+			    pixmaps_titlebarpart_enabled,
+			    pws->pixmaps.titlebarpart_repeat_enabled);
+
+	if (pws->enable_bar_dip_button_part == TRUE)
+	{
+	    fill_rounded_square(cr,
+				x_end - pws->title_bar_dip_button_width -
+				  left_bar_dip_offset +
+				  title_bar_dip_radius_offset,
+				y1 + 0.5 - minimized_border,
+				pws->title_bar_dip_button_width +
+				  minimized_border + left_bar_dip_offset -
+				  title_bar_dip_radius_offset,
+				top - 0.5 + minimized_border,
+				(CORNER_TOPLEFT | CORNER_TOPRIGHT | DIP_ROUND_TRI)
+				  & corners,
+				&inner_title_color, &outer_title_color,
+				SHADE_TOP, ws, title_bar_dip_radius,
+				pws->titlebar_radius, 0, 0, 0,
+				title_bar_dip_radius, 1, FALSE, 0, FALSE, 0,
+				gradient_repeat_height, gradient_repeat_direction,
+				x1, y1, pws->pixmaps.titlebar_surface_buttons,
+				pixmaps_buttonpart_enabled,
+				pws->pixmaps.buttonpart_repeat_enabled);
+	}
+
+    }
+    else
+    {
+	fill_rounded_square(cr,
+			    x_start - minimized_border - left_bar_dip_offset,
+			    y1 + 0.5 - minimized_border,
+			    width + (2 * minimized_border) + left_bar_dip_offset,
+			    top - 0.5 + minimized_border,
+			    (CORNER_TOPLEFT | CORNER_TOPRIGHT) & corners,
+			    &inner_title_color, &outer_title_color, SHADE_TOP,
+			    ws, pws->titlebar_radius, pws->titlebar_radius,
+			    0, 0, 0, 0, 0, FALSE, 0, FALSE, 0,
+			    gradient_repeat_height, gradient_repeat_direction,
+			    x1, y1, pws->pixmaps.titlebar_surface_large,
+			    pws->pixmaps.titlebar_enabled,
+			    pws->pixmaps.titlebar_repeat_enabled);
+    }
+
+    if ((maximized == FALSE && pws->show_border_minimised == TRUE) |
+	(maximized == TRUE && pws->show_border_maximised == TRUE))
+    {
+	fill_rounded_square(cr,
+			    x_start - minimized_border - left_bar_dip_offset,
+			    y1 + top,
+			    ws->win_extents.left + minimized_border +
+			      left_bar_dip_offset, h + window_gap + 1, 0,
+			    &lower_frame_gradient_outer,
+			    &lower_frame_gradient_inner, SHADE_TOP, ws,
+			    10, 0, 0, 0, 0, 0, 0, enable_left_bar_dip,
+			    pws->left_bar_dip_radius,
+			    pws->enable_left_bar_dip_lower_part,
+			    pws->left_bar_dip_offset, gradient_repeat_height,
+			    gradient_repeat_direction, x1, y1,
+			    pws->pixmaps.titlebar_surface, FALSE, FALSE);
+
+	fill_rounded_square(cr,
+			    x_end - ws->win_extents.right, y1 + top,
+			    ws->win_extents.right + minimized_border,
+			    h + window_gap + 0.5, 0,
+			    &lower_frame_gradient_outer,
+			    &lower_frame_gradient_inner, SHADE_TOP, ws,
+			    0, 0, 0, 0, 0, 0, 0, FALSE, 0, FALSE, 0,
+			    gradient_repeat_height, gradient_repeat_direction,
+			    x1, y1, pws->pixmaps.titlebar_surface, FALSE, FALSE);
 
 
+	/* have to decrease the size of the bottom right corner as the left dip
+	   bar is cutting into it */
+	int tmp_minus = 0;
+	if (pws->enable_left_bar_dip_lower_part == FALSE &&
+	    enable_left_bar_dip == TRUE)
+	{
+	    tmp_minus = (2 * pws->left_bar_dip_radius);
+	}
 
- if ((maximised == FALSE && pws->show_border_minimised == TRUE) | (maximised == TRUE && pws->show_border_maximised == TRUE)) {
-
-
-
-    fill_rounded_square (cr,
-            x_start - minimised_border - left_bar_dip_offset,
-            y1 + top,
-            ws->win_extents.left + minimised_border + left_bar_dip_offset,
-            h+window_gap + 1,
-            0,
-            &lower_frame_gradient_outer,&lower_frame_gradient_inner,
-            SHADE_TOP, ws,
-            10, 0, 0, 0, 0, 0, 0, enable_left_bar_dip, pws->left_bar_dip_radius, pws->enable_left_bar_dip_lower_part, pws->left_bar_dip_offset, gradient_repeat_height, gradient_repeat_direction, x1, y1, pws->pixmaps.titlebar_surface, FALSE, FALSE);
-
-    fill_rounded_square (cr,
-            x_end - ws->win_extents.right,
-            y1 + top,
-            ws->win_extents.right + minimised_border,
-            h+window_gap +0.5,
-            0,
-            &lower_frame_gradient_outer,&lower_frame_gradient_inner,
-            SHADE_TOP, ws,
-            0, 0, 0, 0, 0, 0, 0, FALSE, 0, FALSE, 0, gradient_repeat_height, gradient_repeat_direction, x1, y1, pws->pixmaps.titlebar_surface, FALSE, FALSE);
-
-
-	//Have to decrease the size of the bottom right corner as the left dip bar is cutting into it
-  	int tmp_minus = 0;
- 		if (pws->enable_left_bar_dip_lower_part == FALSE && enable_left_bar_dip == TRUE) {
-   			tmp_minus = (2 * pws->left_bar_dip_radius);
- 		}
-
-    fill_rounded_square (cr,
-            x1 - window_gap - minimised_border + tmp_minus - left_bar_dip_offset,
-            y2 - ws->win_extents.bottom  + window_gap,
-            x2 - x1 + ws->win_extents.left - ws->win_extents.right -tmp_minus + left_bar_dip_offset + (window_gap *2),
-            ws->win_extents.bottom - 0.5 + minimised_border,
-            (CORNER_BOTTOMLEFT | CORNER_BOTTOMRIGHT) & corners,
-            &outer_color,&inner_color,
-            SHADE_BOTTOM,ws,
-            0, 0, 0, pws->frame_radius, pws->frame_radius, 0, 0, FALSE, 0, FALSE, 0, gradient_repeat_height, gradient_repeat_direction, x1, y1, pws->pixmaps.titlebar_surface, FALSE, FALSE);
-
-
+	fill_rounded_square(cr,
+			    x1 - window_gap - minimized_border + tmp_minus -
+			      left_bar_dip_offset,
+			    y2 - ws->win_extents.bottom  + window_gap,
+			    x2 - x1 + ws->win_extents.left -
+			      ws->win_extents.right - tmp_minus +
+			      left_bar_dip_offset + (window_gap *2),
+			    ws->win_extents.bottom - 0.5 + minimized_border,
+			    (CORNER_BOTTOMLEFT | CORNER_BOTTOMRIGHT) & corners,
+			    &outer_color, &inner_color, SHADE_BOTTOM, ws,
+			    0, 0, 0, pws->frame_radius, pws->frame_radius, 0, 0,
+			    FALSE, 0, FALSE, 0, gradient_repeat_height,
+			    gradient_repeat_direction, x1, y1,
+			    pws->pixmaps.titlebar_surface, FALSE, FALSE);
     }
 
     cairo_set_operator (cr, CAIRO_OPERATOR_OVER);
-    /* =====================titlebar separator line */
+    /* ===================== titlebar separator line */
 
-  if (pfs->separator_line.alpha != 0) {
-    cairo_set_source_alpha_color(cr,&pfs->separator_line);
-    cairo_move_to (cr, x1 + 4.5, y1 + top - 0.5);
-    cairo_rel_line_to (cr, x2 - x1 - 9, 0.0);
-    cairo_stroke (cr);
-  }
+    if (pfs->separator_line.alpha != 0)
+    {
+	cairo_set_source_alpha_color(cr,&pfs->separator_line);
+	cairo_move_to (cr, x1 + 4.5, y1 + top - 0.5);
+	cairo_rel_line_to (cr, x2 - x1 - 9, 0.0);
+	cairo_stroke (cr);
+    }
 
-    //FRAME
+    /* FRAME */
 
-     rounded_rectangle (cr,
-            x1 + 0.5, y1 + 0.5,
-            x2 - x1 - 1.0, y2 - y1 - 1.0,
-            (CORNER_TOPLEFT | CORNER_TOPRIGHT | CORNER_BOTTOMLEFT |
-             CORNER_BOTTOMRIGHT) & corners,ws,
-            pws->frame_radius);
+    rounded_rectangle(cr, x1 + 0.5, y1 + 0.5,
+		      x2 - x1 - 1.0, y2 - y1 - 1.0,
+		      (CORNER_TOPLEFT | CORNER_TOPRIGHT | CORNER_BOTTOMLEFT |
+			CORNER_BOTTOMRIGHT) & corners, ws, pws->frame_radius);
 
-    cairo_clip (cr);
+    cairo_clip(cr);
 
-    cairo_translate (cr, 1.0, 1.0);
+    cairo_translate(cr, 1.0, 1.0);
 
-if (pfs->window_highlight.alpha != 0) {
-   if (enable_dip == TRUE) {
-    rounded_rectangle_independent (cr,
-            x1 + 0.5 - minimised_border - window_gap - left_bar_dip_offset,
-	    y1 - minimised_border,
-            x2 - x1 + ( 2* (minimised_border +window_gap)) + left_bar_dip_offset,
-	    y2 - y1 - 1.0 + window_gap + ( 2* (minimised_border)),
-	    top - 0.5 + minimised_border,
-            (CORNER_TOPLEFT | CORNER_TOPRIGHT | CORNER_BOTTOMLEFT |
-             CORNER_BOTTOMRIGHT | DIP_ROUND_TRI) & corners, ws,
-            pws->titlebar_radius, pws->titlebar_radius, pws->frame_radius, pws->frame_radius, title_bar_dip_radius, minimised_border + pane_1_width - title_bar_dip_radius_offset, title_bar_dip_dip_width + (2* title_bar_dip_radius_offset), TRUE, do_button_part, enable_left_bar_dip, minimised_border + ws->win_extents.bottom, pws->left_bar_dip_radius, pws->enable_left_bar_dip_lower_part, pws->left_bar_dip_offset);
-   } else {
+    if (pfs->window_highlight.alpha != 0)
+    {
+	if (enable_dip == TRUE)
+	{
+	    rounded_rectangle_independent(cr,
+	      x1 + 0.5 - minimized_border - window_gap - left_bar_dip_offset,
+	      y1 - minimized_border,
+	      x2 - x1 + (2 * (minimized_border + window_gap)) +
+	       left_bar_dip_offset,
+	      y2 - y1 - 1.0 + window_gap + (2 * (minimized_border)),
+	      top - 0.5 + minimized_border, (CORNER_TOPLEFT | CORNER_TOPRIGHT |
+	       CORNER_BOTTOMLEFT | CORNER_BOTTOMRIGHT | DIP_ROUND_TRI) & corners,
+	      ws, pws->titlebar_radius, pws->titlebar_radius, pws->frame_radius,
+	      pws->frame_radius, title_bar_dip_radius,
+	      minimized_border + pane_1_width - title_bar_dip_radius_offset,
+	      title_bar_dip_dip_width + (2 * title_bar_dip_radius_offset),
+	      TRUE, do_button_part, enable_left_bar_dip,
+	      minimized_border + ws->win_extents.bottom,
+	      pws->left_bar_dip_radius, pws->enable_left_bar_dip_lower_part,
+	      pws->left_bar_dip_offset);
+	}
+	else
+	{
+	    rounded_rectangle_independent(cr,
+	      x1 + 0.5 - minimized_border - window_gap - left_bar_dip_offset,
+	      y1 - minimized_border,
+	      x2 - x1 + (2 * (minimized_border + window_gap)) +
+	       left_bar_dip_offset,
+	      y2 - y1 - 1.0 + window_gap + (2 * (minimized_border)),
+	      top - 0.5 + minimized_border,
+	      (CORNER_TOPLEFT | CORNER_TOPRIGHT | CORNER_BOTTOMLEFT |
+	       CORNER_BOTTOMRIGHT | DIP_ROUND_TRI) & corners,
+	      ws, pws->titlebar_radius, pws->titlebar_radius, pws->frame_radius,
+	      pws->frame_radius, 0, 0, 0, FALSE, do_button_part,
+	      enable_left_bar_dip, minimized_border + ws->win_extents.bottom,
+	      pws->left_bar_dip_radius, pws->enable_left_bar_dip_lower_part,
+	      pws->left_bar_dip_offset);
+	}
 
-    rounded_rectangle_independent (cr,
-            x1 + 0.5 - minimised_border - window_gap - left_bar_dip_offset,
-	    y1 - minimised_border,
-            x2 - x1 + ( 2* (minimised_border +window_gap)) + left_bar_dip_offset,
-	    y2 - y1 - 1.0 + window_gap + ( 2* (minimised_border)),
-	    top - 0.5 + minimised_border,
-            (CORNER_TOPLEFT | CORNER_TOPRIGHT | CORNER_BOTTOMLEFT |
-             CORNER_BOTTOMRIGHT | DIP_ROUND_TRI) & corners, ws,
-            pws->titlebar_radius, pws->titlebar_radius, pws->frame_radius, pws->frame_radius, 0, 0, 0, FALSE, do_button_part, enable_left_bar_dip, minimised_border + ws->win_extents.bottom, pws->left_bar_dip_radius, pws->enable_left_bar_dip_lower_part, pws->left_bar_dip_offset);
-   }
+	/* HIGHLIGHT HERE */
+	cairo_set_source_alpha_color(cr,&pfs->window_highlight);
+	cairo_stroke(cr);
+    }
 
+    if (pfs->window_shadow.alpha != 0)
+    {
+	cairo_reset_clip (cr);
+	cairo_translate (cr, -2.0, -2.0);
 
-    //HIGHLIGHT HERE
-    cairo_set_source_alpha_color(cr,&pfs->window_highlight);
-    cairo_stroke(cr);
+	if (enable_dip == TRUE)
+	{
+	    rounded_rectangle_independent(cr,
+	      x1 + 0.5 - minimized_border - window_gap - left_bar_dip_offset,
+	      y1 + 1.5 - minimized_border,
+	      x2 - x1 + ( 2* (minimized_border + window_gap)) +
+	       left_bar_dip_offset,
+	      y2 - y1 - 1.0 + window_gap + (2 * (minimized_border)),
+	      top - 0.5 + minimized_border,
+	      (CORNER_TOPLEFT | CORNER_TOPRIGHT | CORNER_BOTTOMLEFT |
+	       CORNER_BOTTOMRIGHT | DIP_ROUND_TRI) & corners,
+	      ws, pws->titlebar_radius, pws->titlebar_radius, pws->frame_radius,
+	      pws->frame_radius, title_bar_dip_radius,
+	      minimized_border + pane_1_width - title_bar_dip_radius_offset,
+	      title_bar_dip_dip_width + (2 * title_bar_dip_radius_offset),
+	      TRUE, do_button_part, enable_left_bar_dip,
+	      minimized_border + ws->win_extents.bottom,
+	      pws->left_bar_dip_radius, pws->enable_left_bar_dip_lower_part,
+	      pws->left_bar_dip_offset);
+	}
+	else
+	{
+	    rounded_rectangle_independent(cr,
+	      x1 + 0.5 - minimized_border -  window_gap - left_bar_dip_offset,
+	      y1 + 1.5 - minimized_border,
+	      x2 - x1 + ( 2* (minimized_border + window_gap)) +
+	       left_bar_dip_offset,
+	      y2 - y1 - 1.0 + window_gap + (2 * (minimized_border)),
+	      top - 0.5 + minimized_border,
+	      (CORNER_TOPLEFT | CORNER_TOPRIGHT | CORNER_BOTTOMLEFT |
+	       CORNER_BOTTOMRIGHT | DIP_ROUND_TRI) & corners,
+	      ws, pws->titlebar_radius, pws->titlebar_radius, pws->frame_radius,
+	      pws->frame_radius, 0, 0, 0, FALSE, do_button_part,
+	      enable_left_bar_dip, minimized_border + ws->win_extents.bottom,
+	      pws->left_bar_dip_radius, pws->enable_left_bar_dip_lower_part,
+	      pws->left_bar_dip_offset);
+	}
+
+	/* SHADOW HERE */
+	cairo_set_source_alpha_color(cr,&pfs->window_shadow);
+	cairo_stroke(cr);
+    }
+
+    if (pfs->window_frame_halo.alpha != 0)
+    {
+	cairo_reset_clip (cr);
+	cairo_translate (cr, 1.0, 1.0);
+
+	if (enable_dip == TRUE) {
+	    rounded_rectangle_independent(cr,
+	      x1 + 0.5 - minimized_border - window_gap - left_bar_dip_offset,
+	      y1 + 0.5 - minimized_border,
+              x2 - x1 + (2 * (minimized_border + window_gap)) +
+	       left_bar_dip_offset,
+	      y2 - y1 - 1.0 + window_gap + ( 2* (minimized_border)),
+	      top - 0.5 + minimized_border,
+              (CORNER_TOPLEFT | CORNER_TOPRIGHT | CORNER_BOTTOMLEFT |
+               CORNER_BOTTOMRIGHT | DIP_ROUND_TRI) & corners,
+	      ws, pws->titlebar_radius, pws->titlebar_radius, pws->frame_radius,
+	      pws->frame_radius, title_bar_dip_radius,
+	      minimized_border + pane_1_width - title_bar_dip_radius_offset,
+	      title_bar_dip_dip_width + (2 * title_bar_dip_radius_offset), TRUE,
+	      do_button_part, enable_left_bar_dip,
+	      minimized_border + ws->win_extents.bottom, pws->left_bar_dip_radius,
+	      pws->enable_left_bar_dip_lower_part, pws->left_bar_dip_offset);
+	}
+	else
+	{
+	    rounded_rectangle_independent(cr,
+	      x1 + 0.5 - minimized_border - window_gap - left_bar_dip_offset,
+	      y1 + 0.5 - minimized_border,
+              x2 - x1 + (2 * (minimized_border + window_gap)) + left_bar_dip_offset,
+	      y2 - y1 - 1.5 + window_gap + (2 * (minimized_border)),
+	      top - 0.5 + minimized_border,
+              (CORNER_TOPLEFT | CORNER_TOPRIGHT | CORNER_BOTTOMLEFT |
+               CORNER_BOTTOMRIGHT | DIP_ROUND_TRI) & corners,
+	      ws, pws->titlebar_radius, pws->titlebar_radius, pws->frame_radius,
+	      pws->frame_radius, 0, 0, 0, FALSE, do_button_part,
+	      enable_left_bar_dip, minimized_border + ws->win_extents.bottom,
+	      pws->left_bar_dip_radius, pws->enable_left_bar_dip_lower_part,
+	      pws->left_bar_dip_offset);
+	}
+
+	cairo_set_source_alpha_color(cr,&pfs->window_frame_halo);
+	cairo_stroke (cr);
+    }
+
+    /* INNER STUFF */
+
+    /* TODO: make this a bit more pixel-perfect... but it works for now */
+
+    if (pfs->contents_shadow.alpha != 0)
+    {
+	cairo_set_line_width(cr,1.0);
+
+	cairo_move_to(cr,pleft+pwidth+1.5,ptop-1);
+	cairo_rel_line_to(cr,-pwidth-2.5,0);
+	 cairo_rel_line_to(cr,0,pheight+2.5);
+	cairo_set_source_alpha_color(cr,&pfs->contents_shadow);
+	cairo_stroke(cr);
+    }
+
+    if (pfs->contents_highlight.alpha != 0) {
+	cairo_move_to(cr,pleft+pwidth+1,ptop-1.5);
+	cairo_rel_line_to(cr,0,pheight+2.5);
+	cairo_rel_line_to(cr,-pwidth-2.5,0);
+	cairo_set_source_alpha_color(cr,&pfs->contents_highlight);
+	cairo_stroke(cr);
+    }
+
+    if (pfs->contents_halo.alpha != 0) {
+	cairo_move_to(cr,pleft,ptop);
+	cairo_rel_line_to(cr,pwidth,0);
+	cairo_rel_line_to(cr,0,pheight);
+	cairo_rel_line_to(cr,-pwidth,0);
+	cairo_rel_line_to(cr,0,-pheight);
+	cairo_set_source_alpha_color(cr,&pfs->contents_halo);
+	cairo_stroke(cr);
+    }
 }
 
-if (pfs->window_shadow.alpha != 0) {
-
-    cairo_reset_clip (cr);
-    cairo_translate (cr, -2.0, -2.0);
-
-   if (enable_dip == TRUE) {
-    rounded_rectangle_independent (cr,
-            x1 + 0.5 - minimised_border - window_gap - left_bar_dip_offset,
-	    y1 + 1.5 - minimised_border,
-            x2 - x1 + ( 2* (minimised_border +window_gap)) + left_bar_dip_offset,
-	    y2 - y1 - 1.0 + window_gap + ( 2* (minimised_border)),
-	    top - 0.5 + minimised_border,
-            (CORNER_TOPLEFT | CORNER_TOPRIGHT | CORNER_BOTTOMLEFT |
-             CORNER_BOTTOMRIGHT | DIP_ROUND_TRI) & corners, ws,
-            pws->titlebar_radius, pws->titlebar_radius, pws->frame_radius, pws->frame_radius, title_bar_dip_radius, minimised_border + pane_1_width - title_bar_dip_radius_offset, title_bar_dip_dip_width + (2 * title_bar_dip_radius_offset), TRUE, do_button_part, enable_left_bar_dip, minimised_border + ws->win_extents.bottom, pws->left_bar_dip_radius, pws->enable_left_bar_dip_lower_part, pws->left_bar_dip_offset);
-   } else {
-
-    rounded_rectangle_independent (cr,
-            x1 + 0.5 - minimised_border - window_gap - left_bar_dip_offset,
-	    y1 + 1.5 - minimised_border,
-            x2 - x1 + ( 2* (minimised_border +window_gap)) + left_bar_dip_offset,
-	    y2 - y1 - 1.0 + window_gap + ( 2* (minimised_border)),
-	    top - 0.5 + minimised_border,
-            (CORNER_TOPLEFT | CORNER_TOPRIGHT | CORNER_BOTTOMLEFT |
-             CORNER_BOTTOMRIGHT | DIP_ROUND_TRI) & corners, ws,
-            pws->titlebar_radius, pws->titlebar_radius, pws->frame_radius, pws->frame_radius, 0, 0, 0, FALSE, do_button_part, enable_left_bar_dip, minimised_border + ws->win_extents.bottom, pws->left_bar_dip_radius, pws->enable_left_bar_dip_lower_part, pws->left_bar_dip_offset);
-
-   }
-
-
-
-    //SHADOW HERE
-    cairo_set_source_alpha_color(cr,&pfs->window_shadow);
-    cairo_stroke(cr);
-}
-
-
-if (pfs->window_frame_halo.alpha != 0) {
-	printf("ok\n");
-    cairo_reset_clip (cr);
-    cairo_translate (cr, 1.0, 1.0);
-
-   if (enable_dip == TRUE) {
-    rounded_rectangle_independent (cr,
-            x1 + 0.5 - minimised_border - window_gap - left_bar_dip_offset,
-	    y1 + 0.5 - minimised_border,
-            x2 - x1 + ( 2* (minimised_border +window_gap)) + left_bar_dip_offset,
-	    y2 - y1 - 1.0 + window_gap + ( 2* (minimised_border)),
-	    top - 0.5 + minimised_border,
-            (CORNER_TOPLEFT | CORNER_TOPRIGHT | CORNER_BOTTOMLEFT |
-             CORNER_BOTTOMRIGHT | DIP_ROUND_TRI) & corners, ws,
-            pws->titlebar_radius, pws->titlebar_radius, pws->frame_radius, pws->frame_radius, title_bar_dip_radius, minimised_border + pane_1_width - title_bar_dip_radius_offset, title_bar_dip_dip_width + (2* title_bar_dip_radius_offset), TRUE, do_button_part, enable_left_bar_dip, minimised_border + ws->win_extents.bottom, pws->left_bar_dip_radius, pws->enable_left_bar_dip_lower_part, pws->left_bar_dip_offset);
-   } else {
-
-    rounded_rectangle_independent (cr,
-            x1 + 0.5 - minimised_border - window_gap - left_bar_dip_offset,
-	    y1 + 0.5 - minimised_border,
-            x2 - x1 + ( 2* (minimised_border +window_gap)) + left_bar_dip_offset,
-	    y2 - y1 - 1.5 + window_gap + ( 2* (minimised_border)),
-	    top - 0.5 + minimised_border,
-            (CORNER_TOPLEFT | CORNER_TOPRIGHT | CORNER_BOTTOMLEFT |
-             CORNER_BOTTOMRIGHT | DIP_ROUND_TRI) & corners, ws,
-            pws->titlebar_radius, pws->titlebar_radius, pws->frame_radius, pws->frame_radius, 0, 0, 0, FALSE, do_button_part, enable_left_bar_dip, minimised_border + ws->win_extents.bottom, pws->left_bar_dip_radius, pws->enable_left_bar_dip_lower_part, pws->left_bar_dip_offset);
-
-   }
-
-    cairo_set_source_alpha_color(cr,&pfs->window_frame_halo);
-    cairo_stroke (cr);
-
-}
-
-    //INNER STUFF
-
-      //TODO - make this a bit more pixel-perfect...but it works for now
-
-  if (pfs->contents_shadow.alpha != 0) {
-    cairo_set_line_width(cr,1.0);
-
-    cairo_move_to(cr,pleft+pwidth+1.5,ptop-1);
-    cairo_rel_line_to(cr,-pwidth-2.5,0);
-    cairo_rel_line_to(cr,0,pheight+2.5);
-    cairo_set_source_alpha_color(cr,&pfs->contents_shadow);
-    cairo_stroke(cr);
-  }
-
-  if (pfs->contents_highlight.alpha != 0) {
-    cairo_move_to(cr,pleft+pwidth+1,ptop-1.5);
-    cairo_rel_line_to(cr,0,pheight+2.5);
-    cairo_rel_line_to(cr,-pwidth-2.5,0);
-    cairo_set_source_alpha_color(cr,&pfs->contents_highlight);
-    cairo_stroke(cr);
-  }
-
-  if (pfs->contents_halo.alpha != 0) {
-    cairo_move_to(cr,pleft,ptop);
-    cairo_rel_line_to(cr,pwidth,0);
-    cairo_rel_line_to(cr,0,pheight);
-    cairo_rel_line_to(cr,-pwidth,0);
-    cairo_rel_line_to(cr,0,-pheight);
-    cairo_set_source_alpha_color(cr,&pfs->contents_halo);
-    cairo_stroke(cr);
-  }
-}
 void load_engine_settings(GKeyFile * f, window_settings * ws)
 {
     private_ws * pws = ws->engine_ws;
@@ -1113,16 +1191,16 @@ void load_engine_settings(GKeyFile * f, window_settings * ws)
     load_int_setting(f,&pws->left_bar_dip_radius,"left_bar_dip_radius",SECT);
     load_int_setting(f,&pws->left_bar_dip_offset,"left_bar_dip_offset",SECT);
 
- load_bool_setting(f,&pws->pixmaps.titlebarpart_enabled,"pixmaps_titlebarpart_enabled",SECT);
- load_bool_setting(f,&pws->pixmaps.buttonpart_enabled,"pixmaps_buttonpart_enabled",SECT);
- load_bool_setting(f,&pws->pixmaps.titlebarpart_repeat_enabled,"pixmaps_titlebarpart_repeat_enabled",SECT);
- load_bool_setting(f,&pws->pixmaps.buttonpart_repeat_enabled,"pixmaps_buttonpart_repeat_enabled",SECT);
- load_bool_setting(f,&pws->pixmaps.titlebar_repeat_enabled,"pixmaps_titlebar_repeat_enabled",SECT);
- load_bool_setting(f,&pws->pixmaps.titlebar_enabled,"pixmaps_titlebar_enabled",SECT);
+    load_bool_setting(f,&pws->pixmaps.titlebarpart_enabled,"pixmaps_titlebarpart_enabled",SECT);
+    load_bool_setting(f,&pws->pixmaps.buttonpart_enabled,"pixmaps_buttonpart_enabled",SECT);
+    load_bool_setting(f,&pws->pixmaps.titlebarpart_repeat_enabled,"pixmaps_titlebarpart_repeat_enabled",SECT);
+    load_bool_setting(f,&pws->pixmaps.buttonpart_repeat_enabled,"pixmaps_buttonpart_repeat_enabled",SECT);
+    load_bool_setting(f,&pws->pixmaps.titlebar_repeat_enabled,"pixmaps_titlebar_repeat_enabled",SECT);
+    load_bool_setting(f,&pws->pixmaps.titlebar_enabled,"pixmaps_titlebar_enabled",SECT);
 
- pws->pixmaps.titlebar_surface = cairo_image_surface_create_from_png(make_filename("pixmaps","titlebarpart","png"));
- pws->pixmaps.titlebar_surface_buttons = cairo_image_surface_create_from_png(make_filename("pixmaps","buttonpart","png"));
- pws->pixmaps.titlebar_surface_large = cairo_image_surface_create_from_png(make_filename("pixmaps","titlebar","png"));
+    pws->pixmaps.titlebar_surface = cairo_image_surface_create_from_png(make_filename("pixmaps","titlebarpart","png"));
+    pws->pixmaps.titlebar_surface_buttons = cairo_image_surface_create_from_png(make_filename("pixmaps","buttonpart","png"));
+    pws->pixmaps.titlebar_surface_large = cairo_image_surface_create_from_png(make_filename("pixmaps","titlebar","png"));
 
     load_bool_setting(f,&((private_fs *)ws->fs_act->engine_fs)->gradient_repeat_enabled,"active_gradient_repeat_enabled" ,SECT);
     load_bool_setting(f,&((private_fs *)ws->fs_inact->engine_fs)->gradient_repeat_enabled,"inactive_gradient_repeat_enabled" ,SECT);
@@ -1230,8 +1308,6 @@ void layout_layout_frame(GtkWidget * vbox)
     GtkWidget * hbox;
     GtkWidget * junk;
 
-
-
     hbox = gtk_hbox_new(FALSE,2);
     gtk_box_pack_startC(vbox,hbox,FALSE,FALSE,0);
     gtk_box_pack_startC(hbox,gtk_label_new(_("Border Gap")),FALSE,FALSE,0);
@@ -1257,10 +1333,6 @@ void layout_layout_frame(GtkWidget * vbox)
     junk = scaler_new(0,30,1);
     gtk_box_pack_startC(hbox,junk,TRUE,TRUE,0);
     register_setting(junk,ST_FLOAT,SECT,"minimised_border");
-
-
-
-
 }
 
 void layout_left_bar_frame(GtkWidget * vbox)
@@ -1293,11 +1365,6 @@ void layout_left_bar_frame(GtkWidget * vbox)
     junk = scaler_new(0,90,1);
     gtk_box_pack_startC(hbox,junk,TRUE,TRUE,0);
     register_setting(junk,ST_INT,SECT,"left_bar_dip_offset");
-
-
-
-
-
 }
 
 
@@ -1305,8 +1372,6 @@ void layout_title_bar_frame(GtkWidget * vbox)
 {
     GtkWidget * hbox;
     GtkWidget * junk;
-
-
 
     hbox = gtk_hbox_new(FALSE,2);
     gtk_box_pack_startC(vbox,hbox,FALSE,FALSE,0);
@@ -1564,10 +1629,10 @@ void layout_pixmaps(GtkWidget * vbox) {
     GtkFileFilter * filter;
     GtkWidget * junk;
     GtkWidget * title_bar_image;
-    //SettingItem * set;
+    /* SettingItem *set; */
     GtkWidget * hbox;
 
-///////////////////////
+    /* ======================== */
 
     junk = gtk_check_button_new_with_label(_("Enable Title Part Pixmap?"));
     gtk_box_pack_startC(vbox,junk,FALSE,FALSE,0);
@@ -1595,13 +1660,13 @@ void layout_pixmaps(GtkWidget * vbox) {
     title_bar_image = gtk_image_new();
 
     /* set =*/ register_img_file_setting(file_selector,"pixmaps","titlebarpart",GTK_IMAGE(title_bar_image));
-///////////////////////////
+    /* ======================== */
 #if GTK_CHECK_VERSION(3, 2, 0)
     gtk_box_pack_startC(hbox,gtk_separator_new (GTK_ORIENTATION_VERTICAL),FALSE,FALSE,0);
 #else
     gtk_box_pack_startC(hbox,gtk_vseparator_new(),FALSE,FALSE,0);
 #endif
-///////////////////////////
+    /* ======================== */
 
     junk = gtk_check_button_new_with_label(_("Enable Button Part Pixmap?"));
     gtk_box_pack_startC(vbox,junk,FALSE,FALSE,0);
@@ -1630,13 +1695,13 @@ void layout_pixmaps(GtkWidget * vbox) {
     title_bar_image = gtk_image_new();
 
     /*set =*/ register_img_file_setting(file_selector,"pixmaps","buttonpart",GTK_IMAGE(title_bar_image));
-///////////////////////////////////////
+    /* ======================== */
 #if GTK_CHECK_VERSION(3, 2, 0)
     gtk_box_pack_startC(hbox,gtk_separator_new (GTK_ORIENTATION_VERTICAL),FALSE,FALSE,0);
 #else
     gtk_box_pack_startC(hbox,gtk_vseparator_new(),FALSE,FALSE,0);
 #endif
-///////////////////////////
+    /* ======================== */
 
     junk = gtk_check_button_new_with_label(_("Enable Titlebar Pixmap?"));
     gtk_box_pack_startC(vbox,junk,FALSE,FALSE,0);
@@ -1665,7 +1730,7 @@ void layout_pixmaps(GtkWidget * vbox) {
     title_bar_image = gtk_image_new();
 
     /* set =*/ register_img_file_setting(file_selector,"pixmaps","titlebar",GTK_IMAGE(title_bar_image));
-///////////////////////////////////////
+    /* ======================== */
 
 }
 void layout_engine_settings(GtkWidget * vbox)

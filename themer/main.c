@@ -110,7 +110,7 @@ static void theme_list_append(gchar * value,gchar * dir, gchar * fil)
     if (val) g_free(val);
     g_free(path);
     {
-        //create the Theme column data
+        /* create the Theme column data */
         gchar * format =
             _("<b><big>%s</big></b>\n"
             "<i>%s</i>\n"
@@ -171,13 +171,13 @@ static void theme_list_append(gchar * value,gchar * dir, gchar * fil)
     p = gdk_pixbuf_new_from_file_at_size(imgpath,-1,100,NULL);
     if (p)
     {
-        gtk_list_store_set(ThemeList,&iter,7,p,-1); // should own a ref to p
+        gtk_list_store_set(ThemeList,&iter,7,p,-1); /* should own a ref to p */
         g_object_unref(p);
     }
     else
     {
-        //p = gdk_pixbuf_new(GDK_COLORSPACE_RGB,TRUE,8,1,1);
-        //p = gdk_pixbuf_new_from_file(,NULL);
+        /* p = gdk_pixbuf_new(GDK_COLORSPACE_RGB,TRUE,8,1,1);
+           p = gdk_pixbuf_new_from_file(,NULL); */
         p = gtk_widget_render_icon(ThemeSelector,GTK_STOCK_MISSING_IMAGE,GTK_ICON_SIZE_LARGE_TOOLBAR,"themelist");
         gtk_list_store_set(ThemeList,&iter,7,p,-1);
         g_object_unref(p);
@@ -196,7 +196,7 @@ static void theme_scan_dir(gchar * dir,gboolean writable)
             gchar * fn = g_strdup_printf("%s/%s/theme.ini",dir,n);
             if (g_file_test(fn,G_FILE_TEST_IS_REGULAR))
             {
-                //actually add it here
+                /* actually add it here */
                 gchar * o;
                 if (writable)
                     o = g_strdup(n);
@@ -292,7 +292,7 @@ static void cb_load(GtkWidget *w, gpointer d)
     dist=FALSE;
     GtkTreeIter iter;
     GtkTreeModel *model;
-    //first normalize the name
+    /* first normalize the name */
     if (gtk_tree_selection_get_selected(ThemeSelect,&model,&iter))
     {
         gtk_tree_model_get(model,&iter,0,&at,-1);
@@ -390,7 +390,7 @@ static void cb_load(GtkWidget *w, gpointer d)
 }
 static gchar * import_theme(gchar * file)
 {
-    //first make sure we have our location
+    /* first make sure we have our location */
     gchar * fn, * at, * ot, *pot, *rstr;
     gint ex;
     ot = g_strdup(file);
@@ -429,7 +429,7 @@ static gchar * import_theme(gchar * file)
     g_free(fn);
     g_free(ot);
     g_free(at);
- //   info_dialog(_("Theme Imported"));
+    /* info_dialog(_("Theme Imported")); */
     return rstr;
 }
 static void export_theme(gchar * file)
@@ -441,7 +441,8 @@ static void export_theme(gchar * file)
             themename[0]=='*' || strchr(themename,'/'))
     {
         error_dialog(_("Invalid Theme Name\nCould Not Export"));
-        //these conditions should already have been handled but another check is ok
+        /* these conditions should already have been handled but another check
+           is ok */
         return;
     }
     if (!g_str_has_suffix(file,".emerald"))
@@ -473,7 +474,7 @@ static void cb_save(GtkWidget *w, gpointer d)
     GKeyFile * f;
     gchar * fn, *at, *mt, *gt;
     GDir * dr;
-    //first normalize the name
+    /* first normalize the name */
     if (! (at=(gchar *) gtk_entry_get_text(GTK_ENTRY(EntryBox))))
         return;
     if (strlen(at)>=1 && at[0] == '*')
@@ -503,7 +504,7 @@ static void cb_save(GtkWidget *w, gpointer d)
     }
     mt = at;
     at = g_key_file_to_data(f,NULL,NULL);
-    //little fix since we're now copying from ~/.emerald/theme/*
+    /* little fix since we're now copying from ~/.emerald/theme/* */
     g_free(fn);
     fn = g_strdup_printf("%s/.emerald/theme/theme.ini",g_get_home_dir());
     if (at && !g_file_set_contents(fn,at,-1,NULL))
@@ -562,7 +563,7 @@ static void cb_delete(GtkWidget *w, gpointer d)
     GtkTreeIter iter;
     GtkTreeModel *model;
     gchar * fn, *at;
-    //first normalize the name
+    /* first normalize the name */
     if (gtk_tree_selection_get_selected(ThemeSelect,&model,&iter))
     {
         gtk_tree_model_get(model,&iter,0,&at,-1);
@@ -764,8 +765,8 @@ void layout_window_frame(GtkWidget * vbox,gboolean active)
 }
 void add_row(GtkWidget * vbox, GtkWidget * item, gchar * title)
 {
-    //gtk_box_pack_startC(hbox,gtk_label_new(title),FALSE,FALSE,0);
-    //gtk_box_pack_endC(hbox,item,TRUE,TRUE,0);
+    /* gtk_box_pack_startC(hbox,gtk_label_new(title),FALSE,FALSE,0);
+       gtk_box_pack_endC(hbox,item,TRUE,TRUE,0); */
     table_append(gtk_label_new(title),FALSE);
     table_append(item,TRUE);
 }
@@ -852,13 +853,14 @@ void layout_title_frame(GtkWidget * vbox)
                 "S=Shade, U/A=On Top(Up/Above)\n"
                 "Y=Sticky, (#)=# pixels space, ex: (5)\n"
                 "F=SuperMaximize\n")
-                //"U=On Top, D=On Bottom, S=Shade\n"
-                //"Y=Sticky (on All Desktops)\n"
+                /*"U=On Top, D=On Bottom, S=Shade\n"
+                  "Y=Sticky (on All Desktops)\n" */
                 ),FALSE,FALSE,0);
 
-    /*junk = gtk_check_button_new_with_label("Use active colors for whole active frame, not just titlebar.");
-    gtk_box_pack_startC(vbox,junk,FALSE,FALSE,0);
-    register_setting(junk,ST_BOOL,SECT,"use_active_colors");*/
+    /* junk =
+	 gtk_check_button_new_with_label("Use active colors for whole active frame, not just titlebar.");
+       gtk_box_pack_startC(vbox,junk,FALSE,FALSE,0);
+       register_setting(junk,ST_BOOL,SECT,"use_active_colors"); */
 }
 void add_meta_string_value(gchar * title, gchar * key)
 {
@@ -870,7 +872,7 @@ void add_meta_string_value(gchar * title, gchar * key)
 }
 static void cb_export(GtkWidget * w, gpointer p)
 {
-    //get a filename
+    /* get a filename */
     GtkWidget * dialog = gtk_file_chooser_dialog_new(
             _("Export Theme..."),GTK_WINDOW(mainWindow),
             GTK_FILE_CHOOSER_ACTION_SAVE,
@@ -1012,7 +1014,7 @@ void layout_left_global_pane(GtkWidget * hbox)
 
     layout_window_frame(build_frame(vbox,_("Active Window"),FALSE),TRUE);
     layout_window_frame(build_frame(vbox,_("Inactive Window"),FALSE),FALSE);
-    //layout stuff here.
+    /* layout stuff here */
 }
 void layout_right_global_pane(GtkWidget * hbox)
 {
@@ -1205,7 +1207,7 @@ void layout_settings_pane(GtkWidget * vbox)
     table_append(combo,FALSE);
     register_setting(combo,ST_SFILE_INT_COMBO,"window_icon",
             "double_click_action");*/
-    //TODO - implement the emerald side of these, so for now they won't be here.
+    /* TODO: implement the emerald side of these, so for now they won't be here. */
 }
 void layout_engine_pane(GtkWidget * vbox)
 {
@@ -1227,7 +1229,7 @@ void layout_lower_pane(GtkWidget * vbox)
 {
     GtkWidget * notebook;
 
-    //layout_mid_pane(vbox);
+    /* layout_mid_pane(vbox); */
 
     notebook = gtk_notebook_new();
     gtk_box_pack_startC(vbox,notebook,TRUE,TRUE,0);
@@ -1284,7 +1286,7 @@ gboolean is_visible(GtkTreeModel * model, GtkTreeIter *iter, gpointer p)
         }
         g_free(at);
     }
-    //0, 2, 3, 5
+    /* 0, 2, 3, 5 */
     return FALSE;
 }
 void cb_clearbox(GtkWidget * w, gpointer p)
@@ -1293,7 +1295,7 @@ void cb_clearbox(GtkWidget * w, gpointer p)
 }
 static void cb_import(GtkWidget * w, gpointer p)
 {
-    //get a filename
+    /* get a filename */
     GtkWidget * dialog = gtk_file_chooser_dialog_new(
             _("Import Theme..."),GTK_WINDOW(mainWindow),
             GTK_FILE_CHOOSER_ACTION_OPEN,
@@ -1403,7 +1405,7 @@ GtkWidget * build_tree_view()
     g_object_set(MetaRenderer,"xalign",(gfloat)0.0,NULL);
     MetaColumn = gtk_tree_view_column_new_with_attributes
         ("Screenshot",MetaRenderer,"pixbuf",7,NULL);
-    //gtk_tree_view_column_set_sort_column_id(MetaColumn,7);
+    /* gtk_tree_view_column_set_sort_column_id(MetaColumn,7); */
     gtk_tree_view_append_column(GTK_TREE_VIEW(ThemeSelector),MetaColumn);
     gtk_tree_view_column_set_max_width(MetaColumn,400);
     gtk_tree_view_column_set_resizable(MetaColumn,TRUE);
@@ -1470,7 +1472,7 @@ GtkWidget * build_tree_view()
     gtk_scrolled_window_set_policy(GTK_SCROLLED_WINDOW(scrollwin),
             GTK_POLICY_AUTOMATIC,GTK_POLICY_AUTOMATIC);
     gtk_container_addC(scrollwin,ThemeSelector);
-    //gtk_widget_set_size_request(scrollwin,500,200);
+    /* gtk_widget_set_size_request(scrollwin,500,200); */
 
     gtk_box_pack_startC(vbox,scrollwin,TRUE,TRUE,0);
     return vbox;
@@ -1521,15 +1523,15 @@ void cb_quit(GtkWidget * w, gpointer p)
 }
 void layout_upper_pane(GtkWidget * vbox)
 {
-    //GtkWidget * hbox;
+    /* GtkWidget * hbox; */
 
-    //hbox = gtk_hbox_new(FALSE,2);
-    //gtk_box_pack_startC(vbox,hbox,TRUE,TRUE,0);
+    /* hbox = gtk_hbox_new(FALSE,2);
+       gtk_box_pack_startC(vbox,hbox,TRUE,TRUE,0); */
 
     gtk_box_pack_startC(vbox,build_tree_view(),TRUE,TRUE,0);
 
-    //table_new(1,TRUE,FALSE);
-    //gtk_box_pack_startC(hbox,get_current_table(),FALSE,FALSE,0);
+    /* table_new(1,TRUE,FALSE);
+       gtk_box_pack_startC(hbox,get_current_table(),FALSE,FALSE,0); */
 }
 void layout_themes_pane(GtkWidget * vbox)
 {
@@ -1541,7 +1543,7 @@ void layout_themes_pane(GtkWidget * vbox)
 }
 GtkWidget* create_filechooserdialog1(char *input)
 {
-    //get a filename
+    /* get a filename */
     GtkWidget * dialog_startup = gtk_file_chooser_dialog_new(
             _("Import Theme..."),NULL,
             GTK_FILE_CHOOSER_ACTION_OPEN,
@@ -1607,7 +1609,7 @@ int main(int argc, char * argv[])
 
     while (loop_count < argc) {
 	if (strcmp(argv[loop_count],"-i") == 0) {
-	 //-i arg found so next option should be the file to install
+	 /* -i arg found so next option should be the file to install */
 	    if (loop_count + 1 < argc) {
 	     input_file = argv[loop_count + 1];
              printf("File To Install %s\n", input_file);

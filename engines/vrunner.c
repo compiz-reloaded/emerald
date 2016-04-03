@@ -21,7 +21,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-//vrunner engine
+/* vrunner engine */
 #include <emerald.h>
 #include <engine.h>
 #include <vrunner_icon.h>
@@ -78,7 +78,8 @@ void get_meta_info (EngineMetaInfo * emi)
 {
     emi->version = g_strdup("0.2");
     emi->description = g_strdup(_("Multiple gradients with somewhat glassy features too"));
-    emi->last_compat = g_strdup("0.0"); // old themes marked still compatible for now
+    /* old themes marked still compatible for now */
+    emi->last_compat = g_strdup("0.0");
     emi->icon = gdk_pixbuf_new_from_inline(-1, my_pixbuf, TRUE, NULL);
 }
 
@@ -130,7 +131,7 @@ draw_filled_closed_curve (cairo_t *cr,
             c1->color.b,c1->alpha);
     cairo_pattern_add_color_stop_rgba (pattern, 1.0, c2->color.r, c2->color.g,
             c2->color.b,c2->alpha);
-    //cairo_pattern_set_extend (pattern, CAIRO_EXTEND_PAD);
+    /* cairo_pattern_set_extend (pattern, CAIRO_EXTEND_PAD); */
     cairo_set_source (cr, pattern);
     cairo_fill (cr);
     cairo_pattern_destroy (pattern);
@@ -143,9 +144,9 @@ void create_glow(decor_t *d, cairo_t *cr,
        double r = 0.0;
        double wp = p;
        double hp = p;
-       //cairo_rectangle(cr, x1, y1, w, h);
+       /* cairo_rectangle(cr, x1, y1, w, h); */
        frame_settings * fs = d->fs;
-       // private_fs * pfs = fs->engine_fs;
+       /* private_fs * pfs = fs->engine_fs; */
        window_settings * ws = fs->ws;
        if(wp*2 > w) wp = w/2;
        if(hp*2 > h) hp = h/2;
@@ -213,13 +214,13 @@ static gint get_real_pos(window_settings * ws, gint tobj, decor_t * d)
     return base + d->tobj_item_pos[tobj];
 }
 
-void engine_draw_frame (decor_t * d, cairo_t * cr)
+void engine_draw_frame(decor_t * d, cairo_t * cr)
 {
-    double        x1, y1, x2, y2, h,
-                  top_title_height, bottom_title_height,
-                  top_left, top_right;
-    int           top, title_width = 0, title_height = 0, title_pos;
-    // double        curve_offset;
+    double x1, y1, x2, y2, h,
+           top_title_height, bottom_title_height,
+           top_left, top_right;
+    int top, title_width = 0, title_height = 0, title_pos;
+    /* double curve_offset; */
     frame_settings * fs = d->fs;
     private_fs * pfs = fs->engine_fs;
     window_settings * ws = fs->ws;
@@ -247,7 +248,7 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
         ((pws->round_bottom_left)  ? CORNER_BOTTOMLEFT  : 0) |
         ((pws->round_bottom_right) ? CORNER_BOTTOMRIGHT : 0);
 
-	// maximize work-a-round
+	/* maximize work-a-round */
 	if (d->state & (WNCK_WINDOW_STATE_MAXIMIZED_HORIZONTALLY |
                 WNCK_WINDOW_STATE_MAXIMIZED_VERTICALLY))
         corners = 0;
@@ -265,7 +266,7 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
     if((top_right < pws->corner_radius) && (corners & CORNER_TOPRIGHT))
 		top_right = pws->corner_radius;
 
-    // Main Top Titlebar
+    /* main top titlebar */
     rounded_rectangle (cr,
             x1 + 0.5,
             y1 + 0.5,
@@ -299,7 +300,7 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
 
     cairo_reset_clip(cr);
 
-    // Left and Right
+    /* left and right */
     fill_rounded_rectangle (cr,
             x1+0.5,
             y1 + top - 0.5,
@@ -320,7 +321,7 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
             SHADE_BOTTOM, ws,
             pws->corner_radius);
 
-    // Bottom Frame
+    /* bottom frame */
     rounded_rectangle (cr,
             x1 + 0.5,
             y2 - ws->win_extents.bottom,
@@ -344,7 +345,7 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
 
     cairo_reset_clip(cr);
 
-    // Title Glow
+    /* title glow */
     if(pfs->use_glow) {
        cairo_set_operator (cr, CAIRO_OPERATOR_ATOP);
 
@@ -357,11 +358,11 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
     }
 
 
-	// ======= NEW LAYER ======
+    /* ======= NEW LAYER ====== */
     cairo_set_operator (cr, CAIRO_OPERATOR_OVER);
     cairo_set_line_width (cr, 1.0);
 
-    // Titlebar Separator
+    /* titlebar separator */
     if(pfs->separator_line.alpha > 0) {
        cairo_set_source_alpha_color(cr, &pfs->separator_line);
        cairo_move_to (cr, x1 + 0.5, y1 + top - 0.5);
@@ -369,7 +370,7 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
        cairo_stroke (cr);
     }
 
-    // Frame Clip
+    /* frame clip */
     rounded_rectangle (cr,
             x1 + 0.5, y1 + 0.5,
             x2 - x1 - 1.0, y2 - y1 - 1.0,
@@ -380,7 +381,7 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
 
 	cairo_translate (cr, 1.0, 1.0);
 
-	// highlight
+    /* highlight */
     rounded_rectangle (cr,
             x1 + 0.5, y1 + 0.5,
             x2 - x1 - 1.0, y2 - y1 - 1.0,
@@ -393,7 +394,7 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
 
     cairo_translate (cr, -2.0, -2.0);
 
-	// shadow
+    /* shadow */
     rounded_rectangle (cr,
             x1 + 0.5, y1 + 0.5,
             x2 - x1 - 1.0, y2 - y1 - 1.0,
@@ -408,7 +409,7 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
 
     cairo_reset_clip (cr);
 	
-	// halo
+    /* halo */
     rounded_rectangle (cr,
             x1 + 0.5, y1 + 0.5,
             x2 - x1 - 1.0, y2 - y1 - 1.0,
@@ -419,8 +420,8 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
     cairo_set_source_alpha_color (cr, &pfs->window_halo);
     cairo_stroke (cr);
 
-    // inner border
-    //TODO - make this a bit more pixel-perfect...but it works for now
+    /* inner border
+       TODO: make this a bit more pixel-perfect... but it works for now */
 
     cairo_set_line_width (cr, 1.0);
 
@@ -449,7 +450,7 @@ void load_engine_settings(GKeyFile * f, window_settings * ws)
 {
     private_ws * pws = ws->engine_ws;
 
-	// color settings
+    /* color settings */
     PFACS(title_left);
     PFACS(title_middle);
     PFACS(title_right);

@@ -56,7 +56,7 @@ void get_meta_info (EngineMetaInfo * emi)
 {
     emi->version = g_strdup("0.1");
     emi->description = g_strdup(_("Based on original legacy"));
-    emi->last_compat = g_strdup("0.0"); // old themes still compatible
+    emi->last_compat = g_strdup("0.0"); /* old themes still compatible */
     emi->icon = gdk_pixbuf_new_from_inline(-1, my_pixbuf, TRUE, NULL);
 }
 
@@ -174,7 +174,7 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
 	cairo_set_source_alpha_color(cr, &pfs->border);
 	cairo_stroke (cr);
 
-	// title bar
+	/* title bar */
 	if (pfs->title_bar.alpha != 0.0) {
 		rounded_rectangle (cr,
 				x1,
@@ -192,7 +192,7 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
 		cairo_fill(cr);
 		cairo_restore(cr);
 
-// FIXME => find a proper solution for this
+/* FIXME => find a proper solution for this */
 #ifdef SHADOW_FIX
 		cairo_rectangle (cr, 0.0, 0.0, d->width, top + y1 - border_width);
 		cairo_clip(cr);

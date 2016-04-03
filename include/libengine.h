@@ -38,8 +38,7 @@ rounded_rectangle (cairo_t *cr,
         window_settings * ws,
         double  radius);
 
-//////////////////////////////////////////////////////
-//themer stuff
+/* themer stuff */
 typedef struct _EngineMetaInfo
 {
     gchar * description;
@@ -84,7 +83,8 @@ typedef struct _SettingItem
 
 #define ACAV(caption,basekey,sect) add_color_alpha_value(caption,basekey,sect,active)
 
-gboolean get_engine_meta_info(const gchar * engine, EngineMetaInfo * inf); // returns FALSE if couldn't find engine
+/* returns FALSE if couldn't find engine */
+gboolean get_engine_meta_info(const gchar * engine, EngineMetaInfo * inf);
 
 GtkWidget * scaler_new(gdouble low, gdouble high, gdouble prec);
 void add_color_alpha_value(gchar * caption, gchar * basekey, gchar * sect, gboolean active);

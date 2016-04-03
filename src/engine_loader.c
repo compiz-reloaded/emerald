@@ -17,7 +17,7 @@
  *
  */
 
-//engine loader
+/* engine loader */
 #include <emerald.h>
 #include <engine.h>
 
@@ -44,7 +44,7 @@ gboolean load_engine(gchar * engine_name, window_settings * ws)
         dlclose(engine);
         engine = NULL;
     }
-    dlerror(); // clear errors
+    dlerror(); /* clear errors */
     path = g_strjoin("/",LOCAL_ENGINE_DIR,engine_ldname,NULL);
     newengine = dlopen(path,RTLD_NOW);
     if (!newengine)
@@ -55,14 +55,14 @@ gboolean load_engine(gchar * engine_name, window_settings * ws)
         if (!newengine)
         {
             g_warning("%s", dlerror());
-            //here's where we should bail out somehow
+            /* here's where we should bail out somehow */
         }
     }
     g_free(path);
     engine = newengine;
     if (engine)
     {
-        //lookup our procs
+        /* lookup our procs */
         e_init = dlsym(engine,"init_engine");
         e_fini = dlsym(engine,"fini_engine");
         e_load = dlsym(engine,"load_engine_settings");

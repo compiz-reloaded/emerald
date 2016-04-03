@@ -29,8 +29,8 @@
 #include <emerald.h>
 #include <engine.h>
 
-//#define BASE_PROP_SIZE 12
-//#define QUAD_PROP_SIZE 9
+/* #define BASE_PROP_SIZE 12
+   #define QUAD_PROP_SIZE 9 */
 
 #ifndef DECOR_INTERFACE_VERSION
 #define DECOR_INTERFACE_VERSION 0
@@ -292,16 +292,16 @@ static gint get_real_pos(window_settings * ws, gint tobj, decor_t * d)
 
 static void update_window_extents(window_settings * ws)
 {
-    //where 4 is v_corn_rad (8 is 2*4), 6 is...?
-    // 0,       0,          L_EXT+4,    TT_H+4,     0,0,0,0
-    // L_EXT+4  0,          -8,         T_EXT+2,    0,0,1,0
-    // L_EXT-4, 0,          R_EXT+4,    TT_H+4,     1,0,0,0
-    // 0,       T_EXT+6,    L_EXT,      TT_H-6,     0,0,0,1
-    // L_EXT,   T_EXT+2,    0,          TT_H-2,     0,0,1,0
-    // L_EXT,   T_EXT+6,    R_EXT,      TT_H-6,     1,0,0,1
-    // 0,       TT_H,       L_EXT+4,    B_EXT+4,    0,1,0,0
-    // L_EXT+4, TT_H+4,     -8,         B_EXT,      0,1,1,0
-    // L_EXT-4, TT_H,       R_EXT+4,    B_EXT+4,    1,1,0,0
+    /* where 4 is v_corn_rad (8 is 2*4), 6 is...?
+       0,       0,          L_EXT+4,    TT_H+4,     0,0,0,0
+       L_EXT+4  0,          -8,         T_EXT+2,    0,0,1,0
+       L_EXT-4, 0,          R_EXT+4,    TT_H+4,     1,0,0,0
+       0,       T_EXT+6,    L_EXT,      TT_H-6,     0,0,0,1
+       L_EXT,   T_EXT+2,    0,          TT_H-2,     0,0,1,0
+       L_EXT,   T_EXT+6,    R_EXT,      TT_H-6,     1,0,0,1
+       0,       TT_H,       L_EXT+4,    B_EXT+4,    0,1,0,0
+       L_EXT+4, TT_H+4,     -8,         B_EXT,      0,1,1,0
+       L_EXT-4, TT_H,       R_EXT+4,    B_EXT+4,    1,1,0,0 */
     gint l_ext = ws->win_extents.left;
     gint r_ext = ws->win_extents.right;
     gint t_ext = ws->win_extents.top;
@@ -354,22 +354,22 @@ static int my_add_quad_row(decor_quad_t * q,
     int fwidth = width - (left + right);
 
     q->p1.x = -left;
-    q->p1.y = p1y;				// opt: never changes
+    q->p1.y = p1y;				/* opt: never changes */
     q->p1.gravity = vgrav | GRAVITY_WEST;
     q->p2.x = 0;
     q->p2.y = p2y;
     q->p2.gravity = vgrav | GRAVITY_WEST;
-    q->align = 0;				// opt: never changes
+    q->align = 0;				/* opt: never changes */
     q->clamp = 0;
     q->stretch = 0;
     q->max_width = left;
-    q->max_height = ypush;		// opt: never changes
+    q->max_height = ypush;			/* opt: never changes */
     q->m.x0 = x0;
-    q->m.y0 = y0;				// opt: never changes
-    q->m.xx = 1;				// opt: never changes
+    q->m.y0 = y0;				/* opt: never changes */
+    q->m.xx = 1;				/* opt: never changes */
     q->m.xy = 0;
     q->m.yy = 1;
-    q->m.yx = 0;				// opt: never changes
+    q->m.yx = 0;				/* opt: never changes */
 
     q++;
 
@@ -451,7 +451,7 @@ my_set_window_quads(decor_quad_t * q,
 
     if (!max_vert || !max_horz || !ws->use_decoration_cropping)
     {
-	//TOP QUAD
+	/* top quad */
 	nq = my_add_quad_row(q, width, ws->left_space, ws->right_space,
 			     ws->titlebar_height + ws->top_space,
 			     GRAVITY_NORTH, 0, 0);
@@ -459,7 +459,7 @@ my_set_window_quads(decor_quad_t * q,
 	mnq += nq;
 
 
-	//BOTTOM QUAD
+	/* bottom quad */
 	nq = my_add_quad_row(q, width, ws->left_space, ws->right_space,
 			     ws->bottom_space, GRAVITY_SOUTH, 0,
 			     height - ws->bottom_space);
@@ -1036,7 +1036,7 @@ static void
 get_button_pos(window_settings * ws, gint b_t,
 	       decor_t * d, gdouble y1, gdouble * rx, gdouble * ry)
 {
-    //y1 - 4.0 + ws->titlebar_height / 2,
+    /* y1 - 4.0 + ws->titlebar_height / 2, */
     *ry = y1 + ws->button_offset;
     *rx = get_real_pos(ws, b_t, d);
 }
@@ -1247,7 +1247,7 @@ static void draw_button_backgrounds(decor_t * d, int *necessary_update_type)
     int b_t;
     window_settings *ws = d->fs->ws;
 
-    // Draw button backgrounds
+    /* draw button backgrounds */
     for (b_t = 0; b_t < B_T_COUNT; b_t++)
     {
 	if (BUTTON_NOT_VISIBLE(d, b_t))
@@ -1329,16 +1329,17 @@ gint draw_buttons_timer_func(gpointer data)
 	cairo_set_operator(fade_info->cr, CAIRO_OPERATOR_OVER);
     }
 
-    // Determine necessary updates
+    /* determine necessary updates */
     int b_t;
-    int necessary_update_type[B_T_COUNT];	// 0: none, 1: only base, 2: base+glow
+    /* 0: none, 1: only base, 2: base+glow */
+    int necessary_update_type[B_T_COUNT];
 
     for (b_t = 0; b_t < B_T_COUNT; b_t++)
 	necessary_update_type[b_t] = (ws->use_button_glow && d->active) ||
 	    (ws->use_button_inactive_glow && !d->active) ? 2:1;
     draw_button_backgrounds(d, necessary_update_type);
 
-    // Draw the buttons that are in "non-hovered" or pressed state
+    /* draw the buttons that are in "non-hovered" or pressed state */
     for (b_t = 0; b_t < B_T_COUNT; b_t++)
     {
 	if (BUTTON_NOT_VISIBLE(d, b_t) || fade_info->counters[b_t] ||
@@ -1350,10 +1351,13 @@ gint draw_buttons_timer_func(gpointer data)
 	     active ? (b_state == S_ACTIVE_PRESS ? 2 : 0) : (b_state ==
 							     S_INACTIVE_PRESS
 							     ? 5 : 3));
-	draw_button_with_glow_alpha_bstate(b_t, d, fade_info->cr, fade_info->y1, 1.0, 0.0, toBeDrawnState);	// no glow here
+	/* no glow here */
+	draw_button_with_glow_alpha_bstate(b_t, d, fade_info->cr,
+					   fade_info->y1, 1.0, 0.0,
+					   toBeDrawnState);
     }
 
-    // Draw the buttons that are in "hovered" state (fading in/out or at max fade)
+    /* draw the buttons that are in "hovered" state (fading in/out or at max fade) */
     double button_alphas[B_T_COUNT];
 
     for (b_t = 0; b_t < B_T_COUNT; b_t++)
@@ -1366,7 +1370,7 @@ gint draw_buttons_timer_func(gpointer data)
 	if (ws->button_fade_pulse_len_steps > 0 && fade_info->counters[b_t] &&
 	    fade_info->pulsating[b_t])
 	{
-	    // If it is time, reverse the fade
+	    /* if it is time, reverse the fade */
 	    if (fade_info->counters[b_t] ==
 		-num_steps + ws->button_fade_pulse_len_steps)
 		fade_info->counters[b_t] = 1 - fade_info->counters[b_t];
@@ -1377,14 +1381,14 @@ gint draw_buttons_timer_func(gpointer data)
 	}
 	if (ws->button_fade_pulse_len_steps > 0 &&
 	    fade_info->counters[b_t] == num_steps)
-	    fade_info->pulsating[b_t] = TRUE;	// start pulse
+	    fade_info->pulsating[b_t] = TRUE;	/* start pulse */
 
-	if (fade_info->counters[b_t] != num_steps + 1 ||	// unless fade is at max
-	    (ws->button_fade_pulse_len_steps > 0 &&	// or at pulse max
+	if (fade_info->counters[b_t] != num_steps + 1 ||	/* unless fade is at max */
+	    (ws->button_fade_pulse_len_steps > 0 &&		/* or at pulse max */
 	     fade_info->counters[b_t] !=
 	     num_steps + 1 + ws->button_fade_pulse_wait_steps))
 	{
-	    fade_info->counters[b_t]++;	// increment fade counter
+	    fade_info->counters[b_t]++;	/* increment fade counter */
 	}
 	d->button_last_drawn_state[b_t] = fade_info->counters[b_t];
 
@@ -1396,9 +1400,9 @@ gint draw_buttons_timer_func(gpointer data)
 	else
 	    alpha = -fade_info->counters[b_t] / (gdouble) num_steps;
 
-	if (fade_info->counters[b_t] < num_steps + 1)	// not at max fade
+	if (fade_info->counters[b_t] < num_steps + 1)	/* not at max fade */
 	{
-	    // Draw button's non-hovered version (with 1-alpha)
+	    /* draw button's non-hovered version (with 1-alpha) */
 	    draw_button_with_glow_alpha_bstate(b_t, d, fade_info->cr,
 					       fade_info->y1, pow(1 - alpha,
 								  0.4), 0.0,
@@ -1416,7 +1420,7 @@ gint draw_buttons_timer_func(gpointer data)
 		(ws->use_button_inactive_glow && !d->active))
 		glow_alpha = button_alphas[b_t];
 
-	    // Draw button's hovered version (with alpha)
+	    /* draw button's hovered version (with alpha) */
 	    draw_button_with_glow_alpha_bstate(b_t, d, fade_info->cr,
 					       fade_info->y1,
 					       button_alphas[b_t], glow_alpha,
@@ -1424,7 +1428,7 @@ gint draw_buttons_timer_func(gpointer data)
 	}
     }
 
-    // Check if the fade has come to an end
+    /* check if the fade has come to an end */
     gboolean any_active_buttons = FALSE;
 
     for (b_t = 0; b_t < B_T_COUNT; b_t++)
@@ -1440,7 +1444,7 @@ gint draw_buttons_timer_func(gpointer data)
     if (IS_VALID_SURFACE(d->buffer_surface) && !d->button_fade_info.first_draw &&
 	d->min_drawn_buttons_region.x1 < 10000)
     {
-	// if region is updated at least once
+	/* if region is updated at least once */
 	draw_surface(d->surface,
 		     CAIRO_OPERATOR_SOURCE,
 		     d->buffer_surface,
@@ -1475,7 +1479,9 @@ static void draw_buttons_with_fade(decor_t * d, cairo_t * cr, double y1)
     {
 	if (BUTTON_NOT_VISIBLE(d, b_t))
 	    continue;
-	if (!(d->active ? d->button_region[b_t] : d->button_region_inact[b_t]).bg_surface)	// don't draw if bg_surfaces are not valid
+	/* don't draw if bg_surfaces are not valid */
+	if (!(d->active ? d->button_region[b_t] :
+	  d->button_region_inact[b_t]).bg_surface)
 	    return;
     }
     button_fade_info_t *fade_info = &(d->button_fade_info);
@@ -1490,13 +1496,15 @@ static void draw_buttons_with_fade(decor_t * d, cairo_t * cr, double y1)
 	if (fade_info->counters[b_t] != 0 &&
 	    (b_state == S_ACTIVE_PRESS || b_state == S_INACTIVE_PRESS))
 	{
-	    // Button pressed, stop fade
+	    /* button pressed, stop fade */
 	    fade_info->counters[b_t] = 0;
 	    button_pressed = TRUE;
 	}
-	else if (fade_info->counters[b_t] > 0 && (b_state == S_ACTIVE || b_state == S_INACTIVE))	// moved out
+	/* moved out */
+	else if (fade_info->counters[b_t] > 0 &&
+	  (b_state == S_ACTIVE || b_state == S_INACTIVE))
 	{
-	    // Change fade in -> out and proceed 1 step
+	    /* change fade in -> out and proceed 1 step */
 	    fade_info->counters[b_t] =
 		1 - MIN(fade_info->counters[b_t],
 			ws->button_fade_num_steps + 1);
@@ -1504,33 +1512,35 @@ static void draw_buttons_with_fade(decor_t * d, cairo_t * cr, double y1)
 	else if (fade_info->counters[b_t] < 0 &&
 		 (b_state == S_ACTIVE_HOVER || b_state == S_INACTIVE_HOVER))
 	{
-	    // Change fade out -> in and proceed 1 step
+	    /* change fade out -> in and proceed 1 step */
 	    fade_info->counters[b_t] = 1 - fade_info->counters[b_t];
 	}
 	else if (fade_info->counters[b_t] == 0 &&
 		 (b_state == S_ACTIVE_HOVER || b_state == S_INACTIVE_HOVER))
 	{
-	    // Start fade in
+	    /* start fade in */
 	    fade_info->counters[b_t] = 1;
 	}
 	if (fade_info->pulsating[b_t] &&
 	    b_state != S_ACTIVE_HOVER && b_state != S_INACTIVE_HOVER)
 	{
-	    // Stop pulse
+	    /* stop pulse */
 	    fade_info->pulsating[b_t] = FALSE;
 	}
     }
 
     if (fade_info->timer == -1 || button_pressed)
-	// button_pressed is needed because sometimes after a button is pressed,
-	// this function is called twice, first with S_(IN)ACTIVE, then with S_(IN)ACTIVE_PRESS
-	// where it should have been only once with S_(IN)ACTIVE_PRESS
+	/* button_pressed is needed because sometimes after a button is pressed,
+	   this function is called twice, first with S_(IN)ACTIVE, then with
+	   S_(IN)ACTIVE_PRESS where it should have been only once with
+	   S_(IN)ACTIVE_PRESS */
     {
 	fade_info->d = (gpointer) d;
 	fade_info->y1 = y1;
-	if (draw_buttons_timer_func((gpointer) fade_info) == TRUE)	// call once now
+	/* call once now */
+	if (draw_buttons_timer_func((gpointer) fade_info) == TRUE)
 	{
-	    // and start a new timer for the next step
+	    /* and start a new timer for the next step */
 	    fade_info->timer =
 		g_timeout_add(ws->button_fade_step_duration,
 			      draw_buttons_timer_func,
@@ -1548,16 +1558,17 @@ static void draw_buttons_without_fade(decor_t * d, cairo_t * cr, double y1)
     d->min_drawn_buttons_region.y2 = -100;
 
     int b_t;
-    int necessary_update_type[B_T_COUNT];	// 0: none, 1: only base, 2: base+glow
+    /* 0: none, 1: only base, 2: base+glow */
+    int necessary_update_type[B_T_COUNT];
 
     for (b_t = 0; b_t < B_T_COUNT; b_t++)
 	necessary_update_type[b_t] = (ws->use_button_glow && d->active) ||
 	    (ws->use_button_inactive_glow && !d->active) ? 2:1;
-    //necessary_update_type[b_t] = 2;
+    /* necessary_update_type[b_t] = 2; */
 
     draw_button_backgrounds(d, necessary_update_type);
 
-    // Draw buttons
+    /* draw buttons */
     gint button_hovered_on = -1;
 
     for (b_t = 0; b_t < B_T_COUNT; b_t++)
@@ -1570,7 +1581,7 @@ static void draw_buttons_without_fade(decor_t * d, cairo_t * cr, double y1)
 	    ((ws->use_button_glow && b_state == S_ACTIVE_HOVER) ||
 	     (ws->use_button_inactive_glow && b_state == S_INACTIVE_HOVER)))
 	{
-	    // skip the one being hovered on, if any
+	    /* skip the one being hovered on, if any */
 	    button_hovered_on = b_t;
 	}
 	else
@@ -1578,7 +1589,7 @@ static void draw_buttons_without_fade(decor_t * d, cairo_t * cr, double y1)
     }
     if (button_hovered_on >= 0)
     {
-	// Draw the button and the glow for the button hovered on
+	/* draw the button and the glow for the button hovered on */
 	draw_button_with_glow(button_hovered_on, d, cr, y1, TRUE);
     }
 }
@@ -1589,7 +1600,7 @@ static void update_button_regions(decor_t * d)
 
     gint b_t, b_t2;
     gdouble x, y;
-    gdouble glow_x, glow_y;		// glow top left coordinates
+    gdouble glow_x, glow_y;	/* glow top left coordinates */
 
     for (b_t = 0; b_t < B_T_COUNT; b_t++)
     {
@@ -1642,28 +1653,29 @@ static void update_button_regions(decor_t * d)
 					     ws->top_space +
 					     ws->titlebar_height);
 
-		// Update glow overlaps of each pair
+		/* update glow overlaps of each pair */
 
 		for (b_t2 = 0; b_t2 < b_t; b_t2++)
-		{				// coordinates for these b_t2's will be ready for this b_t here
+		{
+		    /* coordinates for these b_t2's will be ready for this b_t here */
 		    if (BUTTON_NOT_VISIBLE(d, b_t2))
 			continue;
-		    if ((button_region->base_x1 > d->button_region[b_t2].base_x1 &&	//right of b_t2
-			 button_region->glow_x1 <= d->button_region[b_t2].base_x2) || (button_region->base_x1 < d->button_region[b_t2].base_x1 &&	//left of b_t2
-										       button_region->glow_x2 >= d->button_region[b_t2].base_x1))
-		    {
+		    /* right of b_t2 or left of b_t2 */
+		    if ((button_region->base_x1 > d->button_region[b_t2].base_x1
+			 && button_region->glow_x1 <= d->button_region[b_t2].base_x2)
+		       || (button_region->base_x1 < d->button_region[b_t2].base_x1
+			 && button_region->glow_x2 >= d->button_region[b_t2].base_x1))
 			button_region->overlap_buttons[b_t2] = TRUE;
-		    }
 		    else
 			button_region->overlap_buttons[b_t2] = FALSE;
 
-		    // buttons' protruding glow length might be asymmetric
-		    if ((d->button_region[b_t2].base_x1 > button_region->base_x1 &&	//left of b_t2
-			 d->button_region[b_t2].glow_x1 <= button_region->base_x2) || (d->button_region[b_t2].base_x1 < button_region->base_x1 &&	//right of b_t2
-										       d->button_region[b_t2].glow_x2 >= button_region->base_x1))
-		    {
+		    /* buttons' protruding glow length might be asymmetric */
+		    /* left of b_t2 or right of b_t2 */
+		    if ((d->button_region[b_t2].base_x1 > button_region->base_x1
+			 && d->button_region[b_t2].glow_x1 <= button_region->base_x2)
+		       || (d->button_region[b_t2].base_x1 < button_region->base_x1
+			 && d->button_region[b_t2].glow_x2 >= button_region->base_x1))
 			d->button_region[b_t2].overlap_buttons[b_t] = TRUE;
-		    }
 		    else
 			d->button_region[b_t2].overlap_buttons[b_t] = FALSE;
 		}
@@ -1736,9 +1748,10 @@ static void draw_window_decoration_real(decor_t * d, gboolean shadow_time)
 
     h = d->height - ws->top_space - ws->titlebar_height - ws->bottom_space;
 
-    if (!d->draw_only_buttons_region)	// if not only drawing buttons
+    if (!d->draw_only_buttons_region)	/* if not only drawing buttons */
     {
-	cr = cairo_create(IS_VALID_SURFACE(d->buffer_surface) ? d->buffer_surface : d->surface);
+	cr = cairo_create(IS_VALID_SURFACE(d->buffer_surface) ?
+					     d->buffer_surface : d->surface);
 	if (!cr)
 	    return;
 	cairo_set_operator(cr, CAIRO_OPERATOR_SOURCE);
@@ -1750,9 +1763,9 @@ static void draw_window_decoration_real(decor_t * d, gboolean shadow_time)
 	cairo_set_operator(cr, CAIRO_OPERATOR_OVER);
 	cairo_set_line_width(cr, 2.0);
 
-	/*color.r = 1;
-	  color.g = 1;
-	  color.b = 1; */
+	/* color.r = 1;
+	   color.g = 1;
+	   color.b = 1; */
 
 	if (d->layout && d->tobj_item_state[TBT_TITLE] != 3)
 	{
@@ -1786,9 +1799,8 @@ static void draw_window_decoration_real(decor_t * d, gboolean shadow_time)
 	    cairo_clip(cr);
 	    cairo_paint(cr);
 	}
-	// Copy button region backgrounds to buffers
-	// for fast drawing of buttons from now on
-	// when drawing is done for buttons
+	/* copy button region backgrounds to buffers for fast drawing of buttons
+	   from now on when drawing is done for buttons */
 	gboolean bg_surfaces_update_needed = FALSE;
 	int b_t;
 
@@ -1821,7 +1833,8 @@ static void draw_window_decoration_real(decor_t * d, gboolean shadow_time)
 		    ((ws->use_button_glow && d->active) ||
 		     (ws->use_button_inactive_glow && !d->active)))
 		{
-		    if (button_region->glow_x1 == -100)	// skip uninitialized regions
+		    /* skip uninitialized regions */
+		    if (button_region->glow_x1 == -100)
 			continue;
 		    rx = button_region->glow_x1;
 		    ry = button_region->glow_y1;
@@ -1830,11 +1843,12 @@ static void draw_window_decoration_real(decor_t * d, gboolean shadow_time)
 		}
 		else
 		{
-		    if (button_region->base_x1 == -100)	// skip uninitialized regions
+		    /* skip uninitialized regions */
+		    if (button_region->base_x1 == -100)
 			continue;
 		    rx = button_region->base_x1;
 		    ry = button_region->base_y1;
-		    if (!ws->use_pixmap_buttons)	// offset: (-2,1)
+		    if (!ws->use_pixmap_buttons)	/* offset: (-2,1) */
 		    {
 			rx -= 2;
 			ry++;
@@ -1942,7 +1956,7 @@ static void draw_window_decoration_real(decor_t * d, gboolean shadow_time)
     }
     */
     }
-    // Draw buttons
+    /* draw buttons */
 
     cr = cairo_create(IS_VALID_SURFACE(d->buffer_surface) ? d->buffer_surface : d->surface);
 
@@ -1958,27 +1972,30 @@ static void draw_window_decoration_real(decor_t * d, gboolean shadow_time)
 
     if (IS_VALID_SURFACE(d->buffer_surface))
     {
-	/*if (d->draw_only_buttons_region && d->min_drawn_buttons_region.x1 < 10000)	// if region is updated at least once
-	  {
-	  draw_surface(d->surface,
-	  CAIRO_OPERATOR_SOURCE,
-	  d->buffer_surface,
-	  d->min_drawn_buttons_region.x1,
-	  d->min_drawn_buttons_region.y1,
-	  d->min_drawn_buttons_region.x1,
-	  d->min_drawn_buttons_region.y1,
-	  d->min_drawn_buttons_region.x2 - d->min_drawn_buttons_region.x1,
-	  d->min_drawn_buttons_region.y2 - d->min_drawn_buttons_region.y1,
-	  1.0);
-	  }
-	  else*/
+	/*
+	// if region is updated at least once
+	if (d->draw_only_buttons_region &&
+	    d->min_drawn_buttons_region.x1 < 10000)
+	{
+	    draw_surface(d->surface, CAIRO_OPERATOR_SOURCE, d->buffer_surface,
+			 d->min_drawn_buttons_region.x1,
+			 d->min_drawn_buttons_region.y1,
+			 d->min_drawn_buttons_region.x1,
+			 d->min_drawn_buttons_region.y1,
+			 d->min_drawn_buttons_region.x2 -
+			   d->min_drawn_buttons_region.x1,
+			 d->min_drawn_buttons_region.y2 -
+			   d->min_drawn_buttons_region.y1,
+			 1.0);
+	}
+	else */
 	{
 	    draw_surface(d->surface,
 			 CAIRO_OPERATOR_SOURCE,
 			 d->buffer_surface, 0, 0, 0, 0,
 			 d->width, d->height, 1.0);
-	    //ws->top_space + ws->bottom_space +
-	    //ws->titlebar_height + 2);
+	    /* ws->top_space + ws->bottom_space +
+	       ws->titlebar_height + 2); */
 	}
     }
 }
@@ -2133,7 +2150,7 @@ static void draw_switcher_background(decor_t * d)
     double x1, y1, x2, y2, h;
     int top;
     unsigned long pixel;
-    ushort a = SWITCHER_ALPHA;
+    unsigned short a = SWITCHER_ALPHA;
     window_settings *ws = d->fs->ws;
 
     if (!IS_VALID_SURFACE(d->buffer_surface))
@@ -2407,12 +2424,14 @@ static void draw_switcher_foreground(decor_t * d)
 	else
 	    return;
 
-	// some themes ("frame" e.g.) set the title text font to 0.0pt, try to fix it
+	/* some themes ("frame" e.g.) set the title text font to 0.0pt, try to
+	   fix it */
 	if (text_width == 0)
 	{
 	    if (text_len)
 	    {
-		// if the font size is set to 0 indeed, set it to 10, otherwise don't draw anything
+		/* if the font size is set to 0 indeed, set it to 10,
+		   otherwise don't draw anything */
 
 		if (!pango_layout_get_font_description(d->layout))
 		{
@@ -2441,8 +2460,8 @@ static void draw_switcher_foreground(decor_t * d)
 		return;
 	}
 
-	// fix too long title text in switcher
-	// using ellipsize instead of cutting off text
+	/* fix too long title text in switcher
+	   using ellipsize instead of cutting off text */
 	pango_layout_set_ellipsize(d->layout, PANGO_ELLIPSIZE_END);
 	pango_layout_set_width(d->layout, (x2 - x1) * PANGO_SCALE);
 
@@ -2503,10 +2522,10 @@ static void queue_decor_draw_for_buttons(decor_t * d, gboolean for_buttons)
 {
     if (g_slist_find(draw_list, d))
     {
-	// handle possible previously queued drawing
+	/* handle possible previously queued drawing */
 	if (d->draw_only_buttons_region)
 	{
-	    // the old drawing request is only for buttons, so override it
+	    /* the old drawing request is only for buttons, so override it */
 	    d->draw_only_buttons_region = for_buttons;
 	}
 	return;
@@ -2539,7 +2558,7 @@ static void update_default_decorations(GdkScreen * screen, frame_settings *fs_ac
     decor_t d;
     unsigned int nQuad;
     decor_quad_t quads[N_QUADS_MAX];
-    window_settings *ws = fs_act->ws;	// hackish, I know, FIXME
+    window_settings *ws = fs_act->ws;	/* hackish, I know, FIXME */
     decor_extents_t extents = ws->win_extents;
 
     bzero(&d, sizeof(decor_t));
@@ -2767,31 +2786,31 @@ gint get_title_object_type(gchar obj)
 {
     switch (obj)
     {
-	case ':':					// state separator
+	case ':':			/* state separator */
 	    return -1;
-	case 'C':					// close
+	case 'C':			/* Close */
 	    return TBT_CLOSE;
-	case 'N':					// miNimize
+	case 'N':			/* miNimize */
 	    return TBT_MINIMIZE;
-	case 'X':					// maXimize/Restore
-	case 'R':					// ""
+	case 'X':			/* maXimize/Restore */
+	case 'R':			/* "" */
 	    return TBT_MAXIMIZE;
-	case 'F':
+	case 'F':			/* Super-maximize (Fullscreen) */
 	    return TBT_SUPERMAXIMIZE;
-	case 'H':					// Help
+	case 'H':			/* Help */
 	    return TBT_HELP;
-	case 'M':					// not implemented menu
+	case 'M':			/* not implemented menu */
 	    return TBT_MENU;
-	case 'T':					// Text
+	case 'T':			/* Text */
 	    return TBT_TITLE;
-	case 'I':					// Icon
+	case 'I':			/* Icon */
 	    return TBT_ICON;
-	case 'S':					// Shade
+	case 'S':			/* Shade */
 	    return TBT_SHADE;
-	case 'U':					// on-top(Up)
-	case 'A':					// (Above)
+	case 'U':			/* on-top (Up) */
+	case 'A':			/* (Above) */
 	    return TBT_ONTOP;
-	case 'D':					// not implemented on-bottom(Down)
+	case 'D':			/* not implemented on-bottom (Down) */
 	    return TBT_ONBOTTOM;
 	case 'Y':
 	    return TBT_STICKY;
@@ -2807,7 +2826,7 @@ gint get_title_object_width(gchar obj, window_settings * ws, decor_t * d)
 
     switch (i)
     {
-	case -1:					// state separator
+	case -1:			/* state separator */
 	    return -1;
 	case TBT_TITLE:
 	    if (d->layout)
@@ -2910,7 +2929,7 @@ void layout_title_objects(WnckWindow * win)
 	d->tobj_item_width[state] = owidth;
     }
     state = 0;
-    d->tobj_pos[0] = ws->win_extents.left;	// always true
+    d->tobj_pos[0] = ws->win_extents.left;	/* always true */
     d->tobj_pos[2] = width - d->tobj_size[2] + d->tobj_pos[0];
     d->tobj_pos[1] =
 	MAX((d->tobj_pos[2] + d->tobj_size[0] - d->tobj_size[1]) / 2,
@@ -3193,14 +3212,14 @@ static void update_window_decoration_actions(WnckWindow * win)
     Display *xdisplay;
     GdkDisplay *gdkdisplay;
 
-    //GdkScreen   *screen;
-    //Window      xroot;
-    //XEvent      ev;
+    /* GdkScreen   *screen;
+       Window      xroot;
+       XEvent      ev; */
 
     gdkdisplay = gdk_display_get_default();
     xdisplay = GDK_DISPLAY_XDISPLAY(gdkdisplay);
-    //screen     = gdk_display_get_default_screen(gdkdisplay);
-    //xroot      = RootWindowOfScreen(gdk_x11_screen_get_xscreen(screen));
+    /* screen = gdk_display_get_default_screen(gdkdisplay);
+       xroot = RootWindowOfScreen(gdk_x11_screen_get_xscreen(screen)); */
 
     d->actions = wnck_window_get_actions(win);
     data = NULL;
@@ -3224,7 +3243,7 @@ static void update_window_decoration_actions(WnckWindow * win)
 	}
 	else if (result != Success)
 	{
-	    /* Closes #161 */
+	    /* closes #161 */
 	    fprintf(stderr,
 		    "XGetWindowProperty() returned non-success value (%d) for window '%s'.\n",
 		    result, wnck_window_get_name(win));
@@ -4202,7 +4221,7 @@ static void action_menu_map(WnckWindow *win, long button, Time time)
 static gint generic_button_event(WnckWindow * win, XEvent * xevent,
 				 gint button, gint bpict)
 {
-    // Display *xdisplay = GDK_DISPLAY_XDISPLAY(gdk_display_get_default());
+    /* Display *xdisplay = GDK_DISPLAY_XDISPLAY(gdk_display_get_default()); */
     const gchar *tooltips[B_COUNT] = {
 	_("Close Window"),
 	_("Maximize Window"),
@@ -4223,7 +4242,7 @@ static gint generic_button_event(WnckWindow * win, XEvent * xevent,
     guint state = d->button_states[button];
     gint ret = 0;
 
-    // window_settings * ws = d->fs->ws;
+    /* window_settings * ws = d->fs->ws; */
 
     handle_tooltip_event(win, xevent, state, tooltips[bpict]);
 
@@ -4344,21 +4363,21 @@ static void send_help_message(WnckWindow * win)
     Display *xdisplay;
     GdkDisplay *gdkdisplay;
 
-    //GdkScreen  *screen;
+    /* GdkScreen  *screen; */
     Window id;
     XEvent ev;
 
     gdkdisplay = gdk_display_get_default();
     xdisplay = GDK_DISPLAY_XDISPLAY(gdkdisplay);
-    //screen     = gdk_display_get_default_screen(gdkdisplay);
-    //xroot      = RootWindowOfScreen(gdk_x11_screen_get_xscreen(screen));
+    /* screen = gdk_display_get_default_screen(gdkdisplay);
+       xroot = RootWindowOfScreen(gdk_x11_screen_get_xscreen(screen)); */
     id = wnck_window_get_xid(win);
 
     ev.xclient.type = ClientMessage;
-    //ev.xclient.display = xdisplay;
+    /* ev.xclient.display = xdisplay;
 
-    //ev.xclient.serial     = 0;
-    //ev.xclient.send_event = TRUE;
+       ev.xclient.serial     = 0;
+       ev.xclient.send_event = TRUE; */
 
     ev.xclient.window = id;
     ev.xclient.message_type = wm_protocols_atom;
@@ -5039,12 +5058,12 @@ static int update_shadow(frame_settings * fs)
     bzero(&d, sizeof(decor_t));
     window_settings *ws = fs->ws;
 
-    // TODO shadows show strong artefacts with 30-bit setups
-    // meanwhile disable here as a workaround
+    /* TODO: shadows show strong artefacts with 30-bit setups
+       meanwhile disable here as a workaround */
     if (gdk_visual_get_bits_per_rgb(visual) == 10)
 	ws->shadow_radius = 0;
 
-    //    double        save_decoration_alpha;
+    /* double save_decoration_alpha; */
     static XRenderColor color;
     static XRenderColor clear = { 0x0000, 0x0000, 0x0000, 0x0000 };
     static XRenderColor white = { 0xffff, 0xffff, 0xffff, 0xffff };
@@ -5055,8 +5074,8 @@ static int update_shadow(frame_settings * fs)
     color.alpha = 0xffff;
 
     /* compute a gaussian convolution kernel */
-    params = create_gaussian_kernel(ws->shadow_radius, ws->shadow_radius / 2.0,	// SIGMA
-				    ws->shadow_radius,	// ALPHA
+    params = create_gaussian_kernel(ws->shadow_radius, ws->shadow_radius / 2.0,	/* SIGMA */
+				    ws->shadow_radius,	/* ALPHA */
 				    ws->shadow_opacity, &size);
     if (!params)
 	ws->shadow_offset_x = ws->shadow_offset_y = size = 0;
@@ -5536,7 +5555,7 @@ void load_button_image_setting(window_settings * ws)
     for (i = 0; i < B_COUNT; i++)
 	load_buttons_image(ws, i);
 
-    // load active and inactive glow image
+    /* load active and inactive glow image */
     if (ws->use_button_glow || ws->use_button_inactive_glow)
 	load_buttons_glow_images(ws);
 }
@@ -5548,7 +5567,7 @@ static void load_settings(window_settings * ws)
 
     copy_from_defaults_if_needed();
 
-    //settings
+    /* settings */
     g_key_file_load_from_file(f, path, 0, NULL);
     g_free(path);
     load_int_setting(f, &ws->double_click_action, "double_click_action",
@@ -5606,7 +5625,7 @@ static void load_settings(window_settings * ws)
     load_int_setting(f, &ws->blur_type,
 		     "blur_type", "decorations");
 
-    //theme
+    /* theme */
     path = g_strjoin("/", g_get_home_dir(), ".emerald/theme/theme.ini", NULL);
     g_key_file_load_from_file(f, path, 0, NULL);
     g_free(path);
@@ -5659,11 +5678,11 @@ static void load_settings(window_settings * ws)
 }
 static void update_settings(window_settings * ws)
 {
-    //assumes ws is fully allocated
+    /* assumes ws is fully allocated */
 
     GdkDisplay *gdkdisplay;
 
-    // Display    *xdisplay;
+    /* Display *xdisplay; */
     GdkScreen *gdkscreen;
     WnckScreen *screen = wnck_screen_get_default();
     GList *windows;
@@ -5671,7 +5690,7 @@ static void update_settings(window_settings * ws)
     load_settings(ws);
 
     gdkdisplay = gdk_display_get_default();
-    // xdisplay   = gdk_x11_display_get_xdisplay(gdkdisplay);
+    /* xdisplay = gdk_x11_display_get_xdisplay(gdkdisplay); */
     gdkscreen = gdk_display_get_default_screen(gdkdisplay);
 
     titlebar_font_changed(ws);
@@ -5773,8 +5792,9 @@ int main(int argc, char *argv[])
     ws->button_fade_num_steps = 5;
     ws->blur_type = BLUR_TYPE_NONE;
 
-    ws->tobj_layout = g_strdup("IT::HNXC");	// DEFAULT TITLE OBJECT LAYOUT, does not use any odd buttons
-    //ws->tobj_layout=g_strdup("CNX:IT:HM");
+    /* DEFAULT TITLE OBJECT LAYOUT, does not use any odd buttons */
+    ws->tobj_layout = g_strdup("IT::HNXC");
+    /* ws->tobj_layout=g_strdup("CNX:IT:HM"); */
 
     pfs = malloc(sizeof(frame_settings));
     bzero(pfs, sizeof(frame_settings));
@@ -5800,11 +5820,11 @@ int main(int argc, char *argv[])
     ws->round_bottom_right = TRUE;
 
     engine = g_strdup("legacy");
-    load_engine(engine, ws);	// assumed to always return TRUE
+    load_engine(engine, ws);	/* assumed to always return TRUE */
 
     program_name = argv[0];
 
-    //ws->ButtonBase = NULL;
+    /* ws->ButtonBase = NULL; */
     for (i = 0; i < (S_COUNT * B_COUNT); i++)
     {
 	ws->button_surface[i] = NULL;
