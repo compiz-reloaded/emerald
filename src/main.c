@@ -5396,10 +5396,10 @@ static void load_buttons_image(window_settings * ws, gint y)
     g_free(file);
     if (!IS_VALID_SURFACE(ws->button_array[y]))
     {
-	pix_width = 16 * S_COUNT;
+	pix_width = 16;
 	pix_height = 16;
 	/* create an empty surface */
-	ws->button_array[y] = create_surface(pix_width, pix_height);
+	ws->button_array[y] = create_surface(pix_width * S_COUNT, pix_height);
     }
     ws->c_icon_size[rel_button].w = pix_width;
     ws->c_icon_size[rel_button].h = pix_height;
