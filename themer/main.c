@@ -283,7 +283,13 @@ static void error_dialog(gchar * val)
     gtk_dialog_run(GTK_DIALOG(w));
     gtk_widget_destroy(w);
 }
-static void cb_load(GtkWidget *w, gpointer d)
+
+#if GTK_CHECK_VERSION(3, 8, 0)
+static void cb_load(GtkTreeView *w, GtkTreePath *p,
+		    GtkTreeViewColumn *c, gpointer d)
+#else
+static void cb_load(GtkTreeView *w, gpointer d)
+#endif
 {
     GKeyFile * f;
     GDir * dr;
@@ -504,7 +510,7 @@ static void cb_save(GtkWidget *w, gpointer d)
     }
     mt = at;
     at = g_key_file_to_data(f,NULL,NULL);
-    /* little fix since we're now copying from ~/.emerald/theme/* */
+    /* little fix since we're now copying from ~/.emerald/theme/ */
     g_free(fn);
     fn = g_strdup_printf("%s/.emerald/theme/theme.ini",g_get_home_dir());
     if (at && !g_file_set_contents(fn,at,-1,NULL))
@@ -1391,6 +1397,15 @@ GtkWidget * build_tree_view()
     gtk_tree_view_set_headers_clickable(GTK_TREE_VIEW(ThemeSelector),TRUE);
     gtk_tree_view_set_reorderable(GTK_TREE_VIEW(ThemeSelector),TRUE);
 
+#if GTK_CHECK_VERSION(3, 8, 0)
+    g_signal_connect(ThemeSelector,"row-activated", G_CALLBACK(cb_load), NULL);
+
+    gtk_tree_view_set_activate_on_single_click(GTK_TREE_VIEW(ThemeSelector),
+					       TRUE);
+#else
+    g_signal_connect(ThemeSelector,"cursor-changed", G_CALLBACK(cb_load), NULL);
+#endif
+
     ThemeRenderer = gtk_cell_renderer_text_new();
     ThemeColumn = gtk_tree_view_column_new_with_attributes
         ("Theme",ThemeRenderer,"markup",8,NULL);
@@ -1465,8 +1480,6 @@ GtkWidget * build_tree_view()
     ThemeSelect = gtk_tree_view_get_selection(
             GTK_TREE_VIEW(ThemeSelector));
     gtk_tree_selection_set_mode(ThemeSelect,GTK_SELECTION_SINGLE);
-    g_signal_connect(ThemeSelect,"changed",
-            G_CALLBACK(cb_load),NULL);
 
     scrollwin = gtk_scrolled_window_new(NULL,NULL);
     gtk_scrolled_window_set_policy(GTK_SCROLLED_WINDOW(scrollwin),
