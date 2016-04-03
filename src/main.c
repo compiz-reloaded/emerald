@@ -111,8 +111,10 @@ static cairo_surface_t *create_surface(int w, int h)
 {
     cairo_surface_t *surface;
 
-    if (w <= 0 || h <= 0)
+    if (w < 0 || h < 0)
 	abort();
+    if (w == 0 || h == 0)
+	return NULL;
 
 #if GTK_CHECK_VERSION(3, 10, 0)
     surface =
@@ -122,26 +124,41 @@ static cairo_surface_t *create_surface(int w, int h)
     surface = cairo_image_surface_create(CAIRO_FORMAT_ARGB32, w, h);
 #endif
 
-    if (IS_VALID_SURFACE(surface))
+    if (!IS_VALID_SURFACE(surface))
+	return NULL;
+
+    if (cairo_surface_status(surface) == CAIRO_STATUS_SUCCESS)
 	return surface;
     else
+    {
+	cairo_surface_destroy(surface);
 	return NULL;
+    }
 }
 
 static cairo_surface_t *create_xlib_surface(int w, int h)
 {
     cairo_surface_t *surface;
 
-    if (w <= 0 || h <= 0)
+    if (w < 0 || h < 0)
 	abort();
+    if (w == 0 || h == 0)
+	return NULL;
 
-    surface = gdk_window_create_similar_surface(gtk_widget_get_window(style_window),
-						CAIRO_CONTENT_COLOR_ALPHA, w, h);
+    surface =
+      gdk_window_create_similar_surface(gtk_widget_get_window(style_window),
+					CAIRO_CONTENT_COLOR_ALPHA, w, h);
 
-    if (IS_VALID_SURFACE(surface))
+    if (!IS_VALID_SURFACE(surface))
+	return NULL;
+
+    if (cairo_surface_status(surface) == CAIRO_STATUS_SUCCESS)
 	return surface;
     else
+    {
+	cairo_surface_destroy(surface);
 	return NULL;
+    }
 }
 
 /* wrappers agnostic from surface types that are used here */
