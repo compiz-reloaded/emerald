@@ -2657,16 +2657,17 @@ static void update_default_decorations(GdkScreen * screen, frame_settings *fs_ac
     nQuad = my_set_window_quads(quads, d.width, d.height, ws, FALSE, FALSE);
 
     ws->decor_normal_surface =
-	create_xlib_surface(MAX(d.width, d.height),
-		       ws->top_space + ws->left_space + ws->right_space +
-		       ws->bottom_space + ws->titlebar_height);
+      create_xlib_surface(MAX(d.width, d.height),
+			  ws->top_space + ws->left_space + ws->right_space +
+			  ws->bottom_space + ws->titlebar_height);
 
     ws->decor_active_surface =
-	create_xlib_surface(MAX(d.width, d.height),
-		       ws->top_space + ws->left_space + ws->right_space +
-		       ws->bottom_space + ws->titlebar_height);
+      create_xlib_surface(MAX(d.width, d.height),
+			  ws->top_space + ws->left_space + ws->right_space +
+			  ws->bottom_space + ws->titlebar_height);
 
-    if (IS_VALID_SURFACE(ws->decor_normal_surface) && IS_VALID_SURFACE(ws->decor_active_surface))
+    if (IS_VALID_SURFACE(ws->decor_normal_surface) &&
+      IS_VALID_SURFACE(ws->decor_active_surface))
     {
 	d.p_inactive_surface = ws->decor_normal_surface;
 	d.p_active_surface = ws->decor_active_surface;
@@ -3301,17 +3302,17 @@ static gboolean update_window_decoration_size(WnckWindow * win)
     reset_buttons_bg_and_fade(d);
 
     surface = create_xlib_surface(MAX(width, height),
-			     ws->top_space + ws->titlebar_height +
-			     ws->left_space + ws->right_space +
-			     ws->bottom_space);
+				  ws->top_space + ws->titlebar_height +
+				  ws->left_space + ws->right_space +
+				  ws->bottom_space);
     if (!IS_VALID_SURFACE(surface))
 	return FALSE;
 
     buffer_surface =
 	create_surface(MAX(width, height),
-			     ws->top_space + ws->titlebar_height +
-			     ws->left_space + ws->right_space +
-			     ws->bottom_space);
+		       ws->top_space + ws->titlebar_height +
+		       ws->left_space + ws->right_space +
+		       ws->bottom_space);
     if (!IS_VALID_SURFACE(buffer_surface))
     {
 	cairo_surface_destroy(surface);
@@ -3319,9 +3320,9 @@ static gboolean update_window_decoration_size(WnckWindow * win)
     }
 
     isurface = create_xlib_surface(MAX(width, height),
-			      ws->top_space + ws->titlebar_height +
-			      ws->left_space + ws->right_space +
-			      ws->bottom_space);
+				   ws->top_space + ws->titlebar_height +
+				   ws->left_space + ws->right_space +
+				   ws->bottom_space);
     if (!IS_VALID_SURFACE(isurface))
     {
 	cairo_surface_destroy(surface);
