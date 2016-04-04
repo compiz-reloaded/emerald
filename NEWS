@@ -1,3 +1,22 @@
+Release 0.8.12.4 (2016-04-04 Sorokin Alexei <sor.alexei@meowr.ru>)
+==================================================================
+COMPIZ-RELOADED
+
+Fix button glow glitches.
+
+Remove possibility to select button glow for non-pixmap buttons
+(glow is only for pixmap buttons).
+
+Fix theme being reselected when not asked on GTK+ 3.8+.
+Left unfixed in builds on older GTK+.
+
+Fix button glow for only active or only inactive windows.
+
+Fix broken appearance on HiDPI with GTK+ 3.10+ (if scaling is on).
+For now scaling is just disabled completely.
+
+Other minor fixes.
+
 Release 0.8.12.3 (2016-03-17 Sorokin Alexei <sor.alexei@meowr.ru>)
 ==================================================================
 COMPIZ-RELOADED
