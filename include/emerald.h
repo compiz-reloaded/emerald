@@ -170,7 +170,6 @@ typedef struct _window_settings
     frame_settings * fs_inact;
     gint min_titlebar_height;
     gboolean        use_pixmap_buttons;
-    double          corner_radius; /* = 5.0; */
     PangoAlignment  title_text_align; /* = PANGO_ALIGN_CENTER; */
     cairo_surface_t *button_surface[S_COUNT*B_COUNT];
     cairo_surface_t *button_array[B_COUNT];

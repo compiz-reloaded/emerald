@@ -48,7 +48,7 @@ AC_MSG_RESULT([$with_gtk])
 
 case "$with_gtk" in
   2.0) GTK_API_VERSION=2.0
-       GTK_MIN_VERSION=2.10.0
+       GTK_MIN_VERSION=2.22.0
        WNCK_API_VERSION=1.0
        WNCK_MIN_VERSION=2.22.0
        ;;

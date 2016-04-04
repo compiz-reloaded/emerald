@@ -9,6 +9,12 @@
 
 #define LAST_COMPAT_VER "0.1.0"
 
+#if !GTK_CHECK_VERSION(2, 24, 0)
+#define GTK_COMBO_BOX_TEXT GTK_COMBO_BOX
+#define gtk_combo_box_text_new gtk_combo_box_new_text
+#define gtk_combo_box_text_new_with_entry gtk_combo_box_entry_new_text
+#define gtk_combo_box_text_append_text gtk_combo_box_append_text
+#endif
 #if GTK_CHECK_VERSION(3, 0, 0)
 #define gtk_hbox_new(X,Y) gtk_box_new(GTK_ORIENTATION_HORIZONTAL,Y)
 #define gtk_vbox_new(X,Y) gtk_box_new(GTK_ORIENTATION_VERTICAL,Y)

@@ -5798,7 +5798,6 @@ int main(int argc, char *argv[])
     ws->win_extents.top = 4;
     ws->win_extents.right = 6;
     ws->win_extents.bottom = 6;
-    ws->corner_radius = 5;
     ws->shadow_radius = 15;
     ws->shadow_opacity = .8;
     ws->min_titlebar_height = 17;
