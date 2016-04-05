@@ -361,6 +361,9 @@ msgstr ""
 "Ne dessiner que la barre de titre (pas de bordures) pour les fenêtres "
 "maximisées"
 
+msgid "No Shade on Titlebar Scroll"
+msgstr "Désactiver le roulement des fenêtres sur la barre de titre"
+
 msgid "Use Button Fade"
 msgstr "Utiliser un fondu sur les boutons"
 
