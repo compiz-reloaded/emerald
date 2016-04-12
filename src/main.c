@@ -3877,8 +3877,6 @@ move_resize_window(WnckWindow * win, int direction, XEvent * xevent)
     if (action_menu_mapped)
     {
 	gtk_widget_destroy(action_menu);
-	action_menu_mapped = FALSE;
-	action_menu = NULL;
 	return;
     }
 
@@ -3923,8 +3921,6 @@ static void restack_window(WnckWindow * win, int stack_mode)
     if (action_menu_mapped)
     {
 	gtk_widget_destroy(action_menu);
-	action_menu_mapped = FALSE;
-	action_menu = NULL;
 	return;
     }
 
@@ -4185,8 +4181,6 @@ static void action_menu_map(WnckWindow *win, long button, Time time)
 	if (action_menu_mapped)
 	{
 	    gtk_widget_destroy(action_menu);
-	    action_menu_mapped = FALSE;
-	    action_menu = NULL;
 	    return;
 	}
 	else
