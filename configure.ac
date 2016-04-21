@@ -90,11 +90,11 @@ int main() {
     ]
   )],
   [
-    AC_DEFINE_UNQUOTED(DECOR_INTERFACE_VERSION, `cat decor_ver.out`)
+    AC_DEFINE_UNQUOTED(DECOR_INTERFACE_VERSION, `cat decor_ver.out`, [Decorator interface version])
     AC_MSG_NOTICE([Using decorator interface version `cat decor_ver.out`])
   ],
   [
-    AC_DEFINE(DECOR_INTERFACE_VERSION, 0)
+    AC_DEFINE(DECOR_INTERFACE_VERSION, 0, [Decorator interface version])
     AC_MSG_NOTICE([Using undefined decorator interface version])
   ]
 )
