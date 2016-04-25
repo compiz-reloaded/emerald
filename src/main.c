@@ -636,7 +636,7 @@ static void decor_update_window_property(decor_t * d)
     data = decor_alloc_property(1, WINDOW_DECORATION_TYPE_PIXMAP);
 
     decor_quads_to_property(data, 0, cairo_xlib_surface_get_drawable(d->surface),
-			    &extents, &maxextents, &maxextents, &maxextents,
+			    &extents, &extents, &maxextents, &maxextents,
 			    0, 0, quads, nQuad, 0xffffff, 0, 0);
 #endif
 
