@@ -940,11 +940,11 @@ static void append_engine(gchar * dlname)
             meta = dlsym(hand,"get_meta_info");
             if ((err=dlerror()))
                 g_warning("%s", err);
-                d->meta.description=g_strdup("No Description");
-                d->meta.version=g_strdup("0.0");
-                d->meta.last_compat=g_strdup("0.0");
-                d->meta.icon=gtk_widget_render_icon(EngineCombo,GTK_STOCK_MISSING_IMAGE,
-                        GTK_ICON_SIZE_LARGE_TOOLBAR,"themeengine");
+            d->meta.description=g_strdup("No Description");
+            d->meta.version=g_strdup("0.0");
+            d->meta.last_compat=g_strdup("0.0");
+            d->meta.icon=gtk_widget_render_icon(EngineCombo,GTK_STOCK_MISSING_IMAGE,
+                                                GTK_ICON_SIZE_LARGE_TOOLBAR,"themeengine");
             if (meta)
                 meta(&(d->meta));
             else
