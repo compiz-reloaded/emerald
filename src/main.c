@@ -2859,7 +2859,7 @@ gint get_title_object_width(gchar obj, window_settings * ws, decor_t * d)
 	case TBT_ICON:
 	    return 18;
 	default:
-	    if (i < B_T_COUNT)
+	    if (i >= 0 && i < B_T_COUNT)
 		return (d->actions & button_actions[i]) ?
 		    (ws->use_pixmap_buttons ? ws->c_icon_size[i].w : 18) : 0;
 	    else
