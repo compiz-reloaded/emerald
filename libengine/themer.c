@@ -235,8 +235,8 @@ void table_append(GtkWidget * child,gboolean stretch)
 {
     gtk_table_attach(current_table,child,current_table_col,current_table_col+1,
             current_table_row,current_table_row+1,
-            (stretch?GTK_EXPAND:GTK_SHRINK)|GTK_FILL,
-            (stretch?GTK_EXPAND:GTK_SHRINK)|GTK_FILL,
+            (stretch?GTK_EXPAND|GTK_FILL:GTK_SHRINK),
+            (stretch?GTK_EXPAND|GTK_FILL:GTK_SHRINK),
             0,0);
     current_table_col++;
     if (current_table_col == current_table_width)
