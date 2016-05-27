@@ -217,53 +217,77 @@ SettingItem * register_setting(GtkWidget * widget, SettingType type, gchar * sec
 }
 
 static gint current_table_width;
+#if GTK_CHECK_VERSION(3, 0, 0)
+static GtkGrid * current_table;
+#else
 static GtkTable * current_table;
+#endif
 static gint current_table_col;
 static gint current_table_row;
 
 void table_new(gint width, gboolean same, gboolean labels)
 {
     /* WARNING: clobbers all the current_table_ vars. */
+#if GTK_CHECK_VERSION(3, 0, 0)
+    current_table = GTK_GRID(gtk_grid_new());
+    gtk_grid_set_row_spacing(current_table,8);
+    gtk_grid_set_column_spacing(current_table,8);
+    gtk_grid_set_row_homogeneous(current_table,same);
+    gtk_grid_set_column_homogeneous(current_table,same);
+#else
     current_table = GTK_TABLE(gtk_table_new(width,1,same));
     gtk_table_set_row_spacings(current_table,8);
     gtk_table_set_col_spacings(current_table,8);
+#endif
     current_table_col = labels?1:0;
     current_table_row = 0;
     current_table_width = width;
 }
 void table_append(GtkWidget * child,gboolean stretch)
 {
+#if GTK_CHECK_VERSION(3, 0, 0)
+    gtk_widget_set_hexpand(child,stretch);
+    gtk_widget_set_vexpand(child,stretch);
+    gtk_widget_set_halign(child,stretch?GTK_ALIGN_FILL:GTK_ALIGN_CENTER);
+    gtk_widget_set_valign(child,stretch?GTK_ALIGN_FILL:GTK_ALIGN_CENTER);
+    gtk_grid_attach(current_table,child,current_table_col,current_table_row,1,1);
+#else
     gtk_table_attach(current_table,child,current_table_col,current_table_col+1,
             current_table_row,current_table_row+1,
             (stretch?GTK_EXPAND|GTK_FILL:GTK_SHRINK),
             (stretch?GTK_EXPAND|GTK_FILL:GTK_SHRINK),
             0,0);
+#endif
     current_table_col++;
     if (current_table_col == current_table_width)
     {
         current_table_col=0;
         current_table_row++;
-        /* gtk_table_resize(current_table,current_table_width,current_table_row+1); */
     }
 }
 void table_append_separator()
 {
     current_table_col=0;
     current_table_row++;
-    /* gtk_table_resize(current_table,current_table_width,current_table_row+1); */
-    gtk_table_attach_defaults(current_table,
-#if GTK_CHECK_VERSION(3, 2, 0)
-            gtk_separator_new (GTK_ORIENTATION_HORIZONTAL),
+#if GTK_CHECK_VERSION(3, 0, 0)
+    gtk_grid_attach(current_table,
+            gtk_separator_new(GTK_ORIENTATION_HORIZONTAL),
+            0,current_table_row,
+            current_table_width,1);
 #else
+    gtk_table_attach_defaults(current_table,
             gtk_hseparator_new(),
-#endif
             0,current_table_width,
             current_table_row,
             current_table_row+1);
+#endif
     current_table_row++;
-    /* gtk_table_resize(current_table,current_table_width,current_table_row+1); */
 }
+#if GTK_CHECK_VERSION(3, 0, 0)
+GtkGrid * get_current_table()
+#else
 GtkTable * get_current_table()
+#endif
 {
     return current_table;
 }

@@ -96,7 +96,11 @@ SettingItem * register_img_file_setting(GtkWidget * widget, gchar * section, gch
 void table_new(gint width, gboolean same, gboolean labels);
 void table_append(GtkWidget * child,gboolean stretch);
 void table_append_separator();
+#if GTK_CHECK_VERSION(3, 0, 0)
+GtkGrid * get_current_table();
+#else
 GtkTable * get_current_table();
+#endif
 
 void send_reload_signal();
 void apply_settings();
