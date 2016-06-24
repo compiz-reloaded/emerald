@@ -16,8 +16,16 @@
 #define gtk_combo_box_text_append_text gtk_combo_box_append_text
 #endif
 #if !GTK_CHECK_VERSION(3, 0, 0)
-#define gtk_box_new(GTK_ORIENTATION_HORIZONTAL,b) gtk_hbox_new(FALSE,b)
-#define gtk_box_new(GTK_ORIENTATION_VERTICAL,b) gtk_vbox_new(FALSE,b)
+#define GTK_ORIENTATION_HORIZONTAL 0
+#define GTK_ORIENTATION_VERTICAL 1
+
+static GtkWidget *gtk_box_new(gint orientation, gint spacing)
+{
+    if (orientation == GTK_ORIENTATION_VERTICAL)
+	return gtk_vbox_new(FALSE, spacing);
+    else
+	return gtk_hbox_new(FALSE, spacing);
+}
 #endif
 
 typedef struct _FetcherInfo
