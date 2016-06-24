@@ -15,9 +15,9 @@
 #define gtk_combo_box_text_new_with_entry gtk_combo_box_entry_new_text
 #define gtk_combo_box_text_append_text gtk_combo_box_append_text
 #endif
-#if GTK_CHECK_VERSION(3, 0, 0)
-#define gtk_hbox_new(X,Y) gtk_box_new(GTK_ORIENTATION_HORIZONTAL,Y)
-#define gtk_vbox_new(X,Y) gtk_box_new(GTK_ORIENTATION_VERTICAL,Y)
+#if !GTK_CHECK_VERSION(3, 0, 0)
+#define gtk_box_new(GTK_ORIENTATION_HORIZONTAL,b) gtk_hbox_new(FALSE,b)
+#define gtk_box_new(GTK_ORIENTATION_VERTICAL,b) gtk_vbox_new(FALSE,b)
 #endif
 
 typedef struct _FetcherInfo
@@ -720,7 +720,7 @@ void layout_button_pane(GtkWidget * vbox)
     /* Yeah, the names should probably be renamed from hbox since it's now
      * a vbox...
      */
-    hbox = gtk_vbox_new(FALSE,2);
+    hbox = gtk_box_new(GTK_ORIENTATION_VERTICAL,2);
     gtk_box_pack_startC(vbox,hbox,FALSE,FALSE,0);
     layout_general_buttons_frame(hbox);
 
@@ -820,7 +820,7 @@ void layout_title_frame(GtkWidget * vbox)
     GtkWidget * hbox;
     GtkWidget * junk;
 
-    hbox = gtk_hbox_new(FALSE,2);
+    hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL,2);
     gtk_box_pack_startC(vbox,hbox,FALSE,FALSE,0);
 
     gtk_box_pack_startC(hbox,gtk_label_new(_("Title-Text Font")),FALSE,FALSE,0);
@@ -848,7 +848,7 @@ void layout_title_frame(GtkWidget * vbox)
     table_append(junk,TRUE);
     register_setting(junk,ST_INT,"buttons","horizontal_offset");
 
-    hbox = gtk_hbox_new(FALSE,2);
+    hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL,2);
     gtk_box_pack_startC(vbox,hbox,FALSE,FALSE,0);
     gtk_box_pack_startC(hbox,gtk_label_new(_("Title-bar Object Layout")),FALSE,FALSE,0);
     junk = gtk_combo_box_text_new_with_entry();
@@ -923,7 +923,7 @@ void layout_file_frame(GtkWidget * vbox)
     GtkWidget * junk;
     GtkWidget * hbox;
 
-    hbox = gtk_hbox_new(FALSE,2);
+    hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL,2);
     gtk_box_pack_startC(vbox,hbox,FALSE,FALSE,0);
 
     gtk_box_pack_startC(hbox,gtk_label_new(_("Name:")),FALSE,FALSE,0);
@@ -995,7 +995,7 @@ void layout_borders_frame(GtkWidget * vbox)
 void layout_left_frame_pane(GtkWidget * hbox)
 {
     GtkWidget * vbox;
-    vbox = gtk_vbox_new(FALSE,2);
+    vbox = gtk_box_new(GTK_ORIENTATION_VERTICAL,2);
     gtk_box_pack_startC(hbox,vbox,TRUE,TRUE,0);
 
     layout_shadows_frame(build_frame(vbox,_("Shadows"),FALSE));
@@ -1003,7 +1003,7 @@ void layout_left_frame_pane(GtkWidget * hbox)
 void layout_right_frame_pane(GtkWidget * hbox)
 {
     GtkWidget * vbox;
-    vbox = gtk_vbox_new(FALSE,2);
+    vbox = gtk_box_new(GTK_ORIENTATION_VERTICAL,2);
     gtk_box_pack_startC(hbox,vbox,TRUE,TRUE,0);
 
     layout_borders_frame(build_frame(vbox,_("Frame Borders"),FALSE));
@@ -1011,8 +1011,8 @@ void layout_right_frame_pane(GtkWidget * hbox)
 void layout_frame_pane(GtkWidget * vbox)
 {
     GtkWidget * hbox;
-
-    hbox = gtk_hbox_new(TRUE,2);
+    hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL,2);
+    gtk_box_set_homogeneous(hbox,TRUE);
     gtk_box_pack_startC(vbox,hbox,TRUE,TRUE,0);
 
     layout_left_frame_pane(hbox);
@@ -1021,7 +1021,7 @@ void layout_frame_pane(GtkWidget * vbox)
 void layout_left_global_pane(GtkWidget * hbox)
 {
     GtkWidget * vbox;
-    vbox = gtk_vbox_new(FALSE,2);
+    vbox = gtk_box_new(GTK_ORIENTATION_VERTICAL,2);
     gtk_box_pack_startC(hbox,vbox,TRUE,TRUE,0);
 
     layout_window_frame(build_frame(vbox,_("Active Window"),FALSE),TRUE);
@@ -1031,7 +1031,7 @@ void layout_left_global_pane(GtkWidget * hbox)
 void layout_right_global_pane(GtkWidget * hbox)
 {
     GtkWidget * vbox;
-    vbox = gtk_vbox_new(FALSE,2);
+    vbox = gtk_box_new(GTK_ORIENTATION_VERTICAL,2);
     gtk_box_pack_startC(hbox,vbox,TRUE,TRUE,0);
 
     layout_title_frame(build_frame(vbox,_("Title Bar"),FALSE));
@@ -1040,7 +1040,8 @@ void layout_global_pane(GtkWidget * vbox)
 {
     GtkWidget * hbox;
 
-    hbox = gtk_hbox_new(TRUE,2);
+    hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL,2);
+    gtk_box_set_homogeneous(hbox,TRUE);
     gtk_box_pack_startC(vbox,hbox,TRUE,TRUE,0);
 
     layout_left_global_pane(hbox);
@@ -1070,7 +1071,8 @@ void layout_screenshot_frame(GtkWidget * vbox)
 
     gtk_box_pack_startC(vbox,scrollwin,TRUE,TRUE,0);
 
-    hbox = gtk_hbox_new(TRUE,2);
+    hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL,2);
+    gtk_box_set_homogeneous(hbox,TRUE);
     gtk_box_pack_startC(vbox,hbox,FALSE,FALSE,0);
 
     filesel=gtk_file_chooser_button_new(_("Screenshot"),
@@ -1090,21 +1092,21 @@ void layout_screenshot_frame(GtkWidget * vbox)
 void layout_left_theme_pane(GtkWidget * hbox)
 {
     GtkWidget * vbox;
-    vbox = gtk_vbox_new(FALSE,2);
+    vbox = gtk_box_new(GTK_ORIENTATION_VERTICAL,2);
     gtk_box_pack_startC(hbox,vbox,TRUE,TRUE,0);
     layout_screenshot_frame(build_frame(vbox,_("Screenshot"),FALSE));
 }
 void layout_right_theme_pane(GtkWidget * hbox)
 {
     GtkWidget * vbox;
-    vbox = gtk_vbox_new(FALSE,2);
+    vbox = gtk_box_new(GTK_ORIENTATION_VERTICAL,2);
     gtk_box_pack_startC(hbox,vbox,TRUE,TRUE,0);
     layout_info_frame(build_frame(vbox,_("Information"),FALSE));
 }
 void layout_theme_pane(GtkWidget * vbox)
 {
     GtkWidget * hbox;
-    hbox = gtk_hbox_new(FALSE,2);
+    hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL,2);
     gtk_box_pack_startC(vbox,hbox,TRUE,TRUE,0);
     layout_left_theme_pane(hbox);
     layout_right_theme_pane(hbox);
@@ -1224,7 +1226,7 @@ void layout_settings_pane(GtkWidget * vbox)
 void layout_engine_pane(GtkWidget * vbox)
 {
     GtkWidget * nvbox, * scwin;
-    nvbox = gtk_vbox_new(FALSE,2);
+    nvbox = gtk_box_new(GTK_ORIENTATION_VERTICAL,2);
     scwin = gtk_scrolled_window_new(NULL,NULL);
     gtk_box_pack_startC(vbox,scwin,TRUE,TRUE,0);
     gtk_scrolled_window_set_policy(GTK_SCROLLED_WINDOW(scwin),
@@ -1264,7 +1266,7 @@ GtkWidget * build_lower_pane(GtkWidget * vbox)
     gtk_box_pack_startC(vbox,expander,FALSE,FALSE,0);
     gtk_expander_set_expanded(GTK_EXPANDER(expander),FALSE);
 
-    my_vbox = gtk_vbox_new(FALSE,2);
+    my_vbox = gtk_box_new(GTK_ORIENTATION_VERTICAL,2);
     gtk_container_addC(expander,my_vbox);
 
     return my_vbox;
@@ -1345,8 +1347,8 @@ GtkWidget * build_tree_view()
     GtkWidget * hbox;
     GtkWidget * clearbut;
 
-    vbox = gtk_vbox_new(FALSE,2);
-    hbox = gtk_hbox_new(FALSE,2);
+    vbox = gtk_box_new(GTK_ORIENTATION_VERTICAL,2);
+    hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL,2);
     gtk_box_pack_startC(vbox,hbox,FALSE,FALSE,0);
 
     gtk_box_pack_startC(hbox,gtk_label_new(_("Search:")),FALSE,FALSE,0);
@@ -1544,7 +1546,7 @@ void layout_upper_pane(GtkWidget * vbox)
 {
     /* GtkWidget * hbox; */
 
-    /* hbox = gtk_hbox_new(FALSE,2);
+    /* hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL,2);
        gtk_box_pack_startC(vbox,hbox,TRUE,TRUE,0); */
 
     gtk_box_pack_startC(vbox,build_tree_view(),TRUE,TRUE,0);
@@ -1598,7 +1600,7 @@ void layout_main_window()
     GtkWidget * vbox;
     GtkWidget * hbox;
 
-    vbox = gtk_vbox_new(FALSE,2);
+    vbox = gtk_box_new(GTK_ORIENTATION_VERTICAL,2);
 
     notebook = gtk_notebook_new();
     gtk_box_pack_startC(vbox,notebook,TRUE,TRUE,0);
@@ -1606,7 +1608,7 @@ void layout_main_window()
     layout_themes_pane(build_notebook_page(_("Themes Settings"),notebook));
     layout_settings_pane(build_notebook_page(_("Emerald Settings"),notebook));
 
-    hbox = gtk_hbox_new(FALSE,2);
+    hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL,2);
     gtk_box_pack_startC(vbox,hbox,FALSE,FALSE,0);
     QuitButton = gtk_button_new_from_stock(GTK_STOCK_QUIT);
     gtk_box_pack_endC(hbox,QuitButton,FALSE,FALSE,0);
