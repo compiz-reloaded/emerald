@@ -21,9 +21,17 @@
 #include <engine.h>
 #include <signal.h>
 
-#if GTK_CHECK_VERSION(3, 0, 0)
-#define gtk_hbox_new(X,Y) gtk_box_new(GTK_ORIENTATION_HORIZONTAL,Y)
-#define gtk_vbox_new(X,Y) gtk_box_new(GTK_ORIENTATION_VERTICAL,Y)
+#if !GTK_CHECK_VERSION(3, 0, 0)
+#define GTK_ORIENTATION_HORIZONTAL 0
+#define GTK_ORIENTATION_VERTICAL 1
+
+static GtkWidget *gtk_box_new(gint orientation, gint spacing)
+{
+    if (orientation == GTK_ORIENTATION_VERTICAL)
+	return gtk_vbox_new(FALSE, spacing);
+    else
+	return gtk_hbox_new(FALSE, spacing);
+}
 #endif
 
 typedef enum _EngineCol
@@ -135,7 +143,7 @@ GtkWidget * build_frame(GtkWidget * vbox, gchar * title, gboolean is_hbox)
     GtkWidget * box;
     frame = gtk_frame_new(title);
     gtk_box_pack_startC(vbox,frame,TRUE,TRUE,0);
-    box = is_hbox?gtk_hbox_new(FALSE,2):gtk_vbox_new(FALSE, 2);
+    box = gtk_box_new(is_hbox?GTK_ORIENTATION_HORIZONTAL:GTK_ORIENTATION_VERTICAL, 2);
     gtk_container_set_border_widthC(box,8);
     gtk_container_addC(frame,box);
     return box;
@@ -893,7 +901,7 @@ void layout_engine_list(GtkWidget * vbox)
 {
     GtkWidget * hbox;
     EngineCombo = gtk_combo_box_new();
-    hbox = gtk_hbox_new(FALSE,2);
+    hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL,2);
     gtk_box_pack_startC(vbox,hbox,FALSE,FALSE,0);
     gtk_box_pack_startC(hbox,gtk_label_new(_("Select\nEngine")),FALSE,FALSE,0);
     gtk_box_pack_startC(hbox,EngineCombo,FALSE,FALSE,0);
@@ -976,7 +984,7 @@ static void append_engine(gchar * dlname)
 
             d->dlname = dlname;
             d->canname = can;
-            d->vbox = gtk_vbox_new(FALSE,2);
+            d->vbox = gtk_box_new(GTK_ORIENTATION_VERTICAL,2);
             g_object_ref(d->vbox);
             lay(d->vbox);
             EngineList = g_slist_append(EngineList,d);
@@ -1038,7 +1046,7 @@ void init_engine_list()
 GtkWidget * build_notebook_page(gchar * title, GtkWidget * notebook)
 {
     GtkWidget * vbox;
-    vbox = gtk_vbox_new(FALSE,2);
+    vbox = gtk_box_new(GTK_ORIENTATION_VERTICAL,2);
     gtk_container_set_border_widthC(vbox,8);
     gtk_notebook_append_page(GTK_NOTEBOOK(notebook),vbox,
             gtk_label_new(title));

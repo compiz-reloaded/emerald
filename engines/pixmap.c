@@ -30,9 +30,17 @@
 #define TEXTURE_FROM_PNG(surface, png) \
         surface = (cairo_surface_t*) cairo_image_surface_create_from_png(png);
 
-#if GTK_CHECK_VERSION(3, 0, 0)
-#define gtk_hbox_new(X,Y) gtk_box_new(GTK_ORIENTATION_HORIZONTAL,Y)
-#define gtk_vbox_new(X,Y) gtk_box_new(GTK_ORIENTATION_VERTICAL,Y)
+#if !GTK_CHECK_VERSION(3, 0, 0)
+#define GTK_ORIENTATION_HORIZONTAL 0
+#define GTK_ORIENTATION_VERTICAL 1
+
+static GtkWidget *gtk_box_new(gint orientation, gint spacing)
+{
+    if (orientation == GTK_ORIENTATION_VERTICAL)
+	return gtk_vbox_new(FALSE, spacing);
+    else
+	return gtk_hbox_new(FALSE, spacing);
+}
 #endif
 
 /*
@@ -529,14 +537,14 @@ void layout_corners_frame(GtkWidget * vbox)
     gtk_box_pack_startC(vbox, junk, FALSE, FALSE, 0);
     register_setting(junk, ST_BOOL, SECT, "round_bottom_right");
 
-    hbox = gtk_hbox_new(FALSE, 2);
+    hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 2);
     gtk_box_pack_startC(vbox, hbox, FALSE, FALSE, 0);
     gtk_box_pack_startC(hbox, gtk_label_new(_("Top Rounding Radius")), FALSE, FALSE, 0);
     junk = scaler_new(0, 20, 0.5);
     gtk_box_pack_startC(hbox, junk, TRUE, TRUE, 0);
     register_setting(junk, ST_FLOAT, SECT, "top_radius");
 
-    hbox = gtk_hbox_new(FALSE, 2);
+    hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 2);
     gtk_box_pack_startC(vbox, hbox, FALSE, FALSE, 0);
     gtk_box_pack_startC(hbox, gtk_label_new(_("Bottom Rounding Radius")), FALSE, FALSE, 0);
     junk = scaler_new(0, 20, 0.5);
@@ -547,7 +555,7 @@ void my_engine_settings(GtkWidget * hbox,  gboolean active)
 {
     GtkWidget * vbox;
     GtkWidget * scroller;
-    vbox = gtk_vbox_new(FALSE, 2);
+    vbox = gtk_box_new(GTK_ORIENTATION_VERTICAL, 2);
     gtk_box_pack_startC(hbox, vbox, TRUE, TRUE, 0);
     gtk_box_pack_startC(vbox, gtk_label_new(active?"Active Window":"Inactive Window"), FALSE, FALSE, 0);
 #if GTK_CHECK_VERSION(3, 2, 0)
@@ -581,7 +589,7 @@ void my_engine_settings(GtkWidget * hbox,  gboolean active)
 void layout_engine_colors(GtkWidget * vbox)
 {
     GtkWidget * hbox;
-    hbox = gtk_hbox_new(FALSE, 2);
+    hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 2);
     gtk_box_pack_startC(vbox, hbox, TRUE, TRUE, 0);
     my_engine_settings(hbox, TRUE);
 #if GTK_CHECK_VERSION(3, 2, 0)
@@ -653,7 +661,7 @@ static void layout_pixmap_box(GtkWidget * vbox, gint b_t, gboolean active)
         use_my_width = gtk_check_button_new_with_label("");
         register_setting(use_my_width, ST_BOOL,SECT, g_strdup_printf("%s_%s_use_width", pre, p_types[b_t]));
 
-        tbox = gtk_hbox_new(FALSE, 2);
+        tbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 2);
         gtk_box_pack_startC(tbox, width, FALSE, FALSE, 0);
         gtk_box_pack_startC(tbox, use_my_width, FALSE, FALSE, 0);
         table_append(tbox, FALSE);
@@ -667,7 +675,7 @@ static void layout_pixmap_box(GtkWidget * vbox, gint b_t, gboolean active)
         use_my_height = gtk_check_button_new_with_label("");
         register_setting(use_my_height, ST_BOOL,SECT, g_strdup_printf("%s_%s_use_height", pre, p_types[b_t]));
 
-        ttbox = gtk_hbox_new(FALSE, 2);
+        ttbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 2);
         gtk_box_pack_startC(ttbox, height, FALSE, FALSE, 0);
         gtk_box_pack_startC(ttbox, use_my_height, FALSE, FALSE, 0);
         table_append(ttbox, FALSE);
@@ -683,7 +691,8 @@ void layout_engine_pixmaps(GtkWidget * vbox, gboolean active)
     GtkWidget * junk;
     gint i;
 
-    hbox = gtk_hbox_new(TRUE, 2);
+    hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 2);
+    gtk_box_set_homogeneous(hbox, TRUE);
     gtk_box_pack_startC(vbox, hbox, FALSE, FALSE, 0);
 
     if(!active) {

@@ -31,11 +31,6 @@
 
 #define SHADOW_FIX
 
-#if GTK_CHECK_VERSION(3, 0, 0)
-#define gtk_hbox_new(X,Y) gtk_box_new(GTK_ORIENTATION_HORIZONTAL,Y)
-#define gtk_vbox_new(X,Y) gtk_box_new(GTK_ORIENTATION_VERTICAL,Y)
-#endif
-
 /*
  * color privates
  */
@@ -241,7 +236,11 @@ void my_engine_settings(GtkWidget * hbox, gboolean active)
 {
     GtkWidget * vbox;
     GtkWidget * scroller;
+#if GTK_CHECK_VERSION(3, 0, 0)
+    vbox = gtk_box_new(GTK_ORIENTATION_VERTICAL,2);
+#else
     vbox = gtk_vbox_new(FALSE,2);
+#endif
     gtk_box_pack_startC(hbox, vbox, TRUE, TRUE, 0);
     gtk_box_pack_startC(vbox, gtk_label_new(active?"Active Window":"Inactive Window"), FALSE, FALSE, 0);
 #if GTK_CHECK_VERSION(3, 2, 0)

@@ -32,9 +32,17 @@
 
 #define DIP_ROUND_TRI  (1 << 4)
 
-#if GTK_CHECK_VERSION(3, 0, 0)
-#define gtk_hbox_new(X,Y) gtk_box_new(GTK_ORIENTATION_HORIZONTAL,Y)
-#define gtk_vbox_new(X,Y) gtk_box_new(GTK_ORIENTATION_VERTICAL,Y)
+#if !GTK_CHECK_VERSION(3, 0, 0)
+#define GTK_ORIENTATION_HORIZONTAL 0
+#define GTK_ORIENTATION_VERTICAL 1
+
+static GtkWidget *gtk_box_new(gint orientation, gint spacing)
+{
+    if (orientation == GTK_ORIENTATION_VERTICAL)
+	return gtk_vbox_new(FALSE, spacing);
+    else
+	return gtk_hbox_new(FALSE, spacing);
+}
 #endif
 
 typedef struct _pixmaps {
@@ -1308,26 +1316,26 @@ void layout_layout_frame(GtkWidget * vbox)
     GtkWidget * hbox;
     GtkWidget * junk;
 
-    hbox = gtk_hbox_new(FALSE,2);
+    hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL,2);
     gtk_box_pack_startC(vbox,hbox,FALSE,FALSE,0);
     gtk_box_pack_startC(hbox,gtk_label_new(_("Border Gap")),FALSE,FALSE,0);
     junk = scaler_new(0,20,0.5);
     gtk_box_pack_startC(hbox,junk,TRUE,TRUE,0);
     register_setting(junk,ST_FLOAT,SECT,"window_gap");
 
-    hbox = gtk_hbox_new(FALSE,2);
+    hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL,2);
     gtk_box_pack_startC(vbox,hbox,FALSE,FALSE,0);
     junk = gtk_check_button_new_with_label(_("Show Border when maximised?"));
     gtk_box_pack_startC(vbox,junk,FALSE,FALSE,0);
     register_setting(junk,ST_BOOL,SECT,"show_border_maximised");
 
-    hbox = gtk_hbox_new(FALSE,2);
+    hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL,2);
     gtk_box_pack_startC(vbox,hbox,FALSE,FALSE,0);
     junk = gtk_check_button_new_with_label(_("Show when minimised?"));
     gtk_box_pack_startC(vbox,junk,FALSE,FALSE,0);
     register_setting(junk,ST_BOOL,SECT,"show_border_minimised");
 
-    hbox = gtk_hbox_new(FALSE,2);
+    hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL,2);
     gtk_box_pack_startC(vbox,hbox,FALSE,FALSE,0);
     gtk_box_pack_startC(hbox,gtk_label_new(_("Minimised Border Size")),FALSE,FALSE,0);
     junk = scaler_new(0,30,1);
@@ -1340,26 +1348,26 @@ void layout_left_bar_frame(GtkWidget * vbox)
     GtkWidget * hbox;
     GtkWidget * junk;
 
-    hbox = gtk_hbox_new(FALSE,2);
+    hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL,2);
     gtk_box_pack_startC(vbox,hbox,FALSE,FALSE,0);
     junk = gtk_check_button_new_with_label(_("Enable Left Bar Dip?"));
     gtk_box_pack_startC(vbox,junk,FALSE,FALSE,0);
     register_setting(junk,ST_BOOL,SECT,"enable_left_bar_dip");
 
-    hbox = gtk_hbox_new(FALSE,2);
+    hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL,2);
     gtk_box_pack_startC(vbox,hbox,FALSE,FALSE,0);
     gtk_box_pack_startC(hbox,gtk_label_new(_("Left Bar Radius")),FALSE,FALSE,0);
     junk = scaler_new(0,20,1);
     gtk_box_pack_startC(hbox,junk,TRUE,TRUE,0);
     register_setting(junk,ST_INT,SECT,"left_bar_dip_radius");
 
-    hbox = gtk_hbox_new(FALSE,2);
+    hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL,2);
     gtk_box_pack_startC(vbox,hbox,FALSE,FALSE,0);
     junk = gtk_check_button_new_with_label(_("Enable Lower Bulge? (Useless at the moment, but will be used soon)"));
     gtk_box_pack_startC(vbox,junk,FALSE,FALSE,0);
     register_setting(junk,ST_BOOL,SECT,"enable_left_bar_dip_lower_part");
 
-    hbox = gtk_hbox_new(FALSE,2);
+    hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL,2);
     gtk_box_pack_startC(vbox,hbox,FALSE,FALSE,0);
     gtk_box_pack_startC(hbox,gtk_label_new(_("Top Corner Offset (%)")),FALSE,FALSE,0);
     junk = scaler_new(0,90,1);
@@ -1373,40 +1381,40 @@ void layout_title_bar_frame(GtkWidget * vbox)
     GtkWidget * hbox;
     GtkWidget * junk;
 
-    hbox = gtk_hbox_new(FALSE,2);
+    hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL,2);
     gtk_box_pack_startC(vbox,hbox,FALSE,FALSE,0);
     junk = gtk_check_button_new_with_label(_("Enable Title Bar Dip?"));
     gtk_box_pack_startC(vbox,junk,FALSE,FALSE,0);
     register_setting(junk,ST_BOOL,SECT,"enable_title_bar_dip");
 
-    hbox = gtk_hbox_new(FALSE,2);
+    hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL,2);
     gtk_box_pack_startC(vbox,hbox,FALSE,FALSE,0);
     junk = gtk_check_button_new_with_label(_("Enable Button Part?"));
     gtk_box_pack_startC(vbox,junk,FALSE,FALSE,0);
     register_setting(junk,ST_BOOL,SECT,"enable_bar_dip_button_part");
 
-    hbox = gtk_hbox_new(FALSE,2);
+    hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL,2);
     gtk_box_pack_startC(vbox,hbox,FALSE,FALSE,0);
     gtk_box_pack_startC(hbox,gtk_label_new(_("Title Part Width")),FALSE,FALSE,0);
     junk = scaler_new(80,800,1);
     gtk_box_pack_startC(hbox,junk,TRUE,TRUE,0);
     register_setting(junk,ST_INT,SECT,"title_bar_dip_title_width");
 
-    hbox = gtk_hbox_new(FALSE,2);
+    hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL,2);
     gtk_box_pack_startC(vbox,hbox,FALSE,FALSE,0);
     gtk_box_pack_startC(hbox,gtk_label_new(_("Button Part Width)")),FALSE,FALSE,0);
     junk = scaler_new(10,800,1);
     gtk_box_pack_startC(hbox,junk,TRUE,TRUE,0);
     register_setting(junk,ST_INT,SECT,"title_bar_dip_button_width");
 
-    hbox = gtk_hbox_new(FALSE,2);
+    hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL,2);
     gtk_box_pack_startC(vbox,hbox,FALSE,FALSE,0);
     gtk_box_pack_startC(hbox,gtk_label_new(_("Dip Corners Radius)")),FALSE,FALSE,0);
     junk = scaler_new(1,20,1);
     gtk_box_pack_startC(hbox,junk,TRUE,TRUE,0);
     register_setting(junk,ST_INT,SECT,"title_bar_dip_radius");
 
-    hbox = gtk_hbox_new(FALSE,2);
+    hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL,2);
     gtk_box_pack_startC(vbox,hbox,FALSE,FALSE,0);
     junk = gtk_check_button_new_with_label(_("Round Inside Corners As well?"));
     gtk_box_pack_startC(vbox,junk,FALSE,FALSE,0);
@@ -1422,7 +1430,7 @@ void layout_maximised_colors(GtkWidget * vbox)
     GtkWidget * scroller;
     GtkWidget * w;
 
-    hbox = gtk_hbox_new(FALSE,2);
+    hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL,2);
     gtk_box_pack_startC(vbox,hbox,FALSE,FALSE,0);
 
     junk = gtk_check_button_new_with_label(_("Enable Different Maximised Colors?"));
@@ -1492,14 +1500,14 @@ void layout_corners_frame(GtkWidget * vbox)
     gtk_box_pack_startC(vbox,junk,FALSE,FALSE,0);
     register_setting(junk,ST_BOOL,SECT,"round_bottom_right");
 
-    hbox = gtk_hbox_new(FALSE,2);
+    hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL,2);
     gtk_box_pack_startC(vbox,hbox,FALSE,FALSE,0);
     gtk_box_pack_startC(hbox,gtk_label_new(_("Frame Rounding Radius")),FALSE,FALSE,0);
     junk = scaler_new(0,20,0.5);
     gtk_box_pack_startC(hbox,junk,TRUE,TRUE,0);
     register_setting(junk,ST_FLOAT,SECT,"frame_radius");
 
-    hbox = gtk_hbox_new(FALSE,2);
+    hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL,2);
     gtk_box_pack_startC(vbox,hbox,FALSE,FALSE,0);
     gtk_box_pack_startC(hbox,gtk_label_new(_("Titlebar Rounding Radius")),FALSE,FALSE,0);
 
@@ -1529,7 +1537,7 @@ void my_engine_settings(GtkWidget * hbox, gboolean active)
     GtkWidget * junk;
 
 
-    vbox = gtk_vbox_new(FALSE,2);
+    vbox = gtk_box_new(GTK_ORIENTATION_VERTICAL,2);
     gtk_box_pack_startC(hbox,vbox,TRUE,TRUE,0);
     gtk_box_pack_startC(vbox,gtk_label_new(active?"Active Window":"Inactive Window"),FALSE,FALSE,0);
 #if GTK_CHECK_VERSION(3, 2, 0)
@@ -1613,7 +1621,7 @@ void my_engine_settings(GtkWidget * hbox, gboolean active)
 void layout_engine_colors(GtkWidget * vbox)
 {
     GtkWidget * hbox;
-    hbox = gtk_hbox_new(FALSE,2);
+    hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL,2);
     gtk_box_pack_startC(vbox,hbox,TRUE,TRUE,0);
     my_engine_settings(hbox,TRUE);
 #if GTK_CHECK_VERSION(3, 2, 0)
@@ -1642,7 +1650,7 @@ void layout_pixmaps(GtkWidget * vbox) {
     gtk_box_pack_startC(vbox,junk,FALSE,FALSE,0);
     register_setting(junk,ST_BOOL,SECT,"pixmaps_titlebarpart_repeat_enabled");
 
-    hbox = gtk_hbox_new(FALSE,2);
+    hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL,2);
     gtk_box_pack_startC(vbox,hbox,FALSE,FALSE,0);
 
     junk = gtk_label_new(_("Title Bar Part Pixmap"));
@@ -1677,7 +1685,7 @@ void layout_pixmaps(GtkWidget * vbox) {
     register_setting(junk,ST_BOOL,SECT,"pixmaps_buttonpart_repeat_enabled");
 
 
-    hbox = gtk_hbox_new(FALSE,2);
+    hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL,2);
     gtk_box_pack_startC(vbox,hbox,FALSE,FALSE,0);
 
     junk = gtk_label_new(_("Button Part Pixmap"));
@@ -1712,7 +1720,7 @@ void layout_pixmaps(GtkWidget * vbox) {
     register_setting(junk,ST_BOOL,SECT,"pixmaps_titlebar_repeat_enabled");
 
 
-    hbox = gtk_hbox_new(FALSE,2);
+    hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL,2);
     gtk_box_pack_startC(vbox,hbox,FALSE,FALSE,0);
 
     junk = gtk_label_new(_("Titlebar Pixmap"));

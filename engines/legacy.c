@@ -28,11 +28,6 @@
 
 #define SECT "legacy_settings"
 
-#if GTK_CHECK_VERSION(3, 0, 0)
-#define gtk_hbox_new(X,Y) gtk_box_new(GTK_ORIENTATION_HORIZONTAL,Y)
-#define gtk_vbox_new(X,Y) gtk_box_new(GTK_ORIENTATION_VERTICAL,Y)
-#endif
-
 /*
  * settings structs
  */
@@ -378,7 +373,11 @@ void layout_corners_frame(GtkWidget * vbox)
     gtk_box_pack_startC(vbox, junk, FALSE, FALSE, 0);
     register_setting(junk, ST_BOOL, SECT, "round_bottom_right");
 
+#if GTK_CHECK_VERSION(3, 0, 0)
+    hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 2);
+#else
     hbox = gtk_hbox_new(FALSE, 2);
+#endif
     gtk_box_pack_startC(vbox, hbox, FALSE, FALSE, 0);
 
     gtk_box_pack_startC(hbox, gtk_label_new(_("Rounding Radius")), FALSE, FALSE, 0);
@@ -392,7 +391,11 @@ void my_engine_settings(GtkWidget * hbox, gboolean active)
 {
     GtkWidget * vbox;
     GtkWidget * scroller;
+#if GTK_CHECK_VERSION(3, 0, 0)
+    vbox = gtk_box_new(GTK_ORIENTATION_VERTICAL, 2);
+#else
     vbox = gtk_vbox_new(FALSE, 2);
+#endif
     gtk_box_pack_startC(hbox, vbox, TRUE, TRUE, 0);
     gtk_box_pack_startC(vbox, gtk_label_new(active?"Active Window":"Inactive Window"), FALSE, FALSE, 0);
 #if GTK_CHECK_VERSION(3, 2, 0)
@@ -435,7 +438,11 @@ void my_engine_settings(GtkWidget * hbox, gboolean active)
 void layout_engine_colors(GtkWidget * vbox)
 {
     GtkWidget * hbox;
+#if GTK_CHECK_VERSION(3, 0, 0)
+    hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 2);
+#else
     hbox = gtk_hbox_new(FALSE, 2);
+#endif
     gtk_box_pack_startC(vbox, hbox, TRUE, TRUE, 0);
     my_engine_settings(hbox, TRUE);
 #if GTK_CHECK_VERSION(3, 2, 0)
