@@ -1794,6 +1794,7 @@ static void draw_window_decoration_real(decor_t * d, gboolean shadow_time)
 
 	    /* ===================active text colors */
 	    cairo_set_source_alpha_color(cr, &fs->text_halo);
+	    pango_cairo_update_layout(cr, d->layout);
 	    pango_cairo_layout_path(cr, d->layout);
 	    cairo_stroke(cr);
 
