@@ -4482,6 +4482,8 @@ static void title_event(WnckWindow * win, XEvent * xevent)
 		case DOUBLE_CLICK_MINIMIZE:
 		    wnck_window_minimize(win);
 		    break;
+		case DOUBLE_CLICK_NONE:
+		    break;
 		default:
 		    break;
 	    }
