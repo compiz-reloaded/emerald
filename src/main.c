@@ -3953,8 +3953,8 @@ static void restack_window(WnckWindow * win, int stack_mode)
 
 static void show_tooltip(const char *text)
 {
-#if GTK_CHECK_VERSION(3, 0, 0)
-    GdkDeviceManager *device_manager;
+#if GTK_CHECK_VERSION(3, 20, 0)
+    GdkSeat *seat;
     GdkDevice *pointer;
 #endif
     gint x, y, w, h;
@@ -3972,9 +3972,9 @@ static void show_tooltip(const char *text)
 
 	gtk_window_get_size(GTK_WINDOW(tip_window), &w, &h);
 
-#if GTK_CHECK_VERSION(3, 0, 0)
-	device_manager = gdk_display_get_device_manager(gdk_display_get_default());
-	pointer = gdk_device_manager_get_client_pointer(device_manager);
+#if GTK_CHECK_VERSION(3, 20, 0)
+	seat = gdk_display_get_default_seat(gdk_display_get_default());
+	pointer = gdk_seat_get_pointer(seat);
 
 	gdk_device_get_position(pointer, &screen, &x, &y);
 #else
