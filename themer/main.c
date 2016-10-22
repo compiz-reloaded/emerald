@@ -192,7 +192,9 @@ static void theme_list_append(gchar * value,gchar * dir, gchar * fil)
     {
         /* p = gdk_pixbuf_new(GDK_COLORSPACE_RGB,TRUE,8,1,1);
            p = gdk_pixbuf_new_from_file(,NULL); */
-        p = gtk_widget_render_icon(ThemeSelector,GTK_STOCK_MISSING_IMAGE,GTK_ICON_SIZE_LARGE_TOOLBAR,"themelist");
+        p = gtk_icon_theme_load_icon(gtk_icon_theme_get_default(),
+                                     "image-missing",24,
+                                     GTK_ICON_LOOKUP_USE_BUILTIN,NULL);
         gtk_list_store_set(ThemeList,&iter,7,p,-1);
         g_object_unref(p);
     }
@@ -943,9 +945,13 @@ void layout_file_frame(GtkWidget * vbox)
     gtk_box_pack_startC(hbox,junk,FALSE,FALSE,0);
     g_signal_connect(junk,"clicked",G_CALLBACK(cb_save),NULL);
 
-    ExportButton = gtk_button_new_with_label(_("Export..."));
-    gtk_button_set_image(GTK_BUTTON(ExportButton),
-            gtk_image_new_from_stock(GTK_STOCK_SAVE_AS,GTK_ICON_SIZE_BUTTON));
+#if GTK_CHECK_VERSION(3, 10, 0)
+    ExportButton = gtk_button_new_from_icon_name("document-save-as",
+                                            GTK_ICON_SIZE_BUTTON);
+#else
+    ExportButton = gtk_button_new_from_stock(GTK_STOCK_SAVE_AS);
+#endif
+    gtk_button_set_label(GTK_BUTTON(ExportButton),_("Export..."));
     gtk_box_pack_startC(hbox,ExportButton,FALSE,FALSE,0);
     g_signal_connect(ExportButton,"clicked",G_CALLBACK(cb_export),NULL);
 }
@@ -1020,7 +1026,7 @@ void layout_frame_pane(GtkWidget * vbox)
 {
     GtkWidget * hbox;
     hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL,2);
-    gtk_box_set_homogeneous(hbox,TRUE);
+    gtk_box_set_homogeneous(GTK_BOX(hbox),TRUE);
     gtk_box_pack_startC(vbox,hbox,TRUE,TRUE,0);
 
     layout_left_frame_pane(hbox);
@@ -1049,7 +1055,7 @@ void layout_global_pane(GtkWidget * vbox)
     GtkWidget * hbox;
 
     hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL,2);
-    gtk_box_set_homogeneous(hbox,TRUE);
+    gtk_box_set_homogeneous(GTK_BOX(hbox),TRUE);
     gtk_box_pack_startC(vbox,hbox,TRUE,TRUE,0);
 
     layout_left_global_pane(hbox);
@@ -1080,7 +1086,7 @@ void layout_screenshot_frame(GtkWidget * vbox)
     gtk_box_pack_startC(vbox,scrollwin,TRUE,TRUE,0);
 
     hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL,2);
-    gtk_box_set_homogeneous(hbox,TRUE);
+    gtk_box_set_homogeneous(GTK_BOX(hbox),TRUE);
     gtk_box_pack_startC(vbox,hbox,FALSE,FALSE,0);
 
     filesel=gtk_file_chooser_button_new(_("Screenshot"),
@@ -1387,16 +1393,20 @@ GtkWidget * build_tree_view()
     gtk_widget_set_sensitive(DeleteButton,FALSE);
     g_signal_connect(DeleteButton,"clicked",G_CALLBACK(cb_delete),NULL);
 
-    ImportButton = gtk_button_new_with_label("Import...");
-    gtk_button_set_image(GTK_BUTTON(ImportButton),
-            gtk_image_new_from_stock(GTK_STOCK_OPEN,GTK_ICON_SIZE_BUTTON));
+#if GTK_CHECK_VERSION(3, 10, 0)
+    ImportButton = gtk_button_new_from_icon_name("document-open",
+                                                 GTK_ICON_SIZE_BUTTON);
+#else
+    ImportButton = gtk_button_new_from_stock(GTK_STOCK_OPEN);
+#endif
+    gtk_button_set_label (GTK_BUTTON(ImportButton), _("Import..."));
     gtk_box_pack_startC(hbox,ImportButton,FALSE,FALSE,0);
     g_signal_connect(ImportButton,"clicked",G_CALLBACK(cb_import),NULL);
 
 #if GTK_CHECK_VERSION(3, 2, 0)
-	gtk_box_pack_startC(vbox,gtk_separator_new(GTK_ORIENTATION_HORIZONTAL),FALSE,FALSE,0);
+    gtk_box_pack_startC(vbox,gtk_separator_new(GTK_ORIENTATION_HORIZONTAL),FALSE,FALSE,0);
 #else
-	gtk_box_pack_startC(vbox,gtk_hseparator_new(),FALSE,FALSE,0);
+    gtk_box_pack_startC(vbox,gtk_hseparator_new(),FALSE,FALSE,0);
 #endif
 
     filt = GTK_TREE_MODEL_FILTER(

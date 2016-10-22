@@ -692,7 +692,7 @@ void layout_engine_pixmaps(GtkWidget * vbox, gboolean active)
     gint i;
 
     hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 2);
-    gtk_box_set_homogeneous(hbox, TRUE);
+    gtk_box_set_homogeneous(GTK_BOX(hbox), TRUE);
     gtk_box_pack_startC(vbox, hbox, FALSE, FALSE, 0);
 
     if(!active) {

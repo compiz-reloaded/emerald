@@ -269,7 +269,11 @@ void my_engine_settings(GtkWidget * hbox, gboolean active)
 void layout_engine_colors(GtkWidget * vbox)
 {
     GtkWidget * hbox;
+#if GTK_CHECK_VERSION(3, 0, 0)
+    hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 2);
+#else
     hbox = gtk_hbox_new(FALSE, 2);
+#endif
     gtk_box_pack_startC(vbox, hbox, TRUE, TRUE, 0);
     my_engine_settings(hbox, TRUE);
 #if GTK_CHECK_VERSION(3, 2, 0)

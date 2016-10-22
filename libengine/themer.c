@@ -600,15 +600,22 @@ void show_engine_named(EngineData * d, gpointer p)
 void do_engine(const gchar * nam)
 {
     GtkWidget * w;
-    if (active_engine && !strcmp(active_engine,nam))
+    GList *old_children, *list;
+    if (active_engine && g_strcmp0(active_engine,nam) == 0)
         return;
     if (active_engine)
         g_free(active_engine);
     active_engine = g_strdup(nam);
-    if ((w=gtk_bin_get_child(GTK_BIN(EngineContainer))))
-        gtk_container_remove(GTK_CONTAINER(EngineContainer),w);
-    g_slist_foreach(EngineList,(GFunc) show_engine_named, (gpointer) nam);
 
+    old_children = gtk_container_get_children(GTK_CONTAINER(EngineContainer));
+    for (list = old_children; list != NULL; list = list->next)
+    {
+        gtk_container_remove(GTK_CONTAINER(EngineContainer),
+                             GTK_WIDGET(list->data));
+    }
+    g_list_free (old_children);
+
+    g_slist_foreach(EngineList,(GFunc) show_engine_named, (gpointer) nam);
 }
 void search_engine(EngineData * d, gpointer p)
 {
@@ -910,8 +917,8 @@ void layout_engine_list(GtkWidget * vbox)
 #else
     gtk_box_pack_startC(vbox,gtk_hseparator_new(),FALSE,FALSE,0);
 #endif
-    /* really only needed for the bin-ness */
-    EngineContainer = gtk_alignment_new(0,0,1,1);
+    /* really only needed for the container-ness */
+    EngineContainer = gtk_box_new(GTK_ORIENTATION_HORIZONTAL,0);
     gtk_box_pack_startC(vbox,EngineContainer,TRUE,TRUE,0);
 }
 static gchar * canonize_name(gchar * dlname)
@@ -975,8 +982,10 @@ static void append_engine(gchar * dlname)
             d->meta.description=g_strdup("No Description");
             d->meta.version=g_strdup("0.0");
             d->meta.last_compat=g_strdup("0.0");
-            d->meta.icon=gtk_widget_render_icon(EngineCombo,GTK_STOCK_MISSING_IMAGE,
-                                                GTK_ICON_SIZE_LARGE_TOOLBAR,"themeengine");
+            d->meta.icon=gtk_icon_theme_load_icon(gtk_icon_theme_get_default(),
+                                                  "image-missing",24,
+                                                  GTK_ICON_LOOKUP_USE_BUILTIN,
+                                                  NULL);
             if (meta)
                 meta(&(d->meta));
             else
