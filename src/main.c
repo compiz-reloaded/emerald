@@ -5239,6 +5239,18 @@ static int update_shadow(frame_settings * fs)
 
     dst = XRenderCreatePicture(xdisplay, cairo_xlib_surface_get_drawable(d.surface),
 			       format, 0, NULL);
+
+    /* draw rectangle */
+    XRenderFillRectangle(xdisplay, PictOpSrc, dst, &clear,
+			 0, 0, d.width, d.height);
+    XRenderFillRectangle(xdisplay, PictOpSrc, dst, &white,
+			 ws->shadow_left_space,
+			 ws->shadow_top_space,
+			 d.width - ws->shadow_left_space -
+			 ws->shadow_right_space,
+			 d.height - ws->shadow_top_space -
+			 ws->shadow_bottom_space);
+
     tmp = XRenderCreatePicture(xdisplay, cairo_xlib_surface_get_drawable(surface),
 			       format, 0, NULL);
 
