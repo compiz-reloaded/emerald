@@ -2579,7 +2579,7 @@ static void update_default_decorations(GdkScreen * screen, frame_settings *fs_ac
     window_settings *ws = fs_act->ws;	/* hackish, I know, FIXME */
     decor_extents_t extents = ws->win_extents;
 
-    memset(&d, '\0', sizeof(decor_t));
+    memset(&d, 0, sizeof(decor_t));
 
     xroot = RootWindowOfScreen(gdk_x11_screen_get_xscreen(screen));
 
@@ -3414,7 +3414,7 @@ static void add_frame_window(WnckWindow * win, Window frame)
 
     d->active = wnck_window_is_active(win);
 
-    memset(&attr, '\0', sizeof(XSetWindowAttributes));
+    memset(&attr, 0, sizeof(XSetWindowAttributes));
     attr.event_mask = ButtonPressMask | EnterWindowMask | LeaveWindowMask;
     attr.override_redirect = TRUE;
 
@@ -3827,7 +3827,7 @@ static void window_opened(WnckScreen * screen, WnckWindow * win)
     d = g_malloc(sizeof(decor_t));
     if (!d)
 	return;
-    memset(d, '\0', sizeof(decor_t));
+    memset(d, 0, sizeof(decor_t));
 
     wnck_window_get_client_window_geometry(win, NULL, NULL, &d->client_width, &d->client_height);
 
@@ -5095,7 +5095,7 @@ static int update_shadow(frame_settings * fs)
     cairo_t *cr;
     decor_t d;
 
-    memset(&d, '\0', sizeof(decor_t));
+    memset(&d, 0, sizeof(decor_t));
     window_settings *ws = fs->ws;
 
     /* TODO: shadows show strong artefacts with 30-bit setups
@@ -5809,7 +5809,7 @@ int main(int argc, char *argv[])
     window_settings *ws;
 
     ws = g_malloc(sizeof(window_settings));
-    memset(ws, '\0', sizeof(window_settings));
+    memset(ws, 0, sizeof(window_settings));
     global_ws = ws;
     setlocale(LC_ALL, "");
     bindtextdomain(GETTEXT_PACKAGE, LOCALEDIR);
@@ -5836,7 +5836,7 @@ int main(int argc, char *argv[])
     /* ws->tobj_layout=g_strdup("CNX:IT:HM"); */
 
     pfs = g_malloc(sizeof(frame_settings));
-    memset(pfs, '\0', sizeof(frame_settings));
+    memset(pfs, 0, sizeof(frame_settings));
     pfs->ws = ws;
     ACOLOR(text, 1.0, 1.0, 1.0, 1.0);
     ACOLOR(text_halo, 0.0, 0.0, 0.0, 0.2);
@@ -5845,7 +5845,7 @@ int main(int argc, char *argv[])
     ws->fs_act = pfs;
 
     pfs = g_malloc(sizeof(frame_settings));
-    memset(pfs, '\0', sizeof(frame_settings));
+    memset(pfs, 0, sizeof(frame_settings));
     pfs->ws = ws;
     ACOLOR(text, 0.8, 0.8, 0.8, 0.8);
     ACOLOR(text_halo, 0.0, 0.0, 0.0, 0.2);
