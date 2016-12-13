@@ -3472,13 +3472,13 @@ static void add_frame_window(WnckWindow * win, Window frame)
 	for (i = 0; i < 3; i++)
 	    for (j = 0; j < 3; j++)
 		g_hash_table_insert(frame_table,
-				    GINT_TO_POINTER(d->event_windows[i][j]),
-				    GINT_TO_POINTER(xid));
+				    GUINT_TO_POINTER(d->event_windows[i][j]),
+				    GUINT_TO_POINTER(xid));
 
 	for (i = 0; i < B_T_COUNT; i++)
 	    g_hash_table_insert(frame_table,
-				GINT_TO_POINTER(d->button_windows[i]),
-				GINT_TO_POINTER(xid));
+				GUINT_TO_POINTER(d->button_windows[i]),
+				GUINT_TO_POINTER(xid));
 
 
 	update_window_decoration_state(win);
@@ -4179,6 +4179,8 @@ handle_tooltip_event(WnckWindow * win,
 	case LeaveNotify:
 	    hide_tooltip();
 	    break;
+	default:
+	    break;
     }
 }
 
@@ -4196,21 +4198,12 @@ static void action_menu_destroyed(GObject *object)
     action_menu_mapped = FALSE;
 }
 
-static void action_menu_map(WnckWindow *win, long button, Time time)
+static void action_menu_map(WnckWindow *win, guint button, guint32 time)
 {
-    GdkDisplay *gdkdisplay;
-    GdkScreen *screen;
-#if GTK_CHECK_VERSION(3, 0, 0)
-    Display *display;
-#endif
+    GdkDisplay *display = gdk_display_get_default();
+    GdkScreen *screen = gdk_display_get_default_screen(display);
 
-    gdkdisplay = gdk_display_get_default();
-    screen = gdk_display_get_default_screen(gdkdisplay);
-#if GTK_CHECK_VERSION(3, 0, 0)
-    display = gdk_x11_display_get_xdisplay (gdkdisplay);
-#endif
-
-    if (action_menu)
+    if (action_menu != NULL)
     {
 	if (action_menu_mapped)
 	{
@@ -4250,8 +4243,8 @@ static void action_menu_map(WnckWindow *win, long button, Time time)
     gtk_widget_show(action_menu);
 
 #if GTK_CHECK_VERSION(3, 0, 0)
-    XUngrabPointer(display, time);
-    XUngrabKeyboard(display, time);
+    XUngrabPointer(GDK_DISPLAY_XDISPLAY(display), (Time) time);
+    XUngrabKeyboard(GDK_DISPLAY_XDISPLAY(display), (Time) time);
 #endif
 
     gtk_menu_popup(GTK_MENU(action_menu),
@@ -4265,9 +4258,8 @@ static void action_menu_map(WnckWindow *win, long button, Time time)
  * XEvent Button code: ButtonRelease (mouse click)
  */
 static gint generic_button_event(WnckWindow * win, XEvent * xevent,
-				 gint button, gint bpict)
+				 guint button, gint bpict)
 {
-    /* Display *xdisplay = GDK_DISPLAY_XDISPLAY(gdk_display_get_default()); */
     const gchar *tooltips[B_COUNT] = {
 	_("Close Window"),
 	_("Maximize Window"),
@@ -4286,28 +4278,21 @@ static gint generic_button_event(WnckWindow * win, XEvent * xevent,
 
     decor_t *d = g_object_get_data(G_OBJECT(win), "decor");
     guint state = d->button_states[button];
-    gint ret = 0;
+    guint ret = 0;
 
     /* window_settings * ws = d->fs->ws; */
 
     handle_tooltip_event(win, xevent, state, tooltips[bpict]);
 
-    /*
-     * "!(xevent->xbutton.button & -4)" tests whether event button is one of
-     * three major mouse buttons
-     * "!(xevent->xbutton.button & -4)" evaluates to:
-     * 0: xevent->xbutton.button < 0, xevent->xbutton.button > 3
-     * 1: -1 < xevent->xbutton.button < 4
-     */
     switch (xevent->type)
     {
 	case ButtonPress:
-	    if (((button == B_T_MAXIMIZE) && !(xevent->xbutton.button & -4)) ||
+	    if (((button == B_T_MAXIMIZE) && xevent->xbutton.button < 3) ||
 		(xevent->xbutton.button == Button1))
 		d->button_states[button] |= PRESSED_EVENT_WINDOW;
 	    break;
 	case ButtonRelease:
-	    if (((button == B_T_MAXIMIZE) && !(xevent->xbutton.button & -4)) ||
+	    if (((button == B_T_MAXIMIZE) && xevent->xbutton.button < 3) ||
 		(xevent->xbutton.button == Button1))
 	    {
 		if (d->button_states[button] ==
@@ -4323,6 +4308,8 @@ static gint generic_button_event(WnckWindow * win, XEvent * xevent,
 	case LeaveNotify:
 	    d->button_states[button] &= ~IN_EVENT_WINDOW;
 	    break;
+	default:
+	    break;
     }
 
     if (state != d->button_states[button])
@@ -4334,7 +4321,7 @@ static gint generic_button_event(WnckWindow * win, XEvent * xevent,
 static void close_button_event(WnckWindow * win, XEvent * xevent)
 {
     if (generic_button_event(win, xevent, B_T_CLOSE, B_CLOSE))
-	wnck_window_close(win, xevent->xbutton.time);
+	wnck_window_close(win, (guint32) xevent->xbutton.time);
 }
 
 static void max_button_event(WnckWindow * win, XEvent * xevent)
@@ -4360,6 +4347,8 @@ static void max_button_event(WnckWindow * win, XEvent * xevent)
 		wnck_window_unmaximize_horizontally(win);
 	    else
 		wnck_window_maximize_horizontally(win);
+	    break;
+	default:
 	    break;
     }
 }
@@ -4758,39 +4747,28 @@ static GdkFilterReturn
 event_filter_func(GdkXEvent * gdkxevent, GdkEvent * event, gpointer data)
 {
     Display *xdisplay;
-    GdkDisplay *gdkdisplay;
     XEvent *xevent = gdkxevent;
-    gulong xid = 0;
+    Window xid = None;
 
-    gdkdisplay = gdk_display_get_default();
-    xdisplay = GDK_DISPLAY_XDISPLAY(gdkdisplay);
+    xdisplay = xevent->xany.display;
 
     switch (xevent->type)
     {
 	case ButtonPress:
 	case ButtonRelease:
-	    xid = (gulong)
-		g_hash_table_lookup(frame_table,
-				    GINT_TO_POINTER(xevent->xbutton.window));
-	    break;
 	case EnterNotify:
 	case LeaveNotify:
-	    xid = (gulong)
-		g_hash_table_lookup(frame_table,
-				    GINT_TO_POINTER(xevent->xcrossing.
-						    window));
-	    break;
 	case MotionNotify:
-	    xid = (gulong)
-		g_hash_table_lookup(frame_table,
-				    GINT_TO_POINTER(xevent->xmotion.window));
+	    xid =
+	      GPOINTER_TO_UINT(g_hash_table_lookup(frame_table,
+						   GUINT_TO_POINTER(xevent->xany.window)));
 	    break;
 	case PropertyNotify:
 	    if (xevent->xproperty.atom == frame_window_atom)
 	    {
 		WnckWindow *win;
 
-		xid = xevent->xproperty.window;
+		xid = xevent->xany.window;
 
 		win = wnck_window_get(xid);
 		if (win)
@@ -4807,7 +4785,7 @@ event_filter_func(GdkXEvent * gdkxevent, GdkEvent * event, gpointer data)
 	    {
 		WnckWindow *win;
 
-		xid = xevent->xproperty.window;
+		xid = xevent->xany.window;
 
 		win = wnck_window_get(xid);
 		if (win)
@@ -4846,7 +4824,7 @@ event_filter_func(GdkXEvent * gdkxevent, GdkEvent * event, gpointer data)
 	    {
 		WnckWindow *win;
 
-		xid = xevent->xproperty.window;
+		xid = xevent->xany.window;
 
 		win = wnck_window_get(xid);
 		if (win)
@@ -4860,7 +4838,7 @@ event_filter_func(GdkXEvent * gdkxevent, GdkEvent * event, gpointer data)
 	    break;
 	case DestroyNotify:
 	    g_hash_table_remove(frame_table,
-				GINT_TO_POINTER(xevent->xproperty.window));
+				GUINT_TO_POINTER(xevent->xany.window));
 	    break;
 	case ClientMessage:
 	    if (xevent->xclient.message_type == toolkit_action_atom)
@@ -4872,7 +4850,7 @@ event_filter_func(GdkXEvent * gdkxevent, GdkEvent * event, gpointer data)
 		{
 		    WnckWindow *win;
 
-		    win = wnck_window_get(xevent->xclient.window);
+		    win = wnck_window_get(xevent->xany.window);
 		    if (win)
 		    {
 			action_menu_map(win,
@@ -4884,7 +4862,7 @@ event_filter_func(GdkXEvent * gdkxevent, GdkEvent * event, gpointer data)
 		{
 		    WnckWindow *win;
 
-		    win = wnck_window_get(xevent->xclient.window);
+		    win = wnck_window_get(xevent->xany.window);
 		    if (win)
 		    {
 			if (xevent->xclient.data.l[2])
@@ -4899,12 +4877,12 @@ event_filter_func(GdkXEvent * gdkxevent, GdkEvent * event, gpointer data)
 	    {
 		reload_all_settings(SIGUSR1);
 	    }
-
+	    break;
 	default:
 	    break;
     }
 
-    if (xid)
+    if (xid != None)
     {
 	WnckWindow *win;
 
