@@ -599,7 +599,6 @@ void show_engine_named(EngineData * d, gpointer p)
 }
 void do_engine(const gchar * nam)
 {
-    GtkWidget * w;
     GList *old_children, *list;
     if (active_engine && g_strcmp0(active_engine,nam) == 0)
         return;

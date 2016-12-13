@@ -2579,7 +2579,7 @@ static void update_default_decorations(GdkScreen * screen, frame_settings *fs_ac
     window_settings *ws = fs_act->ws;	/* hackish, I know, FIXME */
     decor_extents_t extents = ws->win_extents;
 
-    bzero(&d, sizeof(decor_t));
+    memset(&d, '\0', sizeof(decor_t));
 
     xroot = RootWindowOfScreen(gdk_x11_screen_get_xscreen(screen));
 
@@ -3414,7 +3414,7 @@ static void add_frame_window(WnckWindow * win, Window frame)
 
     d->active = wnck_window_is_active(win);
 
-    bzero(&attr, sizeof(XSetWindowAttributes));
+    memset(&attr, '\0', sizeof(XSetWindowAttributes));
     attr.event_mask = ButtonPressMask | EnterWindowMask | LeaveWindowMask;
     attr.override_redirect = TRUE;
 
@@ -3604,6 +3604,7 @@ static gboolean update_switcher_window(WnckWindow * win, Window selected)
 static void remove_frame_window(WnckWindow * win)
 {
     decor_t *d = g_object_get_data(G_OBJECT(win), "decor");
+    int b_t;
 
     if (IS_VALID_SURFACE(d->p_active_surface))
 	cairo_surface_destroy(d->p_active_surface);
@@ -3620,8 +3621,6 @@ static void remove_frame_window(WnckWindow * win)
     if (IS_VALID_SURFACE(d->p_inactive_buffer_surface))
 	cairo_surface_destroy(d->p_inactive_buffer_surface);
     d->p_inactive_buffer_surface = NULL;
-
-    int b_t;
 
     for (b_t = 0; b_t < B_T_COUNT; b_t++)
     {
@@ -3828,7 +3827,7 @@ static void window_opened(WnckScreen * screen, WnckWindow * win)
     d = g_malloc(sizeof(decor_t));
     if (!d)
 	return;
-    bzero(d, sizeof(decor_t));
+    memset(d, '\0', sizeof(decor_t));
 
     wnck_window_get_client_window_geometry(win, NULL, NULL, &d->client_width, &d->client_height);
 
@@ -5081,7 +5080,7 @@ static int update_shadow(frame_settings * fs)
     cairo_t *cr;
     decor_t d;
 
-    bzero(&d, sizeof(decor_t));
+    memset(&d, '\0', sizeof(decor_t));
     window_settings *ws = fs->ws;
 
     /* TODO: shadows show strong artefacts with 30-bit setups
@@ -5794,8 +5793,8 @@ int main(int argc, char *argv[])
     frame_settings *pfs;
     window_settings *ws;
 
-    ws = malloc(sizeof(window_settings));
-    bzero(ws, sizeof(window_settings));
+    ws = g_malloc(sizeof(window_settings));
+    memset(ws, '\0', sizeof(window_settings));
     global_ws = ws;
     setlocale(LC_ALL, "");
     bindtextdomain(GETTEXT_PACKAGE, LOCALEDIR);
@@ -5821,8 +5820,8 @@ int main(int argc, char *argv[])
     ws->tobj_layout = g_strdup("IT::HNXC");
     /* ws->tobj_layout=g_strdup("CNX:IT:HM"); */
 
-    pfs = malloc(sizeof(frame_settings));
-    bzero(pfs, sizeof(frame_settings));
+    pfs = g_malloc(sizeof(frame_settings));
+    memset(pfs, '\0', sizeof(frame_settings));
     pfs->ws = ws;
     ACOLOR(text, 1.0, 1.0, 1.0, 1.0);
     ACOLOR(text_halo, 0.0, 0.0, 0.0, 0.2);
@@ -5830,8 +5829,8 @@ int main(int argc, char *argv[])
     ACOLOR(button_halo, 0.0, 0.0, 0.0, 0.2);
     ws->fs_act = pfs;
 
-    pfs = malloc(sizeof(frame_settings));
-    bzero(pfs, sizeof(frame_settings));
+    pfs = g_malloc(sizeof(frame_settings));
+    memset(pfs, '\0', sizeof(frame_settings));
     pfs->ws = ws;
     ACOLOR(text, 0.8, 0.8, 0.8, 0.8);
     ACOLOR(text_halo, 0.0, 0.0, 0.0, 0.2);
