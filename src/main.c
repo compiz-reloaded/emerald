@@ -69,23 +69,23 @@ static Atom utf8_string_atom;
 
 static Time dm_sn_timestamp;
 
-#define C(name) { 0, XC_ ## name }
+#define C(name) { NULL, GDK_ ## name }
 #define BUTTON_NOT_VISIBLE(ddd, xxx) \
     ((ddd)->tobj_item_state[(xxx)] == 3 || !((ddd)->actions & button_actions[(xxx)]))
 
 static struct _cursor
 {
-    Cursor cursor;
-    unsigned int shape;
+    GdkCursor *cursor;
+    GdkCursorType shape;
 } cursor[3][3] =
 {
     {
-	C(top_left_corner), C(top_side), C(top_right_corner)},
+	C(TOP_LEFT_CORNER), C(TOP_SIDE), C(TOP_RIGHT_CORNER)},
     {
-	C(left_side), C(left_ptr), C(right_side)},
+	C(LEFT_SIDE), C(LEFT_PTR), C(RIGHT_SIDE)},
     {
-	C(bottom_left_corner), C(bottom_side), C(bottom_right_corner)}
-}, button_cursor = C(hand2);
+	C(BOTTOM_LEFT_CORNER), C(BOTTOM_SIDE), C(BOTTOM_RIGHT_CORNER)}
+}, button_cursor = C(HAND2);
 
 
 static char *program_name;
@@ -2892,10 +2892,32 @@ void position_title_object(gchar obj, WnckWindow * win, window_settings * ws,
 				(d->state & WNCK_WINDOW_STATE_MAXIMIZED_HORIZONTALLY)) ?
 			       ws->win_extents.left : 0), y, w, h);
 	    if (button_cursor.cursor && ws->button_hover_cursor == 1)
+	    {
+#ifdef HAVE_XINPUT2
+		int client_pointer;
+
+		XIGetClientPointer(xdisplay, None, &client_pointer);
+		XIDefineCursor(xdisplay, client_pointer,
+			       d->button_windows[i],
+			       GDK_CURSOR_XCURSOR(button_cursor.cursor));
+#else
 		XDefineCursor(xdisplay,
-			      d->button_windows[i], button_cursor.cursor);
+			      d->button_windows[i],
+			      GDK_CURSOR_XCURSOR(button_cursor.cursor));
+#endif
+	    }
 	    else
+	    {
+#ifdef HAVE_XINPUT2
+		int client_pointer;
+
+		XIGetClientPointer(xdisplay, None, &client_pointer);
+		XIUndefineCursor(xdisplay, client_pointer,
+				 d->button_windows[i]);
+#else
 		XUndefineCursor(xdisplay, d->button_windows[i]);
+#endif
+	    }
 	}
 	XSync(xdisplay, FALSE);
 #if GTK_CHECK_VERSION(3, 0, 0)
@@ -3410,9 +3432,20 @@ static void add_frame_window(WnckWindow * win, Window frame)
 			      CopyFromParent,
 			      CWOverrideRedirect | CWEventMask, &attr);
 
-	    if (cursor[i][j].cursor)
+	    if (cursor[i][j].cursor != NULL)
+	    {
+#ifdef HAVE_XINPUT2
+		int client_pointer;
+
+		XIGetClientPointer(xdisplay, None, &client_pointer);
+		XIDefineCursor(xdisplay, client_pointer,
+			       d->event_windows[i][j],
+			       GDK_CURSOR_XCURSOR(cursor[i][j].cursor));
+#else
 		XDefineCursor(xdisplay, d->event_windows[i][j],
-			      cursor[i][j].cursor);
+			      GDK_CURSOR_XCURSOR(cursor[i][j].cursor));
+#endif
+	    }
 	}
     }
 
@@ -5963,14 +5996,15 @@ int main(int argc, char *argv[])
     {
 	for (j = 0; j < 3; j++)
 	{
-	    if (cursor[i][j].shape != XC_left_ptr)
-		cursor[i][j].cursor =
-		    XCreateFontCursor(xdisplay, cursor[i][j].shape);
+	    cursor[i][j].cursor = gdk_cursor_new_for_display(gdkdisplay,
+							     cursor[i][j].shape);
 	}
     }
     if (button_cursor.shape != XC_left_ptr)
-	button_cursor.cursor =
-	    XCreateFontCursor(xdisplay, button_cursor.shape);
+    {
+	button_cursor.cursor = gdk_cursor_new_for_display(gdkdisplay,
+							  button_cursor.shape);
+    }
 
     frame_table = g_hash_table_new(NULL, NULL);
 

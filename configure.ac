@@ -36,6 +36,14 @@ export PKG_CONFIG_PATH
 AC_SUBST(PKG_CONFIG_PATH)
 AC_MSG_NOTICE([Using PKG_CONFIG_PATH=$PKG_CONFIG_PATH])
 
+AC_CHECK_HEADER([X11/extensions/XInput2.h],
+		 [have_xinput2=yes], [have_xinput2=no])
+
+if test "$have_xinput2" = yes; then
+  AC_DEFINE(HAVE_XINPUT2, 1,
+	    [Define to 1 if xinput2 is available])
+fi
+
 AC_MSG_CHECKING([which gtk+ version to compile against])
 AC_ARG_WITH([gtk],
   AC_HELP_STRING([--with-gtk=2.0|3.0],
@@ -61,6 +69,7 @@ case "$with_gtk" in
 esac
 
 EMERALD_REQUIRES=" xrender >= 0.8.4				  \
+		    xi						   \
 		    gtk+-$GTK_API_VERSION >= $GTK_MIN_VERSION	   \
 		    libwnck-$WNCK_API_VERSION >= $WNCK_MIN_VERSION \
 		    libdecoration				   \
