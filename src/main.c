@@ -4708,7 +4708,11 @@ static void show_force_quit_dialog(WnckWindow * win, Time timestamp)
     gtk_window_set_icon_name(GTK_WINDOW(dialog), "force-quit");
 
     gtk_dialog_add_buttons(GTK_DIALOG(dialog),
+#if GTK_CHECK_VERSION(4, 0, 0)
 			   _("_Cancel"),
+#else
+			   GTK_STOCK_CANCEL,
+#endif
 			   GTK_RESPONSE_REJECT,
 			   _("_Force Quit"), GTK_RESPONSE_ACCEPT, NULL);
 
