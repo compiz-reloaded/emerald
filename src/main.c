@@ -2891,7 +2891,7 @@ void position_title_object(gchar obj, WnckWindow * win, window_settings * ws,
 			      ((ws->use_decoration_cropping &&
 				(d->state & WNCK_WINDOW_STATE_MAXIMIZED_HORIZONTALLY)) ?
 			       ws->win_extents.left : 0), y, w, h);
-	    if (button_cursor.cursor && ws->button_hover_cursor == 1)
+	    if (button_cursor.cursor != NULL && ws->button_hover_cursor == 1)
 	    {
 #ifdef HAVE_XINPUT2
 		int client_pointer;
@@ -5984,11 +5984,14 @@ int main(int argc, char *argv[])
     {
 	for (j = 0; j < 3; j++)
 	{
-	    cursor[i][j].cursor = gdk_cursor_new_for_display(gdkdisplay,
-							     cursor[i][j].shape);
+	    if (cursor[i][j].shape != GDK_LEFT_PTR)
+	    {
+		cursor[i][j].cursor =
+		  gdk_cursor_new_for_display(gdkdisplay, cursor[i][j].shape);
+	    }
 	}
     }
-    if (button_cursor.shape != XC_left_ptr)
+    if (button_cursor.shape != GDK_LEFT_PTR)
     {
 	button_cursor.cursor = gdk_cursor_new_for_display(gdkdisplay,
 							  button_cursor.shape);

@@ -9,7 +9,6 @@
 #include <X11/Xlib.h>
 #include <X11/Xatom.h>
 #include <X11/Xregion.h>
-#include <X11/cursorfont.h>
 #include <X11/extensions/Xrender.h>
 #ifdef HAVE_XINPUT2
 #include <X11/extensions/XInput2.h>
