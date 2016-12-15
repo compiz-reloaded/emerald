@@ -487,18 +487,16 @@ void init_engine(window_settings * ws)
     private_fs * pfs;
     private_ws * pws;
 
-    pws = malloc(sizeof(private_ws));
+    pws = g_malloc0(sizeof(private_ws));
     ws->engine_ws = pws;
-    bzero(pws, sizeof(private_ws));
     pws->round_top_left = TRUE;
     pws->round_top_right = TRUE;
     pws->round_bottom_left = TRUE;
     pws->round_bottom_right = TRUE;
     pws->corner_radius = 5.0;
 
-    pfs = malloc(sizeof(private_fs));
+    pfs = g_malloc0(sizeof(private_fs));
     ws->fs_act->engine_fs = pfs;
-    bzero(pfs, sizeof(private_fs));
     pfs->title_notch_position = 0.5;
     pfs->curve_offset = 0.0;
     pfs->color_contrast = 0.9;
@@ -520,8 +518,7 @@ void init_engine(window_settings * ws)
     ACOLOR(contents_halo, 0.8, 0.8, 0.8, 0.8);
     ACOLOR(glow_inner, 0.9, 0.9, 0.9, 0.9);
 
-    pfs = malloc(sizeof(private_fs));
-    bzero(pfs, sizeof(private_fs));
+    pfs = g_malloc0(sizeof(private_fs));
     ws->fs_inact->engine_fs = pfs;
     pfs->title_notch_position = 0.5;
     pfs->curve_offset = 0.0;
@@ -547,8 +544,8 @@ void init_engine(window_settings * ws)
 
 void fini_engine(window_settings * ws)
 {
-    free(ws->fs_act->engine_fs);
-    free(ws->fs_inact->engine_fs);
+    g_free(ws->fs_act->engine_fs);
+    g_free(ws->fs_inact->engine_fs);
 }
 
 void layout_corners_frame(GtkWidget * vbox)

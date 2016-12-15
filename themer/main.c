@@ -235,7 +235,7 @@ static void scroll_to_theme(gchar * thn)
     {
         gchar * s;
         gtk_tree_model_get(GTK_TREE_MODEL(ThemeList),&i,0,&s,-1);
-        if (strcmp(s,thn)==0)
+        if (g_strcmp0(s,thn)==0)
         {
             GtkTreePath * p;
             p=gtk_tree_model_get_path(GTK_TREE_MODEL(ThemeList),&i);
@@ -1592,23 +1592,6 @@ void import_cache(GtkWidget * progbar)
         g_dir_close(d);
     }
 }
-
-gboolean watcher_func(gpointer p)
-{
-    FetcherInfo * f = p;
-
-    gtk_progress_bar_pulse(GTK_PROGRESS_BAR(f->progbar));
-    if (waitpid(f->pd,NULL,WNOHANG)!=0)
-    {
-	import_cache(f->progbar);
-	refresh_theme_list(NULL);
-        gtk_widget_destroy(f->dialog);
-	g_free(themecache);
-        free(p);
-        return FALSE;
-    }
-    return TRUE;
-}
 void cb_quit(GtkWidget * w, gpointer p)
 {
     gtk_widget_destroy(mainWindow);
@@ -1712,14 +1695,14 @@ int main(int argc, char * argv[])
     int loop_count = 0;
 
     while (loop_count < argc) {
-	if (strcmp(argv[loop_count],"-i") == 0) {
+	if (g_strcmp0(argv[loop_count],"-i") == 0) {
 	 /* -i arg found so next option should be the file to install */
 	    if (loop_count + 1 < argc) {
 	     input_file = argv[loop_count + 1];
-             printf("File To Install %s\n", input_file);
+             g_printf("File To Install %s\n", input_file);
              install_file = 1;
 	    } else {
-	     printf("Usage: -i /file/to/install\n");
+	     g_printf("Usage: -i /file/to/install\n");
 	    }
 	}
     loop_count++;

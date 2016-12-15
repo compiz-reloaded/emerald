@@ -555,7 +555,7 @@ static void decor_update_blur_property(decor_t *d, int width, int height,
 	size += right_region->numRects;
 
     if (size)
-	data = malloc(sizeof(long) * (2 + size * 6));
+	data = calloc(2 + size * 6, sizeof(long));
 
     if (data)
     {
@@ -1878,8 +1878,8 @@ static void draw_window_decoration_real(decor_t * d, gboolean shadow_time)
 		    button_region->bg_surface = create_surface(rw, rh);
 		if (!IS_VALID_SURFACE(button_region->bg_surface))
 		{
-		    fprintf(stderr,
-			    "%s: Error allocating buffer.\n", program_name);
+		    g_fprintf(stderr,
+			      "%s: Error allocating buffer.\n", program_name);
 		}
 		else
 		{
@@ -3285,9 +3285,9 @@ static void update_window_decoration_actions(WnckWindow * win)
 	else if (result != Success)
 	{
 	    /* closes #161 */
-	    fprintf(stderr,
-		    "XGetWindowProperty() returned non-success value (%d) for window '%s'.\n",
-		    result, wnck_window_get_name(win));
+	    g_fprintf(stderr,
+		      "XGetWindowProperty() returned non-success value (%d) for window '%s'.\n",
+		      result, wnck_window_get_name(win));
 	    break;
 	}
     }
@@ -3824,10 +3824,9 @@ static void window_opened(WnckScreen * screen, WnckWindow * win)
     Window window;
     gulong xid;
 
-    d = g_malloc(sizeof(decor_t));
+    d = g_malloc0(sizeof(decor_t));
     if (!d)
 	return;
-    memset(d, 0, sizeof(decor_t));
 
     wnck_window_get_client_window_geometry(win, NULL, NULL, &d->client_width, &d->client_height);
 
@@ -4653,7 +4652,7 @@ static void kill_window(WnckWindow * win)
 	{
 	    if (gethostname(buf, sizeof(buf) - 1) == 0)
 	    {
-		if (strcmp(buf, client_machine) == 0)
+		if (g_strcmp0(buf, client_machine) == 0)
 		    kill(pid, 9);
 	    }
 	}
@@ -5035,16 +5034,16 @@ static XFixed *create_gaussian_kernel(double radius,
 
     n = size;
 
-    amp = g_malloc(sizeof(double) * n);
-    if (!amp)
+    amp = g_malloc0(sizeof(double) * n);
+    if (amp == NULL)
 	return NULL;
 
     n += 2;
 
-    params = g_malloc(sizeof(XFixed) * n);
-    if (!params)
+    params = g_malloc0(sizeof(XFixed) * n);
+    if (params == NULL)
     {
-	free (amp);
+	g_free(amp);
 	return NULL;
     }
 
@@ -5229,7 +5228,7 @@ static int update_shadow(frame_settings * fs)
 
 	for (i = 0; i < filters->nfilter; i++)
 	{
-	    if (strcmp(filters->filter[i], FilterConvolution) == 0)
+	    if (g_strcmp0(filters->filter[i], FilterConvolution) == 0)
 	    {
 		filter = FilterConvolution;
 		break;
@@ -5241,8 +5240,8 @@ static int update_shadow(frame_settings * fs)
 
     if (!filter)
     {
-	fprintf(stderr, "can't generate shadows, X server doesn't support "
-		"convolution filters\n");
+	g_fprintf(stderr, "can't generate shadows, X server doesn't support "
+		  "convolution filters\n");
 
 	g_free(params);
 	cairo_surface_destroy(surface);
@@ -5772,7 +5771,7 @@ void dbc(DBusError * err)
 {
     if (dbus_error_is_set(err))
     {
-	fprintf(stderr, "emerald: Connection Error (%s)\n", err->message);
+	g_fprintf(stderr, "emerald: Connection Error (%s)\n", err->message);
 	dbus_error_free(err);
     }
 }
@@ -5808,8 +5807,7 @@ int main(int argc, char *argv[])
     frame_settings *pfs;
     window_settings *ws;
 
-    ws = g_malloc(sizeof(window_settings));
-    memset(ws, 0, sizeof(window_settings));
+    ws = g_malloc0(sizeof(window_settings));
     global_ws = ws;
     setlocale(LC_ALL, "");
     bindtextdomain(GETTEXT_PACKAGE, LOCALEDIR);
@@ -5835,8 +5833,7 @@ int main(int argc, char *argv[])
     ws->tobj_layout = g_strdup("IT::HNXC");
     /* ws->tobj_layout=g_strdup("CNX:IT:HM"); */
 
-    pfs = g_malloc(sizeof(frame_settings));
-    memset(pfs, 0, sizeof(frame_settings));
+    pfs = g_malloc0(sizeof(frame_settings));
     pfs->ws = ws;
     ACOLOR(text, 1.0, 1.0, 1.0, 1.0);
     ACOLOR(text_halo, 0.0, 0.0, 0.0, 0.2);
@@ -5844,8 +5841,7 @@ int main(int argc, char *argv[])
     ACOLOR(button_halo, 0.0, 0.0, 0.0, 0.2);
     ws->fs_act = pfs;
 
-    pfs = g_malloc(sizeof(frame_settings));
-    memset(pfs, 0, sizeof(frame_settings));
+    pfs = g_malloc0(sizeof(frame_settings));
     pfs->ws = ws;
     ACOLOR(text, 0.8, 0.8, 0.8, 0.8);
     ACOLOR(text_halo, 0.0, 0.0, 0.0, 0.2);
@@ -5878,19 +5874,19 @@ int main(int argc, char *argv[])
 
     for (i = 0; i < argc; i++)
     {
-	if (strcmp(argv[i], "--replace") == 0)
+	if (g_strcmp0(argv[i], "--replace") == 0)
 	{
 	    replace = TRUE;
 	}
-	else if (strcmp(argv[i], "--version") == 0)
+	else if (g_strcmp0(argv[i], "--version") == 0)
 	{
-	    printf("%s: %s version %s\n", program_name, PACKAGE, VERSION);
+	    g_printf("%s: %s version %s\n", program_name, PACKAGE, VERSION);
 	    return 0;
 	}
-	else if (strcmp(argv[i], "--help") == 0)
+	else if (g_strcmp0(argv[i], "--help") == 0)
 	{
-	    fprintf(stderr, "%s [--replace] [--help] [--version]\n",
-		    program_name);
+	    g_fprintf(stderr, "%s [--replace] [--help] [--version]\n",
+		      program_name);
 	    return 0;
 	}
     }
@@ -5964,21 +5960,21 @@ int main(int argc, char *argv[])
     {
 	if (status == DECOR_ACQUIRE_STATUS_FAILED)
 	{
-	    fprintf(stderr,
-		    "%s: Could not acquire decoration manager "
-		    "selection on screen %d display \"%s\"\n",
-		    program_name, DefaultScreen(xdisplay),
-		    DisplayString(xdisplay));
+	    g_fprintf(stderr,
+		      "%s: Could not acquire decoration manager "
+		      "selection on screen %d display \"%s\"\n",
+		      program_name, DefaultScreen(xdisplay),
+		      DisplayString(xdisplay));
 	}
 	else if (status == DECOR_ACQUIRE_STATUS_OTHER_DM_RUNNING)
 	{
-	    fprintf(stderr,
-		    "%s: Screen %d on display \"%s\" already "
-		    "has a decoration manager; try using the "
-		    "--replace option to replace the current "
-		    "decoration manager.\n",
-		    program_name, DefaultScreen(xdisplay),
-		    DisplayString(xdisplay));
+	    g_fprintf(stderr,
+		      "%s: Screen %d on display \"%s\" already "
+		      "has a decoration manager; try using the "
+		      "--replace option to replace the current "
+		      "decoration manager.\n",
+		      program_name, DefaultScreen(xdisplay),
+		      DisplayString(xdisplay));
 	}
 
 	return 1;
@@ -6002,7 +5998,7 @@ int main(int argc, char *argv[])
 
     if (!create_tooltip_window())
     {
-	fprintf(stderr, "%s, Couldn't create tooltip window\n", argv[0]);
+	g_fprintf(stderr, "%s, Couldn't create tooltip window\n", argv[0]);
 	return 1;
     }
 

@@ -209,27 +209,24 @@ void init_engine(window_settings * ws)
     private_fs * pfs;
     private_ws * pws;
 
-    pws = malloc(sizeof(private_ws));
+    pws = g_malloc0(sizeof(private_ws));
     ws->engine_ws = pws;
-    bzero(pws,sizeof(private_ws));
 
-    pfs = malloc(sizeof(private_fs));
+    pfs = g_malloc0(sizeof(private_fs));
     ws->fs_act->engine_fs = pfs;
-    bzero(pfs, sizeof(private_fs));
     ACOLOR(border, 0.0, 0.0, 0.0, 1.0);
-	ACOLOR(title_bar, 0.0, 0.0, 0.0, 0.3);
+    ACOLOR(title_bar, 0.0, 0.0, 0.0, 0.3);
 
-	pfs = malloc(sizeof(private_fs));
+    pfs = g_malloc0(sizeof(private_fs));
     ws->fs_inact->engine_fs = pfs;
-    bzero(pfs,sizeof(private_fs));
     ACOLOR(border, 0.0, 0.0, 0.0, 1.0);
-	ACOLOR(title_bar, 0.0, 0.0, 0.0, 0.0);
+    ACOLOR(title_bar, 0.0, 0.0, 0.0, 0.0);
 }
 
 void fini_engine(window_settings * ws)
 {
-    free(ws->fs_act->engine_fs);
-    free(ws->fs_inact->engine_fs);
+    g_free(ws->fs_act->engine_fs);
+    g_free(ws->fs_inact->engine_fs);
 }
 
 void my_engine_settings(GtkWidget * hbox, gboolean active)

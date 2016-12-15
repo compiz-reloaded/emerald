@@ -54,7 +54,7 @@
 #include <dlfcn.h>
 #include <glib.h>
 #include <glib/gstdio.h>
-#include <string.h>
+#include <glib/gprintf.h>
 #include <stdlib.h>
 #include <math.h>
 #include <limits.h>
