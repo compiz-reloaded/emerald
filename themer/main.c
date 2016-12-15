@@ -55,6 +55,45 @@ GtkWidget * ExportButton;
 GtkWidget * QuitButton;
 gchar * themecache;
 
+static gint8 version_compare(const gchar *str1, const gchar *str2)
+{
+    gchar **array1, **array2;
+    guint i, len1, len2;
+    gint8 res = 0;
+
+    array1 = g_strsplit(str1 != NULL ? str1 : "0", ".", 0);
+    array2 = g_strsplit(str2 != NULL ? str2 : "0", ".", 0);
+
+    len1 = g_strv_length(array1);
+    len2 = g_strv_length(array2);
+
+    for (i = 0; i < MAX(len1, len2); ++i)
+    {
+	guint64 num1 = 0, num2 = 0;
+
+	if (i < len1)
+	    num1 = g_ascii_strtoull(array1[i], NULL, 10);
+	if (i < len2)
+	    num2 = g_ascii_strtoull(array2[i], NULL, 10);
+
+	if (i >= len1 || i >= len2)
+	{
+	    res = i < len2 ? -1 : 1;
+	    break;
+	}
+	if (num1 != num2)
+	{
+	    res = num1 < num2 ? -1 : 1;
+	    break;
+	}
+    }
+
+    g_strfreev(array1);
+    g_strfreev(array2);
+
+    return res;
+}
+
 static void theme_list_append(gchar * value,gchar * dir, gchar * fil)
 {
     GtkTreeIter iter;
@@ -87,9 +126,9 @@ static void theme_list_append(gchar * value,gchar * dir, gchar * fil)
         elc=emi.last_compat;
         if (!emi.last_compat)
             elc="0.0.0";
-        ostr1 = g_strdup_printf(strverscmp(val2,elc)>=0?
+        ostr1 = g_strdup_printf(version_compare(val2,elc)>=0?
                 "Engine: YES (%s)\n":"Engine: NO (%s)\n",val2);
-        ostr2 = g_strdup_printf(strverscmp(tver,LAST_COMPAT_VER)>=0?
+        ostr2 = g_strdup_printf(version_compare(tver,LAST_COMPAT_VER)>=0?
                 "Emerald: YES (%s)":"Emerald: NO (%s)",tver);
         ostr = g_strdup_printf("%s%s",ostr1,ostr2);
         g_free(ostr1);
@@ -104,7 +143,7 @@ static void theme_list_append(gchar * value,gchar * dir, gchar * fil)
         val = g_key_file_get_string(f,"theme","version",NULL);
         if (!val)
             val=g_strdup("0.0.0");
-        val2 = g_strdup_printf(strverscmp(val,LAST_COMPAT_VER)>=0?
+        val2 = g_strdup_printf(version_compare(val,LAST_COMPAT_VER)>=0?
                 "No Engine\nEmerald: YES (%s)":"No Engine\nEmerald: NO (%s)",val?val:"NONE");
         gtk_list_store_set(ThemeList,&iter,1,val2,-1);
         g_free(val2);
