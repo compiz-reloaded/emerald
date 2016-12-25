@@ -95,7 +95,6 @@ static GtkWidget *style_window;
 static GHashTable *frame_table;
 static GtkWidget *action_menu = NULL;
 static gboolean action_menu_mapped = FALSE;
-static gint double_click_timeout = 250;
 
 static GtkWidget *tip_window;
 static GtkWidget *tip_label;
@@ -4493,6 +4492,12 @@ static void title_event(WnckWindow * win, XEvent * xevent)
 
     if (xevent->xbutton.button == 1)
     {
+	gint double_click_timeout = 0;
+	GtkSettings *gtksettings =
+	  gtk_settings_get_for_screen(gtk_widget_get_screen(style_window));
+	g_object_get(G_OBJECT(gtksettings),
+	             "gtk-double-click-time", &double_click_timeout, NULL);
+
 	if (xevent->xbutton.button == last_button_num &&
 	    xevent->xbutton.window == last_button_xwindow &&
 	    xevent->xbutton.time < last_button_time + double_click_timeout)
