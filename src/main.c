@@ -4482,6 +4482,7 @@ static void left_event(WnckWindow * win, XEvent * xevent)
 
 static void title_event(WnckWindow * win, XEvent * xevent)
 {
+    GtkSettings *settings = None;
     static unsigned int last_button_num = 0;
     static Window last_button_xwindow = None;
     static Time last_button_time = 0;
@@ -4493,6 +4494,9 @@ static void title_event(WnckWindow * win, XEvent * xevent)
 
     if (xevent->xbutton.button == 1)
     {
+	settings = gtk_settings_get_for_screen (gtk_widget_get_screen (style_window));
+	g_object_get (G_OBJECT (settings), "gtk-double-click-time", &double_click_timeout, NULL);
+
 	if (xevent->xbutton.button == last_button_num &&
 	    xevent->xbutton.window == last_button_xwindow &&
 	    xevent->xbutton.time < last_button_time + double_click_timeout)
