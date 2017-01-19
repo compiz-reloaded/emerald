@@ -82,28 +82,28 @@ CFLAGS="$CFLAGS $EMERALD_CFLAGS"
 LIBS="$LIBS $EMERALD_LIBS -lm -ldl"
 AC_CHECK_FUNCS(wnck_window_has_name)
 
-AC_RUN_IFELSE([
-  AC_LANG_SOURCE(
+AC_RUN_IFELSE(
+  [AC_LANG_PROGRAM(
     [
 #include <stdio.h>
 #include <decoration.h>
-int main() {
-    FILE *f = fopen("decor_ver.out", "w");
-    if (!f)
-        return 1;
-    fprintf(f, "%d\n", decor_version());
-    fclose(f);
-    return 0;
+    ], [
+FILE *f = fopen("decor_ver.out", "w");
+if (f == NULL) {
+    return 1;
 }
+fprintf(f, "%d\n", decor_version());
+fclose(f);
     ]
   )],
   [
-    AC_DEFINE_UNQUOTED(DECOR_INTERFACE_VERSION, `cat decor_ver.out`, [Decorator interface version])
-    AC_MSG_NOTICE([Using decorator interface version `cat decor_ver.out`])
+    decor_ver=`cat decor_ver.out`
+    AC_DEFINE_UNQUOTED(DECOR_INTERFACE_VERSION, ${decor_ver}, [Decorator interface version])
+    AC_MSG_NOTICE([Using decorator interface version ${decor_ver}])
   ],
   [
     AC_DEFINE(DECOR_INTERFACE_VERSION, 0, [Decorator interface version])
-    AC_MSG_NOTICE([Using undefined decorator interface version])
+    AC_MSG_ERROR([Failed to check the decorator interface version])
   ]
 )
 
