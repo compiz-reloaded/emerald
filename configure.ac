@@ -67,6 +67,8 @@ case "$with_gtk" in
        ;;
 esac
 
+AC_SUBST([GTK_API_VERSION])
+
 EMERALD_REQUIRES=" xrender >= 0.8.4				  \
 		    xi						   \
 		    gtk+-$GTK_API_VERSION >= $GTK_MIN_VERSION	   \
