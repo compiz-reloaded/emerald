@@ -31,7 +31,8 @@ DISTCLEANFILES =		\
 	intltool-extract	 \
 	intltool-merge		 \
 	intltool-update		 \
-	po/.intltool-merge-cache
+	po/.intltool-merge-cache \
+	decor_ver.out
 
 # Build ChangeLog from GIT  history
 ChangeLog:
