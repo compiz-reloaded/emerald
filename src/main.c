@@ -4519,6 +4519,12 @@ static void title_event(WnckWindow * win, XEvent * xevent)
 		case DOUBLE_CLICK_MINIMIZE:
 		    wnck_window_minimize(win);
 		    break;
+		case DOUBLE_CLICK_SEND_TO_BACK:
+		    restack_window(win, Below);
+		    break;
+		case DOUBLE_CLICK_CLOSE:
+		    wnck_window_close(win, (guint32) xevent->xbutton.time);
+		    break;
 		case DOUBLE_CLICK_NONE:
 		    break;
 		default:
@@ -4541,7 +4547,36 @@ static void title_event(WnckWindow * win, XEvent * xevent)
 	}
     }
     else if (xevent->xbutton.button == 2)
-	restack_window(win, Below);
+	{
+	    switch (ws->middle_click_action)
+	    {
+		case DOUBLE_CLICK_SHADE:
+		    if (wnck_window_is_shaded(win))
+			wnck_window_unshade(win);
+		    else
+			wnck_window_shade(win);
+		    break;
+		case DOUBLE_CLICK_MAXIMIZE:
+		    if (wnck_window_is_maximized(win))
+			wnck_window_unmaximize(win);
+		    else
+			wnck_window_maximize(win);
+		    break;
+		case DOUBLE_CLICK_MINIMIZE:
+		    wnck_window_minimize(win);
+		    break;
+		case DOUBLE_CLICK_SEND_TO_BACK:
+		    restack_window(win, Below);
+		    break;
+		case DOUBLE_CLICK_CLOSE:
+		    wnck_window_close(win, (guint32) xevent->xbutton.time);
+		    break;
+		case DOUBLE_CLICK_NONE:
+		    break;
+		default:
+		    break;
+	    }
+	}
     else if (xevent->xbutton.button == 3)
     {
 	action_menu_map(win, xevent->xbutton.button, xevent->xbutton.time);
@@ -5616,6 +5651,8 @@ static void load_settings(window_settings * ws)
     g_free(path);
     load_int_setting(f, &ws->double_click_action, "double_click_action",
 		     "titlebars");
+    load_int_setting(f, &ws->middle_click_action, "middle_click_action",
+		     "titlebars");
     load_int_setting(f, &ws->button_hover_cursor, "hover_cursor", "buttons");
     load_bool_setting(f, &ws->titlebar_no_scroll_shade,
 		      "no_scroll_shade", "titlebars");
@@ -5827,6 +5864,7 @@ int main(int argc, char *argv[])
     ws->shadow_opacity = .8;
     ws->min_titlebar_height = 17;
     ws->double_click_action = DOUBLE_CLICK_SHADE;
+    ws->middle_click_action = DOUBLE_CLICK_SEND_TO_BACK;
     ws->button_hover_cursor = 1;
     ws->button_offset = 1;
     ws->button_hoffset = 1;

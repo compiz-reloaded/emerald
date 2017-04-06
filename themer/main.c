@@ -1264,6 +1264,17 @@ void layout_settings_pane(GtkWidget * vbox)
     register_setting(combo,ST_SFILE_INT_COMBO,"titlebars",
             "double_click_action");
 
+    table_append(gtk_label_new(_("Titlebar Middle-Click Action")),FALSE);
+    combo = gtk_combo_box_text_new();
+    for (i=0;i<TITLEBAR_ACTION_COUNT;i++)
+    {
+        gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(combo),titlebar_action_name[i]);
+    }
+    gtk_combo_box_set_active(GTK_COMBO_BOX(combo),0);
+    table_append(combo,TRUE);
+    register_setting(combo,ST_SFILE_INT_COMBO,"titlebars",
+            "middle_click_action");
+
     table_append(gtk_label_new(_("Button Hover Cursor")),FALSE);
     combo = gtk_combo_box_text_new();
     gtk_combo_box_text_append_text(GTK_COMBO_BOX_TEXT(combo),_("Normal"));

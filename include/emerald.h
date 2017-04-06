@@ -160,6 +160,7 @@ typedef struct _window_settings
     gchar * tobj_layout;
 
     gint double_click_action;
+    gint middle_click_action;
     gint button_hover_cursor;
     gboolean titlebar_no_scroll_shade;
 
