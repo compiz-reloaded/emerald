@@ -711,14 +711,10 @@ static void layout_button_box(GtkWidget * vbox, gint b_t)
 
     table_append(image,TRUE);
 
-#if GTK_CHECK_VERSION(4, 0, 0)
-    clearer = gtk_button_new_from_icon_name("edit-clear",
-                                            GTK_ICON_SIZE_BUTTON);
-    gtk_button_set_use_underline(GTK_BUTTON(clearer),TRUE);
-    gtk_button_set_label(GTK_BUTTON(clearer),_("_Clear"));
-#else
-    clearer = gtk_button_new_from_stock(GTK_STOCK_CLEAR);
-#endif
+    clearer = gtk_button_new_with_mnemonic(_("_Clear"));
+    gtk_button_set_image(GTK_BUTTON(clearer),
+                         gtk_image_new_from_icon_name("edit-clear",
+                                                      GTK_ICON_SIZE_BUTTON));
     g_signal_connect(clearer,"clicked",G_CALLBACK(cb_clear_file),item);
     table_append(clearer,FALSE);
 }
@@ -941,18 +937,22 @@ void add_meta_string_value(gchar * title, gchar * key)
 static void cb_export(GtkWidget * w, gpointer p)
 {
     /* get a filename */
+    GtkWidget * button;
     GtkWidget * dialog = gtk_file_chooser_dialog_new(
             _("Export Theme..."),GTK_WINDOW(mainWindow),
-            GTK_FILE_CHOOSER_ACTION_SAVE,
-#if GTK_CHECK_VERSION(4, 0, 0)
-            _("_Cancel"),GTK_RESPONSE_CANCEL,
-            _("_Save"),GTK_RESPONSE_ACCEPT,
-#else
-            GTK_STOCK_CANCEL,GTK_RESPONSE_CANCEL,
-            GTK_STOCK_SAVE,GTK_RESPONSE_ACCEPT,
-#endif
-            NULL
-            );
+            GTK_FILE_CHOOSER_ACTION_SAVE,NULL,NULL);
+    button = gtk_dialog_add_button(GTK_DIALOG(dialog),
+                                   _("_Cancel"), GTK_RESPONSE_CANCEL);
+    gtk_button_set_image(GTK_BUTTON(button),
+                         gtk_image_new_from_icon_name("gtk-cancel",
+                                                      GTK_ICON_SIZE_BUTTON));
+    button = gtk_dialog_add_button(GTK_DIALOG(dialog),
+                                   _("_Save"), GTK_RESPONSE_ACCEPT);
+    gtk_button_set_image(GTK_BUTTON(button),
+                         gtk_image_new_from_icon_name("document-save",
+                                                      GTK_ICON_SIZE_BUTTON));
+    gtk_widget_grab_default(button);
+    gtk_dialog_set_default_response(GTK_DIALOG(dialog),GTK_RESPONSE_ACCEPT);
     gchar * pth = g_strdup_printf("%s/Desktop/",g_get_home_dir());
     GtkFileFilter * filter = gtk_file_filter_new();
     gtk_file_filter_set_name(filter,"Theme Packages");
@@ -992,14 +992,10 @@ void layout_file_frame(GtkWidget * vbox)
     gtk_entry_set_text(GTK_ENTRY(EntryBox),_("Untitled Theme"));
     gtk_box_pack_startC(hbox,EntryBox,TRUE,TRUE,0);
 
-#if GTK_CHECK_VERSION(4, 0, 0)
-    junk = gtk_button_new_from_icon_name("document-save",
-                                         GTK_ICON_SIZE_BUTTON);
-    gtk_button_set_use_underline(GTK_BUTTON(junk),TRUE);
-    gtk_button_set_label(GTK_BUTTON(junk),_("_Save"));
-#else
-    junk = gtk_button_new_from_stock(GTK_STOCK_SAVE);
-#endif
+    junk = gtk_button_new_with_mnemonic(_("_Save"));
+    gtk_button_set_image(GTK_BUTTON(junk),
+                         gtk_image_new_from_icon_name("document-save",
+                                                      GTK_ICON_SIZE_BUTTON));
     gtk_box_pack_startC(hbox,junk,FALSE,FALSE,0);
     g_signal_connect(junk,"clicked",G_CALLBACK(cb_save),NULL);
 
@@ -1007,7 +1003,10 @@ void layout_file_frame(GtkWidget * vbox)
     ExportButton = gtk_button_new_from_icon_name("document-save-as",
                                                  GTK_ICON_SIZE_BUTTON);
 #else
-    ExportButton = gtk_button_new_from_stock(GTK_STOCK_SAVE_AS);
+    ExportButton = gtk_button_new();
+    gtk_button_set_image(GTK_BUTTON(ExportButton),
+                         gtk_image_new_from_icon_name ("document-save-as",
+                                                       GTK_ICON_SIZE_BUTTON));
 #endif
     gtk_button_set_label(GTK_BUTTON(ExportButton),_("Export..."));
     gtk_box_pack_startC(hbox,ExportButton,FALSE,FALSE,0);
@@ -1157,14 +1156,10 @@ void layout_screenshot_frame(GtkWidget * vbox)
 
     item = register_img_file_setting(filesel,"theme","screenshot",GTK_IMAGE(image));
 
-#if GTK_CHECK_VERSION(4, 0, 0)
-    clearer = gtk_button_new_from_icon_name("edit-clear",
-                                            GTK_ICON_SIZE_BUTTON);
-    gtk_button_set_use_underline(GTK_BUTTON(clearer),TRUE);
-    gtk_button_set_label(GTK_BUTTON(clearer),_("_Clear"));
-#else
-    clearer = gtk_button_new_from_stock(GTK_STOCK_CLEAR);
-#endif
+    clearer = gtk_button_new_with_mnemonic(_("_Clear"));
+    gtk_button_set_image(GTK_BUTTON(clearer),
+                         gtk_image_new_from_icon_name("edit-clear",
+                                                      GTK_ICON_SIZE_BUTTON));
     g_signal_connect(clearer,"clicked",G_CALLBACK(cb_clear_file),item);
     gtk_box_pack_startC(hbox,clearer,TRUE,TRUE,0);
 }
@@ -1400,17 +1395,22 @@ void cb_clearbox(GtkWidget * w, gpointer p)
 static void cb_import(GtkWidget * w, gpointer p)
 {
     /* get a filename */
+    GtkWidget * button;
     GtkWidget * dialog = gtk_file_chooser_dialog_new(
             _("Import Theme..."),GTK_WINDOW(mainWindow),
-            GTK_FILE_CHOOSER_ACTION_OPEN,
-#if GTK_CHECK_VERSION(4, 0, 0)
-            _("_Cancel"),GTK_RESPONSE_CANCEL,
-            _("_Open"),GTK_RESPONSE_ACCEPT,
-#else
-            GTK_STOCK_CANCEL,GTK_RESPONSE_CANCEL,
-            GTK_STOCK_OPEN,GTK_RESPONSE_ACCEPT,
-#endif
-            NULL);
+            GTK_FILE_CHOOSER_ACTION_OPEN,NULL,NULL);
+    button = gtk_dialog_add_button(GTK_DIALOG(dialog),
+                                   _("_Cancel"), GTK_RESPONSE_CANCEL);
+    gtk_button_set_image(GTK_BUTTON(button),
+                         gtk_image_new_from_icon_name("gtk-cancel",
+                                                      GTK_ICON_SIZE_BUTTON));
+    button = gtk_dialog_add_button(GTK_DIALOG(dialog),
+                                   _("_Open"), GTK_RESPONSE_ACCEPT);
+    gtk_button_set_image(GTK_BUTTON(button),
+                         gtk_image_new_from_icon_name("document-open",
+                                                      GTK_ICON_SIZE_BUTTON));
+    gtk_widget_grab_default(button);
+    gtk_dialog_set_default_response(GTK_DIALOG(dialog),GTK_RESPONSE_ACCEPT);
     gchar * pth = g_strdup_printf("%s/Desktop/",g_get_home_dir());
     GtkFileFilter * filter = gtk_file_filter_new();
     gtk_file_filter_set_name(filter,"Theme Packages");
@@ -1455,14 +1455,10 @@ GtkWidget * build_tree_view()
     searchbox = gtk_entry_new();
     gtk_box_pack_startC(hbox,searchbox,TRUE,TRUE,0);
 
-#if GTK_CHECK_VERSION(4, 0, 0)
-    clearbut = gtk_button_new_from_icon_name("edit-clear",
-                                            GTK_ICON_SIZE_BUTTON);
-    gtk_button_set_use_underline(GTK_BUTTON(clearbut),TRUE);
-    gtk_button_set_label(GTK_BUTTON(clearbut),_("_Clear"));
-#else
-    clearbut = gtk_button_new_from_stock(GTK_STOCK_CLEAR);
-#endif
+    clearbut = gtk_button_new_with_mnemonic(_("_Clear"));
+    gtk_button_set_image(GTK_BUTTON(clearbut),
+                         gtk_image_new_from_icon_name("edit-clear",
+                                                      GTK_ICON_SIZE_BUTTON));
     g_signal_connect(clearbut,"clicked",G_CALLBACK(cb_clearbox),searchbox);
     gtk_box_pack_startC(hbox,clearbut,FALSE,FALSE,0);
 
@@ -1472,37 +1468,25 @@ GtkWidget * build_tree_view()
     gtk_box_pack_startC(hbox,gtk_vseparator_new(),FALSE,FALSE,0);
 #endif
 
-#if GTK_CHECK_VERSION(4, 0, 0)
-    ReloadButton = gtk_button_new_from_icon_name("view-refresh",
-                                                 GTK_ICON_SIZE_BUTTON);
-    gtk_button_set_use_underline(GTK_BUTTON(ReloadButton),TRUE);
-    gtk_button_set_label(GTK_BUTTON(ReloadButton),_("_Refresh"));
-#else
-    ReloadButton = gtk_button_new_from_stock(GTK_STOCK_REFRESH);
-#endif
+    ReloadButton = gtk_button_new_with_mnemonic(_("_Refresh"));
+    gtk_button_set_image(GTK_BUTTON(ReloadButton),
+                         gtk_image_new_from_icon_name("view-refresh",
+                                                      GTK_ICON_SIZE_BUTTON));
     gtk_box_pack_startC(hbox,ReloadButton,FALSE,FALSE,0);
     g_signal_connect(ReloadButton,"clicked",G_CALLBACK(cb_refresh),NULL);
 
-#if GTK_CHECK_VERSION(4, 0, 0)
-    DeleteButton = gtk_button_new_from_icon_name("edit-delete",
-                                                 GTK_ICON_SIZE_BUTTON);
-    gtk_button_set_use_underline(GTK_BUTTON(DeleteButton),TRUE);
-    gtk_button_set_label(GTK_BUTTON(DeleteButton),_("_Delete"));
-#else
-    DeleteButton = gtk_button_new_from_stock(GTK_STOCK_DELETE);
-#endif
+    DeleteButton = gtk_button_new_with_mnemonic(_("_Delete"));
+    gtk_button_set_image(GTK_BUTTON(DeleteButton),
+                         gtk_image_new_from_icon_name("edit-delete",
+                                                      GTK_ICON_SIZE_BUTTON));
     gtk_box_pack_startC(hbox,DeleteButton,FALSE,FALSE,0);
     gtk_widget_set_sensitive(DeleteButton,FALSE);
     g_signal_connect(DeleteButton,"clicked",G_CALLBACK(cb_delete),NULL);
 
-#if GTK_CHECK_VERSION(3, 10, 0)
-    ImportButton = gtk_button_new_from_icon_name("document-open",
-                                                 GTK_ICON_SIZE_BUTTON);
-#else
-    ImportButton = gtk_button_new_from_stock(GTK_STOCK_OPEN);
-#endif
-    gtk_button_set_use_underline(GTK_BUTTON(ImportButton),TRUE);
-    gtk_button_set_label(GTK_BUTTON(ImportButton), _("_Import..."));
+    ImportButton = gtk_button_new_with_mnemonic(_("_Import..."));
+    gtk_button_set_image(GTK_BUTTON(ImportButton),
+                         gtk_image_new_from_icon_name("document-open",
+                                                      GTK_ICON_SIZE_BUTTON));
     gtk_box_pack_startC(hbox,ImportButton,FALSE,FALSE,0);
     g_signal_connect(ImportButton,"clicked",G_CALLBACK(cb_import),NULL);
 
@@ -1669,17 +1653,23 @@ void layout_themes_pane(GtkWidget * vbox)
 GtkWidget* create_filechooserdialog1(char *input)
 {
     /* get a filename */
+    GtkWidget * button;
     GtkWidget * dialog_startup = gtk_file_chooser_dialog_new(
-            _("Import Theme..."),NULL,
-            GTK_FILE_CHOOSER_ACTION_OPEN,
-#if GTK_CHECK_VERSION(4, 0, 0)
-            _("_Cancel"),GTK_RESPONSE_CANCEL,
-            _("_Open"),GTK_RESPONSE_ACCEPT,
-#else
-            GTK_STOCK_CANCEL,GTK_RESPONSE_CANCEL,
-            GTK_STOCK_OPEN,GTK_RESPONSE_ACCEPT,
-#endif
-            NULL);
+            _("Import Theme..."),NULL,GTK_FILE_CHOOSER_ACTION_OPEN,NULL,NULL);
+
+    button = gtk_dialog_add_button(GTK_DIALOG(dialog_startup),
+                                   _("_Cancel"), GTK_RESPONSE_CANCEL);
+    gtk_button_set_image(GTK_BUTTON(button),
+                         gtk_image_new_from_icon_name("gtk-cancel",
+                                                      GTK_ICON_SIZE_BUTTON));
+    button = gtk_dialog_add_button(GTK_DIALOG(dialog_startup),
+                                   _("_Open"), GTK_RESPONSE_ACCEPT);
+    gtk_button_set_image(GTK_BUTTON(button),
+                         gtk_image_new_from_icon_name("document-open",
+                                                      GTK_ICON_SIZE_BUTTON));
+    gtk_widget_grab_default(button);
+    gtk_dialog_set_default_response(GTK_DIALOG(dialog_startup),
+                                    GTK_RESPONSE_ACCEPT);
 
     gchar * pth = g_strdup_printf("%s",input);
     GtkFileFilter * filter = gtk_file_filter_new();
@@ -1719,14 +1709,10 @@ void layout_main_window()
 
     hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL,2);
     gtk_box_pack_startC(vbox,hbox,FALSE,FALSE,0);
-#if GTK_CHECK_VERSION(4, 0, 0)
-    QuitButton = gtk_button_new_from_icon_name("application-exit",
-                                               GTK_ICON_SIZE_BUTTON);
-    gtk_button_set_use_underline(GTK_BUTTON(QuitButton),TRUE);
-    gtk_button_set_label(GTK_BUTTON(QuitButton),_("_Quit"));
-#else
-    QuitButton = gtk_button_new_from_stock(GTK_STOCK_QUIT);
-#endif
+    QuitButton = gtk_button_new_with_mnemonic(_("_Quit"));
+    gtk_button_set_image(GTK_BUTTON(QuitButton),
+                         gtk_image_new_from_icon_name("application-exit",
+                                                      GTK_ICON_SIZE_BUTTON));
     gtk_box_pack_endC(hbox,QuitButton,FALSE,FALSE,0);
     g_signal_connect(QuitButton,"clicked",G_CALLBACK(cb_quit),NULL);
 

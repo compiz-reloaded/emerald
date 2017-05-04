@@ -638,14 +638,10 @@ static void layout_pixmap_box(GtkWidget * vbox, gint b_t, gboolean active)
 #endif
     table_append(scroller, TRUE);
 
-#if GTK_CHECK_VERSION(4, 0, 0)
-    clearer = gtk_button_new_from_icon_name("edit-clear",
-                                            GTK_ICON_SIZE_BUTTON);
-    gtk_button_set_use_underline(GTK_BUTTON(clearer),TRUE);
-    gtk_button_set_label(GTK_BUTTON(clearer),_("_Clear"));
-#else
-    clearer = gtk_button_new_from_stock(GTK_STOCK_CLEAR);
-#endif
+    clearer = gtk_button_new_with_mnemonic(_("_Clear"));
+    gtk_button_set_image(GTK_BUTTON(clearer),
+                         gtk_image_new_from_icon_name("edit-clear",
+                                                      GTK_ICON_SIZE_BUTTON));
     g_signal_connect(clearer, "clicked", G_CALLBACK(cb_clear_file), item);
     table_append(clearer, FALSE);
 

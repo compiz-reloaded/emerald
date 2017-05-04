@@ -4730,7 +4730,7 @@ force_quit_dialog_response(GtkWidget * dialog, gint response, void *data)
 static void show_force_quit_dialog(WnckWindow * win, Time timestamp)
 {
     decor_t *d = g_object_get_data(G_OBJECT(win), "decor");
-    GtkWidget *dialog;
+    GtkWidget *dialog, *button;
     gchar *str, *tmp;
     const gchar *name, *message;
 
@@ -4757,21 +4757,25 @@ static void show_force_quit_dialog(WnckWindow * win, Time timestamp)
 
     gtk_window_set_icon_name(GTK_WINDOW(dialog), "force-quit");
 
-    gtk_dialog_add_buttons(GTK_DIALOG(dialog),
-#if GTK_CHECK_VERSION(4, 0, 0)
-			   _("_Cancel"),
-#else
-			   GTK_STOCK_CANCEL,
-#endif
-			   GTK_RESPONSE_REJECT,
-			   _("_Force Quit"), GTK_RESPONSE_ACCEPT, NULL);
+    button = gtk_dialog_add_button(GTK_DIALOG(dialog),
+                                   _("_Cancel"),
+                                   GTK_RESPONSE_REJECT);
+    gtk_button_set_image(GTK_BUTTON(button),
+                         gtk_image_new_from_icon_name("gtk-cancel",
+                                                      GTK_ICON_SIZE_BUTTON));
+    gtk_widget_grab_default(button);
+    button = gtk_dialog_add_button(GTK_DIALOG(dialog),
+                                   _("_Force Quit"), GTK_RESPONSE_ACCEPT);
+    gtk_button_set_image(GTK_BUTTON(button),
+                         gtk_image_new_from_icon_name("window-close",
+                                                      GTK_ICON_SIZE_BUTTON));
 
     gtk_dialog_set_default_response(GTK_DIALOG(dialog), GTK_RESPONSE_REJECT);
 
-    g_signal_connect(G_OBJECT(dialog), "realize",
+    g_signal_connect(GTK_WIDGET(dialog), "realize",
 		     G_CALLBACK(force_quit_dialog_realize), win);
 
-    g_signal_connect(G_OBJECT(dialog), "response",
+    g_signal_connect(GTK_DIALOG(dialog), "response",
 		     G_CALLBACK(force_quit_dialog_response), win);
 
     gtk_window_set_modal(GTK_WINDOW(dialog), TRUE);
