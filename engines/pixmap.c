@@ -31,10 +31,7 @@
         surface = (cairo_surface_t*) cairo_image_surface_create_from_png(png);
 
 #if !GTK_CHECK_VERSION(3, 0, 0)
-#define GTK_ORIENTATION_HORIZONTAL 0
-#define GTK_ORIENTATION_VERTICAL 1
-
-static GtkWidget *gtk_box_new(gint orientation, gint spacing)
+static GtkWidget *gtk_box_new(GtkOrientation orientation, int spacing)
 {
     if (orientation == GTK_ORIENTATION_VERTICAL)
 	return gtk_vbox_new(FALSE, spacing);
