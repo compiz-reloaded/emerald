@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: emerald\n"
 "Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/emerald/issues\n"
-"POT-Creation-Date: 2017-01-12 18:19+0300\n"
+"POT-Creation-Date: 2017-05-04 19:28+0300\n"
 "PO-Revision-Date: 2008-08-08 23:59+0200\n"
 "Last-Translator: Ander Elortondo <ander.elor@gmail.com>\n"
 "Language-Team: Basque <librezale@librezale.org>\n"
@@ -101,9 +101,8 @@ msgstr "Goiko borobiltzearen erradioa"
 msgid "Bottom Rounding Radius"
 msgstr "Azpiko borobiltzearen erradioa"
 
-#, fuzzy
 msgid "_Clear"
-msgstr "Garbitu"
+msgstr "_Garbitu"
 
 #. style: use tiled or scaled pixmaps
 msgid "Scaled"
@@ -388,7 +387,7 @@ msgstr ""
 "Aplikazio honi irtetzera behartuz gorde gabeko datuen galera ekar dezake."
 
 msgid "_Cancel"
-msgstr ""
+msgstr "_Utzi"
 
 msgid "_Force Quit"
 msgstr "_Behartu irtetzera"
@@ -572,7 +571,7 @@ msgid "Export Theme..."
 msgstr "Gaia esportatu"
 
 msgid "_Save"
-msgstr ""
+msgstr "_Gorde"
 
 msgid "Name:"
 msgstr "Izena:"
@@ -697,6 +696,10 @@ msgstr "Botoia sakatzea opakutasun minimoa %"
 msgid "Titlebar Double-Click Action"
 msgstr "Titulu-barran klik bikoitza egitean ekintza"
 
+#, fuzzy
+msgid "Titlebar Middle-Click Action"
+msgstr "Titulu-barran klik bikoitza egitean ekintza"
+
 msgid "Button Hover Cursor"
 msgstr "Kurtsorea botoi gainean"
 
@@ -740,16 +743,16 @@ msgid "Import Theme..."
 msgstr "Inportatu gaia..."
 
 msgid "_Open"
-msgstr ""
+msgstr "_Ireki"
 
 msgid "Search:"
 msgstr "Bilatu:"
 
 msgid "_Refresh"
-msgstr ""
+msgstr "_Freskatu"
 
 msgid "_Delete"
-msgstr ""
+msgstr "_Ezabatu"
 
 #, fuzzy
 msgid "_Import..."
@@ -767,9 +770,8 @@ msgstr "Gaien ezarpenak"
 msgid "Emerald Settings"
 msgstr "Emerald ezarpenak"
 
-#, fuzzy
 msgid "_Quit"
-msgstr "_Behartu irtetzera"
+msgstr "Irte_n"
 
 #~ msgid "Fetching Themes"
 #~ msgstr "Gaiak eskuratzen"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: emerald\n"
 "Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/emerald/issues\n"
-"POT-Creation-Date: 2017-01-12 18:19+0300\n"
+"POT-Creation-Date: 2017-05-04 19:29+0300\n"
 "PO-Revision-Date: 2008-10-14 06:59+0200\n"
 "Last-Translator: JING Cheng <jingcheng01@gmail.com>\n"
 "Language-Team: Chinese <zh_CN@li.org>\n"
@@ -100,9 +100,8 @@ msgstr "顶圆角辐射"
 msgid "Bottom Rounding Radius"
 msgstr "底圆角辐射"
 
-#, fuzzy
 msgid "_Clear"
-msgstr "清除"
+msgstr "清除(_C)"
 
 #. style: use tiled or scaled pixmaps
 msgid "Scaled"
@@ -386,7 +385,7 @@ msgid ""
 msgstr "强制退出程序，所有未保存改动将丢失。"
 
 msgid "_Cancel"
-msgstr ""
+msgstr "取消(_C)"
 
 msgid "_Force Quit"
 msgstr "_强制退出"
@@ -570,7 +569,7 @@ msgid "Export Theme..."
 msgstr "导出主题..."
 
 msgid "_Save"
-msgstr ""
+msgstr "保存(_S)"
 
 msgid "Name:"
 msgstr "名称:"
@@ -691,6 +690,10 @@ msgstr "按钮暂停最小不透明度 %"
 msgid "Titlebar Double-Click Action"
 msgstr "标题栏双击行为"
 
+#, fuzzy
+msgid "Titlebar Middle-Click Action"
+msgstr "标题栏双击行为"
+
 msgid "Button Hover Cursor"
 msgstr "按钮悬停指针"
 
@@ -734,16 +737,16 @@ msgid "Import Theme..."
 msgstr "导入主题..."
 
 msgid "_Open"
-msgstr ""
+msgstr "打开(_O)"
 
 msgid "Search:"
 msgstr "搜索:"
 
 msgid "_Refresh"
-msgstr ""
+msgstr "刷新(_R)"
 
 msgid "_Delete"
-msgstr ""
+msgstr "删除(_D)"
 
 #, fuzzy
 msgid "_Import..."
@@ -761,9 +764,8 @@ msgstr "主题设置"
 msgid "Emerald Settings"
 msgstr "Emerald设置"
 
-#, fuzzy
 msgid "_Quit"
-msgstr "_强制退出"
+msgstr "退出(_Q)"
 
 #~ msgid "Fetching Themes"
 #~ msgstr "获取主题..."

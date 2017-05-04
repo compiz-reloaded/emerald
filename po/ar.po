@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: emerald\n"
 "Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/emerald/issues\n"
-"POT-Creation-Date: 2017-01-12 18:19+0300\n"
+"POT-Creation-Date: 2017-05-04 19:28+0300\n"
 "PO-Revision-Date: 2007-10-07 00:25+0200\n"
 "Last-Translator: Banxoo <banxoo+ar@gmail.com>\n"
 "Language-Team: Arabic <ar@li.org>\n"
@@ -100,9 +100,8 @@ msgstr "شعاع التدوير الاعلى"
 msgid "Bottom Rounding Radius"
 msgstr "شعاع التدوير الادنى "
 
-#, fuzzy
 msgid "_Clear"
-msgstr "إحلاﺀ"
+msgstr "ا_مسح"
 
 #. style: use tiled or scaled pixmaps
 msgid "Scaled"
@@ -386,7 +385,7 @@ msgid ""
 msgstr "إغلاق هذا البرنامج بالقوة يسبب فقدان التغييرات غير المحفظة"
 
 msgid "_Cancel"
-msgstr ""
+msgstr "أ_لغِ"
 
 msgid "_Force Quit"
 msgstr "إغلاق بالقوة"
@@ -570,7 +569,7 @@ msgid "Export Theme..."
 msgstr "تصدير الكساﺀ..."
 
 msgid "_Save"
-msgstr ""
+msgstr "ا_حفظ"
 
 msgid "Name:"
 msgstr "الإسم:"
@@ -695,6 +694,10 @@ msgstr "اللاشفافية الدنيا لنبضة الرز"
 msgid "Titlebar Double-Click Action"
 msgstr "سلوك عارضة العنوان عند عند النقر المزدوج"
 
+#, fuzzy
+msgid "Titlebar Middle-Click Action"
+msgstr "سلوك عارضة العنوان عند عند النقر المزدوج"
+
 msgid "Button Hover Cursor"
 msgstr "مؤشر الفأرة فوق الأزرار"
 
@@ -738,16 +741,16 @@ msgid "Import Theme..."
 msgstr "إستيراد الكساﺀ..."
 
 msgid "_Open"
-msgstr ""
+msgstr "ا_فتح"
 
 msgid "Search:"
 msgstr "بحث:"
 
 msgid "_Refresh"
-msgstr ""
+msgstr "_حدِّث"
 
 msgid "_Delete"
-msgstr ""
+msgstr "ا_حذف"
 
 #, fuzzy
 msgid "_Import..."
@@ -765,9 +768,8 @@ msgstr "ضبط الكساﺀ"
 msgid "Emerald Settings"
 msgstr "ضبط ايميرالد"
 
-#, fuzzy
 msgid "_Quit"
-msgstr "إغلاق بالقوة"
+msgstr "أ_نهِ"
 
 #~ msgid "Fetching Themes"
 #~ msgstr "إستحضار الكساﺀات"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: emerald\n"
 "Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/emerald/issues\n"
-"POT-Creation-Date: 2017-01-12 18:19+0300\n"
+"POT-Creation-Date: 2017-05-04 19:29+0300\n"
 "PO-Revision-Date: 2009-05-27 21:46+0200\n"
 "Last-Translator: Maciej Warnecki <maciekw5@gmail.com>\n"
 "Language-Team: Polish <pl@li.org>\n"
@@ -100,9 +100,8 @@ msgstr "Górny promień zaokrąglania"
 msgid "Bottom Rounding Radius"
 msgstr "Dolny promień skalowania"
 
-#, fuzzy
 msgid "_Clear"
-msgstr "Wyczyść"
+msgstr "Wy_czyść"
 
 #. style: use tiled or scaled pixmaps
 msgid "Scaled"
@@ -579,7 +578,7 @@ msgid "Export Theme..."
 msgstr "Eksportuj dekorację..."
 
 msgid "_Save"
-msgstr ""
+msgstr "_Zapisz"
 
 msgid "Name:"
 msgstr "Nazwa:"
@@ -703,6 +702,10 @@ msgstr "Minimalna nieprzezroczystość Pulsowania Przycisków %"
 msgid "Titlebar Double-Click Action"
 msgstr "Akcja podwójnego kliknięcia na pasku tytułowym"
 
+#, fuzzy
+msgid "Titlebar Middle-Click Action"
+msgstr "Akcja podwójnego kliknięcia na pasku tytułowym"
+
 msgid "Button Hover Cursor"
 msgstr "Kursor wyświetlany nad przyciskami"
 
@@ -747,16 +750,16 @@ msgid "Import Theme..."
 msgstr "Importuj dekorację..."
 
 msgid "_Open"
-msgstr ""
+msgstr "_Otwórz"
 
 msgid "Search:"
 msgstr "Szukaj:"
 
 msgid "_Refresh"
-msgstr ""
+msgstr "_Odśwież"
 
 msgid "_Delete"
-msgstr ""
+msgstr "_Usuń"
 
 #, fuzzy
 msgid "_Import..."
@@ -774,9 +777,8 @@ msgstr "Ustawienia dekoracji"
 msgid "Emerald Settings"
 msgstr "Ustawienia Emeralda"
 
-#, fuzzy
 msgid "_Quit"
-msgstr "_Wymuś zamknięcie"
+msgstr "Za_kończ"
 
 #~ msgid "Fetching Themes"
 #~ msgstr "Aktualizacja dekoracji"

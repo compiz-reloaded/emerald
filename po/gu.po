@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: emerald\n"
 "Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/emerald/issues\n"
-"POT-Creation-Date: 2017-01-12 18:19+0300\n"
+"POT-Creation-Date: 2017-05-04 19:28+0300\n"
 "PO-Revision-Date: 2007-12-17 12:26+0530\n"
 "Last-Translator: \n"
 "Language-Team: gist gujarati team <info.gist@cdac.in>\n"
@@ -100,9 +100,8 @@ msgstr "ગોળાઇ ની ત્રિજ્યા"
 msgid "Bottom Rounding Radius"
 msgstr "તળીયા ની ગોળાઇ ની ત્રિજ્યા "
 
-#, fuzzy
 msgid "_Clear"
-msgstr "સાફ/સ્વચ્છ"
+msgstr "સાફ કરો (_C)"
 
 #. style: use tiled or scaled pixmaps
 msgid "Scaled"
@@ -391,7 +390,7 @@ msgstr ""
 "કારણ બનશે."
 
 msgid "_Cancel"
-msgstr ""
+msgstr "રદ કરો (_C)"
 
 msgid "_Force Quit"
 msgstr "જબરદસ્તી બહાર કાઢો (_F)"
@@ -577,7 +576,7 @@ msgid "Export Theme..."
 msgstr "વિષય આધારિત સાજ-સજ્જાઓ (Theme) ... ની નિકાસ"
 
 msgid "_Save"
-msgstr ""
+msgstr "સંગ્રહ કરો (_S)"
 
 msgid "Name:"
 msgstr "નામ:"
@@ -702,6 +701,10 @@ msgstr "બટન ની ધારા ની ન્યુનતમ દૃશ્�
 msgid "Titlebar Double-Click Action"
 msgstr "મથાળાપટ્ટી પર બે વાાર દબાાવવા(Click) થી થતી ક્રિયાા "
 
+#, fuzzy
+msgid "Titlebar Middle-Click Action"
+msgstr "મથાળાપટ્ટી પર બે વાાર દબાાવવા(Click) થી થતી ક્રિયાા "
+
 msgid "Button Hover Cursor"
 msgstr "બટન નિર્દેશક"
 
@@ -746,16 +749,16 @@ msgid "Import Theme..."
 msgstr "વિષય આધારિત સાજ-સજ્જાઓ (Theme) ... ની આયાત"
 
 msgid "_Open"
-msgstr ""
+msgstr "ખોલો (_O)"
 
 msgid "Search:"
 msgstr "શોધ/ખોજ"
 
 msgid "_Refresh"
-msgstr ""
+msgstr "ફરી તાજુ કરો (_R)"
 
 msgid "_Delete"
-msgstr ""
+msgstr "કાઢી નાંખો (_D)"
 
 #, fuzzy
 msgid "_Import..."
@@ -775,9 +778,8 @@ msgstr "એમરલ્ડ(Emerald) ગોઠવણીોોોોોાાા�
 msgid "Emerald Settings"
 msgstr "એમરલ્ડ(Emerald) ગોઠવણીોોોોોાાાાાાાોોોોોોાાાોોાોોાાાાાાાાાાઓ "
 
-#, fuzzy
 msgid "_Quit"
-msgstr "જબરદસ્તી બહાર કાઢો (_F)"
+msgstr "બહાર નીકળો (_Q)"
 
 #~ msgid "Fetching Themes"
 #~ msgstr "થીમો મેળવી રહ્યા છીએ"

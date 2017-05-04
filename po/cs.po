@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: emerald\n"
 "Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/emerald/issues\n"
-"POT-Creation-Date: 2017-01-12 18:19+0300\n"
+"POT-Creation-Date: 2017-05-04 19:28+0300\n"
 "PO-Revision-Date: 2008-02-11 17:28+0100\n"
 "Last-Translator: Tomas Hejatko <hejda.cz@gmail.com>\n"
 "Language-Team: Czech <cs@li.org>\n"
@@ -101,9 +101,8 @@ msgstr "Horní poloměr zakulacení"
 msgid "Bottom Rounding Radius"
 msgstr "Spodní poloměr zakulacení"
 
-#, fuzzy
 msgid "_Clear"
-msgstr "Zrušit"
+msgstr "Vy_mazat"
 
 #. style: use tiled or scaled pixmaps
 msgid "Scaled"
@@ -388,7 +387,7 @@ msgid ""
 msgstr "Vynucení ukončení aplikace způsobí ztrátu veškerých neuložených změn."
 
 msgid "_Cancel"
-msgstr ""
+msgstr "_Zrušit"
 
 msgid "_Force Quit"
 msgstr "Vynutit ukončení"
@@ -568,7 +567,7 @@ msgid "Export Theme..."
 msgstr "Exportovat téma..."
 
 msgid "_Save"
-msgstr ""
+msgstr "_Uložit"
 
 msgid "Name:"
 msgstr "Název:"
@@ -690,6 +689,10 @@ msgstr "Minimální průhlednost pulsijícího tlačítka"
 msgid "Titlebar Double-Click Action"
 msgstr "Akce při poklepání na záhlaví"
 
+#, fuzzy
+msgid "Titlebar Middle-Click Action"
+msgstr "Akce při poklepání na záhlaví"
+
 msgid "Button Hover Cursor"
 msgstr "Ukazatel nad tlačítkem"
 
@@ -734,16 +737,16 @@ msgid "Import Theme..."
 msgstr "Importovat téma..."
 
 msgid "_Open"
-msgstr ""
+msgstr "_Otevřít"
 
 msgid "Search:"
 msgstr "Vyhledat:"
 
 msgid "_Refresh"
-msgstr ""
+msgstr "Akt_ualizovat"
 
 msgid "_Delete"
-msgstr ""
+msgstr "_Smazat"
 
 #, fuzzy
 msgid "_Import..."
@@ -761,9 +764,8 @@ msgstr "Nastavení témat"
 msgid "Emerald Settings"
 msgstr "Nastavení Emeraldu"
 
-#, fuzzy
 msgid "_Quit"
-msgstr "Vynutit ukončení"
+msgstr "U_končit"
 
 #~ msgid "Fetching Themes"
 #~ msgstr "Stahuji témata"

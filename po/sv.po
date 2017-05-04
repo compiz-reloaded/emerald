@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: emerald\n"
 "Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/emerald/issues\n"
-"POT-Creation-Date: 2017-01-12 18:19+0300\n"
+"POT-Creation-Date: 2017-05-04 19:29+0300\n"
 "PO-Revision-Date: 2008-10-07 23:17+0200\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <sv@li.org>\n"
@@ -101,9 +101,8 @@ msgstr "Övre rundningsradie"
 msgid "Bottom Rounding Radius"
 msgstr "Undre rundningsradie"
 
-#, fuzzy
 msgid "_Clear"
-msgstr "Rensa"
+msgstr "_Töm"
 
 #. style: use tiled or scaled pixmaps
 msgid "Scaled"
@@ -391,7 +390,7 @@ msgstr ""
 "ändringar."
 
 msgid "_Cancel"
-msgstr ""
+msgstr "_Avbryt"
 
 msgid "_Force Quit"
 msgstr "_Tvinga att avsluta"
@@ -575,7 +574,7 @@ msgid "Export Theme..."
 msgstr "Exportera tema..."
 
 msgid "_Save"
-msgstr ""
+msgstr "_Spara"
 
 msgid "Name:"
 msgstr "Namn:"
@@ -700,6 +699,10 @@ msgstr "Knappulsens miniopacitet %"
 msgid "Titlebar Double-Click Action"
 msgstr "Dubbelklicksåtgärd för titelraden"
 
+#, fuzzy
+msgid "Titlebar Middle-Click Action"
+msgstr "Dubbelklicksåtgärd för titelraden"
+
 msgid "Button Hover Cursor"
 msgstr "Pekare över knapp"
 
@@ -743,16 +746,16 @@ msgid "Import Theme..."
 msgstr "Importera tema..."
 
 msgid "_Open"
-msgstr ""
+msgstr "_Öppna"
 
 msgid "Search:"
 msgstr "Sök:"
 
 msgid "_Refresh"
-msgstr ""
+msgstr "_Uppdatera"
 
 msgid "_Delete"
-msgstr ""
+msgstr "_Ta bort"
 
 #, fuzzy
 msgid "_Import..."
@@ -770,9 +773,8 @@ msgstr "Tema-inställningar"
 msgid "Emerald Settings"
 msgstr "Emerald-inställningar"
 
-#, fuzzy
 msgid "_Quit"
-msgstr "_Tvinga att avsluta"
+msgstr "A_vsluta"
 
 #~ msgid "Fetching Themes"
 #~ msgstr "Hämtar Teman"

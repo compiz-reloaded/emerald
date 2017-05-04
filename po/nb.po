@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: emerald\n"
 "Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/emerald/issues\n"
-"POT-Creation-Date: 2017-01-12 18:19+0300\n"
+"POT-Creation-Date: 2017-05-04 19:28+0300\n"
 "PO-Revision-Date: 2008-02-16 22:44+0100\n"
 "Last-Translator: Ketil Wendelbo Aanensen <ketil.w.aanensen@gmail.com>\n"
 "Language-Team: Norwegian Bokmaal <nb@li.org>\n"
@@ -100,9 +100,8 @@ msgstr "Avrundingsradius for topp"
 msgid "Bottom Rounding Radius"
 msgstr "Avrundingsradius for bunn"
 
-#, fuzzy
 msgid "_Clear"
-msgstr "Rens"
+msgstr "_Tøm"
 
 #. style: use tiled or scaled pixmaps
 msgid "Scaled"
@@ -572,7 +571,7 @@ msgid "Export Theme..."
 msgstr "Eksporter tema..."
 
 msgid "_Save"
-msgstr ""
+msgstr "_Lagre"
 
 msgid "Name:"
 msgstr "Navn:"
@@ -696,6 +695,10 @@ msgstr "Minimumssynlighet i knappepulser %"
 msgid "Titlebar Double-Click Action"
 msgstr "Hendelse ved dobbeltklikk for tittellinja"
 
+#, fuzzy
+msgid "Titlebar Middle-Click Action"
+msgstr "Hendelse ved dobbeltklikk for tittellinja"
+
 msgid "Button Hover Cursor"
 msgstr "Peker over knapper"
 
@@ -739,16 +742,16 @@ msgid "Import Theme..."
 msgstr "Importer tema..."
 
 msgid "_Open"
-msgstr ""
+msgstr "_Åpne"
 
 msgid "Search:"
 msgstr "Søk:"
 
 msgid "_Refresh"
-msgstr ""
+msgstr "Oppdate_r"
 
 msgid "_Delete"
-msgstr ""
+msgstr "_Slett"
 
 #, fuzzy
 msgid "_Import..."
@@ -766,9 +769,8 @@ msgstr "Egenskaper for tema"
 msgid "Emerald Settings"
 msgstr "Egenskaper for Emerald"
 
-#, fuzzy
 msgid "_Quit"
-msgstr "_Avslutt"
+msgstr "A_vslutt"
 
 #~ msgid "Fetching Themes"
 #~ msgstr "Henter tema"

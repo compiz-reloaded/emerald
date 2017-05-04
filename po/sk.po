@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: emerald\n"
 "Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/emerald/issues\n"
-"POT-Creation-Date: 2017-01-12 18:19+0300\n"
+"POT-Creation-Date: 2017-05-04 19:29+0300\n"
 "PO-Revision-Date: 2008-12-14 10:51+0100\n"
 "Last-Translator: Brusnica P <pepino@pobox.sk>\n"
 "Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
@@ -101,9 +101,8 @@ msgstr "Polomer zaoblenia hore"
 msgid "Bottom Rounding Radius"
 msgstr "Polomer zaoblenia dolu"
 
-#, fuzzy
 msgid "_Clear"
-msgstr "Vymazať"
+msgstr "Vy_mazať"
 
 #. style: use tiled or scaled pixmaps
 msgid "Scaled"
@@ -387,7 +386,7 @@ msgid ""
 msgstr "Po vynútenom ukončení prídete o všetky neuložené zmeny."
 
 msgid "_Cancel"
-msgstr ""
+msgstr "_Zrušiť"
 
 msgid "_Force Quit"
 msgstr "_Vynútiť ukončenie"
@@ -571,7 +570,7 @@ msgid "Export Theme..."
 msgstr "Exportovať tému..."
 
 msgid "_Save"
-msgstr ""
+msgstr "_Uložiť"
 
 msgid "Name:"
 msgstr "Názov:"
@@ -696,6 +695,10 @@ msgstr "Minimálna priesvitnosť pulzujúceho tlačidla %"
 msgid "Titlebar Double-Click Action"
 msgstr "Akcia dvojkliku na titulný riadok"
 
+#, fuzzy
+msgid "Titlebar Middle-Click Action"
+msgstr "Akcia dvojkliku na titulný riadok"
+
 msgid "Button Hover Cursor"
 msgstr "Kurzor nad tlačidlami"
 
@@ -739,16 +742,16 @@ msgid "Import Theme..."
 msgstr "Importovať tému..."
 
 msgid "_Open"
-msgstr ""
+msgstr "_Otvoriť"
 
 msgid "Search:"
 msgstr "Hľadať:"
 
 msgid "_Refresh"
-msgstr ""
+msgstr "_Obnoviť"
 
 msgid "_Delete"
-msgstr ""
+msgstr "O_dstrániť"
 
 #, fuzzy
 msgid "_Import..."
@@ -766,9 +769,8 @@ msgstr "Nastavenie témy"
 msgid "Emerald Settings"
 msgstr "Nastavenie Emeraldu"
 
-#, fuzzy
 msgid "_Quit"
-msgstr "_Vynútiť ukončenie"
+msgstr "U_končiť"
 
 #~ msgid "Fetching Themes"
 #~ msgstr "Sťahujú sa témy"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: emerald\n"
 "Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/emerald/issues\n"
-"POT-Creation-Date: 2017-01-12 18:19+0300\n"
+"POT-Creation-Date: 2017-05-04 19:29+0300\n"
 "PO-Revision-Date: 2007-12-17 12:47+0530\n"
 "Last-Translator: \n"
 "Language-Team: Gist Punjabi team <info.gist@cdac.in>\n"
@@ -99,9 +99,8 @@ msgstr "ਟਾਪ ਰਾਊਂਡਿੰਗ ਰੇਡੀਅਸ "
 msgid "Bottom Rounding Radius"
 msgstr "ਤਲ ਰਾਊਂਡਿੰਗ ਰੇਡੀਅਸ "
 
-#, fuzzy
 msgid "_Clear"
-msgstr "ਸਾਫ਼ "
+msgstr "ਸਾਫ਼ ਕਰੋ(_C)"
 
 #. style: use tiled or scaled pixmaps
 msgid "Scaled"
@@ -385,7 +384,7 @@ msgid ""
 msgstr "ਇਹ ਐਪਲੀਕੇਸ਼ਨ ਨੂੰ ਫੋਰਸ ਨਾਲ ਬੰਦ ਕਰਨ ਨਾਲ ਤੁਸੀਂ ਸਭ ਅਣ-ਸੰਭਾਲੀਆਂ ਤਬਦੀਲੀਆਂ ਗੁਆ ਬੈਠੋਗੇ। "
 
 msgid "_Cancel"
-msgstr ""
+msgstr "ਰੱਦ ਕਰੋ(_C)"
 
 msgid "_Force Quit"
 msgstr "ਧੱਕੇ ਨਾਲ ਬੰਦ ਕਰੋ(_F) "
@@ -569,7 +568,7 @@ msgid "Export Theme..."
 msgstr "ਥੀਮ ਐਕਸਪੋਰਟ... "
 
 msgid "_Save"
-msgstr ""
+msgstr "ਸੰਭਾਲੋ(_S)"
 
 msgid "Name:"
 msgstr "ਨਾਂ: "
@@ -693,6 +692,10 @@ msgstr "ਬਟਨ ਪਲਸ ਘੱਟੋ-ਘੱਟ ਧੁੰਦਲਾਪਨ % "
 msgid "Titlebar Double-Click Action"
 msgstr "ਟਾਇਟਲਬਾਰ ਡਬਲ-ਕਲਿੱਕ ਐਕਸ਼ਨ "
 
+#, fuzzy
+msgid "Titlebar Middle-Click Action"
+msgstr "ਟਾਇਟਲਬਾਰ ਡਬਲ-ਕਲਿੱਕ ਐਕਸ਼ਨ "
+
 msgid "Button Hover Cursor"
 msgstr "ਬਟਨ ਹੋਵਰ ਕਰਸਰ "
 
@@ -736,16 +739,16 @@ msgid "Import Theme..."
 msgstr "ਥੀਮ ਇੰਪੋਰਟ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ... "
 
 msgid "_Open"
-msgstr ""
+msgstr "ਖੋਲ੍ਹੋ(_O)"
 
 msgid "Search:"
 msgstr "ਖੋਜ: "
 
 msgid "_Refresh"
-msgstr ""
+msgstr "ਤਾਜ਼ਾ(_R)"
 
 msgid "_Delete"
-msgstr ""
+msgstr "ਹਟਾਓ(_D)"
 
 #, fuzzy
 msgid "_Import..."
@@ -763,9 +766,8 @@ msgstr "ਥੀਮ ਸੈਟਿੰਗ "
 msgid "Emerald Settings"
 msgstr "ਈਮੀਰਲਡ ਸੈਟਿੰਗ "
 
-#, fuzzy
 msgid "_Quit"
-msgstr "ਧੱਕੇ ਨਾਲ ਬੰਦ ਕਰੋ(_F) "
+msgstr "ਬਾਹਰ(_Q)"
 
 #~ msgid "Fetching Themes"
 #~ msgstr "ਥੀਮ ਲਏ ਜਾ ਰਹੇ ਹਨ "

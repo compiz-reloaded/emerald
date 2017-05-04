@@ -39,7 +39,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: emerald\n"
 "Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/emerald/issues\n"
-"POT-Creation-Date: 2017-01-12 18:19+0300\n"
+"POT-Creation-Date: 2017-05-04 19:28+0300\n"
 "PO-Revision-Date: 2007-08-31 23:27+0200\n"
 "Last-Translator: Milo Casagrande <milo_casagrande@yahoo.it>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
@@ -141,9 +141,8 @@ msgstr "Raggio arrotondamento superiore"
 msgid "Bottom Rounding Radius"
 msgstr "Raggio arrotondamento inferiore"
 
-#, fuzzy
 msgid "_Clear"
-msgstr "Pulisci"
+msgstr "_Pulisci"
 
 #. style: use tiled or scaled pixmaps
 msgid "Scaled"
@@ -452,7 +451,7 @@ msgstr ""
 "non salvati."
 
 msgid "_Cancel"
-msgstr ""
+msgstr "A_nnulla"
 
 msgid "_Force Quit"
 msgstr "_Forza uscita"
@@ -642,7 +641,7 @@ msgid "Export Theme..."
 msgstr "Esporta tema..."
 
 msgid "_Save"
-msgstr ""
+msgstr "_Salva"
 
 msgid "Name:"
 msgstr "Nome:"
@@ -777,6 +776,10 @@ msgstr "Opacità minima pulsazione pulsante (%)"
 msgid "Titlebar Double-Click Action"
 msgstr "Azione doppio clic sulla barra del titolo"
 
+#, fuzzy
+msgid "Titlebar Middle-Click Action"
+msgstr "Azione doppio clic sulla barra del titolo"
+
 msgid "Button Hover Cursor"
 msgstr "Cursore sopra un pulsante"
 
@@ -822,16 +825,16 @@ msgid "Import Theme..."
 msgstr "Importa tema..."
 
 msgid "_Open"
-msgstr ""
+msgstr "_Apri"
 
 msgid "Search:"
 msgstr "Cerca:"
 
 msgid "_Refresh"
-msgstr ""
+msgstr "_Aggiorna"
 
 msgid "_Delete"
-msgstr ""
+msgstr "Eli_mina"
 
 #, fuzzy
 msgid "_Import..."
@@ -849,9 +852,8 @@ msgstr "Impostazioni dei temi"
 msgid "Emerald Settings"
 msgstr "Impostazioni di Emerald"
 
-#, fuzzy
 msgid "_Quit"
-msgstr "_Forza uscita"
+msgstr "_Esci"
 
 #~ msgid "Fetching Themes"
 #~ msgstr "Scaricamento dei temi"

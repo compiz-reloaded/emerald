@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: emerald\n"
 "Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/emerald/issues\n"
-"POT-Creation-Date: 2017-01-12 18:19+0300\n"
+"POT-Creation-Date: 2017-05-04 19:28+0300\n"
 "PO-Revision-Date: 2007-12-04 16:54+0100\n"
 "Last-Translator: Mahdee Jameel <mahdee.jameel@yahoo.com>\n"
 "Language-Team: Indian Bangla <bn_IN@li.org>\n"
@@ -100,9 +100,8 @@ msgstr "উপরে গোল করে দেয়ার ব্যাসার�
 msgid "Bottom Rounding Radius"
 msgstr "নিচে গোল করে দেয়ার ব্যাসার্ধ"
 
-#, fuzzy
 msgid "_Clear"
-msgstr "পরিষ্কার"
+msgstr "পরিশ্রুত করুন (_C)"
 
 #. style: use tiled or scaled pixmaps
 msgid "Scaled"
@@ -387,7 +386,7 @@ msgid ""
 msgstr "এই এপ্লিকেশনটি বন্ধ করলে সংরক্ষরন না করা সব পরিবর্তন মুছে যাবে"
 
 msgid "_Cancel"
-msgstr ""
+msgstr "বাতিল (_C)"
 
 msgid "_Force Quit"
 msgstr "জোর করে বন্ধ করুন"
@@ -571,7 +570,7 @@ msgid "Export Theme..."
 msgstr "থিম রপ্তানি করো"
 
 msgid "_Save"
-msgstr ""
+msgstr "সংরক্ষণ করুন (_S)"
 
 msgid "Name:"
 msgstr "নাম"
@@ -694,6 +693,10 @@ msgstr "উজ্জ্বলতা পাল্টানোর সময় অস
 msgid "Titlebar Double-Click Action"
 msgstr "শিরোনাম-বার এ ডাবল ক্লিক করলে"
 
+#, fuzzy
+msgid "Titlebar Middle-Click Action"
+msgstr "শিরোনাম-বার এ ডাবল ক্লিক করলে"
+
 msgid "Button Hover Cursor"
 msgstr "বোতামের উপর কার্সর রাখলে"
 
@@ -737,16 +740,16 @@ msgid "Import Theme..."
 msgstr "থিম আমদানি"
 
 msgid "_Open"
-msgstr ""
+msgstr "খুলুন (_O)"
 
 msgid "Search:"
 msgstr "অনুসন্ধানঃ"
 
 msgid "_Refresh"
-msgstr ""
+msgstr "নতুন করে প্রদর্শন (_R)"
 
 msgid "_Delete"
-msgstr ""
+msgstr "মুছে ফেলুন (_D)"
 
 #, fuzzy
 msgid "_Import..."
@@ -764,9 +767,8 @@ msgstr "থিমের পছন্দ"
 msgid "Emerald Settings"
 msgstr "এমারাল্ডের পছন্দ"
 
-#, fuzzy
 msgid "_Quit"
-msgstr "জোর করে বন্ধ করুন"
+msgstr "প্রস্থান (_Q)"
 
 #~ msgid "Fetching Themes"
 #~ msgstr "থিম আনা হচ্ছে"

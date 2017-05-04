@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: emerald\n"
 "Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/emerald/issues\n"
-"POT-Creation-Date: 2017-01-12 18:19+0300\n"
+"POT-Creation-Date: 2017-05-04 19:28+0300\n"
 "PO-Revision-Date: 2008-01-05 07:49+0100\n"
 "Last-Translator: Masaaki KANEMOTO <masaaki.kanemoto@gmail.com>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
@@ -107,9 +107,8 @@ msgstr "上部の丸めの半径"
 msgid "Bottom Rounding Radius"
 msgstr "下部の丸めの半径"
 
-#, fuzzy
 msgid "_Clear"
-msgstr "クリア"
+msgstr "クリア(_C)"
 
 #. style: use tiled or scaled pixmaps
 msgid "Scaled"
@@ -395,7 +394,7 @@ msgid ""
 msgstr "このアプリケーションを強制的に終了すると、未保存の変更は失われます。"
 
 msgid "_Cancel"
-msgstr ""
+msgstr "キャンセル(_C)"
 
 msgid "_Force Quit"
 msgstr "強制終了(_F)"
@@ -579,7 +578,7 @@ msgid "Export Theme..."
 msgstr "テーマを書き出し..."
 
 msgid "_Save"
-msgstr ""
+msgstr "保存(_S)"
 
 msgid "Name:"
 msgstr "名前:"
@@ -701,6 +700,10 @@ msgstr "ボタンの点滅の際の最小の不透明度 %"
 msgid "Titlebar Double-Click Action"
 msgstr "タイトルバーをダブルクリックしたときのアクション"
 
+#, fuzzy
+msgid "Titlebar Middle-Click Action"
+msgstr "タイトルバーをダブルクリックしたときのアクション"
+
 msgid "Button Hover Cursor"
 msgstr "ボタンの上にあるときのカーソル"
 
@@ -744,16 +747,16 @@ msgid "Import Theme..."
 msgstr "テーマをインポート..."
 
 msgid "_Open"
-msgstr ""
+msgstr "開く(_O)"
 
 msgid "Search:"
 msgstr "検索:"
 
 msgid "_Refresh"
-msgstr ""
+msgstr "更新(_R)"
 
 msgid "_Delete"
-msgstr ""
+msgstr "削除(_D)"
 
 #, fuzzy
 msgid "_Import..."
@@ -771,9 +774,8 @@ msgstr "テーマの設定"
 msgid "Emerald Settings"
 msgstr "エメラルドの設定"
 
-#, fuzzy
 msgid "_Quit"
-msgstr "強制終了(_F)"
+msgstr "終了(_Q)"
 
 #~ msgid "Fetching Themes"
 #~ msgstr "テーマを取得"

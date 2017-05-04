@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: emerald\n"
 "Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/emerald/issues\n"
-"POT-Creation-Date: 2017-01-12 18:19+0300\n"
+"POT-Creation-Date: 2017-05-04 19:29+0300\n"
 "PO-Revision-Date: 2008-01-21 15:01+0100\n"
 "Last-Translator: Rick <mailmelist@gmail.com>\n"
 "Language-Team: Dutch <nl@li.org>\n"
@@ -100,9 +100,8 @@ msgstr "Bovenste Rondings Radius"
 msgid "Bottom Rounding Radius"
 msgstr "Onderste Rondings Radius"
 
-#, fuzzy
 msgid "_Clear"
-msgstr "Wissen"
+msgstr "_Wissen"
 
 #. style: use tiled or scaled pixmaps
 msgid "Scaled"
@@ -390,7 +389,7 @@ msgstr ""
 "opgeslagen wijzigingen verloren gaan."
 
 msgid "_Cancel"
-msgstr ""
+msgstr " _Annuleren"
 
 msgid "_Force Quit"
 msgstr "_Forceer afsluiten"
@@ -574,7 +573,7 @@ msgid "Export Theme..."
 msgstr "Exporteer thema..."
 
 msgid "_Save"
-msgstr ""
+msgstr "Op_slaan"
 
 msgid "Name:"
 msgstr "Naam:"
@@ -699,6 +698,10 @@ msgstr "Minimale ondoorzichtigheid Knop Pulse %"
 msgid "Titlebar Double-Click Action"
 msgstr "Titelbalk Dubbelklik Actie"
 
+#, fuzzy
+msgid "Titlebar Middle-Click Action"
+msgstr "Titelbalk Dubbelklik Actie"
+
 msgid "Button Hover Cursor"
 msgstr "Knop Zweef Cursor"
 
@@ -742,16 +745,16 @@ msgid "Import Theme..."
 msgstr "Importeer thema..."
 
 msgid "_Open"
-msgstr ""
+msgstr "_Openen"
 
 msgid "Search:"
 msgstr "Zoeken:"
 
 msgid "_Refresh"
-msgstr ""
+msgstr "_Verversen"
 
 msgid "_Delete"
-msgstr ""
+msgstr "_Verwijderen"
 
 #, fuzzy
 msgid "_Import..."
@@ -769,9 +772,8 @@ msgstr "Thema instellingen"
 msgid "Emerald Settings"
 msgstr "Emerald instellingen"
 
-#, fuzzy
 msgid "_Quit"
-msgstr "_Forceer afsluiten"
+msgstr "A_fsluiten"
 
 #~ msgid "Fetching Themes"
 #~ msgstr "Verkrijgen van thema's"

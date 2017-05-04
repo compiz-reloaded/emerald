@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: emerald\n"
 "Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/emerald/issues\n"
-"POT-Creation-Date: 2017-01-12 18:19+0300\n"
+"POT-Creation-Date: 2017-05-04 19:28+0300\n"
 "PO-Revision-Date: 2009-01-02 10:42+0100\n"
 "Last-Translator: KAMI <kamihir@freemail.hu>\n"
 "Language-Team: Gentoo-hu Team <gentoo-doc-hu@gentoo.org>\n"
@@ -102,9 +102,8 @@ msgstr "Felső lekerekítés sugara"
 msgid "Bottom Rounding Radius"
 msgstr "Alsó lekerekítés sugara"
 
-#, fuzzy
 msgid "_Clear"
-msgstr "Törlés"
+msgstr "_Törlés"
 
 #. style: use tiled or scaled pixmaps
 msgid "Scaled"
@@ -391,7 +390,7 @@ msgstr ""
 "A kilépés kényszerítésének hatására minden el nem mentett adat el fog veszni."
 
 msgid "_Cancel"
-msgstr ""
+msgstr "Mé_gse"
 
 msgid "_Force Quit"
 msgstr "_Kilépés kényszerítése"
@@ -575,7 +574,7 @@ msgid "Export Theme..."
 msgstr "Téma exportálása…"
 
 msgid "_Save"
-msgstr ""
+msgstr "M_entés"
 
 msgid "Name:"
 msgstr "Név:"
@@ -698,6 +697,10 @@ msgstr "Gombok pulzálásának minimális átlátszatlansága: %"
 msgid "Titlebar Double-Click Action"
 msgstr "Címsorra történő dupla kattintás művelete"
 
+#, fuzzy
+msgid "Titlebar Middle-Click Action"
+msgstr "Címsorra történő dupla kattintás művelete"
+
 msgid "Button Hover Cursor"
 msgstr "Gombkövető mutató"
 
@@ -741,16 +744,16 @@ msgid "Import Theme..."
 msgstr "Téma importálása…"
 
 msgid "_Open"
-msgstr ""
+msgstr "_Megnyitás"
 
 msgid "Search:"
 msgstr "Keresés:"
 
 msgid "_Refresh"
-msgstr ""
+msgstr "_Frissítés"
 
 msgid "_Delete"
-msgstr ""
+msgstr "_Törlés"
 
 #, fuzzy
 msgid "_Import..."
@@ -768,9 +771,8 @@ msgstr "Témák beállítása"
 msgid "Emerald Settings"
 msgstr "Emerald beállítása"
 
-#, fuzzy
 msgid "_Quit"
-msgstr "_Kilépés kényszerítése"
+msgstr "_Kilépés"
 
 #~ msgid "Fetching Themes"
 #~ msgstr "Témák letöltése"

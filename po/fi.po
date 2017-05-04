@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: emerald\n"
 "Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/emerald/issues\n"
-"POT-Creation-Date: 2017-01-12 18:19+0300\n"
+"POT-Creation-Date: 2017-05-04 19:28+0300\n"
 "PO-Revision-Date: 2008-10-27 16:46+0100\n"
 "Last-Translator: Birunthan Mohanathas <legace@inbox.com>\n"
 "Language-Team: Finnish <fi@li.org>\n"
@@ -100,9 +100,8 @@ msgstr "Yläkulman pyöristyksen säde"
 msgid "Bottom Rounding Radius"
 msgstr "Alakulman pyöristyksen säde"
 
-#, fuzzy
 msgid "_Clear"
-msgstr "Tyhjennä"
+msgstr "_Tyhjennä"
 
 #. style: use tiled or scaled pixmaps
 msgid "Scaled"
@@ -387,7 +386,7 @@ msgid ""
 msgstr "Jos suljet ikkunan väkisin, menentät kaikki tallentamattomat muutokset"
 
 msgid "_Cancel"
-msgstr ""
+msgstr "_Peru"
 
 msgid "_Force Quit"
 msgstr "_Sulje väkisin"
@@ -571,7 +570,7 @@ msgid "Export Theme..."
 msgstr "Vie teema..."
 
 msgid "_Save"
-msgstr ""
+msgstr "_Tallenna"
 
 msgid "Name:"
 msgstr "Nimi:"
@@ -696,6 +695,10 @@ msgstr "Sykkeen maksimi läpinäkyvyys"
 msgid "Titlebar Double-Click Action"
 msgstr "Otsikkopalkin kaksoisnapautuksen toimenpide"
 
+#, fuzzy
+msgid "Titlebar Middle-Click Action"
+msgstr "Otsikkopalkin kaksoisnapautuksen toimenpide"
+
 msgid "Button Hover Cursor"
 msgstr "Painikkeen päällä käytettävä osoitin"
 
@@ -739,16 +742,16 @@ msgid "Import Theme..."
 msgstr "Tuo teema..."
 
 msgid "_Open"
-msgstr ""
+msgstr "_Avaa"
 
 msgid "Search:"
 msgstr "Haku:"
 
 msgid "_Refresh"
-msgstr ""
+msgstr "_Päivitä"
 
 msgid "_Delete"
-msgstr ""
+msgstr "_Poista"
 
 #, fuzzy
 msgid "_Import..."
@@ -766,9 +769,8 @@ msgstr "Teeman asetukset"
 msgid "Emerald Settings"
 msgstr "Emeraldin asetukset"
 
-#, fuzzy
 msgid "_Quit"
-msgstr "_Sulje väkisin"
+msgstr "_Lopeta"
 
 #~ msgid "Fetching Themes"
 #~ msgstr "Haetaan teemoja"

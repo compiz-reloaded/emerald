@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: emerald\n"
 "Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/emerald/issues\n"
-"POT-Creation-Date: 2017-01-12 18:19+0300\n"
+"POT-Creation-Date: 2017-05-04 19:28+0300\n"
 "PO-Revision-Date: 2008-07-12 15:02+0200\n"
 "Last-Translator: Yotam Benshalom <benshalom@gmail.com>\n"
 "Language-Team: Hebrew <he@li.org>\n"
@@ -100,9 +100,8 @@ msgstr "רדיוס עיגול עליון"
 msgid "Bottom Rounding Radius"
 msgstr "רדיוס עיגול תחתון"
 
-#, fuzzy
 msgid "_Clear"
-msgstr "נקה"
+msgstr "_פינוי"
 
 #. style: use tiled or scaled pixmaps
 msgid "Scaled"
@@ -386,7 +385,7 @@ msgid ""
 msgstr "סגירת היישום בכפייה תביא לאובדן כל השינויים שלא נשמרו."
 
 msgid "_Cancel"
-msgstr ""
+msgstr "_ביטול"
 
 msgid "_Force Quit"
 msgstr "סגור ב_כפייה"
@@ -570,7 +569,7 @@ msgid "Export Theme..."
 msgstr "ייצא ערכה..."
 
 msgid "_Save"
-msgstr ""
+msgstr "_שמירה"
 
 msgid "Name:"
 msgstr "שם:"
@@ -695,6 +694,10 @@ msgstr "אחוז אטימות מזערי עבור הבהוב כפתור"
 msgid "Titlebar Double-Click Action"
 msgstr "פעולת הקלקה כפולה על שורת הכותרת"
 
+#, fuzzy
+msgid "Titlebar Middle-Click Action"
+msgstr "פעולת הקלקה כפולה על שורת הכותרת"
+
 msgid "Button Hover Cursor"
 msgstr "סמן מרחף מעל כפתור"
 
@@ -738,13 +741,13 @@ msgid "Import Theme..."
 msgstr "ייבא ערכה..."
 
 msgid "_Open"
-msgstr ""
+msgstr "_פתיחה"
 
 msgid "Search:"
 msgstr "חפש:"
 
 msgid "_Refresh"
-msgstr ""
+msgstr "_רענון"
 
 msgid "_Delete"
 msgstr ""
@@ -765,9 +768,8 @@ msgstr "הגדרות ערכות"
 msgid "Emerald Settings"
 msgstr "הגדרות אמרלד"
 
-#, fuzzy
 msgid "_Quit"
-msgstr "סגור ב_כפייה"
+msgstr "י_ציאה"
 
 #~ msgid "Fetching Themes"
 #~ msgstr "מוריד ערכות"

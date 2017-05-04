@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: emerald\n"
 "Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/emerald/issues\n"
-"POT-Creation-Date: 2017-01-12 18:19+0300\n"
+"POT-Creation-Date: 2017-05-04 19:28+0300\n"
 "PO-Revision-Date: 2007-12-24 12:08+0100\n"
 "Last-Translator: Jeong Seungwon <jeongseungwon@hanmail.net>\n"
 "Language-Team: Korean <ko@li.org>\n"
@@ -101,9 +101,8 @@ msgstr "둥근 반경(상단)"
 msgid "Bottom Rounding Radius"
 msgstr "둥근 반경(하단)"
 
-#, fuzzy
 msgid "_Clear"
-msgstr "비우기"
+msgstr "지우기(_C)"
 
 #. style: use tiled or scaled pixmaps
 msgid "Scaled"
@@ -573,7 +572,7 @@ msgid "Export Theme..."
 msgstr "테마 내보내기..."
 
 msgid "_Save"
-msgstr ""
+msgstr "저장(_S)"
 
 msgid "Name:"
 msgstr "이름:"
@@ -698,6 +697,10 @@ msgstr "버튼 깜빡이기 최소 투명도 %"
 msgid "Titlebar Double-Click Action"
 msgstr "제목 표시줄 더블 클릭 동작"
 
+#, fuzzy
+msgid "Titlebar Middle-Click Action"
+msgstr "제목 표시줄 더블 클릭 동작"
+
 msgid "Button Hover Cursor"
 msgstr "버튼 위에 커서를 올렸을 때 모양"
 
@@ -741,16 +744,16 @@ msgid "Import Theme..."
 msgstr "테마 들여오기..."
 
 msgid "_Open"
-msgstr ""
+msgstr "열기(_O)"
 
 msgid "Search:"
 msgstr "검색:"
 
 msgid "_Refresh"
-msgstr ""
+msgstr "새로 고침(_R)"
 
 msgid "_Delete"
-msgstr ""
+msgstr "삭제(_D)"
 
 #, fuzzy
 msgid "_Import..."
@@ -768,9 +771,8 @@ msgstr "테마 설정"
 msgid "Emerald Settings"
 msgstr "에머랄드 설정"
 
-#, fuzzy
 msgid "_Quit"
-msgstr "강제로 끝내기(_F)"
+msgstr "끝내기(_Q)"
 
 #~ msgid "Fetching Themes"
 #~ msgstr "테마 가져오기"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: emerald\n"
 "Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/emerald/issues\n"
-"POT-Creation-Date: 2017-01-12 18:19+0300\n"
+"POT-Creation-Date: 2017-05-04 19:29+0300\n"
 "PO-Revision-Date: 2007-09-24 05:41+0300\n"
 "Last-Translator: Serdar Soytetir\n"
 "Language-Team:  Turkish <tulliana@gmail.com>\n"
@@ -102,9 +102,8 @@ msgstr "Üst yuvarlama yarıçapı"
 msgid "Bottom Rounding Radius"
 msgstr "Alt yuvarlama yarıçapı"
 
-#, fuzzy
 msgid "_Clear"
-msgstr "Temizle"
+msgstr "_Temizle"
 
 #. style: use tiled or scaled pixmaps
 msgid "Scaled"
@@ -392,7 +391,7 @@ msgstr ""
 "kaybedilmesine neden olur."
 
 msgid "_Cancel"
-msgstr ""
+msgstr "_İptal Et"
 
 msgid "_Force Quit"
 msgstr "_Çıkmayı Zorla"
@@ -576,7 +575,7 @@ msgid "Export Theme..."
 msgstr "Temayı dışa aktar..."
 
 msgid "_Save"
-msgstr ""
+msgstr "_Kaydet"
 
 msgid "Name:"
 msgstr "İsim:"
@@ -700,6 +699,10 @@ msgstr "Düğme darbesinin  en düşük saydamlığı %"
 msgid "Titlebar Double-Click Action"
 msgstr "Başlık çubuğunun çift tıklanmaya tepkisi"
 
+#, fuzzy
+msgid "Titlebar Middle-Click Action"
+msgstr "Başlık çubuğunun çift tıklanmaya tepkisi"
+
 msgid "Button Hover Cursor"
 msgstr "Düğme Üzeri Konumunda Fare İşaretçisi"
 
@@ -743,16 +746,16 @@ msgid "Import Theme..."
 msgstr "İçeriye Tema Aktar..."
 
 msgid "_Open"
-msgstr ""
+msgstr "_Aç"
 
 msgid "Search:"
 msgstr "Ara:"
 
 msgid "_Refresh"
-msgstr ""
+msgstr "_Tazele"
 
 msgid "_Delete"
-msgstr ""
+msgstr "_Sil"
 
 #, fuzzy
 msgid "_Import..."
@@ -770,9 +773,8 @@ msgstr "Tema ayarları"
 msgid "Emerald Settings"
 msgstr "Emerald ayarları"
 
-#, fuzzy
 msgid "_Quit"
-msgstr "_Çıkmayı Zorla"
+msgstr "_Çık"
 
 #~ msgid "Fetching Themes"
 #~ msgstr "Temalar Alınıyor"

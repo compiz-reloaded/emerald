@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: emerald\n"
 "Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/emerald/issues\n"
-"POT-Creation-Date: 2017-01-12 18:19+0300\n"
+"POT-Creation-Date: 2017-05-04 19:29+0300\n"
 "PO-Revision-Date: 2009-03-10 21:19+0100\n"
 "Last-Translator: Denis Rakhmangulov <danfocus@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -102,9 +102,8 @@ msgstr "Верхний радиус скругления"
 msgid "Bottom Rounding Radius"
 msgstr "Нижний радиус скругления"
 
-#, fuzzy
 msgid "_Clear"
-msgstr "Очистить"
+msgstr "О_чистить"
 
 #. style: use tiled or scaled pixmaps
 msgid "Scaled"
@@ -389,7 +388,7 @@ msgstr ""
 "При принудительном завершении приложения теряются не сохранённые данные."
 
 msgid "_Cancel"
-msgstr ""
+msgstr "_Отмена"
 
 msgid "_Force Quit"
 msgstr "_Принудительно выйти"
@@ -574,7 +573,7 @@ msgid "Export Theme..."
 msgstr "Экспортирование темы..."
 
 msgid "_Save"
-msgstr ""
+msgstr "Со_хранить"
 
 msgid "Name:"
 msgstr "Название:"
@@ -700,6 +699,10 @@ msgstr "Минимальная прозрачность пульсации %"
 msgid "Titlebar Double-Click Action"
 msgstr "Действие при двойном щелчке на заголовке"
 
+#, fuzzy
+msgid "Titlebar Middle-Click Action"
+msgstr "Действие при двойном щелчке на заголовке"
+
 msgid "Button Hover Cursor"
 msgstr "Курсор при наведении на кнопку"
 
@@ -743,16 +746,16 @@ msgid "Import Theme..."
 msgstr "Импортровать тему..."
 
 msgid "_Open"
-msgstr ""
+msgstr "_Открыть"
 
 msgid "Search:"
 msgstr "Поиск:"
 
 msgid "_Refresh"
-msgstr ""
+msgstr "Об_новить"
 
 msgid "_Delete"
-msgstr ""
+msgstr "_Удалить"
 
 #, fuzzy
 msgid "_Import..."
@@ -770,9 +773,8 @@ msgstr "Настройки тем"
 msgid "Emerald Settings"
 msgstr "Настройки Emerald"
 
-#, fuzzy
 msgid "_Quit"
-msgstr "_Принудительно выйти"
+msgstr "В_ыйти"
 
 #~ msgid "Fetching Themes"
 #~ msgstr "Получение тем"

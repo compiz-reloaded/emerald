@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: emerald\n"
 "Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/emerald/issues\n"
-"POT-Creation-Date: 2017-01-12 18:19+0300\n"
+"POT-Creation-Date: 2017-05-04 19:28+0300\n"
 "PO-Revision-Date: 2008-02-03 19:34+0100\n"
 "Last-Translator: Simon Danner <danner.simon@googlemail.com>\n"
 "Language-Team: German <translation-team-de@lists.sourceforge.net>\n"
@@ -101,9 +101,8 @@ msgstr "Oberer Rundungsradius"
 msgid "Bottom Rounding Radius"
 msgstr "Unterer Rundungsradius"
 
-#, fuzzy
 msgid "_Clear"
-msgstr "Löschen"
+msgstr "_Leeren"
 
 #. style: use tiled or scaled pixmaps
 msgid "Scaled"
@@ -390,7 +389,7 @@ msgstr ""
 "Änderungen verloren."
 
 msgid "_Cancel"
-msgstr ""
+msgstr "_Abbrechen"
 
 msgid "_Force Quit"
 msgstr "Beenden _erzwingen"
@@ -574,7 +573,7 @@ msgid "Export Theme..."
 msgstr "Exportiere Design..."
 
 msgid "_Save"
-msgstr ""
+msgstr "_Speichern"
 
 msgid "Name:"
 msgstr "Name:"
@@ -699,6 +698,10 @@ msgstr "Minimale Deckkraft in %"
 msgid "Titlebar Double-Click Action"
 msgstr "Aktion für Doppelklick in Titelleiste"
 
+#, fuzzy
+msgid "Titlebar Middle-Click Action"
+msgstr "Aktion für Doppelklick in Titelleiste"
+
 msgid "Button Hover Cursor"
 msgstr "Cursor beim Schweben über Knopf"
 
@@ -743,16 +746,16 @@ msgid "Import Theme..."
 msgstr "Design importieren..."
 
 msgid "_Open"
-msgstr ""
+msgstr "Ö_ffnen"
 
 msgid "Search:"
 msgstr "Suche:"
 
 msgid "_Refresh"
-msgstr ""
+msgstr "_Aktualisieren"
 
 msgid "_Delete"
-msgstr ""
+msgstr "_Löschen"
 
 #, fuzzy
 msgid "_Import..."
@@ -770,9 +773,8 @@ msgstr "Design Einstellungen"
 msgid "Emerald Settings"
 msgstr "Emerald Einstellungen"
 
-#, fuzzy
 msgid "_Quit"
-msgstr "Beenden _erzwingen"
+msgstr "_Beenden"
 
 #~ msgid "Fetching Themes"
 #~ msgstr "Designs herunterladen"

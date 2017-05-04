@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: emerald\n"
 "Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/emerald/issues\n"
-"POT-Creation-Date: 2017-01-12 18:19+0300\n"
+"POT-Creation-Date: 2017-05-04 19:29+0300\n"
 "PO-Revision-Date: 2007-10-11 16:0-0300\n"
 "Last-Translator: Emerson Ribeiro de Mello <ribmello-compiz@yahoo.com.br>\n"
 "Language-Team: Brazilian Portuguese <mate-l10n-br@listas.cipsga.org.br>\n"
@@ -104,9 +104,8 @@ msgstr "Raio de arredondamento do topo"
 msgid "Bottom Rounding Radius"
 msgstr "Grau de arredondamento da base"
 
-#, fuzzy
 msgid "_Clear"
-msgstr "Limpar"
+msgstr "_Limpar"
 
 #. style: use tiled or scaled pixmaps
 msgid "Scaled"
@@ -393,7 +392,7 @@ msgstr ""
 "salvas."
 
 msgid "_Cancel"
-msgstr ""
+msgstr "_Cancelar"
 
 msgid "_Force Quit"
 msgstr "_Forçar Saída"
@@ -577,7 +576,7 @@ msgid "Export Theme..."
 msgstr "Exportar tema"
 
 msgid "_Save"
-msgstr ""
+msgstr "_Salvar"
 
 msgid "Name:"
 msgstr "Nome:"
@@ -702,6 +701,10 @@ msgstr "Opacidade mínimima do pulsar dos botões"
 msgid "Titlebar Double-Click Action"
 msgstr "Ação de duplo clique na barra de título"
 
+#, fuzzy
+msgid "Titlebar Middle-Click Action"
+msgstr "Ação de duplo clique na barra de título"
+
 msgid "Button Hover Cursor"
 msgstr "Cursor quando está sobre os botões"
 
@@ -745,16 +748,16 @@ msgid "Import Theme..."
 msgstr "Importar tema"
 
 msgid "_Open"
-msgstr ""
+msgstr "_Abrir"
 
 msgid "Search:"
 msgstr "Procurar:"
 
 msgid "_Refresh"
-msgstr ""
+msgstr "Atualiza_r"
 
 msgid "_Delete"
-msgstr ""
+msgstr "E_xcluir"
 
 #, fuzzy
 msgid "_Import..."
@@ -772,9 +775,8 @@ msgstr "Opções de temas"
 msgid "Emerald Settings"
 msgstr "Opções do Emerald"
 
-#, fuzzy
 msgid "_Quit"
-msgstr "_Forçar Saída"
+msgstr "Sai_r"
 
 #~ msgid "Fetching Themes"
 #~ msgstr "Baixar temas"

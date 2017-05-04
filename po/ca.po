@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: emerald\n"
 "Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/emerald/issues\n"
-"POT-Creation-Date: 2017-01-12 18:19+0300\n"
+"POT-Creation-Date: 2017-05-04 19:28+0300\n"
 "PO-Revision-Date: 2017-03-07 19:41+0100\n"
 "Last-Translator: Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>\n"
 "Language-Team: Catalan <ca@li.org>\n"
@@ -103,7 +103,7 @@ msgid "Bottom Rounding Radius"
 msgstr "Radi d'arrodoniment Inferior"
 
 msgid "_Clear"
-msgstr "Nete_ja"
+msgstr "_Neteja"
 
 #. style: use tiled or scaled pixmaps
 msgid "Scaled"
@@ -390,7 +390,7 @@ msgstr ""
 "dades que no s'hagin desat."
 
 msgid "_Cancel"
-msgstr "Cancel·la"
+msgstr "_Cancel·la"
 
 msgid "_Force Quit"
 msgstr "_Força el tancament"
@@ -576,7 +576,7 @@ msgid "Export Theme..."
 msgstr "Exporta el tema..."
 
 msgid "_Save"
-msgstr "De_sa"
+msgstr "_Desa"
 
 msgid "Name:"
 msgstr "Nom:"
@@ -702,6 +702,10 @@ msgstr "Opacitat mínima en % en pitjar el botó"
 msgid "Titlebar Double-Click Action"
 msgstr "Acció del doble clic en la barra de títol"
 
+#, fuzzy
+msgid "Titlebar Middle-Click Action"
+msgstr "Acció del doble clic en la barra de títol"
+
 msgid "Button Hover Cursor"
 msgstr "Cursor al damunt del botó"
 
@@ -751,7 +755,7 @@ msgid "Search:"
 msgstr "Cerca:"
 
 msgid "_Refresh"
-msgstr "_Refresca"
+msgstr "_Actualitza"
 
 msgid "_Delete"
 msgstr "_Suprimeix"

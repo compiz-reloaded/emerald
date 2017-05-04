@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: emerald\n"
 "Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/emerald/issues\n"
-"POT-Creation-Date: 2017-01-12 18:19+0300\n"
+"POT-Creation-Date: 2017-05-04 19:29+0300\n"
 "PO-Revision-Date: 2007-12-17 15:45+0530\n"
 "Last-Translator: gist oriya team <info.gist@cdac.in>\n"
 "Language-Team: gist oriya team <info.gist@cdac.in>\n"
@@ -99,9 +99,8 @@ msgstr "ଉପର ଗୋଲହୋଇଥିବା ବ୍ଯାସାର୍ଦ୍�
 msgid "Bottom Rounding Radius"
 msgstr "ତଳ ଗୋଲହୋଇଥିବା ବ୍ଯାସାର୍ଦ୍ଧ "
 
-#, fuzzy
 msgid "_Clear"
-msgstr "ପରିଷ୍କାର "
+msgstr "ସଫା କରନ୍ତୁ (_C)"
 
 #. style: use tiled or scaled pixmaps
 msgid "Scaled"
@@ -386,7 +385,7 @@ msgstr ""
 "ଏହି ପ୍ରଯୋଗକୁ ମୁକ୍ତ କରିବା ପାଇଁ ବଳ ପ୍ରଯୋଗ କଲେ ତୁମର କୌଣସି ଅସଂଚିତ ପରିବର୍ତ୍ତନ ନଷ୍ଟ ହୋଇୟିବ । "
 
 msgid "_Cancel"
-msgstr ""
+msgstr "ବାତିଲ କରନ୍ତୁ (_C)"
 
 msgid "_Force Quit"
 msgstr "_ଜୋରରେ ଛାଡ "
@@ -570,7 +569,7 @@ msgid "Export Theme..."
 msgstr "ରପ୍ତାନୀ ବିଷଯ... "
 
 msgid "_Save"
-msgstr ""
+msgstr "ସଂରକ୍ଷଣ କରନ୍ତୁ (_S)"
 
 msgid "Name:"
 msgstr "ନାମ: "
@@ -693,6 +692,10 @@ msgstr "ବଟନ୍ ପଲ୍ସ ଅନ୍ଯୁନ ଅପାରଦର୍ଶି
 msgid "Titlebar Double-Click Action"
 msgstr "ଶୀର୍ଷକବାର୍ ଦ୍ବିଗୁଣିତ-କ୍ଲିକ କ୍ରିଯା "
 
+#, fuzzy
+msgid "Titlebar Middle-Click Action"
+msgstr "ଶୀର୍ଷକବାର୍ ଦ୍ବିଗୁଣିତ-କ୍ଲିକ କ୍ରିଯା "
+
 msgid "Button Hover Cursor"
 msgstr "ବଟନ୍ ହୋଭର୍ କର୍ସର୍ "
 
@@ -736,16 +739,16 @@ msgid "Import Theme..."
 msgstr "ଆମଦାନୀ ବିଷଯ... "
 
 msgid "_Open"
-msgstr ""
+msgstr "ଖୋଲନ୍ତୁ (_O)"
 
 msgid "Search:"
 msgstr "ତଦନ୍ତ କର: "
 
 msgid "_Refresh"
-msgstr ""
+msgstr "ସତେଜିତ କରନ୍ତୁ (_R)"
 
 msgid "_Delete"
-msgstr ""
+msgstr "ଲିଭାନ୍ତୁ (_D)"
 
 #, fuzzy
 msgid "_Import..."
@@ -763,9 +766,8 @@ msgstr "ବିଷଯସବୁର ସେଟିଙ୍ଗଗୁଡିକ "
 msgid "Emerald Settings"
 msgstr "ଏମ୍‌ରାଲ୍‌ଡ/ମରକତ ସେଟିଙ୍ଗ୍ "
 
-#, fuzzy
 msgid "_Quit"
-msgstr "_ଜୋରରେ ଛାଡ "
+msgstr "ବିଦାୟ ନିଅନ୍ତୁ (_Q)"
 
 #~ msgid "Fetching Themes"
 #~ msgstr "ଆକର୍ଷକ/ମନୋହର/ରମଣୀଯ ବିଷଯଗୁଡିକ "

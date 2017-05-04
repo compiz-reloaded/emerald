@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Emerald Hindi translation\n"
 "Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/emerald/issues\n"
-"POT-Creation-Date: 2017-01-12 18:19+0300\n"
+"POT-Creation-Date: 2017-05-04 19:28+0300\n"
 "PO-Revision-Date: 2007-12-17 12:22+0530\n"
 "Last-Translator: gist bengali team <info.gist@cdac.in>\n"
 "Language-Team: gist bengali team <info.gist@cdac.in>\n"
@@ -100,9 +100,8 @@ msgstr "ऊपर गोलाकार त्रिज्या"
 msgid "Bottom Rounding Radius"
 msgstr "तल गोलाकार त्रिज्या"
 
-#, fuzzy
 msgid "_Clear"
-msgstr "खाली"
+msgstr "साफ़ करें (_C)"
 
 #. style: use tiled or scaled pixmaps
 msgid "Scaled"
@@ -386,7 +385,7 @@ msgid ""
 msgstr "इस अनुप्रयोग को जबरदस्ती बन्द करने पर आप अपने सहेजे नहीं गए परिवर्तनों को खो देंगे"
 
 msgid "_Cancel"
-msgstr ""
+msgstr "रद्द करें (_C)"
 
 msgid "_Force Quit"
 msgstr "जबर्दस्ती बाहर (_F)"
@@ -570,7 +569,7 @@ msgid "Export Theme..."
 msgstr "निर्यात थीम..."
 
 msgid "_Save"
-msgstr ""
+msgstr "सहेजें (_S)"
 
 msgid "Name:"
 msgstr "नाम:"
@@ -695,6 +694,10 @@ msgstr "बटन गति न्यूनतम अपारदर्शित
 msgid "Titlebar Double-Click Action"
 msgstr "टाइटिलबार दुहरा क्लिक क्रिया"
 
+#, fuzzy
+msgid "Titlebar Middle-Click Action"
+msgstr "टाइटिलबार दुहरा क्लिक क्रिया"
+
 msgid "Button Hover Cursor"
 msgstr "बटन होवर कर्सर"
 
@@ -738,16 +741,16 @@ msgid "Import Theme..."
 msgstr "आयात थीम..."
 
 msgid "_Open"
-msgstr ""
+msgstr "खोलें (_O)"
 
 msgid "Search:"
 msgstr "खोजें:"
 
 msgid "_Refresh"
-msgstr ""
+msgstr "ताज़ा करें (_R)"
 
 msgid "_Delete"
-msgstr ""
+msgstr "मिटाएँ (_D)"
 
 #, fuzzy
 msgid "_Import..."
@@ -765,9 +768,8 @@ msgstr "थीम जमावट"
 msgid "Emerald Settings"
 msgstr "एमराल्ड जमावट"
 
-#, fuzzy
 msgid "_Quit"
-msgstr "जबर्दस्ती बाहर (_F)"
+msgstr "बाहर जाएँ (_Q)"
 
 #~ msgid "Fetching Themes"
 #~ msgstr "थीम ला रहा है"

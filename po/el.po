@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: emerald\n"
 "Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/emerald/issues\n"
-"POT-Creation-Date: 2017-01-12 18:19+0300\n"
+"POT-Creation-Date: 2017-05-04 19:28+0300\n"
 "PO-Revision-Date: 2007-09-27 06:00+0200\n"
 "Last-Translator: Δημήτρης (djdoo) <jimdusis@yahoo.gr>\n"
 "Language-Team: Greek <el@li.org>\n"
@@ -100,9 +100,8 @@ msgstr "Πάνω Ακτίνα Στρογγυλέματος"
 msgid "Bottom Rounding Radius"
 msgstr "Πάνω Ακτίνα Στρογγυλέματος"
 
-#, fuzzy
 msgid "_Clear"
-msgstr "Καθαρισμός"
+msgstr "_Εκκαθάριση"
 
 #. style: use tiled or scaled pixmaps
 msgid "Scaled"
@@ -389,7 +388,7 @@ msgstr ""
 "όποιων μη σωσμένων αλλαγών."
 
 msgid "_Cancel"
-msgstr ""
+msgstr "_Ακύρωση"
 
 msgid "_Force Quit"
 msgstr "_Καταναγκασμένη Έξοδος"
@@ -574,7 +573,7 @@ msgid "Export Theme..."
 msgstr "Εξαγωγή Θέματος..."
 
 msgid "_Save"
-msgstr ""
+msgstr "Απο_θήκευση"
 
 msgid "Name:"
 msgstr "Όνομα:"
@@ -700,6 +699,10 @@ msgstr "Ελάχιστη Αδιαφάνεια % Παλμού Κουμπιού"
 msgid "Titlebar Double-Click Action"
 msgstr "Ενέργεια Διπλού-Κλικ Μπάρας Τίτλου"
 
+#, fuzzy
+msgid "Titlebar Middle-Click Action"
+msgstr "Ενέργεια Διπλού-Κλικ Μπάρας Τίτλου"
+
 msgid "Button Hover Cursor"
 msgstr "Αιώρηση Κέρσορα πάνω από Κουμπί"
 
@@ -743,16 +746,16 @@ msgid "Import Theme..."
 msgstr "Εισαγωγή Θέματος..."
 
 msgid "_Open"
-msgstr ""
+msgstr "Άν_οιγμα"
 
 msgid "Search:"
 msgstr "Ψάξιμο:"
 
 msgid "_Refresh"
-msgstr ""
+msgstr "_Ανανέωση"
 
 msgid "_Delete"
-msgstr ""
+msgstr "_Διαγραφή"
 
 #, fuzzy
 msgid "_Import..."
@@ -770,9 +773,8 @@ msgstr "Ρυθμίσεις Θεμάτων"
 msgid "Emerald Settings"
 msgstr "Ρυθμίσεις του Emerald"
 
-#, fuzzy
 msgid "_Quit"
-msgstr "_Καταναγκασμένη Έξοδος"
+msgstr "Έ_ξοδος"
 
 #~ msgid "Fetching Themes"
 #~ msgstr "Απόκτηση Θεμάτων"
