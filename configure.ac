@@ -69,17 +69,11 @@ esac
 
 AC_SUBST([GTK_API_VERSION])
 
-EMERALD_REQUIRES=" xrender >= 0.8.4				  \
-		    xi						   \
-		    gtk+-$GTK_API_VERSION >= $GTK_MIN_VERSION	   \
-		    libwnck-$WNCK_API_VERSION >= $WNCK_MIN_VERSION \
-		    libdecoration				   \
-		    cairo >= 1.4				   \
-		    pangocairo"
+EMERALD_REQUIRES="gtk+-$GTK_API_VERSION >= $GTK_MIN_VERSION libwnck-$WNCK_API_VERSION >= $WNCK_MIN_VERSION libdecoration cairo >= 1.4 pangocairo xrender >= 0.8.4 xi"
 
-PKG_CHECK_MODULES(EMERALD, $EMERALD_REQUIRES)
+PKG_CHECK_MODULES(EMERALD, [$EMERALD_REQUIRES])
 
-AC_SUBST(EMERALD_REQUIRES)
+AC_SUBST([EMERALD_REQUIRES])
 LIBS="$LIBS -lm -ldl"
 
 AC_RUN_IFELSE(
