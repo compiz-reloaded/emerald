@@ -76,6 +76,11 @@ PKG_CHECK_MODULES(EMERALD, [$EMERALD_REQUIRES])
 AC_SUBST([EMERALD_REQUIRES])
 LIBS="$LIBS -lm -ldl"
 
+
+save_CFLAGS="$CFLAGS"
+save_LIBS="$LIBS"
+CFLAGS="$CFLAGS $EMERALD_CFLAGS"
+LIBS="$LIBS $EMERALD_LIBS -lm -ldl"
 AC_RUN_IFELSE(
   [AC_LANG_PROGRAM(
     [
@@ -100,6 +105,9 @@ fclose(f);
     AC_MSG_ERROR([Failed to check the decorator interface version])
   ]
 )
+CFLAGS="$save_CFLAGS"
+LIBS="$save_LIBS"
+
 
 AC_ARG_ENABLE(mime-update,
 [  --enable-mime-update],
