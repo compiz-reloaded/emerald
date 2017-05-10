@@ -28,8 +28,6 @@
 #include <gtk/gtkwindow.h>
 #include <gdk/gdkx.h>
 
-#define IS_VALID_SURFACE(o) (o && cairo_surface_get_reference_count(o) > 0)
-
 #ifdef USE_DBUS
 #define DBUS_API_SUBJECT_TO_CHANGE
 #include <dbus/dbus.h>
