@@ -3495,6 +3495,7 @@ static gboolean update_switcher_window(WnckWindow * win, Window selected)
 {
     decor_t *d = g_object_get_data(G_OBJECT(win), "decor");
     cairo_surface_t *surface = NULL, *buffer_surface = NULL;
+    cairo_surface_t *isurface = NULL, *ibuffer_surface = NULL;
     gint height, width = 0;
     WnckWindow *selected_win;
     window_settings *ws = d->fs->ws;
@@ -3579,14 +3580,44 @@ static gboolean update_switcher_window(WnckWindow * win, Window selected)
 	return FALSE;
     }
 
-    if (IS_VALID_SURFACE(d->surface))
-	cairo_surface_destroy(d->surface);
+    isurface = create_xlib_surface(width, height);
+    if (!IS_VALID_SURFACE(isurface))
+    {
+	cairo_surface_destroy(surface);
+	cairo_surface_destroy(buffer_surface);
+	return FALSE;
+    }
 
-    if (IS_VALID_SURFACE(d->buffer_surface))
-	cairo_surface_destroy(d->buffer_surface);
+    ibuffer_surface = create_surface(width, height);
+    if (!IS_VALID_SURFACE(ibuffer_surface))
+    {
+	cairo_surface_destroy(isurface);
+	cairo_surface_destroy(surface);
+	cairo_surface_destroy(buffer_surface);
+	return FALSE;
+    }
 
-    d->surface = surface;
-    d->buffer_surface = buffer_surface;
+    /* wait until old surfaces are not used for sure,
+       one second should be enough */
+    if (IS_VALID_SURFACE(d->p_active_surface))
+	g_timeout_add_seconds(1, destroy_surface_idled, d->p_active_surface);
+    if (IS_VALID_SURFACE(d->p_inactive_surface))
+	g_timeout_add_seconds(1, destroy_surface_idled, d->p_inactive_surface);
+
+    if (IS_VALID_SURFACE(d->p_active_buffer_surface))
+	cairo_surface_destroy(d->p_active_buffer_surface);
+
+    if (IS_VALID_SURFACE(d->p_inactive_buffer_surface))
+	cairo_surface_destroy(d->p_inactive_buffer_surface);
+
+    d->only_change_active = FALSE;
+
+    d->surface = d->active ? surface : isurface;
+    d->buffer_surface = d->active ? buffer_surface : ibuffer_surface;
+    d->p_active_surface = surface;
+    d->p_active_buffer_surface = buffer_surface;
+    d->p_inactive_surface = isurface;
+    d->p_inactive_buffer_surface = ibuffer_surface;
 
     d->width = width;
     d->height = height;
