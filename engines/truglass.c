@@ -61,11 +61,24 @@ typedef struct _private_ws
 
 void get_meta_info (EngineMetaInfo * emi)
 {
+    guint8 *pixbuf_data;
+
     emi->version = g_strdup("0.5");
     emi->description = g_strdup(_("Glassy effects for your windows"));
-    /* old themes marked still compatible for now */
+    /* old themes are marked still compatible for now */
     emi->last_compat = g_strdup("0.0");
-    emi->icon = gdk_pixbuf_new_from_inline(-1, my_pixbuf, TRUE, NULL);
+
+    pixbuf_data = g_malloc0(TRUGLASS_ICON_ROWSTRIDE * TRUGLASS_ICON_HEIGHT);
+    memcpy (pixbuf_data, TRUGLASS_ICON_PIXEL_DATA,
+            TRUGLASS_ICON_ROWSTRIDE * TRUGLASS_ICON_HEIGHT);
+    emi->icon = gdk_pixbuf_new_from_data(pixbuf_data, GDK_COLORSPACE_RGB,
+                                         (TRUGLASS_ICON_BYTES_PER_PIXEL != 3),
+                                         8,
+                                         TRUGLASS_ICON_WIDTH,
+                                         TRUGLASS_ICON_HEIGHT,
+                                         TRUGLASS_ICON_ROWSTRIDE,
+                                         (GdkPixbufDestroyNotify) g_free,
+                                         pixbuf_data);
 }
 
 void engine_draw_frame (decor_t * d, cairo_t * cr)

@@ -108,11 +108,24 @@ typedef struct _private_ws
 
 void get_meta_info (EngineMetaInfo * emi)
 {
+    guint8 *pixbuf_data;
+
     emi->version = g_strdup("0.1");
     emi->description = g_strdup(_("Evolved from the legacy engine"));
-    /* old themes marked still compatible for testing-NeOS */
+    /* old themes are marked still compatible for testing-NeOS */
     emi->last_compat = g_strdup("0.0");
-    emi->icon = gdk_pixbuf_new_from_inline(-1,my_pixbuf,TRUE,NULL);
+
+    pixbuf_data = g_malloc0(ZOOTREEVES_ICON_ROWSTRIDE * ZOOTREEVES_ICON_HEIGHT);
+    memcpy (pixbuf_data, ZOOTREEVES_ICON_PIXEL_DATA,
+            ZOOTREEVES_ICON_ROWSTRIDE * ZOOTREEVES_ICON_HEIGHT);
+    emi->icon = gdk_pixbuf_new_from_data(pixbuf_data, GDK_COLORSPACE_RGB,
+                                         (ZOOTREEVES_ICON_BYTES_PER_PIXEL != 3),
+                                         8,
+                                         ZOOTREEVES_ICON_WIDTH,
+                                         ZOOTREEVES_ICON_HEIGHT,
+                                         ZOOTREEVES_ICON_ROWSTRIDE,
+                                         (GdkPixbufDestroyNotify) g_free,
+                                         pixbuf_data);
 }
 
 void

@@ -118,10 +118,23 @@ typedef struct _private_ws
 
 void get_meta_info (EngineMetaInfo * emi)
 {
+    guint8 *pixbuf_data;
+
     emi->version = g_strdup("0.2");
     emi->description = g_strdup(_("Everything done with customizable pixmaps!"));
-    emi->last_compat = g_strdup("0.0"); /* old themes marked still compatible */
-    emi->icon = gdk_pixbuf_new_from_inline(-1,my_pixbuf,TRUE,NULL);
+    /* old themes are marked still compatible */
+    emi->last_compat = g_strdup("0.0");
+
+    pixbuf_data = g_malloc0(PIXMAP_ICON_ROWSTRIDE * PIXMAP_ICON_HEIGHT);
+    memcpy (pixbuf_data, PIXMAP_ICON_PIXEL_DATA,
+            PIXMAP_ICON_ROWSTRIDE * PIXMAP_ICON_HEIGHT);
+    emi->icon = gdk_pixbuf_new_from_data(pixbuf_data, GDK_COLORSPACE_RGB,
+                                         (PIXMAP_ICON_BYTES_PER_PIXEL != 3), 8,
+                                         PIXMAP_ICON_WIDTH,
+                                         PIXMAP_ICON_HEIGHT,
+                                         PIXMAP_ICON_ROWSTRIDE,
+                                         (GdkPixbufDestroyNotify) g_free,
+                                         pixbuf_data);
 }
 
 void

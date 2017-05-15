@@ -71,11 +71,24 @@ typedef struct _private_ws
 
 void get_meta_info (EngineMetaInfo * emi)
 {
+    guint8 *pixbuf_data;
+
     emi->version = g_strdup("0.2");
     emi->description = g_strdup(_("Multiple gradients with somewhat glassy features too"));
-    /* old themes marked still compatible for now */
+    /* old themes are marked still compatible for now */
     emi->last_compat = g_strdup("0.0");
-    emi->icon = gdk_pixbuf_new_from_inline(-1, my_pixbuf, TRUE, NULL);
+
+    pixbuf_data = g_malloc0(VRUNNER_ICON_ROWSTRIDE * VRUNNER_ICON_HEIGHT);
+    memcpy (pixbuf_data, VRUNNER_ICON_PIXEL_DATA,
+            VRUNNER_ICON_ROWSTRIDE * VRUNNER_ICON_HEIGHT);
+    emi->icon = gdk_pixbuf_new_from_data(pixbuf_data, GDK_COLORSPACE_RGB,
+                                         (VRUNNER_ICON_BYTES_PER_PIXEL != 3),
+                                         8,
+                                         VRUNNER_ICON_WIDTH,
+                                         VRUNNER_ICON_HEIGHT,
+                                         VRUNNER_ICON_ROWSTRIDE,
+                                         (GdkPixbufDestroyNotify) g_free,
+                                         pixbuf_data);
 }
 
 void
