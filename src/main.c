@@ -5158,8 +5158,10 @@ static XFixed *create_gaussian_kernel(double radius,
 
 static int update_shadow(frame_settings * fs)
 {
-    Display *xdisplay = GDK_DISPLAY_XDISPLAY(gdk_display_get_default());
-    GdkVisual *visual = gdk_visual_get_best_with_depth(32);
+    GdkDisplay *display = gdk_display_get_default();
+    GdkScreen *screen = gdk_display_get_default_screen(display);
+    Display *xdisplay = GDK_DISPLAY_XDISPLAY(display);
+    int bits_per_rgb = -1;
     XRenderPictFormat *format;
     cairo_surface_t *surface;
     Picture src, dst, tmp;
@@ -5173,9 +5175,11 @@ static int update_shadow(frame_settings * fs)
     memset(&d, 0, sizeof(decor_t));
     window_settings *ws = fs->ws;
 
-    /* TODO: shadows show strong artefacts with 30-bit setups
+    /* TODO: shadows show strong artifacts with 30-bit setups,
        meanwhile disable here as a workaround */
-    if (gdk_visual_get_bits_per_rgb(visual) == 10)
+    gdk_visual_get_red_pixel_details(gdk_screen_get_rgba_visual(screen),
+                                     NULL, NULL, &bits_per_rgb);
+    if (bits_per_rgb == 10)
 	ws->shadow_radius = 0;
 
     /* double save_decoration_alpha; */
