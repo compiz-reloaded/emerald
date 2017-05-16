@@ -64,9 +64,8 @@ void get_meta_info (EngineMetaInfo * emi)
     /* old themes are marked still compatible */
     emi->last_compat = g_strdup("0.0");
 
-    pixbuf_data = g_malloc0(LEGACY_ICON_ROWSTRIDE * LEGACY_ICON_HEIGHT);
-    memcpy (pixbuf_data, LEGACY_ICON_PIXEL_DATA,
-            LEGACY_ICON_ROWSTRIDE * LEGACY_ICON_HEIGHT);
+    pixbuf_data = g_memdup(LEGACY_ICON_PIXEL_DATA,
+                           LEGACY_ICON_ROWSTRIDE * LEGACY_ICON_HEIGHT);
     emi->icon = gdk_pixbuf_new_from_data(pixbuf_data, GDK_COLORSPACE_RGB,
                                          (LEGACY_ICON_BYTES_PER_PIXEL != 3), 8,
                                          LEGACY_ICON_WIDTH,

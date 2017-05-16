@@ -125,9 +125,8 @@ void get_meta_info (EngineMetaInfo * emi)
     /* old themes are marked still compatible */
     emi->last_compat = g_strdup("0.0");
 
-    pixbuf_data = g_malloc0(PIXMAP_ICON_ROWSTRIDE * PIXMAP_ICON_HEIGHT);
-    memcpy (pixbuf_data, PIXMAP_ICON_PIXEL_DATA,
-            PIXMAP_ICON_ROWSTRIDE * PIXMAP_ICON_HEIGHT);
+    pixbuf_data = g_memdup(PIXMAP_ICON_PIXEL_DATA,
+                           PIXMAP_ICON_ROWSTRIDE * PIXMAP_ICON_HEIGHT);
     emi->icon = gdk_pixbuf_new_from_data(pixbuf_data, GDK_COLORSPACE_RGB,
                                          (PIXMAP_ICON_BYTES_PER_PIXEL != 3), 8,
                                          PIXMAP_ICON_WIDTH,
