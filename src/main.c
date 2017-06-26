@@ -1680,11 +1680,11 @@ static void update_button_regions(decor_t * d)
 	    continue;
 
 	if (ws->use_pixmap_buttons &&
-	    ((d->active && ws->use_button_glow)||
+	    ((d->active && ws->use_button_glow) ||
 	     (!d->active && ws->use_button_inactive_glow)))
 	{
 	    /* update glow overlaps of each pair */
-	    for (b_t2 = 0; b_t2 < b_t; ++b_t2)
+	    for (b_t2 = 0; b_t2 < B_T_COUNT; ++b_t2)
 	    {
 		/* coordinates for these b_t2's will be ready for b_t here */
 		if (BUTTON_NOT_VISIBLE(d, b_t2))
@@ -1701,20 +1701,6 @@ static void update_button_regions(decor_t * d)
 		else
 		{
 		    button_region->overlap_buttons[b_t2] = FALSE;
-		}
-
-		/* buttons protruding glow length might be asymmetric
-		   left of b_t2 or right of b_t2 */
-		if ((d->button_region[b_t2].base_x1 > button_region->base_x1 &&
-		     d->button_region[b_t2].glow_x1 <= button_region->base_x2) ||
-		    (d->button_region[b_t2].base_x1 < button_region->base_x1 &&
-		     d->button_region[b_t2].glow_x2 >= button_region->base_x1))
-		{
-		    d->button_region[b_t2].overlap_buttons[b_t] = TRUE;
-		}
-		else
-		{
-		    d->button_region[b_t2].overlap_buttons[b_t] = FALSE;
 		}
 	    }
 	}
