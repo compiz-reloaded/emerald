@@ -1612,106 +1612,52 @@ static void draw_buttons_without_fade(decor_t * d, cairo_t * cr, double y1)
 static void update_button_regions(decor_t * d)
 {
     window_settings *ws = d->fs->ws;
-    gint y1 = ws->top_space - ws->win_extents.top;
+    int y1 = ws->top_space - ws->win_extents.top;
+    int b_t, b_t2;
 
-    gint b_t, b_t2;
-    gdouble x, y;
-    gdouble glow_x, glow_y;	/* glow top left coordinates */
-
-    for (b_t = 0; b_t < B_T_COUNT; b_t++)
-    {
-	if (BUTTON_NOT_VISIBLE(d, b_t))
-	    continue;
-
-	if (d->button_region[b_t].bg_surface != NULL)
-	    cairo_surface_destroy(d->button_region[b_t].bg_surface);
-	d->button_region[b_t].bg_surface = NULL;
-	if (d->button_region_inact[b_t].bg_surface != NULL)
-	    cairo_surface_destroy(d->button_region_inact[b_t].bg_surface);
-	d->button_region_inact[b_t].bg_surface = NULL;
-
-	/* reset overlaps */
-	for (b_t2 = 0; b_t2 < b_t; b_t2++)
-	    if (!BUTTON_NOT_VISIBLE(d, b_t2))
-		d->button_region[b_t].overlap_buttons[b_t2] = FALSE;
-	for (b_t2 = 0; b_t2 < b_t; b_t2++)
-	    if (!BUTTON_NOT_VISIBLE(d, b_t2))
-		d->button_region_inact[b_t].overlap_buttons[b_t2] = FALSE;
-    }
     d->button_fade_info.first_draw = TRUE;
 
-    if (ws->use_pixmap_buttons)
+    for (b_t = 0; b_t < B_T_COUNT; ++b_t)
     {
-	if ((d->active && ws->use_button_glow) ||
-	    (!d->active && ws->use_button_inactive_glow))
-	{
-	    for (b_t = 0; b_t < B_T_COUNT; b_t++)
-	    {
-		if (BUTTON_NOT_VISIBLE(d, b_t))
-		    continue;
-		get_button_pos(ws, b_t, d, y1, &x, &y);
-		button_region_t *button_region = &(d->button_region[b_t]);
+	button_region_t *button_region = &(d->button_region[b_t]);
+	double x = 0.0, y = 0.0;
 
+	if (BUTTON_NOT_VISIBLE(d, b_t))
+	    continue;
+	get_button_pos(ws, b_t, d, y1, &x, &y);
+
+	/* reset overlaps */
+	for (b_t2 = 0; b_t2 < b_t; ++b_t2)
+	{
+	    if (!BUTTON_NOT_VISIBLE(d, b_t2))
+		button_region->overlap_buttons[b_t2] = FALSE;
+	}
+
+	button_region->base_x1 = x;
+	button_region->base_y1 = y;
+
+	if (ws->use_pixmap_buttons)
+	{
+	    button_region->base_x2 = x + ws->c_icon_size[b_t].w;
+	    button_region->base_y2 = MIN(y + ws->c_icon_size[b_t].h,
+		                         ws->top_space + ws->titlebar_height);
+
+	    if ((d->active && ws->use_button_glow) ||
+	        (!d->active && ws->use_button_inactive_glow))
+	    {
+		double glow_x, glow_y; /* glow top left coordinates */
 		glow_x = x - (ws->c_glow_size.w - ws->c_icon_size[b_t].w) / 2;
 		glow_y = y - (ws->c_glow_size.h - ws->c_icon_size[b_t].h) / 2;
-
-		button_region->base_x1 = x;
-		button_region->base_y1 = y;
-		button_region->base_x2 = x + ws->c_icon_size[b_t].w;
-		button_region->base_y2 = MIN(y + ws->c_icon_size[b_t].h,
-					     ws->top_space +
-					     ws->titlebar_height);
 
 		button_region->glow_x1 = glow_x;
 		button_region->glow_y1 = glow_y;
 		button_region->glow_x2 = glow_x + ws->c_glow_size.w;
 		button_region->glow_y2 = MIN(glow_y + ws->c_glow_size.h,
-					     ws->top_space +
-					     ws->titlebar_height);
-
-		/* update glow overlaps of each pair */
-
-		for (b_t2 = 0; b_t2 < b_t; b_t2++)
-		{
-		    /* coordinates for these b_t2's will be ready for this b_t here */
-		    if (BUTTON_NOT_VISIBLE(d, b_t2))
-			continue;
-		    /* right of b_t2 or left of b_t2 */
-		    if ((button_region->base_x1 > d->button_region[b_t2].base_x1
-			 && button_region->glow_x1 <= d->button_region[b_t2].base_x2)
-		       || (button_region->base_x1 < d->button_region[b_t2].base_x1
-			 && button_region->glow_x2 >= d->button_region[b_t2].base_x1))
-			button_region->overlap_buttons[b_t2] = TRUE;
-		    else
-			button_region->overlap_buttons[b_t2] = FALSE;
-
-		    /* buttons' protruding glow length might be asymmetric */
-		    /* left of b_t2 or right of b_t2 */
-		    if ((d->button_region[b_t2].base_x1 > button_region->base_x1
-			 && d->button_region[b_t2].glow_x1 <= button_region->base_x2)
-		       || (d->button_region[b_t2].base_x1 < button_region->base_x1
-			 && d->button_region[b_t2].glow_x2 >= button_region->base_x1))
-			d->button_region[b_t2].overlap_buttons[b_t] = TRUE;
-		    else
-			d->button_region[b_t2].overlap_buttons[b_t] = FALSE;
-		}
+		                             ws->top_space +
+		                               ws->titlebar_height);
 	    }
-	}
-	else
-	{
-	    for (b_t = 0; b_t < B_T_COUNT; b_t++)
+	    else
 	    {
-		if (BUTTON_NOT_VISIBLE(d, b_t))
-		    continue;
-		get_button_pos(ws, b_t, d, y1, &x, &y);
-		button_region_t *button_region = &(d->button_region[b_t]);
-
-		button_region->base_x1 = x;
-		button_region->base_y1 = y;
-		button_region->base_x2 = x + ws->c_icon_size[b_t].w;
-		button_region->base_y2 = MIN(y + ws->c_icon_size[b_t].h,
-					     ws->top_space +
-					     ws->titlebar_height);
 		/* these coordinates still can mess things up */
 		button_region->glow_x1 = button_region->base_x1;
 		button_region->glow_y1 = button_region->base_y1;
@@ -1719,26 +1665,74 @@ static void update_button_regions(decor_t * d)
 		button_region->glow_y2 = button_region->base_y2;
 	    }
 	}
-    }
-    else
-    {
-	for (b_t = 0; b_t < B_T_COUNT; b_t++)
+	else
 	{
-	    if (BUTTON_NOT_VISIBLE(d, b_t))
-		continue;
-	    get_button_pos(ws, b_t, d, y1, &x, &y);
-	    button_region_t *button_region = &(d->button_region[b_t]);
-
-	    button_region->base_x1 = x;
-	    button_region->base_y1 = y;
 	    button_region->base_x2 = x + 16;
 	    button_region->base_y2 = y + 16;
 	}
     }
-    for (b_t = 0; b_t < B_T_COUNT; b_t++)
+
+    for (b_t = 0; b_t < B_T_COUNT; ++b_t)
+    {
+	button_region_t *button_region = &(d->button_region[b_t]);
+
+	if (BUTTON_NOT_VISIBLE(d, b_t))
+	    continue;
+
+	if (ws->use_pixmap_buttons &&
+	    ((d->active && ws->use_button_glow)||
+	     (!d->active && ws->use_button_inactive_glow)))
+	{
+	    /* update glow overlaps of each pair */
+	    for (b_t2 = 0; b_t2 < b_t; ++b_t2)
+	    {
+		/* coordinates for these b_t2's will be ready for b_t here */
+		if (BUTTON_NOT_VISIBLE(d, b_t2))
+		    continue;
+
+		/* right of b_t2 or left of b_t2 */
+		if ((button_region->base_x1 > d->button_region[b_t2].base_x1 &&
+		     button_region->glow_x1 <= d->button_region[b_t2].base_x2) ||
+		    (button_region->base_x1 < d->button_region[b_t2].base_x1 &&
+		     button_region->glow_x2 >= d->button_region[b_t2].base_x1))
+		{
+		    button_region->overlap_buttons[b_t2] = TRUE;
+		}
+		else
+		{
+		    button_region->overlap_buttons[b_t2] = FALSE;
+		}
+
+		/* buttons protruding glow length might be asymmetric
+		   left of b_t2 or right of b_t2 */
+		if ((d->button_region[b_t2].base_x1 > button_region->base_x1 &&
+		     d->button_region[b_t2].glow_x1 <= button_region->base_x2) ||
+		    (d->button_region[b_t2].base_x1 < button_region->base_x1 &&
+		     d->button_region[b_t2].glow_x2 >= button_region->base_x1))
+		{
+		    d->button_region[b_t2].overlap_buttons[b_t] = TRUE;
+		}
+		else
+		{
+		    d->button_region[b_t2].overlap_buttons[b_t] = FALSE;
+		}
+	    }
+	}
+    }
+
+    for (b_t = 0; b_t < B_T_COUNT; ++b_t)
     {
 	button_region_t *button_region = &(d->button_region[b_t]);
 	button_region_t *button_region_inact = &(d->button_region_inact[b_t]);
+
+	if (BUTTON_NOT_VISIBLE(d, b_t))
+	    continue;
+
+	if (button_region->bg_surface != NULL)
+	    cairo_surface_destroy(button_region->bg_surface);
+	button_region->bg_surface = NULL;
+	if (button_region_inact->bg_surface != NULL)
+	    cairo_surface_destroy(button_region_inact->bg_surface);
 
 	memcpy(button_region_inact, button_region, sizeof(button_region_t));
     }
