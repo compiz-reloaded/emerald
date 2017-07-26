@@ -1,20 +1,342 @@
-# translation of emerald-new.po to Russian
-#
+# Russian translation for emerald
+# Copyright (C) 2008 The Free Software Foundation, Inc.
+# This file is distributed under the same license as the emerald package.
 # Dimitriy Ryazantcev <DJm00n@mail.ru>, 2008.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: emerald-new\n"
-"Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
-"POT-Creation-Date: 2009-03-24 08:14+0100\n"
+"Project-Id-Version: emerald\n"
+"Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/emerald/issues\n"
+"POT-Creation-Date: 2017-05-04 19:29+0300\n"
 "PO-Revision-Date: 2009-03-10 21:19+0100\n"
 "Last-Translator: Denis Rakhmangulov <danfocus@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Pootle 1.1.0\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+msgid "Based on original gtk-window-decorator"
+msgstr "Базируется на оригинальном gtk-window-decorator"
+
+msgid "Round Top Left Corner"
+msgstr "Сглаживать верхний левый угол"
+
+msgid "Round Top Right Corner"
+msgstr "Сглаживать верхний правый угол"
+
+msgid "Round Bottom Left Corner"
+msgstr "Сглаживать нижний левый угол"
+
+msgid "Round Bottom Right Corner"
+msgstr "Сглаживать нижний правый угол"
+
+msgid "Rounding Radius"
+msgstr "Радиус сглаживания"
+
+msgid "Colors"
+msgstr "Цвета"
+
+msgid "Outer Frame Blend"
+msgstr "Мягкость внешней рамки"
+
+msgid "Inner Frame Blend"
+msgstr "Мягкость внутренней рамки"
+
+msgid "Outer Titlebar Blend"
+msgstr "Внешняя мягкость заголовка"
+
+msgid "Inner Titlebar Blend"
+msgstr "Внутренняя мягкость заголовка"
+
+msgid "Titlebar Separator"
+msgstr "Разделитель заголовка"
+
+msgid "Frame Outline"
+msgstr "Контур окна"
+
+msgid "Frame Highlight"
+msgstr "Подсветка окна"
+
+msgid "Frame Shadow"
+msgstr "Тень окна"
+
+msgid "Contents Outline"
+msgstr "Содержимое контура"
+
+msgid "Contents Highlight"
+msgstr "Содержимое подсветки"
+
+msgid "Contents Shadow"
+msgstr "Содержимое тени"
+
+msgid "Frame"
+msgstr "Окно"
+
+msgid "Based on original legacy"
+msgstr "Базируется на оригинальном старом"
+
+msgid "Title Bar"
+msgstr "Заголовок"
+
+msgid "Designed to be vista-ish in nature"
+msgstr "Разработано для подражания vista"
+
+msgid "Base"
+msgstr "База"
+
+msgid "Glow"
+msgstr "Подсветка"
+
+msgid "Sides"
+msgstr "Бока"
+
+msgid "Everything done with customizable pixmaps!"
+msgstr "Всё работает с настраиваемыми рисунками!"
+
+msgid "Top Rounding Radius"
+msgstr "Верхний радиус скругления"
+
+msgid "Bottom Rounding Radius"
+msgstr "Нижний радиус скругления"
+
+msgid "_Clear"
+msgstr "О_чистить"
+
+#. style: use tiled or scaled pixmaps
+msgid "Scaled"
+msgstr "Масштабируемый"
+
+msgid "Not adjustable"
+msgstr "Не настраиваемый"
+
+msgid "Same as Active"
+msgstr "Такой как активный"
+
+msgid "Pixmap"
+msgstr "Изображение"
+
+msgid "File"
+msgstr "Файл"
+
+msgid "Preview"
+msgstr "Предварительный просмотр"
+
+msgid "Clear"
+msgstr "Очистить"
+
+msgid "Tiled/Scaled"
+msgstr "Повторение/Масштаб"
+
+msgid "Width Override"
+msgstr "Переназначить ширину"
+
+msgid "Height Override"
+msgstr "Переназначить высоту"
+
+msgid "Glassy effects for your windows"
+msgstr "Эффект стекла для ваших окон"
+
+msgid "Glow Height"
+msgstr "Высота подсветки"
+
+msgid "Frame Base Color"
+msgstr "Основной цвет окна"
+
+msgid "Upper Titlebar Glow"
+msgstr "Верхнее свечение заголовка"
+
+msgid "Upper Glass Glow"
+msgstr "Верхнее свечение стекла"
+
+msgid "Lower Glass Glow"
+msgstr "Нижнее свечение стекла"
+
+msgid "Middle Glass Glow"
+msgstr "Среднее свечение стекла"
+
+msgid "Outer Glass Glow"
+msgstr "Внешнее свечение стекла"
+
+msgid "Multiple gradients with somewhat glassy features too"
+msgstr "Несколько градиентов, похожих по свойствам со стеклом"
+
+msgid "Left Blend"
+msgstr "Левый градиент"
+
+msgid "Middle Blend"
+msgstr "Средний градиент"
+
+msgid "Right Blend"
+msgstr "Правый градиент"
+
+msgid "Contrast"
+msgstr "Контрастность"
+
+msgid "(Color)"
+msgstr "(Цвет)"
+
+msgid "(Alpha)"
+msgstr "(Прозрачность)"
+
+msgid "Notch"
+msgstr "Вырез"
+
+msgid "Position"
+msgstr "Позиция"
+
+msgid "Curve"
+msgstr "Кривая"
+
+msgid "Offset"
+msgstr "Сдвиг"
+
+msgid "Use Glow"
+msgstr "Использовать свечение"
+
+msgid "Title Glow"
+msgstr "Свечение заголовка"
+
+msgid "Radius"
+msgstr "Радиус"
+
+msgid "Evolved from the legacy engine"
+msgstr "Развитие предыдущего движка"
+
+msgid "Border Gap"
+msgstr "Промежуток границы окна"
+
+msgid "Show Border when maximised?"
+msgstr "Показывать границу когда окно развёрнуто?"
+
+msgid "Show when minimised?"
+msgstr "Показывать когда свёрнуто?"
+
+msgid "Minimised Border Size"
+msgstr "Размер границы при минимизированном"
+
+msgid "Enable Left Bar Dip?"
+msgstr "Разрешить погружение левой полосы?"
+
+msgid "Left Bar Radius"
+msgstr "Радиус левой полосы"
+
+msgid "Enable Lower Bulge? (Useless at the moment, but will be used soon)"
+msgstr "Разрешить меньшую выпуклость? (Пока не работает, скоро будет)"
+
+msgid "Top Corner Offset (%)"
+msgstr "Сдвиг верхнего угла (%)"
+
+msgid "Enable Title Bar Dip?"
+msgstr "Разрешить погружение заголовка?"
+
+msgid "Enable Button Part?"
+msgstr "Разрешить часть кнопки?"
+
+msgid "Title Part Width"
+msgstr "Ширина части заголовка"
+
+msgid "Button Part Width)"
+msgstr "Ширина части кнопок)"
+
+msgid "Dip Corners Radius)"
+msgstr "Радиус погружения углов)"
+
+msgid "Round Inside Corners As well?"
+msgstr "Округлять также вокруг углов?"
+
+msgid "Enable Different Maximised Colors?"
+msgstr "Разрешить разные цвета максимизации?"
+
+msgid "Turn Off repeating gradients when maximised?"
+msgstr "Выключить повторение градиентов при развёрнутом?"
+
+msgid "Round Top Left Corner?"
+msgstr "Округлять верхний левый угол?"
+
+msgid "Frame Rounding Radius"
+msgstr "Радиус скругления углов"
+
+msgid "Titlebar Rounding Radius"
+msgstr "Радиус скругления заголовка"
+
+msgid "Repeat Gradient?"
+msgstr "Повторять градиент?"
+
+msgid "Vertical Repeat?"
+msgstr "Вертикальное повторение?"
+
+msgid "Diagonal Repeat?"
+msgstr "Диагональное повторение?"
+
+msgid "Repeat Frequency"
+msgstr "Частота повторений"
+
+#. ========================
+msgid "Enable Title Part Pixmap?"
+msgstr "Разрешить изображение части заголовка?"
+
+msgid "Repeat Title Part Pixmap?"
+msgstr "Повторять изображение части заголовка?"
+
+msgid "Title Bar Part Pixmap"
+msgstr "Изображение части заголовка"
+
+msgid "Choose Titlebar Part Pixmap"
+msgstr "Выбрать изображение части заголовка"
+
+#. ========================
+msgid "Enable Button Part Pixmap?"
+msgstr "Разрешить изображение части кнопок?"
+
+msgid "Repeat Button Part Pixmap?"
+msgstr "Повторять изображение части кнопок?"
+
+msgid "Button Part Pixmap"
+msgstr "Изображение части кнопок"
+
+msgid "Choose Button Part Pixmap"
+msgstr "Выбрать изображение части кнопок"
+
+#. ========================
+msgid "Enable Titlebar Pixmap?"
+msgstr "Разрешить изображение панели заголовка?"
+
+msgid "Repeat Titlebar Pixmap?"
+msgstr "Повторять изображение панели заголовка?"
+
+msgid "Titlebar Pixmap"
+msgstr "Изображение панели заголовка"
+
+msgid "Choose Titlebar Pixmap"
+msgstr "Выбрать изображение панели заголовка"
+
+msgid "Active/Inactive"
+msgstr "Включить/Выключить"
+
+msgid "Maximised"
+msgstr "Развёрнуто"
+
+msgid "Corners"
+msgstr "Углы"
+
+msgid "Border Layout"
+msgstr "Расположение границ"
+
+msgid "Left Bar"
+msgstr "Левая полоса"
+
+msgid "Pixmaps"
+msgstr "Изображения"
+
+msgid ""
+"Select\n"
+"Engine"
+msgstr ""
+"Выберите\n"
+"Движок"
 
 msgid "Close Window"
 msgstr "Закрыть окно"
@@ -52,6 +374,10 @@ msgstr "Закрепить окно"
 msgid "UnStick Window"
 msgstr "Открепить окно"
 
+#, fuzzy
+msgid "Super Maximize Window"
+msgstr "Развернуть окно"
+
 #, c-format
 msgid "The window \"%s\" is not responding."
 msgstr "Окно \"%s\" не отвечает."
@@ -60,6 +386,9 @@ msgid ""
 "Forcing this application to quit will cause you to lose any unsaved changes."
 msgstr ""
 "При принудительном завершении приложения теряются не сохранённые данные."
+
+msgid "_Cancel"
+msgstr "_Отмена"
 
 msgid "_Force Quit"
 msgstr "_Принудительно выйти"
@@ -183,18 +512,6 @@ msgstr "Изображения кнопок"
 msgid "Button"
 msgstr "Кнопка"
 
-msgid "File"
-msgstr "Файл"
-
-msgid "Preview"
-msgstr "Предварительный просмотр"
-
-msgid "Clear"
-msgstr "Очистить"
-
-msgid "Colors"
-msgstr "Цвета"
-
 msgid "Text Fill"
 msgstr "Заполнение текста"
 
@@ -212,9 +529,6 @@ msgstr "Цвет"
 
 msgid "Opacity"
 msgstr "Непрозрачность"
-
-msgid "Radius"
-msgstr "Радиус"
 
 msgid "X Offset"
 msgstr "Смещение по X"
@@ -237,6 +551,7 @@ msgstr "Горизонтальный сдвиг кнопок"
 msgid "Title-bar Object Layout"
 msgstr "Расположение объектов заголока"
 
+#, fuzzy
 msgid ""
 "Use colons to separate left, center, and right.\n"
 "Anything after a third colon is ignored.\n"
@@ -244,6 +559,7 @@ msgid ""
 "I=Icon, T=Title, H=Help, M=Menu\n"
 "S=Shade, U/A=On Top(Up/Above)\n"
 "Y=Sticky, (#)=# pixels space, ex: (5)\n"
+"F=SuperMaximize\n"
 msgstr ""
 "Используйте двоеточия для отделения\n"
 "левой части, центра и правой части.\n"
@@ -255,6 +571,9 @@ msgstr ""
 
 msgid "Export Theme..."
 msgstr "Экспортирование темы..."
+
+msgid "_Save"
+msgstr "Со_хранить"
 
 msgid "Name:"
 msgstr "Название:"
@@ -334,9 +653,6 @@ msgstr "Активное окно"
 msgid "Inactive Window"
 msgstr "Неактивное окно"
 
-msgid "Title Bar"
-msgstr "Заголовок"
-
 msgid "Screenshot"
 msgstr "Снимок экрана"
 
@@ -383,6 +699,10 @@ msgstr "Минимальная прозрачность пульсации %"
 msgid "Titlebar Double-Click Action"
 msgstr "Действие при двойном щелчке на заголовке"
 
+#, fuzzy
+msgid "Titlebar Middle-Click Action"
+msgstr "Действие при двойном щелчке на заголовке"
+
 msgid "Button Hover Cursor"
 msgstr "Курсор при наведении на кнопку"
 
@@ -425,52 +745,21 @@ msgstr "Изменить"
 msgid "Import Theme..."
 msgstr "Импортровать тему..."
 
+msgid "_Open"
+msgstr "_Открыть"
+
 msgid "Search:"
 msgstr "Поиск:"
 
-msgid "Fetching Themes"
-msgstr "Получение тем"
+msgid "_Refresh"
+msgstr "Об_новить"
 
-msgid ""
-"Fetching themes... \n"
-"This may take time depending on \n"
-"internet connection speed."
-msgstr ""
-"Получение тем... \n"
-"Это может занять некоторое время, \n"
-"в зависимости от скорости интернет."
+msgid "_Delete"
+msgstr "_Удалить"
 
-msgid ""
-"Here are the repositories that you can fetch Emerald Themes from. \n"
-"Fetching themes would fetch and import themes from SVN repositories \n"
-"You need Subversion package installed to use this feature."
-msgstr ""
-"Это список репозиториев, откуда вы можете получить темы Emerald.\n"
-"Получение тем происходит с помощью протокола SVN, \n"
-"Поэтому для использования требуется установленный пакет Subversion."
-
-msgid ""
-"This repository contains GPL'd themes that can be used under \n"
-"the terms of GNU GPL licence v2.0 or later \n"
-msgstr ""
-"Этот репозиторий хранит GPL темы, которые могут \n"
-"использоваться по лицензией GNU GPL v2.0 или новее \n"
-
-msgid ""
-"This repository contains non-GPL'd themes. They might infringe \n"
-"copyrights and patent laws in some countries."
-msgstr ""
-"Этот репозиторий хранит не GPL темы. Они могут нарушать \n"
-"патентные права в некоторых странах."
-
-msgid ""
-"To activate Non-GPL repository please run the following in shell and accept "
-"the server certificate permanently: \n"
-"svn ls https://svn.generation.no/emerald-themes."
-msgstr ""
-"Для активации Не-GPL репозитория запустите единоразово в консоли вот это и "
-"примите сертификат сервера: \n"
-"svn ls https://svn.generation.no/emerald-themes."
+#, fuzzy
+msgid "_Import..."
+msgstr "Экспорт..."
 
 msgid "Themes"
 msgstr "Темы"
@@ -484,301 +773,49 @@ msgstr "Настройки тем"
 msgid "Emerald Settings"
 msgstr "Настройки Emerald"
 
-msgid ""
-"Select\n"
-"Engine"
-msgstr ""
-"Выберите\n"
-"Движок"
-
-msgid "Based on original gtk-window-decorator"
-msgstr "Базируется на оригинальном gtk-window-decorator"
-
-msgid "Round Top Left Corner"
-msgstr "Сглаживать верхний левый угол"
-
-msgid "Round Top Right Corner"
-msgstr "Сглаживать верхний правый угол"
-
-msgid "Round Bottom Left Corner"
-msgstr "Сглаживать нижний левый угол"
-
-msgid "Round Bottom Right Corner"
-msgstr "Сглаживать нижний правый угол"
-
-msgid "Rounding Radius"
-msgstr "Радиус сглаживания"
-
-msgid "Outer Frame Blend"
-msgstr "Мягкость внешней рамки"
-
-msgid "Inner Frame Blend"
-msgstr "Мягкость внутренней рамки"
-
-msgid "Outer Titlebar Blend"
-msgstr "Внешняя мягкость заголовка"
-
-msgid "Inner Titlebar Blend"
-msgstr "Внутренняя мягкость заголовка"
-
-msgid "Titlebar Separator"
-msgstr "Разделитель заголовка"
-
-msgid "Frame Outline"
-msgstr "Контур окна"
-
-msgid "Frame Highlight"
-msgstr "Подсветка окна"
-
-msgid "Frame Shadow"
-msgstr "Тень окна"
-
-msgid "Contents Outline"
-msgstr "Содержимое контура"
-
-msgid "Contents Highlight"
-msgstr "Содержимое подсветки"
-
-msgid "Contents Shadow"
-msgstr "Содержимое тени"
-
-msgid "Frame"
-msgstr "Окно"
-
-msgid "Based on original legacy"
-msgstr "Базируется на оригинальном старом"
-
-msgid "Designed to be vista-ish in nature"
-msgstr "Разработано для подражания vista"
-
-msgid "Base"
-msgstr "База"
-
-msgid "Glow"
-msgstr "Подсветка"
-
-msgid "Sides"
-msgstr "Бока"
-
-msgid "Everything done with customizable pixmaps!"
-msgstr "Всё работает с настраиваемыми рисунками!"
-
-msgid "Top Rounding Radius"
-msgstr "Верхний радиус скругления"
-
-msgid "Bottom Rounding Radius"
-msgstr "Нижний радиус скругления"
-
-#. Style : Use Tiled or Scaled pixmaps
-msgid "Scaled"
-msgstr "Масштабируемый"
-
-msgid "Not adjustable"
-msgstr "Не настраиваемый"
-
-msgid "Same as Active"
-msgstr "Такой как активный"
-
-msgid "Pixmap"
-msgstr "Изображение"
-
-msgid "Tiled/Scaled"
-msgstr "Повторение/Масштаб"
-
-msgid "Width Override"
-msgstr "Переназначить ширину"
-
-msgid "Height Override"
-msgstr "Переназначить высоту"
-
-msgid "Glassy effects for your windows"
-msgstr "Эффект стекла для ваших окон"
-
-msgid "Glow Height"
-msgstr "Высота подсветки"
-
-msgid "Frame Base Color"
-msgstr "Основной цвет окна"
-
-msgid "Upper Titlebar Glow"
-msgstr "Верхнее свечение заголовка"
-
-msgid "Upper Glass Glow"
-msgstr "Верхнее свечение стекла"
-
-msgid "Lower Glass Glow"
-msgstr "Нижнее свечение стекла"
-
-msgid "Middle Glass Glow"
-msgstr "Среднее свечение стекла"
-
-msgid "Outer Glass Glow"
-msgstr "Внешнее свечение стекла"
-
-msgid "Multiple gradients with somewhat glassy features too"
-msgstr "Несколько градиентов, похожих по свойствам со стеклом"
-
-msgid "Left Blend"
-msgstr "Левый градиент"
-
-msgid "Middle Blend"
-msgstr "Средний градиент"
-
-msgid "Right Blend"
-msgstr "Правый градиент"
-
-msgid "Contrast"
-msgstr "Контрастность"
-
-msgid "(Color)"
-msgstr "(Цвет)"
-
-msgid "(Alpha)"
-msgstr "(Прозрачность)"
-
-msgid "Notch"
-msgstr "Вырез"
-
-msgid "Position"
-msgstr "Позиция"
-
-msgid "Curve"
-msgstr "Кривая"
-
-msgid "Offset"
-msgstr "Сдвиг"
-
-msgid "Use Glow"
-msgstr "Использовать свечение"
-
-msgid "Title Glow"
-msgstr "Свечение заголовка"
-
-msgid "Evolved from the legacy engine"
-msgstr "Развитие предыдущего движка"
-
-msgid "Border Gap"
-msgstr "Промежуток границы окна"
-
-msgid "Show Border when maximised?"
-msgstr "Показывать границу когда окно развёрнуто?"
-
-msgid "Show when minimised?"
-msgstr "Показывать когда свёрнуто?"
-
-msgid "Minimised Border Size"
-msgstr "Размер границы при минимизированном"
-
-msgid "Enable Left Bar Dip?"
-msgstr "Разрешить погружение левой полосы?"
-
-msgid "Left Bar Radius"
-msgstr "Радиус левой полосы"
-
-msgid "Enable Lower Bulge? (Useless at the moment, but will be used soon)"
-msgstr "Разрешить меньшую выпуклость? (Пока не работает, скоро будет)"
-
-msgid "Top Corner Offset (%)"
-msgstr "Сдвиг верхнего угла (%)"
-
-msgid "Enable Title Bar Dip?"
-msgstr "Разрешить погружение заголовка?"
-
-msgid "Enable Button Part?"
-msgstr "Разрешить часть кнопки?"
-
-msgid "Title Part Width"
-msgstr "Ширина части заголовка"
-
-msgid "Button Part Width)"
-msgstr "Ширина части кнопок)"
-
-msgid "Dip Corners Radius)"
-msgstr "Радиус погружения углов)"
-
-msgid "Round Inside Corners As well?"
-msgstr "Округлять также вокруг углов?"
-
-msgid "Enable Different Maximised Colors?"
-msgstr "Разрешить разные цвета максимизации?"
-
-msgid "Turn Off repeating gradients when maximised?"
-msgstr "Выключить повторение градиентов при развёрнутом?"
-
-msgid "Round Top Left Corner?"
-msgstr "Округлять верхний левый угол?"
-
-msgid "Frame Rounding Radius"
-msgstr "Радиус скругления углов"
-
-msgid "Titlebar Rounding Radius"
-msgstr "Радиус скругления заголовка"
-
-msgid "Repeat Gradient?"
-msgstr "Повторять градиент?"
-
-msgid "Vertical Repeat?"
-msgstr "Вертикальное повторение?"
-
-msgid "Diagonal Repeat?"
-msgstr "Диагональное повторение?"
-
-msgid "Repeat Frequency"
-msgstr "Частота повторений"
-
-#. /////////////////////
-msgid "Enable Title Part Pixmap?"
-msgstr "Разрешить изображение части заголовка?"
-
-msgid "Repeat Title Part Pixmap?"
-msgstr "Повторять изображение части заголовка?"
-
-msgid "Title Bar Part Pixmap"
-msgstr "Изображение части заголовка"
-
-msgid "Choose Titlebar Part Pixmap"
-msgstr "Выбрать изображение части заголовка"
-
-#. /////////////////////////
-msgid "Enable Button Part Pixmap?"
-msgstr "Разрешить изображение части кнопок?"
-
-msgid "Repeat Button Part Pixmap?"
-msgstr "Повторять изображение части кнопок?"
-
-msgid "Button Part Pixmap"
-msgstr "Изображение части кнопок"
-
-msgid "Choose Button Part Pixmap"
-msgstr "Выбрать изображение части кнопок"
-
-#. /////////////////////////
-msgid "Enable Titlebar Pixmap?"
-msgstr "Разрешить изображение панели заголовка?"
-
-msgid "Repeat Titlebar Pixmap?"
-msgstr "Повторять изображение панели заголовка?"
-
-msgid "Titlebar Pixmap"
-msgstr "Изображение панели заголовка"
-
-msgid "Choose Titlebar Pixmap"
-msgstr "Выбрать изображение панели заголовка"
-
-msgid "Active/Inactive"
-msgstr "Включить/Выключить"
-
-msgid "Maximised"
-msgstr "Развёрнуто"
-
-msgid "Corners"
-msgstr "Углы"
-
-msgid "Border Layout"
-msgstr "Расположение границ"
-
-msgid "Left Bar"
-msgstr "Левая полоса"
-
-msgid "Pixmaps"
-msgstr "Изображения"
+msgid "_Quit"
+msgstr "В_ыйти"
+
+#~ msgid "Fetching Themes"
+#~ msgstr "Получение тем"
+
+#~ msgid ""
+#~ "Fetching themes... \n"
+#~ "This may take time depending on \n"
+#~ "internet connection speed."
+#~ msgstr ""
+#~ "Получение тем... \n"
+#~ "Это может занять некоторое время, \n"
+#~ "в зависимости от скорости интернет."
+
+#~ msgid ""
+#~ "Here are the repositories that you can fetch Emerald Themes from. \n"
+#~ "Fetching themes would fetch and import themes from SVN repositories \n"
+#~ "You need Subversion package installed to use this feature."
+#~ msgstr ""
+#~ "Это список репозиториев, откуда вы можете получить темы Emerald.\n"
+#~ "Получение тем происходит с помощью протокола SVN, \n"
+#~ "Поэтому для использования требуется установленный пакет Subversion."
+
+#~ msgid ""
+#~ "This repository contains GPL'd themes that can be used under \n"
+#~ "the terms of GNU GPL licence v2.0 or later \n"
+#~ msgstr ""
+#~ "Этот репозиторий хранит GPL темы, которые могут \n"
+#~ "использоваться по лицензией GNU GPL v2.0 или новее \n"
+
+#~ msgid ""
+#~ "This repository contains non-GPL'd themes. They might infringe \n"
+#~ "copyrights and patent laws in some countries."
+#~ msgstr ""
+#~ "Этот репозиторий хранит не GPL темы. Они могут нарушать \n"
+#~ "патентные права в некоторых странах."
+
+#~ msgid ""
+#~ "To activate Non-GPL repository please run the following in shell and "
+#~ "accept the server certificate permanently: \n"
+#~ "svn ls https://svn.generation.no/emerald-themes."
+#~ msgstr ""
+#~ "Для активации Не-GPL репозитория запустите единоразово в консоли вот это "
+#~ "и примите сертификат сервера: \n"
+#~ "svn ls https://svn.generation.no/emerald-themes."

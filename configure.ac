@@ -1,6 +1,6 @@
 AC_PREREQ(2.57)
 
-AC_INIT([emerald],[0.8.13], [chat-to-me@raveit.de])
+AC_INIT([emerald],[0.8.15], [chat-to-me@raveit.de])
 
 AM_INIT_AUTOMAKE([1.9 foreign tar-ustar dist-xz no-dist-gzip check-news])
 AC_CONFIG_HEADER([config.h])
@@ -12,7 +12,6 @@ LT_INIT
 AC_HEADER_STDC
 IT_PROG_INTLTOOL([0.35.0])
 AC_CONFIG_MACRO_DIR([m4])
-AC_SUBST(ALL_LINGUAS)
 AM_GNU_GETTEXT([external])
 AM_GNU_GETTEXT_VERSION([0.17])
 GETTEXT_PACKAGE=emerald
@@ -35,6 +34,14 @@ fi
 export PKG_CONFIG_PATH
 AC_SUBST(PKG_CONFIG_PATH)
 AC_MSG_NOTICE([Using PKG_CONFIG_PATH=$PKG_CONFIG_PATH])
+
+AC_CHECK_HEADER([X11/extensions/XInput2.h],
+		 [have_xinput2=yes], [have_xinput2=no])
+
+if test "$have_xinput2" = yes; then
+  AC_DEFINE(HAVE_XINPUT2, 1,
+	    [Define to 1 if xinput2 is available])
+fi
 
 AC_MSG_CHECKING([which gtk+ version to compile against])
 AC_ARG_WITH([gtk],
@@ -60,44 +67,47 @@ case "$with_gtk" in
        ;;
 esac
 
-EMERALD_REQUIRES=" xrender >= 0.8.4				  \
-		    gtk+-$GTK_API_VERSION >= $GTK_MIN_VERSION	   \
-		    libwnck-$WNCK_API_VERSION >= $WNCK_MIN_VERSION \
-		    libdecoration				   \
-		    cairo >= 1.4				   \
-		    pangocairo"
+AC_SUBST([GTK_API_VERSION])
 
-PKG_CHECK_MODULES(EMERALD, $EMERALD_REQUIRES)
+EMERALD_REQUIRES="gtk+-$GTK_API_VERSION >= $GTK_MIN_VERSION libwnck-$WNCK_API_VERSION >= $WNCK_MIN_VERSION libdecoration cairo >= 1.4 pangocairo xrender >= 0.8.4 xi"
 
-AC_SUBST(EMERALD_REQUIRES)
+PKG_CHECK_MODULES(EMERALD, [$EMERALD_REQUIRES])
+
+AC_SUBST([EMERALD_REQUIRES])
+LIBS="$LIBS -lm -ldl"
+
+
+save_CFLAGS="$CFLAGS"
+save_LIBS="$LIBS"
 CFLAGS="$CFLAGS $EMERALD_CFLAGS"
 LIBS="$LIBS $EMERALD_LIBS -lm -ldl"
-AC_CHECK_FUNCS(wnck_window_has_name)
-
-AC_RUN_IFELSE([
-  AC_LANG_SOURCE(
+AC_RUN_IFELSE(
+  [AC_LANG_PROGRAM(
     [
 #include <stdio.h>
 #include <decoration.h>
-int main() {
-    FILE *f = fopen("decor_ver.out", "w");
-    if (!f)
-        return 1;
-    fprintf(f, "%d\n", decor_version());
-    fclose(f);
-    return 0;
+    ], [
+FILE *f = fopen("decor_ver.out", "w");
+if (f == NULL) {
+    return 1;
 }
+fprintf(f, "%d\n", decor_version());
+fclose(f);
     ]
   )],
   [
-    AC_DEFINE_UNQUOTED(DECOR_INTERFACE_VERSION, `cat decor_ver.out`, [Decorator interface version])
-    AC_MSG_NOTICE([Using decorator interface version `cat decor_ver.out`])
+    decor_ver=`cat decor_ver.out`
+    AC_DEFINE_UNQUOTED(DECOR_INTERFACE_VERSION, ${decor_ver}, [Decorator interface version])
+    AC_MSG_NOTICE([Using decorator interface version ${decor_ver}])
   ],
   [
     AC_DEFINE(DECOR_INTERFACE_VERSION, 0, [Decorator interface version])
-    AC_MSG_NOTICE([Using undefined decorator interface version])
+    AC_MSG_ERROR([Failed to check the decorator interface version])
   ]
 )
+CFLAGS="$save_CFLAGS"
+LIBS="$save_LIBS"
+
 
 AC_ARG_ENABLE(mime-update,
 [  --enable-mime-update],

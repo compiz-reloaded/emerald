@@ -1,20 +1,343 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Gujarati translation for emerald
+# Copyright (C) 2007 The Free Software Foundation, Inc.
+# This file is distributed under the same license as the emerald package.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: emerald\n"
-"Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
-"POT-Creation-Date: 2009-03-24 08:14+0100\n"
+"Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/emerald/issues\n"
+"POT-Creation-Date: 2017-05-04 19:28+0300\n"
 "PO-Revision-Date: 2007-12-17 12:26+0530\n"
 "Last-Translator: \n"
 "Language-Team: gist gujarati team <info.gist@cdac.in>\n"
+"Language: gu\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Pootle 1.0.2\n"
+
+msgid "Based on original gtk-window-decorator"
+msgstr "અસલ gtk(જિનોમ)-ચોકઠુ-શણગારક  આધારિત"
+
+msgid "Round Top Left Corner"
+msgstr "ઉપરી ડાબા ખુણા ને ગોળ કરવો"
+
+msgid "Round Top Right Corner"
+msgstr "ઉપરી જમાણા ખુણા ને ગોળ કરવો"
+
+msgid "Round Bottom Left Corner"
+msgstr "તળીયા ના ડાબા ખુણા ને ગોળ કરવો"
+
+msgid "Round Bottom Right Corner"
+msgstr "તળીયા ના જમણા ખુણા ને ગોળ કરવો"
+
+msgid "Rounding Radius"
+msgstr "ગોળાઇ ની ત્રિજ્યા/ત્રિજયાા ની સંખ્યાા ને પુર્ણ કરવી "
+
+msgid "Colors"
+msgstr "રંગો"
+
+msgid "Outer Frame Blend"
+msgstr "બહારી માળાખા નો ભાગ"
+
+msgid "Inner Frame Blend"
+msgstr "આંતરિક માળખા ના ભાગ"
+
+msgid "Outer Titlebar Blend"
+msgstr "બહારી મથાળાપટ્ટી નો ભાગ"
+
+msgid "Inner Titlebar Blend"
+msgstr "આંતરિક મથાળાપટ્ટી ના ભાગ"
+
+msgid "Titlebar Separator"
+msgstr "મથાળાપટ્ટી વિભાજક"
+
+msgid "Frame Outline"
+msgstr "માળખા/ચોકઠા સિમારેખા"
+
+msgid "Frame Highlight"
+msgstr "માળખા/ચોકઠા ની રૂપરેખાા"
+
+msgid "Frame Shadow"
+msgstr "માળખા/ચોકઠા ની ઝાંખી"
+
+msgid "Contents Outline"
+msgstr " સમાવેલ મુદ્દા ની સંક્ષિપ્ત ઝલક"
+
+msgid "Contents Highlight"
+msgstr " સમાવેલ મુદ્દા ની રૂપરેખા"
+
+msgid "Contents Shadow"
+msgstr "સમાવેલ મુદ્દા ની ઝાંખી "
+
+msgid "Frame"
+msgstr "માળખુ/ચોકઠુ"
+
+#, fuzzy
+msgid "Based on original legacy"
+msgstr "અસલ gnome(જિનોમ)-ચોકઠુ-શણગારક  આધારિત"
+
+msgid "Title Bar"
+msgstr "મથાળા પટ્ટી"
+
+msgid "Designed to be vista-ish in nature"
+msgstr "વધુ સુંદર/સુઘડ (vista-ish) બનાવનુ સ્વભાવિક આયોજન "
+
+msgid "Base"
+msgstr "પાયો/મૂળ/આધાર"
+
+msgid "Glow"
+msgstr "તેજસ્વિતા/તેજ"
+
+msgid "Sides"
+msgstr "બાજુઓ"
+
+msgid "Everything done with customizable pixmaps!"
+msgstr "બધા જ  કાર્ય આગવા ચિત્ર સાથે થયેલ છે!"
+
+msgid "Top Rounding Radius"
+msgstr "ગોળાઇ ની ત્રિજ્યા"
+
+msgid "Bottom Rounding Radius"
+msgstr "તળીયા ની ગોળાઇ ની ત્રિજ્યા "
+
+msgid "_Clear"
+msgstr "સાફ કરો (_C)"
+
+#. style: use tiled or scaled pixmaps
+msgid "Scaled"
+msgstr "પ્રમાણિત"
+
+msgid "Not adjustable"
+msgstr "ગોઠવી ન શકાય તેવુ "
+
+msgid "Same as Active"
+msgstr "કાાર્યરત જેવુ"
+
+msgid "Pixmap"
+msgstr "ચિત્ર"
+
+msgid "File"
+msgstr "પોથી(ફાઇલ)"
+
+msgid "Preview"
+msgstr "પૂર્વદર્શન"
+
+msgid "Clear"
+msgstr "સાફ/સ્વચ્છ"
+
+msgid "Tiled/Scaled"
+msgstr "આધારીત/પ્રમાણિત"
+
+msgid "Width Override"
+msgstr "પહોળાઇ  ઉપરાછાપરી"
+
+msgid "Height Override"
+msgstr "માપ થી વધુ"
+
+msgid "Glassy effects for your windows"
+msgstr "ચોકઠા/માાહિતિ દ્વાર (Window) માાટે  પારદર્શીત અસરો"
+
+msgid "Glow Height"
+msgstr "તેજસ્વિતા નુ માપ"
+
+msgid "Frame Base Color"
+msgstr "માળખા/ચોકઠા આધારિત રંગ"
+
+msgid "Upper Titlebar Glow"
+msgstr "ઉપરી મથાળપટ્ટી નુ તેજ"
+
+msgid "Upper Glass Glow"
+msgstr "ઉપર ના કાચ નુ તેજ"
+
+msgid "Lower Glass Glow"
+msgstr "નિમ્ન કાચ નુ તેજ"
+
+msgid "Middle Glass Glow"
+msgstr "મધ્ય ભાગ નાા કાાચ નુ તેજ"
+
+msgid "Outer Glass Glow"
+msgstr "બહારી કાચ નુ તેજ"
+
+msgid "Multiple gradients with somewhat glassy features too"
+msgstr "વિવિધ કોણો નો પારદર્શીત લાક્ષણિકતા સાથે નો દેખાવ "
+
+msgid "Left Blend"
+msgstr "ડાબી બાજુ નો ભાાગ"
+
+msgid "Middle Blend"
+msgstr "મધ્ય ભાગ"
+
+msgid "Right Blend"
+msgstr "જ્મણી બાજુ નો ભાગ"
+
+msgid "Contrast"
+msgstr "તફાવત"
+
+msgid "(Color)"
+msgstr "(રંગ)"
+
+msgid "(Alpha)"
+msgstr "(ક/આલ્ફા)"
+
+msgid "Notch"
+msgstr "કાપ"
+
+msgid "Position"
+msgstr "સ્થિતિ"
+
+msgid "Curve"
+msgstr "વળાંક"
+
+msgid "Offset"
+msgstr "ઉભુ અંતર"
+
+msgid "Use Glow"
+msgstr "તેજ રાખવુ"
+
+msgid "Title Glow"
+msgstr "મથાળા ની ચમક"
+
+msgid "Radius"
+msgstr "ત્રિજ્યાા"
+
+msgid "Evolved from the legacy engine"
+msgstr "નિયમ અનુસાર યંત્ર થી બનેલુ "
+
+msgid "Border Gap"
+msgstr "ધારો વચ્ચે નુ અંતર"
+
+msgid "Show Border when maximised?"
+msgstr "જ્યારે મહત્તમ હોય ત્યારે ધાર બતાવવી?"
+
+msgid "Show when minimised?"
+msgstr "જ્યારે લઘુત્તમ હોય ત્યારે બતાવવી કે બતાવવુ?"
+
+msgid "Minimised Border Size"
+msgstr "લઘુત્તમ ધાર નુ માાપ"
+
+msgid "Enable Left Bar Dip?"
+msgstr "ડાબી પટ્ટી ને છેક સુધી કાર્યરત કરવી છે?"
+
+msgid "Left Bar Radius"
+msgstr "ડાબી બાજુ ની પટ્ટી ત્રિજ્યાા"
+
+msgid "Enable Lower Bulge? (Useless at the moment, but will be used soon)"
+msgstr ""
+"નિમ્ન નિષ્કાષ (Lower Bulge) કાર્યરત કરવુ છે? (હાલ મા બિન ઉપયોગી છે, પણ ત્વરીત "
+"ઉપયોગી થશે)"
+
+msgid "Top Corner Offset (%)"
+msgstr "ટોચ ના ખુણા ના ઉભુ અંતર (%)"
+
+msgid "Enable Title Bar Dip?"
+msgstr "મથાળાપટ્ટી ને છેક સુધી કાર્યરત કરવી છે?"
+
+msgid "Enable Button Part?"
+msgstr "બટન નો ભાગ કાર્યરત કરવો છે?"
+
+msgid "Title Part Width"
+msgstr "મથાળા ના ભાગ ની પહોળાઇ"
+
+#, fuzzy
+msgid "Button Part Width)"
+msgstr "બટન ભાગ ની પહોળાઇ"
+
+msgid "Dip Corners Radius)"
+msgstr "ખૂણાઓ ના ઉંડાણ ની  ત્રિજ્યા)"
+
+msgid "Round Inside Corners As well?"
+msgstr "તે જ રીતે તળીયા ના આંતરિક ખુણાઓ ને ગોળ કરવા ?"
+
+msgid "Enable Different Maximised Colors?"
+msgstr "વિવધ રંગો ને પુષ્ક્ળ ઘેરા/ગાઢા કરવા છે?"
+
+msgid "Turn Off repeating gradients when maximised?"
+msgstr "જ્યાારે મહત્તમ હોય ત્યારે, કોણ પુનરાવર્તન બંધ કરવુ? "
+
+msgid "Round Top Left Corner?"
+msgstr "ઉપરી ડાબા ખુણા ને ગોળ કરવો છે?"
+
+msgid "Frame Rounding Radius"
+msgstr "માળખા/ચોકઠા ના ગોળાઇ ની ત્રિજ્યા "
+
+msgid "Titlebar Rounding Radius"
+msgstr "મથાળાપટ્ટી ગોળાઇ ની ત્રિજ્યા"
+
+msgid "Repeat Gradient?"
+msgstr "ખુણો ના માપ નુ પુનરાવર્તન?"
+
+msgid "Vertical Repeat?"
+msgstr "ઉભુ પુનરાવર્તન?"
+
+msgid "Diagonal Repeat?"
+msgstr "ખૂણે-ખૂણે થી ફરી જોડાણ ?"
+
+msgid "Repeat Frequency"
+msgstr "પુનરાવૃત્તિ"
+
+#. ========================
+msgid "Enable Title Part Pixmap?"
+msgstr "મથાળા નો ચિત્ર ભાગ કાર્યરત કરવો છે?"
+
+msgid "Repeat Title Part Pixmap?"
+msgstr "મથાળા ભાગ ના ચિત્ર નુ પુનરાવર્તન? "
+
+msgid "Title Bar Part Pixmap"
+msgstr "મથાળા પટ્ટી નો ચિત્ર ભાગ"
+
+msgid "Choose Titlebar Part Pixmap"
+msgstr " મથાળાપટ્ટી  ના ચિત્ર ભાગ ની પસંદગી"
+
+#. ========================
+msgid "Enable Button Part Pixmap?"
+msgstr "બટન નો ચિત્ર ભાગ કાર્યરત કરવુ છે?"
+
+msgid "Repeat Button Part Pixmap?"
+msgstr "બટન ચિત્ર ભાગ નુ પુન: ઉપયોગ ?"
+
+msgid "Button Part Pixmap"
+msgstr "બટન ચિત્ર ભાગ "
+
+msgid "Choose Button Part Pixmap"
+msgstr "બટન ચિત્ર ભાગ ની પસંદગી"
+
+#. ========================
+msgid "Enable Titlebar Pixmap?"
+msgstr "મથાળાપટ્ટી નો ચિત્ર ભાગ કાર્યરત કરવો છે?"
+
+msgid "Repeat Titlebar Pixmap?"
+msgstr "મથાળાપટ્ટી ના ચિત્ર નુ પુનરાવર્તન?"
+
+msgid "Titlebar Pixmap"
+msgstr "મથાળાપટ્ટી નુ ચિત્ર"
+
+msgid "Choose Titlebar Pixmap"
+msgstr "મથાળાપટ્ટી  ના ચિત્ર ની પસંદગી"
+
+msgid "Active/Inactive"
+msgstr "કાર્યરત/બિનકાર્યરત "
+
+msgid "Maximised"
+msgstr "મહત્તમ"
+
+msgid "Corners"
+msgstr "ખૂણાાોાાાોોોોાાાૌ"
+
+msgid "Border Layout"
+msgstr "ધાર ની ગોઠવણ"
+
+msgid "Left Bar"
+msgstr "ડાબી બાજુ ની પટ્ટી"
+
+msgid "Pixmaps"
+msgstr "ચિત્રો"
+
+msgid ""
+"Select\n"
+"Engine"
+msgstr ""
+"એંજીન\n"
+"પસંદ કરો"
 
 msgid "Close Window"
 msgstr "માાહિતિદ્વાર(Window) બંધ કરવુ"
@@ -52,6 +375,10 @@ msgstr "સ્થાયી માાહિતિદ્વાર(Window)"
 msgid "UnStick Window"
 msgstr "અસ્થાયી માાહિતિદ્વાર(Window)"
 
+#, fuzzy
+msgid "Super Maximize Window"
+msgstr "માાહિતિદ્વાર(Window) મહત્તમ કરવુ"
+
 #, c-format
 msgid "The window \"%s\" is not responding."
 msgstr "આ બારી %s\" જ્વાબ્ નથી આપ્તી"
@@ -61,6 +388,9 @@ msgid ""
 msgstr ""
 "આ કાર્યક્રમને બહાર નીકળવા માટે દબાણ કરવાનું તમને કોઈપણ અસંગ્રહિત ફેરપારો નષ્ટ કરવાનું "
 "કારણ બનશે."
+
+msgid "_Cancel"
+msgstr "રદ કરો (_C)"
 
 msgid "_Force Quit"
 msgstr "જબરદસ્તી બહાર કાઢો (_F)"
@@ -186,18 +516,6 @@ msgstr "બટન નુ ચિત્ર"
 msgid "Button"
 msgstr "ચાંપ/બટન/સ્વિચ "
 
-msgid "File"
-msgstr "પોથી(ફાઇલ)"
-
-msgid "Preview"
-msgstr "પૂર્વદર્શન"
-
-msgid "Clear"
-msgstr "સાફ/સ્વચ્છ"
-
-msgid "Colors"
-msgstr "રંગો"
-
 msgid "Text Fill"
 msgstr "અક્ષર ભરણી"
 
@@ -215,9 +533,6 @@ msgstr "રંગ"
 
 msgid "Opacity"
 msgstr "અપારદર્શકતા"
-
-msgid "Radius"
-msgstr "ત્રિજ્યાા"
 
 msgid "X Offset"
 msgstr "X આડુ અંતર"
@@ -240,6 +555,7 @@ msgstr "બટન નુ ઉભે થી ઉપર નુ અંતર "
 msgid "Title-bar Object Layout"
 msgstr "મથાળાપટ્ટી ની વસ્તુ ની ગોઠવણ "
 
+#, fuzzy
 msgid ""
 "Use colons to separate left, center, and right.\n"
 "Anything after a third colon is ignored.\n"
@@ -247,6 +563,7 @@ msgid ""
 "I=Icon, T=Title, H=Help, M=Menu\n"
 "S=Shade, U/A=On Top(Up/Above)\n"
 "Y=Sticky, (#)=# pixels space, ex: (5)\n"
+"F=SuperMaximize\n"
 msgstr ""
 "ડાબું, વચ્ચેનું અને જમણું અલગ કરવા માટે કોલોન વાપરો.\n"
 "ત્રીજા કોલોન પછીનું કંઈપણ અવગણવામાં આવે છે.\n"
@@ -257,6 +574,9 @@ msgstr ""
 
 msgid "Export Theme..."
 msgstr "વિષય આધારિત સાજ-સજ્જાઓ (Theme) ... ની નિકાસ"
+
+msgid "_Save"
+msgstr "સંગ્રહ કરો (_S)"
 
 msgid "Name:"
 msgstr "નામ:"
@@ -335,9 +655,6 @@ msgstr "કાર્યરત ચોકઠુ/માાહિતિ દ્વા
 msgid "Inactive Window"
 msgstr "બિનકાર્યરત ચોકઠુ/માાહિતિ દ્વાર (Window)"
 
-msgid "Title Bar"
-msgstr "મથાળા પટ્ટી"
-
 msgid "Screenshot"
 msgstr "પડદા ની છાપ(ફોટો)"
 
@@ -360,6 +677,9 @@ msgstr "બટન વિષે ની માહિતિ બતાવો"
 msgid "Use Decoration Cropping"
 msgstr "કાપવાનું શણગારવાનું વાપરો"
 
+msgid "No Shade on Titlebar Scroll"
+msgstr ""
+
 msgid "Use Button Fade"
 msgstr "બટન વિસર્જન રાખવુ "
 
@@ -379,6 +699,10 @@ msgid "Button Pulse Min Opacity %"
 msgstr "બટન ની ધારા ની ન્યુનતમ દૃશ્યાતા %"
 
 msgid "Titlebar Double-Click Action"
+msgstr "મથાળાપટ્ટી પર બે વાાર દબાાવવા(Click) થી થતી ક્રિયાા "
+
+#, fuzzy
+msgid "Titlebar Middle-Click Action"
 msgstr "મથાળાપટ્ટી પર બે વાાર દબાાવવા(Click) થી થતી ક્રિયાા "
 
 msgid "Button Hover Cursor"
@@ -424,52 +748,21 @@ msgstr "સુધારો-વધારો"
 msgid "Import Theme..."
 msgstr "વિષય આધારિત સાજ-સજ્જાઓ (Theme) ... ની આયાત"
 
+msgid "_Open"
+msgstr "ખોલો (_O)"
+
 msgid "Search:"
 msgstr "શોધ/ખોજ"
 
-msgid "Fetching Themes"
-msgstr "થીમો મેળવી રહ્યા છીએ"
+msgid "_Refresh"
+msgstr "ફરી તાજુ કરો (_R)"
 
-msgid ""
-"Fetching themes... \n"
-"This may take time depending on \n"
-"internet connection speed."
-msgstr ""
-"તીમો મેળવી રહ્યા છીએ...\n"
-"આ તમારા ઈન્ટરનેટ જોડાણની ઝડપ પર આધાર રાખીને \n"
-"થોડો સમય લેશે."
+msgid "_Delete"
+msgstr "કાઢી નાંખો (_D)"
 
-msgid ""
-"Here are the repositories that you can fetch Emerald Themes from. \n"
-"Fetching themes would fetch and import themes from SVN repositories \n"
-"You need Subversion package installed to use this feature."
-msgstr ""
-"અંહિ રીપોઝીટરીઓ છે કે જેમાંથી તમે Emerald થીમો મેળવી શકો. \n"
-"થીમો મેળવવાનું SVN રીપોઝીટરીઓમાંથી થીમો મેળવશે અને આયાત કરશે \n"
-"આ લક્ષણ વાપરવા માટે તમારી પાસે Subversion પેકેજ સ્થાપિત થયેલ હોવું જરૂરી છે."
-
-msgid ""
-"This repository contains GPL'd themes that can be used under \n"
-"the terms of GNU GPL licence v2.0 or later \n"
-msgstr ""
-"આ રીપોઝીટરી GPL વાળી થીમો સમાવે છે કે જે \n"
-"GNU GPL licence v2.0 અથવા પછીની શરતો હેઠળ વાપરી શકાય છે \n"
-
-msgid ""
-"This repository contains non-GPL'd themes. They might infringe \n"
-"copyrights and patent laws in some countries."
-msgstr ""
-"આ રીપોઝીટરી બિન-GPL વાળી થીમો સમાવે છે. તેઓ કોપીરાઈટ અને \n"
-"પેટન્ટના નિયમોનો અમુક દેશોમાં ભંગ કરે છે."
-
-msgid ""
-"To activate Non-GPL repository please run the following in shell and accept "
-"the server certificate permanently: \n"
-"svn ls https://svn.generation.no/emerald-themes."
-msgstr ""
-"બિન-GPL રીપોઝીટરી સક્રિય કરવા માટે મહેરબાની કરીને નીચેનું શેલ ચલાવો અને સર્વર પ્રમાણપત્ર "
-"કાયમમાટે સ્વીકારો: \n"
-"svn ls https://svn.generation.no/emerald-themes."
+#, fuzzy
+msgid "_Import..."
+msgstr "નિકાસ..."
 
 msgid "Themes"
 msgstr "વિષય આધારિત સાજ-સજ્જાઓ (Themes)"
@@ -485,308 +778,52 @@ msgstr "એમરલ્ડ(Emerald) ગોઠવણીોોોોોાાા�
 msgid "Emerald Settings"
 msgstr "એમરલ્ડ(Emerald) ગોઠવણીોોોોોાાાાાાાોોોોોોાાાોોાોોાાાાાાાાાાઓ "
 
-msgid ""
-"Select\n"
-"Engine"
-msgstr ""
-"એંજીન\n"
-"પસંદ કરો"
-
-msgid "Based on original gtk-window-decorator"
-msgstr "અસલ gnome(જિનોમ)-ચોકઠુ-શણગારક  આધારિત"
-
-msgid "Round Top Left Corner"
-msgstr "ઉપરી ડાબા ખુણા ને ગોળ કરવો"
-
-msgid "Round Top Right Corner"
-msgstr "ઉપરી જમાણા ખુણા ને ગોળ કરવો"
-
-msgid "Round Bottom Left Corner"
-msgstr "તળીયા ના ડાબા ખુણા ને ગોળ કરવો"
-
-msgid "Round Bottom Right Corner"
-msgstr "તળીયા ના જમણા ખુણા ને ગોળ કરવો"
-
-msgid "Rounding Radius"
-msgstr "ગોળાઇ ની ત્રિજ્યા/ત્રિજયાા ની સંખ્યાા ને પુર્ણ કરવી "
-
-msgid "Outer Frame Blend"
-msgstr "બહારી માળાખા નો ભાગ"
-
-msgid "Inner Frame Blend"
-msgstr "આંતરિક માળખા ના ભાગ"
-
-msgid "Outer Titlebar Blend"
-msgstr "બહારી મથાળાપટ્ટી નો ભાગ"
-
-msgid "Inner Titlebar Blend"
-msgstr "આંતરિક મથાળાપટ્ટી ના ભાગ"
-
-msgid "Titlebar Separator"
-msgstr "મથાળાપટ્ટી વિભાજક"
-
-msgid "Frame Outline"
-msgstr "માળખા/ચોકઠા સિમારેખા"
-
-msgid "Frame Highlight"
-msgstr "માળખા/ચોકઠા ની રૂપરેખાા"
-
-msgid "Frame Shadow"
-msgstr "માળખા/ચોકઠા ની ઝાંખી"
-
-msgid "Contents Outline"
-msgstr " સમાવેલ મુદ્દા ની સંક્ષિપ્ત ઝલક"
-
-msgid "Contents Highlight"
-msgstr " સમાવેલ મુદ્દા ની રૂપરેખા"
-
-msgid "Contents Shadow"
-msgstr "સમાવેલ મુદ્દા ની ઝાંખી "
-
-msgid "Frame"
-msgstr "માળખુ/ચોકઠુ"
-
-#, fuzzy
-msgid "Based on original legacy"
-msgstr "અસલ gnome(જિનોમ)-ચોકઠુ-શણગારક  આધારિત"
-
-msgid "Designed to be vista-ish in nature"
-msgstr "વધુ સુંદર/સુઘડ (vista-ish) બનાવનુ સ્વભાવિક આયોજન "
-
-msgid "Base"
-msgstr "પાયો/મૂળ/આધાર"
-
-msgid "Glow"
-msgstr "તેજસ્વિતા/તેજ"
-
-msgid "Sides"
-msgstr "બાજુઓ"
-
-msgid "Everything done with customizable pixmaps!"
-msgstr "બધા જ  કાર્ય આગવા ચિત્ર સાથે થયેલ છે!"
-
-msgid "Top Rounding Radius"
-msgstr "ગોળાઇ ની ત્રિજ્યા"
-
-msgid "Bottom Rounding Radius"
-msgstr "તળીયા ની ગોળાઇ ની ત્રિજ્યા "
-
-#. Style : Use Tiled or Scaled pixmaps
-msgid "Scaled"
-msgstr "પ્રમાણિત"
-
-msgid "Not adjustable"
-msgstr "ગોઠવી ન શકાય તેવુ "
-
-msgid "Same as Active"
-msgstr "કાાર્યરત જેવુ"
-
-msgid "Pixmap"
-msgstr "ચિત્ર"
-
-msgid "Tiled/Scaled"
-msgstr "આધારીત/પ્રમાણિત"
-
-msgid "Width Override"
-msgstr "પહોળાઇ  ઉપરાછાપરી"
-
-msgid "Height Override"
-msgstr "માપ થી વધુ"
-
-msgid "Glassy effects for your windows"
-msgstr "ચોકઠા/માાહિતિ દ્વાર (Window) માાટે  પારદર્શીત અસરો"
-
-msgid "Glow Height"
-msgstr "તેજસ્વિતા નુ માપ"
-
-msgid "Frame Base Color"
-msgstr "માળખા/ચોકઠા આધારિત રંગ"
-
-msgid "Upper Titlebar Glow"
-msgstr "ઉપરી મથાળપટ્ટી નુ તેજ"
-
-msgid "Upper Glass Glow"
-msgstr "ઉપર ના કાચ નુ તેજ"
-
-msgid "Lower Glass Glow"
-msgstr "નિમ્ન કાચ નુ તેજ"
-
-msgid "Middle Glass Glow"
-msgstr "મધ્ય ભાગ નાા કાાચ નુ તેજ"
-
-msgid "Outer Glass Glow"
-msgstr "બહારી કાચ નુ તેજ"
-
-msgid "Multiple gradients with somewhat glassy features too"
-msgstr "વિવિધ કોણો નો પારદર્શીત લાક્ષણિકતા સાથે નો દેખાવ "
-
-msgid "Left Blend"
-msgstr "ડાબી બાજુ નો ભાાગ"
-
-msgid "Middle Blend"
-msgstr "મધ્ય ભાગ"
-
-msgid "Right Blend"
-msgstr "જ્મણી બાજુ નો ભાગ"
-
-msgid "Contrast"
-msgstr "તફાવત"
-
-msgid "(Color)"
-msgstr "(રંગ)"
-
-msgid "(Alpha)"
-msgstr "(ક/આલ્ફા)"
-
-msgid "Notch"
-msgstr "કાપ"
-
-msgid "Position"
-msgstr "સ્થિતિ"
-
-msgid "Curve"
-msgstr "વળાંક"
-
-msgid "Offset"
-msgstr "ઉભુ અંતર"
-
-msgid "Use Glow"
-msgstr "તેજ રાખવુ"
-
-msgid "Title Glow"
-msgstr "મથાળા ની ચમક"
-
-msgid "Evolved from the legacy engine"
-msgstr "નિયમ અનુસાર યંત્ર થી બનેલુ "
-
-msgid "Border Gap"
-msgstr "ધારો વચ્ચે નુ અંતર"
-
-msgid "Show Border when maximised?"
-msgstr "જ્યારે મહત્તમ હોય ત્યારે ધાર બતાવવી?"
-
-msgid "Show when minimised?"
-msgstr "જ્યારે લઘુત્તમ હોય ત્યારે બતાવવી કે બતાવવુ?"
-
-msgid "Minimised Border Size"
-msgstr "લઘુત્તમ ધાર નુ માાપ"
-
-msgid "Enable Left Bar Dip?"
-msgstr "ડાબી પટ્ટી ને છેક સુધી કાર્યરત કરવી છે?"
-
-msgid "Left Bar Radius"
-msgstr "ડાબી બાજુ ની પટ્ટી ત્રિજ્યાા"
-
-msgid "Enable Lower Bulge? (Useless at the moment, but will be used soon)"
-msgstr ""
-"નિમ્ન નિષ્કાષ (Lower Bulge) કાર્યરત કરવુ છે? (હાલ મા બિન ઉપયોગી છે, પણ ત્વરીત "
-"ઉપયોગી થશે)"
-
-msgid "Top Corner Offset (%)"
-msgstr "ટોચ ના ખુણા ના ઉભુ અંતર (%)"
-
-msgid "Enable Title Bar Dip?"
-msgstr "મથાળાપટ્ટી ને છેક સુધી કાર્યરત કરવી છે?"
-
-msgid "Enable Button Part?"
-msgstr "બટન નો ભાગ કાર્યરત કરવો છે?"
-
-msgid "Title Part Width"
-msgstr "મથાળા ના ભાગ ની પહોળાઇ"
-
-#, fuzzy
-msgid "Button Part Width)"
-msgstr "બટન ભાગ ની પહોળાઇ"
-
-msgid "Dip Corners Radius)"
-msgstr "ખૂણાઓ ના ઉંડાણ ની  ત્રિજ્યા)"
-
-msgid "Round Inside Corners As well?"
-msgstr "તે જ રીતે તળીયા ના આંતરિક ખુણાઓ ને ગોળ કરવા ?"
-
-msgid "Enable Different Maximised Colors?"
-msgstr "વિવધ રંગો ને પુષ્ક્ળ ઘેરા/ગાઢા કરવા છે?"
-
-msgid "Turn Off repeating gradients when maximised?"
-msgstr "જ્યાારે મહત્તમ હોય ત્યારે, કોણ પુનરાવર્તન બંધ કરવુ? "
-
-msgid "Round Top Left Corner?"
-msgstr "ઉપરી ડાબા ખુણા ને ગોળ કરવો છે?"
-
-msgid "Frame Rounding Radius"
-msgstr "માળખા/ચોકઠા ના ગોળાઇ ની ત્રિજ્યા "
-
-msgid "Titlebar Rounding Radius"
-msgstr "મથાળાપટ્ટી ગોળાઇ ની ત્રિજ્યા"
-
-msgid "Repeat Gradient?"
-msgstr "ખુણો ના માપ નુ પુનરાવર્તન?"
-
-msgid "Vertical Repeat?"
-msgstr "ઉભુ પુનરાવર્તન?"
-
-msgid "Diagonal Repeat?"
-msgstr "ખૂણે-ખૂણે થી ફરી જોડાણ ?"
-
-msgid "Repeat Frequency"
-msgstr "પુનરાવૃત્તિ"
-
-#. /////////////////////
-msgid "Enable Title Part Pixmap?"
-msgstr "મથાળા નો ચિત્ર ભાગ કાર્યરત કરવો છે?"
-
-msgid "Repeat Title Part Pixmap?"
-msgstr "મથાળા ભાગ ના ચિત્ર નુ પુનરાવર્તન? "
-
-msgid "Title Bar Part Pixmap"
-msgstr "મથાળા પટ્ટી નો ચિત્ર ભાગ"
-
-msgid "Choose Titlebar Part Pixmap"
-msgstr " મથાળાપટ્ટી  ના ચિત્ર ભાગ ની પસંદગી"
-
-#. /////////////////////////
-msgid "Enable Button Part Pixmap?"
-msgstr "બટન નો ચિત્ર ભાગ કાર્યરત કરવુ છે?"
-
-msgid "Repeat Button Part Pixmap?"
-msgstr "બટન ચિત્ર ભાગ નુ પુન: ઉપયોગ ?"
-
-msgid "Button Part Pixmap"
-msgstr "બટન ચિત્ર ભાગ "
-
-msgid "Choose Button Part Pixmap"
-msgstr "બટન ચિત્ર ભાગ ની પસંદગી"
-
-#. /////////////////////////
-msgid "Enable Titlebar Pixmap?"
-msgstr "મથાળાપટ્ટી નો ચિત્ર ભાગ કાર્યરત કરવો છે?"
-
-msgid "Repeat Titlebar Pixmap?"
-msgstr "મથાળાપટ્ટી ના ચિત્ર નુ પુનરાવર્તન?"
-
-msgid "Titlebar Pixmap"
-msgstr "મથાળાપટ્ટી નુ ચિત્ર"
-
-msgid "Choose Titlebar Pixmap"
-msgstr "મથાળાપટ્ટી  ના ચિત્ર ની પસંદગી"
-
-msgid "Active/Inactive"
-msgstr "કાર્યરત/બિનકાર્યરત "
-
-msgid "Maximised"
-msgstr "મહત્તમ"
-
-msgid "Corners"
-msgstr "ખૂણાાોાાાોોોોાાાૌ"
-
-msgid "Border Layout"
-msgstr "ધાર ની ગોઠવણ"
-
-msgid "Left Bar"
-msgstr "ડાબી બાજુ ની પટ્ટી"
-
-msgid "Pixmaps"
-msgstr "ચિત્રો"
+msgid "_Quit"
+msgstr "બહાર નીકળો (_Q)"
+
+#~ msgid "Fetching Themes"
+#~ msgstr "થીમો મેળવી રહ્યા છીએ"
+
+#~ msgid ""
+#~ "Fetching themes... \n"
+#~ "This may take time depending on \n"
+#~ "internet connection speed."
+#~ msgstr ""
+#~ "તીમો મેળવી રહ્યા છીએ...\n"
+#~ "આ તમારા ઈન્ટરનેટ જોડાણની ઝડપ પર આધાર રાખીને \n"
+#~ "થોડો સમય લેશે."
+
+#~ msgid ""
+#~ "Here are the repositories that you can fetch Emerald Themes from. \n"
+#~ "Fetching themes would fetch and import themes from SVN repositories \n"
+#~ "You need Subversion package installed to use this feature."
+#~ msgstr ""
+#~ "અંહિ રીપોઝીટરીઓ છે કે જેમાંથી તમે Emerald થીમો મેળવી શકો. \n"
+#~ "થીમો મેળવવાનું SVN રીપોઝીટરીઓમાંથી થીમો મેળવશે અને આયાત કરશે \n"
+#~ "આ લક્ષણ વાપરવા માટે તમારી પાસે Subversion પેકેજ સ્થાપિત થયેલ હોવું જરૂરી છે."
+
+#~ msgid ""
+#~ "This repository contains GPL'd themes that can be used under \n"
+#~ "the terms of GNU GPL licence v2.0 or later \n"
+#~ msgstr ""
+#~ "આ રીપોઝીટરી GPL વાળી થીમો સમાવે છે કે જે \n"
+#~ "GNU GPL licence v2.0 અથવા પછીની શરતો હેઠળ વાપરી શકાય છે \n"
+
+#~ msgid ""
+#~ "This repository contains non-GPL'd themes. They might infringe \n"
+#~ "copyrights and patent laws in some countries."
+#~ msgstr ""
+#~ "આ રીપોઝીટરી બિન-GPL વાળી થીમો સમાવે છે. તેઓ કોપીરાઈટ અને \n"
+#~ "પેટન્ટના નિયમોનો અમુક દેશોમાં ભંગ કરે છે."
+
+#~ msgid ""
+#~ "To activate Non-GPL repository please run the following in shell and "
+#~ "accept the server certificate permanently: \n"
+#~ "svn ls https://svn.generation.no/emerald-themes."
+#~ msgstr ""
+#~ "બિન-GPL રીપોઝીટરી સક્રિય કરવા માટે મહેરબાની કરીને નીચેનું શેલ ચલાવો અને સર્વર "
+#~ "પ્રમાણપત્ર કાયમમાટે સ્વીકારો: \n"
+#~ "svn ls https://svn.generation.no/emerald-themes."
 
 #~ msgid "Repositories"
 #~ msgstr "રીપોઝીટરીઓ"

@@ -1,20 +1,340 @@
-# Emerald Window Decorator.
-# Copyright (C) 2006
-# This file is distributed under the same license as the Emerald package.
+# Chinese (Taiwan) translation for emerald
+# Copyright (C) 2006 The Free Software Foundation, Inc.
+# This file is distributed under the same license as the emerald package.
 # cyberorg <cyberorg@cyberorg.info>, 2006.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: 0.1\n"
-"Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
-"POT-Creation-Date: 2009-03-24 08:14+0100\n"
+"Project-Id-Version: emerald\n"
+"Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/emerald/issues\n"
+"POT-Creation-Date: 2017-05-04 19:29+0300\n"
 "PO-Revision-Date: 2009-10-05 03:51+0200\n"
 "Last-Translator: Yichih Liu <liueigi@gmail.com>\n"
-"Language-Team: beryl-project <LL@li.org>\n"
+"Language-Team: Chinese (Taiwan) <zh_TW@li.org>\n"
+"Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Pootle 1.1.0\n"
+
+msgid "Based on original gtk-window-decorator"
+msgstr "基于原來的 gtk-window-decorator"
+
+msgid "Round Top Left Corner"
+msgstr "左上角圓滑"
+
+msgid "Round Top Right Corner"
+msgstr "右上角圓滑"
+
+msgid "Round Bottom Left Corner"
+msgstr "左下角圓滑"
+
+msgid "Round Bottom Right Corner"
+msgstr "右下角圓滑"
+
+msgid "Rounding Radius"
+msgstr "圓角半徑"
+
+msgid "Colors"
+msgstr "色彩"
+
+msgid "Outer Frame Blend"
+msgstr "外框架合成"
+
+msgid "Inner Frame Blend"
+msgstr "内框架合成"
+
+msgid "Outer Titlebar Blend"
+msgstr "外標題欄合成"
+
+msgid "Inner Titlebar Blend"
+msgstr "内標題欄合成"
+
+msgid "Titlebar Separator"
+msgstr "標題欄分隔符號"
+
+msgid "Frame Outline"
+msgstr "框架外框"
+
+msgid "Frame Highlight"
+msgstr "框架高度"
+
+msgid "Frame Shadow"
+msgstr "框架陰影"
+
+msgid "Contents Outline"
+msgstr "内容外框"
+
+msgid "Contents Highlight"
+msgstr "内容高度"
+
+msgid "Contents Shadow"
+msgstr "内容陰影"
+
+msgid "Frame"
+msgstr "框架"
+
+msgid "Based on original legacy"
+msgstr "基於原有的"
+
+msgid "Title Bar"
+msgstr "標題欄"
+
+msgid "Designed to be vista-ish in nature"
+msgstr "按照 Vista 風格設計"
+
+msgid "Base"
+msgstr "基礎"
+
+msgid "Glow"
+msgstr "光暈"
+
+msgid "Sides"
+msgstr "側邊"
+
+msgid "Everything done with customizable pixmaps!"
+msgstr "用自訂點陣圖處理一切！"
+
+msgid "Top Rounding Radius"
+msgstr "頂圓角半徑"
+
+msgid "Bottom Rounding Radius"
+msgstr "底圓角半徑"
+
+msgid "_Clear"
+msgstr "清除(_C)"
+
+#. style: use tiled or scaled pixmaps
+msgid "Scaled"
+msgstr "排列"
+
+msgid "Not adjustable"
+msgstr "不可調整"
+
+msgid "Same as Active"
+msgstr "與現行視窗相同"
+
+msgid "Pixmap"
+msgstr "像數"
+
+msgid "File"
+msgstr "檔案"
+
+msgid "Preview"
+msgstr "預覧"
+
+msgid "Clear"
+msgstr "清除"
+
+msgid "Tiled/Scaled"
+msgstr "堆砌/排列"
+
+msgid "Width Override"
+msgstr "寬度覆寫"
+
+msgid "Height Override"
+msgstr "高度覆寫"
+
+msgid "Glassy effects for your windows"
+msgstr "視窗毛玻璃效果"
+
+msgid "Glow Height"
+msgstr "光暈高度"
+
+msgid "Frame Base Color"
+msgstr "框架基色"
+
+msgid "Upper Titlebar Glow"
+msgstr "上部標題欄光暈"
+
+msgid "Upper Glass Glow"
+msgstr "上層毛玻璃光暈"
+
+msgid "Lower Glass Glow"
+msgstr "下層毛玻璃光暈"
+
+msgid "Middle Glass Glow"
+msgstr "中部毛玻璃光暈"
+
+msgid "Outer Glass Glow"
+msgstr "外部毛玻璃光暈"
+
+msgid "Multiple gradients with somewhat glassy features too"
+msgstr "多種漸變及一定毛玻璃效果"
+
+msgid "Left Blend"
+msgstr "左複合"
+
+msgid "Middle Blend"
+msgstr "中複合"
+
+msgid "Right Blend"
+msgstr "右複合"
+
+msgid "Contrast"
+msgstr "對比"
+
+msgid "(Color)"
+msgstr "(色彩)"
+
+msgid "(Alpha)"
+msgstr "(Alpha)"
+
+msgid "Notch"
+msgstr "缺口"
+
+msgid "Position"
+msgstr "位置"
+
+msgid "Curve"
+msgstr "曲綫"
+
+msgid "Offset"
+msgstr "偏移"
+
+msgid "Use Glow"
+msgstr "啓用光暈"
+
+msgid "Title Glow"
+msgstr "標題欄光暈"
+
+msgid "Radius"
+msgstr "半徑"
+
+msgid "Evolved from the legacy engine"
+msgstr "由原本的視窗引擎演化而來"
+
+msgid "Border Gap"
+msgstr "邊線方塊間隔"
+
+msgid "Show Border when maximised?"
+msgstr "最大化時是否察看陰影?"
+
+msgid "Show when minimised?"
+msgstr "最小化時是否察看?"
+
+msgid "Minimised Border Size"
+msgstr "最小化邊線方塊大小"
+
+msgid "Enable Left Bar Dip?"
+msgstr "啓用左邊欄傾斜？"
+
+msgid "Left Bar Radius"
+msgstr "左邊欄半徑"
+
+msgid "Enable Lower Bulge? (Useless at the moment, but will be used soon)"
+msgstr "使用下部膨脹？（目前無用，但將有用）"
+
+msgid "Top Corner Offset (%)"
+msgstr "頂角偏移(%)"
+
+msgid "Enable Title Bar Dip?"
+msgstr "啓用標題欄傾斜？"
+
+msgid "Enable Button Part?"
+msgstr "啓用按鈕部分？"
+
+msgid "Title Part Width"
+msgstr "標題部分寬度"
+
+msgid "Button Part Width)"
+msgstr "按鈕部分寬度)"
+
+msgid "Dip Corners Radius)"
+msgstr "傾斜角輻射)"
+
+msgid "Round Inside Corners As well?"
+msgstr "内角圓滑？"
+
+msgid "Enable Different Maximised Colors?"
+msgstr "使用差異最大化色彩？"
+
+msgid "Turn Off repeating gradients when maximised?"
+msgstr "最大化關閉重複漸變？"
+
+msgid "Round Top Left Corner?"
+msgstr "圓滑左上角？"
+
+msgid "Frame Rounding Radius"
+msgstr "框架圓角半徑"
+
+msgid "Titlebar Rounding Radius"
+msgstr "標題欄圓角半徑"
+
+msgid "Repeat Gradient?"
+msgstr "重複漸變？"
+
+msgid "Vertical Repeat?"
+msgstr "垂直重複？"
+
+msgid "Diagonal Repeat?"
+msgstr "對角重複？"
+
+msgid "Repeat Frequency"
+msgstr "重複頻率"
+
+#. ========================
+msgid "Enable Title Part Pixmap?"
+msgstr "使用標題欄部分點陣圖？"
+
+msgid "Repeat Title Part Pixmap?"
+msgstr "重複標題欄部分點陣圖？"
+
+msgid "Title Bar Part Pixmap"
+msgstr "標題欄部分點陣圖"
+
+msgid "Choose Titlebar Part Pixmap"
+msgstr "選取標題欄部分點陣圖"
+
+#. ========================
+msgid "Enable Button Part Pixmap?"
+msgstr "使用按鈕部分點陣圖？"
+
+msgid "Repeat Button Part Pixmap?"
+msgstr "重複按鈕部分點陣圖？"
+
+msgid "Button Part Pixmap"
+msgstr "按鈕部分點陣圖"
+
+msgid "Choose Button Part Pixmap"
+msgstr "選取按鈕部分點陣圖"
+
+#. ========================
+msgid "Enable Titlebar Pixmap?"
+msgstr "使用標題欄點陣圖？"
+
+msgid "Repeat Titlebar Pixmap?"
+msgstr "重複標題欄點陣圖？"
+
+msgid "Titlebar Pixmap"
+msgstr "標題欄點陣圖"
+
+msgid "Choose Titlebar Pixmap"
+msgstr "選取標題欄點陣圖"
+
+msgid "Active/Inactive"
+msgstr "啟用/停用"
+
+msgid "Maximised"
+msgstr "最大化"
+
+msgid "Corners"
+msgstr "角"
+
+msgid "Border Layout"
+msgstr "邊線方塊匯出"
+
+msgid "Left Bar"
+msgstr "左邊欄"
+
+msgid "Pixmaps"
+msgstr "點陣圖"
+
+msgid ""
+"Select\n"
+"Engine"
+msgstr ""
+"選取\n"
+"引擎"
 
 msgid "Close Window"
 msgstr "關閉視窗"
@@ -52,6 +372,10 @@ msgstr "置頂視窗"
 msgid "UnStick Window"
 msgstr "取消置頂"
 
+#, fuzzy
+msgid "Super Maximize Window"
+msgstr "最大化視窗"
+
 #, c-format
 msgid "The window \"%s\" is not responding."
 msgstr "視窗 \"%s\" 不再回應。"
@@ -59,6 +383,9 @@ msgstr "視窗 \"%s\" 不再回應。"
 msgid ""
 "Forcing this application to quit will cause you to lose any unsaved changes."
 msgstr "强制結束程式，所有未儲存的資料將會遺失。"
+
+msgid "_Cancel"
+msgstr "取消(_C)"
 
 msgid "_Force Quit"
 msgstr "_强制結束"
@@ -182,18 +509,6 @@ msgstr "按鈕點陣圖"
 msgid "Button"
 msgstr "按鈕"
 
-msgid "File"
-msgstr "檔案"
-
-msgid "Preview"
-msgstr "預覧"
-
-msgid "Clear"
-msgstr "清除"
-
-msgid "Colors"
-msgstr "色彩"
-
 msgid "Text Fill"
 msgstr "文字填補"
 
@@ -211,9 +526,6 @@ msgstr "色彩"
 
 msgid "Opacity"
 msgstr "不透通度"
-
-msgid "Radius"
-msgstr "半徑"
 
 msgid "X Offset"
 msgstr "X 偏移"
@@ -236,6 +548,7 @@ msgstr "水平按鈕偏移"
 msgid "Title-bar Object Layout"
 msgstr "標題欄物件匯出"
 
+#, fuzzy
 msgid ""
 "Use colons to separate left, center, and right.\n"
 "Anything after a third colon is ignored.\n"
@@ -243,6 +556,7 @@ msgid ""
 "I=Icon, T=Title, H=Help, M=Menu\n"
 "S=Shade, U/A=On Top(Up/Above)\n"
 "Y=Sticky, (#)=# pixels space, ex: (5)\n"
+"F=SuperMaximize\n"
 msgstr ""
 "使用色彩區分左、中、右。\n"
 "第三列之後被捨棄。\n"
@@ -253,6 +567,9 @@ msgstr ""
 
 msgid "Export Theme..."
 msgstr "導出主題..."
+
+msgid "_Save"
+msgstr "儲存(_S)"
 
 msgid "Name:"
 msgstr "名稱:"
@@ -327,9 +644,6 @@ msgstr "現行視窗"
 msgid "Inactive Window"
 msgstr "非現行視窗"
 
-msgid "Title Bar"
-msgstr "標題欄"
-
 msgid "Screenshot"
 msgstr "擷取螢幕"
 
@@ -342,13 +656,18 @@ msgstr "資訊"
 msgid ""
 "NOTE - These settings are not part of themes, they are stored separately, "
 "and control various UI preferences for Emerald."
-msgstr "注意 - 這些設定並不是主題的組成部分, 設定檔將與主題分開儲存, 並且將會控制一些 Emerald 使用者介面設定."
+msgstr ""
+"注意 - 這些設定並不是主題的組成部分, 設定檔將與主題分開儲存, 並且將會控制一"
+"些 Emerald 使用者介面設定."
 
 msgid "Show Tooltips for Buttons"
 msgstr "顯示按鈕輔助說明"
 
 msgid "Use Decoration Cropping"
 msgstr "使用裝飾裁剪"
+
+msgid "No Shade on Titlebar Scroll"
+msgstr ""
 
 msgid "Use Button Fade"
 msgstr "使用按鈕淡入淡出"
@@ -369,6 +688,10 @@ msgid "Button Pulse Min Opacity %"
 msgstr "按鈕暫停最小不透通度 %"
 
 msgid "Titlebar Double-Click Action"
+msgstr "標題欄按兩下行為"
+
+#, fuzzy
+msgid "Titlebar Middle-Click Action"
 msgstr "標題欄按兩下行為"
 
 msgid "Button Hover Cursor"
@@ -413,51 +736,21 @@ msgstr "編輯"
 msgid "Import Theme..."
 msgstr "導入主題..."
 
+msgid "_Open"
+msgstr "開啟(_O)"
+
 msgid "Search:"
 msgstr "搜索:"
 
-msgid "Fetching Themes"
-msgstr "抓取主題..."
+msgid "_Refresh"
+msgstr "重新整理(_R)"
 
-msgid ""
-"Fetching themes... \n"
-"This may take time depending on \n"
-"internet connection speed."
-msgstr ""
-"抓取主題中...\n"
-"這可能需要幾分鐘，視網路\n"
-"連線速度而定。"
+msgid "_Delete"
+msgstr "刪除(_D)"
 
-msgid ""
-"Here are the repositories that you can fetch Emerald Themes from. \n"
-"Fetching themes would fetch and import themes from SVN repositories \n"
-"You need Subversion package installed to use this feature."
-msgstr ""
-"這裡有一些 Emerald 主題套件庫，供你抓取主題。\n"
-"抓取主題將從 SVN 套件庫中下載並導入主題。\n"
-"你需要安裝 Subversion 套裝軟體才能使用此功能。"
-
-msgid ""
-"This repository contains GPL'd themes that can be used under \n"
-"the terms of GNU GPL licence v2.0 or later \n"
-msgstr ""
-"此套件庫內包含遵守 GPL 協定的主題，請遵照 GNU GPL 許可證 v2.0 \n"
-"或更新版本的規定使用。\n"
-
-msgid ""
-"This repository contains non-GPL'd themes. They might infringe \n"
-"copyrights and patent laws in some countries."
-msgstr ""
-"此套件庫中含非 GPL 協定的主題，它們可能侵害某些國家的智慧財産權\n"
-"相關法規或專利法案。"
-
-msgid ""
-"To activate Non-GPL repository please run the following in shell and accept "
-"the server certificate permanently: \n"
-"svn ls https://svn.generation.no/emerald-themes."
-msgstr ""
-"要啟動 Non-GPL (非GPL授權軟體)套件庫，請在 shell 執行如下指令，可永久接受伺服器許可認證:\n"
-"svn ls https://svn.generation.no/emerald-themes"
+#, fuzzy
+msgid "_Import..."
+msgstr "匯出..."
 
 msgid "Themes"
 msgstr "主題"
@@ -471,304 +764,52 @@ msgstr "主題設定"
 msgid "Emerald Settings"
 msgstr "Emerald 設定"
 
-msgid ""
-"Select\n"
-"Engine"
-msgstr ""
-"選取\n"
-"引擎"
-
-msgid "Based on original gtk-window-decorator"
-msgstr "基于原來的 gtk-window-decorator"
-
-msgid "Round Top Left Corner"
-msgstr "左上角圓滑"
-
-msgid "Round Top Right Corner"
-msgstr "右上角圓滑"
-
-msgid "Round Bottom Left Corner"
-msgstr "左下角圓滑"
-
-msgid "Round Bottom Right Corner"
-msgstr "右下角圓滑"
-
-msgid "Rounding Radius"
-msgstr "圓角半徑"
-
-msgid "Outer Frame Blend"
-msgstr "外框架合成"
-
-msgid "Inner Frame Blend"
-msgstr "内框架合成"
-
-msgid "Outer Titlebar Blend"
-msgstr "外標題欄合成"
-
-msgid "Inner Titlebar Blend"
-msgstr "内標題欄合成"
-
-msgid "Titlebar Separator"
-msgstr "標題欄分隔符號"
-
-msgid "Frame Outline"
-msgstr "框架外框"
-
-msgid "Frame Highlight"
-msgstr "框架高度"
-
-msgid "Frame Shadow"
-msgstr "框架陰影"
-
-msgid "Contents Outline"
-msgstr "内容外框"
-
-msgid "Contents Highlight"
-msgstr "内容高度"
-
-msgid "Contents Shadow"
-msgstr "内容陰影"
-
-msgid "Frame"
-msgstr "框架"
-
-msgid "Based on original legacy"
-msgstr "基於原有的"
-
-msgid "Designed to be vista-ish in nature"
-msgstr "按照 Vista 風格設計"
-
-msgid "Base"
-msgstr "基礎"
-
-msgid "Glow"
-msgstr "光暈"
-
-msgid "Sides"
-msgstr "側邊"
-
-msgid "Everything done with customizable pixmaps!"
-msgstr "用自訂點陣圖處理一切！"
-
-msgid "Top Rounding Radius"
-msgstr "頂圓角半徑"
-
-msgid "Bottom Rounding Radius"
-msgstr "底圓角半徑"
-
-#. Style : Use Tiled or Scaled pixmaps
-msgid "Scaled"
-msgstr "排列"
-
-msgid "Not adjustable"
-msgstr "不可調整"
-
-msgid "Same as Active"
-msgstr "與現行視窗相同"
-
-msgid "Pixmap"
-msgstr "像數"
-
-msgid "Tiled/Scaled"
-msgstr "堆砌/排列"
-
-msgid "Width Override"
-msgstr "寬度覆寫"
-
-msgid "Height Override"
-msgstr "高度覆寫"
-
-msgid "Glassy effects for your windows"
-msgstr "視窗毛玻璃效果"
-
-msgid "Glow Height"
-msgstr "光暈高度"
-
-msgid "Frame Base Color"
-msgstr "框架基色"
-
-msgid "Upper Titlebar Glow"
-msgstr "上部標題欄光暈"
-
-msgid "Upper Glass Glow"
-msgstr "上層毛玻璃光暈"
-
-msgid "Lower Glass Glow"
-msgstr "下層毛玻璃光暈"
-
-msgid "Middle Glass Glow"
-msgstr "中部毛玻璃光暈"
-
-msgid "Outer Glass Glow"
-msgstr "外部毛玻璃光暈"
-
-msgid "Multiple gradients with somewhat glassy features too"
-msgstr "多種漸變及一定毛玻璃效果"
-
-msgid "Left Blend"
-msgstr "左複合"
-
-msgid "Middle Blend"
-msgstr "中複合"
-
-msgid "Right Blend"
-msgstr "右複合"
-
-msgid "Contrast"
-msgstr "對比"
-
-msgid "(Color)"
-msgstr "(色彩)"
-
-msgid "(Alpha)"
-msgstr "(Alpha)"
-
-msgid "Notch"
-msgstr "缺口"
-
-msgid "Position"
-msgstr "位置"
-
-msgid "Curve"
-msgstr "曲綫"
-
-msgid "Offset"
-msgstr "偏移"
-
-msgid "Use Glow"
-msgstr "啓用光暈"
-
-msgid "Title Glow"
-msgstr "標題欄光暈"
-
-msgid "Evolved from the legacy engine"
-msgstr "由原本的視窗引擎演化而來"
-
-msgid "Border Gap"
-msgstr "邊線方塊間隔"
-
-msgid "Show Border when maximised?"
-msgstr "最大化時是否察看陰影?"
-
-msgid "Show when minimised?"
-msgstr "最小化時是否察看?"
-
-msgid "Minimised Border Size"
-msgstr "最小化邊線方塊大小"
-
-msgid "Enable Left Bar Dip?"
-msgstr "啓用左邊欄傾斜？"
-
-msgid "Left Bar Radius"
-msgstr "左邊欄半徑"
-
-msgid "Enable Lower Bulge? (Useless at the moment, but will be used soon)"
-msgstr "使用下部膨脹？（目前無用，但將有用）"
-
-msgid "Top Corner Offset (%)"
-msgstr "頂角偏移(%)"
-
-msgid "Enable Title Bar Dip?"
-msgstr "啓用標題欄傾斜？"
-
-msgid "Enable Button Part?"
-msgstr "啓用按鈕部分？"
-
-msgid "Title Part Width"
-msgstr "標題部分寬度"
-
-msgid "Button Part Width)"
-msgstr "按鈕部分寬度)"
-
-msgid "Dip Corners Radius)"
-msgstr "傾斜角輻射)"
-
-msgid "Round Inside Corners As well?"
-msgstr "内角圓滑？"
-
-msgid "Enable Different Maximised Colors?"
-msgstr "使用差異最大化色彩？"
-
-msgid "Turn Off repeating gradients when maximised?"
-msgstr "最大化關閉重複漸變？"
-
-msgid "Round Top Left Corner?"
-msgstr "圓滑左上角？"
-
-msgid "Frame Rounding Radius"
-msgstr "框架圓角半徑"
-
-msgid "Titlebar Rounding Radius"
-msgstr "標題欄圓角半徑"
-
-msgid "Repeat Gradient?"
-msgstr "重複漸變？"
-
-msgid "Vertical Repeat?"
-msgstr "垂直重複？"
-
-msgid "Diagonal Repeat?"
-msgstr "對角重複？"
-
-msgid "Repeat Frequency"
-msgstr "重複頻率"
-
-#. /////////////////////
-msgid "Enable Title Part Pixmap?"
-msgstr "使用標題欄部分點陣圖？"
-
-msgid "Repeat Title Part Pixmap?"
-msgstr "重複標題欄部分點陣圖？"
-
-msgid "Title Bar Part Pixmap"
-msgstr "標題欄部分點陣圖"
-
-msgid "Choose Titlebar Part Pixmap"
-msgstr "選取標題欄部分點陣圖"
-
-#. /////////////////////////
-msgid "Enable Button Part Pixmap?"
-msgstr "使用按鈕部分點陣圖？"
-
-msgid "Repeat Button Part Pixmap?"
-msgstr "重複按鈕部分點陣圖？"
-
-msgid "Button Part Pixmap"
-msgstr "按鈕部分點陣圖"
-
-msgid "Choose Button Part Pixmap"
-msgstr "選取按鈕部分點陣圖"
-
-#. /////////////////////////
-msgid "Enable Titlebar Pixmap?"
-msgstr "使用標題欄點陣圖？"
-
-msgid "Repeat Titlebar Pixmap?"
-msgstr "重複標題欄點陣圖？"
-
-msgid "Titlebar Pixmap"
-msgstr "標題欄點陣圖"
-
-msgid "Choose Titlebar Pixmap"
-msgstr "選取標題欄點陣圖"
-
-msgid "Active/Inactive"
-msgstr "啟用/停用"
-
-msgid "Maximised"
-msgstr "最大化"
-
-msgid "Corners"
-msgstr "角"
-
-msgid "Border Layout"
-msgstr "邊線方塊匯出"
-
-msgid "Left Bar"
-msgstr "左邊欄"
-
-msgid "Pixmaps"
-msgstr "點陣圖"
+msgid "_Quit"
+msgstr "結束(_Q)"
+
+#~ msgid "Fetching Themes"
+#~ msgstr "抓取主題..."
+
+#~ msgid ""
+#~ "Fetching themes... \n"
+#~ "This may take time depending on \n"
+#~ "internet connection speed."
+#~ msgstr ""
+#~ "抓取主題中...\n"
+#~ "這可能需要幾分鐘，視網路\n"
+#~ "連線速度而定。"
+
+#~ msgid ""
+#~ "Here are the repositories that you can fetch Emerald Themes from. \n"
+#~ "Fetching themes would fetch and import themes from SVN repositories \n"
+#~ "You need Subversion package installed to use this feature."
+#~ msgstr ""
+#~ "這裡有一些 Emerald 主題套件庫，供你抓取主題。\n"
+#~ "抓取主題將從 SVN 套件庫中下載並導入主題。\n"
+#~ "你需要安裝 Subversion 套裝軟體才能使用此功能。"
+
+#~ msgid ""
+#~ "This repository contains GPL'd themes that can be used under \n"
+#~ "the terms of GNU GPL licence v2.0 or later \n"
+#~ msgstr ""
+#~ "此套件庫內包含遵守 GPL 協定的主題，請遵照 GNU GPL 許可證 v2.0 \n"
+#~ "或更新版本的規定使用。\n"
+
+#~ msgid ""
+#~ "This repository contains non-GPL'd themes. They might infringe \n"
+#~ "copyrights and patent laws in some countries."
+#~ msgstr ""
+#~ "此套件庫中含非 GPL 協定的主題，它們可能侵害某些國家的智慧財産權\n"
+#~ "相關法規或專利法案。"
+
+#~ msgid ""
+#~ "To activate Non-GPL repository please run the following in shell and "
+#~ "accept the server certificate permanently: \n"
+#~ "svn ls https://svn.generation.no/emerald-themes."
+#~ msgstr ""
+#~ "要啟動 Non-GPL (非GPL授權軟體)套件庫，請在 shell 執行如下指令，可永久接受"
+#~ "伺服器許可認證:\n"
+#~ "svn ls https://svn.generation.no/emerald-themes"
 
 #~ msgid "Repositories"
 #~ msgstr "倉儲"

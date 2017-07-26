@@ -1,20 +1,340 @@
-# Emerald he translation.
-# Copyright (C) compiz-fusion.org
+# Hebrew translation for emerald
+# Copyright (C) 2008 launchpad.net/compiz
 # This file is distributed under the same license as the emerald package.
 # Yotam Benshalom <benshalom@gmail.com>.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: emerald\n"
-"Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
-"POT-Creation-Date: 2009-03-24 08:14+0100\n"
+"Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/emerald/issues\n"
+"POT-Creation-Date: 2017-05-04 19:28+0300\n"
 "PO-Revision-Date: 2008-07-12 15:02+0200\n"
 "Last-Translator: Yotam Benshalom <benshalom@gmail.com>\n"
-"Language-Team: Yotam Benshalom <benshalom@gmail.com>\n"
+"Language-Team: Hebrew <he@li.org>\n"
+"Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Pootle 1.1.0\n"
+
+msgid "Based on original gtk-window-decorator"
+msgstr "מבוסס על gtk-window-decorator"
+
+msgid "Round Top Left Corner"
+msgstr "עגל פינה שמאלית עליונה"
+
+msgid "Round Top Right Corner"
+msgstr "עגל פינה ימנית עליונה"
+
+msgid "Round Bottom Left Corner"
+msgstr "עגל פינה שמאלית תחתונה"
+
+msgid "Round Bottom Right Corner"
+msgstr "עגל פינה ימנית תחתונה"
+
+msgid "Rounding Radius"
+msgstr "רדיוס עיגול"
+
+msgid "Colors"
+msgstr "צבעים"
+
+msgid "Outer Frame Blend"
+msgstr "גוון חיצוני של המסגרת"
+
+msgid "Inner Frame Blend"
+msgstr "גוון פנימי של המסגרת"
+
+msgid "Outer Titlebar Blend"
+msgstr "גוון חיצוני של שורת הכותרת"
+
+msgid "Inner Titlebar Blend"
+msgstr "גוון פנימי של שורת הכותרת"
+
+msgid "Titlebar Separator"
+msgstr "קו מפריד מתחת לשורת הכותרת"
+
+msgid "Frame Outline"
+msgstr "קו מתאר עבור המסגרת"
+
+msgid "Frame Highlight"
+msgstr "הדגשת מסגרת"
+
+msgid "Frame Shadow"
+msgstr "צל מסגרת"
+
+msgid "Contents Outline"
+msgstr "קו מתאר עבור התוכן"
+
+msgid "Contents Highlight"
+msgstr "הדגשת תוכן"
+
+msgid "Contents Shadow"
+msgstr "צל תוכן"
+
+msgid "Frame"
+msgstr "מסגרת"
+
+msgid "Based on original legacy"
+msgstr "מבוסס על המנוע הישן"
+
+msgid "Title Bar"
+msgstr "שורת כותרת"
+
+msgid "Designed to be vista-ish in nature"
+msgstr "מתוכנן על מנת להידמות לויסטה"
+
+msgid "Base"
+msgstr "בסיס"
+
+msgid "Glow"
+msgstr "זוהר"
+
+msgid "Sides"
+msgstr "צדדים"
+
+msgid "Everything done with customizable pixmaps!"
+msgstr "ניתן לשנות הכל בעזרת מפות פיקסלים!"
+
+msgid "Top Rounding Radius"
+msgstr "רדיוס עיגול עליון"
+
+msgid "Bottom Rounding Radius"
+msgstr "רדיוס עיגול תחתון"
+
+msgid "_Clear"
+msgstr "_פינוי"
+
+#. style: use tiled or scaled pixmaps
+msgid "Scaled"
+msgstr "מותאם לגודל"
+
+msgid "Not adjustable"
+msgstr "בלתי ניתן לשינוי"
+
+msgid "Same as Active"
+msgstr "כמו בחלון פעיל"
+
+msgid "Pixmap"
+msgstr "מפת פיקסלים"
+
+msgid "File"
+msgstr "קובץ"
+
+msgid "Preview"
+msgstr "תצוגה מקדימה"
+
+msgid "Clear"
+msgstr "נקה"
+
+msgid "Tiled/Scaled"
+msgstr "פרוש\\מותאם"
+
+msgid "Width Override"
+msgstr "דריסת רוחב"
+
+msgid "Height Override"
+msgstr "דריסת גובה"
+
+msgid "Glassy effects for your windows"
+msgstr "אפקט זגוגית לחלונות"
+
+msgid "Glow Height"
+msgstr "גובה זוהר"
+
+msgid "Frame Base Color"
+msgstr "צבע בסיס של המסגרת"
+
+msgid "Upper Titlebar Glow"
+msgstr "זוהר עבור שורת כותרת עליונה"
+
+msgid "Upper Glass Glow"
+msgstr "זוהר-זגוגית עליון"
+
+msgid "Lower Glass Glow"
+msgstr "זוהר-זגוגית תחתון"
+
+msgid "Middle Glass Glow"
+msgstr "זוהר-זגוגית אמצעי"
+
+msgid "Outer Glass Glow"
+msgstr "זוהר-זגוגית חיצוני"
+
+msgid "Multiple gradients with somewhat glassy features too"
+msgstr "צבעים מדורגים מרובים עם כמה אפקטים של זגוגית"
+
+msgid "Left Blend"
+msgstr "גוון שמאלי"
+
+msgid "Middle Blend"
+msgstr "גוון אמצעי"
+
+msgid "Right Blend"
+msgstr "גוון ימני"
+
+msgid "Contrast"
+msgstr "ניגודיות"
+
+msgid "(Color)"
+msgstr "(צבע)"
+
+msgid "(Alpha)"
+msgstr "(אלפא)"
+
+msgid "Notch"
+msgstr "חריץ"
+
+msgid "Position"
+msgstr "מיקום"
+
+msgid "Curve"
+msgstr "עיקול"
+
+msgid "Offset"
+msgstr "הסטה"
+
+msgid "Use Glow"
+msgstr "השתמש בזוהר"
+
+msgid "Title Glow"
+msgstr "זוהר עבור הכותרת"
+
+msgid "Radius"
+msgstr "רדיוס"
+
+msgid "Evolved from the legacy engine"
+msgstr "פותח על בסיס המנוע הישן"
+
+msgid "Border Gap"
+msgstr "פער גבול"
+
+msgid "Show Border when maximised?"
+msgstr "להציג גבול בעת הגדלה למקסימום?"
+
+msgid "Show when minimised?"
+msgstr "להציג בעת מזעור?"
+
+msgid "Minimised Border Size"
+msgstr "גודל גבול ממוזער"
+
+msgid "Enable Left Bar Dip?"
+msgstr "לאפשר שקיעה של הפס השמאלי?"
+
+msgid "Left Bar Radius"
+msgstr "רדיוס הפס השמאלי"
+
+msgid "Enable Lower Bulge? (Useless at the moment, but will be used soon)"
+msgstr "לאפשר הבלטה תחתונה? (לא בשימוש כרגע, יתווסף בקרוב)"
+
+msgid "Top Corner Offset (%)"
+msgstr "הסטת פינה עליונה (%)"
+
+msgid "Enable Title Bar Dip?"
+msgstr "לאפשר שקיעה של שורת הכותרת?"
+
+msgid "Enable Button Part?"
+msgstr "לאפשר את חלק הכפתורים?"
+
+msgid "Title Part Width"
+msgstr "רוחב חלק הכותרת"
+
+msgid "Button Part Width)"
+msgstr "רוחב חלק הכפתורים"
+
+msgid "Dip Corners Radius)"
+msgstr "רדיוס שקיעת פינות"
+
+msgid "Round Inside Corners As well?"
+msgstr "לעגל גם בתוך הפינות?"
+
+msgid "Enable Different Maximised Colors?"
+msgstr "לאפשר צבעים שונים בעת הגדלה למקסימום?"
+
+msgid "Turn Off repeating gradients when maximised?"
+msgstr "לכבות גוונים מדורגים חוזרים בעת הגדלה למקסימום?"
+
+msgid "Round Top Left Corner?"
+msgstr "פינה שמאלית עליונה עגולה?"
+
+msgid "Frame Rounding Radius"
+msgstr "רגיוס עיקול מסגרת"
+
+msgid "Titlebar Rounding Radius"
+msgstr "רדיוס עיקול שורת הכותרת"
+
+msgid "Repeat Gradient?"
+msgstr "לחזור על הגוון המדורג?"
+
+msgid "Vertical Repeat?"
+msgstr "חזרה אנכית?"
+
+msgid "Diagonal Repeat?"
+msgstr "חזרה אלכסונית?"
+
+msgid "Repeat Frequency"
+msgstr "תדירות חזרה"
+
+#. ========================
+msgid "Enable Title Part Pixmap?"
+msgstr "לאפשר מפת פיקסלים עבור חלק הכותרת?"
+
+msgid "Repeat Title Part Pixmap?"
+msgstr "לחזור על מפת הפיקסלים של חלק הכותרת?"
+
+msgid "Title Bar Part Pixmap"
+msgstr "מפת פיקסלים עבור חלק שורת הכותרת"
+
+msgid "Choose Titlebar Part Pixmap"
+msgstr "בחר מפת פיקסלים עבור חלק שורת הכותרת"
+
+#. ========================
+msgid "Enable Button Part Pixmap?"
+msgstr "לאפשר מפת פיקסלים עבור חלק הכפתורים?"
+
+msgid "Repeat Button Part Pixmap?"
+msgstr "לחזור על מפת הפיקסלים של חלק הכפתורים?"
+
+msgid "Button Part Pixmap"
+msgstr "מפת פיקסלים של חלק הכפתורים"
+
+msgid "Choose Button Part Pixmap"
+msgstr "בחר מפת פיקסלים עבור חלק הכפתורים"
+
+#. ========================
+msgid "Enable Titlebar Pixmap?"
+msgstr "לאפשר מפת פיקסלים עבור שורת הכותרת?"
+
+msgid "Repeat Titlebar Pixmap?"
+msgstr "לחזור על מפת הפיקסלים של שורת הכותרת?"
+
+msgid "Titlebar Pixmap"
+msgstr "מפת פיקסלים של שורת הכותרת"
+
+msgid "Choose Titlebar Pixmap"
+msgstr "בחר מפת פיקסלים עבור שורת הכותרת"
+
+msgid "Active/Inactive"
+msgstr "פעיל\\לא פעיל"
+
+msgid "Maximised"
+msgstr "מוגדל למקסימום"
+
+msgid "Corners"
+msgstr "פינות"
+
+msgid "Border Layout"
+msgstr "סידור גבולות"
+
+msgid "Left Bar"
+msgstr "פס שמאלי"
+
+msgid "Pixmaps"
+msgstr "מפות פיקסלים"
+
+msgid ""
+"Select\n"
+"Engine"
+msgstr ""
+"בחירת\n"
+"מנוע"
 
 msgid "Close Window"
 msgstr "סגור חלון"
@@ -52,6 +372,10 @@ msgstr "הדבק חלון"
 msgid "UnStick Window"
 msgstr "בטל הדבקת חלון"
 
+#, fuzzy
+msgid "Super Maximize Window"
+msgstr "הגדל חלון למקסימום"
+
 #, c-format
 msgid "The window \"%s\" is not responding."
 msgstr "החלון \"%s\" אינו מגיב."
@@ -59,6 +383,9 @@ msgstr "החלון \"%s\" אינו מגיב."
 msgid ""
 "Forcing this application to quit will cause you to lose any unsaved changes."
 msgstr "סגירת היישום בכפייה תביא לאובדן כל השינויים שלא נשמרו."
+
+msgid "_Cancel"
+msgstr "_ביטול"
 
 msgid "_Force Quit"
 msgstr "סגור ב_כפייה"
@@ -182,18 +509,6 @@ msgstr "מפות פיקסלים לכפתורים"
 msgid "Button"
 msgstr "כפתור"
 
-msgid "File"
-msgstr "קובץ"
-
-msgid "Preview"
-msgstr "תצוגה מקדימה"
-
-msgid "Clear"
-msgstr "נקה"
-
-msgid "Colors"
-msgstr "צבעים"
-
 msgid "Text Fill"
 msgstr "מילוי טקסט"
 
@@ -211,9 +526,6 @@ msgstr "צבע"
 
 msgid "Opacity"
 msgstr "אטימות"
-
-msgid "Radius"
-msgstr "רדיוס"
 
 msgid "X Offset"
 msgstr "הסטת X"
@@ -236,6 +548,7 @@ msgstr "הסטת כפתורים אופקית"
 msgid "Title-bar Object Layout"
 msgstr "סידור עצמים על פס הכותרת"
 
+#, fuzzy
 msgid ""
 "Use colons to separate left, center, and right.\n"
 "Anything after a third colon is ignored.\n"
@@ -243,6 +556,7 @@ msgid ""
 "I=Icon, T=Title, H=Help, M=Menu\n"
 "S=Shade, U/A=On Top(Up/Above)\n"
 "Y=Sticky, (#)=# pixels space, ex: (5)\n"
+"F=SuperMaximize\n"
 msgstr ""
 "השתמש בנקודתיים כדי להפריד בין שמאל, מרכז וימין.\n"
 "המערכת תתעלם מכל מה שאחרי המופע השלישי של נקודתיים.\n"
@@ -253,6 +567,9 @@ msgstr ""
 
 msgid "Export Theme..."
 msgstr "ייצא ערכה..."
+
+msgid "_Save"
+msgstr "_שמירה"
 
 msgid "Name:"
 msgstr "שם:"
@@ -331,9 +648,6 @@ msgstr "חלון פעיל"
 msgid "Inactive Window"
 msgstr "חלון לא פעיל"
 
-msgid "Title Bar"
-msgstr "שורת כותרת"
-
 msgid "Screenshot"
 msgstr "צילום מסך"
 
@@ -356,6 +670,9 @@ msgstr "הצג חלוניות הסבר מעל כפתורים"
 msgid "Use Decoration Cropping"
 msgstr "הפעל גיזום מסגרת"
 
+msgid "No Shade on Titlebar Scroll"
+msgstr ""
+
 msgid "Use Button Fade"
 msgstr "פייד על כפתורים"
 
@@ -375,6 +692,10 @@ msgid "Button Pulse Min Opacity %"
 msgstr "אחוז אטימות מזערי עבור הבהוב כפתור"
 
 msgid "Titlebar Double-Click Action"
+msgstr "פעולת הקלקה כפולה על שורת הכותרת"
+
+#, fuzzy
+msgid "Titlebar Middle-Click Action"
 msgstr "פעולת הקלקה כפולה על שורת הכותרת"
 
 msgid "Button Hover Cursor"
@@ -419,52 +740,21 @@ msgstr "עריכה"
 msgid "Import Theme..."
 msgstr "ייבא ערכה..."
 
+msgid "_Open"
+msgstr "_פתיחה"
+
 msgid "Search:"
 msgstr "חפש:"
 
-msgid "Fetching Themes"
-msgstr "מוריד ערכות"
+msgid "_Refresh"
+msgstr "_רענון"
 
-msgid ""
-"Fetching themes... \n"
-"This may take time depending on \n"
-"internet connection speed."
+msgid "_Delete"
 msgstr ""
-"מוריד ערכות... \n"
-"עלול להימשך זמן מה \n"
-"בהתאם למהירות החיבור."
 
-msgid ""
-"Here are the repositories that you can fetch Emerald Themes from. \n"
-"Fetching themes would fetch and import themes from SVN repositories \n"
-"You need Subversion package installed to use this feature."
-msgstr ""
-"כאן מוגדרים המאגרים מהם ניתן להוריד ערכות אמרלד. \n"
-"הורדת המאגרים תמשוך אותם ממאגרי SVN \n"
-"כדי להשתמש בתכונה זו יש להתקין את החבילה Subversion."
-
-msgid ""
-"This repository contains GPL'd themes that can be used under \n"
-"the terms of GNU GPL licence v2.0 or later \n"
-msgstr ""
-"מאגר זה כולל ערכות ברשיון GPL וניתן להשתמש בהן \n"
-"תחת כללי רשיון GNU GPL גירסה 2.0 ומעלה \n"
-
-msgid ""
-"This repository contains non-GPL'd themes. They might infringe \n"
-"copyrights and patent laws in some countries."
-msgstr ""
-"מאגר זה כולל ערכות שלא שוחררו תחת GPL. \n"
-"בכמה מדינות, הן עלולות להפר פטנטים וזכויות יוצרים."
-
-msgid ""
-"To activate Non-GPL repository please run the following in shell and accept "
-"the server certificate permanently: \n"
-"svn ls https://svn.generation.no/emerald-themes."
-msgstr ""
-"כדי להפעיל את מאגר הערכות ללא GPL יש להריץ את הפקודה הבאה בשורת הפקודה, "
-"ולאשר את קבלת התעודה מהשרת ללא הגבלת זמן: \n"
-"svn ls https://svn.generation.no/emerald-themes."
+#, fuzzy
+msgid "_Import..."
+msgstr "יצא..."
 
 msgid "Themes"
 msgstr "ערכות"
@@ -478,301 +768,49 @@ msgstr "הגדרות ערכות"
 msgid "Emerald Settings"
 msgstr "הגדרות אמרלד"
 
-msgid ""
-"Select\n"
-"Engine"
-msgstr ""
-"בחירת\n"
-"מנוע"
-
-msgid "Based on original gtk-window-decorator"
-msgstr "מבוסס על gtk-window-decorator"
-
-msgid "Round Top Left Corner"
-msgstr "עגל פינה שמאלית עליונה"
-
-msgid "Round Top Right Corner"
-msgstr "עגל פינה ימנית עליונה"
-
-msgid "Round Bottom Left Corner"
-msgstr "עגל פינה שמאלית תחתונה"
-
-msgid "Round Bottom Right Corner"
-msgstr "עגל פינה ימנית תחתונה"
-
-msgid "Rounding Radius"
-msgstr "רדיוס עיגול"
-
-msgid "Outer Frame Blend"
-msgstr "גוון חיצוני של המסגרת"
-
-msgid "Inner Frame Blend"
-msgstr "גוון פנימי של המסגרת"
-
-msgid "Outer Titlebar Blend"
-msgstr "גוון חיצוני של שורת הכותרת"
-
-msgid "Inner Titlebar Blend"
-msgstr "גוון פנימי של שורת הכותרת"
-
-msgid "Titlebar Separator"
-msgstr "קו מפריד מתחת לשורת הכותרת"
-
-msgid "Frame Outline"
-msgstr "קו מתאר עבור המסגרת"
-
-msgid "Frame Highlight"
-msgstr "הדגשת מסגרת"
-
-msgid "Frame Shadow"
-msgstr "צל מסגרת"
-
-msgid "Contents Outline"
-msgstr "קו מתאר עבור התוכן"
-
-msgid "Contents Highlight"
-msgstr "הדגשת תוכן"
-
-msgid "Contents Shadow"
-msgstr "צל תוכן"
-
-msgid "Frame"
-msgstr "מסגרת"
-
-msgid "Based on original legacy"
-msgstr "מבוסס על המנוע הישן"
-
-msgid "Designed to be vista-ish in nature"
-msgstr "מתוכנן על מנת להידמות לויסטה"
-
-msgid "Base"
-msgstr "בסיס"
-
-msgid "Glow"
-msgstr "זוהר"
-
-msgid "Sides"
-msgstr "צדדים"
-
-msgid "Everything done with customizable pixmaps!"
-msgstr "ניתן לשנות הכל בעזרת מפות פיקסלים!"
-
-msgid "Top Rounding Radius"
-msgstr "רדיוס עיגול עליון"
-
-msgid "Bottom Rounding Radius"
-msgstr "רדיוס עיגול תחתון"
-
-#. Style : Use Tiled or Scaled pixmaps
-msgid "Scaled"
-msgstr "מותאם לגודל"
-
-msgid "Not adjustable"
-msgstr "בלתי ניתן לשינוי"
-
-msgid "Same as Active"
-msgstr "כמו בחלון פעיל"
-
-msgid "Pixmap"
-msgstr "מפת פיקסלים"
-
-msgid "Tiled/Scaled"
-msgstr "פרוש\\מותאם"
-
-msgid "Width Override"
-msgstr "דריסת רוחב"
-
-msgid "Height Override"
-msgstr "דריסת גובה"
-
-msgid "Glassy effects for your windows"
-msgstr "אפקט זגוגית לחלונות"
-
-msgid "Glow Height"
-msgstr "גובה זוהר"
-
-msgid "Frame Base Color"
-msgstr "צבע בסיס של המסגרת"
-
-msgid "Upper Titlebar Glow"
-msgstr "זוהר עבור שורת כותרת עליונה"
-
-msgid "Upper Glass Glow"
-msgstr "זוהר-זגוגית עליון"
-
-msgid "Lower Glass Glow"
-msgstr "זוהר-זגוגית תחתון"
-
-msgid "Middle Glass Glow"
-msgstr "זוהר-זגוגית אמצעי"
-
-msgid "Outer Glass Glow"
-msgstr "זוהר-זגוגית חיצוני"
-
-msgid "Multiple gradients with somewhat glassy features too"
-msgstr "צבעים מדורגים מרובים עם כמה אפקטים של זגוגית"
-
-msgid "Left Blend"
-msgstr "גוון שמאלי"
-
-msgid "Middle Blend"
-msgstr "גוון אמצעי"
-
-msgid "Right Blend"
-msgstr "גוון ימני"
-
-msgid "Contrast"
-msgstr "ניגודיות"
-
-msgid "(Color)"
-msgstr "(צבע)"
-
-msgid "(Alpha)"
-msgstr "(אלפא)"
-
-msgid "Notch"
-msgstr "חריץ"
-
-msgid "Position"
-msgstr "מיקום"
-
-msgid "Curve"
-msgstr "עיקול"
-
-msgid "Offset"
-msgstr "הסטה"
-
-msgid "Use Glow"
-msgstr "השתמש בזוהר"
-
-msgid "Title Glow"
-msgstr "זוהר עבור הכותרת"
-
-msgid "Evolved from the legacy engine"
-msgstr "פותח על בסיס המנוע הישן"
-
-msgid "Border Gap"
-msgstr "פער גבול"
-
-msgid "Show Border when maximised?"
-msgstr "להציג גבול בעת הגדלה למקסימום?"
-
-msgid "Show when minimised?"
-msgstr "להציג בעת מזעור?"
-
-msgid "Minimised Border Size"
-msgstr "גודל גבול ממוזער"
-
-msgid "Enable Left Bar Dip?"
-msgstr "לאפשר שקיעה של הפס השמאלי?"
-
-msgid "Left Bar Radius"
-msgstr "רדיוס הפס השמאלי"
-
-msgid "Enable Lower Bulge? (Useless at the moment, but will be used soon)"
-msgstr "לאפשר הבלטה תחתונה? (לא בשימוש כרגע, יתווסף בקרוב)"
-
-msgid "Top Corner Offset (%)"
-msgstr "הסטת פינה עליונה (%)"
-
-msgid "Enable Title Bar Dip?"
-msgstr "לאפשר שקיעה של שורת הכותרת?"
-
-msgid "Enable Button Part?"
-msgstr "לאפשר את חלק הכפתורים?"
-
-msgid "Title Part Width"
-msgstr "רוחב חלק הכותרת"
-
-msgid "Button Part Width)"
-msgstr "רוחב חלק הכפתורים"
-
-msgid "Dip Corners Radius)"
-msgstr "רדיוס שקיעת פינות"
-
-msgid "Round Inside Corners As well?"
-msgstr "לעגל גם בתוך הפינות?"
-
-msgid "Enable Different Maximised Colors?"
-msgstr "לאפשר צבעים שונים בעת הגדלה למקסימום?"
-
-msgid "Turn Off repeating gradients when maximised?"
-msgstr "לכבות גוונים מדורגים חוזרים בעת הגדלה למקסימום?"
-
-msgid "Round Top Left Corner?"
-msgstr "פינה שמאלית עליונה עגולה?"
-
-msgid "Frame Rounding Radius"
-msgstr "רגיוס עיקול מסגרת"
-
-msgid "Titlebar Rounding Radius"
-msgstr "רדיוס עיקול שורת הכותרת"
-
-msgid "Repeat Gradient?"
-msgstr "לחזור על הגוון המדורג?"
-
-msgid "Vertical Repeat?"
-msgstr "חזרה אנכית?"
-
-msgid "Diagonal Repeat?"
-msgstr "חזרה אלכסונית?"
-
-msgid "Repeat Frequency"
-msgstr "תדירות חזרה"
-
-#. /////////////////////
-msgid "Enable Title Part Pixmap?"
-msgstr "לאפשר מפת פיקסלים עבור חלק הכותרת?"
-
-msgid "Repeat Title Part Pixmap?"
-msgstr "לחזור על מפת הפיקסלים של חלק הכותרת?"
-
-msgid "Title Bar Part Pixmap"
-msgstr "מפת פיקסלים עבור חלק שורת הכותרת"
-
-msgid "Choose Titlebar Part Pixmap"
-msgstr "בחר מפת פיקסלים עבור חלק שורת הכותרת"
-
-#. /////////////////////////
-msgid "Enable Button Part Pixmap?"
-msgstr "לאפשר מפת פיקסלים עבור חלק הכפתורים?"
-
-msgid "Repeat Button Part Pixmap?"
-msgstr "לחזור על מפת הפיקסלים של חלק הכפתורים?"
-
-msgid "Button Part Pixmap"
-msgstr "מפת פיקסלים של חלק הכפתורים"
-
-msgid "Choose Button Part Pixmap"
-msgstr "בחר מפת פיקסלים עבור חלק הכפתורים"
-
-#. /////////////////////////
-msgid "Enable Titlebar Pixmap?"
-msgstr "לאפשר מפת פיקסלים עבור שורת הכותרת?"
-
-msgid "Repeat Titlebar Pixmap?"
-msgstr "לחזור על מפת הפיקסלים של שורת הכותרת?"
-
-msgid "Titlebar Pixmap"
-msgstr "מפת פיקסלים של שורת הכותרת"
-
-msgid "Choose Titlebar Pixmap"
-msgstr "בחר מפת פיקסלים עבור שורת הכותרת"
-
-msgid "Active/Inactive"
-msgstr "פעיל\\לא פעיל"
-
-msgid "Maximised"
-msgstr "מוגדל למקסימום"
-
-msgid "Corners"
-msgstr "פינות"
-
-msgid "Border Layout"
-msgstr "סידור גבולות"
-
-msgid "Left Bar"
-msgstr "פס שמאלי"
-
-msgid "Pixmaps"
-msgstr "מפות פיקסלים"
+msgid "_Quit"
+msgstr "י_ציאה"
+
+#~ msgid "Fetching Themes"
+#~ msgstr "מוריד ערכות"
+
+#~ msgid ""
+#~ "Fetching themes... \n"
+#~ "This may take time depending on \n"
+#~ "internet connection speed."
+#~ msgstr ""
+#~ "מוריד ערכות... \n"
+#~ "עלול להימשך זמן מה \n"
+#~ "בהתאם למהירות החיבור."
+
+#~ msgid ""
+#~ "Here are the repositories that you can fetch Emerald Themes from. \n"
+#~ "Fetching themes would fetch and import themes from SVN repositories \n"
+#~ "You need Subversion package installed to use this feature."
+#~ msgstr ""
+#~ "כאן מוגדרים המאגרים מהם ניתן להוריד ערכות אמרלד. \n"
+#~ "הורדת המאגרים תמשוך אותם ממאגרי SVN \n"
+#~ "כדי להשתמש בתכונה זו יש להתקין את החבילה Subversion."
+
+#~ msgid ""
+#~ "This repository contains GPL'd themes that can be used under \n"
+#~ "the terms of GNU GPL licence v2.0 or later \n"
+#~ msgstr ""
+#~ "מאגר זה כולל ערכות ברשיון GPL וניתן להשתמש בהן \n"
+#~ "תחת כללי רשיון GNU GPL גירסה 2.0 ומעלה \n"
+
+#~ msgid ""
+#~ "This repository contains non-GPL'd themes. They might infringe \n"
+#~ "copyrights and patent laws in some countries."
+#~ msgstr ""
+#~ "מאגר זה כולל ערכות שלא שוחררו תחת GPL. \n"
+#~ "בכמה מדינות, הן עלולות להפר פטנטים וזכויות יוצרים."
+
+#~ msgid ""
+#~ "To activate Non-GPL repository please run the following in shell and "
+#~ "accept the server certificate permanently: \n"
+#~ "svn ls https://svn.generation.no/emerald-themes."
+#~ msgstr ""
+#~ "כדי להפעיל את מאגר הערכות ללא GPL יש להריץ את הפקודה הבאה בשורת הפקודה, "
+#~ "ולאשר את קבלת התעודה מהשרת ללא הגבלת זמן: \n"
+#~ "svn ls https://svn.generation.no/emerald-themes."

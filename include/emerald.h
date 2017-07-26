@@ -9,8 +9,10 @@
 #include <X11/Xlib.h>
 #include <X11/Xatom.h>
 #include <X11/Xregion.h>
-#include <X11/cursorfont.h>
 #include <X11/extensions/Xrender.h>
+#ifdef HAVE_XINPUT2
+#include <X11/extensions/XInput2.h>
+#endif
 
 /*
 #ifndef GDK_DISABLE_DEPRECATED
@@ -25,8 +27,6 @@
 #include <gtk/gtk.h>
 #include <gtk/gtkwindow.h>
 #include <gdk/gdkx.h>
-
-#define IS_VALID_SURFACE(o) (o && cairo_surface_get_reference_count(o) > 0)
 
 #ifdef USE_DBUS
 #define DBUS_API_SUBJECT_TO_CHANGE
@@ -51,7 +51,7 @@
 #include <dlfcn.h>
 #include <glib.h>
 #include <glib/gstdio.h>
-#include <string.h>
+#include <glib/gprintf.h>
 #include <stdlib.h>
 #include <math.h>
 #include <limits.h>
@@ -158,6 +158,7 @@ typedef struct _window_settings
     gchar * tobj_layout;
 
     gint double_click_action;
+    gint middle_click_action;
     gint button_hover_cursor;
     gboolean titlebar_no_scroll_shade;
 

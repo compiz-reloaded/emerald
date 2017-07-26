@@ -1,3 +1,23 @@
+Release 0.8.14 (2017-04-18 Scott Moreau <oreaus@gmail.com>)
+==================================================================
+COMPIZ-RELOADED
+
+Updated french translation
+
+Fix wrong border extents
+
+Updated catalan translation
+
+Fix oversized buttons
+
+Fix crash when special characters are displayed in titlebar
+
+Fix various gtk/gdk problems
+
+Respect GTK+ double-click speed
+
+Allow configurable middle-click titlebar actions
+
 Release 0.8.12.4 (2016-04-04 Sorokin Alexei <sor.alexei@meowr.ru>)
 ==================================================================
 COMPIZ-RELOADED

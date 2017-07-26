@@ -1,23 +1,344 @@
-# translation of emerald-new.po to
-# Emerald Window Decorator.
-# Copyright (C) 2006
-# This file is distributed under the same license as the Emerald package.
-#
+# Turkish translation for emerald
+# Copyright (C) 2006 The Free Software Foundation, Inc.
+# This file is distributed under the same license as the emerald package.
 # Suat SARIALP <muhendis.suat@gmail.com>, 2006.
 # Serdar Soytetir <tulliana@gmail.com>, 2007.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: emerald-new\n"
-"Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
-"POT-Creation-Date: 2009-03-24 08:14+0100\n"
+"Project-Id-Version: emerald\n"
+"Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/emerald/issues\n"
+"POT-Creation-Date: 2017-05-04 19:29+0300\n"
 "PO-Revision-Date: 2007-09-24 05:41+0300\n"
 "Last-Translator: Serdar Soytetir\n"
 "Language-Team:  Turkish <tulliana@gmail.com>\n"
+"Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
 "Plural-Forms:  nplurals=1; plural=0;\n"
+
+msgid "Based on original gtk-window-decorator"
+msgstr "Orjinal gtk-window-decorator baz alınmıştır"
+
+msgid "Round Top Left Corner"
+msgstr "Üst sol köşeyi yuvarla"
+
+msgid "Round Top Right Corner"
+msgstr "Üst sağ köşeyi yuvarla"
+
+msgid "Round Bottom Left Corner"
+msgstr "Alt sol köşeyi yuvarla"
+
+msgid "Round Bottom Right Corner"
+msgstr "Alt sağ köşeyi yuvarla"
+
+msgid "Rounding Radius"
+msgstr "Yuvarlama yarıçapı"
+
+msgid "Colors"
+msgstr "Renkler"
+
+msgid "Outer Frame Blend"
+msgstr "Dış çerçeve uyumu"
+
+msgid "Inner Frame Blend"
+msgstr "İç çerçeve uyumu"
+
+msgid "Outer Titlebar Blend"
+msgstr "Başlık çubuğunun dış taraf uyumu"
+
+msgid "Inner Titlebar Blend"
+msgstr "Başlık çubuğunun iç taraf uyumu"
+
+msgid "Titlebar Separator"
+msgstr "Başlık çubuğu ayracı"
+
+msgid "Frame Outline"
+msgstr "Çerçeve hatları"
+
+msgid "Frame Highlight"
+msgstr "Çerçeve vurgulama"
+
+msgid "Frame Shadow"
+msgstr "Çerçeve gölgelendirme"
+
+msgid "Contents Outline"
+msgstr "İçerik hatları"
+
+msgid "Contents Highlight"
+msgstr "Içerik vurgulaması"
+
+msgid "Contents Shadow"
+msgstr "İçerik gölgelendirme"
+
+msgid "Frame"
+msgstr "Çerçeve"
+
+msgid "Based on original legacy"
+msgstr "Orijinali  baz alınmıştır"
+
+msgid "Title Bar"
+msgstr "Başlık çubuğu"
+
+msgid "Designed to be vista-ish in nature"
+msgstr "Vista gibi olması için tasarlandı"
+
+msgid "Base"
+msgstr "Temel"
+
+msgid "Glow"
+msgstr "Parıltı"
+
+msgid "Sides"
+msgstr "Kenarlar"
+
+msgid "Everything done with customizable pixmaps!"
+msgstr "Kişileştirebilir resimler ile herşey hazırlandı!"
+
+msgid "Top Rounding Radius"
+msgstr "Üst yuvarlama yarıçapı"
+
+msgid "Bottom Rounding Radius"
+msgstr "Alt yuvarlama yarıçapı"
+
+msgid "_Clear"
+msgstr "_Temizle"
+
+#. style: use tiled or scaled pixmaps
+msgid "Scaled"
+msgstr "Ölçeklenmiş"
+
+msgid "Not adjustable"
+msgstr "Ayarlanabilir değil"
+
+msgid "Same as Active"
+msgstr "Etkinle eş değer"
+
+msgid "Pixmap"
+msgstr "Resim"
+
+msgid "File"
+msgstr "Dosya"
+
+msgid "Preview"
+msgstr "Önizleme"
+
+msgid "Clear"
+msgstr "Temizle"
+
+msgid "Tiled/Scaled"
+msgstr "Döşenmiş/Ölçeklenmiş"
+
+msgid "Width Override"
+msgstr "Geçersiz genişlik"
+
+msgid "Height Override"
+msgstr "Geçersiz yükseklik"
+
+msgid "Glassy effects for your windows"
+msgstr "Pencereleriniz için donuk cam efekti"
+
+msgid "Glow Height"
+msgstr "Parıltı yüksekliği"
+
+msgid "Frame Base Color"
+msgstr "Temel çerveve rengi"
+
+msgid "Upper Titlebar Glow"
+msgstr "Yüksek başlık çubuğu parıltısı"
+
+msgid "Upper Glass Glow"
+msgstr "Yüksek cam parıltısı"
+
+msgid "Lower Glass Glow"
+msgstr "Düşük cam parıltısı"
+
+msgid "Middle Glass Glow"
+msgstr "Ara/orta cam parıltısı"
+
+msgid "Outer Glass Glow"
+msgstr "Dış cam parıltısı"
+
+msgid "Multiple gradients with somewhat glassy features too"
+msgstr "Bazı camsı özelliklerle çoklu yükselmeler"
+
+msgid "Left Blend"
+msgstr "Sol uyumu"
+
+msgid "Middle Blend"
+msgstr "Ara/orta uyumu"
+
+msgid "Right Blend"
+msgstr "Sağ uyumu"
+
+msgid "Contrast"
+msgstr "Kontras"
+
+msgid "(Color)"
+msgstr "(Renk)"
+
+msgid "(Alpha)"
+msgstr "(Alfa)"
+
+msgid "Notch"
+msgstr "Çentik"
+
+msgid "Position"
+msgstr "Pozisyon"
+
+msgid "Curve"
+msgstr "Eğri"
+
+msgid "Offset"
+msgstr "Denge"
+
+msgid "Use Glow"
+msgstr "Parıltıyı kullan"
+
+msgid "Title Glow"
+msgstr "Başlık parıltısı"
+
+msgid "Radius"
+msgstr "Yarıçap"
+
+msgid "Evolved from the legacy engine"
+msgstr "Legacy motoru üzerine geliştirildi"
+
+msgid "Border Gap"
+msgstr "Kenar boşluğu"
+
+msgid "Show Border when maximised?"
+msgstr "Büyültüldüğünde çerçeveyi göster?"
+
+msgid "Show when minimised?"
+msgstr "Küçültüğünde göster?"
+
+msgid "Minimised Border Size"
+msgstr "Küçültülmüş kenar boyutu"
+
+msgid "Enable Left Bar Dip?"
+msgstr "Sol çubuk derinliğini etkinleştir"
+
+msgid "Left Bar Radius"
+msgstr "Sol çubuk yarıçapı"
+
+msgid "Enable Lower Bulge? (Useless at the moment, but will be used soon)"
+msgstr ""
+"Düşük seviye kabarıklığı etkinleştir? (Şu an için kullanışsız, fakat "
+"ileride...)"
+
+msgid "Top Corner Offset (%)"
+msgstr "Üst köşe dengesi (%)"
+
+msgid "Enable Title Bar Dip?"
+msgstr "İçerik çubuğu derinliğini etkinleştir"
+
+msgid "Enable Button Part?"
+msgstr "Düğme kısımını etkinleştir?"
+
+msgid "Title Part Width"
+msgstr "Başlık kısmı genişliği"
+
+msgid "Button Part Width)"
+msgstr "Düğme kısmı genişliği)"
+
+msgid "Dip Corners Radius)"
+msgstr "Köşelerin yuvarlama yarıçapı)"
+
+msgid "Round Inside Corners As well?"
+msgstr "İç taraftaki köşeleri de aynı şekilde yuvarla?"
+
+msgid "Enable Different Maximised Colors?"
+msgstr "Büyültüldüğünde farklı renkleri etkinleştir?"
+
+msgid "Turn Off repeating gradients when maximised?"
+msgstr "Büyültüldüğünde yükselme tekrarlamasını kapat?"
+
+msgid "Round Top Left Corner?"
+msgstr "Sol üst köşe yuvarlaması?"
+
+msgid "Frame Rounding Radius"
+msgstr "Çerçeve yuvarlama yarıçapı"
+
+msgid "Titlebar Rounding Radius"
+msgstr "Başlık çubuğunun yuvarlama yarıçapı"
+
+msgid "Repeat Gradient?"
+msgstr "Yükselmeyi yinele?"
+
+msgid "Vertical Repeat?"
+msgstr "Düşey yinele?"
+
+msgid "Diagonal Repeat?"
+msgstr "Çapraz yinele?"
+
+msgid "Repeat Frequency"
+msgstr "Frekansı yinele"
+
+#. ========================
+msgid "Enable Title Part Pixmap?"
+msgstr "İçerik resim kısmını etkinleştir"
+
+msgid "Repeat Title Part Pixmap?"
+msgstr "Başlık resim kısmını yinele?"
+
+msgid "Title Bar Part Pixmap"
+msgstr "Başlık çubuğu resmi"
+
+msgid "Choose Titlebar Part Pixmap"
+msgstr "Başlık çubuğu resim kısmını seçin"
+
+#. ========================
+msgid "Enable Button Part Pixmap?"
+msgstr "Düğme resim kısmını etkinleştir?"
+
+msgid "Repeat Button Part Pixmap?"
+msgstr "Düğme resim kısmını yinele?"
+
+msgid "Button Part Pixmap"
+msgstr "Düğme resim kısmı"
+
+msgid "Choose Button Part Pixmap"
+msgstr "Düğme resim kısmını seçin"
+
+#. ========================
+msgid "Enable Titlebar Pixmap?"
+msgstr "Başlık çubuğu resmini etkinleştir?"
+
+msgid "Repeat Titlebar Pixmap?"
+msgstr "Başlık çubuğu resim kısmını yinele?"
+
+msgid "Titlebar Pixmap"
+msgstr "Başlık çubuğu resmi"
+
+msgid "Choose Titlebar Pixmap"
+msgstr "Başlık çubuğu resmini seçin"
+
+msgid "Active/Inactive"
+msgstr "Etkin/Etkin değil"
+
+msgid "Maximised"
+msgstr "Büyültülmüş"
+
+msgid "Corners"
+msgstr "Köşeler"
+
+msgid "Border Layout"
+msgstr "Kenar Düzeni"
+
+msgid "Left Bar"
+msgstr "Sol çubuk"
+
+msgid "Pixmaps"
+msgstr "Resimler"
+
+msgid ""
+"Select\n"
+"Engine"
+msgstr ""
+"Seç\n"
+"Motor"
 
 msgid "Close Window"
 msgstr "Pencereyi Kapat"
@@ -55,6 +376,10 @@ msgstr "Pencereyi Yapıştır"
 msgid "UnStick Window"
 msgstr "Pencereyi Yapıştırma"
 
+#, fuzzy
+msgid "Super Maximize Window"
+msgstr "Pencereyi Büyüt"
+
 #, c-format
 msgid "The window \"%s\" is not responding."
 msgstr "\"%s\" penceresi yanıt vermiyor."
@@ -64,6 +389,9 @@ msgid ""
 msgstr ""
 "Bu uygulamadan çıkmayı zorlamak, kaydedilmemiş değişikliklerin "
 "kaybedilmesine neden olur."
+
+msgid "_Cancel"
+msgstr "_İptal Et"
 
 msgid "_Force Quit"
 msgstr "_Çıkmayı Zorla"
@@ -187,18 +515,6 @@ msgstr "Düğme resimleri"
 msgid "Button"
 msgstr "Düğme"
 
-msgid "File"
-msgstr "Dosya"
-
-msgid "Preview"
-msgstr "Önizleme"
-
-msgid "Clear"
-msgstr "Temizle"
-
-msgid "Colors"
-msgstr "Renkler"
-
 msgid "Text Fill"
 msgstr "Metin dolgunluğu"
 
@@ -216,9 +532,6 @@ msgstr "Renk"
 
 msgid "Opacity"
 msgstr "Saydamlık"
-
-msgid "Radius"
-msgstr "Yarıçap"
 
 msgid "X Offset"
 msgstr "X Dengesi"
@@ -241,6 +554,7 @@ msgstr "Yatay düğme dengesi"
 msgid "Title-bar Object Layout"
 msgstr "Başlık çubuğu nesne düzeni"
 
+#, fuzzy
 msgid ""
 "Use colons to separate left, center, and right.\n"
 "Anything after a third colon is ignored.\n"
@@ -248,6 +562,7 @@ msgid ""
 "I=Icon, T=Title, H=Help, M=Menu\n"
 "S=Shade, U/A=On Top(Up/Above)\n"
 "Y=Sticky, (#)=# pixels space, ex: (5)\n"
+"F=SuperMaximize\n"
 msgstr ""
 "Solu, merkezi ve sağı ayırmada ':' kullan\n"
 "3. ':'den sonrası yoksayılır\n"
@@ -258,6 +573,9 @@ msgstr ""
 
 msgid "Export Theme..."
 msgstr "Temayı dışa aktar..."
+
+msgid "_Save"
+msgstr "_Kaydet"
 
 msgid "Name:"
 msgstr "İsim:"
@@ -335,9 +653,6 @@ msgstr "Etkin pencere"
 msgid "Inactive Window"
 msgstr "Etkisiz pencere"
 
-msgid "Title Bar"
-msgstr "Başlık çubuğu"
-
 msgid "Screenshot"
 msgstr "Ekran görüntüsü"
 
@@ -360,6 +675,9 @@ msgstr "Düğmeler için ipucu balonlarını göster"
 msgid "Use Decoration Cropping"
 msgstr "Dekor kırpmayı kullan"
 
+msgid "No Shade on Titlebar Scroll"
+msgstr ""
+
 msgid "Use Button Fade"
 msgstr "Düğmelerde solmayı kullan"
 
@@ -379,6 +697,10 @@ msgid "Button Pulse Min Opacity %"
 msgstr "Düğme darbesinin  en düşük saydamlığı %"
 
 msgid "Titlebar Double-Click Action"
+msgstr "Başlık çubuğunun çift tıklanmaya tepkisi"
+
+#, fuzzy
+msgid "Titlebar Middle-Click Action"
 msgstr "Başlık çubuğunun çift tıklanmaya tepkisi"
 
 msgid "Button Hover Cursor"
@@ -423,53 +745,21 @@ msgstr "Düzenle"
 msgid "Import Theme..."
 msgstr "İçeriye Tema Aktar..."
 
+msgid "_Open"
+msgstr "_Aç"
+
 msgid "Search:"
 msgstr "Ara:"
 
-msgid "Fetching Themes"
-msgstr "Temalar Alınıyor"
+msgid "_Refresh"
+msgstr "_Tazele"
 
-msgid ""
-"Fetching themes... \n"
-"This may take time depending on \n"
-"internet connection speed."
-msgstr ""
-"Temalar alınıyor... \n"
-"Bu işlem bağlantı hızınıza bağlı olarak \n"
-"biraz vakit alabilir."
+msgid "_Delete"
+msgstr "_Sil"
 
-msgid ""
-"Here are the repositories that you can fetch Emerald Themes from. \n"
-"Fetching themes would fetch and import themes from SVN repositories \n"
-"You need Subversion package installed to use this feature."
-msgstr ""
-"Emerald temalarını alabileceğiniz depolar. \n"
-"Tema alımı, SVN deposundan temaların alınması \n"
-"ve içeriye aktarılması işlemlerini gerçekleştirir\n"
-"Bu özelliği kullanmak için subversion paketinin kurulu olması gerekir."
-
-msgid ""
-"This repository contains GPL'd themes that can be used under \n"
-"the terms of GNU GPL licence v2.0 or later \n"
-msgstr ""
-"Bu depo GNU genel kamu lisansı v2.0 veya daha yeni \n"
-"kullanım şartları altında kullanabileceğiniz temaları içerir \n"
-
-msgid ""
-"This repository contains non-GPL'd themes. They might infringe \n"
-"copyrights and patent laws in some countries."
-msgstr ""
-"Bu depo GPL olmayan temaları içerir.Bazı ülkelerde \n"
-"telif hakları ve patent hukunu ihlal ettiği kabul edilebilir. "
-
-msgid ""
-"To activate Non-GPL repository please run the following in shell and accept "
-"the server certificate permanently: \n"
-"svn ls https://svn.generation.no/emerald-themes."
-msgstr ""
-"GPL olmayan depoyu ekinleştirmek için şu komutu kabukta çalıştırın ve sunucu "
-"sertifikasını kalıcı olarak kabul edin: \n"
-"svn ls https://svn.generation.no/emerald-themes."
+#, fuzzy
+msgid "_Import..."
+msgstr "Dışa aktar..."
 
 msgid "Themes"
 msgstr "Temalar"
@@ -483,306 +773,53 @@ msgstr "Tema ayarları"
 msgid "Emerald Settings"
 msgstr "Emerald ayarları"
 
-msgid ""
-"Select\n"
-"Engine"
-msgstr ""
-"Seç\n"
-"Motor"
-
-msgid "Based on original gtk-window-decorator"
-msgstr "Orjinal gtk-window-decorator baz alınmıştır"
-
-msgid "Round Top Left Corner"
-msgstr "Üst sol köşeyi yuvarla"
-
-msgid "Round Top Right Corner"
-msgstr "Üst sağ köşeyi yuvarla"
-
-msgid "Round Bottom Left Corner"
-msgstr "Alt sol köşeyi yuvarla"
-
-msgid "Round Bottom Right Corner"
-msgstr "Alt sağ köşeyi yuvarla"
-
-msgid "Rounding Radius"
-msgstr "Yuvarlama yarıçapı"
-
-msgid "Outer Frame Blend"
-msgstr "Dış çerçeve uyumu"
-
-msgid "Inner Frame Blend"
-msgstr "İç çerçeve uyumu"
-
-msgid "Outer Titlebar Blend"
-msgstr "Başlık çubuğunun dış taraf uyumu"
-
-msgid "Inner Titlebar Blend"
-msgstr "Başlık çubuğunun iç taraf uyumu"
-
-msgid "Titlebar Separator"
-msgstr "Başlık çubuğu ayracı"
-
-msgid "Frame Outline"
-msgstr "Çerçeve hatları"
-
-msgid "Frame Highlight"
-msgstr "Çerçeve vurgulama"
-
-msgid "Frame Shadow"
-msgstr "Çerçeve gölgelendirme"
-
-msgid "Contents Outline"
-msgstr "İçerik hatları"
-
-msgid "Contents Highlight"
-msgstr "Içerik vurgulaması"
-
-msgid "Contents Shadow"
-msgstr "İçerik gölgelendirme"
-
-msgid "Frame"
-msgstr "Çerçeve"
-
-msgid "Based on original legacy"
-msgstr "Orijinali  baz alınmıştır"
-
-msgid "Designed to be vista-ish in nature"
-msgstr "Vista gibi olması için tasarlandı"
-
-msgid "Base"
-msgstr "Temel"
-
-msgid "Glow"
-msgstr "Parıltı"
-
-msgid "Sides"
-msgstr "Kenarlar"
-
-msgid "Everything done with customizable pixmaps!"
-msgstr "Kişileştirebilir resimler ile herşey hazırlandı!"
-
-msgid "Top Rounding Radius"
-msgstr "Üst yuvarlama yarıçapı"
-
-msgid "Bottom Rounding Radius"
-msgstr "Alt yuvarlama yarıçapı"
-
-#. Style : Use Tiled or Scaled pixmaps
-msgid "Scaled"
-msgstr "Ölçeklenmiş"
-
-msgid "Not adjustable"
-msgstr "Ayarlanabilir değil"
-
-msgid "Same as Active"
-msgstr "Etkinle eş değer"
-
-msgid "Pixmap"
-msgstr "Resim"
-
-msgid "Tiled/Scaled"
-msgstr "Döşenmiş/Ölçeklenmiş"
-
-msgid "Width Override"
-msgstr "Geçersiz genişlik"
-
-msgid "Height Override"
-msgstr "Geçersiz yükseklik"
-
-msgid "Glassy effects for your windows"
-msgstr "Pencereleriniz için donuk cam efekti"
-
-msgid "Glow Height"
-msgstr "Parıltı yüksekliği"
-
-msgid "Frame Base Color"
-msgstr "Temel çerveve rengi"
-
-msgid "Upper Titlebar Glow"
-msgstr "Yüksek başlık çubuğu parıltısı"
-
-msgid "Upper Glass Glow"
-msgstr "Yüksek cam parıltısı"
-
-msgid "Lower Glass Glow"
-msgstr "Düşük cam parıltısı"
-
-msgid "Middle Glass Glow"
-msgstr "Ara/orta cam parıltısı"
-
-msgid "Outer Glass Glow"
-msgstr "Dış cam parıltısı"
-
-msgid "Multiple gradients with somewhat glassy features too"
-msgstr "Bazı camsı özelliklerle çoklu yükselmeler"
-
-msgid "Left Blend"
-msgstr "Sol uyumu"
-
-msgid "Middle Blend"
-msgstr "Ara/orta uyumu"
-
-msgid "Right Blend"
-msgstr "Sağ uyumu"
-
-msgid "Contrast"
-msgstr "Kontras"
-
-msgid "(Color)"
-msgstr "(Renk)"
-
-msgid "(Alpha)"
-msgstr "(Alfa)"
-
-msgid "Notch"
-msgstr "Çentik"
-
-msgid "Position"
-msgstr "Pozisyon"
-
-msgid "Curve"
-msgstr "Eğri"
-
-msgid "Offset"
-msgstr "Denge"
-
-msgid "Use Glow"
-msgstr "Parıltıyı kullan"
-
-msgid "Title Glow"
-msgstr "Başlık parıltısı"
-
-msgid "Evolved from the legacy engine"
-msgstr "Legacy motoru üzerine geliştirildi"
-
-msgid "Border Gap"
-msgstr "Kenar boşluğu"
-
-msgid "Show Border when maximised?"
-msgstr "Büyültüldüğünde çerçeveyi göster?"
-
-msgid "Show when minimised?"
-msgstr "Küçültüğünde göster?"
-
-msgid "Minimised Border Size"
-msgstr "Küçültülmüş kenar boyutu"
-
-msgid "Enable Left Bar Dip?"
-msgstr "Sol çubuk derinliğini etkinleştir"
-
-msgid "Left Bar Radius"
-msgstr "Sol çubuk yarıçapı"
-
-msgid "Enable Lower Bulge? (Useless at the moment, but will be used soon)"
-msgstr ""
-"Düşük seviye kabarıklığı etkinleştir? (Şu an için kullanışsız, fakat "
-"ileride...)"
-
-msgid "Top Corner Offset (%)"
-msgstr "Üst köşe dengesi (%)"
-
-msgid "Enable Title Bar Dip?"
-msgstr "İçerik çubuğu derinliğini etkinleştir"
-
-msgid "Enable Button Part?"
-msgstr "Düğme kısımını etkinleştir?"
-
-msgid "Title Part Width"
-msgstr "Başlık kısmı genişliği"
-
-msgid "Button Part Width)"
-msgstr "Düğme kısmı genişliği)"
-
-msgid "Dip Corners Radius)"
-msgstr "Köşelerin yuvarlama yarıçapı)"
-
-msgid "Round Inside Corners As well?"
-msgstr "İç taraftaki köşeleri de aynı şekilde yuvarla?"
-
-msgid "Enable Different Maximised Colors?"
-msgstr "Büyültüldüğünde farklı renkleri etkinleştir?"
-
-msgid "Turn Off repeating gradients when maximised?"
-msgstr "Büyültüldüğünde yükselme tekrarlamasını kapat?"
-
-msgid "Round Top Left Corner?"
-msgstr "Sol üst köşe yuvarlaması?"
-
-msgid "Frame Rounding Radius"
-msgstr "Çerçeve yuvarlama yarıçapı"
-
-msgid "Titlebar Rounding Radius"
-msgstr "Başlık çubuğunun yuvarlama yarıçapı"
-
-msgid "Repeat Gradient?"
-msgstr "Yükselmeyi yinele?"
-
-msgid "Vertical Repeat?"
-msgstr "Düşey yinele?"
-
-msgid "Diagonal Repeat?"
-msgstr "Çapraz yinele?"
-
-msgid "Repeat Frequency"
-msgstr "Frekansı yinele"
-
-#. /////////////////////
-msgid "Enable Title Part Pixmap?"
-msgstr "İçerik resim kısmını etkinleştir"
-
-msgid "Repeat Title Part Pixmap?"
-msgstr "Başlık resim kısmını yinele?"
-
-msgid "Title Bar Part Pixmap"
-msgstr "Başlık çubuğu resmi"
-
-msgid "Choose Titlebar Part Pixmap"
-msgstr "Başlık çubuğu resim kısmını seçin"
-
-#. /////////////////////////
-msgid "Enable Button Part Pixmap?"
-msgstr "Düğme resim kısmını etkinleştir?"
-
-msgid "Repeat Button Part Pixmap?"
-msgstr "Düğme resim kısmını yinele?"
-
-msgid "Button Part Pixmap"
-msgstr "Düğme resim kısmı"
-
-msgid "Choose Button Part Pixmap"
-msgstr "Düğme resim kısmını seçin"
-
-#. /////////////////////////
-msgid "Enable Titlebar Pixmap?"
-msgstr "Başlık çubuğu resmini etkinleştir?"
-
-msgid "Repeat Titlebar Pixmap?"
-msgstr "Başlık çubuğu resim kısmını yinele?"
-
-msgid "Titlebar Pixmap"
-msgstr "Başlık çubuğu resmi"
-
-msgid "Choose Titlebar Pixmap"
-msgstr "Başlık çubuğu resmini seçin"
-
-msgid "Active/Inactive"
-msgstr "Etkin/Etkin değil"
-
-msgid "Maximised"
-msgstr "Büyültülmüş"
-
-msgid "Corners"
-msgstr "Köşeler"
-
-msgid "Border Layout"
-msgstr "Kenar Düzeni"
-
-msgid "Left Bar"
-msgstr "Sol çubuk"
-
-msgid "Pixmaps"
-msgstr "Resimler"
+msgid "_Quit"
+msgstr "_Çık"
+
+#~ msgid "Fetching Themes"
+#~ msgstr "Temalar Alınıyor"
+
+#~ msgid ""
+#~ "Fetching themes... \n"
+#~ "This may take time depending on \n"
+#~ "internet connection speed."
+#~ msgstr ""
+#~ "Temalar alınıyor... \n"
+#~ "Bu işlem bağlantı hızınıza bağlı olarak \n"
+#~ "biraz vakit alabilir."
+
+#~ msgid ""
+#~ "Here are the repositories that you can fetch Emerald Themes from. \n"
+#~ "Fetching themes would fetch and import themes from SVN repositories \n"
+#~ "You need Subversion package installed to use this feature."
+#~ msgstr ""
+#~ "Emerald temalarını alabileceğiniz depolar. \n"
+#~ "Tema alımı, SVN deposundan temaların alınması \n"
+#~ "ve içeriye aktarılması işlemlerini gerçekleştirir\n"
+#~ "Bu özelliği kullanmak için subversion paketinin kurulu olması gerekir."
+
+#~ msgid ""
+#~ "This repository contains GPL'd themes that can be used under \n"
+#~ "the terms of GNU GPL licence v2.0 or later \n"
+#~ msgstr ""
+#~ "Bu depo GNU genel kamu lisansı v2.0 veya daha yeni \n"
+#~ "kullanım şartları altında kullanabileceğiniz temaları içerir \n"
+
+#~ msgid ""
+#~ "This repository contains non-GPL'd themes. They might infringe \n"
+#~ "copyrights and patent laws in some countries."
+#~ msgstr ""
+#~ "Bu depo GPL olmayan temaları içerir.Bazı ülkelerde \n"
+#~ "telif hakları ve patent hukunu ihlal ettiği kabul edilebilir. "
+
+#~ msgid ""
+#~ "To activate Non-GPL repository please run the following in shell and "
+#~ "accept the server certificate permanently: \n"
+#~ "svn ls https://svn.generation.no/emerald-themes."
+#~ msgstr ""
+#~ "GPL olmayan depoyu ekinleştirmek için şu komutu kabukta çalıştırın ve "
+#~ "sunucu sertifikasını kalıcı olarak kabul edin: \n"
+#~ "svn ls https://svn.generation.no/emerald-themes."
 
 #~ msgid "Repositories"
 #~ msgstr "Depolar"

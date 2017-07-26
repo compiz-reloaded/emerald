@@ -49,10 +49,22 @@ typedef struct _private_ws
 
 void get_meta_info (EngineMetaInfo * emi)
 {
+    guint8 *pixbuf_data;
+
     emi->version = g_strdup("0.1");
     emi->description = g_strdup(_("Based on original legacy"));
-    emi->last_compat = g_strdup("0.0"); /* old themes still compatible */
-    emi->icon = gdk_pixbuf_new_from_inline(-1, my_pixbuf, TRUE, NULL);
+    /* old themes are marked still compatible */
+    emi->last_compat = g_strdup("0.0");
+
+    pixbuf_data = g_memdup(LEGACY_ICON_PIXEL_DATA,
+                           LEGACY_ICON_ROWSTRIDE * LEGACY_ICON_HEIGHT);
+    emi->icon = gdk_pixbuf_new_from_data(pixbuf_data, GDK_COLORSPACE_RGB,
+                                         (LEGACY_ICON_BYTES_PER_PIXEL != 3), 8,
+                                         LEGACY_ICON_WIDTH,
+                                         LEGACY_ICON_HEIGHT,
+                                         LEGACY_ICON_ROWSTRIDE,
+                                         (GdkPixbufDestroyNotify) g_free,
+                                         pixbuf_data);
 }
 
 #ifdef SHADOW_FIX
@@ -209,27 +221,24 @@ void init_engine(window_settings * ws)
     private_fs * pfs;
     private_ws * pws;
 
-    pws = malloc(sizeof(private_ws));
+    pws = g_malloc0(sizeof(private_ws));
     ws->engine_ws = pws;
-    bzero(pws,sizeof(private_ws));
 
-    pfs = malloc(sizeof(private_fs));
+    pfs = g_malloc0(sizeof(private_fs));
     ws->fs_act->engine_fs = pfs;
-    bzero(pfs, sizeof(private_fs));
     ACOLOR(border, 0.0, 0.0, 0.0, 1.0);
-	ACOLOR(title_bar, 0.0, 0.0, 0.0, 0.3);
+    ACOLOR(title_bar, 0.0, 0.0, 0.0, 0.3);
 
-	pfs = malloc(sizeof(private_fs));
+    pfs = g_malloc0(sizeof(private_fs));
     ws->fs_inact->engine_fs = pfs;
-    bzero(pfs,sizeof(private_fs));
     ACOLOR(border, 0.0, 0.0, 0.0, 1.0);
-	ACOLOR(title_bar, 0.0, 0.0, 0.0, 0.0);
+    ACOLOR(title_bar, 0.0, 0.0, 0.0, 0.0);
 }
 
 void fini_engine(window_settings * ws)
 {
-    free(ws->fs_act->engine_fs);
-    free(ws->fs_inact->engine_fs);
+    g_free(ws->fs_act->engine_fs);
+    g_free(ws->fs_inact->engine_fs);
 }
 
 void my_engine_settings(GtkWidget * hbox, gboolean active)

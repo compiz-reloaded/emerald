@@ -143,6 +143,8 @@ enum {
     DOUBLE_CLICK_SHADE=0,
     DOUBLE_CLICK_MAXIMIZE,
     DOUBLE_CLICK_MINIMIZE,
+    DOUBLE_CLICK_SEND_TO_BACK,
+    DOUBLE_CLICK_CLOSE,
     DOUBLE_CLICK_NONE,
     TITLEBAR_ACTION_COUNT
 };
@@ -152,6 +154,8 @@ static gchar * titlebar_action_name[TITLEBAR_ACTION_COUNT] =
     "Shade",
     "Maximize/Restore",
     "Minimize",
+    "Send to back",
+    "Close",
     "None",
 };
 #endif

@@ -1,21 +1,339 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Punjabi translation for emerald
+# Copyright (C) 2007 The Free Software Foundation, Inc.
+# This file is distributed under the same license as the emerald package.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Punjabi\n"
-"Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
-"POT-Creation-Date: 2009-03-24 08:14+0100\n"
+"Project-Id-Version: emerald\n"
+"Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/emerald/issues\n"
+"POT-Creation-Date: 2017-05-04 19:29+0300\n"
 "PO-Revision-Date: 2007-12-17 12:47+0530\n"
 "Last-Translator: \n"
 "Language-Team: Gist Punjabi team <info.gist@cdac.in>\n"
+"Language: pa\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-Language: Punjabi\n"
-"X-Poedit-Country: INDIA\n"
+
+msgid "Based on original gtk-window-decorator"
+msgstr "ਅਸਲੀ ਗਨੋਮ-ਵਿੰਡੋ-ਡੈਕੋਰੇਟਰ ਉੱਤੇ ਅਧਾਰਿਤ "
+
+msgid "Round Top Left Corner"
+msgstr "ਰਾਊਂਡ ਉੱਤੇ ਖੱਬਾ ਕੋਨਾ "
+
+msgid "Round Top Right Corner"
+msgstr "ਰਾਊਂਡ ਉੱਤੇ ਸੱਜਾ ਕੋਨਾ "
+
+msgid "Round Bottom Left Corner"
+msgstr "ਰਾਊਂਡ ਤਲ ਖੱਬਾ ਕੋਨਾ "
+
+msgid "Round Bottom Right Corner"
+msgstr "ਰਾਊਂਡ ਤਲ ਸੱਜਾ ਕੋਨਾ "
+
+msgid "Rounding Radius"
+msgstr "ਰਾਊਂਡਿੰਗ ਰੇਡੀਅਸ "
+
+msgid "Colors"
+msgstr "ਰੰਗ "
+
+msgid "Outer Frame Blend"
+msgstr "ਬਾਹਰੀ ਫਰੇਮ ਬਲੈਡ "
+
+msgid "Inner Frame Blend"
+msgstr "ਅੰਦਰੂਨੀ ਫਰੇਮ ਬਲੈਡ "
+
+msgid "Outer Titlebar Blend"
+msgstr "ਬਾਹਰ ਟਾਇਟਲਬਾਰ ਬਲੈਂਡ "
+
+msgid "Inner Titlebar Blend"
+msgstr "ਅੰਦਰੂਨੀ ਟਾਇਟਲਬਾਰ ਬਲੈਂਡ "
+
+msgid "Titlebar Separator"
+msgstr "ਟਾਇਟਲਬਾਰ ਸਿਪਰੇਟਰ "
+
+msgid "Frame Outline"
+msgstr "ਫਰੇਮ ਆਉਟਲਾਈਨ "
+
+msgid "Frame Highlight"
+msgstr "ਫਰੇਮ ਹਾਈਲਾਈਟ "
+
+msgid "Frame Shadow"
+msgstr "ਫਰੇਮ ਛਾਂ "
+
+msgid "Contents Outline"
+msgstr "ਸਮੱਗਰੀ ਆਉਟਲਾਈਣ "
+
+msgid "Contents Highlight"
+msgstr "ਸਮੱਗਰੀ ਉਚਾਈ "
+
+msgid "Contents Shadow"
+msgstr "ਸਮੱਗਰੀ ਛਾਂ "
+
+msgid "Frame"
+msgstr "ਫਰੇਮ "
+
+msgid "Based on original legacy"
+msgstr "ਅਸਲੀ ਲਿਜੈਂਸੀ ਉੱਤੇ ਅਧਾਰਿਤ"
+
+msgid "Title Bar"
+msgstr "ਟਾਇਟਲਬਾਰ "
+
+msgid "Designed to be vista-ish in nature"
+msgstr "ਅਸਲ ਵਿਚ ਵਿਸਟਾ-ਨੈਸ ਦੇ ਰੂਪ ਵਿੱਚ ਡਿਜ਼ਾਇਨ ਕੀਤਾ ਗਿਆ ਹੈ "
+
+msgid "Base"
+msgstr "ਬੇਸ "
+
+msgid "Glow"
+msgstr "ਗਲੋ "
+
+msgid "Sides"
+msgstr "ਸਾਈਡਾਂ "
+
+msgid "Everything done with customizable pixmaps!"
+msgstr "ਹਰੇਕ ਚੀਜ਼ ਕਸਟਮ ਯੋਗ ਪਿਕਸਮੈਪ ਨਾਲ ਕੀਤਾ! "
+
+msgid "Top Rounding Radius"
+msgstr "ਟਾਪ ਰਾਊਂਡਿੰਗ ਰੇਡੀਅਸ "
+
+msgid "Bottom Rounding Radius"
+msgstr "ਤਲ ਰਾਊਂਡਿੰਗ ਰੇਡੀਅਸ "
+
+msgid "_Clear"
+msgstr "ਸਾਫ਼ ਕਰੋ(_C)"
+
+#. style: use tiled or scaled pixmaps
+msgid "Scaled"
+msgstr "ਸਕੇਲ "
+
+msgid "Not adjustable"
+msgstr "ਅਡਜੱਸਟ ਯੋਗ ਨਹੀਂ "
+
+msgid "Same as Active"
+msgstr "ਐਕਟਿਵ ਵਾਂਗ "
+
+msgid "Pixmap"
+msgstr "ਪਿਕਸਮੈਪ "
+
+msgid "File"
+msgstr "ਫਾਇਲ "
+
+msgid "Preview"
+msgstr "ਝਲਕ "
+
+msgid "Clear"
+msgstr "ਸਾਫ਼ "
+
+msgid "Tiled/Scaled"
+msgstr "ਟਾਇਲ/ਸਕੇਲ "
+
+msgid "Width Override"
+msgstr "ਚੌੜਾਈ ਅਣਡਿੱਠੀ "
+
+msgid "Height Override"
+msgstr "ਉਚਾਈ ਅਣਡਿੱਠੀ "
+
+msgid "Glassy effects for your windows"
+msgstr "ਤੁਹਾਡੀ ਵਿੰਡੋ ਲਈ ਗਲਾਸੀ ਪਰਭਾਵ "
+
+msgid "Glow Height"
+msgstr "ਗਲੋ ਉਚਾਈ "
+
+msgid "Frame Base Color"
+msgstr "ਫਰੇਮ ਬੇਸ ਰੰਗ "
+
+msgid "Upper Titlebar Glow"
+msgstr "ਅੱਪਰ ਟਾਇਟਲਬਾਰ ਗਲੋ "
+
+msgid "Upper Glass Glow"
+msgstr "ਅੱਪਰ ਗਲਾਸ ਗਲੋ "
+
+msgid "Lower Glass Glow"
+msgstr "ਲੋਅਰ ਗਲਾਸ ਗਲੋ "
+
+msgid "Middle Glass Glow"
+msgstr "ਮਿਡਲ ਗਲਾਸ ਗਲੋ "
+
+msgid "Outer Glass Glow"
+msgstr "ਬਾਹਰੀ ਗਲਾਸ ਗਲੋ "
+
+msgid "Multiple gradients with somewhat glassy features too"
+msgstr "ਗਲਾਸੀ ਫੀਚਰ ਨਾਲ ਮਲਟੀਪਲ ਗਰੇਡੀਐਂਟ "
+
+msgid "Left Blend"
+msgstr "ਖੱਬਾ ਬਲੈਂਡ "
+
+msgid "Middle Blend"
+msgstr "ਮਿਡਲ ਬਲੈਂਡ "
+
+msgid "Right Blend"
+msgstr "ਸੱਜਾ ਬਲੈਂਡ "
+
+msgid "Contrast"
+msgstr "ਕਾਨਟਰਾਸਟ "
+
+msgid "(Color)"
+msgstr "(ਰੰਗ) "
+
+msgid "(Alpha)"
+msgstr "(ਐਲਫ਼ਾ) "
+
+msgid "Notch"
+msgstr "ਨੋਚ "
+
+msgid "Position"
+msgstr "ਸਥਿਤੀ "
+
+msgid "Curve"
+msgstr "ਚਾਪ "
+
+msgid "Offset"
+msgstr "ਆਫ਼-ਸੈੱਟ "
+
+msgid "Use Glow"
+msgstr "ਗਲੋ ਵਰਤੋਂ "
+
+msgid "Title Glow"
+msgstr "ਟਾਇਟਲ ਗਲੋ "
+
+msgid "Radius"
+msgstr "ਰੇਡੀਅਸ "
+
+msgid "Evolved from the legacy engine"
+msgstr "ਪੁਰਾਣੇ ਇੰਜਣ ਤੋਂ ਤਿਆਰ "
+
+msgid "Border Gap"
+msgstr "ਬਾਰਡਰ ਗੈਪ "
+
+msgid "Show Border when maximised?"
+msgstr "ਬਾਰਡਰ ਵੇਖਣਾ, ਜਦੋਂ ਵੱਧੋ-ਵੱਧ ਹੋਵੇ? "
+
+msgid "Show when minimised?"
+msgstr "ਵੇਖਣਾ ਜਦੋਂ ਘੱਟੋ-ਘੱਟ ਹੋਵੇ? "
+
+msgid "Minimised Border Size"
+msgstr "ਘੱਟੋ-ਘੱਟ ਬਾਰਡਰ ਸਾਈਜ਼ "
+
+msgid "Enable Left Bar Dip?"
+msgstr "ਖੱਬੀ ਬਾਰ ਡਿੰਪ ਯੋਗ? "
+
+msgid "Left Bar Radius"
+msgstr "ਖੱਬੀ ਬਾਰ ਰੇਡੀਅਸ "
+
+msgid "Enable Lower Bulge? (Useless at the moment, but will be used soon)"
+msgstr "ਹੇਠਕਾ ਬੁਲਗੀ ਯੋਗ? (ਹਾਲੇ ਬੇਕਾਰ ਹੈ, ਪਰ ਛੇਤੀ ਹੀ ਵਰਤਿਆ ਜਾਵੇਗਾ) "
+
+msgid "Top Corner Offset (%)"
+msgstr "ਟਾਪ ਕਾਰਨਰ ਆਫਸੈੱਟ (%) "
+
+msgid "Enable Title Bar Dip?"
+msgstr "ਟਾਇਟਲ ਬਾਰ ਡਿੰਪ ਯੋਗ? "
+
+msgid "Enable Button Part?"
+msgstr "ਬਟਨ ਭਾਗ ਯੋਗ? "
+
+msgid "Title Part Width"
+msgstr "ਟਾਇਟਲ ਭਾਗ ਚੌੜਾਈ "
+
+msgid "Button Part Width)"
+msgstr "ਬਟਨ ਭਾਗ ਚੌੜਾਈ) "
+
+msgid "Dip Corners Radius)"
+msgstr "ਕੋਨਾ ਰੇਡੀਅਸ ਡਿੰਪ) "
+
+msgid "Round Inside Corners As well?"
+msgstr "ਅੰਦਰ ਵੀ ਕੋਨੇ ਗੋਲ? "
+
+msgid "Enable Different Maximised Colors?"
+msgstr "ਵੱਖ ਵੱਖ ਵੱਧੋ-ਵੱਧ ਰੰਗ ਯੋਗ? "
+
+msgid "Turn Off repeating gradients when maximised?"
+msgstr "ਰਪੀਟਿੰਗ ਗਰੇਡੀਐਂਟ ਬੰਦ ਕਰੋ, ਜਦੋਂ ਵੱਧ ਹੋਣ? "
+
+msgid "Round Top Left Corner?"
+msgstr "ਗੋਲ ਟਾਪ ਖੱਬੇ ਕਾਰਨਰ? "
+
+msgid "Frame Rounding Radius"
+msgstr "ਫਰੇਮ ਰਾਊਂਡਿੰਗ ਰੇਡੀਅਸ "
+
+msgid "Titlebar Rounding Radius"
+msgstr "ਟਾਇਟਲਬਾਰ ਰਾਊਂਡਿੰਗ ਰੇਡੀਅਸ "
+
+msgid "Repeat Gradient?"
+msgstr "ਗਰੇਡੀਐਂਟ ਰਪੀਟ? "
+
+msgid "Vertical Repeat?"
+msgstr "ਵਰਟੀਕਲ ਰਪੀਟ? "
+
+msgid "Diagonal Repeat?"
+msgstr "ਵਿਕਰਨ ਰਪੀਟ? "
+
+msgid "Repeat Frequency"
+msgstr "ਰਪੀਟ ਫਰੀਕਿਊਂਸੀ "
+
+#. ========================
+msgid "Enable Title Part Pixmap?"
+msgstr "ਟਾਇਟਲ ਪਾਰਟ ਪਿਕਸਮੈਪ ਯੋਗ? "
+
+msgid "Repeat Title Part Pixmap?"
+msgstr "ਟਾਇਟਲ ਪਾਰਟ ਪਿਕਸਮੈਪ ਰਪੀਟ? "
+
+msgid "Title Bar Part Pixmap"
+msgstr "ਟਾਇਟਲ ਬਾਰ ਪਾਰਟ ਪਿਕਸਮੈਪ "
+
+msgid "Choose Titlebar Part Pixmap"
+msgstr "ਟਾਇਟਲਬਾਰ ਪਾਰਟ ਪਿਕਸਮੈਪ ਚੁਣੋ "
+
+#. ========================
+msgid "Enable Button Part Pixmap?"
+msgstr "ਬਟਨ ਭਾਗ ਪਿਕਸਮੈਪ ਯੋਗ? "
+
+msgid "Repeat Button Part Pixmap?"
+msgstr "ਬਟਨ ਭਾਗ ਪਿਕਸਮੈਪ ਰਪੀਟ? "
+
+msgid "Button Part Pixmap"
+msgstr "ਬਟਨ ਪਾਰਟ ਪਿਕਸਮੈਪ "
+
+msgid "Choose Button Part Pixmap"
+msgstr "ਬਟਨ ਪਾਰਟ ਪਿਕਸਮੈਪ ਚੁਣੋ "
+
+#. ========================
+msgid "Enable Titlebar Pixmap?"
+msgstr "ਟਾਇਟਲਬਾਰ ਪਿਕਸਮੈਪ ਯੋਗ? "
+
+msgid "Repeat Titlebar Pixmap?"
+msgstr "ਕੀ ਟਾਇਟਲਬਾਰ ਪਿਕਸਮੈਪ ਰਪੀਟ ਕਰਨਾ ਹੈ? "
+
+msgid "Titlebar Pixmap"
+msgstr "ਟਾਇਟਲਬਾਰ ਪਿਕਸਮੈਪ "
+
+msgid "Choose Titlebar Pixmap"
+msgstr "ਟਾਇਟਲਬਾਰ ਪਿਕਸਮੈਪ ਚੁਣੋ "
+
+msgid "Active/Inactive"
+msgstr "ਐਕਟਿਵ/ਇਨ-ਐਕਟਿਵ "
+
+msgid "Maximised"
+msgstr "ਵੱਧੋ-ਵੱਧ "
+
+msgid "Corners"
+msgstr "ਕਾਰਨਰ "
+
+msgid "Border Layout"
+msgstr "ਬਾਰਡਰ ਲੇਆਉਟ "
+
+msgid "Left Bar"
+msgstr "ਖੱਬੀ ਬਾਰ "
+
+msgid "Pixmaps"
+msgstr "ਪਿਕਸਮੈਪ "
+
+msgid ""
+"Select\n"
+"Engine"
+msgstr ""
+"ਇੰਜਣ\n"
+"ਚੁਣੋ "
 
 msgid "Close Window"
 msgstr "ਵਿੰਡੋ ਬੰਦ ਕਰੋ "
@@ -53,6 +371,10 @@ msgstr "ਸਟਿੱਕ ਵਿੰਡੋ "
 msgid "UnStick Window"
 msgstr "ਅਣ-ਸਟਿੱਕ ਵਿੰਡੋ "
 
+#, fuzzy
+msgid "Super Maximize Window"
+msgstr "ਵਿੰਡੋ ਵੱਧੋ-ਵੱਧ "
+
 #, c-format
 msgid "The window \"%s\" is not responding."
 msgstr "ਵਿੰਡੋ \"%s\" ਜਵਾਬ ਨਹੀਂ ਦਿੰਦੀ ਹੈ। "
@@ -60,6 +382,9 @@ msgstr "ਵਿੰਡੋ \"%s\" ਜਵਾਬ ਨਹੀਂ ਦਿੰਦੀ ਹੈ�
 msgid ""
 "Forcing this application to quit will cause you to lose any unsaved changes."
 msgstr "ਇਹ ਐਪਲੀਕੇਸ਼ਨ ਨੂੰ ਫੋਰਸ ਨਾਲ ਬੰਦ ਕਰਨ ਨਾਲ ਤੁਸੀਂ ਸਭ ਅਣ-ਸੰਭਾਲੀਆਂ ਤਬਦੀਲੀਆਂ ਗੁਆ ਬੈਠੋਗੇ। "
+
+msgid "_Cancel"
+msgstr "ਰੱਦ ਕਰੋ(_C)"
 
 msgid "_Force Quit"
 msgstr "ਧੱਕੇ ਨਾਲ ਬੰਦ ਕਰੋ(_F) "
@@ -183,18 +508,6 @@ msgstr "ਬਟਨ ਪਿਕਸਮੈਪ"
 msgid "Button"
 msgstr "ਬਟਨ"
 
-msgid "File"
-msgstr "ਫਾਇਲ "
-
-msgid "Preview"
-msgstr "ਝਲਕ "
-
-msgid "Clear"
-msgstr "ਸਾਫ਼ "
-
-msgid "Colors"
-msgstr "ਰੰਗ "
-
 msgid "Text Fill"
 msgstr "ਟੈਕਸਟ ਭਰਨ "
 
@@ -212,9 +525,6 @@ msgstr "ਰੰਗ "
 
 msgid "Opacity"
 msgstr "ਧੁੰਦਲਾਪਨ "
-
-msgid "Radius"
-msgstr "ਰੇਡੀਅਸ "
 
 msgid "X Offset"
 msgstr "X ਆਫਸੈੱਟ "
@@ -237,6 +547,7 @@ msgstr "ਹਰੀਜੱਟਲ ਬਟਨ ਆਫਸੈੱਟ "
 msgid "Title-bar Object Layout"
 msgstr "ਟਾਇਟਲਬਾਰ ਆਬਜੈਕਟ ਲੇਆਉਟ "
 
+#, fuzzy
 msgid ""
 "Use colons to separate left, center, and right.\n"
 "Anything after a third colon is ignored.\n"
@@ -244,6 +555,7 @@ msgid ""
 "I=Icon, T=Title, H=Help, M=Menu\n"
 "S=Shade, U/A=On Top(Up/Above)\n"
 "Y=Sticky, (#)=# pixels space, ex: (5)\n"
+"F=SuperMaximize\n"
 msgstr ""
 "ਖੱਬੇ, ਸੈਂਟਰ ਅਤੇ ਸੱਜੇ ਨੂੰ ਵੱਖ ਕਰਨ ਲਈ ਕੌਮੇ ਵਰਤੋਂ।\n"
 "ਤੀਜੇ ਕੌਮੇ ਤੋਂ ਬਾਅਦ ਸਭ ਕੁਝ ਅਣਡਿੱਹਾ ਕੀਤਾ ਜਾਵੇਗਾ\n"
@@ -254,6 +566,9 @@ msgstr ""
 
 msgid "Export Theme..."
 msgstr "ਥੀਮ ਐਕਸਪੋਰਟ... "
+
+msgid "_Save"
+msgstr "ਸੰਭਾਲੋ(_S)"
 
 msgid "Name:"
 msgstr "ਨਾਂ: "
@@ -331,9 +646,6 @@ msgstr "ਐਕਟਿਵ ਵਿੰਡੋ "
 msgid "Inactive Window"
 msgstr "ਇਨ-ਐਕਟਿਵ ਵਿੰਡੋ "
 
-msgid "Title Bar"
-msgstr "ਟਾਇਟਲਬਾਰ "
-
 msgid "Screenshot"
 msgstr "ਸਕਰੀਨ-ਸ਼ਾਟ "
 
@@ -356,6 +668,9 @@ msgstr "ਬਟਨਾਂ ਲਈ ਟੂਲਟਿੱਪ ਵੇਖੋ "
 msgid "Use Decoration Cropping"
 msgstr "ਡੈਕੋਰੇਸ਼ਨ ਕਰੋਪਿੰਗ ਵਰਤੋਂ "
 
+msgid "No Shade on Titlebar Scroll"
+msgstr ""
+
 msgid "Use Button Fade"
 msgstr "ਬਟਨ ਫੇਡ ਵਰਤੋਂ "
 
@@ -375,6 +690,10 @@ msgid "Button Pulse Min Opacity %"
 msgstr "ਬਟਨ ਪਲਸ ਘੱਟੋ-ਘੱਟ ਧੁੰਦਲਾਪਨ % "
 
 msgid "Titlebar Double-Click Action"
+msgstr "ਟਾਇਟਲਬਾਰ ਡਬਲ-ਕਲਿੱਕ ਐਕਸ਼ਨ "
+
+#, fuzzy
+msgid "Titlebar Middle-Click Action"
 msgstr "ਟਾਇਟਲਬਾਰ ਡਬਲ-ਕਲਿੱਕ ਐਕਸ਼ਨ "
 
 msgid "Button Hover Cursor"
@@ -419,52 +738,21 @@ msgstr "ਸੋਧ "
 msgid "Import Theme..."
 msgstr "ਥੀਮ ਇੰਪੋਰਟ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ... "
 
+msgid "_Open"
+msgstr "ਖੋਲ੍ਹੋ(_O)"
+
 msgid "Search:"
 msgstr "ਖੋਜ: "
 
-msgid "Fetching Themes"
-msgstr "ਥੀਮ ਲਏ ਜਾ ਰਹੇ ਹਨ "
+msgid "_Refresh"
+msgstr "ਤਾਜ਼ਾ(_R)"
 
-msgid ""
-"Fetching themes... \n"
-"This may take time depending on \n"
-"internet connection speed."
-msgstr ""
-"ਥੀਮ ਲਏ ਜਾ ਰਹੇ ਹਨ...\n"
-"ਇਸ ਨੂੰ ਇੰਟਰਨੈੱਟ ਸਪੀਡ ਮੁਤਾਬਕ\n"
-"ਕੁਝ ਟਾਈਮ ਲੱਗ ਸਕਦਾ ਹੈ। "
+msgid "_Delete"
+msgstr "ਹਟਾਓ(_D)"
 
-msgid ""
-"Here are the repositories that you can fetch Emerald Themes from. \n"
-"Fetching themes would fetch and import themes from SVN repositories \n"
-"You need Subversion package installed to use this feature."
-msgstr ""
-"ਇਹ ਰਿਪੋਜ਼ਟਰੀਆਂ ਹਨ, ਜੋ ਕਿ ਈਮਰਾਲਡ ਥੀਮ ਤੋਂ ਲਈਆਂ ਜਾ ਸਕਦੀਆਂ ਹਨ।\n"
-"ਥੀਮ ਲੈਣ ਨਾਲ SVN ਰਿਪੋਜ਼ਟਰੀਆਂ ਤੋਂ ਥੀਮ ਲਏ ਅਤੇ ਇੰਪੋਰਟ ਕੀਤੇ ਜਾਣਗੇ\n"
-"ਤੁਹਾਨੂੰ ਇਹ ਫੀਚਰ ਵਰਤਣ ਵਾਸਤੇ ਸਬ-ਵਰਜਨ ਪੈਕੇਜ ਇੰਸਟਾਲ ਕਰਨ ਦੀ ਲੋੜ ਹੈ। "
-
-msgid ""
-"This repository contains GPL'd themes that can be used under \n"
-"the terms of GNU GPL licence v2.0 or later \n"
-msgstr ""
-"ਇਹ ਰਿਪੋਜ਼ਟਰੀ ਵਿੱਚ GPL ਥੀਮ ਹਨ, ਜੋ ਕਿ GNU GPL ਲਾਈਸੈਂਸ v2.0 ਜਾਂ ਨਵੇਂ\n"
-"ਦੀਆਂ ਸ਼ਰਤਾਂ ਮੁਤਾਬਕ ਵਰਤੇ ਜਾ ਸਕਦੇ ਹਨ।\n"
-
-msgid ""
-"This repository contains non-GPL'd themes. They might infringe \n"
-"copyrights and patent laws in some countries."
-msgstr ""
-"ਇਹ ਰਿਪੋਜ਼ਟਰੀ ਵਿੱਚ ਗ਼ੈਰ-GPL ਥੀਮ ਹਨ, ਜੋ ਕਿ ਕੁਝ ਦੇਸ਼ਾਂ ਵਿੱਚ ਕਾਪੀਰਾਈਟ ਅਤੇ ਪੇਟੈਂਟ\n"
-"ਦੇ ਅਧੀਨ ਹੋ ਸਕਦੇ ਹਨ। "
-
-msgid ""
-"To activate Non-GPL repository please run the following in shell and accept "
-"the server certificate permanently: \n"
-"svn ls https://svn.generation.no/emerald-themes."
-msgstr ""
-"ਗ਼ੈਰ-GPL ਰਿਪੋਜ਼ਟਰੀ ਐਕਟੀਵੇਟ ਕਰਨ ਲਈ, ਤੁਹਾਨੂੰ ਸ਼ੈਲ ਵਿੱਚ ਹੇਠ ਦਿੱਤੀ ਕਮਾਂਡ ਚਲਾਉਣ ਅਤੇ ਸਰਵਰ "
-"ਸਰਟੀਫਿਕੇਟ ਪੱਕੇ ਤੌਰ ਉੱਤੇ ਮਨਜ਼ੂਰ ਕਰਨਾ ਪਵੇਗਾ:\n"
-"svn ls https://svn.generation.no/emerald-themes "
+#, fuzzy
+msgid "_Import..."
+msgstr "ਐਕਸਪੋਰਟ... "
 
 msgid "Themes"
 msgstr "ਥੀਮ "
@@ -478,304 +766,52 @@ msgstr "ਥੀਮ ਸੈਟਿੰਗ "
 msgid "Emerald Settings"
 msgstr "ਈਮੀਰਲਡ ਸੈਟਿੰਗ "
 
-msgid ""
-"Select\n"
-"Engine"
-msgstr ""
-"ਇੰਜਣ\n"
-"ਚੁਣੋ "
-
-msgid "Based on original gtk-window-decorator"
-msgstr "ਅਸਲੀ ਗਨੋਮ-ਵਿੰਡੋ-ਡੈਕੋਰੇਟਰ ਉੱਤੇ ਅਧਾਰਿਤ "
-
-msgid "Round Top Left Corner"
-msgstr "ਰਾਊਂਡ ਉੱਤੇ ਖੱਬਾ ਕੋਨਾ "
-
-msgid "Round Top Right Corner"
-msgstr "ਰਾਊਂਡ ਉੱਤੇ ਸੱਜਾ ਕੋਨਾ "
-
-msgid "Round Bottom Left Corner"
-msgstr "ਰਾਊਂਡ ਤਲ ਖੱਬਾ ਕੋਨਾ "
-
-msgid "Round Bottom Right Corner"
-msgstr "ਰਾਊਂਡ ਤਲ ਸੱਜਾ ਕੋਨਾ "
-
-msgid "Rounding Radius"
-msgstr "ਰਾਊਂਡਿੰਗ ਰੇਡੀਅਸ "
-
-msgid "Outer Frame Blend"
-msgstr "ਬਾਹਰੀ ਫਰੇਮ ਬਲੈਡ "
-
-msgid "Inner Frame Blend"
-msgstr "ਅੰਦਰੂਨੀ ਫਰੇਮ ਬਲੈਡ "
-
-msgid "Outer Titlebar Blend"
-msgstr "ਬਾਹਰ ਟਾਇਟਲਬਾਰ ਬਲੈਂਡ "
-
-msgid "Inner Titlebar Blend"
-msgstr "ਅੰਦਰੂਨੀ ਟਾਇਟਲਬਾਰ ਬਲੈਂਡ "
-
-msgid "Titlebar Separator"
-msgstr "ਟਾਇਟਲਬਾਰ ਸਿਪਰੇਟਰ "
-
-msgid "Frame Outline"
-msgstr "ਫਰੇਮ ਆਉਟਲਾਈਨ "
-
-msgid "Frame Highlight"
-msgstr "ਫਰੇਮ ਹਾਈਲਾਈਟ "
-
-msgid "Frame Shadow"
-msgstr "ਫਰੇਮ ਛਾਂ "
-
-msgid "Contents Outline"
-msgstr "ਸਮੱਗਰੀ ਆਉਟਲਾਈਣ "
-
-msgid "Contents Highlight"
-msgstr "ਸਮੱਗਰੀ ਉਚਾਈ "
-
-msgid "Contents Shadow"
-msgstr "ਸਮੱਗਰੀ ਛਾਂ "
-
-msgid "Frame"
-msgstr "ਫਰੇਮ "
-
-msgid "Based on original legacy"
-msgstr "ਅਸਲੀ ਲਿਜੈਂਸੀ ਉੱਤੇ ਅਧਾਰਿਤ"
-
-msgid "Designed to be vista-ish in nature"
-msgstr "ਅਸਲ ਵਿਚ ਵਿਸਟਾ-ਨੈਸ ਦੇ ਰੂਪ ਵਿੱਚ ਡਿਜ਼ਾਇਨ ਕੀਤਾ ਗਿਆ ਹੈ "
-
-msgid "Base"
-msgstr "ਬੇਸ "
-
-msgid "Glow"
-msgstr "ਗਲੋ "
-
-msgid "Sides"
-msgstr "ਸਾਈਡਾਂ "
-
-msgid "Everything done with customizable pixmaps!"
-msgstr "ਹਰੇਕ ਚੀਜ਼ ਕਸਟਮ ਯੋਗ ਪਿਕਸਮੈਪ ਨਾਲ ਕੀਤਾ! "
-
-msgid "Top Rounding Radius"
-msgstr "ਟਾਪ ਰਾਊਂਡਿੰਗ ਰੇਡੀਅਸ "
-
-msgid "Bottom Rounding Radius"
-msgstr "ਤਲ ਰਾਊਂਡਿੰਗ ਰੇਡੀਅਸ "
-
-#. Style : Use Tiled or Scaled pixmaps
-msgid "Scaled"
-msgstr "ਸਕੇਲ "
-
-msgid "Not adjustable"
-msgstr "ਅਡਜੱਸਟ ਯੋਗ ਨਹੀਂ "
-
-msgid "Same as Active"
-msgstr "ਐਕਟਿਵ ਵਾਂਗ "
-
-msgid "Pixmap"
-msgstr "ਪਿਕਸਮੈਪ "
-
-msgid "Tiled/Scaled"
-msgstr "ਟਾਇਲ/ਸਕੇਲ "
-
-msgid "Width Override"
-msgstr "ਚੌੜਾਈ ਅਣਡਿੱਠੀ "
-
-msgid "Height Override"
-msgstr "ਉਚਾਈ ਅਣਡਿੱਠੀ "
-
-msgid "Glassy effects for your windows"
-msgstr "ਤੁਹਾਡੀ ਵਿੰਡੋ ਲਈ ਗਲਾਸੀ ਪਰਭਾਵ "
-
-msgid "Glow Height"
-msgstr "ਗਲੋ ਉਚਾਈ "
-
-msgid "Frame Base Color"
-msgstr "ਫਰੇਮ ਬੇਸ ਰੰਗ "
-
-msgid "Upper Titlebar Glow"
-msgstr "ਅੱਪਰ ਟਾਇਟਲਬਾਰ ਗਲੋ "
-
-msgid "Upper Glass Glow"
-msgstr "ਅੱਪਰ ਗਲਾਸ ਗਲੋ "
-
-msgid "Lower Glass Glow"
-msgstr "ਲੋਅਰ ਗਲਾਸ ਗਲੋ "
-
-msgid "Middle Glass Glow"
-msgstr "ਮਿਡਲ ਗਲਾਸ ਗਲੋ "
-
-msgid "Outer Glass Glow"
-msgstr "ਬਾਹਰੀ ਗਲਾਸ ਗਲੋ "
-
-msgid "Multiple gradients with somewhat glassy features too"
-msgstr "ਗਲਾਸੀ ਫੀਚਰ ਨਾਲ ਮਲਟੀਪਲ ਗਰੇਡੀਐਂਟ "
-
-msgid "Left Blend"
-msgstr "ਖੱਬਾ ਬਲੈਂਡ "
-
-msgid "Middle Blend"
-msgstr "ਮਿਡਲ ਬਲੈਂਡ "
-
-msgid "Right Blend"
-msgstr "ਸੱਜਾ ਬਲੈਂਡ "
-
-msgid "Contrast"
-msgstr "ਕਾਨਟਰਾਸਟ "
-
-msgid "(Color)"
-msgstr "(ਰੰਗ) "
-
-msgid "(Alpha)"
-msgstr "(ਐਲਫ਼ਾ) "
-
-msgid "Notch"
-msgstr "ਨੋਚ "
-
-msgid "Position"
-msgstr "ਸਥਿਤੀ "
-
-msgid "Curve"
-msgstr "ਚਾਪ "
-
-msgid "Offset"
-msgstr "ਆਫ਼-ਸੈੱਟ "
-
-msgid "Use Glow"
-msgstr "ਗਲੋ ਵਰਤੋਂ "
-
-msgid "Title Glow"
-msgstr "ਟਾਇਟਲ ਗਲੋ "
-
-msgid "Evolved from the legacy engine"
-msgstr "ਪੁਰਾਣੇ ਇੰਜਣ ਤੋਂ ਤਿਆਰ "
-
-msgid "Border Gap"
-msgstr "ਬਾਰਡਰ ਗੈਪ "
-
-msgid "Show Border when maximised?"
-msgstr "ਬਾਰਡਰ ਵੇਖਣਾ, ਜਦੋਂ ਵੱਧੋ-ਵੱਧ ਹੋਵੇ? "
-
-msgid "Show when minimised?"
-msgstr "ਵੇਖਣਾ ਜਦੋਂ ਘੱਟੋ-ਘੱਟ ਹੋਵੇ? "
-
-msgid "Minimised Border Size"
-msgstr "ਘੱਟੋ-ਘੱਟ ਬਾਰਡਰ ਸਾਈਜ਼ "
-
-msgid "Enable Left Bar Dip?"
-msgstr "ਖੱਬੀ ਬਾਰ ਡਿੰਪ ਯੋਗ? "
-
-msgid "Left Bar Radius"
-msgstr "ਖੱਬੀ ਬਾਰ ਰੇਡੀਅਸ "
-
-msgid "Enable Lower Bulge? (Useless at the moment, but will be used soon)"
-msgstr "ਹੇਠਕਾ ਬੁਲਗੀ ਯੋਗ? (ਹਾਲੇ ਬੇਕਾਰ ਹੈ, ਪਰ ਛੇਤੀ ਹੀ ਵਰਤਿਆ ਜਾਵੇਗਾ) "
-
-msgid "Top Corner Offset (%)"
-msgstr "ਟਾਪ ਕਾਰਨਰ ਆਫਸੈੱਟ (%) "
-
-msgid "Enable Title Bar Dip?"
-msgstr "ਟਾਇਟਲ ਬਾਰ ਡਿੰਪ ਯੋਗ? "
-
-msgid "Enable Button Part?"
-msgstr "ਬਟਨ ਭਾਗ ਯੋਗ? "
-
-msgid "Title Part Width"
-msgstr "ਟਾਇਟਲ ਭਾਗ ਚੌੜਾਈ "
-
-msgid "Button Part Width)"
-msgstr "ਬਟਨ ਭਾਗ ਚੌੜਾਈ) "
-
-msgid "Dip Corners Radius)"
-msgstr "ਕੋਨਾ ਰੇਡੀਅਸ ਡਿੰਪ) "
-
-msgid "Round Inside Corners As well?"
-msgstr "ਅੰਦਰ ਵੀ ਕੋਨੇ ਗੋਲ? "
-
-msgid "Enable Different Maximised Colors?"
-msgstr "ਵੱਖ ਵੱਖ ਵੱਧੋ-ਵੱਧ ਰੰਗ ਯੋਗ? "
-
-msgid "Turn Off repeating gradients when maximised?"
-msgstr "ਰਪੀਟਿੰਗ ਗਰੇਡੀਐਂਟ ਬੰਦ ਕਰੋ, ਜਦੋਂ ਵੱਧ ਹੋਣ? "
-
-msgid "Round Top Left Corner?"
-msgstr "ਗੋਲ ਟਾਪ ਖੱਬੇ ਕਾਰਨਰ? "
-
-msgid "Frame Rounding Radius"
-msgstr "ਫਰੇਮ ਰਾਊਂਡਿੰਗ ਰੇਡੀਅਸ "
-
-msgid "Titlebar Rounding Radius"
-msgstr "ਟਾਇਟਲਬਾਰ ਰਾਊਂਡਿੰਗ ਰੇਡੀਅਸ "
-
-msgid "Repeat Gradient?"
-msgstr "ਗਰੇਡੀਐਂਟ ਰਪੀਟ? "
-
-msgid "Vertical Repeat?"
-msgstr "ਵਰਟੀਕਲ ਰਪੀਟ? "
-
-msgid "Diagonal Repeat?"
-msgstr "ਵਿਕਰਨ ਰਪੀਟ? "
-
-msgid "Repeat Frequency"
-msgstr "ਰਪੀਟ ਫਰੀਕਿਊਂਸੀ "
-
-#. /////////////////////
-msgid "Enable Title Part Pixmap?"
-msgstr "ਟਾਇਟਲ ਪਾਰਟ ਪਿਕਸਮੈਪ ਯੋਗ? "
-
-msgid "Repeat Title Part Pixmap?"
-msgstr "ਟਾਇਟਲ ਪਾਰਟ ਪਿਕਸਮੈਪ ਰਪੀਟ? "
-
-msgid "Title Bar Part Pixmap"
-msgstr "ਟਾਇਟਲ ਬਾਰ ਪਾਰਟ ਪਿਕਸਮੈਪ "
-
-msgid "Choose Titlebar Part Pixmap"
-msgstr "ਟਾਇਟਲਬਾਰ ਪਾਰਟ ਪਿਕਸਮੈਪ ਚੁਣੋ "
-
-#. /////////////////////////
-msgid "Enable Button Part Pixmap?"
-msgstr "ਬਟਨ ਭਾਗ ਪਿਕਸਮੈਪ ਯੋਗ? "
-
-msgid "Repeat Button Part Pixmap?"
-msgstr "ਬਟਨ ਭਾਗ ਪਿਕਸਮੈਪ ਰਪੀਟ? "
-
-msgid "Button Part Pixmap"
-msgstr "ਬਟਨ ਪਾਰਟ ਪਿਕਸਮੈਪ "
-
-msgid "Choose Button Part Pixmap"
-msgstr "ਬਟਨ ਪਾਰਟ ਪਿਕਸਮੈਪ ਚੁਣੋ "
-
-#. /////////////////////////
-msgid "Enable Titlebar Pixmap?"
-msgstr "ਟਾਇਟਲਬਾਰ ਪਿਕਸਮੈਪ ਯੋਗ? "
-
-msgid "Repeat Titlebar Pixmap?"
-msgstr "ਕੀ ਟਾਇਟਲਬਾਰ ਪਿਕਸਮੈਪ ਰਪੀਟ ਕਰਨਾ ਹੈ? "
-
-msgid "Titlebar Pixmap"
-msgstr "ਟਾਇਟਲਬਾਰ ਪਿਕਸਮੈਪ "
-
-msgid "Choose Titlebar Pixmap"
-msgstr "ਟਾਇਟਲਬਾਰ ਪਿਕਸਮੈਪ ਚੁਣੋ "
-
-msgid "Active/Inactive"
-msgstr "ਐਕਟਿਵ/ਇਨ-ਐਕਟਿਵ "
-
-msgid "Maximised"
-msgstr "ਵੱਧੋ-ਵੱਧ "
-
-msgid "Corners"
-msgstr "ਕਾਰਨਰ "
-
-msgid "Border Layout"
-msgstr "ਬਾਰਡਰ ਲੇਆਉਟ "
-
-msgid "Left Bar"
-msgstr "ਖੱਬੀ ਬਾਰ "
-
-msgid "Pixmaps"
-msgstr "ਪਿਕਸਮੈਪ "
+msgid "_Quit"
+msgstr "ਬਾਹਰ(_Q)"
+
+#~ msgid "Fetching Themes"
+#~ msgstr "ਥੀਮ ਲਏ ਜਾ ਰਹੇ ਹਨ "
+
+#~ msgid ""
+#~ "Fetching themes... \n"
+#~ "This may take time depending on \n"
+#~ "internet connection speed."
+#~ msgstr ""
+#~ "ਥੀਮ ਲਏ ਜਾ ਰਹੇ ਹਨ...\n"
+#~ "ਇਸ ਨੂੰ ਇੰਟਰਨੈੱਟ ਸਪੀਡ ਮੁਤਾਬਕ\n"
+#~ "ਕੁਝ ਟਾਈਮ ਲੱਗ ਸਕਦਾ ਹੈ। "
+
+#~ msgid ""
+#~ "Here are the repositories that you can fetch Emerald Themes from. \n"
+#~ "Fetching themes would fetch and import themes from SVN repositories \n"
+#~ "You need Subversion package installed to use this feature."
+#~ msgstr ""
+#~ "ਇਹ ਰਿਪੋਜ਼ਟਰੀਆਂ ਹਨ, ਜੋ ਕਿ ਈਮਰਾਲਡ ਥੀਮ ਤੋਂ ਲਈਆਂ ਜਾ ਸਕਦੀਆਂ ਹਨ।\n"
+#~ "ਥੀਮ ਲੈਣ ਨਾਲ SVN ਰਿਪੋਜ਼ਟਰੀਆਂ ਤੋਂ ਥੀਮ ਲਏ ਅਤੇ ਇੰਪੋਰਟ ਕੀਤੇ ਜਾਣਗੇ\n"
+#~ "ਤੁਹਾਨੂੰ ਇਹ ਫੀਚਰ ਵਰਤਣ ਵਾਸਤੇ ਸਬ-ਵਰਜਨ ਪੈਕੇਜ ਇੰਸਟਾਲ ਕਰਨ ਦੀ ਲੋੜ ਹੈ। "
+
+#~ msgid ""
+#~ "This repository contains GPL'd themes that can be used under \n"
+#~ "the terms of GNU GPL licence v2.0 or later \n"
+#~ msgstr ""
+#~ "ਇਹ ਰਿਪੋਜ਼ਟਰੀ ਵਿੱਚ GPL ਥੀਮ ਹਨ, ਜੋ ਕਿ GNU GPL ਲਾਈਸੈਂਸ v2.0 ਜਾਂ ਨਵੇਂ\n"
+#~ "ਦੀਆਂ ਸ਼ਰਤਾਂ ਮੁਤਾਬਕ ਵਰਤੇ ਜਾ ਸਕਦੇ ਹਨ।\n"
+
+#~ msgid ""
+#~ "This repository contains non-GPL'd themes. They might infringe \n"
+#~ "copyrights and patent laws in some countries."
+#~ msgstr ""
+#~ "ਇਹ ਰਿਪੋਜ਼ਟਰੀ ਵਿੱਚ ਗ਼ੈਰ-GPL ਥੀਮ ਹਨ, ਜੋ ਕਿ ਕੁਝ ਦੇਸ਼ਾਂ ਵਿੱਚ ਕਾਪੀਰਾਈਟ ਅਤੇ ਪੇਟੈਂਟ\n"
+#~ "ਦੇ ਅਧੀਨ ਹੋ ਸਕਦੇ ਹਨ। "
+
+#~ msgid ""
+#~ "To activate Non-GPL repository please run the following in shell and "
+#~ "accept the server certificate permanently: \n"
+#~ "svn ls https://svn.generation.no/emerald-themes."
+#~ msgstr ""
+#~ "ਗ਼ੈਰ-GPL ਰਿਪੋਜ਼ਟਰੀ ਐਕਟੀਵੇਟ ਕਰਨ ਲਈ, ਤੁਹਾਨੂੰ ਸ਼ੈਲ ਵਿੱਚ ਹੇਠ ਦਿੱਤੀ ਕਮਾਂਡ ਚਲਾਉਣ ਅਤੇ ਸਰਵਰ "
+#~ "ਸਰਟੀਫਿਕੇਟ ਪੱਕੇ ਤੌਰ ਉੱਤੇ ਮਨਜ਼ੂਰ ਕਰਨਾ ਪਵੇਗਾ:\n"
+#~ "svn ls https://svn.generation.no/emerald-themes "
 
 #~ msgid "Repositories"
 #~ msgstr "ਰਿਪੋਜ਼ਟਰੀਆਂ "

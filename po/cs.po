@@ -1,22 +1,342 @@
-# translation of beryl-core.pot to Czech
-# Copyright (C) 2007 Emerald
-# This file is distributed under the same license as the Emerald package.
-#
+# Czech translation for emerald
+# Copyright (C) 2007 launchpad.net/compiz
+# This file is distributed under the same license as the emerald package.
 # Martin Filip <nexus@smoula.net>, 2007.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: cs\n"
-"Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
-"POT-Creation-Date: 2009-03-24 08:14+0100\n"
+"Project-Id-Version: emerald\n"
+"Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/emerald/issues\n"
+"POT-Creation-Date: 2017-05-04 19:28+0300\n"
 "PO-Revision-Date: 2008-02-11 17:28+0100\n"
 "Last-Translator: Tomas Hejatko <hejda.cz@gmail.com>\n"
-"Language-Team: Czech\n"
+"Language-Team: Czech <cs@li.org>\n"
+"Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Pootle 1.0.2\n"
-"X-Poedit-Language: Czech\n"
-"X-Poedit-Country: CZECH REPUBLIC\n"
+
+msgid "Based on original gtk-window-decorator"
+msgstr "Založený na originálním gtk-window-decorator"
+
+msgid "Round Top Left Corner"
+msgstr "Zakulatit horní levý roh"
+
+msgid "Round Top Right Corner"
+msgstr "Zakulatit horní pravý roh"
+
+msgid "Round Bottom Left Corner"
+msgstr "Zakulatit dolní levý roh"
+
+msgid "Round Bottom Right Corner"
+msgstr "Zakulatit dolní pravý roh"
+
+msgid "Rounding Radius"
+msgstr "Poloměr zakulacení"
+
+msgid "Colors"
+msgstr "Barvy"
+
+msgid "Outer Frame Blend"
+msgstr "Rozpouštění vnějšího rámu"
+
+msgid "Inner Frame Blend"
+msgstr "Rozpouštění vnitřního rámu"
+
+msgid "Outer Titlebar Blend"
+msgstr "Rozpouštění vnějšího záhlaví"
+
+msgid "Inner Titlebar Blend"
+msgstr "Rozpouštění vnitřního záhlaví"
+
+msgid "Titlebar Separator"
+msgstr "Oddělovač záhlaví"
+
+msgid "Frame Outline"
+msgstr "Rám záhlaví"
+
+msgid "Frame Highlight"
+msgstr "Zesvětlení rámu"
+
+msgid "Frame Shadow"
+msgstr "Stín rámu"
+
+msgid "Contents Outline"
+msgstr "Obrys obsahu"
+
+msgid "Contents Highlight"
+msgstr "Zesvětlení obsahu"
+
+msgid "Contents Shadow"
+msgstr "Stín obsahu"
+
+msgid "Frame"
+msgstr "Rám"
+
+#, fuzzy
+msgid "Based on original legacy"
+msgstr "Založený na originálním gtk-window-decorator"
+
+msgid "Title Bar"
+msgstr "Záhlaví okna"
+
+msgid "Designed to be vista-ish in nature"
+msgstr "Navržen, aby Vistě z oka vypadl"
+
+msgid "Base"
+msgstr "Základ"
+
+msgid "Glow"
+msgstr "Záření"
+
+msgid "Sides"
+msgstr "Strany"
+
+msgid "Everything done with customizable pixmaps!"
+msgstr "Vše je děláno přes volitelné obrázky!"
+
+msgid "Top Rounding Radius"
+msgstr "Horní poloměr zakulacení"
+
+msgid "Bottom Rounding Radius"
+msgstr "Spodní poloměr zakulacení"
+
+msgid "_Clear"
+msgstr "Vy_mazat"
+
+#. style: use tiled or scaled pixmaps
+msgid "Scaled"
+msgstr "Zvětšené"
+
+msgid "Not adjustable"
+msgstr "Neměnitelné"
+
+msgid "Same as Active"
+msgstr "Stejné jako aktivní"
+
+msgid "Pixmap"
+msgstr "Obrázek"
+
+msgid "File"
+msgstr "Soubor"
+
+msgid "Preview"
+msgstr "Náhled"
+
+msgid "Clear"
+msgstr "Zrušit"
+
+msgid "Tiled/Scaled"
+msgstr "Opakovat/Roztáhnout"
+
+msgid "Width Override"
+msgstr "Přepsat šířku"
+
+msgid "Height Override"
+msgstr "Přepsat výšku"
+
+msgid "Glassy effects for your windows"
+msgstr "Skleněné efekty pro vaše okýnka"
+
+msgid "Glow Height"
+msgstr "Výška záře"
+
+msgid "Frame Base Color"
+msgstr "Základní barva rámu"
+
+msgid "Upper Titlebar Glow"
+msgstr "Horní záře záhlaví"
+
+msgid "Upper Glass Glow"
+msgstr "Horní záře lesku"
+
+msgid "Lower Glass Glow"
+msgstr "Spodní záře lesku"
+
+msgid "Middle Glass Glow"
+msgstr "Střední záře lesku"
+
+msgid "Outer Glass Glow"
+msgstr "Vnější záře lesku"
+
+msgid "Multiple gradients with somewhat glassy features too"
+msgstr "Násobné přechody s nějakými skleněnými vlastnostmi"
+
+msgid "Left Blend"
+msgstr "Leve rozpouštění"
+
+msgid "Middle Blend"
+msgstr "Prostřední rozpouštění"
+
+msgid "Right Blend"
+msgstr "Pravé rozpouštění"
+
+msgid "Contrast"
+msgstr "Kontrast"
+
+msgid "(Color)"
+msgstr "(Barva)"
+
+msgid "(Alpha)"
+msgstr "(Průhlednost)"
+
+msgid "Notch"
+msgstr "Plynulost"
+
+msgid "Position"
+msgstr "Pozice"
+
+msgid "Curve"
+msgstr "Zahnutí"
+
+msgid "Offset"
+msgstr "Odsazení"
+
+msgid "Use Glow"
+msgstr "Použít záři"
+
+msgid "Title Glow"
+msgstr "Záře záhlaví"
+
+msgid "Radius"
+msgstr "Poloměr"
+
+msgid "Evolved from the legacy engine"
+msgstr "Vyvinutý ze zobrazovače \"legacy\""
+
+msgid "Border Gap"
+msgstr "Mezera okraje"
+
+msgid "Show Border when maximised?"
+msgstr "Zobrazit okraj u maximalizovaných?"
+
+msgid "Show when minimised?"
+msgstr "Zobrazit u minimalizovaných?"
+
+msgid "Minimised Border Size"
+msgstr "Minimalizovat velikost okraje"
+
+msgid "Enable Left Bar Dip?"
+msgstr "Povolit sklon levého okraje?"
+
+msgid "Left Bar Radius"
+msgstr "Poloměr levého okraje"
+
+msgid "Enable Lower Bulge? (Useless at the moment, but will be used soon)"
+msgstr ""
+"Povolit spodní vyklenutí? (V tento okamžik zbytečné, v budoucnu bude použito)"
+
+msgid "Top Corner Offset (%)"
+msgstr "Odsazení horního rohu (%)"
+
+msgid "Enable Title Bar Dip?"
+msgstr "Povolit sklon záhlaví?"
+
+msgid "Enable Button Part?"
+msgstr "Povolit tlačítkovou část?"
+
+msgid "Title Part Width"
+msgstr "Šířka části s nadpisem"
+
+msgid "Button Part Width)"
+msgstr "Šířka části s tlačítky)"
+
+msgid "Dip Corners Radius)"
+msgstr "Sklon rohového poloměru)"
+
+msgid "Round Inside Corners As well?"
+msgstr "Zakulatit vnitřní rohy stejně?"
+
+msgid "Enable Different Maximised Colors?"
+msgstr "Povolit rozdílné barvy pro maximalizované?"
+
+msgid "Turn Off repeating gradients when maximised?"
+msgstr "Vypnout opakující se přechody, když je maximalizováno?"
+
+msgid "Round Top Left Corner?"
+msgstr "Zakulatit horní levý roh?"
+
+msgid "Frame Rounding Radius"
+msgstr "Poloměr zakulacení rámu"
+
+msgid "Titlebar Rounding Radius"
+msgstr "Poloměr zakulacení záhlaví"
+
+msgid "Repeat Gradient?"
+msgstr "Opakovat přechody?"
+
+msgid "Vertical Repeat?"
+msgstr "Vertikální opakování?"
+
+msgid "Diagonal Repeat?"
+msgstr "Úhlopříčné opakování?"
+
+msgid "Repeat Frequency"
+msgstr "Frekvence opakování"
+
+#. ========================
+msgid "Enable Title Part Pixmap?"
+msgstr "Povolit obrázek v nadpisové části?"
+
+msgid "Repeat Title Part Pixmap?"
+msgstr "Opakovat obrázek v nadpisové části?"
+
+msgid "Title Bar Part Pixmap"
+msgstr "Obrázek nadpisové části"
+
+msgid "Choose Titlebar Part Pixmap"
+msgstr "Vyberte obrázek nadpisové části"
+
+#. ========================
+msgid "Enable Button Part Pixmap?"
+msgstr "Povolit obrázek v tlačítkové části?"
+
+msgid "Repeat Button Part Pixmap?"
+msgstr "Opakovat obrázek v tlačítkové části?"
+
+msgid "Button Part Pixmap"
+msgstr "Obrázek v tlačítkové části"
+
+msgid "Choose Button Part Pixmap"
+msgstr "Vyberte obrázek v tlačítkové části"
+
+#. ========================
+msgid "Enable Titlebar Pixmap?"
+msgstr "Povolit obrázek pro nadpis?"
+
+msgid "Repeat Titlebar Pixmap?"
+msgstr "Opakovat obrázek pro nadpis?"
+
+msgid "Titlebar Pixmap"
+msgstr "Obrázek pro nadpis"
+
+msgid "Choose Titlebar Pixmap"
+msgstr "Vyberte obrázek pro nadpis"
+
+msgid "Active/Inactive"
+msgstr "Aktivní/neaktivní"
+
+msgid "Maximised"
+msgstr "Maximizované"
+
+msgid "Corners"
+msgstr "Rohy"
+
+msgid "Border Layout"
+msgstr "Rozvržení okraje"
+
+msgid "Left Bar"
+msgstr "Levý okraj"
+
+msgid "Pixmaps"
+msgstr "Obrázky"
+
+msgid ""
+"Select\n"
+"Engine"
+msgstr ""
+"Vyberte\n"
+"zobrazovací jádro"
 
 msgid "Close Window"
 msgstr "Zavřít okno"
@@ -54,6 +374,10 @@ msgstr "Na všech plochách"
 msgid "UnStick Window"
 msgstr "Zrušit na všech plochách"
 
+#, fuzzy
+msgid "Super Maximize Window"
+msgstr "Maximalizovat okno"
+
 #, c-format
 msgid "The window \"%s\" is not responding."
 msgstr "Okno \"%s\" neodpovídá."
@@ -61,6 +385,9 @@ msgstr "Okno \"%s\" neodpovídá."
 msgid ""
 "Forcing this application to quit will cause you to lose any unsaved changes."
 msgstr "Vynucení ukončení aplikace způsobí ztrátu veškerých neuložených změn."
+
+msgid "_Cancel"
+msgstr "_Zrušit"
 
 msgid "_Force Quit"
 msgstr "Vynutit ukončení"
@@ -180,18 +507,6 @@ msgstr "Obrázky pro tlačítka"
 msgid "Button"
 msgstr "Tlačítko"
 
-msgid "File"
-msgstr "Soubor"
-
-msgid "Preview"
-msgstr "Náhled"
-
-msgid "Clear"
-msgstr "Zrušit"
-
-msgid "Colors"
-msgstr "Barvy"
-
 msgid "Text Fill"
 msgstr "Výplň textu"
 
@@ -209,9 +524,6 @@ msgstr "Barva"
 
 msgid "Opacity"
 msgstr "Průhlednost"
-
-msgid "Radius"
-msgstr "Poloměr"
 
 msgid "X Offset"
 msgstr "Odsazení X"
@@ -234,6 +546,7 @@ msgstr "Horizontální odsazení tlačítka"
 msgid "Title-bar Object Layout"
 msgstr "Rozmístění objektů v záhlaví"
 
+#, fuzzy
 msgid ""
 "Use colons to separate left, center, and right.\n"
 "Anything after a third colon is ignored.\n"
@@ -241,6 +554,7 @@ msgid ""
 "I=Icon, T=Title, H=Help, M=Menu\n"
 "S=Shade, U/A=On Top(Up/Above)\n"
 "Y=Sticky, (#)=# pixels space, ex: (5)\n"
+"F=SuperMaximize\n"
 msgstr ""
 "Pro oddělení v pořadí vlevo, ve středu a vpravo použijte dvojtečky .\n"
 "Cokoliv za třetí dvojtečkou bude ignorováno.\n"
@@ -251,6 +565,9 @@ msgstr ""
 
 msgid "Export Theme..."
 msgstr "Exportovat téma..."
+
+msgid "_Save"
+msgstr "_Uložit"
 
 msgid "Name:"
 msgstr "Název:"
@@ -325,9 +642,6 @@ msgstr "Aktivní okno"
 msgid "Inactive Window"
 msgstr "Neaktivní okno"
 
-msgid "Title Bar"
-msgstr "Záhlaví okna"
-
 msgid "Screenshot"
 msgstr "Snímek obrazovky"
 
@@ -351,6 +665,9 @@ msgstr "Zobrazuj nápovědu pro tlačítka"
 msgid "Use Decoration Cropping"
 msgstr "Zařezávej dekorace"
 
+msgid "No Shade on Titlebar Scroll"
+msgstr ""
+
 msgid "Use Button Fade"
 msgstr "Stmívání tlačítek"
 
@@ -370,6 +687,10 @@ msgid "Button Pulse Min Opacity %"
 msgstr "Minimální průhlednost pulsijícího tlačítka"
 
 msgid "Titlebar Double-Click Action"
+msgstr "Akce při poklepání na záhlaví"
+
+#, fuzzy
+msgid "Titlebar Middle-Click Action"
 msgstr "Akce při poklepání na záhlaví"
 
 msgid "Button Hover Cursor"
@@ -415,54 +736,21 @@ msgstr "Upravit"
 msgid "Import Theme..."
 msgstr "Importovat téma..."
 
+msgid "_Open"
+msgstr "_Otevřít"
+
 msgid "Search:"
 msgstr "Vyhledat:"
 
-msgid "Fetching Themes"
-msgstr "Stahuji témata"
+msgid "_Refresh"
+msgstr "Akt_ualizovat"
 
-msgid ""
-"Fetching themes... \n"
-"This may take time depending on \n"
-"internet connection speed."
-msgstr ""
-"Stahuji témata...\n"
-"Může to chvíli trvat v závislosti na rychlosti\n"
-"vašeho internetového připojení."
+msgid "_Delete"
+msgstr "_Smazat"
 
-msgid ""
-"Here are the repositories that you can fetch Emerald Themes from. \n"
-"Fetching themes would fetch and import themes from SVN repositories \n"
-"You need Subversion package installed to use this feature."
-msgstr ""
-"Zde naleznete repozitáře, ze kterách můžete stáhnout témata pro Emerald.\n"
-"Stáhnutí tématu stáhne a importuje témata ze zvoleného SVN repozitáře.\n"
-"Budete potřebovat nainstalovaný balíček Subversion, abyste mohli tuto\n"
-"vymoženost použít."
-
-msgid ""
-"This repository contains GPL'd themes that can be used under \n"
-"the terms of GNU GPL licence v2.0 or later \n"
-msgstr ""
-"Tento repozitář obsahuje témata vydaná pod licencí GPL, která mohou být\n"
-"použita při splnění podmínek licence GNU GPL verze 2.0 a pozdější. \n"
-
-msgid ""
-"This repository contains non-GPL'd themes. They might infringe \n"
-"copyrights and patent laws in some countries."
-msgstr ""
-"Tento repozitář obsahuje témata vydaná pod jinou licencí nez GPL. \n"
-"Mohou v některých zemích porušovat autorská a patentová práva."
-
-msgid ""
-"To activate Non-GPL repository please run the following in shell and accept "
-"the server certificate permanently: \n"
-"svn ls https://svn.generation.no/emerald-themes."
-msgstr ""
-"Pro aktivaci ne-GPL repozitáře je třeba spustit ručně ve vašem shellu "
-"příkaz:\n"
-"svn ls https://svn.generation.no/emerald-themes.\n"
-"a natrvalo akceptovat bezpečnostní certifikát."
+#, fuzzy
+msgid "_Import..."
+msgstr "Export..."
 
 msgid "Themes"
 msgstr "Témata"
@@ -476,306 +764,54 @@ msgstr "Nastavení témat"
 msgid "Emerald Settings"
 msgstr "Nastavení Emeraldu"
 
-msgid ""
-"Select\n"
-"Engine"
-msgstr ""
-"Vyberte\n"
-"zobrazovací jádro"
-
-msgid "Based on original gtk-window-decorator"
-msgstr "Založený na originálním gtk-window-decorator"
-
-msgid "Round Top Left Corner"
-msgstr "Zakulatit horní levý roh"
-
-msgid "Round Top Right Corner"
-msgstr "Zakulatit horní pravý roh"
-
-msgid "Round Bottom Left Corner"
-msgstr "Zakulatit dolní levý roh"
-
-msgid "Round Bottom Right Corner"
-msgstr "Zakulatit dolní pravý roh"
-
-msgid "Rounding Radius"
-msgstr "Poloměr zakulacení"
-
-msgid "Outer Frame Blend"
-msgstr "Rozpouštění vnějšího rámu"
-
-msgid "Inner Frame Blend"
-msgstr "Rozpouštění vnitřního rámu"
-
-msgid "Outer Titlebar Blend"
-msgstr "Rozpouštění vnějšího záhlaví"
-
-msgid "Inner Titlebar Blend"
-msgstr "Rozpouštění vnitřního záhlaví"
-
-msgid "Titlebar Separator"
-msgstr "Oddělovač záhlaví"
-
-msgid "Frame Outline"
-msgstr "Rám záhlaví"
-
-msgid "Frame Highlight"
-msgstr "Zesvětlení rámu"
-
-msgid "Frame Shadow"
-msgstr "Stín rámu"
-
-msgid "Contents Outline"
-msgstr "Obrys obsahu"
-
-msgid "Contents Highlight"
-msgstr "Zesvětlení obsahu"
-
-msgid "Contents Shadow"
-msgstr "Stín obsahu"
-
-msgid "Frame"
-msgstr "Rám"
-
-#, fuzzy
-msgid "Based on original legacy"
-msgstr "Založený na originálním gtk-window-decorator"
-
-msgid "Designed to be vista-ish in nature"
-msgstr "Navržen, aby Vistě z oka vypadl"
-
-msgid "Base"
-msgstr "Základ"
-
-msgid "Glow"
-msgstr "Záření"
-
-msgid "Sides"
-msgstr "Strany"
-
-msgid "Everything done with customizable pixmaps!"
-msgstr "Vše je děláno přes volitelné obrázky!"
-
-msgid "Top Rounding Radius"
-msgstr "Horní poloměr zakulacení"
-
-msgid "Bottom Rounding Radius"
-msgstr "Spodní poloměr zakulacení"
-
-#. Style : Use Tiled or Scaled pixmaps
-msgid "Scaled"
-msgstr "Zvětšené"
-
-msgid "Not adjustable"
-msgstr "Neměnitelné"
-
-msgid "Same as Active"
-msgstr "Stejné jako aktivní"
-
-msgid "Pixmap"
-msgstr "Obrázek"
-
-msgid "Tiled/Scaled"
-msgstr "Opakovat/Roztáhnout"
-
-msgid "Width Override"
-msgstr "Přepsat šířku"
-
-msgid "Height Override"
-msgstr "Přepsat výšku"
-
-msgid "Glassy effects for your windows"
-msgstr "Skleněné efekty pro vaše okýnka"
-
-msgid "Glow Height"
-msgstr "Výška záře"
-
-msgid "Frame Base Color"
-msgstr "Základní barva rámu"
-
-msgid "Upper Titlebar Glow"
-msgstr "Horní záře záhlaví"
-
-msgid "Upper Glass Glow"
-msgstr "Horní záře lesku"
-
-msgid "Lower Glass Glow"
-msgstr "Spodní záře lesku"
-
-msgid "Middle Glass Glow"
-msgstr "Střední záře lesku"
-
-msgid "Outer Glass Glow"
-msgstr "Vnější záře lesku"
-
-msgid "Multiple gradients with somewhat glassy features too"
-msgstr "Násobné přechody s nějakými skleněnými vlastnostmi"
-
-msgid "Left Blend"
-msgstr "Leve rozpouštění"
-
-msgid "Middle Blend"
-msgstr "Prostřední rozpouštění"
-
-msgid "Right Blend"
-msgstr "Pravé rozpouštění"
-
-msgid "Contrast"
-msgstr "Kontrast"
-
-msgid "(Color)"
-msgstr "(Barva)"
-
-msgid "(Alpha)"
-msgstr "(Průhlednost)"
-
-msgid "Notch"
-msgstr "Plynulost"
-
-msgid "Position"
-msgstr "Pozice"
-
-msgid "Curve"
-msgstr "Zahnutí"
-
-msgid "Offset"
-msgstr "Odsazení"
-
-msgid "Use Glow"
-msgstr "Použít záři"
-
-msgid "Title Glow"
-msgstr "Záře záhlaví"
-
-msgid "Evolved from the legacy engine"
-msgstr "Vyvinutý ze zobrazovače \"legacy\""
-
-msgid "Border Gap"
-msgstr "Mezera okraje"
-
-msgid "Show Border when maximised?"
-msgstr "Zobrazit okraj u maximalizovaných?"
-
-msgid "Show when minimised?"
-msgstr "Zobrazit u minimalizovaných?"
-
-msgid "Minimised Border Size"
-msgstr "Minimalizovat velikost okraje"
-
-msgid "Enable Left Bar Dip?"
-msgstr "Povolit sklon levého okraje?"
-
-msgid "Left Bar Radius"
-msgstr "Poloměr levého okraje"
-
-msgid "Enable Lower Bulge? (Useless at the moment, but will be used soon)"
-msgstr ""
-"Povolit spodní vyklenutí? (V tento okamžik zbytečné, v budoucnu bude použito)"
-
-msgid "Top Corner Offset (%)"
-msgstr "Odsazení horního rohu (%)"
-
-msgid "Enable Title Bar Dip?"
-msgstr "Povolit sklon záhlaví?"
-
-msgid "Enable Button Part?"
-msgstr "Povolit tlačítkovou část?"
-
-msgid "Title Part Width"
-msgstr "Šířka části s nadpisem"
-
-msgid "Button Part Width)"
-msgstr "Šířka části s tlačítky)"
-
-msgid "Dip Corners Radius)"
-msgstr "Sklon rohového poloměru)"
-
-msgid "Round Inside Corners As well?"
-msgstr "Zakulatit vnitřní rohy stejně?"
-
-msgid "Enable Different Maximised Colors?"
-msgstr "Povolit rozdílné barvy pro maximalizované?"
-
-msgid "Turn Off repeating gradients when maximised?"
-msgstr "Vypnout opakující se přechody, když je maximalizováno?"
-
-msgid "Round Top Left Corner?"
-msgstr "Zakulatit horní levý roh?"
-
-msgid "Frame Rounding Radius"
-msgstr "Poloměr zakulacení rámu"
-
-msgid "Titlebar Rounding Radius"
-msgstr "Poloměr zakulacení záhlaví"
-
-msgid "Repeat Gradient?"
-msgstr "Opakovat přechody?"
-
-msgid "Vertical Repeat?"
-msgstr "Vertikální opakování?"
-
-msgid "Diagonal Repeat?"
-msgstr "Úhlopříčné opakování?"
-
-msgid "Repeat Frequency"
-msgstr "Frekvence opakování"
-
-#. /////////////////////
-msgid "Enable Title Part Pixmap?"
-msgstr "Povolit obrázek v nadpisové části?"
-
-msgid "Repeat Title Part Pixmap?"
-msgstr "Opakovat obrázek v nadpisové části?"
-
-msgid "Title Bar Part Pixmap"
-msgstr "Obrázek nadpisové části"
-
-msgid "Choose Titlebar Part Pixmap"
-msgstr "Vyberte obrázek nadpisové části"
-
-#. /////////////////////////
-msgid "Enable Button Part Pixmap?"
-msgstr "Povolit obrázek v tlačítkové části?"
-
-msgid "Repeat Button Part Pixmap?"
-msgstr "Opakovat obrázek v tlačítkové části?"
-
-msgid "Button Part Pixmap"
-msgstr "Obrázek v tlačítkové části"
-
-msgid "Choose Button Part Pixmap"
-msgstr "Vyberte obrázek v tlačítkové části"
-
-#. /////////////////////////
-msgid "Enable Titlebar Pixmap?"
-msgstr "Povolit obrázek pro nadpis?"
-
-msgid "Repeat Titlebar Pixmap?"
-msgstr "Opakovat obrázek pro nadpis?"
-
-msgid "Titlebar Pixmap"
-msgstr "Obrázek pro nadpis"
-
-msgid "Choose Titlebar Pixmap"
-msgstr "Vyberte obrázek pro nadpis"
-
-msgid "Active/Inactive"
-msgstr "Aktivní/neaktivní"
-
-msgid "Maximised"
-msgstr "Maximizované"
-
-msgid "Corners"
-msgstr "Rohy"
-
-msgid "Border Layout"
-msgstr "Rozvržení okraje"
-
-msgid "Left Bar"
-msgstr "Levý okraj"
-
-msgid "Pixmaps"
-msgstr "Obrázky"
+msgid "_Quit"
+msgstr "U_končit"
+
+#~ msgid "Fetching Themes"
+#~ msgstr "Stahuji témata"
+
+#~ msgid ""
+#~ "Fetching themes... \n"
+#~ "This may take time depending on \n"
+#~ "internet connection speed."
+#~ msgstr ""
+#~ "Stahuji témata...\n"
+#~ "Může to chvíli trvat v závislosti na rychlosti\n"
+#~ "vašeho internetového připojení."
+
+#~ msgid ""
+#~ "Here are the repositories that you can fetch Emerald Themes from. \n"
+#~ "Fetching themes would fetch and import themes from SVN repositories \n"
+#~ "You need Subversion package installed to use this feature."
+#~ msgstr ""
+#~ "Zde naleznete repozitáře, ze kterách můžete stáhnout témata pro Emerald.\n"
+#~ "Stáhnutí tématu stáhne a importuje témata ze zvoleného SVN repozitáře.\n"
+#~ "Budete potřebovat nainstalovaný balíček Subversion, abyste mohli tuto\n"
+#~ "vymoženost použít."
+
+#~ msgid ""
+#~ "This repository contains GPL'd themes that can be used under \n"
+#~ "the terms of GNU GPL licence v2.0 or later \n"
+#~ msgstr ""
+#~ "Tento repozitář obsahuje témata vydaná pod licencí GPL, která mohou být\n"
+#~ "použita při splnění podmínek licence GNU GPL verze 2.0 a pozdější. \n"
+
+#~ msgid ""
+#~ "This repository contains non-GPL'd themes. They might infringe \n"
+#~ "copyrights and patent laws in some countries."
+#~ msgstr ""
+#~ "Tento repozitář obsahuje témata vydaná pod jinou licencí nez GPL. \n"
+#~ "Mohou v některých zemích porušovat autorská a patentová práva."
+
+#~ msgid ""
+#~ "To activate Non-GPL repository please run the following in shell and "
+#~ "accept the server certificate permanently: \n"
+#~ "svn ls https://svn.generation.no/emerald-themes."
+#~ msgstr ""
+#~ "Pro aktivaci ne-GPL repozitáře je třeba spustit ručně ve vašem shellu "
+#~ "příkaz:\n"
+#~ "svn ls https://svn.generation.no/emerald-themes.\n"
+#~ "a natrvalo akceptovat bezpečnostní certifikát."
 
 #~ msgid "Repositories"
 #~ msgstr "Repozitáře"

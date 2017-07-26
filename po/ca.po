@@ -1,22 +1,344 @@
-# Catalan translation of Emerald.
-# Copyright (C) 2006 Emerald
-# This file is distributed under the same license as the Emerald package.
+# Catalan translation for emerald
+# Copyright (C) 2006 launchpad.net/compiz
+# This file is distributed under the same license as the emerald package.
 # Antonio Cuñat <toni.cunat@gmail.com>, 2006.
 # Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2016.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Emerald 0.8.12.4\n"
-"Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
-"POT-Creation-Date: 2009-03-24 08:14+0100\n"
-"PO-Revision-Date: 2016-05-24 17:19+0200\n"
+"Project-Id-Version: emerald\n"
+"Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/emerald/issues\n"
+"POT-Creation-Date: 2017-05-04 19:28+0300\n"
+"PO-Revision-Date: 2017-03-07 19:41+0100\n"
 "Last-Translator: Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>\n"
-"Language-Team: Catalan\n"
+"Language-Team: Catalan <ca@li.org>\n"
+"Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.7.1\n"
-"Language: ca\n"
+"X-Generator: Poedit 1.8.12\n"
+
+msgid "Based on original gtk-window-decorator"
+msgstr "Basat amb la versió original de gtk-window-decorator"
+
+msgid "Round Top Left Corner"
+msgstr "Arrodoneix la cantonada superior de l'esquerra"
+
+msgid "Round Top Right Corner"
+msgstr "Arrodoneix la cantonada superior de la dreta"
+
+msgid "Round Bottom Left Corner"
+msgstr "Arrodoneix la cantonada inferior de l'esquerra"
+
+msgid "Round Bottom Right Corner"
+msgstr "Arrodoneix la cantonada inferior de la dreta"
+
+msgid "Rounding Radius"
+msgstr "Radi d'arrodoniment"
+
+msgid "Colors"
+msgstr "Colors"
+
+msgid "Outer Frame Blend"
+msgstr "Barreja exterior del marc"
+
+msgid "Inner Frame Blend"
+msgstr "Barreja interior del marc"
+
+msgid "Outer Titlebar Blend"
+msgstr "Barreja exterior de la barra de títol"
+
+msgid "Inner Titlebar Blend"
+msgstr "Barreja interior de la barra de títol"
+
+msgid "Titlebar Separator"
+msgstr "Separador de la barra de títol"
+
+msgid "Frame Outline"
+msgstr "Contorn del marc"
+
+msgid "Frame Highlight"
+msgstr "Ressaltat del marc"
+
+msgid "Frame Shadow"
+msgstr "Ombra del marc"
+
+msgid "Contents Outline"
+msgstr "Contorn del contingut"
+
+msgid "Contents Highlight"
+msgstr "Ressaltat del contingut"
+
+msgid "Contents Shadow"
+msgstr "Ombra del contingut"
+
+msgid "Frame"
+msgstr "Marc"
+
+msgid "Based on original legacy"
+msgstr "Basat amb la decoració antiga"
+
+msgid "Title Bar"
+msgstr "Barra de títol"
+
+msgid "Designed to be vista-ish in nature"
+msgstr "Dissenyat per a semblar-se a Vista"
+
+msgid "Base"
+msgstr "Base"
+
+msgid "Glow"
+msgstr "Resplendor"
+
+msgid "Sides"
+msgstr "Cares"
+
+msgid "Everything done with customizable pixmaps!"
+msgstr "Qualsevol cosa amb mapes de píxels personalitzats"
+
+msgid "Top Rounding Radius"
+msgstr "Radi d'arrodoniment superior"
+
+msgid "Bottom Rounding Radius"
+msgstr "Radi d'arrodoniment Inferior"
+
+msgid "_Clear"
+msgstr "_Neteja"
+
+#. style: use tiled or scaled pixmaps
+msgid "Scaled"
+msgstr "Escalat"
+
+msgid "Not adjustable"
+msgstr "No es pot ajustar"
+
+msgid "Same as Active"
+msgstr "Igual que l'actiu"
+
+msgid "Pixmap"
+msgstr "Mapa de píxels"
+
+msgid "File"
+msgstr "Fitxer"
+
+msgid "Preview"
+msgstr "Vista prèvia"
+
+msgid "Clear"
+msgstr "Neteja"
+
+msgid "Tiled/Scaled"
+msgstr "Mosaic/escalat"
+
+msgid "Width Override"
+msgstr "Anul·lació de l'amplada"
+
+msgid "Height Override"
+msgstr "Anul·lació de l'alçada"
+
+msgid "Glassy effects for your windows"
+msgstr "Efectes de vidre en les finestres"
+
+msgid "Glow Height"
+msgstr "Alçada de la resplendor"
+
+msgid "Frame Base Color"
+msgstr "Color de la base del marc"
+
+msgid "Upper Titlebar Glow"
+msgstr "Resplendor de la barra de títol superior"
+
+msgid "Upper Glass Glow"
+msgstr "Resplendor superior del vidre"
+
+msgid "Lower Glass Glow"
+msgstr "Resplendor inferior del vidre"
+
+msgid "Middle Glass Glow"
+msgstr "Resplendor del mig del vidre"
+
+msgid "Outer Glass Glow"
+msgstr "Resplendor exterior del vidre"
+
+msgid "Multiple gradients with somewhat glassy features too"
+msgstr "Degradats múltiples amb algunes característiques dels vidres"
+
+msgid "Left Blend"
+msgstr "Barreja de l'esquerra"
+
+msgid "Middle Blend"
+msgstr "Barreja del mig"
+
+msgid "Right Blend"
+msgstr "Barreja de la dreta"
+
+msgid "Contrast"
+msgstr "Contrast"
+
+msgid "(Color)"
+msgstr "(color)"
+
+msgid "(Alpha)"
+msgstr "(alfa)"
+
+msgid "Notch"
+msgstr "Osca"
+
+msgid "Position"
+msgstr "Posició"
+
+msgid "Curve"
+msgstr "Corba"
+
+msgid "Offset"
+msgstr "Desplaçament"
+
+msgid "Use Glow"
+msgstr "Utilitza la resplendor"
+
+msgid "Title Glow"
+msgstr "Resplendor del títol"
+
+msgid "Radius"
+msgstr "Radi"
+
+msgid "Evolved from the legacy engine"
+msgstr "Amb l'evolució del motor original"
+
+msgid "Border Gap"
+msgstr "Separació a la vora"
+
+msgid "Show Border when maximised?"
+msgstr "Voleu mostrar la vora quan estigui maximitzat?"
+
+msgid "Show when minimised?"
+msgstr "Voleu mostrar-ho quan estigui minimitzada?"
+
+msgid "Minimised Border Size"
+msgstr "Mida de la vora minimitzada?"
+
+msgid "Enable Left Bar Dip?"
+msgstr "Voleu habilitar la immersió en la barra esquerra?"
+
+msgid "Left Bar Radius"
+msgstr "Radi de la barra esquerra"
+
+msgid "Enable Lower Bulge? (Useless at the moment, but will be used soon)"
+msgstr ""
+"Voleu habilitar protuberància inferior? (actualment no s'utilitza, però "
+"s'utilitzarà aviat)"
+
+msgid "Top Corner Offset (%)"
+msgstr "Desplaçament de la cantonada superior (%)"
+
+msgid "Enable Title Bar Dip?"
+msgstr "Voleu habilitar la immersió en la barra de títol?"
+
+msgid "Enable Button Part?"
+msgstr "Voleu habilitar la part del botó?"
+
+msgid "Title Part Width"
+msgstr "Amplada de la part del títol"
+
+msgid "Button Part Width)"
+msgstr "Amplada de la part del botó)"
+
+msgid "Dip Corners Radius)"
+msgstr "Radi d'immersió de les cantonades)"
+
+msgid "Round Inside Corners As well?"
+msgstr "Voleu arrodonir també les cantonades interiors?"
+
+msgid "Enable Different Maximised Colors?"
+msgstr "Voleu habilitar colors diferents amb la maximització?"
+
+msgid "Turn Off repeating gradients when maximised?"
+msgstr "Voleu desactivar la repetició dels degradats quan estigui maximitzat?"
+
+msgid "Round Top Left Corner?"
+msgstr "Voleu arrodonir la cantonada superior de l'esquerra?"
+
+msgid "Frame Rounding Radius"
+msgstr "Radi d'arrodoniment del marc"
+
+msgid "Titlebar Rounding Radius"
+msgstr "Radi d'arrodoniment de la barra de títol"
+
+msgid "Repeat Gradient?"
+msgstr "Repetició del degradat?"
+
+msgid "Vertical Repeat?"
+msgstr "Repetició vertical?"
+
+msgid "Diagonal Repeat?"
+msgstr "Repetició diagonal?"
+
+msgid "Repeat Frequency"
+msgstr "Freqüència de repetició?"
+
+#. ========================
+msgid "Enable Title Part Pixmap?"
+msgstr "Voleu habilitar el mapa de píxels en la part del títol?"
+
+msgid "Repeat Title Part Pixmap?"
+msgstr "Repetició del mapa de píxels de la part del títol?"
+
+msgid "Title Bar Part Pixmap"
+msgstr "Mapa de píxels de la part de la barra de títol"
+
+msgid "Choose Titlebar Part Pixmap"
+msgstr "Trieu el mapa de píxels de la part de la barra de títol"
+
+#. ========================
+msgid "Enable Button Part Pixmap?"
+msgstr "Voleu habilitar el mapa de píxels de la part del botó?"
+
+msgid "Repeat Button Part Pixmap?"
+msgstr "Repetició del mapa de píxels de la part del botó?"
+
+msgid "Button Part Pixmap"
+msgstr "Mapa de píxels del botó"
+
+msgid "Choose Button Part Pixmap"
+msgstr "Trieu el mapa de píxels de la part del botó"
+
+#. ========================
+msgid "Enable Titlebar Pixmap?"
+msgstr "Voleu habilitar el mapa de píxels en la barra de títol?"
+
+msgid "Repeat Titlebar Pixmap?"
+msgstr "Repetició del mapa de píxels de la part de la barra de títol?"
+
+msgid "Titlebar Pixmap"
+msgstr "Mapa de píxels de la barra de títol"
+
+msgid "Choose Titlebar Pixmap"
+msgstr "Trieu el mapa de píxels de la barra de títol"
+
+msgid "Active/Inactive"
+msgstr "Actiu/inactiu"
+
+msgid "Maximised"
+msgstr "Maximitzat"
+
+msgid "Corners"
+msgstr "Cantonades"
+
+msgid "Border Layout"
+msgstr "Disposició del contorn"
+
+msgid "Left Bar"
+msgstr "Barra de l'esquerra"
+
+msgid "Pixmaps"
+msgstr "Mapes de píxels"
+
+msgid ""
+"Select\n"
+"Engine"
+msgstr ""
+"Seleccioneu\n"
+"el motor"
 
 msgid "Close Window"
 msgstr "Tanca la finestra"
@@ -54,6 +376,9 @@ msgstr "Enganxa la finestra"
 msgid "UnStick Window"
 msgstr "Desenganxa la finestra"
 
+msgid "Super Maximize Window"
+msgstr "Súper maximització de la finestra"
+
 #, c-format
 msgid "The window \"%s\" is not responding."
 msgstr "La finestra \"%s\" no està responent."
@@ -63,6 +388,9 @@ msgid ""
 msgstr ""
 "Si es força el tancament d'aquesta aplicació, pot causar la pèrdua de les "
 "dades que no s'hagin desat."
+
+msgid "_Cancel"
+msgstr "_Cancel·la"
 
 msgid "_Force Quit"
 msgstr "_Força el tancament"
@@ -188,18 +516,6 @@ msgstr "Mapes de píxels dels botons"
 msgid "Button"
 msgstr "Botó"
 
-msgid "File"
-msgstr "Fitxer"
-
-msgid "Preview"
-msgstr "Vista prèvia"
-
-msgid "Clear"
-msgstr "Neteja"
-
-msgid "Colors"
-msgstr "Colors"
-
 msgid "Text Fill"
 msgstr "Emplenament del text"
 
@@ -217,9 +533,6 @@ msgstr "Color"
 
 msgid "Opacity"
 msgstr "Opacitat"
-
-msgid "Radius"
-msgstr "Radi"
 
 msgid "X Offset"
 msgstr "Desplaçament X"
@@ -249,16 +562,21 @@ msgid ""
 "I=Icon, T=Title, H=Help, M=Menu\n"
 "S=Shade, U/A=On Top(Up/Above)\n"
 "Y=Sticky, (#)=# pixels space, ex: (5)\n"
+"F=SuperMaximize\n"
 msgstr ""
 "Utilitzeu comes per separar l'esquerra, el centre i la dreta.\n"
 "Qualsevol cosa després de la tercera coma s'ignorarà.\n"
 "C=Tanca, N=Minimitza, X/R=Restaura\n"
 "I=Icona, T=Títol, H=Ajuda, M=Menú\n"
 "S=Ombrejat, U/A=Al damunt(amunt/avall)\n"
-"Y=Enganxós, (#)=# espaiat del píxels, p. ex.: (5)\n"
+"Y=Enganxós, (#)=# espaiat dels píxels, p. ex.: (5)\n"
+"F=Súper maximització\n"
 
 msgid "Export Theme..."
 msgstr "Exporta el tema..."
+
+msgid "_Save"
+msgstr "_Desa"
 
 msgid "Name:"
 msgstr "Nom:"
@@ -338,9 +656,6 @@ msgstr "Finestra activa"
 msgid "Inactive Window"
 msgstr "Finestra inactiva"
 
-msgid "Title Bar"
-msgstr "Barra de títol"
-
 msgid "Screenshot"
 msgstr "Captura de pantalla"
 
@@ -363,6 +678,9 @@ msgstr "Mostra els quadres de text emergents per als botons"
 msgid "Use Decoration Cropping"
 msgstr "Utilitza l'escapçament de la decoració"
 
+msgid "No Shade on Titlebar Scroll"
+msgstr "Sense ombra amb el desplaçament de la barra de títol"
+
 msgid "Use Button Fade"
 msgstr "Utilitza l'esvaïment del botó"
 
@@ -384,6 +702,10 @@ msgstr "Opacitat mínima en % en pitjar el botó"
 msgid "Titlebar Double-Click Action"
 msgstr "Acció del doble clic en la barra de títol"
 
+#, fuzzy
+msgid "Titlebar Middle-Click Action"
+msgstr "Acció del doble clic en la barra de títol"
+
 msgid "Button Hover Cursor"
 msgstr "Cursor al damunt del botó"
 
@@ -394,7 +716,7 @@ msgid "Pointing Finger"
 msgstr "Dit apuntador"
 
 msgid "Compiz Decoration Blur Type"
-msgstr "Tipus de decoració difuminada de Compiz"
+msgstr "Tipus de degradat de la decoració de Compiz"
 
 msgid "None"
 msgstr "Cap"
@@ -426,53 +748,20 @@ msgstr "Edita"
 msgid "Import Theme..."
 msgstr "Importa el tema..."
 
+msgid "_Open"
+msgstr "_Obre"
+
 msgid "Search:"
 msgstr "Cerca:"
 
-msgid "Fetching Themes"
-msgstr "Captura de temes"
+msgid "_Refresh"
+msgstr "_Actualitza"
 
-msgid ""
-"Fetching themes... \n"
-"This may take time depending on \n"
-"internet connection speed."
-msgstr ""
-"S'estan capturant els temes...\n"
-"Això pot trigar una estona \n"
-"segons la velocitat de la connexió a Internet."
+msgid "_Delete"
+msgstr "_Suprimeix"
 
-msgid ""
-"Here are the repositories that you can fetch Emerald Themes from. \n"
-"Fetching themes would fetch and import themes from SVN repositories \n"
-"You need Subversion package installed to use this feature."
-msgstr ""
-"Aquí hi ha els dipòsits des d'on podeu capturar temes per a Emerald. \n"
-"La captura pot capturar i importar els temes des de dipòsits SVN\n"
-"Cal tindre el paquet Subversion instal·lat per a utilitzar aquesta "
-"característica."
-
-msgid ""
-"This repository contains GPL'd themes that can be used under \n"
-"the terms of GNU GPL licence v2.0 or later \n"
-msgstr ""
-"Aquest dipòsit conté temes GPL que es poden utilitzar sota \n"
-" els termes de la llicència GNU GPL v2.0 o posterior \n"
-
-msgid ""
-"This repository contains non-GPL'd themes. They might infringe \n"
-"copyrights and patent laws in some countries."
-msgstr ""
-"Aquest dipòsit conté temes no-GPL. Aquests temes poden \n"
-"infringir algunes patents i alguns drets d'autor en alguns països."
-
-msgid ""
-"To activate Non-GPL repository please run the following in shell and accept "
-"the server certificate permanently: \n"
-"svn ls https://svn.generation.no/emerald-themes."
-msgstr ""
-"Per activar el dipòsit no-GPL executeu la següent ordre al shell i accepteu "
-"permanentment el certificat del servidor: \n"
-"svn ls https://svn.generation.no/emerald-themes."
+msgid "_Import..."
+msgstr "_Importa..."
 
 msgid "Themes"
 msgstr "Temes"
@@ -486,303 +775,50 @@ msgstr "Ajusts dels temes"
 msgid "Emerald Settings"
 msgstr "Ajusts d'Emerald"
 
-msgid ""
-"Select\n"
-"Engine"
-msgstr ""
-"Seleccioneu\n"
-"el motor"
-
-msgid "Based on original gtk-window-decorator"
-msgstr "Basat amb la versió original de gtk-window-decorator"
-
-msgid "Round Top Left Corner"
-msgstr "Arrodoneix la cantonada superior de l'esquerra"
-
-msgid "Round Top Right Corner"
-msgstr "Arrodoneix la cantonada superior de la dreta"
-
-msgid "Round Bottom Left Corner"
-msgstr "Arrodoneix la cantonada inferior de l'esquerra"
-
-msgid "Round Bottom Right Corner"
-msgstr "Arrodoneix la cantonada inferior de la dreta"
-
-msgid "Rounding Radius"
-msgstr "Radi d'arrodoniment"
-
-msgid "Outer Frame Blend"
-msgstr "Barreja exterior del marc"
-
-msgid "Inner Frame Blend"
-msgstr "Barreja interior del marc"
-
-msgid "Outer Titlebar Blend"
-msgstr "Barreja exterior de la barra de títol"
-
-msgid "Inner Titlebar Blend"
-msgstr "Barreja interior de la barra de títol"
-
-msgid "Titlebar Separator"
-msgstr "Separador de la barra de títol"
-
-msgid "Frame Outline"
-msgstr "Contorn del marc"
-
-msgid "Frame Highlight"
-msgstr "Ressaltat del marc"
-
-msgid "Frame Shadow"
-msgstr "Ombra del marc"
-
-msgid "Contents Outline"
-msgstr "Contorn del contingut"
-
-msgid "Contents Highlight"
-msgstr "Ressaltat del contingut"
-
-msgid "Contents Shadow"
-msgstr "Ombra del contingut"
-
-msgid "Frame"
-msgstr "Marc"
-
-msgid "Based on original legacy"
-msgstr "Basat amb la decoració antiga"
-
-msgid "Designed to be vista-ish in nature"
-msgstr "Dissenyat per a semblar-se al Vista"
-
-msgid "Base"
-msgstr "Base"
-
-msgid "Glow"
-msgstr "Resplendor"
-
-msgid "Sides"
-msgstr "Cares"
-
-msgid "Everything done with customizable pixmaps!"
-msgstr "Qualsevol cosa amb mapes de píxels personalitzats"
-
-msgid "Top Rounding Radius"
-msgstr "Radi d'arrodoniment superior"
-
-msgid "Bottom Rounding Radius"
-msgstr "Radi d'arrodoniment Inferior"
-
-#. Style : Use Tiled or Scaled pixmaps
-msgid "Scaled"
-msgstr "Escalat"
-
-msgid "Not adjustable"
-msgstr "No es pot ajustar"
-
-msgid "Same as Active"
-msgstr "Igual que l'actiu"
-
-msgid "Pixmap"
-msgstr "Mapa de píxels"
-
-msgid "Tiled/Scaled"
-msgstr "Mosaic/escalat"
-
-msgid "Width Override"
-msgstr "Anul·lació de l'amplada"
-
-msgid "Height Override"
-msgstr "Anul·lació de l'alçada"
-
-msgid "Glassy effects for your windows"
-msgstr "Efectes de vidre en les finestres"
-
-msgid "Glow Height"
-msgstr "Alçada de la resplendor"
-
-msgid "Frame Base Color"
-msgstr "Color de la base del marc"
-
-msgid "Upper Titlebar Glow"
-msgstr "Resplendor de la barra de títol superior"
-
-msgid "Upper Glass Glow"
-msgstr "Resplendor superior del vidre"
-
-msgid "Lower Glass Glow"
-msgstr "Resplendor inferior del vidre"
-
-msgid "Middle Glass Glow"
-msgstr "Resplendor del mig del vidre"
-
-msgid "Outer Glass Glow"
-msgstr "Resplendor exterior del vidre"
-
-msgid "Multiple gradients with somewhat glassy features too"
-msgstr "Degradats múltiples amb algunes característiques dels vidres"
-
-msgid "Left Blend"
-msgstr "Barreja de l'esquerra"
-
-msgid "Middle Blend"
-msgstr "Barreja del mig"
-
-msgid "Right Blend"
-msgstr "Barreja de la dreta"
-
-msgid "Contrast"
-msgstr "Contrast"
-
-msgid "(Color)"
-msgstr "(color)"
-
-msgid "(Alpha)"
-msgstr "(alfa)"
-
-msgid "Notch"
-msgstr "Osca"
-
-msgid "Position"
-msgstr "Posició"
-
-msgid "Curve"
-msgstr "Corva"
-
-msgid "Offset"
-msgstr "Desplaçament"
-
-msgid "Use Glow"
-msgstr "Utilitza la resplendor"
-
-msgid "Title Glow"
-msgstr "Resplendor del títol"
-
-msgid "Evolved from the legacy engine"
-msgstr "Amb l'evolució del motor original"
-
-msgid "Border Gap"
-msgstr "Separació a la vora"
-
-msgid "Show Border when maximised?"
-msgstr "Voleu mostrar la vora quan estigui maximitzat?"
-
-msgid "Show when minimised?"
-msgstr "Voleu mostrar-ho quan estigui minimitzada?"
-
-msgid "Minimised Border Size"
-msgstr "Mida de la vora minimitzada?"
-
-msgid "Enable Left Bar Dip?"
-msgstr "Voleu habilitar la immersió en la barra esquerra?"
-
-msgid "Left Bar Radius"
-msgstr "Radi de la barra esquerra"
-
-msgid "Enable Lower Bulge? (Useless at the moment, but will be used soon)"
-msgstr ""
-"Voleu habilitar protuberància inferior? (actualment no s'utilitza, però "
-"s'utilitzarà aviat)"
-
-msgid "Top Corner Offset (%)"
-msgstr "Desplaçament de la cantonada superior (%)"
-
-msgid "Enable Title Bar Dip?"
-msgstr "Voleu habilitar la immersió en la barra de títol?"
-
-msgid "Enable Button Part?"
-msgstr "Voleu habilitar la part del botó?"
-
-msgid "Title Part Width"
-msgstr "Amplada de la part del títol"
-
-msgid "Button Part Width)"
-msgstr "Amplada de la part del botó)"
-
-msgid "Dip Corners Radius)"
-msgstr "Radi d'immersió de les cantonades)"
-
-msgid "Round Inside Corners As well?"
-msgstr "Voleu arrodonir també les cantonades interiors?"
-
-msgid "Enable Different Maximised Colors?"
-msgstr "Voleu habilitar colors diferents amb la maximització?"
-
-msgid "Turn Off repeating gradients when maximised?"
-msgstr "Voleu desactivar la repetició dels degradats quan estigui maximitzat?"
-
-msgid "Round Top Left Corner?"
-msgstr "Voleu arrodonir la cantonada superior de l'esquerra?"
-
-msgid "Frame Rounding Radius"
-msgstr "Radi d'arrodoniment del marc"
-
-msgid "Titlebar Rounding Radius"
-msgstr "Radi d'arrodoniment de la barra de títol"
-
-msgid "Repeat Gradient?"
-msgstr "Repetició del difuminat?"
-
-msgid "Vertical Repeat?"
-msgstr "Repetició vertical?"
-
-msgid "Diagonal Repeat?"
-msgstr "Repetició diagonal?"
-
-msgid "Repeat Frequency"
-msgstr "Freqüència de repetició?"
-
-#. /////////////////////
-msgid "Enable Title Part Pixmap?"
-msgstr "Voleu habilitar el mapa de píxels en la part del títol?"
-
-msgid "Repeat Title Part Pixmap?"
-msgstr "Repetició del mapa de píxels de la part del títol?"
-
-msgid "Title Bar Part Pixmap"
-msgstr "Mapa de píxels de la part de la barra de títol"
-
-msgid "Choose Titlebar Part Pixmap"
-msgstr "Trieu el mapa de píxels de la part de la barra de títol"
-
-#. /////////////////////////
-msgid "Enable Button Part Pixmap?"
-msgstr "Voleu habilitar el mapa de píxels de la part del botó?"
-
-msgid "Repeat Button Part Pixmap?"
-msgstr "Repetició del mapa de píxels de la part del botó?"
-
-msgid "Button Part Pixmap"
-msgstr "Mapa de píxels del botó"
-
-msgid "Choose Button Part Pixmap"
-msgstr "Trieu el mapa de píxels de la part del botó"
-
-#. /////////////////////////
-msgid "Enable Titlebar Pixmap?"
-msgstr "Voleu habilitar el mapa de píxels en la barra de títol?"
-
-msgid "Repeat Titlebar Pixmap?"
-msgstr "Repetició del mapa de píxels de la part de la barra de títol?"
-
-msgid "Titlebar Pixmap"
-msgstr "Mapa de píxels de la barra de títol"
-
-msgid "Choose Titlebar Pixmap"
-msgstr "Trieu el mapa de píxels de la barra de títol"
-
-msgid "Active/Inactive"
-msgstr "Actiu/inactiu"
-
-msgid "Maximised"
-msgstr "Maximitzat"
-
-msgid "Corners"
-msgstr "Cantonades"
-
-msgid "Border Layout"
-msgstr "Disposició del contorn"
-
-msgid "Left Bar"
-msgstr "Barra de l'esquerra"
-
-msgid "Pixmaps"
-msgstr "Mapes de píxels"
+msgid "_Quit"
+msgstr "_Surt"
+
+#~ msgid "Fetching Themes"
+#~ msgstr "Captura de temes"
+
+#~ msgid ""
+#~ "Fetching themes... \n"
+#~ "This may take time depending on \n"
+#~ "internet connection speed."
+#~ msgstr ""
+#~ "S'estan capturant els temes...\n"
+#~ "Això pot trigar una estona \n"
+#~ "segons la velocitat de la connexió a Internet."
+
+#~ msgid ""
+#~ "Here are the repositories that you can fetch Emerald Themes from. \n"
+#~ "Fetching themes would fetch and import themes from SVN repositories \n"
+#~ "You need Subversion package installed to use this feature."
+#~ msgstr ""
+#~ "Aquí hi ha els dipòsits des d'on podeu capturar temes per a Emerald. \n"
+#~ "La captura pot capturar i importar els temes des de dipòsits SVN\n"
+#~ "Cal tindre el paquet Subversion instal·lat per a utilitzar aquesta "
+#~ "característica."
+
+#~ msgid ""
+#~ "This repository contains GPL'd themes that can be used under \n"
+#~ "the terms of GNU GPL licence v2.0 or later \n"
+#~ msgstr ""
+#~ "Aquest dipòsit conté temes GPL que es poden utilitzar sota \n"
+#~ " els termes de la llicència GNU GPL v2.0 o posterior \n"
+
+#~ msgid ""
+#~ "This repository contains non-GPL'd themes. They might infringe \n"
+#~ "copyrights and patent laws in some countries."
+#~ msgstr ""
+#~ "Aquest dipòsit conté temes no-GPL. Aquests temes poden \n"
+#~ "infringir algunes patents i alguns drets d'autor en alguns països."
+
+#~ msgid ""
+#~ "To activate Non-GPL repository please run the following in shell and "
+#~ "accept the server certificate permanently: \n"
+#~ "svn ls https://svn.generation.no/emerald-themes."
+#~ msgstr ""
+#~ "Per activar el dipòsit no-GPL executeu la següent ordre al shell i "
+#~ "accepteu permanentment el certificat del servidor: \n"
+#~ "svn ls https://svn.generation.no/emerald-themes."

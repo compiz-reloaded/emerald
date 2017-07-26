@@ -24,12 +24,15 @@ EXTRA_DIST =		   \
 	intltool-merge.in   \
 	intltool-update.in
 
+DISTCHECK_CONFIGURE_FLAGS = --with-gtk=$(GTK_API_VERSION)
+
 DISTCLEANFILES =		\
 	po/stamp-it		 \
 	intltool-extract	 \
 	intltool-merge		 \
 	intltool-update		 \
-	po/.intltool-merge-cache
+	po/.intltool-merge-cache \
+	decor_ver.out
 
 # Build ChangeLog from GIT  history
 ChangeLog:

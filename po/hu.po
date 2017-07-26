@@ -1,26 +1,344 @@
-# translation of emerald to hungarian
-# Emerald intl file.
-# Copyright (C) 2006 Beryl
+# Hungarian translation for emerald
+# Copyright (C) 2006 launchpad.net/compiz
 # This file is distributed under the same license as the emerald package.
-#
 # cyberorg <cyberorg@cyberorg.info>, 2006.
 # Lónyai Gergely, Aleph <alephlg@gmail.com> 2006.
 # KAMI911 <kami911@gmail.com>, 2007-2008.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: Emerald-0.2.0\n"
-"Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
-"POT-Creation-Date: 2009-03-24 08:14+0100\n"
+"Project-Id-Version: emerald\n"
+"Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/emerald/issues\n"
+"POT-Creation-Date: 2017-05-04 19:28+0300\n"
 "PO-Revision-Date: 2009-01-02 10:42+0100\n"
 "Last-Translator: KAMI <kamihir@freemail.hu>\n"
 "Language-Team: Gentoo-hu Team <gentoo-doc-hu@gentoo.org>\n"
+"Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Pootle 1.1.0\n"
-"X-Poedit-Language: Hungarian\n"
-"X-Poedit-Country: HUNGARY\n"
-"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Based on original gtk-window-decorator"
+msgstr "Eredeti gtk-window-decorator alapú"
+
+msgid "Round Top Left Corner"
+msgstr "Lekerekített bal felső sarok"
+
+msgid "Round Top Right Corner"
+msgstr "Lekerekített jobb felső sarok"
+
+msgid "Round Bottom Left Corner"
+msgstr "Lekerekített bal alsó sarok"
+
+msgid "Round Bottom Right Corner"
+msgstr "Lekerekített jobb alsó sarok"
+
+msgid "Rounding Radius"
+msgstr "Lekerekítés sugara"
+
+msgid "Colors"
+msgstr "Színek"
+
+msgid "Outer Frame Blend"
+msgstr "Külső keret illesztése"
+
+msgid "Inner Frame Blend"
+msgstr "Belső keret illesztése"
+
+msgid "Outer Titlebar Blend"
+msgstr "Külső címsor illesztése"
+
+msgid "Inner Titlebar Blend"
+msgstr "Belső címsor illesztése"
+
+msgid "Titlebar Separator"
+msgstr "Címsor elválasztó"
+
+msgid "Frame Outline"
+msgstr "Külső keret"
+
+msgid "Frame Highlight"
+msgstr "Keret kijelölése"
+
+msgid "Frame Shadow"
+msgstr "Keret árnyéka"
+
+msgid "Contents Outline"
+msgstr "Külső tartalom"
+
+msgid "Contents Highlight"
+msgstr "Tartalom kijelölése"
+
+msgid "Contents Shadow"
+msgstr "Tartalom árnyéka"
+
+msgid "Frame"
+msgstr "Keret"
+
+msgid "Based on original legacy"
+msgstr "Eredeti gtk-window-decorator alapú"
+
+msgid "Title Bar"
+msgstr "Címsor"
+
+msgid "Designed to be vista-ish in nature"
+msgstr "Tájkép kinézet"
+
+msgid "Base"
+msgstr "Alap"
+
+msgid "Glow"
+msgstr "Ragyogás"
+
+msgid "Sides"
+msgstr "Oldalak"
+
+msgid "Everything done with customizable pixmaps!"
+msgstr "Minden rendben van az egyedi képekkel!"
+
+msgid "Top Rounding Radius"
+msgstr "Felső lekerekítés sugara"
+
+msgid "Bottom Rounding Radius"
+msgstr "Alsó lekerekítés sugara"
+
+msgid "_Clear"
+msgstr "_Törlés"
+
+#. style: use tiled or scaled pixmaps
+msgid "Scaled"
+msgstr "Átméretezett"
+
+msgid "Not adjustable"
+msgstr "Nem állítható"
+
+msgid "Same as Active"
+msgstr "Aktívval megegyező"
+
+msgid "Pixmap"
+msgstr "Kép"
+
+msgid "File"
+msgstr "Fájl"
+
+msgid "Preview"
+msgstr "Előnézet"
+
+msgid "Clear"
+msgstr "Törlés"
+
+msgid "Tiled/Scaled"
+msgstr "Mozaik/Átméretezett"
+
+msgid "Width Override"
+msgstr "Szélesség átméretezése"
+
+msgid "Height Override"
+msgstr "Magasság átméretezése"
+
+msgid "Glassy effects for your windows"
+msgstr "Üvegszerű effektusok az ablakoknál"
+
+msgid "Glow Height"
+msgstr "Üveg vastagsága"
+
+msgid "Frame Base Color"
+msgstr "Keret alapszíne"
+
+msgid "Upper Titlebar Glow"
+msgstr "Felső címsor ragyogása"
+
+msgid "Upper Glass Glow"
+msgstr "Felülről világított üveg"
+
+msgid "Lower Glass Glow"
+msgstr "Alulról világított üveg"
+
+msgid "Middle Glass Glow"
+msgstr "Középről világított üveg"
+
+msgid "Outer Glass Glow"
+msgstr "Kívülről világított üveg"
+
+msgid "Multiple gradients with somewhat glassy features too"
+msgstr "Többszörös színátmenet üveg-szerű tulajdonságokkal"
+
+msgid "Left Blend"
+msgstr "Jobb keverés"
+
+msgid "Middle Blend"
+msgstr "Közép keverés"
+
+msgid "Right Blend"
+msgstr "Jobb keverés"
+
+msgid "Contrast"
+msgstr "Kontraszt"
+
+msgid "(Color)"
+msgstr "(Szín)"
+
+msgid "(Alpha)"
+msgstr "(Alfa)"
+
+msgid "Notch"
+msgstr "Bemetszés"
+
+msgid "Position"
+msgstr "Pozíció"
+
+msgid "Curve"
+msgstr "Görbe"
+
+msgid "Offset"
+msgstr "Eltolás"
+
+msgid "Use Glow"
+msgstr "Ragyogás használata"
+
+msgid "Title Glow"
+msgstr "Címsor ragyogása"
+
+msgid "Radius"
+msgstr "Sugár"
+
+msgid "Evolved from the legacy engine"
+msgstr "Régi motorból örökölve"
+
+msgid "Border Gap"
+msgstr "Szegély térköz"
+
+msgid "Show Border when maximised?"
+msgstr "Maximalizált ablak szegélyének megjelenítése"
+
+msgid "Show when minimised?"
+msgstr "Minimalizált ablak szegélyének megjelenítése"
+
+msgid "Minimised Border Size"
+msgstr "Minimalizált ablak szegélymérete"
+
+msgid "Enable Left Bar Dip?"
+msgstr "Oldalsáv horpadás megjelenítése"
+
+msgid "Left Bar Radius"
+msgstr "Oldalsáv sugara"
+
+msgid "Enable Lower Bulge? (Useless at the moment, but will be used soon)"
+msgstr ""
+"Alsó kiemelkedés megjelenítése (Jelenleg nincs használatban, de hamarosan "
+"kész lesz.)"
+
+msgid "Top Corner Offset (%)"
+msgstr "Felső sarok eltolása (%)"
+
+msgid "Enable Title Bar Dip?"
+msgstr "Horpadt címsor megjelenítése"
+
+msgid "Enable Button Part?"
+msgstr "Gombsor megjelenítése"
+
+msgid "Title Part Width"
+msgstr "Címsor szélessége"
+
+msgid "Button Part Width)"
+msgstr "Gombsor szélessége)"
+
+msgid "Dip Corners Radius)"
+msgstr "Sarok ívének sugara)"
+
+msgid "Round Inside Corners As well?"
+msgstr "Belül is lekerekített sarok"
+
+msgid "Enable Different Maximised Colors?"
+msgstr "Különböző maximalizált színek engedélyezése"
+
+msgid "Turn Off repeating gradients when maximised?"
+msgstr "Maximalizáláskor a színátmenet ismétlődések kikapcsolása"
+
+msgid "Round Top Left Corner?"
+msgstr "Bal felső sarok lekerekítése"
+
+msgid "Frame Rounding Radius"
+msgstr "Keret-lekerekítés sugara"
+
+msgid "Titlebar Rounding Radius"
+msgstr "Címsor ívének sugara"
+
+msgid "Repeat Gradient?"
+msgstr "Színátmenet ismétlődése"
+
+msgid "Vertical Repeat?"
+msgstr "Függőleges ismétlődés"
+
+msgid "Diagonal Repeat?"
+msgstr "Átlós ismétlődés"
+
+msgid "Repeat Frequency"
+msgstr "Ismétlődés sűrűsége"
+
+#. ========================
+msgid "Enable Title Part Pixmap?"
+msgstr "Címsor-kép megjelenítése"
+
+msgid "Repeat Title Part Pixmap?"
+msgstr "Címsor-kép ismétlődése"
+
+msgid "Title Bar Part Pixmap"
+msgstr "Címsor-kép"
+
+msgid "Choose Titlebar Part Pixmap"
+msgstr "Válassza ki a Címsor képét"
+
+#. ========================
+msgid "Enable Button Part Pixmap?"
+msgstr "Gombsor-kép megjelenítése"
+
+msgid "Repeat Button Part Pixmap?"
+msgstr "Gombsor-kép ismétlődése"
+
+msgid "Button Part Pixmap"
+msgstr "Gombsor-kép"
+
+msgid "Choose Button Part Pixmap"
+msgstr "Válassza ki a Gombsor képét"
+
+#. ========================
+msgid "Enable Titlebar Pixmap?"
+msgstr "Címsor-kép megjelenítése"
+
+msgid "Repeat Titlebar Pixmap?"
+msgstr "Címsor-kép ismétlődése"
+
+msgid "Titlebar Pixmap"
+msgstr "Címsor-kép"
+
+msgid "Choose Titlebar Pixmap"
+msgstr "Válassza ki a Címsor képét"
+
+msgid "Active/Inactive"
+msgstr "Aktív/Inaktív"
+
+msgid "Maximised"
+msgstr "Maximalizált"
+
+msgid "Corners"
+msgstr "Sarkok"
+
+msgid "Border Layout"
+msgstr "Szegélyréteg"
+
+msgid "Left Bar"
+msgstr "Bal oldal"
+
+msgid "Pixmaps"
+msgstr "Képek"
+
+msgid ""
+"Select\n"
+"Engine"
+msgstr ""
+"Kiválaszt\n"
+"Motor"
 
 msgid "Close Window"
 msgstr "Ablak bezárása"
@@ -58,6 +376,10 @@ msgstr "Rögzített ablak"
 msgid "UnStick Window"
 msgstr "Rögzítetlen ablak"
 
+#, fuzzy
+msgid "Super Maximize Window"
+msgstr "Maximalizálás"
+
 #, c-format
 msgid "The window \"%s\" is not responding."
 msgstr "A(z) „%s” ablak nem válaszol."
@@ -66,6 +388,9 @@ msgid ""
 "Forcing this application to quit will cause you to lose any unsaved changes."
 msgstr ""
 "A kilépés kényszerítésének hatására minden el nem mentett adat el fog veszni."
+
+msgid "_Cancel"
+msgstr "Mé_gse"
 
 msgid "_Force Quit"
 msgstr "_Kilépés kényszerítése"
@@ -189,18 +514,6 @@ msgstr "Gombok képei"
 msgid "Button"
 msgstr "Gomb"
 
-msgid "File"
-msgstr "Fájl"
-
-msgid "Preview"
-msgstr "Előnézet"
-
-msgid "Clear"
-msgstr "Törlés"
-
-msgid "Colors"
-msgstr "Színek"
-
 msgid "Text Fill"
 msgstr "Szöveg kitöltése"
 
@@ -218,9 +531,6 @@ msgstr "Szín"
 
 msgid "Opacity"
 msgstr "Átlátszóság"
-
-msgid "Radius"
-msgstr "Sugár"
 
 msgid "X Offset"
 msgstr "X eltolás"
@@ -243,6 +553,7 @@ msgstr "Vízszintes gombmagasság"
 msgid "Title-bar Object Layout"
 msgstr "Címsor-objektum elhelyezkedése"
 
+#, fuzzy
 msgid ""
 "Use colons to separate left, center, and right.\n"
 "Anything after a third colon is ignored.\n"
@@ -250,6 +561,7 @@ msgid ""
 "I=Icon, T=Title, H=Help, M=Menu\n"
 "S=Shade, U/A=On Top(Up/Above)\n"
 "Y=Sticky, (#)=# pixels space, ex: (5)\n"
+"F=SuperMaximize\n"
 msgstr ""
 "Használjon kettőspontot a bal, közép és jobb területek elválasztásához.\n"
 "Bármilyen karakter a harmadik kettőspont utáni nem lesz figyelembe véve.\n"
@@ -260,6 +572,9 @@ msgstr ""
 
 msgid "Export Theme..."
 msgstr "Téma exportálása…"
+
+msgid "_Save"
+msgstr "M_entés"
 
 msgid "Name:"
 msgstr "Név:"
@@ -336,9 +651,6 @@ msgstr "Aktív ablak"
 msgid "Inactive Window"
 msgstr "Inaktív ablak"
 
-msgid "Title Bar"
-msgstr "Címsor"
-
 msgid "Screenshot"
 msgstr "Képernyőkép"
 
@@ -361,6 +673,9 @@ msgstr "Gombok gyorstippjeinek megjelenítése"
 msgid "Use Decoration Cropping"
 msgstr "Ablakdíszítés kivágásának használata"
 
+msgid "No Shade on Titlebar Scroll"
+msgstr ""
+
 msgid "Use Button Fade"
 msgstr "Gombok halványításának használata"
 
@@ -380,6 +695,10 @@ msgid "Button Pulse Min Opacity %"
 msgstr "Gombok pulzálásának minimális átlátszatlansága: %"
 
 msgid "Titlebar Double-Click Action"
+msgstr "Címsorra történő dupla kattintás művelete"
+
+#, fuzzy
+msgid "Titlebar Middle-Click Action"
 msgstr "Címsorra történő dupla kattintás művelete"
 
 msgid "Button Hover Cursor"
@@ -424,54 +743,21 @@ msgstr "Szerkesztés"
 msgid "Import Theme..."
 msgstr "Téma importálása…"
 
+msgid "_Open"
+msgstr "_Megnyitás"
+
 msgid "Search:"
 msgstr "Keresés:"
 
-msgid "Fetching Themes"
-msgstr "Témák letöltése"
+msgid "_Refresh"
+msgstr "_Frissítés"
 
-msgid ""
-"Fetching themes... \n"
-"This may take time depending on \n"
-"internet connection speed."
-msgstr ""
-"Témák letöltése… \n"
-"A szükséges idő nagymértékben függ az \n"
-"Internet-kapcsolat sebességétől."
+msgid "_Delete"
+msgstr "_Törlés"
 
-msgid ""
-"Here are the repositories that you can fetch Emerald Themes from. \n"
-"Fetching themes would fetch and import themes from SVN repositories \n"
-"You need Subversion package installed to use this feature."
-msgstr ""
-"Itt tölthet le Emerald témákat a internetről.\n"
-"A témák megszerzéséhez és importálásához szükséged van az SVN programra.\n"
-"Legyen szíves telepítse a subversion csomagot, hogy ez a funkciót elérhetővé "
-"váljon."
-
-msgid ""
-"This repository contains GPL'd themes that can be used under \n"
-"the terms of GNU GPL licence v2.0 or later \n"
-msgstr ""
-"Ez a témakészlet GPL témákat tartalmaz, és a felhasználásuk, terjesztésük \n"
-"kizárólag a GNU GPL licenc v2.0 vagy újabb alapján történhet. \n"
-
-msgid ""
-"This repository contains non-GPL'd themes. They might infringe \n"
-"copyrights and patent laws in some countries."
-msgstr ""
-"Ez a témakészlet nem GPL elemeket tartalmaz. Lehet, hogy megszegnek \n"
-"néhány szerzői jogot vagy törvényt néhány országban."
-
-msgid ""
-"To activate Non-GPL repository please run the following in shell and accept "
-"the server certificate permanently: \n"
-"svn ls https://svn.generation.no/emerald-themes."
-msgstr ""
-"A nem GPL elemeket tartalmazó témakészlet aktiválásához legyen szíves "
-"futtassa le ezt a parancssor a shellben, és állandó jelleggel fogja el a "
-"szerver hitelesítő adatait: \n"
-"svn ls https://svn.generation.no/emerald-themes."
+#, fuzzy
+msgid "_Import..."
+msgstr "Export…"
 
 msgid "Themes"
 msgstr "Témák"
@@ -485,306 +771,55 @@ msgstr "Témák beállítása"
 msgid "Emerald Settings"
 msgstr "Emerald beállítása"
 
-msgid ""
-"Select\n"
-"Engine"
-msgstr ""
-"Kiválaszt\n"
-"Motor"
-
-msgid "Based on original gtk-window-decorator"
-msgstr "Eredeti gtk-window-decorator alapú"
-
-msgid "Round Top Left Corner"
-msgstr "Lekerekített bal felső sarok"
-
-msgid "Round Top Right Corner"
-msgstr "Lekerekített jobb felső sarok"
-
-msgid "Round Bottom Left Corner"
-msgstr "Lekerekített bal alsó sarok"
-
-msgid "Round Bottom Right Corner"
-msgstr "Lekerekített jobb alsó sarok"
-
-msgid "Rounding Radius"
-msgstr "Lekerekítés sugara"
-
-msgid "Outer Frame Blend"
-msgstr "Külső keret illesztése"
-
-msgid "Inner Frame Blend"
-msgstr "Belső keret illesztése"
-
-msgid "Outer Titlebar Blend"
-msgstr "Külső címsor illesztése"
-
-msgid "Inner Titlebar Blend"
-msgstr "Belső címsor illesztése"
-
-msgid "Titlebar Separator"
-msgstr "Címsor elválasztó"
-
-msgid "Frame Outline"
-msgstr "Külső keret"
-
-msgid "Frame Highlight"
-msgstr "Keret kijelölése"
-
-msgid "Frame Shadow"
-msgstr "Keret árnyéka"
-
-msgid "Contents Outline"
-msgstr "Külső tartalom"
-
-msgid "Contents Highlight"
-msgstr "Tartalom kijelölése"
-
-msgid "Contents Shadow"
-msgstr "Tartalom árnyéka"
-
-msgid "Frame"
-msgstr "Keret"
-
-msgid "Based on original legacy"
-msgstr "Eredeti gtk-window-decorator alapú"
-
-msgid "Designed to be vista-ish in nature"
-msgstr "Tájkép kinézet"
-
-msgid "Base"
-msgstr "Alap"
-
-msgid "Glow"
-msgstr "Ragyogás"
-
-msgid "Sides"
-msgstr "Oldalak"
-
-msgid "Everything done with customizable pixmaps!"
-msgstr "Minden rendben van az egyedi képekkel!"
-
-msgid "Top Rounding Radius"
-msgstr "Felső lekerekítés sugara"
-
-msgid "Bottom Rounding Radius"
-msgstr "Alsó lekerekítés sugara"
-
-#. Style : Use Tiled or Scaled pixmaps
-msgid "Scaled"
-msgstr "Átméretezett"
-
-msgid "Not adjustable"
-msgstr "Nem állítható"
-
-msgid "Same as Active"
-msgstr "Aktívval megegyező"
-
-msgid "Pixmap"
-msgstr "Kép"
-
-msgid "Tiled/Scaled"
-msgstr "Mozaik/Átméretezett"
-
-msgid "Width Override"
-msgstr "Szélesség átméretezése"
-
-msgid "Height Override"
-msgstr "Magasság átméretezése"
-
-msgid "Glassy effects for your windows"
-msgstr "Üvegszerű effektusok az ablakoknál"
-
-msgid "Glow Height"
-msgstr "Üveg vastagsága"
-
-msgid "Frame Base Color"
-msgstr "Keret alapszíne"
-
-msgid "Upper Titlebar Glow"
-msgstr "Felső címsor ragyogása"
-
-msgid "Upper Glass Glow"
-msgstr "Felülről világított üveg"
-
-msgid "Lower Glass Glow"
-msgstr "Alulról világított üveg"
-
-msgid "Middle Glass Glow"
-msgstr "Középről világított üveg"
-
-msgid "Outer Glass Glow"
-msgstr "Kívülről világított üveg"
-
-msgid "Multiple gradients with somewhat glassy features too"
-msgstr "Többszörös színátmenet üveg-szerű tulajdonságokkal"
-
-msgid "Left Blend"
-msgstr "Jobb keverés"
-
-msgid "Middle Blend"
-msgstr "Közép keverés"
-
-msgid "Right Blend"
-msgstr "Jobb keverés"
-
-msgid "Contrast"
-msgstr "Kontraszt"
-
-msgid "(Color)"
-msgstr "(Szín)"
-
-msgid "(Alpha)"
-msgstr "(Alfa)"
-
-msgid "Notch"
-msgstr "Bemetszés"
-
-msgid "Position"
-msgstr "Pozíció"
-
-msgid "Curve"
-msgstr "Görbe"
-
-msgid "Offset"
-msgstr "Eltolás"
-
-msgid "Use Glow"
-msgstr "Ragyogás használata"
-
-msgid "Title Glow"
-msgstr "Címsor ragyogása"
-
-msgid "Evolved from the legacy engine"
-msgstr "Régi motorból örökölve"
-
-msgid "Border Gap"
-msgstr "Szegély térköz"
-
-msgid "Show Border when maximised?"
-msgstr "Maximalizált ablak szegélyének megjelenítése"
-
-msgid "Show when minimised?"
-msgstr "Minimalizált ablak szegélyének megjelenítése"
-
-msgid "Minimised Border Size"
-msgstr "Minimalizált ablak szegélymérete"
-
-msgid "Enable Left Bar Dip?"
-msgstr "Oldalsáv horpadás megjelenítése"
-
-msgid "Left Bar Radius"
-msgstr "Oldalsáv sugara"
-
-msgid "Enable Lower Bulge? (Useless at the moment, but will be used soon)"
-msgstr ""
-"Alsó kiemelkedés megjelenítése (Jelenleg nincs használatban, de hamarosan "
-"kész lesz.)"
-
-msgid "Top Corner Offset (%)"
-msgstr "Felső sarok eltolása (%)"
-
-msgid "Enable Title Bar Dip?"
-msgstr "Horpadt címsor megjelenítése"
-
-msgid "Enable Button Part?"
-msgstr "Gombsor megjelenítése"
-
-msgid "Title Part Width"
-msgstr "Címsor szélessége"
-
-msgid "Button Part Width)"
-msgstr "Gombsor szélessége)"
-
-msgid "Dip Corners Radius)"
-msgstr "Sarok ívének sugara)"
-
-msgid "Round Inside Corners As well?"
-msgstr "Belül is lekerekített sarok"
-
-msgid "Enable Different Maximised Colors?"
-msgstr "Különböző maximalizált színek engedélyezése"
-
-msgid "Turn Off repeating gradients when maximised?"
-msgstr "Maximalizáláskor a színátmenet ismétlődések kikapcsolása"
-
-msgid "Round Top Left Corner?"
-msgstr "Bal felső sarok lekerekítése"
-
-msgid "Frame Rounding Radius"
-msgstr "Keret-lekerekítés sugara"
-
-msgid "Titlebar Rounding Radius"
-msgstr "Címsor ívének sugara"
-
-msgid "Repeat Gradient?"
-msgstr "Színátmenet ismétlődése"
-
-msgid "Vertical Repeat?"
-msgstr "Függőleges ismétlődés"
-
-msgid "Diagonal Repeat?"
-msgstr "Átlós ismétlődés"
-
-msgid "Repeat Frequency"
-msgstr "Ismétlődés sűrűsége"
-
-#. /////////////////////
-msgid "Enable Title Part Pixmap?"
-msgstr "Címsor-kép megjelenítése"
-
-msgid "Repeat Title Part Pixmap?"
-msgstr "Címsor-kép ismétlődése"
-
-msgid "Title Bar Part Pixmap"
-msgstr "Címsor-kép"
-
-msgid "Choose Titlebar Part Pixmap"
-msgstr "Válassza ki a Címsor képét"
-
-#. /////////////////////////
-msgid "Enable Button Part Pixmap?"
-msgstr "Gombsor-kép megjelenítése"
-
-msgid "Repeat Button Part Pixmap?"
-msgstr "Gombsor-kép ismétlődése"
-
-msgid "Button Part Pixmap"
-msgstr "Gombsor-kép"
-
-msgid "Choose Button Part Pixmap"
-msgstr "Válassza ki a Gombsor képét"
-
-#. /////////////////////////
-msgid "Enable Titlebar Pixmap?"
-msgstr "Címsor-kép megjelenítése"
-
-msgid "Repeat Titlebar Pixmap?"
-msgstr "Címsor-kép ismétlődése"
-
-msgid "Titlebar Pixmap"
-msgstr "Címsor-kép"
-
-msgid "Choose Titlebar Pixmap"
-msgstr "Válassza ki a Címsor képét"
-
-msgid "Active/Inactive"
-msgstr "Aktív/Inaktív"
-
-msgid "Maximised"
-msgstr "Maximalizált"
-
-msgid "Corners"
-msgstr "Sarkok"
-
-msgid "Border Layout"
-msgstr "Szegélyréteg"
-
-msgid "Left Bar"
-msgstr "Bal oldal"
-
-msgid "Pixmaps"
-msgstr "Képek"
+msgid "_Quit"
+msgstr "_Kilépés"
+
+#~ msgid "Fetching Themes"
+#~ msgstr "Témák letöltése"
+
+#~ msgid ""
+#~ "Fetching themes... \n"
+#~ "This may take time depending on \n"
+#~ "internet connection speed."
+#~ msgstr ""
+#~ "Témák letöltése… \n"
+#~ "A szükséges idő nagymértékben függ az \n"
+#~ "Internet-kapcsolat sebességétől."
+
+#~ msgid ""
+#~ "Here are the repositories that you can fetch Emerald Themes from. \n"
+#~ "Fetching themes would fetch and import themes from SVN repositories \n"
+#~ "You need Subversion package installed to use this feature."
+#~ msgstr ""
+#~ "Itt tölthet le Emerald témákat a internetről.\n"
+#~ "A témák megszerzéséhez és importálásához szükséged van az SVN programra.\n"
+#~ "Legyen szíves telepítse a subversion csomagot, hogy ez a funkciót "
+#~ "elérhetővé váljon."
+
+#~ msgid ""
+#~ "This repository contains GPL'd themes that can be used under \n"
+#~ "the terms of GNU GPL licence v2.0 or later \n"
+#~ msgstr ""
+#~ "Ez a témakészlet GPL témákat tartalmaz, és a felhasználásuk, "
+#~ "terjesztésük \n"
+#~ "kizárólag a GNU GPL licenc v2.0 vagy újabb alapján történhet. \n"
+
+#~ msgid ""
+#~ "This repository contains non-GPL'd themes. They might infringe \n"
+#~ "copyrights and patent laws in some countries."
+#~ msgstr ""
+#~ "Ez a témakészlet nem GPL elemeket tartalmaz. Lehet, hogy megszegnek \n"
+#~ "néhány szerzői jogot vagy törvényt néhány országban."
+
+#~ msgid ""
+#~ "To activate Non-GPL repository please run the following in shell and "
+#~ "accept the server certificate permanently: \n"
+#~ "svn ls https://svn.generation.no/emerald-themes."
+#~ msgstr ""
+#~ "A nem GPL elemeket tartalmazó témakészlet aktiválásához legyen szíves "
+#~ "futtassa le ezt a parancssor a shellben, és állandó jelleggel fogja el a "
+#~ "szerver hitelesítő adatait: \n"
+#~ "svn ls https://svn.generation.no/emerald-themes."
 
 #~ msgid "Repositories"
 #~ msgstr "Témakészlet"

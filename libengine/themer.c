@@ -22,10 +22,7 @@
 #include <signal.h>
 
 #if !GTK_CHECK_VERSION(3, 0, 0)
-#define GTK_ORIENTATION_HORIZONTAL 0
-#define GTK_ORIENTATION_VERTICAL 1
-
-static GtkWidget *gtk_box_new(gint orientation, gint spacing)
+static GtkWidget *gtk_box_new(GtkOrientation orientation, int spacing)
 {
     if (orientation == GTK_ORIENTATION_VERTICAL)
 	return gtk_vbox_new(FALSE, spacing);
@@ -162,7 +159,7 @@ SettingItem * register_img_file_setting(GtkWidget * widget, gchar * section, gch
 SettingItem * register_setting(GtkWidget * widget, SettingType type, gchar * section, gchar * key)
 {
     SettingItem * item;
-    item = malloc(sizeof(SettingItem));
+    item = g_malloc0(sizeof(SettingItem));
     item->type = type;
     item->key = g_strdup(key);
     item->section = g_strdup(section);
@@ -310,11 +307,11 @@ void send_reload_signal()
     Atom wmAtom = 0;
     Display *dpy = GDK_DISPLAY_XDISPLAY (gdk_display_get_default ());
 
-    char buffer[128];
-    char *part = display_part(getenv("DISPLAY"));
+    gchar buffer[128];
+    gchar *part = display_part(g_getenv("DISPLAY"));
 
-    sprintf(buffer, "_COMPIZ_DM_S%s", part);
-    free(part);
+    g_sprintf(buffer, "_COMPIZ_DM_S%s", part);
+    g_free(part);
 
     if (dpy)
         wmAtom = XInternAtom(dpy,buffer,0);
@@ -515,7 +512,7 @@ gboolean get_bool(SettingItem * item)
 }
 gdouble get_float(SettingItem * item)
 {
-    if(!strcmp(G_OBJECT_TYPE_NAME(item->widget),"GtkSpinButton")) {
+    if(g_strcmp0(G_OBJECT_TYPE_NAME(item->widget),"GtkSpinButton") == 0) {
          return gtk_spin_button_get_value((GtkSpinButton *)item->widget);
     }
     else {
@@ -591,7 +588,7 @@ const gchar * get_string_combo(SettingItem * item)
 void show_engine_named(EngineData * d, gpointer p)
 {
     gchar * nam = p;
-    if (!strcmp(nam,d->canname))
+    if (g_strcmp0(nam,d->canname) == 0)
     {
         gtk_container_add(GTK_CONTAINER(EngineContainer),d->vbox);
         gtk_widget_show_all(EngineContainer);
@@ -599,7 +596,6 @@ void show_engine_named(EngineData * d, gpointer p)
 }
 void do_engine(const gchar * nam)
 {
-    GtkWidget * w;
     GList *old_children, *list;
     if (active_engine && g_strcmp0(active_engine,nam) == 0)
         return;
@@ -622,7 +618,7 @@ void search_engine(EngineData * d, gpointer p)
     FindEngine * fe = p;
     if (!fe->found)
     {
-        if (!strcmp(d->canname,fe->canname))
+        if (g_strcmp0(d->canname,fe->canname) == 0)
         {
             fe->d = d;
             fe->found=TRUE;
@@ -717,7 +713,7 @@ void set_bool(SettingItem * item, gboolean b)
 }
 void set_float(SettingItem * item, gdouble f)
 {
-    if(!strcmp(G_OBJECT_TYPE_NAME(item->widget),"GtkSpinButton")) {
+    if(g_strcmp0(G_OBJECT_TYPE_NAME(item->widget),"GtkSpinButton") == 0) {
          gtk_spin_button_set_value((GtkSpinButton *)item->widget, f);
     } 
     else {
@@ -936,7 +932,7 @@ static gchar * canonize_name(gchar * dlname)
 static void engine_comp(EngineData * d,gpointer p)
 {
     FindEngine * e = p;
-    if (!strcmp(e->canname, d->canname))
+    if (g_strcmp0(e->canname, d->canname) == 0)
         e->found=TRUE;
 }
 static gboolean engine_is_unique (gchar * canname)
@@ -971,7 +967,7 @@ static void append_engine(gchar * dlname)
         if (lay)
         {
             get_meta_info_proc meta;
-            EngineData * d = malloc(sizeof(EngineData));
+            EngineData * d = g_malloc0(sizeof(EngineData));
             GtkTreeIter i;
             const gchar * format =
                 "<b>%s</b> (%s)\n"

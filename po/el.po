@@ -1,20 +1,341 @@
-# Emerald Greek Translation.
-# Copyright (C) 2007 compiz-fusion.org
+# Greek translation for emerald
+# Copyright (C) 2007 launchpad.net/compiz
 # This file is distributed under the same license as the emerald package.
 # Δημήτρης (djdoo) <jimdusis@yahoo.gr>, 2007.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Compiz-Emerald 0.5.5\n"
-"Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
-"POT-Creation-Date: 2009-03-24 08:14+0100\n"
+"Project-Id-Version: emerald\n"
+"Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/emerald/issues\n"
+"POT-Creation-Date: 2017-05-04 19:28+0300\n"
 "PO-Revision-Date: 2007-09-27 06:00+0200\n"
 "Last-Translator: Δημήτρης (djdoo) <jimdusis@yahoo.gr>\n"
-"Language-Team: Greek <jimdusis@yahoo.gr>\n"
+"Language-Team: Greek <el@li.org>\n"
+"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+msgid "Based on original gtk-window-decorator"
+msgstr "Βασισμένο στον γνήσιο gtk-διακοσμητή-παραθύρων"
+
+msgid "Round Top Left Corner"
+msgstr "Στρογγύλεμα Πάνω Αριστερής Γωνίας"
+
+msgid "Round Top Right Corner"
+msgstr "Στρογγύλεμα Πάνω Δεξιάς Γωνίας"
+
+msgid "Round Bottom Left Corner"
+msgstr "Στρογγύλεμα Κάτω Αριστερής Γωνίας"
+
+msgid "Round Bottom Right Corner"
+msgstr "Στρογγύλεμα Κάτω Δεξιάς Γωνίας"
+
+msgid "Rounding Radius"
+msgstr "Ακτίνα Στρογγυλέματος"
+
+msgid "Colors"
+msgstr "Χρώματα"
+
+msgid "Outer Frame Blend"
+msgstr "Μίξη Εξωτερικού Κάδρου"
+
+msgid "Inner Frame Blend"
+msgstr "Μίξη Εσωτερικού Κάδρου"
+
+msgid "Outer Titlebar Blend"
+msgstr "Μίξη Εξωτερικής Μπάρας Τίτλου"
+
+msgid "Inner Titlebar Blend"
+msgstr "Μίξη Εσωτερικής Μπάρας Τίτλου"
+
+msgid "Titlebar Separator"
+msgstr "Διαχωριστής Μπάρας Τίτλου"
+
+msgid "Frame Outline"
+msgstr "Περίληψη Κάδρου"
+
+msgid "Frame Highlight"
+msgstr "Τονισμός Κάδρου"
+
+msgid "Frame Shadow"
+msgstr "Σκιά Κάδρου"
+
+msgid "Contents Outline"
+msgstr "Περίληψη Περιεχομένων"
+
+msgid "Contents Highlight"
+msgstr "Τονισμός Περιεχομένων"
+
+msgid "Contents Shadow"
+msgstr "Σκιά Περιεχομένων"
+
+msgid "Frame"
+msgstr "Κάδρο"
+
+msgid "Based on original legacy"
+msgstr "Βασισμένο στη γνήσια παράδοση"
+
+msgid "Title Bar"
+msgstr "Μπάρα Τίτλου"
+
+msgid "Designed to be vista-ish in nature"
+msgstr "Σχεδιασμένο να είναι σαν τα (σ)vista σε στυλ"
+
+msgid "Base"
+msgstr "Βάση"
+
+msgid "Glow"
+msgstr "Λάμψη"
+
+msgid "Sides"
+msgstr "Μεριές"
+
+msgid "Everything done with customizable pixmaps!"
+msgstr "Όλα γίνονται με ρυθμιζόμενα pixmaps!"
+
+msgid "Top Rounding Radius"
+msgstr "Πάνω Ακτίνα Στρογγυλέματος"
+
+msgid "Bottom Rounding Radius"
+msgstr "Πάνω Ακτίνα Στρογγυλέματος"
+
+msgid "_Clear"
+msgstr "_Εκκαθάριση"
+
+#. style: use tiled or scaled pixmaps
+msgid "Scaled"
+msgstr "Κλιμακωτό"
+
+msgid "Not adjustable"
+msgstr "Μη ρυθμιζόμενο"
+
+msgid "Same as Active"
+msgstr "Ιδιο με το Ενεργό"
+
+msgid "Pixmap"
+msgstr "Pixmap"
+
+msgid "File"
+msgstr "Αρχείο"
+
+msgid "Preview"
+msgstr "Προεπισκόπιση"
+
+msgid "Clear"
+msgstr "Καθαρισμός"
+
+msgid "Tiled/Scaled"
+msgstr "Πλακίδιο/Κλιμακωτό"
+
+msgid "Width Override"
+msgstr "Υπέρβαση Πλάτους"
+
+msgid "Height Override"
+msgstr "Υπέρβαση Ύψους"
+
+msgid "Glassy effects for your windows"
+msgstr "Γυάλινα εφέ για τα παράθυρά σας"
+
+msgid "Glow Height"
+msgstr "Ύψος Λάμψης"
+
+msgid "Frame Base Color"
+msgstr "Βασικό Χρώμα Κάδρου"
+
+msgid "Upper Titlebar Glow"
+msgstr "Λάμψη Πάνω Μπάρας Τίτλου"
+
+msgid "Upper Glass Glow"
+msgstr "Πάνω Γυάλινη Λάμψη"
+
+msgid "Lower Glass Glow"
+msgstr "Κάτω Γυάλινη Λάμψη"
+
+msgid "Middle Glass Glow"
+msgstr "Μεσαία Γυάλινη Λάμψη"
+
+msgid "Outer Glass Glow"
+msgstr "Ρξωτερική Γυάλινη Λάμψη"
+
+msgid "Multiple gradients with somewhat glassy features too"
+msgstr "Πολλαπλές διαβαθμίσεις με κάπως γυάλινα χαρακτηριστικά επίσης"
+
+msgid "Left Blend"
+msgstr "Αριστερή Μίξη"
+
+msgid "Middle Blend"
+msgstr "Κεντρική Μίξη"
+
+msgid "Right Blend"
+msgstr "Δεξιά Μίξη"
+
+msgid "Contrast"
+msgstr "Αντίθεση"
+
+msgid "(Color)"
+msgstr "(Χρώμα)"
+
+msgid "(Alpha)"
+msgstr "(Άλφα)"
+
+msgid "Notch"
+msgstr "Χαραγή"
+
+msgid "Position"
+msgstr "Θέση"
+
+msgid "Curve"
+msgstr "Καμπύλη"
+
+msgid "Offset"
+msgstr "Μετάθεση Αρχής"
+
+msgid "Use Glow"
+msgstr "Χρησιμοποίηση Λάμψης"
+
+msgid "Title Glow"
+msgstr "Λάμψη Τίτλου"
+
+msgid "Radius"
+msgstr "Ακτίνα"
+
+msgid "Evolved from the legacy engine"
+msgstr "Εξελιγμένο απο την παραδοσιακή μηχανή"
+
+msgid "Border Gap"
+msgstr "Κενό Ορίου"
+
+msgid "Show Border when maximised?"
+msgstr "Εμφάνιση Ορίου σε μεγιστοποίηση?"
+
+msgid "Show when minimised?"
+msgstr "Εμφάνιση σε ελαχιστοποίηση?"
+
+msgid "Minimised Border Size"
+msgstr "Μέγεθος Ελαχιστοποιημένου Ορίου"
+
+msgid "Enable Left Bar Dip?"
+msgstr "Ενεργοποίηση Βύθισης Αριστερής Μπάρας?"
+
+msgid "Left Bar Radius"
+msgstr "Ακτίνα Αριστερής Μπάρας"
+
+msgid "Enable Lower Bulge? (Useless at the moment, but will be used soon)"
+msgstr ""
+"Ενεργοποίηση Χαμηλής Διόγκωσης? (Άχρηστο για τώρα, αλλά θα δουλέψει σύντομα)"
+
+msgid "Top Corner Offset (%)"
+msgstr "Μετάθεση Αρχής Κορυφαίας Γωνίας (%)"
+
+msgid "Enable Title Bar Dip?"
+msgstr "Ενεργοποίηση Βύθισης Μπάρας Τίτλου?"
+
+msgid "Enable Button Part?"
+msgstr "Ενεργοποίηση Τμήματος Κουμπιού?"
+
+msgid "Title Part Width"
+msgstr "Πλάτος Τμήματος Τίτλου"
+
+msgid "Button Part Width)"
+msgstr "Πλάτος Τμήματος Κουμπιού)"
+
+msgid "Dip Corners Radius)"
+msgstr "Ακτίνα Βύθισης Γωνιών)"
+
+msgid "Round Inside Corners As well?"
+msgstr "Στρογγύλεμα Εσωτερικών Γωνιών Επίσης?"
+
+msgid "Enable Different Maximised Colors?"
+msgstr "Ενεργοποίηση Διαφορετικών Μεγιστοποιημένων Χρωμάτων?"
+
+msgid "Turn Off repeating gradients when maximised?"
+msgstr "Κλείσιμο επαναλαμβανόμενων διαβαθμίσεων σε μεγιστοποίηση?"
+
+msgid "Round Top Left Corner?"
+msgstr "Στρογγύλεμα Πάνω Αριστερής Γωνίας?"
+
+msgid "Frame Rounding Radius"
+msgstr "Ακτίνα Στρογγυλέματος Κάδρου"
+
+msgid "Titlebar Rounding Radius"
+msgstr "Ακτίνα Στρογγυλέματος Μπάρας Τίτλου"
+
+msgid "Repeat Gradient?"
+msgstr "Επανάληψη Διαβάθμισης?"
+
+msgid "Vertical Repeat?"
+msgstr "Κάθετη Επανάληψη?"
+
+msgid "Diagonal Repeat?"
+msgstr "Διαγώνια Επανάληψη?"
+
+msgid "Repeat Frequency"
+msgstr "Συχνότητα Επανάληψης"
+
+#. ========================
+msgid "Enable Title Part Pixmap?"
+msgstr "Ενεργοποίηση Τμηματος Τίτλου Pixmap?"
+
+msgid "Repeat Title Part Pixmap?"
+msgstr "Επανάληψη Τμηματος Τίτλου Pixmap?"
+
+msgid "Title Bar Part Pixmap"
+msgstr "Μπάρα Τίτλου Τμήματος Pixmap"
+
+msgid "Choose Titlebar Part Pixmap"
+msgstr "Επιλογή Μπάρας Τίτλου Τμήματος Pixmap"
+
+#. ========================
+msgid "Enable Button Part Pixmap?"
+msgstr "Ενεργοποίηση Κουμπιού Τμήματος Pixmap?"
+
+msgid "Repeat Button Part Pixmap?"
+msgstr "Επανάληψη Κουμπιού Τμήματος Pixmap?"
+
+msgid "Button Part Pixmap"
+msgstr "Κουμπί Τμήματος Pixmap"
+
+msgid "Choose Button Part Pixmap"
+msgstr "Επιλογή Κουμπιού Τμήματος Pixmap"
+
+#. ========================
+msgid "Enable Titlebar Pixmap?"
+msgstr "Ενεργοποίηση Pixmap Μπάρας Τίτλου?"
+
+msgid "Repeat Titlebar Pixmap?"
+msgstr "Επανάληψη Pixmap Μπάρας Τίτλου?"
+
+msgid "Titlebar Pixmap"
+msgstr "Pixmap Μπάρας Τίτλου"
+
+msgid "Choose Titlebar Pixmap"
+msgstr "Επιλογή Pixmap Μπάρας Τίτλου?"
+
+msgid "Active/Inactive"
+msgstr "Ενεργό/Ανενεργό"
+
+msgid "Maximised"
+msgstr "Μεγιστοποιημένο"
+
+msgid "Corners"
+msgstr "Γωνίες"
+
+msgid "Border Layout"
+msgstr "Σχεδιάγραμμα Ορίου"
+
+msgid "Left Bar"
+msgstr "Αριστερή Μπάρα"
+
+msgid "Pixmaps"
+msgstr "Pixmaps"
+
+msgid ""
+"Select\n"
+"Engine"
+msgstr ""
+"Επιλογή\n"
+"Μηχανής"
 
 msgid "Close Window"
 msgstr "Κλείσιμο Παραθύρου"
@@ -52,6 +373,10 @@ msgstr "Καρφίτσωσε το Παράθυρο"
 msgid "UnStick Window"
 msgstr "Ξεκαρφίτσωσε το Παράθυρο"
 
+#, fuzzy
+msgid "Super Maximize Window"
+msgstr "Μεγιστοποίηση Παραθύρου"
+
 #, c-format
 msgid "The window \"%s\" is not responding."
 msgstr "Το παράθυρο \"%s\" δεν ανταποκρίνεται"
@@ -61,6 +386,9 @@ msgid ""
 msgstr ""
 "Ο καταναγκασμός αυτής της εφαρμογής να κλείσει θα προκαλέσει απώλεια των "
 "όποιων μη σωσμένων αλλαγών."
+
+msgid "_Cancel"
+msgstr "_Ακύρωση"
 
 msgid "_Force Quit"
 msgstr "_Καταναγκασμένη Έξοδος"
@@ -184,18 +512,6 @@ msgstr "Κουμπί Pixmaps"
 msgid "Button"
 msgstr "Κουμπί"
 
-msgid "File"
-msgstr "Αρχείο"
-
-msgid "Preview"
-msgstr "Προεπισκόπιση"
-
-msgid "Clear"
-msgstr "Καθαρισμός"
-
-msgid "Colors"
-msgstr "Χρώματα"
-
 msgid "Text Fill"
 msgstr "Γέμισμα Κειμένου"
 
@@ -213,9 +529,6 @@ msgstr "Χρώμα"
 
 msgid "Opacity"
 msgstr "Αδιαφάνεια"
-
-msgid "Radius"
-msgstr "Ακτίνα"
 
 msgid "X Offset"
 msgstr "Χ Μετάθεση Αρχής"
@@ -238,6 +551,7 @@ msgstr "Οριζόντια Μετάθεση Αρχής Κουμπιού"
 msgid "Title-bar Object Layout"
 msgstr "Σχεδιάγραμμα Αντικειμένου Μπάρας-Τίτλου"
 
+#, fuzzy
 msgid ""
 "Use colons to separate left, center, and right.\n"
 "Anything after a third colon is ignored.\n"
@@ -245,6 +559,7 @@ msgid ""
 "I=Icon, T=Title, H=Help, M=Menu\n"
 "S=Shade, U/A=On Top(Up/Above)\n"
 "Y=Sticky, (#)=# pixels space, ex: (5)\n"
+"F=SuperMaximize\n"
 msgstr ""
 "Χρησιμοποίηση άνω κάτω τελείων για διαχωρισμό αριστερά, κεντρικά, και "
 "δεξιά.\n"
@@ -256,6 +571,9 @@ msgstr ""
 
 msgid "Export Theme..."
 msgstr "Εξαγωγή Θέματος..."
+
+msgid "_Save"
+msgstr "Απο_θήκευση"
 
 msgid "Name:"
 msgstr "Όνομα:"
@@ -334,9 +652,6 @@ msgstr "Ενεργό Παράθυρο"
 msgid "Inactive Window"
 msgstr "Ανενεργό Παράθυρο"
 
-msgid "Title Bar"
-msgstr "Μπάρα Τίτλου"
-
 msgid "Screenshot"
 msgstr "Φωτό οθόνης"
 
@@ -360,6 +675,9 @@ msgstr "Εμφάνιση Βοηθημάτων Εργαλείων για τα Κ�
 msgid "Use Decoration Cropping"
 msgstr "Χρησιμοποίηση Κοψίματος Διακοσμήσεων"
 
+msgid "No Shade on Titlebar Scroll"
+msgstr ""
+
 msgid "Use Button Fade"
 msgstr "Χρησιμοποίηση Ξεθωριάσματος Κουμπιού"
 
@@ -379,6 +697,10 @@ msgid "Button Pulse Min Opacity %"
 msgstr "Ελάχιστη Αδιαφάνεια % Παλμού Κουμπιού"
 
 msgid "Titlebar Double-Click Action"
+msgstr "Ενέργεια Διπλού-Κλικ Μπάρας Τίτλου"
+
+#, fuzzy
+msgid "Titlebar Middle-Click Action"
 msgstr "Ενέργεια Διπλού-Κλικ Μπάρας Τίτλου"
 
 msgid "Button Hover Cursor"
@@ -423,54 +745,21 @@ msgstr "Επεξεργασία"
 msgid "Import Theme..."
 msgstr "Εισαγωγή Θέματος..."
 
+msgid "_Open"
+msgstr "Άν_οιγμα"
+
 msgid "Search:"
 msgstr "Ψάξιμο:"
 
-msgid "Fetching Themes"
-msgstr "Απόκτηση Θεμάτων"
+msgid "_Refresh"
+msgstr "_Ανανέωση"
 
-msgid ""
-"Fetching themes... \n"
-"This may take time depending on \n"
-"internet connection speed."
-msgstr ""
-"Απόκτηση θεμάτων...\n"
-"Αυτό μπορεί να πάρει χρόνο και εξαρτάται από \n"
-"την ταχύτητα σύνδεσης στο διαδίκτυο."
+msgid "_Delete"
+msgstr "_Διαγραφή"
 
-msgid ""
-"Here are the repositories that you can fetch Emerald Themes from. \n"
-"Fetching themes would fetch and import themes from SVN repositories \n"
-"You need Subversion package installed to use this feature."
-msgstr ""
-"Αυτές είναι οι αποθήκες από όπου μπορείτε να αποκτήσετε Θέματα του "
-"Emerald. \n"
-"Η απόκτηση θεμάτων θα αποκτήσει κ θα εισάγει θέματα απο SVN αποθήκες \n"
-"Χρειάζεστε εγκατάσταση του πακέτου Subversion για χρησιμοποίηση αυτού του "
-"χαρακτηριστικού."
-
-msgid ""
-"This repository contains GPL'd themes that can be used under \n"
-"the terms of GNU GPL licence v2.0 or later \n"
-msgstr ""
-"Αυτή η αποθήκη περιέχει GPL θέματα που μπορούν να χρησιμοποιηθούν υπο \n"
-"τους όρους της GNU GPL άδειας v2.0 ή νεότερης \n"
-
-msgid ""
-"This repository contains non-GPL'd themes. They might infringe \n"
-"copyrights and patent laws in some countries."
-msgstr ""
-"Αυτή η αποθήκη περιέχει μη-GPL θέματα. Αυτά μπορεί να παραβιάζουν \n"
-"δικαιώματα και νόμους πατεντών(καλά λέμε τώρα..) σε μερικές χώρες."
-
-msgid ""
-"To activate Non-GPL repository please run the following in shell and accept "
-"the server certificate permanently: \n"
-"svn ls https://svn.generation.no/emerald-themes."
-msgstr ""
-"Για να ενεργοποιήσετε Μη-GPL αποθήκη παρακαλώ τρέξτε το ακόλουθο σε μια "
-"κονσόλα και αποδεχτείτε την πιστοποίηση του διακομιστή μόνιμα: \n"
-"svn ls https://svn.generation.no/emerald-themes."
+#, fuzzy
+msgid "_Import..."
+msgstr "Εξαγωγή..."
 
 msgid "Themes"
 msgstr "Θέματα"
@@ -484,305 +773,54 @@ msgstr "Ρυθμίσεις Θεμάτων"
 msgid "Emerald Settings"
 msgstr "Ρυθμίσεις του Emerald"
 
-msgid ""
-"Select\n"
-"Engine"
-msgstr ""
-"Επιλογή\n"
-"Μηχανής"
-
-msgid "Based on original gtk-window-decorator"
-msgstr "Βασισμένο στον γνήσιο gnome-διακοσμητή-παραθύρων"
-
-msgid "Round Top Left Corner"
-msgstr "Στρογγύλεμα Πάνω Αριστερής Γωνίας"
-
-msgid "Round Top Right Corner"
-msgstr "Στρογγύλεμα Πάνω Δεξιάς Γωνίας"
-
-msgid "Round Bottom Left Corner"
-msgstr "Στρογγύλεμα Κάτω Αριστερής Γωνίας"
-
-msgid "Round Bottom Right Corner"
-msgstr "Στρογγύλεμα Κάτω Δεξιάς Γωνίας"
-
-msgid "Rounding Radius"
-msgstr "Ακτίνα Στρογγυλέματος"
-
-msgid "Outer Frame Blend"
-msgstr "Μίξη Εξωτερικού Κάδρου"
-
-msgid "Inner Frame Blend"
-msgstr "Μίξη Εσωτερικού Κάδρου"
-
-msgid "Outer Titlebar Blend"
-msgstr "Μίξη Εξωτερικής Μπάρας Τίτλου"
-
-msgid "Inner Titlebar Blend"
-msgstr "Μίξη Εσωτερικής Μπάρας Τίτλου"
-
-msgid "Titlebar Separator"
-msgstr "Διαχωριστής Μπάρας Τίτλου"
-
-msgid "Frame Outline"
-msgstr "Περίληψη Κάδρου"
-
-msgid "Frame Highlight"
-msgstr "Τονισμός Κάδρου"
-
-msgid "Frame Shadow"
-msgstr "Σκιά Κάδρου"
-
-msgid "Contents Outline"
-msgstr "Περίληψη Περιεχομένων"
-
-msgid "Contents Highlight"
-msgstr "Τονισμός Περιεχομένων"
-
-msgid "Contents Shadow"
-msgstr "Σκιά Περιεχομένων"
-
-msgid "Frame"
-msgstr "Κάδρο"
-
-msgid "Based on original legacy"
-msgstr "Βασισμένο στη γνήσια παράδοση"
-
-msgid "Designed to be vista-ish in nature"
-msgstr "Σχεδιασμένο να είναι σαν τα (σ)vista σε στυλ"
-
-msgid "Base"
-msgstr "Βάση"
-
-msgid "Glow"
-msgstr "Λάμψη"
-
-msgid "Sides"
-msgstr "Μεριές"
-
-msgid "Everything done with customizable pixmaps!"
-msgstr "Όλα γίνονται με ρυθμιζόμενα pixmaps!"
-
-msgid "Top Rounding Radius"
-msgstr "Πάνω Ακτίνα Στρογγυλέματος"
-
-msgid "Bottom Rounding Radius"
-msgstr "Πάνω Ακτίνα Στρογγυλέματος"
-
-#. Style : Use Tiled or Scaled pixmaps
-msgid "Scaled"
-msgstr "Κλιμακωτό"
-
-msgid "Not adjustable"
-msgstr "Μη ρυθμιζόμενο"
-
-msgid "Same as Active"
-msgstr "Ιδιο με το Ενεργό"
-
-msgid "Pixmap"
-msgstr "Pixmap"
-
-msgid "Tiled/Scaled"
-msgstr "Πλακίδιο/Κλιμακωτό"
-
-msgid "Width Override"
-msgstr "Υπέρβαση Πλάτους"
-
-msgid "Height Override"
-msgstr "Υπέρβαση Ύψους"
-
-msgid "Glassy effects for your windows"
-msgstr "Γυάλινα εφέ για τα παράθυρά σας"
-
-msgid "Glow Height"
-msgstr "Ύψος Λάμψης"
-
-msgid "Frame Base Color"
-msgstr "Βασικό Χρώμα Κάδρου"
-
-msgid "Upper Titlebar Glow"
-msgstr "Λάμψη Πάνω Μπάρας Τίτλου"
-
-msgid "Upper Glass Glow"
-msgstr "Πάνω Γυάλινη Λάμψη"
-
-msgid "Lower Glass Glow"
-msgstr "Κάτω Γυάλινη Λάμψη"
-
-msgid "Middle Glass Glow"
-msgstr "Μεσαία Γυάλινη Λάμψη"
-
-msgid "Outer Glass Glow"
-msgstr "Ρξωτερική Γυάλινη Λάμψη"
-
-msgid "Multiple gradients with somewhat glassy features too"
-msgstr "Πολλαπλές διαβαθμίσεις με κάπως γυάλινα χαρακτηριστικά επίσης"
-
-msgid "Left Blend"
-msgstr "Αριστερή Μίξη"
-
-msgid "Middle Blend"
-msgstr "Κεντρική Μίξη"
-
-msgid "Right Blend"
-msgstr "Δεξιά Μίξη"
-
-msgid "Contrast"
-msgstr "Αντίθεση"
-
-msgid "(Color)"
-msgstr "(Χρώμα)"
-
-msgid "(Alpha)"
-msgstr "(Άλφα)"
-
-msgid "Notch"
-msgstr "Χαραγή"
-
-msgid "Position"
-msgstr "Θέση"
-
-msgid "Curve"
-msgstr "Καμπύλη"
-
-msgid "Offset"
-msgstr "Μετάθεση Αρχής"
-
-msgid "Use Glow"
-msgstr "Χρησιμοποίηση Λάμψης"
-
-msgid "Title Glow"
-msgstr "Λάμψη Τίτλου"
-
-msgid "Evolved from the legacy engine"
-msgstr "Εξελιγμένο απο την παραδοσιακή μηχανή"
-
-msgid "Border Gap"
-msgstr "Κενό Ορίου"
-
-msgid "Show Border when maximised?"
-msgstr "Εμφάνιση Ορίου σε μεγιστοποίηση?"
-
-msgid "Show when minimised?"
-msgstr "Εμφάνιση σε ελαχιστοποίηση?"
-
-msgid "Minimised Border Size"
-msgstr "Μέγεθος Ελαχιστοποιημένου Ορίου"
-
-msgid "Enable Left Bar Dip?"
-msgstr "Ενεργοποίηση Βύθισης Αριστερής Μπάρας?"
-
-msgid "Left Bar Radius"
-msgstr "Ακτίνα Αριστερής Μπάρας"
-
-msgid "Enable Lower Bulge? (Useless at the moment, but will be used soon)"
-msgstr ""
-"Ενεργοποίηση Χαμηλής Διόγκωσης? (Άχρηστο για τώρα, αλλά θα δουλέψει σύντομα)"
-
-msgid "Top Corner Offset (%)"
-msgstr "Μετάθεση Αρχής Κορυφαίας Γωνίας (%)"
-
-msgid "Enable Title Bar Dip?"
-msgstr "Ενεργοποίηση Βύθισης Μπάρας Τίτλου?"
-
-msgid "Enable Button Part?"
-msgstr "Ενεργοποίηση Τμήματος Κουμπιού?"
-
-msgid "Title Part Width"
-msgstr "Πλάτος Τμήματος Τίτλου"
-
-msgid "Button Part Width)"
-msgstr "Πλάτος Τμήματος Κουμπιού)"
-
-msgid "Dip Corners Radius)"
-msgstr "Ακτίνα Βύθισης Γωνιών)"
-
-msgid "Round Inside Corners As well?"
-msgstr "Στρογγύλεμα Εσωτερικών Γωνιών Επίσης?"
-
-msgid "Enable Different Maximised Colors?"
-msgstr "Ενεργοποίηση Διαφορετικών Μεγιστοποιημένων Χρωμάτων?"
-
-msgid "Turn Off repeating gradients when maximised?"
-msgstr "Κλείσιμο επαναλαμβανόμενων διαβαθμίσεων σε μεγιστοποίηση?"
-
-msgid "Round Top Left Corner?"
-msgstr "Στρογγύλεμα Πάνω Αριστερής Γωνίας?"
-
-msgid "Frame Rounding Radius"
-msgstr "Ακτίνα Στρογγυλέματος Κάδρου"
-
-msgid "Titlebar Rounding Radius"
-msgstr "Ακτίνα Στρογγυλέματος Μπάρας Τίτλου"
-
-msgid "Repeat Gradient?"
-msgstr "Επανάληψη Διαβάθμισης?"
-
-msgid "Vertical Repeat?"
-msgstr "Κάθετη Επανάληψη?"
-
-msgid "Diagonal Repeat?"
-msgstr "Διαγώνια Επανάληψη?"
-
-msgid "Repeat Frequency"
-msgstr "Συχνότητα Επανάληψης"
-
-#. /////////////////////
-msgid "Enable Title Part Pixmap?"
-msgstr "Ενεργοποίηση Τμηματος Τίτλου Pixmap?"
-
-msgid "Repeat Title Part Pixmap?"
-msgstr "Επανάληψη Τμηματος Τίτλου Pixmap?"
-
-msgid "Title Bar Part Pixmap"
-msgstr "Μπάρα Τίτλου Τμήματος Pixmap"
-
-msgid "Choose Titlebar Part Pixmap"
-msgstr "Επιλογή Μπάρας Τίτλου Τμήματος Pixmap"
-
-#. /////////////////////////
-msgid "Enable Button Part Pixmap?"
-msgstr "Ενεργοποίηση Κουμπιού Τμήματος Pixmap?"
-
-msgid "Repeat Button Part Pixmap?"
-msgstr "Επανάληψη Κουμπιού Τμήματος Pixmap?"
-
-msgid "Button Part Pixmap"
-msgstr "Κουμπί Τμήματος Pixmap"
-
-msgid "Choose Button Part Pixmap"
-msgstr "Επιλογή Κουμπιού Τμήματος Pixmap"
-
-#. /////////////////////////
-msgid "Enable Titlebar Pixmap?"
-msgstr "Ενεργοποίηση Pixmap Μπάρας Τίτλου?"
-
-msgid "Repeat Titlebar Pixmap?"
-msgstr "Επανάληψη Pixmap Μπάρας Τίτλου?"
-
-msgid "Titlebar Pixmap"
-msgstr "Pixmap Μπάρας Τίτλου"
-
-msgid "Choose Titlebar Pixmap"
-msgstr "Επιλογή Pixmap Μπάρας Τίτλου?"
-
-msgid "Active/Inactive"
-msgstr "Ενεργό/Ανενεργό"
-
-msgid "Maximised"
-msgstr "Μεγιστοποιημένο"
-
-msgid "Corners"
-msgstr "Γωνίες"
-
-msgid "Border Layout"
-msgstr "Σχεδιάγραμμα Ορίου"
-
-msgid "Left Bar"
-msgstr "Αριστερή Μπάρα"
-
-msgid "Pixmaps"
-msgstr "Pixmaps"
+msgid "_Quit"
+msgstr "Έ_ξοδος"
+
+#~ msgid "Fetching Themes"
+#~ msgstr "Απόκτηση Θεμάτων"
+
+#~ msgid ""
+#~ "Fetching themes... \n"
+#~ "This may take time depending on \n"
+#~ "internet connection speed."
+#~ msgstr ""
+#~ "Απόκτηση θεμάτων...\n"
+#~ "Αυτό μπορεί να πάρει χρόνο και εξαρτάται από \n"
+#~ "την ταχύτητα σύνδεσης στο διαδίκτυο."
+
+#~ msgid ""
+#~ "Here are the repositories that you can fetch Emerald Themes from. \n"
+#~ "Fetching themes would fetch and import themes from SVN repositories \n"
+#~ "You need Subversion package installed to use this feature."
+#~ msgstr ""
+#~ "Αυτές είναι οι αποθήκες από όπου μπορείτε να αποκτήσετε Θέματα του "
+#~ "Emerald. \n"
+#~ "Η απόκτηση θεμάτων θα αποκτήσει κ θα εισάγει θέματα απο SVN αποθήκες \n"
+#~ "Χρειάζεστε εγκατάσταση του πακέτου Subversion για χρησιμοποίηση αυτού του "
+#~ "χαρακτηριστικού."
+
+#~ msgid ""
+#~ "This repository contains GPL'd themes that can be used under \n"
+#~ "the terms of GNU GPL licence v2.0 or later \n"
+#~ msgstr ""
+#~ "Αυτή η αποθήκη περιέχει GPL θέματα που μπορούν να χρησιμοποιηθούν υπο \n"
+#~ "τους όρους της GNU GPL άδειας v2.0 ή νεότερης \n"
+
+#~ msgid ""
+#~ "This repository contains non-GPL'd themes. They might infringe \n"
+#~ "copyrights and patent laws in some countries."
+#~ msgstr ""
+#~ "Αυτή η αποθήκη περιέχει μη-GPL θέματα. Αυτά μπορεί να παραβιάζουν \n"
+#~ "δικαιώματα και νόμους πατεντών(καλά λέμε τώρα..) σε μερικές χώρες."
+
+#~ msgid ""
+#~ "To activate Non-GPL repository please run the following in shell and "
+#~ "accept the server certificate permanently: \n"
+#~ "svn ls https://svn.generation.no/emerald-themes."
+#~ msgstr ""
+#~ "Για να ενεργοποιήσετε Μη-GPL αποθήκη παρακαλώ τρέξτε το ακόλουθο σε μια "
+#~ "κονσόλα και αποδεχτείτε την πιστοποίηση του διακομιστή μόνιμα: \n"
+#~ "svn ls https://svn.generation.no/emerald-themes."
 
 #~ msgid "Repositories"
 #~ msgstr "Αποθήκες"

@@ -1,25 +1,349 @@
-# Japanese message catalog for emerald.
-# Copyright (C) 2006, 2007 emerald's COPYRIGHT HOLDER
-# This file is distributed under GPL2.
+# Japanese translation for emerald
+# Copyright (C) 2006, 2007 launchpad.net/compiz
+# This file is distributed under the same license as the emerald package.
 # Satoru SATOH <ss@gnome.gr.jp>, 2006, 2007.
 #
-# 誤訳や訳の改良などについては本家 (http://bugs.beryl-project.org)
+# 誤訳や訳の改良などについては本家
+# (https://github.com/compiz-reloaded/emerald/issues)
 # または 2ch の関連スレッドへ -
 # E.g. "3Dﾃﾞｽｸﾄｯﾌﾟ統合ｽﾚ 3ｸﾞﾘ目 [Beryl/Compiz/AIGLX/Xgl]"
-# http://pc10.2ch.net/test/read.cgi/linux/1170886825/
+# https://pc10.2ch.net/test/read.cgi/linux/1170886825/
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: emerald current\n"
-"Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
-"POT-Creation-Date: 2009-03-24 08:14+0100\n"
+"Project-Id-Version: emerald\n"
+"Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/emerald/issues\n"
+"POT-Creation-Date: 2017-05-04 19:28+0300\n"
 "PO-Revision-Date: 2008-01-05 07:49+0100\n"
 "Last-Translator: Masaaki KANEMOTO <masaaki.kanemoto@gmail.com>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
+"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Pootle 1.0.2\n"
+
+msgid "Based on original gtk-window-decorator"
+msgstr "オリジナルの gtk-window-decorator に基づいています。"
+
+msgid "Round Top Left Corner"
+msgstr "左上の角を丸める"
+
+msgid "Round Top Right Corner"
+msgstr "右上の角を丸める"
+
+msgid "Round Bottom Left Corner"
+msgstr "左下の角を丸める"
+
+msgid "Round Bottom Right Corner"
+msgstr "右下の角を丸める"
+
+msgid "Rounding Radius"
+msgstr "丸める際の半径"
+
+msgid "Colors"
+msgstr "色"
+
+msgid "Outer Frame Blend"
+msgstr "フレーム外側の混合色"
+
+msgid "Inner Frame Blend"
+msgstr "フレーム内側の混合色"
+
+msgid "Outer Titlebar Blend"
+msgstr "タイトルバー外側の混合色"
+
+msgid "Inner Titlebar Blend"
+msgstr "タイトルバー内側の混合色"
+
+msgid "Titlebar Separator"
+msgstr "タイトルバーのセパレータ"
+
+msgid "Frame Outline"
+msgstr "フレームの輪郭"
+
+msgid "Frame Highlight"
+msgstr "フレームの強調表示"
+
+msgid "Frame Shadow"
+msgstr "フレームの影"
+
+msgid "Contents Outline"
+msgstr "内容の輪郭"
+
+msgid "Contents Highlight"
+msgstr "内容の強調表示"
+
+msgid "Contents Shadow"
+msgstr "内容の影"
+
+msgid "Frame"
+msgstr "フレーム"
+
+#, fuzzy
+msgid "Based on original legacy"
+msgstr "オリジナルの gtk-window-decorator に基づいています。"
+
+msgid "Title Bar"
+msgstr "タイトルバー"
+
+msgid "Designed to be vista-ish in nature"
+msgstr "元来 Vista のようにデザインされています"
+
+msgid "Base"
+msgstr "ベース"
+
+msgid "Glow"
+msgstr "輝き"
+
+msgid "Sides"
+msgstr "側面"
+
+msgid "Everything done with customizable pixmaps!"
+msgstr "すべてピクスマップで構成され、カスタマイズできます!"
+
+msgid "Top Rounding Radius"
+msgstr "上部の丸めの半径"
+
+msgid "Bottom Rounding Radius"
+msgstr "下部の丸めの半径"
+
+msgid "_Clear"
+msgstr "クリア(_C)"
+
+#. style: use tiled or scaled pixmaps
+msgid "Scaled"
+msgstr "スケール"
+
+msgid "Not adjustable"
+msgstr "調整しない"
+
+msgid "Same as Active"
+msgstr "アクティブなときと同じ"
+
+msgid "Pixmap"
+msgstr "ピクスマップ"
+
+msgid "File"
+msgstr "ファイル"
+
+msgid "Preview"
+msgstr "プレビュー"
+
+msgid "Clear"
+msgstr "クリア"
+
+msgid "Tiled/Scaled"
+msgstr "タイル/スケール"
+
+msgid "Width Override"
+msgstr "幅を上書き指定"
+
+msgid "Height Override"
+msgstr "高さを上書き指定"
+
+msgid "Glassy effects for your windows"
+msgstr "ウィンドウのガラスのようなエフェクト"
+
+msgid "Glow Height"
+msgstr "輝く部分の高さ"
+
+msgid "Frame Base Color"
+msgstr "フレームのベースの色"
+
+msgid "Upper Titlebar Glow"
+msgstr "タイトルバー上の方の輝き"
+
+msgid "Upper Glass Glow"
+msgstr "上の方のガラスの輝き"
+
+msgid "Lower Glass Glow"
+msgstr "下の方のガラスの輝き"
+
+msgid "Middle Glass Glow"
+msgstr "中央のガラスの輝き"
+
+msgid "Outer Glass Glow"
+msgstr "外側のガラスの輝き"
+
+msgid "Multiple gradients with somewhat glassy features too"
+msgstr "複数のグラデーションとガラスのような効果"
+
+msgid "Left Blend"
+msgstr "左の混合色"
+
+msgid "Middle Blend"
+msgstr "中央の混合色"
+
+msgid "Right Blend"
+msgstr "右の混合色"
+
+msgid "Contrast"
+msgstr "コントラスト"
+
+msgid "(Color)"
+msgstr "(色)"
+
+msgid "(Alpha)"
+msgstr "(アルファチャンネル)"
+
+msgid "Notch"
+msgstr "切り込み"
+
+msgid "Position"
+msgstr "位置"
+
+msgid "Curve"
+msgstr "カーブ"
+
+msgid "Offset"
+msgstr "オフセット"
+
+msgid "Use Glow"
+msgstr "輝かす"
+
+msgid "Title Glow"
+msgstr "タイトルの輝き"
+
+msgid "Radius"
+msgstr "半径"
+
+msgid "Evolved from the legacy engine"
+msgstr "\"legacy\" エンジンから発展"
+
+msgid "Border Gap"
+msgstr "枠のギャップ"
+
+# 以下、いちいち疑問文になっていてうっとおしいのですべて通常の文に意訳。
+msgid "Show Border when maximised?"
+msgstr "最大化の際に枠を表示する"
+
+msgid "Show when minimised?"
+msgstr "最小化の際に表示する"
+
+msgid "Minimised Border Size"
+msgstr "最小化の際の枠のサイズ"
+
+msgid "Enable Left Bar Dip?"
+msgstr "左のバーのディップを有効にする"
+
+msgid "Left Bar Radius"
+msgstr "左のバーの半径"
+
+msgid "Enable Lower Bulge? (Useless at the moment, but will be used soon)"
+msgstr ""
+"下の方をふくらませるか? (現在は使用できないが近い将来に使えようになります)"
+
+msgid "Top Corner Offset (%)"
+msgstr "上野角のオフセット (%)"
+
+msgid "Enable Title Bar Dip?"
+msgstr "タイトルバーのディップを有効にする"
+
+msgid "Enable Button Part?"
+msgstr "ボタン部分を有効にする"
+
+msgid "Title Part Width"
+msgstr "タイトル部分の幅"
+
+msgid "Button Part Width)"
+msgstr "ボタン部分の幅)"
+
+msgid "Dip Corners Radius)"
+msgstr "ディップの角の半径)"
+
+msgid "Round Inside Corners As well?"
+msgstr "内側の角も同様に丸める"
+
+msgid "Enable Different Maximised Colors?"
+msgstr "最大化の際に違う色にする"
+
+msgid "Turn Off repeating gradients when maximised?"
+msgstr "最大化の際にグラデーションの繰り返しをしないようにする"
+
+msgid "Round Top Left Corner?"
+msgstr "左上の角を丸める"
+
+msgid "Frame Rounding Radius"
+msgstr "フレームの丸めの半径"
+
+msgid "Titlebar Rounding Radius"
+msgstr "タイトルバーの丸めの半径"
+
+msgid "Repeat Gradient?"
+msgstr "グラデーションを繰り返す"
+
+msgid "Vertical Repeat?"
+msgstr "垂直方向に繰り返す"
+
+msgid "Diagonal Repeat?"
+msgstr "斜め方向に繰り返す"
+
+msgid "Repeat Frequency"
+msgstr "繰り返しの周期"
+
+#. ========================
+msgid "Enable Title Part Pixmap?"
+msgstr "タイトル部分のピクスマップを有効にする"
+
+msgid "Repeat Title Part Pixmap?"
+msgstr "タイトル部分のピクスマップを繰り返す"
+
+msgid "Title Bar Part Pixmap"
+msgstr "タイトルバーの部分のピクスマップ"
+
+msgid "Choose Titlebar Part Pixmap"
+msgstr "タイトルバーの部分のピクスマップを選択"
+
+#. ========================
+msgid "Enable Button Part Pixmap?"
+msgstr "ボタン部分のピクスマップを有効にする"
+
+msgid "Repeat Button Part Pixmap?"
+msgstr "ボタン部分のピクスマップを繰り返す"
+
+msgid "Button Part Pixmap"
+msgstr "ボタン部分のピクスマップ"
+
+msgid "Choose Button Part Pixmap"
+msgstr "ボタン部分のピクスマップを選択"
+
+#. ========================
+msgid "Enable Titlebar Pixmap?"
+msgstr "タイトルバーのピクスマップを有効にする"
+
+msgid "Repeat Titlebar Pixmap?"
+msgstr "タイトルバーのピクスマップを繰り返す"
+
+msgid "Titlebar Pixmap"
+msgstr "タイトルバーのピクスマップ"
+
+msgid "Choose Titlebar Pixmap"
+msgstr "タイトルバーのピクスマップを選択"
+
+msgid "Active/Inactive"
+msgstr "アクティブ/非アクティブ"
+
+msgid "Maximised"
+msgstr "最大化"
+
+msgid "Corners"
+msgstr "角"
+
+msgid "Border Layout"
+msgstr "枠の配置"
+
+msgid "Left Bar"
+msgstr "左のバー"
+
+msgid "Pixmaps"
+msgstr "ピクスマップ"
+
+msgid ""
+"Select\n"
+"Engine"
+msgstr ""
+"エンジンを\n"
+"選択"
 
 msgid "Close Window"
 msgstr "ウィンドウを閉じる"
@@ -57,6 +381,10 @@ msgstr "ウィンドウを貼り付ける"
 msgid "UnStick Window"
 msgstr "貼り付けたウィンドウを元に戻す"
 
+#, fuzzy
+msgid "Super Maximize Window"
+msgstr "ウィンドウを最大化"
+
 #, c-format
 msgid "The window \"%s\" is not responding."
 msgstr "ウィンドウ \"%s\" は応答していません。"
@@ -64,6 +392,9 @@ msgstr "ウィンドウ \"%s\" は応答していません。"
 msgid ""
 "Forcing this application to quit will cause you to lose any unsaved changes."
 msgstr "このアプリケーションを強制的に終了すると、未保存の変更は失われます。"
+
+msgid "_Cancel"
+msgstr "キャンセル(_C)"
 
 msgid "_Force Quit"
 msgstr "強制終了(_F)"
@@ -187,18 +518,6 @@ msgstr "ボタンのピクスマップ"
 msgid "Button"
 msgstr "ボタン"
 
-msgid "File"
-msgstr "ファイル"
-
-msgid "Preview"
-msgstr "プレビュー"
-
-msgid "Clear"
-msgstr "クリア"
-
-msgid "Colors"
-msgstr "色"
-
 msgid "Text Fill"
 msgstr "テキスト"
 
@@ -216,9 +535,6 @@ msgstr "色"
 
 msgid "Opacity"
 msgstr "不透明度"
-
-msgid "Radius"
-msgstr "半径"
 
 msgid "X Offset"
 msgstr "X オフセット"
@@ -241,6 +557,7 @@ msgstr "ボタンの水平オフセット"
 msgid "Title-bar Object Layout"
 msgstr "タイトルバーのオブジェクトの配置"
 
+#, fuzzy
 msgid ""
 "Use colons to separate left, center, and right.\n"
 "Anything after a third colon is ignored.\n"
@@ -248,6 +565,7 @@ msgid ""
 "I=Icon, T=Title, H=Help, M=Menu\n"
 "S=Shade, U/A=On Top(Up/Above)\n"
 "Y=Sticky, (#)=# pixels space, ex: (5)\n"
+"F=SuperMaximize\n"
 msgstr ""
 "コロン ',' を使って左、中央、右をわけます。\n"
 "三番目のコロン以降は無視されます。\n"
@@ -258,6 +576,9 @@ msgstr ""
 
 msgid "Export Theme..."
 msgstr "テーマを書き出し..."
+
+msgid "_Save"
+msgstr "保存(_S)"
 
 msgid "Name:"
 msgstr "名前:"
@@ -333,9 +654,6 @@ msgstr "アクティブなウィンドウ"
 msgid "Inactive Window"
 msgstr "アクティブでないウィンドウ"
 
-msgid "Title Bar"
-msgstr "タイトルバー"
-
 msgid "Screenshot"
 msgstr "スクリーンショット"
 
@@ -358,6 +676,9 @@ msgstr "ボタンのツールチップを表示"
 msgid "Use Decoration Cropping"
 msgstr "デコレーションのトリミングを使用"
 
+msgid "No Shade on Titlebar Scroll"
+msgstr ""
+
 msgid "Use Button Fade"
 msgstr "ボタンをフェードする"
 
@@ -377,6 +698,10 @@ msgid "Button Pulse Min Opacity %"
 msgstr "ボタンの点滅の際の最小の不透明度 %"
 
 msgid "Titlebar Double-Click Action"
+msgstr "タイトルバーをダブルクリックしたときのアクション"
+
+#, fuzzy
+msgid "Titlebar Middle-Click Action"
 msgstr "タイトルバーをダブルクリックしたときのアクション"
 
 msgid "Button Hover Cursor"
@@ -421,53 +746,21 @@ msgstr "編集"
 msgid "Import Theme..."
 msgstr "テーマをインポート..."
 
+msgid "_Open"
+msgstr "開く(_O)"
+
 msgid "Search:"
 msgstr "検索:"
 
-msgid "Fetching Themes"
-msgstr "テーマを取得"
+msgid "_Refresh"
+msgstr "更新(_R)"
 
-msgid ""
-"Fetching themes... \n"
-"This may take time depending on \n"
-"internet connection speed."
-msgstr ""
-"テーマを取得しています...\n"
-"インターネット接続の速度によっては\n"
-"いくらか時間がかかります。"
+msgid "_Delete"
+msgstr "削除(_D)"
 
-msgid ""
-"Here are the repositories that you can fetch Emerald Themes from. \n"
-"Fetching themes would fetch and import themes from SVN repositories \n"
-"You need Subversion package installed to use this feature."
-msgstr ""
-"これらはエメラルドのテーマを取得できるリポジトリです。\n"
-"それぞれボタンをクリックするとテーマを SVN リポジトリから取得し、\n"
-"インポートします。この機能を使うには Subversion をインストールしておく\n"
-"必要があります。"
-
-msgid ""
-"This repository contains GPL'd themes that can be used under \n"
-"the terms of GNU GPL licence v2.0 or later \n"
-msgstr ""
-"このリポジトリには GNU GPL ライセンス v2 あるいはそれ以降に\n"
-"基づいて配布されるテーマが含まれています。\n"
-
-msgid ""
-"This repository contains non-GPL'd themes. They might infringe \n"
-"copyrights and patent laws in some countries."
-msgstr ""
-"このリポジトリには非 GPL のテーマが含まれています。これらは\n"
-"国によっては著作権と特許法を犯している可能性があります。"
-
-msgid ""
-"To activate Non-GPL repository please run the following in shell and accept "
-"the server certificate permanently: \n"
-"svn ls https://svn.generation.no/emerald-themes."
-msgstr ""
-"非 GPL のリポジトリを有効にするには、次のコマンドを実行してサーバ証明書を無期"
-"限に受領するようにして下さい:\n"
-"svn ls https://svn.generation.no/emerald-themes"
+#, fuzzy
+msgid "_Import..."
+msgstr "書き出し..."
 
 msgid "Themes"
 msgstr "テーマ"
@@ -481,307 +774,53 @@ msgstr "テーマの設定"
 msgid "Emerald Settings"
 msgstr "エメラルドの設定"
 
-msgid ""
-"Select\n"
-"Engine"
-msgstr ""
-"エンジンを\n"
-"選択"
-
-msgid "Based on original gtk-window-decorator"
-msgstr "オリジナルの gtk-window-decorator に基づいています。"
-
-msgid "Round Top Left Corner"
-msgstr "左上の角を丸める"
-
-msgid "Round Top Right Corner"
-msgstr "右上の角を丸める"
-
-msgid "Round Bottom Left Corner"
-msgstr "左下の角を丸める"
-
-msgid "Round Bottom Right Corner"
-msgstr "右下の角を丸める"
-
-msgid "Rounding Radius"
-msgstr "丸める際の半径"
-
-msgid "Outer Frame Blend"
-msgstr "フレーム外側の混合色"
-
-msgid "Inner Frame Blend"
-msgstr "フレーム内側の混合色"
-
-msgid "Outer Titlebar Blend"
-msgstr "タイトルバー外側の混合色"
-
-msgid "Inner Titlebar Blend"
-msgstr "タイトルバー内側の混合色"
-
-msgid "Titlebar Separator"
-msgstr "タイトルバーのセパレータ"
-
-msgid "Frame Outline"
-msgstr "フレームの輪郭"
-
-msgid "Frame Highlight"
-msgstr "フレームの強調表示"
-
-msgid "Frame Shadow"
-msgstr "フレームの影"
-
-msgid "Contents Outline"
-msgstr "内容の輪郭"
-
-msgid "Contents Highlight"
-msgstr "内容の強調表示"
-
-msgid "Contents Shadow"
-msgstr "内容の影"
-
-msgid "Frame"
-msgstr "フレーム"
-
-#, fuzzy
-msgid "Based on original legacy"
-msgstr "オリジナルの gtk-window-decorator に基づいています。"
-
-msgid "Designed to be vista-ish in nature"
-msgstr "元来 Vista のようにデザインされています"
-
-msgid "Base"
-msgstr "ベース"
-
-msgid "Glow"
-msgstr "輝き"
-
-msgid "Sides"
-msgstr "側面"
-
-msgid "Everything done with customizable pixmaps!"
-msgstr "すべてピクスマップで構成され、カスタマイズできます!"
-
-msgid "Top Rounding Radius"
-msgstr "上部の丸めの半径"
-
-msgid "Bottom Rounding Radius"
-msgstr "下部の丸めの半径"
-
-#. Style : Use Tiled or Scaled pixmaps
-msgid "Scaled"
-msgstr "スケール"
-
-msgid "Not adjustable"
-msgstr "調整しない"
-
-msgid "Same as Active"
-msgstr "アクティブなときと同じ"
-
-msgid "Pixmap"
-msgstr "ピクスマップ"
-
-msgid "Tiled/Scaled"
-msgstr "タイル/スケール"
-
-msgid "Width Override"
-msgstr "幅を上書き指定"
-
-msgid "Height Override"
-msgstr "高さを上書き指定"
-
-msgid "Glassy effects for your windows"
-msgstr "ウィンドウのガラスのようなエフェクト"
-
-msgid "Glow Height"
-msgstr "輝く部分の高さ"
-
-msgid "Frame Base Color"
-msgstr "フレームのベースの色"
-
-msgid "Upper Titlebar Glow"
-msgstr "タイトルバー上の方の輝き"
-
-msgid "Upper Glass Glow"
-msgstr "上の方のガラスの輝き"
-
-msgid "Lower Glass Glow"
-msgstr "下の方のガラスの輝き"
-
-msgid "Middle Glass Glow"
-msgstr "中央のガラスの輝き"
-
-msgid "Outer Glass Glow"
-msgstr "外側のガラスの輝き"
-
-msgid "Multiple gradients with somewhat glassy features too"
-msgstr "複数のグラデーションとガラスのような効果"
-
-msgid "Left Blend"
-msgstr "左の混合色"
-
-msgid "Middle Blend"
-msgstr "中央の混合色"
-
-msgid "Right Blend"
-msgstr "右の混合色"
-
-msgid "Contrast"
-msgstr "コントラスト"
-
-msgid "(Color)"
-msgstr "(色)"
-
-msgid "(Alpha)"
-msgstr "(アルファチャンネル)"
-
-msgid "Notch"
-msgstr "切り込み"
-
-msgid "Position"
-msgstr "位置"
-
-msgid "Curve"
-msgstr "カーブ"
-
-msgid "Offset"
-msgstr "オフセット"
-
-msgid "Use Glow"
-msgstr "輝かす"
-
-msgid "Title Glow"
-msgstr "タイトルの輝き"
-
-msgid "Evolved from the legacy engine"
-msgstr "\"legacy\" エンジンから発展"
-
-msgid "Border Gap"
-msgstr "枠のギャップ"
-
-# 以下、いちいち疑問文になっていてうっとおしいのですべて通常の文に意訳。
-msgid "Show Border when maximised?"
-msgstr "最大化の際に枠を表示する"
-
-msgid "Show when minimised?"
-msgstr "最小化の際に表示する"
-
-msgid "Minimised Border Size"
-msgstr "最小化の際の枠のサイズ"
-
-msgid "Enable Left Bar Dip?"
-msgstr "左のバーのディップを有効にする"
-
-msgid "Left Bar Radius"
-msgstr "左のバーの半径"
-
-msgid "Enable Lower Bulge? (Useless at the moment, but will be used soon)"
-msgstr ""
-"下の方をふくらませるか? (現在は使用できないが近い将来に使えようになります)"
-
-msgid "Top Corner Offset (%)"
-msgstr "上野角のオフセット (%)"
-
-msgid "Enable Title Bar Dip?"
-msgstr "タイトルバーのディップを有効にする"
-
-msgid "Enable Button Part?"
-msgstr "ボタン部分を有効にする"
-
-msgid "Title Part Width"
-msgstr "タイトル部分の幅"
-
-msgid "Button Part Width)"
-msgstr "ボタン部分の幅)"
-
-msgid "Dip Corners Radius)"
-msgstr "ディップの角の半径)"
-
-msgid "Round Inside Corners As well?"
-msgstr "内側の角も同様に丸める"
-
-msgid "Enable Different Maximised Colors?"
-msgstr "最大化の際に違う色にする"
-
-msgid "Turn Off repeating gradients when maximised?"
-msgstr "最大化の際にグラデーションの繰り返しをしないようにする"
-
-msgid "Round Top Left Corner?"
-msgstr "左上の角を丸める"
-
-msgid "Frame Rounding Radius"
-msgstr "フレームの丸めの半径"
-
-msgid "Titlebar Rounding Radius"
-msgstr "タイトルバーの丸めの半径"
-
-msgid "Repeat Gradient?"
-msgstr "グラデーションを繰り返す"
-
-msgid "Vertical Repeat?"
-msgstr "垂直方向に繰り返す"
-
-msgid "Diagonal Repeat?"
-msgstr "斜め方向に繰り返す"
-
-msgid "Repeat Frequency"
-msgstr "繰り返しの周期"
-
-#. /////////////////////
-msgid "Enable Title Part Pixmap?"
-msgstr "タイトル部分のピクスマップを有効にする"
-
-msgid "Repeat Title Part Pixmap?"
-msgstr "タイトル部分のピクスマップを繰り返す"
-
-msgid "Title Bar Part Pixmap"
-msgstr "タイトルバーの部分のピクスマップ"
-
-msgid "Choose Titlebar Part Pixmap"
-msgstr "タイトルバーの部分のピクスマップを選択"
-
-#. /////////////////////////
-msgid "Enable Button Part Pixmap?"
-msgstr "ボタン部分のピクスマップを有効にする"
-
-msgid "Repeat Button Part Pixmap?"
-msgstr "ボタン部分のピクスマップを繰り返す"
-
-msgid "Button Part Pixmap"
-msgstr "ボタン部分のピクスマップ"
-
-msgid "Choose Button Part Pixmap"
-msgstr "ボタン部分のピクスマップを選択"
-
-#. /////////////////////////
-msgid "Enable Titlebar Pixmap?"
-msgstr "タイトルバーのピクスマップを有効にする"
-
-msgid "Repeat Titlebar Pixmap?"
-msgstr "タイトルバーのピクスマップを繰り返す"
-
-msgid "Titlebar Pixmap"
-msgstr "タイトルバーのピクスマップ"
-
-msgid "Choose Titlebar Pixmap"
-msgstr "タイトルバーのピクスマップを選択"
-
-msgid "Active/Inactive"
-msgstr "アクティブ/非アクティブ"
-
-msgid "Maximised"
-msgstr "最大化"
-
-msgid "Corners"
-msgstr "角"
-
-msgid "Border Layout"
-msgstr "枠の配置"
-
-msgid "Left Bar"
-msgstr "左のバー"
-
-msgid "Pixmaps"
-msgstr "ピクスマップ"
+msgid "_Quit"
+msgstr "終了(_Q)"
+
+#~ msgid "Fetching Themes"
+#~ msgstr "テーマを取得"
+
+#~ msgid ""
+#~ "Fetching themes... \n"
+#~ "This may take time depending on \n"
+#~ "internet connection speed."
+#~ msgstr ""
+#~ "テーマを取得しています...\n"
+#~ "インターネット接続の速度によっては\n"
+#~ "いくらか時間がかかります。"
+
+#~ msgid ""
+#~ "Here are the repositories that you can fetch Emerald Themes from. \n"
+#~ "Fetching themes would fetch and import themes from SVN repositories \n"
+#~ "You need Subversion package installed to use this feature."
+#~ msgstr ""
+#~ "これらはエメラルドのテーマを取得できるリポジトリです。\n"
+#~ "それぞれボタンをクリックするとテーマを SVN リポジトリから取得し、\n"
+#~ "インポートします。この機能を使うには Subversion をインストールしておく\n"
+#~ "必要があります。"
+
+#~ msgid ""
+#~ "This repository contains GPL'd themes that can be used under \n"
+#~ "the terms of GNU GPL licence v2.0 or later \n"
+#~ msgstr ""
+#~ "このリポジトリには GNU GPL ライセンス v2 あるいはそれ以降に\n"
+#~ "基づいて配布されるテーマが含まれています。\n"
+
+#~ msgid ""
+#~ "This repository contains non-GPL'd themes. They might infringe \n"
+#~ "copyrights and patent laws in some countries."
+#~ msgstr ""
+#~ "このリポジトリには非 GPL のテーマが含まれています。これらは\n"
+#~ "国によっては著作権と特許法を犯している可能性があります。"
+
+#~ msgid ""
+#~ "To activate Non-GPL repository please run the following in shell and "
+#~ "accept the server certificate permanently: \n"
+#~ "svn ls https://svn.generation.no/emerald-themes."
+#~ msgstr ""
+#~ "非 GPL のリポジトリを有効にするには、次のコマンドを実行してサーバ証明書を"
+#~ "無期限に受領するようにして下さい:\n"
+#~ "svn ls https://svn.generation.no/emerald-themes"
 
 #~ msgid "Repositories"
 #~ msgstr "リポジトリ"

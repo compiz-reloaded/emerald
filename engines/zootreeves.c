@@ -33,10 +33,7 @@
 #define DIP_ROUND_TRI  (1 << 4)
 
 #if !GTK_CHECK_VERSION(3, 0, 0)
-#define GTK_ORIENTATION_HORIZONTAL 0
-#define GTK_ORIENTATION_VERTICAL 1
-
-static GtkWidget *gtk_box_new(gint orientation, gint spacing)
+static GtkWidget *gtk_box_new(GtkOrientation orientation, int spacing)
 {
     if (orientation == GTK_ORIENTATION_VERTICAL)
 	return gtk_vbox_new(FALSE, spacing);
@@ -111,11 +108,23 @@ typedef struct _private_ws
 
 void get_meta_info (EngineMetaInfo * emi)
 {
+    guint8 *pixbuf_data;
+
     emi->version = g_strdup("0.1");
     emi->description = g_strdup(_("Evolved from the legacy engine"));
-    /* old themes marked still compatible for testing-NeOS */
+    /* old themes are marked still compatible for testing-NeOS */
     emi->last_compat = g_strdup("0.0");
-    emi->icon = gdk_pixbuf_new_from_inline(-1,my_pixbuf,TRUE,NULL);
+
+    pixbuf_data = g_memdup(ZOOTREEVES_ICON_PIXEL_DATA,
+                           ZOOTREEVES_ICON_ROWSTRIDE * ZOOTREEVES_ICON_HEIGHT);
+    emi->icon = gdk_pixbuf_new_from_data(pixbuf_data, GDK_COLORSPACE_RGB,
+                                         (ZOOTREEVES_ICON_BYTES_PER_PIXEL != 3),
+                                         8,
+                                         ZOOTREEVES_ICON_WIDTH,
+                                         ZOOTREEVES_ICON_HEIGHT,
+                                         ZOOTREEVES_ICON_ROWSTRIDE,
+                                         (GdkPixbufDestroyNotify) g_free,
+                                         pixbuf_data);
 }
 
 void
@@ -408,8 +417,8 @@ rounded_square (cairo_t *cr,
         cairo_arc_negative (cr, cx + left_bar_dip_radius, cy, left_bar_dip_radius, M_PI * 1.0, M_PI * curve);
 	cairo_get_current_point (cr, &cx, &cy);
 	/* x_width = radius - x_width;
-	   printf("Width %f\n", a_width);
-	   printf("Height %f\n", a_height); */
+	   g_printf("Width %f\n", a_width);
+	   g_printf("Height %f\n", a_height); */
 
         cairo_arc (cr, cx, cy + left_bar_dip_radius, left_bar_dip_radius, M_PI * (curve + 1), M_PI * 2.0);
 	cairo_get_current_point (cr, &cx, &cy);
@@ -741,7 +750,7 @@ void engine_draw_frame (decor_t * d, cairo_t * cr)
 		pws->done_indent = TRUE;
 	    }
 
-	    /* sprintf(ws->tobj_layout, "(-%i)%s", left_bar_dip_offset, layout);
+	    /* g_sprintf(ws->tobj_layout, "(-%i)%s", left_bar_dip_offset, layout);
 	       pango_layout_set_indent(d->layout, 20000);
 	       pws->round_bottom_left = FALSE; */
 	}
@@ -1232,9 +1241,8 @@ void init_engine(window_settings * ws)
     private_fs * pfs;
     private_ws * pws;
 
-    pws = malloc(sizeof(private_ws));
+    pws = g_malloc0(sizeof(private_ws));
     ws->engine_ws = pws;
-    bzero(pws,sizeof(private_ws));
     pws->round_top_left=TRUE;
     pws->round_top_right=TRUE;
     pws->round_bottom_left=TRUE;
@@ -1273,9 +1281,8 @@ void init_engine(window_settings * ws)
 
 
 
-    pfs = malloc(sizeof(private_fs));
+    pfs = g_malloc0(sizeof(private_fs));
     ws->fs_act->engine_fs = pfs;
-    bzero(pfs,sizeof(private_fs));
     ACOLOR(inner,0.8,0.8,0.8,0.5);
     ACOLOR(outer,0.8,0.8,0.8,0.5);
     ACOLOR(title_inner,0.8,0.8,0.8,0.8);
@@ -1288,8 +1295,7 @@ void init_engine(window_settings * ws)
     ACOLOR(contents_shadow,0.6,0.6,0.6,0.8);
     ACOLOR(contents_halo,0.8,0.8,0.8,0.8);
 
-    pfs = malloc(sizeof(private_fs));
-    bzero(pfs,sizeof(private_fs));
+    pfs = g_malloc0(sizeof(private_fs));
     ws->fs_inact->engine_fs = pfs;
 
 
@@ -1307,8 +1313,8 @@ void init_engine(window_settings * ws)
 }
 void fini_engine(window_settings * ws)
 {
-    free(ws->fs_act->engine_fs);
-    free(ws->fs_inact->engine_fs);
+    g_free(ws->fs_act->engine_fs);
+    g_free(ws->fs_inact->engine_fs);
 }
 
 void layout_layout_frame(GtkWidget * vbox)

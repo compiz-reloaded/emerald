@@ -1,394 +1,392 @@
-# English (United Kingdom) translation for emerald
-# Copyright (C) 2006 The Free Software Foundation, Inc.
-# This file is distributed under the same license as the emerald package.
-# cyberorg <cyberorg@cyberorg.info>, 2006.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: emerald\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/emerald/issues\n"
-"POT-Creation-Date: 2017-05-04 19:28+0300\n"
-"PO-Revision-Date: 2008-05-26 15:34+0200\n"
-"Last-Translator: David Lodge <dave@cirt.net>\n"
-"Language-Team: English (United Kingdom) <en_GB@li.org>\n"
-"Language: en_GB\n"
+"POT-Creation-Date: 2017-05-04 19:29+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 msgid "Based on original gtk-window-decorator"
-msgstr "Based on original gtk-window-decorator"
+msgstr ""
 
 msgid "Round Top Left Corner"
-msgstr "Round Top Left Corner"
+msgstr ""
 
 msgid "Round Top Right Corner"
-msgstr "Round Top Right Corner"
+msgstr ""
 
 msgid "Round Bottom Left Corner"
-msgstr "Round Bottom Left Corner"
+msgstr ""
 
 msgid "Round Bottom Right Corner"
-msgstr "Round Bottom Right Corner"
+msgstr ""
 
 msgid "Rounding Radius"
-msgstr "Rounding Radius"
+msgstr ""
 
 msgid "Colors"
-msgstr "Colours"
+msgstr ""
 
 msgid "Outer Frame Blend"
-msgstr "Outer Frame Blend"
+msgstr ""
 
 msgid "Inner Frame Blend"
-msgstr "Inner Frame Blend"
+msgstr ""
 
 msgid "Outer Titlebar Blend"
-msgstr "Outer Titlebar Blend"
+msgstr ""
 
 msgid "Inner Titlebar Blend"
-msgstr "Inner Titlebar Blend"
+msgstr ""
 
 msgid "Titlebar Separator"
-msgstr "Titlebar Separator"
+msgstr ""
 
 msgid "Frame Outline"
-msgstr "Frame Outline"
+msgstr ""
 
 msgid "Frame Highlight"
-msgstr "Frame Highlight"
+msgstr ""
 
 msgid "Frame Shadow"
-msgstr "Frame Shadow"
+msgstr ""
 
 msgid "Contents Outline"
-msgstr "Contents Outline"
+msgstr ""
 
 msgid "Contents Highlight"
-msgstr "Contents Highlight"
+msgstr ""
 
 msgid "Contents Shadow"
-msgstr "Contents Shadow"
+msgstr ""
 
 msgid "Frame"
-msgstr "Frame"
+msgstr ""
 
 msgid "Based on original legacy"
-msgstr "Based on original legacy"
+msgstr ""
 
 msgid "Title Bar"
-msgstr "Title Bar"
+msgstr ""
 
 msgid "Designed to be vista-ish in nature"
-msgstr "Designed to be vista-ish in nature"
+msgstr ""
 
 msgid "Base"
-msgstr "Base"
+msgstr ""
 
 msgid "Glow"
-msgstr "Glow"
+msgstr ""
 
 msgid "Sides"
-msgstr "Sides"
+msgstr ""
 
 msgid "Everything done with customizable pixmaps!"
-msgstr "Everything done with customisable pixmaps!"
+msgstr ""
 
 msgid "Top Rounding Radius"
-msgstr "Top Rounding Radius"
+msgstr ""
 
 msgid "Bottom Rounding Radius"
-msgstr "Bottom Rounding Radius"
+msgstr ""
 
 msgid "_Clear"
-msgstr "_Clear"
+msgstr ""
 
 #. style: use tiled or scaled pixmaps
 msgid "Scaled"
-msgstr "Scaled"
+msgstr ""
 
 msgid "Not adjustable"
-msgstr "Not adjustable"
+msgstr ""
 
 msgid "Same as Active"
-msgstr "Same as Active"
+msgstr ""
 
 msgid "Pixmap"
-msgstr "Pixmap"
+msgstr ""
 
 msgid "File"
-msgstr "File"
+msgstr ""
 
 msgid "Preview"
-msgstr "Preview"
+msgstr ""
 
 msgid "Clear"
-msgstr "Clear"
+msgstr ""
 
 msgid "Tiled/Scaled"
-msgstr "Tiled/Scaled"
+msgstr ""
 
 msgid "Width Override"
-msgstr "Width Override"
+msgstr ""
 
 msgid "Height Override"
-msgstr "Height Override"
+msgstr ""
 
 msgid "Glassy effects for your windows"
-msgstr "Glassy effects for your windows"
+msgstr ""
 
 msgid "Glow Height"
-msgstr "Glow Height"
+msgstr ""
 
 msgid "Frame Base Color"
-msgstr "Frame Base Colour"
+msgstr ""
 
 msgid "Upper Titlebar Glow"
-msgstr "Upper Titlebar Glow"
+msgstr ""
 
 msgid "Upper Glass Glow"
-msgstr "Upper Glass Glow"
+msgstr ""
 
 msgid "Lower Glass Glow"
-msgstr "Lower Glass Glow"
+msgstr ""
 
 msgid "Middle Glass Glow"
-msgstr "Middle Glass Glow"
+msgstr ""
 
 msgid "Outer Glass Glow"
-msgstr "Outer Glass Glow"
+msgstr ""
 
 msgid "Multiple gradients with somewhat glassy features too"
-msgstr "Multiple gradients with somewhat glassy features too"
+msgstr ""
 
 msgid "Left Blend"
-msgstr "Left Blend"
+msgstr ""
 
 msgid "Middle Blend"
-msgstr "Middle Blend"
+msgstr ""
 
 msgid "Right Blend"
-msgstr "Right Blend"
+msgstr ""
 
 msgid "Contrast"
-msgstr "Contrast"
+msgstr ""
 
 msgid "(Color)"
-msgstr "(Colour)"
+msgstr ""
 
 msgid "(Alpha)"
-msgstr "(Alpha)"
+msgstr ""
 
 msgid "Notch"
-msgstr "Notch"
+msgstr ""
 
 msgid "Position"
-msgstr "Position"
+msgstr ""
 
 msgid "Curve"
-msgstr "Curve"
+msgstr ""
 
 msgid "Offset"
-msgstr "Offset"
+msgstr ""
 
 msgid "Use Glow"
-msgstr "Use Glow"
+msgstr ""
 
 msgid "Title Glow"
-msgstr "Title Glow"
+msgstr ""
 
 msgid "Radius"
-msgstr "Radius"
+msgstr ""
 
 msgid "Evolved from the legacy engine"
-msgstr "Evolved from the legacy engine"
+msgstr ""
 
 msgid "Border Gap"
-msgstr "Border Gap"
+msgstr ""
 
 msgid "Show Border when maximised?"
-msgstr "Show Border when maximised?"
+msgstr ""
 
 msgid "Show when minimised?"
-msgstr "Show when minimised?"
+msgstr ""
 
 msgid "Minimised Border Size"
-msgstr "Minimised Border Size"
+msgstr ""
 
 msgid "Enable Left Bar Dip?"
-msgstr "Enable Left Bar Dip?"
+msgstr ""
 
 msgid "Left Bar Radius"
-msgstr "Left Bar Radius"
+msgstr ""
 
 msgid "Enable Lower Bulge? (Useless at the moment, but will be used soon)"
-msgstr "Enable Lower Bulge? (Useless at the moment, but will be used soon)"
+msgstr ""
 
 msgid "Top Corner Offset (%)"
-msgstr "Top Corner Offset (%)"
+msgstr ""
 
 msgid "Enable Title Bar Dip?"
-msgstr "Enable Title Bar Dip?"
+msgstr ""
 
 msgid "Enable Button Part?"
-msgstr "Enable Button Part?"
+msgstr ""
 
 msgid "Title Part Width"
-msgstr "Title Part Width"
+msgstr ""
 
 msgid "Button Part Width)"
-msgstr "Button Part Width)"
+msgstr ""
 
 msgid "Dip Corners Radius)"
-msgstr "Dip Corners Radius)"
+msgstr ""
 
 msgid "Round Inside Corners As well?"
-msgstr "Round Inside Corners As well?"
+msgstr ""
 
 msgid "Enable Different Maximised Colors?"
-msgstr "Enable Different Maximised Colours?"
+msgstr ""
 
 msgid "Turn Off repeating gradients when maximised?"
-msgstr "Turn Off repeating gradients when maximised?"
+msgstr ""
 
 msgid "Round Top Left Corner?"
-msgstr "Round Top Left Corner?"
+msgstr ""
 
 msgid "Frame Rounding Radius"
-msgstr "Frame Rounding Radius"
+msgstr ""
 
 msgid "Titlebar Rounding Radius"
-msgstr "Titlebar Rounding Radius"
+msgstr ""
 
 msgid "Repeat Gradient?"
-msgstr "Repeat Gradient?"
+msgstr ""
 
 msgid "Vertical Repeat?"
-msgstr "Vertical Repeat?"
+msgstr ""
 
 msgid "Diagonal Repeat?"
-msgstr "Diagonal Repeat?"
+msgstr ""
 
 msgid "Repeat Frequency"
-msgstr "Repeat Frequency"
+msgstr ""
 
 #. ========================
 msgid "Enable Title Part Pixmap?"
-msgstr "Enable Title Part Pixmap?"
+msgstr ""
 
 msgid "Repeat Title Part Pixmap?"
-msgstr "Repeat Title Part Pixmap?"
+msgstr ""
 
 msgid "Title Bar Part Pixmap"
-msgstr "Title Bar Part Pixmap"
+msgstr ""
 
 msgid "Choose Titlebar Part Pixmap"
-msgstr "Choose Titlebar Part Pixmap"
+msgstr ""
 
 #. ========================
 msgid "Enable Button Part Pixmap?"
-msgstr "Enable Button Part Pixmap?"
+msgstr ""
 
 msgid "Repeat Button Part Pixmap?"
-msgstr "Repeat Button Part Pixmap?"
+msgstr ""
 
 msgid "Button Part Pixmap"
-msgstr "Button Part Pixmap"
+msgstr ""
 
 msgid "Choose Button Part Pixmap"
-msgstr "Choose Button Part Pixmap"
+msgstr ""
 
 #. ========================
 msgid "Enable Titlebar Pixmap?"
-msgstr "Enable Titlebar Pixmap?"
+msgstr ""
 
 msgid "Repeat Titlebar Pixmap?"
-msgstr "Repeat Titlebar Pixmap?"
+msgstr ""
 
 msgid "Titlebar Pixmap"
-msgstr "Titlebar Pixmap"
+msgstr ""
 
 msgid "Choose Titlebar Pixmap"
-msgstr "Choose Titlebar Pixmap"
+msgstr ""
 
 msgid "Active/Inactive"
-msgstr "Active/Inactive"
+msgstr ""
 
 msgid "Maximised"
-msgstr "Maximised"
+msgstr ""
 
 msgid "Corners"
-msgstr "Corners"
+msgstr ""
 
 msgid "Border Layout"
-msgstr "Border Layout"
+msgstr ""
 
 msgid "Left Bar"
-msgstr "Left Bar"
+msgstr ""
 
 msgid "Pixmaps"
-msgstr "Pixmaps"
+msgstr ""
 
 msgid ""
 "Select\n"
 "Engine"
 msgstr ""
-"Select\n"
-"Engine"
 
 msgid "Close Window"
-msgstr "Close Window"
+msgstr ""
 
 msgid "Maximize Window"
-msgstr "Maximise Window"
+msgstr ""
 
 msgid "Restore Window"
-msgstr "Restore Window"
+msgstr ""
 
 msgid "Minimize Window"
-msgstr "Minimise Window"
+msgstr ""
 
 msgid "Context Help"
-msgstr "Context Help"
+msgstr ""
 
 msgid "Window Menu"
-msgstr "Window Menu"
+msgstr ""
 
 msgid "Shade Window"
-msgstr "Shade Window"
+msgstr ""
 
 msgid "UnShade Window"
-msgstr "UnShade Window"
+msgstr ""
 
 msgid "Set Above"
-msgstr "Set Above"
+msgstr ""
 
 msgid "UnSet Above"
-msgstr "UnSet Above"
+msgstr ""
 
 msgid "Stick Window"
-msgstr "Stick Window"
+msgstr ""
 
 msgid "UnStick Window"
-msgstr "UnStick Window"
+msgstr ""
 
 msgid "Super Maximize Window"
-msgstr "Super Maximise Window"
+msgstr ""
 
 #, c-format
 msgid "The window \"%s\" is not responding."
-msgstr "The window \"%s\" is not responding."
+msgstr ""
 
 msgid ""
 "Forcing this application to quit will cause you to lose any unsaved changes."
 msgstr ""
-"Forcing this application to quit will cause you to lose any unsaved changes."
 
 msgid "_Cancel"
-msgstr "_Cancel"
+msgstr ""
 
 msgid "_Force Quit"
-msgstr "_Force Quit"
+msgstr ""
 
 #, c-format
 msgid ""
@@ -399,12 +397,6 @@ msgid ""
 "<b>Use With</b> %s\n"
 "</small>"
 msgstr ""
-"<b><big>%s</big></b>\n"
-"<i>%s</i>\n"
-"<small><b>Version</b> %s\n"
-"<b>Created By</b> %s\n"
-"<b>Use With</b> %s\n"
-"</small>"
 
 #, c-format
 msgid ""
@@ -415,138 +407,124 @@ msgid ""
 "<b>Use With</b> %s\n"
 "</small>"
 msgstr ""
-"<b><big>%s</big></b> (System Theme)\n"
-"<i>%s</i>\n"
-"<small><b>Version</b> %s\n"
-"<b>Created By</b> %s\n"
-"<b>Use With</b> %s\n"
-"</small>"
 
 msgid "Unknown"
-msgstr "Unknown"
+msgstr ""
 
 msgid "Whatever (no hint)"
-msgstr "Whatever (no hint)"
+msgstr ""
 
 msgid "No Description"
-msgstr "No Description"
+msgstr ""
 
 msgid "Invalid Theme Name"
-msgstr "Invalid Theme Name"
+msgstr ""
 
 msgid "Invalid theme file.  Does not end in .emerald"
-msgstr "Invalid theme file.  Does not end in .emerald"
+msgstr ""
 
 msgid ""
 "Invalid Theme Name\n"
 "Could Not Export"
 msgstr ""
-"Invalid Theme Name\n"
-"Could Not Export"
 
 msgid ""
 "Invalid File Name\n"
 "Must End in .emerald"
 msgstr ""
-"Invalid File Name\n"
-"Must End in .emerald"
 
 msgid "Error calling tar."
-msgstr "Error calling tar."
+msgstr ""
 
 msgid "Theme Exported"
-msgstr "Theme Exported"
+msgstr ""
 
 msgid ""
 "Can't save over system themes\n"
 "(or you forgot to enter a name)"
 msgstr ""
-"Can't save over system themes\n"
-"(or you forgot to enter a name)"
 
 #, c-format
 msgid "Overwrite Theme %s?"
-msgstr "Overwrite Theme %s?"
+msgstr ""
 
 msgid "Couldn't Write Theme"
-msgstr "Couldn't Write Theme"
+msgstr ""
 
 msgid "Couldn't Form Theme"
-msgstr "Couldn't Form Theme"
+msgstr ""
 
 msgid "Theme Saved"
-msgstr "Theme Saved"
+msgstr ""
 
 msgid ""
 "Can't delete system themes\n"
 "(or you forgot to enter a name)"
 msgstr ""
-"Can't delete system themes\n"
-"(or you forgot to enter a name)"
 
 #, c-format
 msgid "Are you sure you want to delete %s?"
-msgstr "Are you sure you want to delete %s?"
+msgstr ""
 
 msgid "Theme deleted"
-msgstr "Theme deleted"
+msgstr ""
 
 msgid "No such theme to delete"
-msgstr "No such theme to delete"
+msgstr ""
 
 msgid "Use Pixmap Buttons"
-msgstr "Use Pixmap Buttons"
+msgstr ""
 
 msgid "Use Button Halo/Glow"
-msgstr "Use Button Halo/Glow"
+msgstr ""
 
 msgid "Use Button Halo/Glow For Inactive Windows"
-msgstr "Use Button Halo/Glow For Inactive Windows"
+msgstr ""
 
 msgid "Button Pixmaps"
-msgstr "Button Pixmaps"
+msgstr ""
 
 msgid "Button"
-msgstr "Button"
+msgstr ""
 
 msgid "Text Fill"
-msgstr "Text Fill"
+msgstr ""
 
 msgid "Text Outline"
-msgstr "Text Outline"
+msgstr ""
 
 msgid "Button Fill"
-msgstr "Button Fill"
+msgstr ""
 
 msgid "Button Outline"
-msgstr "Button Outline"
+msgstr ""
 
 msgid "Color"
-msgstr "Colour"
+msgstr ""
 
 msgid "Opacity"
-msgstr "Opacity"
+msgstr ""
 
 msgid "X Offset"
-msgstr "X Offset"
+msgstr ""
 
 msgid "Y Offset"
-msgstr "Y Offset"
+msgstr ""
 
 msgid "Title-Text Font"
-msgstr "Title-Text Font"
+msgstr ""
 
 msgid "Minimum Title-bar Height"
-msgstr "Minimum Title-bar Height"
+msgstr ""
 
 msgid "Vertical Button Offset"
-msgstr "Vertical Button Offset"
+msgstr ""
 
 msgid "Horizontal Button Offset"
-msgstr "Horizontal Button Offset"
+msgstr ""
 
 msgid "Title-bar Object Layout"
-msgstr "Title-bar Object Layout"
+msgstr ""
 
 msgid ""
 "Use colons to separate left, center, and right.\n"
@@ -557,61 +535,54 @@ msgid ""
 "Y=Sticky, (#)=# pixels space, ex: (5)\n"
 "F=SuperMaximize\n"
 msgstr ""
-"Use colons to separate left, centre, and right.\n"
-"Anything after a third colon is ignored.\n"
-"C=Close, N=Minimise, X/R=Restore\n"
-"I=Icon, T=Title, H=Help, M=Menu\n"
-"S=Shade, U/A=On Top(Up/Above)\n"
-"Y=Sticky, (#)=# pixels space, ex: (5)\n"
-"F=SuperMaximise\n"
 
 msgid "Export Theme..."
-msgstr "Export Theme..."
+msgstr ""
 
 msgid "_Save"
-msgstr "_Save"
+msgstr ""
 
 msgid "Name:"
-msgstr "Name:"
+msgstr ""
 
 msgid "Untitled Theme"
-msgstr "Untitled Theme"
+msgstr ""
 
 msgid "Export..."
-msgstr "Export..."
+msgstr ""
 
 msgid "Creator"
-msgstr "Creator"
+msgstr ""
 
 msgid "Description"
-msgstr "Description"
+msgstr ""
 
 msgid "Theme Version"
-msgstr "Theme Version"
+msgstr ""
 
 msgid "Suggested Widget Theme"
-msgstr "Suggested Widget Theme"
+msgstr ""
 
 msgid "Themer Version"
-msgstr "Themer Version"
+msgstr ""
 
 msgid "Border"
-msgstr "Border"
+msgstr ""
 
 msgid "Size"
-msgstr "Size"
+msgstr ""
 
 msgid "Top"
-msgstr "Top"
+msgstr ""
 
 msgid "Bottom"
-msgstr "Bottom"
+msgstr ""
 
 msgid "Left"
-msgstr "Left"
+msgstr ""
 
 msgid "Right"
-msgstr "Right"
+msgstr ""
 
 msgid ""
 "Note, when changing these values,\n"
@@ -625,147 +596,134 @@ msgid ""
 "the titlebar-min-height slider\n"
 "or the titlebar font setting.\n"
 msgstr ""
-"Note, when changing these values\n"
-"it is advised that you do something\n"
-"like change viewports, as this will\n"
-"cause the position of the 'event windows'\n"
-"to update properly, and thus make\n"
-"moving/resizing windows work properly.\n"
-"This also applies to when you change\n"
-"the title-bar height through either\n"
-"the titlebar-min-height slider\n"
-"or the titlebar font setting.\n"
 
 msgid "Shadows"
-msgstr "Shadows"
+msgstr ""
 
 msgid "Frame Borders"
-msgstr "Frame Borders"
+msgstr ""
 
 msgid "Active Window"
-msgstr "Active Window"
+msgstr ""
 
 msgid "Inactive Window"
-msgstr "Inactive Window"
+msgstr ""
 
 msgid "Screenshot"
-msgstr "Screenshot"
+msgstr ""
 
 msgid "Images"
-msgstr "Images"
+msgstr ""
 
 msgid "Information"
-msgstr "Information"
+msgstr ""
 
 msgid ""
 "NOTE - These settings are not part of themes, they are stored separately, "
 "and control various UI preferences for Emerald."
 msgstr ""
-"NOTE - These settings are not part of themes, they are stored separately and "
-"control various UI preferences for Emerald."
 
 msgid "Show Tooltips for Buttons"
-msgstr "Show Tooltips for Buttons"
+msgstr ""
 
 msgid "Use Decoration Cropping"
-msgstr "Use Decoration Cropping"
+msgstr ""
 
 msgid "No Shade on Titlebar Scroll"
-msgstr "No Shade on Titlebar Scroll"
+msgstr ""
 
 msgid "Use Button Fade"
-msgstr "Use Button Fade"
+msgstr ""
 
 msgid "Use Button Fade Pulse"
-msgstr "Use Button Fade Pulse"
+msgstr ""
 
 msgid "Button Fade Total Duration"
-msgstr "Button Fade Total Duration"
+msgstr ""
 
 msgid "Button Fade Step Duration"
-msgstr "Button Fade Step Duration"
+msgstr ""
 
 msgid "Button Pulse Wait Duration"
-msgstr "Button Pulse Wait Duration"
+msgstr ""
 
 msgid "Button Pulse Min Opacity %"
-msgstr "Button Pulse Min Opacity %"
+msgstr ""
 
 msgid "Titlebar Double-Click Action"
-msgstr "Titlebar Double-Click Action"
+msgstr ""
 
-#, fuzzy
 msgid "Titlebar Middle-Click Action"
-msgstr "Titlebar Double-Click Action"
+msgstr ""
 
 msgid "Button Hover Cursor"
-msgstr "Button Hover Cursor"
+msgstr ""
 
 msgid "Normal"
-msgstr "Normal"
+msgstr ""
 
 msgid "Pointing Finger"
-msgstr "Pointing Finger"
+msgstr ""
 
 msgid "Compiz Decoration Blur Type"
-msgstr "Compiz Decoration Blur Type"
+msgstr ""
 
 msgid "None"
-msgstr "None"
+msgstr ""
 
 msgid "Titlebar only"
-msgstr "Titlebar only"
+msgstr ""
 
 msgid "All decoration"
-msgstr "All decoration"
+msgstr ""
 
 msgid "Frame Engine"
-msgstr "Frame Engine"
+msgstr ""
 
 msgid "Buttons"
-msgstr "Buttons"
+msgstr ""
 
 msgid "Frame/Shadows"
-msgstr "Frame/Shadows"
+msgstr ""
 
 msgid "Titlebar"
-msgstr "Titlebar"
+msgstr ""
 
 msgid "Theme"
-msgstr "Theme"
+msgstr ""
 
 msgid "Edit"
-msgstr "Edit"
+msgstr ""
 
 msgid "Import Theme..."
-msgstr "Import Theme..."
+msgstr ""
 
 msgid "_Open"
-msgstr "_Open"
+msgstr ""
 
 msgid "Search:"
-msgstr "Search:"
+msgstr ""
 
 msgid "_Refresh"
-msgstr "_Refresh"
+msgstr ""
 
 msgid "_Delete"
-msgstr "_Delete"
+msgstr ""
 
 msgid "_Import..."
-msgstr "_Import..."
+msgstr ""
 
 msgid "Themes"
-msgstr "Themes"
+msgstr ""
 
 msgid "Edit Themes"
-msgstr "Edit Themes"
+msgstr ""
 
 msgid "Themes Settings"
-msgstr "Themes Settings"
+msgstr ""
 
 msgid "Emerald Settings"
-msgstr "Emerald Settings"
+msgstr ""
 
 msgid "_Quit"
-msgstr "_Quit"
+msgstr ""

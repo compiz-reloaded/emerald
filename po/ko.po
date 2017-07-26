@@ -1,21 +1,342 @@
-# Emerald Window Decorator.
-# Copyright (C) 2006
-# This file is distributed under the same license as the Emerald package.
+# Korean translation for emerald
+# Copyright (C) 2006 The Free Software Foundation, Inc.
+# This file is distributed under the same license as the emerald package.
+# atie H. <atie.at.matrix@gmail.com>
 # cyberorg <cyberorg@cyberorg.info>, 2006.
-# Original translator: atie H. <atie.at.matrix@gmail.com>\n"
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: 0.1\n"
-"Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
-"POT-Creation-Date: 2009-03-24 08:14+0100\n"
+"Project-Id-Version: emerald\n"
+"Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/emerald/issues\n"
+"POT-Creation-Date: 2017-05-04 19:28+0300\n"
 "PO-Revision-Date: 2007-12-24 12:08+0100\n"
 "Last-Translator: Jeong Seungwon <jeongseungwon@hanmail.net>\n"
-"Language-Team: beryl-project\n"
+"Language-Team: Korean <ko@li.org>\n"
+"Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Pootle 1.0.2\n"
+
+msgid "Based on original gtk-window-decorator"
+msgstr "그놈 기본 창 테두리에 기반"
+
+msgid "Round Top Left Corner"
+msgstr "왼쪽 위 구석을 둥글게 함"
+
+msgid "Round Top Right Corner"
+msgstr "오른쪽 위 구석을 둥글게 함"
+
+msgid "Round Bottom Left Corner"
+msgstr "왼쪽 아래 구석을 둥글게함"
+
+msgid "Round Bottom Right Corner"
+msgstr "오른쪽 아래 구석을 둥글게 함"
+
+msgid "Rounding Radius"
+msgstr "둥근 반경"
+
+msgid "Colors"
+msgstr "색상"
+
+msgid "Outer Frame Blend"
+msgstr "프레임 외부 혼합"
+
+msgid "Inner Frame Blend"
+msgstr "프레임 내부 혼합"
+
+msgid "Outer Titlebar Blend"
+msgstr "제목 표시줄 외부 혼합"
+
+msgid "Inner Titlebar Blend"
+msgstr "제목 표시줄 내부 혼합"
+
+msgid "Titlebar Separator"
+msgstr "제목 표시줄 구분자"
+
+msgid "Frame Outline"
+msgstr "프레임 외곽선"
+
+msgid "Frame Highlight"
+msgstr "프레임 강조"
+
+msgid "Frame Shadow"
+msgstr "프레임 그림자"
+
+msgid "Contents Outline"
+msgstr "내용 외곽선"
+
+msgid "Contents Highlight"
+msgstr "내용 부분 강조"
+
+msgid "Contents Shadow"
+msgstr "내용 부분 그림자"
+
+msgid "Frame"
+msgstr "프레임"
+
+msgid "Based on original legacy"
+msgstr "그놈 기본 창 테두리에 기반"
+
+msgid "Title Bar"
+msgstr "제목 표시줄"
+
+msgid "Designed to be vista-ish in nature"
+msgstr "기본적으로 비스타 테마처럼 디자인됨"
+
+msgid "Base"
+msgstr "기본"
+
+msgid "Glow"
+msgstr "발광 효과"
+
+msgid "Sides"
+msgstr "측면"
+
+msgid "Everything done with customizable pixmaps!"
+msgstr "모든 것이 변경 가능한 픽스맵으로 이루어짐!"
+
+msgid "Top Rounding Radius"
+msgstr "둥근 반경(상단)"
+
+msgid "Bottom Rounding Radius"
+msgstr "둥근 반경(하단)"
+
+msgid "_Clear"
+msgstr "지우기(_C)"
+
+#. style: use tiled or scaled pixmaps
+msgid "Scaled"
+msgstr "스케일"
+
+msgid "Not adjustable"
+msgstr "조절할 수 없음"
+
+msgid "Same as Active"
+msgstr "활성화된 창과 같음"
+
+msgid "Pixmap"
+msgstr "픽스맵"
+
+msgid "File"
+msgstr "파일"
+
+msgid "Preview"
+msgstr "미리보기"
+
+msgid "Clear"
+msgstr "비우기"
+
+msgid "Tiled/Scaled"
+msgstr "타일/스케일"
+
+msgid "Width Override"
+msgstr "넓이 초과"
+
+msgid "Height Override"
+msgstr "높이 초과"
+
+msgid "Glassy effects for your windows"
+msgstr "유리창 효과"
+
+msgid "Glow Height"
+msgstr "발광 높이"
+
+msgid "Frame Base Color"
+msgstr "프레임 기본 색상"
+
+msgid "Upper Titlebar Glow"
+msgstr "제목 표시줄 위쪽 발광 효과"
+
+msgid "Upper Glass Glow"
+msgstr "위쪽 유리 발광 효과"
+
+msgid "Lower Glass Glow"
+msgstr "아래쪽 유리 발광 효과"
+
+msgid "Middle Glass Glow"
+msgstr "가운데 유리 발광 효과"
+
+msgid "Outer Glass Glow"
+msgstr "바깥쪽 유리 발광 효과"
+
+msgid "Multiple gradients with somewhat glassy features too"
+msgstr "약간의 유리창 효과와 다수의 그래디언트"
+
+msgid "Left Blend"
+msgstr "왼쪽 혼합"
+
+msgid "Middle Blend"
+msgstr "가운데 혼합"
+
+msgid "Right Blend"
+msgstr "오른쪽 혼합"
+
+msgid "Contrast"
+msgstr "대비"
+
+msgid "(Color)"
+msgstr "(색상)"
+
+msgid "(Alpha)"
+msgstr "(투명도)"
+
+msgid "Notch"
+msgstr "홈"
+
+msgid "Position"
+msgstr "위치"
+
+msgid "Curve"
+msgstr "커브"
+
+msgid "Offset"
+msgstr "여백"
+
+msgid "Use Glow"
+msgstr "발광 효과"
+
+msgid "Title Glow"
+msgstr "창 제목 발광"
+
+msgid "Radius"
+msgstr "반경"
+
+msgid "Evolved from the legacy engine"
+msgstr "레거시 엔진에서 진화됨"
+
+msgid "Border Gap"
+msgstr "테두리 간격"
+
+msgid "Show Border when maximised?"
+msgstr "최대화되었을 때 테두리를 보입니까?"
+
+msgid "Show when minimised?"
+msgstr "최소화되었을 때 보입니까?"
+
+msgid "Minimised Border Size"
+msgstr "최소화된 테두리 크기"
+
+msgid "Enable Left Bar Dip?"
+msgstr "왼쪽 막대 함몰을 사용합니까?"
+
+msgid "Left Bar Radius"
+msgstr "왼쪽 막대 반경"
+
+msgid "Enable Lower Bulge? (Useless at the moment, but will be used soon)"
+msgstr ""
+"아래쪽 부풀리기를 사용합니까? (현재는 사용하지 못하지만, 곧 사용할 수 있게됨)"
+
+msgid "Top Corner Offset (%)"
+msgstr "위 구석 여백 (%)"
+
+msgid "Enable Title Bar Dip?"
+msgstr "제목 표시줄 함몰을 사용합니까?"
+
+msgid "Enable Button Part?"
+msgstr "버튼 부분을 사용합니까?"
+
+msgid "Title Part Width"
+msgstr "창 제목 부분 넓이"
+
+msgid "Button Part Width)"
+msgstr "버튼 부분 넓이"
+
+msgid "Dip Corners Radius)"
+msgstr "함몰 구석 반경"
+
+msgid "Round Inside Corners As well?"
+msgstr "내부 구석들도 같이 둥글게 합니까?"
+
+msgid "Enable Different Maximised Colors?"
+msgstr "다른 최대화된 색상을 사용합니까?"
+
+msgid "Turn Off repeating gradients when maximised?"
+msgstr "최대화되었을 때 색 변화를 반복하는 것을 끕니까?"
+
+msgid "Round Top Left Corner?"
+msgstr "왼쪽 위 구석을 둥글게 합니까?"
+
+msgid "Frame Rounding Radius"
+msgstr "프레임 둥근 반경"
+
+msgid "Titlebar Rounding Radius"
+msgstr "제목 표시줄 둥근 반경"
+
+msgid "Repeat Gradient?"
+msgstr "그레디언트를 반복합니까?"
+
+msgid "Vertical Repeat?"
+msgstr "세로로 반복합니까?"
+
+msgid "Diagonal Repeat?"
+msgstr "대각선으로 반복합니까?"
+
+msgid "Repeat Frequency"
+msgstr "반복 횟수"
+
+#. ========================
+msgid "Enable Title Part Pixmap?"
+msgstr "창 제목 부분 픽스맵을 사용합니까?"
+
+msgid "Repeat Title Part Pixmap?"
+msgstr "창 제목 부분 픽스맵을 반복합니까?"
+
+msgid "Title Bar Part Pixmap"
+msgstr "제목 표시줄 부분 픽스맵"
+
+msgid "Choose Titlebar Part Pixmap"
+msgstr "제목 표시줄 부분 픽스맵 선택"
+
+#. ========================
+msgid "Enable Button Part Pixmap?"
+msgstr "버튼 부분 픽스맵을 사용합니까?"
+
+msgid "Repeat Button Part Pixmap?"
+msgstr "버튼 부분 픽스맵을 반복합니까?"
+
+msgid "Button Part Pixmap"
+msgstr "버튼 부분 픽스맵"
+
+msgid "Choose Button Part Pixmap"
+msgstr "버튼 부분 픽스맵 선택"
+
+#. ========================
+msgid "Enable Titlebar Pixmap?"
+msgstr "제목 표시줄 픽스맵을 사용합니까?"
+
+msgid "Repeat Titlebar Pixmap?"
+msgstr "제목 표시줄 픽스맵을 반복합니까?"
+
+msgid "Titlebar Pixmap"
+msgstr "제목 표시줄 픽스맵"
+
+msgid "Choose Titlebar Pixmap"
+msgstr "제목 표시줄 픽스맵 선택"
+
+msgid "Active/Inactive"
+msgstr "활성화/비활성화"
+
+msgid "Maximised"
+msgstr "최대화됨"
+
+msgid "Corners"
+msgstr "구석"
+
+msgid "Border Layout"
+msgstr "테두리 레이아웃"
+
+msgid "Left Bar"
+msgstr "왼쪽 막대"
+
+msgid "Pixmaps"
+msgstr "픽스맵"
+
+msgid ""
+"Select\n"
+"Engine"
+msgstr ""
+"엔진\n"
+"선택"
 
 msgid "Close Window"
 msgstr "창 닫기"
@@ -53,6 +374,10 @@ msgstr "끈적이 창"
 msgid "UnStick Window"
 msgstr "끈적이 창 해제"
 
+#, fuzzy
+msgid "Super Maximize Window"
+msgstr "창 최대화"
+
 #, c-format
 msgid "The window \"%s\" is not responding."
 msgstr "창 \"%s\"(은)는 응답이 없습니다."
@@ -61,6 +386,9 @@ msgid ""
 "Forcing this application to quit will cause you to lose any unsaved changes."
 msgstr ""
 "이 프로그램을 강제로 끝내면, 저장되지 않은 변경 내용들은 잃어 버리게 됩니다."
+
+msgid "_Cancel"
+msgstr ""
 
 msgid "_Force Quit"
 msgstr "강제로 끝내기(_F)"
@@ -184,18 +512,6 @@ msgstr "버튼 픽스맵"
 msgid "Button"
 msgstr "버튼"
 
-msgid "File"
-msgstr "파일"
-
-msgid "Preview"
-msgstr "미리보기"
-
-msgid "Clear"
-msgstr "비우기"
-
-msgid "Colors"
-msgstr "색상"
-
 msgid "Text Fill"
 msgstr "글자 채우기"
 
@@ -213,9 +529,6 @@ msgstr "색상"
 
 msgid "Opacity"
 msgstr "투명도"
-
-msgid "Radius"
-msgstr "반경"
 
 msgid "X Offset"
 msgstr "가로 여백"
@@ -238,6 +551,7 @@ msgstr "버튼 가로 여백"
 msgid "Title-bar Object Layout"
 msgstr "제목 표시줄 객체 배치"
 
+#, fuzzy
 msgid ""
 "Use colons to separate left, center, and right.\n"
 "Anything after a third colon is ignored.\n"
@@ -245,6 +559,7 @@ msgid ""
 "I=Icon, T=Title, H=Help, M=Menu\n"
 "S=Shade, U/A=On Top(Up/Above)\n"
 "Y=Sticky, (#)=# pixels space, ex: (5)\n"
+"F=SuperMaximize\n"
 msgstr ""
 "왼쪽, 가운데, 오른쪽을 구분하기 위해 콜론 사용.\n"
 "어느 것이든 세번째 콜론 다음은 무시됨.\n"
@@ -255,6 +570,9 @@ msgstr ""
 
 msgid "Export Theme..."
 msgstr "테마 내보내기..."
+
+msgid "_Save"
+msgstr "저장(_S)"
 
 msgid "Name:"
 msgstr "이름:"
@@ -333,9 +651,6 @@ msgstr "활성화된 창"
 msgid "Inactive Window"
 msgstr "활성화되지 않은 창"
 
-msgid "Title Bar"
-msgstr "제목 표시줄"
-
 msgid "Screenshot"
 msgstr "스크린샷"
 
@@ -358,6 +673,9 @@ msgstr "버튼에 대한 풍선 도움말 보이기"
 msgid "Use Decoration Cropping"
 msgstr "장식 잘라내기 사용"
 
+msgid "No Shade on Titlebar Scroll"
+msgstr ""
+
 msgid "Use Button Fade"
 msgstr "버튼 페이드 효과"
 
@@ -377,6 +695,10 @@ msgid "Button Pulse Min Opacity %"
 msgstr "버튼 깜빡이기 최소 투명도 %"
 
 msgid "Titlebar Double-Click Action"
+msgstr "제목 표시줄 더블 클릭 동작"
+
+#, fuzzy
+msgid "Titlebar Middle-Click Action"
 msgstr "제목 표시줄 더블 클릭 동작"
 
 msgid "Button Hover Cursor"
@@ -421,52 +743,21 @@ msgstr "편집"
 msgid "Import Theme..."
 msgstr "테마 들여오기..."
 
+msgid "_Open"
+msgstr "열기(_O)"
+
 msgid "Search:"
 msgstr "검색:"
 
-msgid "Fetching Themes"
-msgstr "테마 가져오기"
+msgid "_Refresh"
+msgstr "새로 고침(_R)"
 
-msgid ""
-"Fetching themes... \n"
-"This may take time depending on \n"
-"internet connection speed."
-msgstr ""
-"테마 가져오는 중... \n"
-"인터넷 연결 속도에 따라 \n"
-"시간이 걸릴 수 있습니다."
+msgid "_Delete"
+msgstr "삭제(_D)"
 
-msgid ""
-"Here are the repositories that you can fetch Emerald Themes from. \n"
-"Fetching themes would fetch and import themes from SVN repositories \n"
-"You need Subversion package installed to use this feature."
-msgstr ""
-"여기에 에머랄드 테마를 가져올 수 있는 저장소가 있습니다. \n"
-"테마 가져오기는 SVN 저장소에서 테마를 가져와서 들여오기를 합니다. \n"
-"이 기능을 사용하려면 Subversion 꾸러미를 설치하여야 합니다."
-
-msgid ""
-"This repository contains GPL'd themes that can be used under \n"
-"the terms of GNU GPL licence v2.0 or later \n"
-msgstr ""
-"이 저장소는 GNU GPL 사용허가 v2.0 또는 그 이상에서 \n"
-"사용할 수 있는 GPL 테마를 가지고 있습니다. \n"
-
-msgid ""
-"This repository contains non-GPL'd themes. They might infringe \n"
-"copyrights and patent laws in some countries."
-msgstr ""
-"이 저장소는 GPL이 아닌 테마를 가지고 있습니다. \n"
-"나라에 따라 저작권과 특허법에 저촉될 수 있습니다."
-
-msgid ""
-"To activate Non-GPL repository please run the following in shell and accept "
-"the server certificate permanently: \n"
-"svn ls https://svn.generation.no/emerald-themes."
-msgstr ""
-"GPL이 아닌 저장소를 사용하려면 터미널에서 다음 명령을 사용하여 그 저장소 서버"
-"의 인증서를 받아들입니다. \n"
-"svn·ls·https://svn.generation.no/emerald-themes"
+#, fuzzy
+msgid "_Import..."
+msgstr "내보내기..."
 
 msgid "Themes"
 msgstr "테마"
@@ -480,305 +771,52 @@ msgstr "테마 설정"
 msgid "Emerald Settings"
 msgstr "에머랄드 설정"
 
-msgid ""
-"Select\n"
-"Engine"
-msgstr ""
-"엔진\n"
-"선택"
-
-msgid "Based on original gtk-window-decorator"
-msgstr "그놈 기본 창 테두리에 기반"
-
-msgid "Round Top Left Corner"
-msgstr "왼쪽 위 구석을 둥글게 함"
-
-msgid "Round Top Right Corner"
-msgstr "오른쪽 위 구석을 둥글게 함"
-
-msgid "Round Bottom Left Corner"
-msgstr "왼쪽 아래 구석을 둥글게함"
-
-msgid "Round Bottom Right Corner"
-msgstr "오른쪽 아래 구석을 둥글게 함"
-
-msgid "Rounding Radius"
-msgstr "둥근 반경"
-
-msgid "Outer Frame Blend"
-msgstr "프레임 외부 혼합"
-
-msgid "Inner Frame Blend"
-msgstr "프레임 내부 혼합"
-
-msgid "Outer Titlebar Blend"
-msgstr "제목 표시줄 외부 혼합"
-
-msgid "Inner Titlebar Blend"
-msgstr "제목 표시줄 내부 혼합"
-
-msgid "Titlebar Separator"
-msgstr "제목 표시줄 구분자"
-
-msgid "Frame Outline"
-msgstr "프레임 외곽선"
-
-msgid "Frame Highlight"
-msgstr "프레임 강조"
-
-msgid "Frame Shadow"
-msgstr "프레임 그림자"
-
-msgid "Contents Outline"
-msgstr "내용 외곽선"
-
-msgid "Contents Highlight"
-msgstr "내용 부분 강조"
-
-msgid "Contents Shadow"
-msgstr "내용 부분 그림자"
-
-msgid "Frame"
-msgstr "프레임"
-
-msgid "Based on original legacy"
-msgstr "그놈 기본 창 테두리에 기반"
-
-msgid "Designed to be vista-ish in nature"
-msgstr "기본적으로 비스타 테마처럼 디자인됨"
-
-msgid "Base"
-msgstr "기본"
-
-msgid "Glow"
-msgstr "발광 효과"
-
-msgid "Sides"
-msgstr "측면"
-
-msgid "Everything done with customizable pixmaps!"
-msgstr "모든 것이 변경 가능한 픽스맵으로 이루어짐!"
-
-msgid "Top Rounding Radius"
-msgstr "둥근 반경(상단)"
-
-msgid "Bottom Rounding Radius"
-msgstr "둥근 반경(하단)"
-
-#. Style : Use Tiled or Scaled pixmaps
-msgid "Scaled"
-msgstr "스케일"
-
-msgid "Not adjustable"
-msgstr "조절할 수 없음"
-
-msgid "Same as Active"
-msgstr "활성화된 창과 같음"
-
-msgid "Pixmap"
-msgstr "픽스맵"
-
-msgid "Tiled/Scaled"
-msgstr "타일/스케일"
-
-msgid "Width Override"
-msgstr "넓이 초과"
-
-msgid "Height Override"
-msgstr "높이 초과"
-
-msgid "Glassy effects for your windows"
-msgstr "유리창 효과"
-
-msgid "Glow Height"
-msgstr "발광 높이"
-
-msgid "Frame Base Color"
-msgstr "프레임 기본 색상"
-
-msgid "Upper Titlebar Glow"
-msgstr "제목 표시줄 위쪽 발광 효과"
-
-msgid "Upper Glass Glow"
-msgstr "위쪽 유리 발광 효과"
-
-msgid "Lower Glass Glow"
-msgstr "아래쪽 유리 발광 효과"
-
-msgid "Middle Glass Glow"
-msgstr "가운데 유리 발광 효과"
-
-msgid "Outer Glass Glow"
-msgstr "바깥쪽 유리 발광 효과"
-
-msgid "Multiple gradients with somewhat glassy features too"
-msgstr "약간의 유리창 효과와 다수의 그래디언트"
-
-msgid "Left Blend"
-msgstr "왼쪽 혼합"
-
-msgid "Middle Blend"
-msgstr "가운데 혼합"
-
-msgid "Right Blend"
-msgstr "오른쪽 혼합"
-
-msgid "Contrast"
-msgstr "대비"
-
-msgid "(Color)"
-msgstr "(색상)"
-
-msgid "(Alpha)"
-msgstr "(투명도)"
-
-msgid "Notch"
-msgstr "홈"
-
-msgid "Position"
-msgstr "위치"
-
-msgid "Curve"
-msgstr "커브"
-
-msgid "Offset"
-msgstr "여백"
-
-msgid "Use Glow"
-msgstr "발광 효과"
-
-msgid "Title Glow"
-msgstr "창 제목 발광"
-
-msgid "Evolved from the legacy engine"
-msgstr "레거시 엔진에서 진화됨"
-
-msgid "Border Gap"
-msgstr "테두리 간격"
-
-msgid "Show Border when maximised?"
-msgstr "최대화되었을 때 테두리를 보입니까?"
-
-msgid "Show when minimised?"
-msgstr "최소화되었을 때 보입니까?"
-
-msgid "Minimised Border Size"
-msgstr "최소화된 테두리 크기"
-
-msgid "Enable Left Bar Dip?"
-msgstr "왼쪽 막대 함몰을 사용합니까?"
-
-msgid "Left Bar Radius"
-msgstr "왼쪽 막대 반경"
-
-msgid "Enable Lower Bulge? (Useless at the moment, but will be used soon)"
-msgstr ""
-"아래쪽 부풀리기를 사용합니까? (현재는 사용하지 못하지만, 곧 사용할 수 있게됨)"
-
-msgid "Top Corner Offset (%)"
-msgstr "위 구석 여백 (%)"
-
-msgid "Enable Title Bar Dip?"
-msgstr "제목 표시줄 함몰을 사용합니까?"
-
-msgid "Enable Button Part?"
-msgstr "버튼 부분을 사용합니까?"
-
-msgid "Title Part Width"
-msgstr "창 제목 부분 넓이"
-
-msgid "Button Part Width)"
-msgstr "버튼 부분 넓이"
-
-msgid "Dip Corners Radius)"
-msgstr "함몰 구석 반경"
-
-msgid "Round Inside Corners As well?"
-msgstr "내부 구석들도 같이 둥글게 합니까?"
-
-msgid "Enable Different Maximised Colors?"
-msgstr "다른 최대화된 색상을 사용합니까?"
-
-msgid "Turn Off repeating gradients when maximised?"
-msgstr "최대화되었을 때 색 변화를 반복하는 것을 끕니까?"
-
-msgid "Round Top Left Corner?"
-msgstr "왼쪽 위 구석을 둥글게 합니까?"
-
-msgid "Frame Rounding Radius"
-msgstr "프레임 둥근 반경"
-
-msgid "Titlebar Rounding Radius"
-msgstr "제목 표시줄 둥근 반경"
-
-msgid "Repeat Gradient?"
-msgstr "그레디언트를 반복합니까?"
-
-msgid "Vertical Repeat?"
-msgstr "세로로 반복합니까?"
-
-msgid "Diagonal Repeat?"
-msgstr "대각선으로 반복합니까?"
-
-msgid "Repeat Frequency"
-msgstr "반복 횟수"
-
-#. /////////////////////
-msgid "Enable Title Part Pixmap?"
-msgstr "창 제목 부분 픽스맵을 사용합니까?"
-
-msgid "Repeat Title Part Pixmap?"
-msgstr "창 제목 부분 픽스맵을 반복합니까?"
-
-msgid "Title Bar Part Pixmap"
-msgstr "제목 표시줄 부분 픽스맵"
-
-msgid "Choose Titlebar Part Pixmap"
-msgstr "제목 표시줄 부분 픽스맵 선택"
-
-#. /////////////////////////
-msgid "Enable Button Part Pixmap?"
-msgstr "버튼 부분 픽스맵을 사용합니까?"
-
-msgid "Repeat Button Part Pixmap?"
-msgstr "버튼 부분 픽스맵을 반복합니까?"
-
-msgid "Button Part Pixmap"
-msgstr "버튼 부분 픽스맵"
-
-msgid "Choose Button Part Pixmap"
-msgstr "버튼 부분 픽스맵 선택"
-
-#. /////////////////////////
-msgid "Enable Titlebar Pixmap?"
-msgstr "제목 표시줄 픽스맵을 사용합니까?"
-
-msgid "Repeat Titlebar Pixmap?"
-msgstr "제목 표시줄 픽스맵을 반복합니까?"
-
-msgid "Titlebar Pixmap"
-msgstr "제목 표시줄 픽스맵"
-
-msgid "Choose Titlebar Pixmap"
-msgstr "제목 표시줄 픽스맵 선택"
-
-msgid "Active/Inactive"
-msgstr "활성화/비활성화"
-
-msgid "Maximised"
-msgstr "최대화됨"
-
-msgid "Corners"
-msgstr "구석"
-
-msgid "Border Layout"
-msgstr "테두리 레이아웃"
-
-msgid "Left Bar"
-msgstr "왼쪽 막대"
-
-msgid "Pixmaps"
-msgstr "픽스맵"
+msgid "_Quit"
+msgstr "끝내기(_Q)"
+
+#~ msgid "Fetching Themes"
+#~ msgstr "테마 가져오기"
+
+#~ msgid ""
+#~ "Fetching themes... \n"
+#~ "This may take time depending on \n"
+#~ "internet connection speed."
+#~ msgstr ""
+#~ "테마 가져오는 중... \n"
+#~ "인터넷 연결 속도에 따라 \n"
+#~ "시간이 걸릴 수 있습니다."
+
+#~ msgid ""
+#~ "Here are the repositories that you can fetch Emerald Themes from. \n"
+#~ "Fetching themes would fetch and import themes from SVN repositories \n"
+#~ "You need Subversion package installed to use this feature."
+#~ msgstr ""
+#~ "여기에 에머랄드 테마를 가져올 수 있는 저장소가 있습니다. \n"
+#~ "테마 가져오기는 SVN 저장소에서 테마를 가져와서 들여오기를 합니다. \n"
+#~ "이 기능을 사용하려면 Subversion 꾸러미를 설치하여야 합니다."
+
+#~ msgid ""
+#~ "This repository contains GPL'd themes that can be used under \n"
+#~ "the terms of GNU GPL licence v2.0 or later \n"
+#~ msgstr ""
+#~ "이 저장소는 GNU GPL 사용허가 v2.0 또는 그 이상에서 \n"
+#~ "사용할 수 있는 GPL 테마를 가지고 있습니다. \n"
+
+#~ msgid ""
+#~ "This repository contains non-GPL'd themes. They might infringe \n"
+#~ "copyrights and patent laws in some countries."
+#~ msgstr ""
+#~ "이 저장소는 GPL이 아닌 테마를 가지고 있습니다. \n"
+#~ "나라에 따라 저작권과 특허법에 저촉될 수 있습니다."
+
+#~ msgid ""
+#~ "To activate Non-GPL repository please run the following in shell and "
+#~ "accept the server certificate permanently: \n"
+#~ "svn ls https://svn.generation.no/emerald-themes."
+#~ msgstr ""
+#~ "GPL이 아닌 저장소를 사용하려면 터미널에서 다음 명령을 사용하여 그 저장소 "
+#~ "서버의 인증서를 받아들입니다. \n"
+#~ "svn·ls·https://svn.generation.no/emerald-themes"
 
 #~ msgid "Repositories"
 #~ msgstr "저장소"

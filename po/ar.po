@@ -1,20 +1,340 @@
-# emerald ar translation.
-# Copyright (C) 2007 compiz-fusion.org
+# Arabic translation for Emerald
+# Copyright (C) 2007 launchpad.net/compiz
 # This file is distributed under the same license as the emerald package.
 # Banxoo <banxoo+ar@gmail.com>, 2007.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: emerald 0.6\n"
-"Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
-"POT-Creation-Date: 2009-03-24 08:14+0100\n"
+"Project-Id-Version: emerald\n"
+"Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/emerald/issues\n"
+"POT-Creation-Date: 2017-05-04 19:28+0300\n"
 "PO-Revision-Date: 2007-10-07 00:25+0200\n"
 "Last-Translator: Banxoo <banxoo+ar@gmail.com>\n"
-"Language-Team: Compiz Fusion Translators <i18n@lists.compiz-fusion.org>\n"
+"Language-Team: Arabic <ar@li.org>\n"
+"Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+msgid "Based on original gtk-window-decorator"
+msgstr "مبنى على مزين نوافذ جنوم"
+
+msgid "Round Top Left Corner"
+msgstr "تدوير الزاوية العليا على اليسار"
+
+msgid "Round Top Right Corner"
+msgstr "تدوير الزاوية العليا على اليمين"
+
+msgid "Round Bottom Left Corner"
+msgstr "تدوير الزاوية السفلى على اليسار"
+
+msgid "Round Bottom Right Corner"
+msgstr "تدوير الزاوية السفلى على اليمين"
+
+msgid "Rounding Radius"
+msgstr "شعاع التدوير"
+
+msgid "Colors"
+msgstr "ألوان"
+
+msgid "Outer Frame Blend"
+msgstr "مزج الإطار الخارجي"
+
+msgid "Inner Frame Blend"
+msgstr "مزج الإطار الداخلي"
+
+msgid "Outer Titlebar Blend"
+msgstr "مزج خارجي لعارضة العنوان"
+
+msgid "Inner Titlebar Blend"
+msgstr "مزج داخلي لعارضة العنوان"
+
+msgid "Titlebar Separator"
+msgstr "فاصل عارضة العنوان"
+
+msgid "Frame Outline"
+msgstr "مخطط الإطار"
+
+msgid "Frame Highlight"
+msgstr "إبراز الإطار"
+
+msgid "Frame Shadow"
+msgstr "ظل الإطار"
+
+msgid "Contents Outline"
+msgstr "مخطط المحتوى"
+
+msgid "Contents Highlight"
+msgstr "إبراز المحتوى"
+
+msgid "Contents Shadow"
+msgstr "ظل المحتوى"
+
+msgid "Frame"
+msgstr "إطار"
+
+msgid "Based on original legacy"
+msgstr "مبنى على التراث الأصلى"
+
+msgid "Title Bar"
+msgstr "عارضة العنوان"
+
+msgid "Designed to be vista-ish in nature"
+msgstr "مصمم طبيعيا على نمط فيستا"
+
+msgid "Base"
+msgstr "قاعدة"
+
+msgid "Glow"
+msgstr "وهج"
+
+msgid "Sides"
+msgstr "الأطراف"
+
+msgid "Everything done with customizable pixmaps!"
+msgstr "تنفيذ كل شئ بواسطة الخراىٔط القابلة للتعديل"
+
+msgid "Top Rounding Radius"
+msgstr "شعاع التدوير الاعلى"
+
+msgid "Bottom Rounding Radius"
+msgstr "شعاع التدوير الادنى "
+
+msgid "_Clear"
+msgstr "ا_مسح"
+
+#. style: use tiled or scaled pixmaps
+msgid "Scaled"
+msgstr "مُججّم"
+
+msgid "Not adjustable"
+msgstr "لا يمكن تعديلة"
+
+msgid "Same as Active"
+msgstr "نفس الشئ ك مُشغّل"
+
+msgid "Pixmap"
+msgstr "خريطة"
+
+msgid "File"
+msgstr "ملف"
+
+msgid "Preview"
+msgstr "إستعراض"
+
+msgid "Clear"
+msgstr "إحلاﺀ"
+
+msgid "Tiled/Scaled"
+msgstr "تبليط/تحجيم"
+
+msgid "Width Override"
+msgstr "تجاوزالعرض"
+
+msgid "Height Override"
+msgstr "تجاوز الإرتفاع"
+
+msgid "Glassy effects for your windows"
+msgstr "مؤثرات زجاجية للنوافذ"
+
+msgid "Glow Height"
+msgstr "حجم الوهج"
+
+msgid "Frame Base Color"
+msgstr "لون قاعدة الإطار"
+
+msgid "Upper Titlebar Glow"
+msgstr "وهج أعلى عارضة العنوان"
+
+msgid "Upper Glass Glow"
+msgstr "وهج أعلى الزجاج"
+
+msgid "Lower Glass Glow"
+msgstr "وهج أسفل الزجاج"
+
+msgid "Middle Glass Glow"
+msgstr "وهج وسط الزجاج"
+
+msgid "Outer Glass Glow"
+msgstr "وهج خارج الزجاج"
+
+msgid "Multiple gradients with somewhat glassy features too"
+msgstr "تدرج متعدد مع ما يشبه خصاىٔص زجاجية "
+
+msgid "Left Blend"
+msgstr "مزج على اليسار"
+
+msgid "Middle Blend"
+msgstr "مزج في الوسط"
+
+msgid "Right Blend"
+msgstr "مزج على اليمين"
+
+msgid "Contrast"
+msgstr "تباين"
+
+msgid "(Color)"
+msgstr "(لون)"
+
+msgid "(Alpha)"
+msgstr "(ألفا)"
+
+msgid "Notch"
+msgstr "الشق"
+
+msgid "Position"
+msgstr "المكان"
+
+msgid "Curve"
+msgstr "منحنى"
+
+msgid "Offset"
+msgstr "التوازن"
+
+msgid "Use Glow"
+msgstr "استخدم الوهج"
+
+msgid "Title Glow"
+msgstr "وهج العنوان"
+
+msgid "Radius"
+msgstr "الشعاع"
+
+msgid "Evolved from the legacy engine"
+msgstr "مستحدثة من المحرك التراثي"
+
+msgid "Border Gap"
+msgstr "هوة الحدود"
+
+msgid "Show Border when maximised?"
+msgstr "أظهر الحدود عند التكبير القصوي"
+
+msgid "Show when minimised?"
+msgstr "أظهر عند التصغير؟"
+
+msgid "Minimised Border Size"
+msgstr "حجم الحدود الدنيا"
+
+msgid "Enable Left Bar Dip?"
+msgstr "شغّل خفض العارضة اليسرى؟"
+
+msgid "Left Bar Radius"
+msgstr "شعاع العارضة اليسرى"
+
+msgid "Enable Lower Bulge? (Useless at the moment, but will be used soon)"
+msgstr "شغّل النتوﺀ السفلي؟ (بدون فاىٔدة حاليا، لكن سيستخدم قريبا)"
+
+msgid "Top Corner Offset (%)"
+msgstr "توازن الزاوية العليا (%)"
+
+msgid "Enable Title Bar Dip?"
+msgstr "شغّل غمس عارضة العنوان؟"
+
+msgid "Enable Button Part?"
+msgstr "شغّل جزﺀ الزر؟"
+
+msgid "Title Part Width"
+msgstr "عرض العنوان"
+
+msgid "Button Part Width)"
+msgstr "عرض الزر"
+
+msgid "Dip Corners Radius)"
+msgstr "إخفض شعاع الزوايا"
+
+msgid "Round Inside Corners As well?"
+msgstr "دوّر داخل الزوايا أيضاً"
+
+msgid "Enable Different Maximised Colors?"
+msgstr "مكّن ألوان قصوى مختلفة"
+
+msgid "Turn Off repeating gradients when maximised?"
+msgstr "عطّل تكرار تدرج الألوان عند التكبير"
+
+msgid "Round Top Left Corner?"
+msgstr "تدوير الزاوية العليا اليسرى"
+
+msgid "Frame Rounding Radius"
+msgstr "شعاع تدوير الإطار"
+
+msgid "Titlebar Rounding Radius"
+msgstr "شعاع تدوير عارضة العنوان"
+
+msgid "Repeat Gradient?"
+msgstr "تكرار التدرج؟"
+
+msgid "Vertical Repeat?"
+msgstr "تدرج عامودي؟"
+
+msgid "Diagonal Repeat?"
+msgstr "تكرار قطري؟"
+
+msgid "Repeat Frequency"
+msgstr "تردد التركرار"
+
+#. ========================
+msgid "Enable Title Part Pixmap?"
+msgstr "شغّل خريطة جزﺀ عارضة العنوان"
+
+msgid "Repeat Title Part Pixmap?"
+msgstr "تكرار خريطة جزﺀ عارضة العنوان"
+
+msgid "Title Bar Part Pixmap"
+msgstr "خريطة جزﺀ عارضة العنوان"
+
+msgid "Choose Titlebar Part Pixmap"
+msgstr "اختيار جزﺀ خريطة عارضة العنوان"
+
+#. ========================
+msgid "Enable Button Part Pixmap?"
+msgstr "شغل خريطة جزﺀ الرر"
+
+msgid "Repeat Button Part Pixmap?"
+msgstr "تكرار خريطة جزﺀ الرر"
+
+msgid "Button Part Pixmap"
+msgstr "جزﺀ خريطة الرر"
+
+msgid "Choose Button Part Pixmap"
+msgstr "إختر جزﺀ خريطة الرر"
+
+#. ========================
+msgid "Enable Titlebar Pixmap?"
+msgstr "مكّن خريطة عارضة العنوان"
+
+msgid "Repeat Titlebar Pixmap?"
+msgstr "تكرار خريطة عارضة العنوان"
+
+msgid "Titlebar Pixmap"
+msgstr "خريطة عارضة العنوان"
+
+msgid "Choose Titlebar Pixmap"
+msgstr "إختر خريطة عارضة العنوان"
+
+msgid "Active/Inactive"
+msgstr "نشط / خامل"
+
+msgid "Maximised"
+msgstr "الحجم الأقصى"
+
+msgid "Corners"
+msgstr "الزوايا"
+
+msgid "Border Layout"
+msgstr "مخطط الحدود"
+
+msgid "Left Bar"
+msgstr "العارضة اليسرى"
+
+msgid "Pixmaps"
+msgstr "خريطة"
+
+msgid ""
+"Select\n"
+"Engine"
+msgstr ""
+"إختيار\n"
+"المحرّك"
 
 msgid "Close Window"
 msgstr "إغلاق النافذة"
@@ -52,6 +372,10 @@ msgstr "لصق النافذة"
 msgid "UnStick Window"
 msgstr "إزالة تلصيق النافذة"
 
+#, fuzzy
+msgid "Super Maximize Window"
+msgstr "تكبير النافذة"
+
 #, c-format
 msgid "The window \"%s\" is not responding."
 msgstr "إن النافذة \"%s\" لا تتجاوب"
@@ -59,6 +383,9 @@ msgstr "إن النافذة \"%s\" لا تتجاوب"
 msgid ""
 "Forcing this application to quit will cause you to lose any unsaved changes."
 msgstr "إغلاق هذا البرنامج بالقوة يسبب فقدان التغييرات غير المحفظة"
+
+msgid "_Cancel"
+msgstr "أ_لغِ"
 
 msgid "_Force Quit"
 msgstr "إغلاق بالقوة"
@@ -182,18 +509,6 @@ msgstr "خريطة الزر"
 msgid "Button"
 msgstr "زر"
 
-msgid "File"
-msgstr "ملف"
-
-msgid "Preview"
-msgstr "إستعراض"
-
-msgid "Clear"
-msgstr "إحلاﺀ"
-
-msgid "Colors"
-msgstr "ألوان"
-
 msgid "Text Fill"
 msgstr "لون النص"
 
@@ -211,9 +526,6 @@ msgstr "لون"
 
 msgid "Opacity"
 msgstr "شفافية"
-
-msgid "Radius"
-msgstr "الشعاع"
 
 msgid "X Offset"
 msgstr "التوازن الأفقي"
@@ -236,6 +548,7 @@ msgstr "التوازن الأفقي للزر"
 msgid "Title-bar Object Layout"
 msgstr "محطط الأشياﺀ في عارضة العنوان"
 
+#, fuzzy
 msgid ""
 "Use colons to separate left, center, and right.\n"
 "Anything after a third colon is ignored.\n"
@@ -243,6 +556,7 @@ msgid ""
 "I=Icon, T=Title, H=Help, M=Menu\n"
 "S=Shade, U/A=On Top(Up/Above)\n"
 "Y=Sticky, (#)=# pixels space, ex: (5)\n"
+"F=SuperMaximize\n"
 msgstr ""
 "إستعمل النقطتين (:) لفصل اليسار و الوسط و اليمين .\n"
 "أي شئ بعد ثالث نقطتين سيتم تجاهله.\n"
@@ -253,6 +567,9 @@ msgstr ""
 
 msgid "Export Theme..."
 msgstr "تصدير الكساﺀ..."
+
+msgid "_Save"
+msgstr "ا_حفظ"
 
 msgid "Name:"
 msgstr "الإسم:"
@@ -331,9 +648,6 @@ msgstr "النافذة النشطة"
 msgid "Inactive Window"
 msgstr "النافذة الخاملة"
 
-msgid "Title Bar"
-msgstr "عارضة العنوان"
-
 msgid "Screenshot"
 msgstr "صورة الشاشة"
 
@@ -356,6 +670,9 @@ msgstr "إظهار شريط أدوات الأزرار"
 msgid "Use Decoration Cropping"
 msgstr "إستخدم القص المزين"
 
+msgid "No Shade on Titlebar Scroll"
+msgstr ""
+
 msgid "Use Button Fade"
 msgstr "إستخدم الزر المتلاشي"
 
@@ -375,6 +692,10 @@ msgid "Button Pulse Min Opacity %"
 msgstr "اللاشفافية الدنيا لنبضة الرز"
 
 msgid "Titlebar Double-Click Action"
+msgstr "سلوك عارضة العنوان عند عند النقر المزدوج"
+
+#, fuzzy
+msgid "Titlebar Middle-Click Action"
 msgstr "سلوك عارضة العنوان عند عند النقر المزدوج"
 
 msgid "Button Hover Cursor"
@@ -419,52 +740,21 @@ msgstr "تحرير"
 msgid "Import Theme..."
 msgstr "إستيراد الكساﺀ..."
 
+msgid "_Open"
+msgstr "ا_فتح"
+
 msgid "Search:"
 msgstr "بحث:"
 
-msgid "Fetching Themes"
-msgstr "إستحضار الكساﺀات"
+msgid "_Refresh"
+msgstr "_حدِّث"
 
-msgid ""
-"Fetching themes... \n"
-"This may take time depending on \n"
-"internet connection speed."
-msgstr ""
-"إستحضار الكساﺀات... \n"
-"من الممكن أن يأخذ الأمر بعض الوقت \n"
-"بحسب  سرعة الإتصال."
+msgid "_Delete"
+msgstr "ا_حذف"
 
-msgid ""
-"Here are the repositories that you can fetch Emerald Themes from. \n"
-"Fetching themes would fetch and import themes from SVN repositories \n"
-"You need Subversion package installed to use this feature."
-msgstr ""
-"تجد هنا مستودع كساﺀات Emerald . \n"
-"إستحضار  الكساﺀات يقوم باستيرادها من مستودعات SVN \n"
-"عليك بتنزيل برنامج SVN لاستخدام هذه الميزة ."
-
-msgid ""
-"This repository contains GPL'd themes that can be used under \n"
-"the terms of GNU GPL licence v2.0 or later \n"
-msgstr ""
-"هذا المستودع يحوي كساﺀات بترخيص GPL يمكن إستخدامها تحت \n"
-"بنود GNU GPL licence v2.0 أو أعلى .\n"
-
-msgid ""
-"This repository contains non-GPL'd themes. They might infringe \n"
-"copyrights and patent laws in some countries."
-msgstr ""
-"هذا المستودع يحوي كساﺀات بترخيص مختلف عن GPL. هذا يمكن أن يخالف و يخترق \n"
-"حقوق النسخ و براﺀات الإختراع في بعض الدول."
-
-msgid ""
-"To activate Non-GPL repository please run the following in shell and accept "
-"the server certificate permanently: \n"
-"svn ls https://svn.generation.no/emerald-themes."
-msgstr ""
-"لتشغيل مستودع بدون ترخيص GPL الرجاﺀ تنففيذ التالي و القبول الداىٔم بشهادة "
-"الخادم: \n"
-"svn ls https://svn.generation.no/emerald-themes."
+#, fuzzy
+msgid "_Import..."
+msgstr "تصدير..."
 
 msgid "Themes"
 msgstr "كساﺀات"
@@ -478,304 +768,52 @@ msgstr "ضبط الكساﺀ"
 msgid "Emerald Settings"
 msgstr "ضبط ايميرالد"
 
-msgid ""
-"Select\n"
-"Engine"
-msgstr ""
-"إختيار\n"
-"المحرّك"
-
-msgid "Based on original gtk-window-decorator"
-msgstr "مبنى على مزين نوافذ جنوم"
-
-msgid "Round Top Left Corner"
-msgstr "تدوير الزاوية العليا على اليسار"
-
-msgid "Round Top Right Corner"
-msgstr "تدوير الزاوية العليا على اليمين"
-
-msgid "Round Bottom Left Corner"
-msgstr "تدوير الزاوية السفلى على اليسار"
-
-msgid "Round Bottom Right Corner"
-msgstr "تدوير الزاوية السفلى على اليمين"
-
-msgid "Rounding Radius"
-msgstr "شعاع التدوير"
-
-msgid "Outer Frame Blend"
-msgstr "مزج الإطار الخارجي"
-
-msgid "Inner Frame Blend"
-msgstr "مزج الإطار الداخلي"
-
-msgid "Outer Titlebar Blend"
-msgstr "مزج خارجي لعارضة العنوان"
-
-msgid "Inner Titlebar Blend"
-msgstr "مزج داخلي لعارضة العنوان"
-
-msgid "Titlebar Separator"
-msgstr "فاصل عارضة العنوان"
-
-msgid "Frame Outline"
-msgstr "مخطط الإطار"
-
-msgid "Frame Highlight"
-msgstr "إبراز الإطار"
-
-msgid "Frame Shadow"
-msgstr "ظل الإطار"
-
-msgid "Contents Outline"
-msgstr "مخطط المحتوى"
-
-msgid "Contents Highlight"
-msgstr "إبراز المحتوى"
-
-msgid "Contents Shadow"
-msgstr "ظل المحتوى"
-
-msgid "Frame"
-msgstr "إطار"
-
-msgid "Based on original legacy"
-msgstr "مبنى على التراث الأصلى"
-
-msgid "Designed to be vista-ish in nature"
-msgstr "مصمم طبيعيا على نمط فيستا"
-
-msgid "Base"
-msgstr "قاعدة"
-
-msgid "Glow"
-msgstr "وهج"
-
-msgid "Sides"
-msgstr "الأطراف"
-
-msgid "Everything done with customizable pixmaps!"
-msgstr "تنفيذ كل شئ بواسطة الخراىٔط القابلة للتعديل"
-
-msgid "Top Rounding Radius"
-msgstr "شعاع التدوير الاعلى"
-
-msgid "Bottom Rounding Radius"
-msgstr "شعاع التدوير الادنى "
-
-#. Style : Use Tiled or Scaled pixmaps
-msgid "Scaled"
-msgstr "مُججّم"
-
-msgid "Not adjustable"
-msgstr "لا يمكن تعديلة"
-
-msgid "Same as Active"
-msgstr "نفس الشئ ك مُشغّل"
-
-msgid "Pixmap"
-msgstr "خريطة"
-
-msgid "Tiled/Scaled"
-msgstr "تبليط/تحجيم"
-
-msgid "Width Override"
-msgstr "تجاوزالعرض"
-
-msgid "Height Override"
-msgstr "تجاوز الإرتفاع"
-
-msgid "Glassy effects for your windows"
-msgstr "مؤثرات زجاجية للنوافذ"
-
-msgid "Glow Height"
-msgstr "حجم الوهج"
-
-msgid "Frame Base Color"
-msgstr "لون قاعدة الإطار"
-
-msgid "Upper Titlebar Glow"
-msgstr "وهج أعلى عارضة العنوان"
-
-msgid "Upper Glass Glow"
-msgstr "وهج أعلى الزجاج"
-
-msgid "Lower Glass Glow"
-msgstr "وهج أسفل الزجاج"
-
-msgid "Middle Glass Glow"
-msgstr "وهج وسط الزجاج"
-
-msgid "Outer Glass Glow"
-msgstr "وهج خارج الزجاج"
-
-msgid "Multiple gradients with somewhat glassy features too"
-msgstr "تدرج متعدد مع ما يشبه خصاىٔص زجاجية "
-
-msgid "Left Blend"
-msgstr "مزج على اليسار"
-
-msgid "Middle Blend"
-msgstr "مزج في الوسط"
-
-msgid "Right Blend"
-msgstr "مزج على اليمين"
-
-msgid "Contrast"
-msgstr "تباين"
-
-msgid "(Color)"
-msgstr "(لون)"
-
-msgid "(Alpha)"
-msgstr "(ألفا)"
-
-msgid "Notch"
-msgstr "الشق"
-
-msgid "Position"
-msgstr "المكان"
-
-msgid "Curve"
-msgstr "منحنى"
-
-msgid "Offset"
-msgstr "التوازن"
-
-msgid "Use Glow"
-msgstr "استخدم الوهج"
-
-msgid "Title Glow"
-msgstr "وهج العنوان"
-
-msgid "Evolved from the legacy engine"
-msgstr "مستحدثة من المحرك التراثي"
-
-msgid "Border Gap"
-msgstr "هوة الحدود"
-
-msgid "Show Border when maximised?"
-msgstr "أظهر الحدود عند التكبير القصوي"
-
-msgid "Show when minimised?"
-msgstr "أظهر عند التصغير؟"
-
-msgid "Minimised Border Size"
-msgstr "حجم الحدود الدنيا"
-
-msgid "Enable Left Bar Dip?"
-msgstr "شغّل خفض العارضة اليسرى؟"
-
-msgid "Left Bar Radius"
-msgstr "شعاع العارضة اليسرى"
-
-msgid "Enable Lower Bulge? (Useless at the moment, but will be used soon)"
-msgstr "شغّل النتوﺀ السفلي؟ (بدون فاىٔدة حاليا، لكن سيستخدم قريبا)"
-
-msgid "Top Corner Offset (%)"
-msgstr "توازن الزاوية العليا (%)"
-
-msgid "Enable Title Bar Dip?"
-msgstr "شغّل غمس عارضة العنوان؟"
-
-msgid "Enable Button Part?"
-msgstr "شغّل جزﺀ الزر؟"
-
-msgid "Title Part Width"
-msgstr "عرض العنوان"
-
-msgid "Button Part Width)"
-msgstr "عرض الزر"
-
-msgid "Dip Corners Radius)"
-msgstr "إخفض شعاع الزوايا"
-
-msgid "Round Inside Corners As well?"
-msgstr "دوّر داخل الزوايا أيضاً"
-
-msgid "Enable Different Maximised Colors?"
-msgstr "مكّن ألوان قصوى مختلفة"
-
-msgid "Turn Off repeating gradients when maximised?"
-msgstr "عطّل تكرار تدرج الألوان عند التكبير"
-
-msgid "Round Top Left Corner?"
-msgstr "تدوير الزاوية العليا اليسرى"
-
-msgid "Frame Rounding Radius"
-msgstr "شعاع تدوير الإطار"
-
-msgid "Titlebar Rounding Radius"
-msgstr "شعاع تدوير عارضة العنوان"
-
-msgid "Repeat Gradient?"
-msgstr "تكرار التدرج؟"
-
-msgid "Vertical Repeat?"
-msgstr "تدرج عامودي؟"
-
-msgid "Diagonal Repeat?"
-msgstr "تكرار قطري؟"
-
-msgid "Repeat Frequency"
-msgstr "تردد التركرار"
-
-#. /////////////////////
-msgid "Enable Title Part Pixmap?"
-msgstr "شغّل خريطة جزﺀ عارضة العنوان"
-
-msgid "Repeat Title Part Pixmap?"
-msgstr "تكرار خريطة جزﺀ عارضة العنوان"
-
-msgid "Title Bar Part Pixmap"
-msgstr "خريطة جزﺀ عارضة العنوان"
-
-msgid "Choose Titlebar Part Pixmap"
-msgstr "اختيار جزﺀ خريطة عارضة العنوان"
-
-#. /////////////////////////
-msgid "Enable Button Part Pixmap?"
-msgstr "شغل خريطة جزﺀ الرر"
-
-msgid "Repeat Button Part Pixmap?"
-msgstr "تكرار خريطة جزﺀ الرر"
-
-msgid "Button Part Pixmap"
-msgstr "جزﺀ خريطة الرر"
-
-msgid "Choose Button Part Pixmap"
-msgstr "إختر جزﺀ خريطة الرر"
-
-#. /////////////////////////
-msgid "Enable Titlebar Pixmap?"
-msgstr "مكّن خريطة عارضة العنوان"
-
-msgid "Repeat Titlebar Pixmap?"
-msgstr "تكرار خريطة عارضة العنوان"
-
-msgid "Titlebar Pixmap"
-msgstr "خريطة عارضة العنوان"
-
-msgid "Choose Titlebar Pixmap"
-msgstr "إختر خريطة عارضة العنوان"
-
-msgid "Active/Inactive"
-msgstr "نشط / خامل"
-
-msgid "Maximised"
-msgstr "الحجم الأقصى"
-
-msgid "Corners"
-msgstr "الزوايا"
-
-msgid "Border Layout"
-msgstr "مخطط الحدود"
-
-msgid "Left Bar"
-msgstr "العارضة اليسرى"
-
-msgid "Pixmaps"
-msgstr "خريطة"
+msgid "_Quit"
+msgstr "أ_نهِ"
+
+#~ msgid "Fetching Themes"
+#~ msgstr "إستحضار الكساﺀات"
+
+#~ msgid ""
+#~ "Fetching themes... \n"
+#~ "This may take time depending on \n"
+#~ "internet connection speed."
+#~ msgstr ""
+#~ "إستحضار الكساﺀات... \n"
+#~ "من الممكن أن يأخذ الأمر بعض الوقت \n"
+#~ "بحسب  سرعة الإتصال."
+
+#~ msgid ""
+#~ "Here are the repositories that you can fetch Emerald Themes from. \n"
+#~ "Fetching themes would fetch and import themes from SVN repositories \n"
+#~ "You need Subversion package installed to use this feature."
+#~ msgstr ""
+#~ "تجد هنا مستودع كساﺀات Emerald . \n"
+#~ "إستحضار  الكساﺀات يقوم باستيرادها من مستودعات SVN \n"
+#~ "عليك بتنزيل برنامج SVN لاستخدام هذه الميزة ."
+
+#~ msgid ""
+#~ "This repository contains GPL'd themes that can be used under \n"
+#~ "the terms of GNU GPL licence v2.0 or later \n"
+#~ msgstr ""
+#~ "هذا المستودع يحوي كساﺀات بترخيص GPL يمكن إستخدامها تحت \n"
+#~ "بنود GNU GPL licence v2.0 أو أعلى .\n"
+
+#~ msgid ""
+#~ "This repository contains non-GPL'd themes. They might infringe \n"
+#~ "copyrights and patent laws in some countries."
+#~ msgstr ""
+#~ "هذا المستودع يحوي كساﺀات بترخيص مختلف عن GPL. هذا يمكن أن يخالف و يخترق \n"
+#~ "حقوق النسخ و براﺀات الإختراع في بعض الدول."
+
+#~ msgid ""
+#~ "To activate Non-GPL repository please run the following in shell and "
+#~ "accept the server certificate permanently: \n"
+#~ "svn ls https://svn.generation.no/emerald-themes."
+#~ msgstr ""
+#~ "لتشغيل مستودع بدون ترخيص GPL الرجاﺀ تنففيذ التالي و القبول الداىٔم بشهادة "
+#~ "الخادم: \n"
+#~ "svn ls https://svn.generation.no/emerald-themes."
 
 #~ msgid "Repositories"
 #~ msgstr "المستودعات"

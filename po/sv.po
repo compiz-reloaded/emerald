@@ -1,21 +1,343 @@
-# Emerald Window Decorator.
-# Copyright (C) 2006
-# This file is distributed under the same license as the Emerald package.
+# Swedish translation for emerald
+# Copyright (C) 2006 The Free Software Foundation, Inc.
+# This file is distributed under the same license as the emerald package.
 # cyberorg <cyberorg@cyberorg.info>, 2006.
 # Sebastian Parborg <zedDB@hotmail.com>, 2007.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: 0.1\n"
-"Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
-"POT-Creation-Date: 2009-03-24 08:14+0100\n"
+"Project-Id-Version: emerald\n"
+"Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/emerald/issues\n"
+"POT-Creation-Date: 2017-05-04 19:29+0300\n"
 "PO-Revision-Date: 2008-10-07 23:17+0200\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
-"Language-Team: Compiz Fusion Translators <i18n@lists.compiz-fusion.org>\n"
+"Language-Team: Swedish <sv@li.org>\n"
+"Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Pootle 1.1.0\n"
+
+msgid "Based on original gtk-window-decorator"
+msgstr "Baserad på ursprungliga gtk-window-decorator"
+
+msgid "Round Top Left Corner"
+msgstr "Runda övre vänstra hörnet"
+
+msgid "Round Top Right Corner"
+msgstr "Runda övre högra hörnet?"
+
+msgid "Round Bottom Left Corner"
+msgstr "Runda nedre vänstra hörnet"
+
+msgid "Round Bottom Right Corner"
+msgstr "Runda nedre högra hörnet"
+
+msgid "Rounding Radius"
+msgstr "Rundningsradie"
+
+msgid "Colors"
+msgstr "Färger"
+
+msgid "Outer Frame Blend"
+msgstr "Ramens yttre blandning"
+
+msgid "Inner Frame Blend"
+msgstr "Ramens inre blandning"
+
+msgid "Outer Titlebar Blend"
+msgstr "Titelradens yttre blandning"
+
+msgid "Inner Titlebar Blend"
+msgstr "Titelradens inre blandning"
+
+msgid "Titlebar Separator"
+msgstr "Titelradsseparator"
+
+msgid "Frame Outline"
+msgstr "Ramkontur"
+
+msgid "Frame Highlight"
+msgstr "Ramframhävning"
+
+msgid "Frame Shadow"
+msgstr "Ramskugga"
+
+msgid "Contents Outline"
+msgstr "Innehållets kontur"
+
+msgid "Contents Highlight"
+msgstr "Innehållets framhävning"
+
+msgid "Contents Shadow"
+msgstr "Innehållets skugga"
+
+msgid "Frame"
+msgstr "Ram"
+
+msgid "Based on original legacy"
+msgstr "Baserad på den ursprungliga "
+
+msgid "Title Bar"
+msgstr "Titelrad"
+
+msgid "Designed to be vista-ish in nature"
+msgstr "Utformad att likna Vista"
+
+msgid "Base"
+msgstr "Bas"
+
+msgid "Glow"
+msgstr "Glans"
+
+msgid "Sides"
+msgstr "Sidor"
+
+msgid "Everything done with customizable pixmaps!"
+msgstr "Allt görs med anpassningsbara pixmappar!"
+
+msgid "Top Rounding Radius"
+msgstr "Övre rundningsradie"
+
+msgid "Bottom Rounding Radius"
+msgstr "Undre rundningsradie"
+
+msgid "_Clear"
+msgstr "_Töm"
+
+#. style: use tiled or scaled pixmaps
+msgid "Scaled"
+msgstr "Skalad"
+
+msgid "Not adjustable"
+msgstr "Ej anpassningsbar"
+
+msgid "Same as Active"
+msgstr "Samma som aktivt"
+
+msgid "Pixmap"
+msgstr "Pixmap"
+
+msgid "File"
+msgstr "Fil"
+
+msgid "Preview"
+msgstr "Förhandsgranskning"
+
+msgid "Clear"
+msgstr "Rensa"
+
+msgid "Tiled/Scaled"
+msgstr "Sida vid sida/skalad"
+
+msgid "Width Override"
+msgstr "Bredd-override"
+
+msgid "Height Override"
+msgstr "Höjd-override"
+
+msgid "Glassy effects for your windows"
+msgstr "Glaseffekter för dina fönster"
+
+msgid "Glow Height"
+msgstr "Glanshöjd"
+
+msgid "Frame Base Color"
+msgstr "Rambasfärg"
+
+msgid "Upper Titlebar Glow"
+msgstr "Övre titelradsglans"
+
+msgid "Upper Glass Glow"
+msgstr "Övre glasglans"
+
+msgid "Lower Glass Glow"
+msgstr "Nedre glasglans"
+
+msgid "Middle Glass Glow"
+msgstr "Mellersta glasglans"
+
+msgid "Outer Glass Glow"
+msgstr "Yttre glasglans"
+
+msgid "Multiple gradients with somewhat glassy features too"
+msgstr "Flertal gradienter med någorlunda glasaktiga drag"
+
+msgid "Left Blend"
+msgstr "Vänster blandning"
+
+msgid "Middle Blend"
+msgstr "Mittenblandning"
+
+msgid "Right Blend"
+msgstr "Höger blandning"
+
+msgid "Contrast"
+msgstr "Kontrast"
+
+msgid "(Color)"
+msgstr "(Färg)"
+
+msgid "(Alpha)"
+msgstr "(Alfa)"
+
+msgid "Notch"
+msgstr "Jack"
+
+msgid "Position"
+msgstr "Position"
+
+msgid "Curve"
+msgstr "Kurva"
+
+msgid "Offset"
+msgstr "Kompensation"
+
+msgid "Use Glow"
+msgstr "Använd glans"
+
+msgid "Title Glow"
+msgstr "Titelglans"
+
+msgid "Radius"
+msgstr "Radie"
+
+msgid "Evolved from the legacy engine"
+msgstr "Utvecklat från legacy-motorn"
+
+msgid "Border Gap"
+msgstr "Fönsterlistlucka"
+
+msgid "Show Border when maximised?"
+msgstr "Visa fönsterlist vid maximering?"
+
+msgid "Show when minimised?"
+msgstr "Visa vid minimering?"
+
+msgid "Minimised Border Size"
+msgstr "Minimerad fönsterliststorlek"
+
+msgid "Enable Left Bar Dip?"
+msgstr "Slå på nedsänkning av vänsterrad?"
+
+msgid "Left Bar Radius"
+msgstr "Vänsterradens radie"
+
+msgid "Enable Lower Bulge? (Useless at the moment, but will be used soon)"
+msgstr ""
+"Slå på nedre utbuktning? (Värdelöst för tillfället, men kommer snart att "
+"användas)"
+
+msgid "Top Corner Offset (%)"
+msgstr "Övre hörnkompensation (%)"
+
+msgid "Enable Title Bar Dip?"
+msgstr "Slå på nedsänkning av titelrad?"
+
+msgid "Enable Button Part?"
+msgstr "Slå på knappdel?"
+
+msgid "Title Part Width"
+msgstr "Titeldelsbredd"
+
+msgid "Button Part Width)"
+msgstr "Knappdelsbredd"
+
+msgid "Dip Corners Radius)"
+msgstr "Radie för hörnnedsättning"
+
+msgid "Round Inside Corners As well?"
+msgstr "Runda också inre hörn?"
+
+msgid "Enable Different Maximised Colors?"
+msgstr "Slå på olika maximeringsfärger?"
+
+msgid "Turn Off repeating gradients when maximised?"
+msgstr "Stäng av upprepande gradienter vid maximering?"
+
+msgid "Round Top Left Corner?"
+msgstr "Runda övre vänstra hörnet?"
+
+msgid "Frame Rounding Radius"
+msgstr "Ramrundningsradie"
+
+msgid "Titlebar Rounding Radius"
+msgstr "Titelradens rundningsradie"
+
+msgid "Repeat Gradient?"
+msgstr "Upprepa gradient?"
+
+msgid "Vertical Repeat?"
+msgstr "Vertikal upprepning?"
+
+msgid "Diagonal Repeat?"
+msgstr "Diagonalrepetition?"
+
+msgid "Repeat Frequency"
+msgstr "Upprepningsfrekvens"
+
+#. ========================
+msgid "Enable Title Part Pixmap?"
+msgstr "Slå på titeldelspixmap?"
+
+msgid "Repeat Title Part Pixmap?"
+msgstr "Upprepa titeldelpixmap?"
+
+msgid "Title Bar Part Pixmap"
+msgstr "Titelradens delpixmap"
+
+msgid "Choose Titlebar Part Pixmap"
+msgstr "Välj titelradens delpixmap"
+
+#. ========================
+msgid "Enable Button Part Pixmap?"
+msgstr "Slå på knappdelspixmap?"
+
+msgid "Repeat Button Part Pixmap?"
+msgstr "Upprepa knappdelspixmap?"
+
+msgid "Button Part Pixmap"
+msgstr "Knappdelspixmap"
+
+msgid "Choose Button Part Pixmap"
+msgstr "Välj knappdelspixmap"
+
+#. ========================
+msgid "Enable Titlebar Pixmap?"
+msgstr "Slå på titelradspixmap?"
+
+msgid "Repeat Titlebar Pixmap?"
+msgstr "Upprepa titelsradspixmap?"
+
+msgid "Titlebar Pixmap"
+msgstr "Titelradspixmap"
+
+msgid "Choose Titlebar Pixmap"
+msgstr "Välj titelradspixmap"
+
+msgid "Active/Inactive"
+msgstr "Aktivt/Inaktivt"
+
+msgid "Maximised"
+msgstr "Maximerad"
+
+msgid "Corners"
+msgstr "Hörn"
+
+msgid "Border Layout"
+msgstr "Fönsterlistlayout"
+
+msgid "Left Bar"
+msgstr "Vänsterrad"
+
+msgid "Pixmaps"
+msgstr "Pixmappar"
+
+msgid ""
+"Select\n"
+"Engine"
+msgstr ""
+"Välj\n"
+"motor"
 
 msgid "Close Window"
 msgstr "Stäng fönster"
@@ -53,6 +375,10 @@ msgstr "Haka upp fönster"
 msgid "UnStick Window"
 msgstr "Haka av fönster"
 
+#, fuzzy
+msgid "Super Maximize Window"
+msgstr "Maximera fönster"
+
 #, c-format
 msgid "The window \"%s\" is not responding."
 msgstr "Fönster \"%s\" svarar inte."
@@ -62,6 +388,9 @@ msgid ""
 msgstr ""
 "Att tvinga detta program att avsluta leder till förlust av alla osparade "
 "ändringar."
+
+msgid "_Cancel"
+msgstr "_Avbryt"
 
 msgid "_Force Quit"
 msgstr "_Tvinga att avsluta"
@@ -185,18 +514,6 @@ msgstr "Pixmappar för knappar"
 msgid "Button"
 msgstr "Knapp"
 
-msgid "File"
-msgstr "Fil"
-
-msgid "Preview"
-msgstr "Förhandsgranskning"
-
-msgid "Clear"
-msgstr "Rensa"
-
-msgid "Colors"
-msgstr "Färger"
-
 msgid "Text Fill"
 msgstr "Textfyllnad"
 
@@ -214,9 +531,6 @@ msgstr "Färg"
 
 msgid "Opacity"
 msgstr "Opacitet"
-
-msgid "Radius"
-msgstr "Radie"
 
 msgid "X Offset"
 msgstr "X-kompensation"
@@ -239,6 +553,7 @@ msgstr "Horisontell knappkompensation"
 msgid "Title-bar Object Layout"
 msgstr "Layout för titelradsobjekt"
 
+#, fuzzy
 msgid ""
 "Use colons to separate left, center, and right.\n"
 "Anything after a third colon is ignored.\n"
@@ -246,6 +561,7 @@ msgid ""
 "I=Icon, T=Title, H=Help, M=Menu\n"
 "S=Shade, U/A=On Top(Up/Above)\n"
 "Y=Sticky, (#)=# pixels space, ex: (5)\n"
+"F=SuperMaximize\n"
 msgstr ""
 "Använd kolon för att skilja vänster, centrerat, och höger.\n"
 "Allt efter ett tredje kolon ignoreras.\n"
@@ -256,6 +572,9 @@ msgstr ""
 
 msgid "Export Theme..."
 msgstr "Exportera tema..."
+
+msgid "_Save"
+msgstr "_Spara"
 
 msgid "Name:"
 msgstr "Namn:"
@@ -334,9 +653,6 @@ msgstr "Aktivt fönster"
 msgid "Inactive Window"
 msgstr "Inaktivt fönster"
 
-msgid "Title Bar"
-msgstr "Titelrad"
-
 msgid "Screenshot"
 msgstr "Skärmbild"
 
@@ -359,6 +675,9 @@ msgstr "Visa verktypstips för knappar?"
 msgid "Use Decoration Cropping"
 msgstr "Använd dekorationsbeskärning"
 
+msgid "No Shade on Titlebar Scroll"
+msgstr ""
+
 msgid "Use Button Fade"
 msgstr "Använd knapptoning"
 
@@ -378,6 +697,10 @@ msgid "Button Pulse Min Opacity %"
 msgstr "Knappulsens miniopacitet %"
 
 msgid "Titlebar Double-Click Action"
+msgstr "Dubbelklicksåtgärd för titelraden"
+
+#, fuzzy
+msgid "Titlebar Middle-Click Action"
 msgstr "Dubbelklicksåtgärd för titelraden"
 
 msgid "Button Hover Cursor"
@@ -422,52 +745,21 @@ msgstr "Redigera"
 msgid "Import Theme..."
 msgstr "Importera tema..."
 
+msgid "_Open"
+msgstr "_Öppna"
+
 msgid "Search:"
 msgstr "Sök:"
 
-msgid "Fetching Themes"
-msgstr "Hämtar Teman"
+msgid "_Refresh"
+msgstr "_Uppdatera"
 
-msgid ""
-"Fetching themes... \n"
-"This may take time depending on \n"
-"internet connection speed."
-msgstr ""
-"Hämtar teman... \n"
-"Detta kan ta tid beroende på din \n"
-"internetanslutningshastighet."
+msgid "_Delete"
+msgstr "_Ta bort"
 
-msgid ""
-"Here are the repositories that you can fetch Emerald Themes from. \n"
-"Fetching themes would fetch and import themes from SVN repositories \n"
-"You need Subversion package installed to use this feature."
-msgstr ""
-"Från dessa förråd kan du hämta Emerald-teman. \n"
-"Att hämta teman laddar hem och importerar dem från SVN-förråden. \n"
-"Du måste ha \"subversion\" installerat för att använda denna funktion."
-
-msgid ""
-"This repository contains GPL'd themes that can be used under \n"
-"the terms of GNU GPL licence v2.0 or later \n"
-msgstr ""
-"Detta förråd innehåller GPL-licensierade teman som kan användas \n"
-"enligt GNU GPL-licensen (v2.0 eller senare) \n"
-
-msgid ""
-"This repository contains non-GPL'd themes. They might infringe \n"
-"copyrights and patent laws in some countries."
-msgstr ""
-"Detta förråd innehåller teman som inte är GPL. De kan inkräkta\n"
-"på vissa länders upphovsrätts- och patentlagar."
-
-msgid ""
-"To activate Non-GPL repository please run the following in shell and accept "
-"the server certificate permanently: \n"
-"svn ls https://svn.generation.no/emerald-themes."
-msgstr ""
-"För att aktivera förråd som inte är GPL kör följande i en terminal och "
-"acceptera permanent servercertifikatet: \n"
-"svn ls https://svn.generation.no/emerald-themes"
+#, fuzzy
+msgid "_Import..."
+msgstr "Exportera..."
 
 msgid "Themes"
 msgstr "Teman"
@@ -481,306 +773,52 @@ msgstr "Tema-inställningar"
 msgid "Emerald Settings"
 msgstr "Emerald-inställningar"
 
-msgid ""
-"Select\n"
-"Engine"
-msgstr ""
-"Välj\n"
-"motor"
-
-msgid "Based on original gtk-window-decorator"
-msgstr "Baserad på ursprungliga gtk-window-decorator"
-
-msgid "Round Top Left Corner"
-msgstr "Runda övre vänstra hörnet"
-
-msgid "Round Top Right Corner"
-msgstr "Runda övre högra hörnet?"
-
-msgid "Round Bottom Left Corner"
-msgstr "Runda nedre vänstra hörnet"
-
-msgid "Round Bottom Right Corner"
-msgstr "Runda nedre högra hörnet"
-
-msgid "Rounding Radius"
-msgstr "Rundningsradie"
-
-msgid "Outer Frame Blend"
-msgstr "Ramens yttre blandning"
-
-msgid "Inner Frame Blend"
-msgstr "Ramens inre blandning"
-
-msgid "Outer Titlebar Blend"
-msgstr "Titelradens yttre blandning"
-
-msgid "Inner Titlebar Blend"
-msgstr "Titelradens inre blandning"
-
-msgid "Titlebar Separator"
-msgstr "Titelradsseparator"
-
-msgid "Frame Outline"
-msgstr "Ramkontur"
-
-msgid "Frame Highlight"
-msgstr "Ramframhävning"
-
-msgid "Frame Shadow"
-msgstr "Ramskugga"
-
-msgid "Contents Outline"
-msgstr "Innehållets kontur"
-
-msgid "Contents Highlight"
-msgstr "Innehållets framhävning"
-
-msgid "Contents Shadow"
-msgstr "Innehållets skugga"
-
-msgid "Frame"
-msgstr "Ram"
-
-msgid "Based on original legacy"
-msgstr "Baserad på den ursprungliga "
-
-msgid "Designed to be vista-ish in nature"
-msgstr "Utformad att likna Vista"
-
-msgid "Base"
-msgstr "Bas"
-
-msgid "Glow"
-msgstr "Glans"
-
-msgid "Sides"
-msgstr "Sidor"
-
-msgid "Everything done with customizable pixmaps!"
-msgstr "Allt görs med anpassningsbara pixmappar!"
-
-msgid "Top Rounding Radius"
-msgstr "Övre rundningsradie"
-
-msgid "Bottom Rounding Radius"
-msgstr "Undre rundningsradie"
-
-#. Style : Use Tiled or Scaled pixmaps
-msgid "Scaled"
-msgstr "Skalad"
-
-msgid "Not adjustable"
-msgstr "Ej anpassningsbar"
-
-msgid "Same as Active"
-msgstr "Samma som aktivt"
-
-msgid "Pixmap"
-msgstr "Pixmap"
-
-msgid "Tiled/Scaled"
-msgstr "Sida vid sida/skalad"
-
-msgid "Width Override"
-msgstr "Bredd-override"
-
-msgid "Height Override"
-msgstr "Höjd-override"
-
-msgid "Glassy effects for your windows"
-msgstr "Glaseffekter för dina fönster"
-
-msgid "Glow Height"
-msgstr "Glanshöjd"
-
-msgid "Frame Base Color"
-msgstr "Rambasfärg"
-
-msgid "Upper Titlebar Glow"
-msgstr "Övre titelradsglans"
-
-msgid "Upper Glass Glow"
-msgstr "Övre glasglans"
-
-msgid "Lower Glass Glow"
-msgstr "Nedre glasglans"
-
-msgid "Middle Glass Glow"
-msgstr "Mellersta glasglans"
-
-msgid "Outer Glass Glow"
-msgstr "Yttre glasglans"
-
-msgid "Multiple gradients with somewhat glassy features too"
-msgstr "Flertal gradienter med någorlunda glasaktiga drag"
-
-msgid "Left Blend"
-msgstr "Vänster blandning"
-
-msgid "Middle Blend"
-msgstr "Mittenblandning"
-
-msgid "Right Blend"
-msgstr "Höger blandning"
-
-msgid "Contrast"
-msgstr "Kontrast"
-
-msgid "(Color)"
-msgstr "(Färg)"
-
-msgid "(Alpha)"
-msgstr "(Alfa)"
-
-msgid "Notch"
-msgstr "Jack"
-
-msgid "Position"
-msgstr "Position"
-
-msgid "Curve"
-msgstr "Kurva"
-
-msgid "Offset"
-msgstr "Kompensation"
-
-msgid "Use Glow"
-msgstr "Använd glans"
-
-msgid "Title Glow"
-msgstr "Titelglans"
-
-msgid "Evolved from the legacy engine"
-msgstr "Utvecklat från legacy-motorn"
-
-msgid "Border Gap"
-msgstr "Fönsterlistlucka"
-
-msgid "Show Border when maximised?"
-msgstr "Visa fönsterlist vid maximering?"
-
-msgid "Show when minimised?"
-msgstr "Visa vid minimering?"
-
-msgid "Minimised Border Size"
-msgstr "Minimerad fönsterliststorlek"
-
-msgid "Enable Left Bar Dip?"
-msgstr "Slå på nedsänkning av vänsterrad?"
-
-msgid "Left Bar Radius"
-msgstr "Vänsterradens radie"
-
-msgid "Enable Lower Bulge? (Useless at the moment, but will be used soon)"
-msgstr ""
-"Slå på nedre utbuktning? (Värdelöst för tillfället, men kommer snart att "
-"användas)"
-
-msgid "Top Corner Offset (%)"
-msgstr "Övre hörnkompensation (%)"
-
-msgid "Enable Title Bar Dip?"
-msgstr "Slå på nedsänkning av titelrad?"
-
-msgid "Enable Button Part?"
-msgstr "Slå på knappdel?"
-
-msgid "Title Part Width"
-msgstr "Titeldelsbredd"
-
-msgid "Button Part Width)"
-msgstr "Knappdelsbredd"
-
-msgid "Dip Corners Radius)"
-msgstr "Radie för hörnnedsättning"
-
-msgid "Round Inside Corners As well?"
-msgstr "Runda också inre hörn?"
-
-msgid "Enable Different Maximised Colors?"
-msgstr "Slå på olika maximeringsfärger?"
-
-msgid "Turn Off repeating gradients when maximised?"
-msgstr "Stäng av upprepande gradienter vid maximering?"
-
-msgid "Round Top Left Corner?"
-msgstr "Runda övre vänstra hörnet?"
-
-msgid "Frame Rounding Radius"
-msgstr "Ramrundningsradie"
-
-msgid "Titlebar Rounding Radius"
-msgstr "Titelradens rundningsradie"
-
-msgid "Repeat Gradient?"
-msgstr "Upprepa gradient?"
-
-msgid "Vertical Repeat?"
-msgstr "Vertikal upprepning?"
-
-msgid "Diagonal Repeat?"
-msgstr "Diagonalrepetition?"
-
-msgid "Repeat Frequency"
-msgstr "Upprepningsfrekvens"
-
-#. /////////////////////
-msgid "Enable Title Part Pixmap?"
-msgstr "Slå på titeldelspixmap?"
-
-msgid "Repeat Title Part Pixmap?"
-msgstr "Upprepa titeldelpixmap?"
-
-msgid "Title Bar Part Pixmap"
-msgstr "Titelradens delpixmap"
-
-msgid "Choose Titlebar Part Pixmap"
-msgstr "Välj titelradens delpixmap"
-
-#. /////////////////////////
-msgid "Enable Button Part Pixmap?"
-msgstr "Slå på knappdelspixmap?"
-
-msgid "Repeat Button Part Pixmap?"
-msgstr "Upprepa knappdelspixmap?"
-
-msgid "Button Part Pixmap"
-msgstr "Knappdelspixmap"
-
-msgid "Choose Button Part Pixmap"
-msgstr "Välj knappdelspixmap"
-
-#. /////////////////////////
-msgid "Enable Titlebar Pixmap?"
-msgstr "Slå på titelradspixmap?"
-
-msgid "Repeat Titlebar Pixmap?"
-msgstr "Upprepa titelsradspixmap?"
-
-msgid "Titlebar Pixmap"
-msgstr "Titelradspixmap"
-
-msgid "Choose Titlebar Pixmap"
-msgstr "Välj titelradspixmap"
-
-msgid "Active/Inactive"
-msgstr "Aktivt/Inaktivt"
-
-msgid "Maximised"
-msgstr "Maximerad"
-
-msgid "Corners"
-msgstr "Hörn"
-
-msgid "Border Layout"
-msgstr "Fönsterlistlayout"
-
-msgid "Left Bar"
-msgstr "Vänsterrad"
-
-msgid "Pixmaps"
-msgstr "Pixmappar"
+msgid "_Quit"
+msgstr "A_vsluta"
+
+#~ msgid "Fetching Themes"
+#~ msgstr "Hämtar Teman"
+
+#~ msgid ""
+#~ "Fetching themes... \n"
+#~ "This may take time depending on \n"
+#~ "internet connection speed."
+#~ msgstr ""
+#~ "Hämtar teman... \n"
+#~ "Detta kan ta tid beroende på din \n"
+#~ "internetanslutningshastighet."
+
+#~ msgid ""
+#~ "Here are the repositories that you can fetch Emerald Themes from. \n"
+#~ "Fetching themes would fetch and import themes from SVN repositories \n"
+#~ "You need Subversion package installed to use this feature."
+#~ msgstr ""
+#~ "Från dessa förråd kan du hämta Emerald-teman. \n"
+#~ "Att hämta teman laddar hem och importerar dem från SVN-förråden. \n"
+#~ "Du måste ha \"subversion\" installerat för att använda denna funktion."
+
+#~ msgid ""
+#~ "This repository contains GPL'd themes that can be used under \n"
+#~ "the terms of GNU GPL licence v2.0 or later \n"
+#~ msgstr ""
+#~ "Detta förråd innehåller GPL-licensierade teman som kan användas \n"
+#~ "enligt GNU GPL-licensen (v2.0 eller senare) \n"
+
+#~ msgid ""
+#~ "This repository contains non-GPL'd themes. They might infringe \n"
+#~ "copyrights and patent laws in some countries."
+#~ msgstr ""
+#~ "Detta förråd innehåller teman som inte är GPL. De kan inkräkta\n"
+#~ "på vissa länders upphovsrätts- och patentlagar."
+
+#~ msgid ""
+#~ "To activate Non-GPL repository please run the following in shell and "
+#~ "accept the server certificate permanently: \n"
+#~ "svn ls https://svn.generation.no/emerald-themes."
+#~ msgstr ""
+#~ "För att aktivera förråd som inte är GPL kör följande i en terminal och "
+#~ "acceptera permanent servercertifikatet: \n"
+#~ "svn ls https://svn.generation.no/emerald-themes"
 
 #~ msgid "Repositories"
 #~ msgstr "Förråd"

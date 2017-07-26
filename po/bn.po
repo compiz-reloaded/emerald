@@ -1,21 +1,341 @@
-# Bangla Translation File for Emerald Theme Manager.
-# Copyright (C) 2007 compiz-fusion.org
+# Bangla translation for emerald
+# Copyright (C) 2007 launchpad.net/compiz
 # This file is distributed under the same license as the emerald package.
-#  মাহদী জামীল (Shafin) <mahdee.jameel@gmail.com>, 2007.
+# Shafin (মাহদী জামীল) <mahdee.jameel@gmail.com>, 2007.
 # 
-# fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Compiz-Emerald 0.5.5\n"
-"Report-Msgid-Bugs-To: http://bugs.beryl-project.org\n"
-"POT-Creation-Date: 2009-03-24 08:14+0100\n"
+"Project-Id-Version: emerald\n"
+"Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/emerald/issues\n"
+"POT-Creation-Date: 2017-05-04 19:28+0300\n"
 "PO-Revision-Date: 2007-12-04 16:54+0100\n"
 "Last-Translator: Mahdee Jameel <mahdee.jameel@yahoo.com>\n"
-"Language-Team: BANGLA <mahdee.jameel@gmail.com>\n"
+"Language-Team: Bangla <bn@li.org>\n"
+"Language: bn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Pootle 1.0.2\n"
+
+msgid "Based on original gtk-window-decorator"
+msgstr "জিনোমের নিজস্ব উইন্ডো সাজসজ্জার মতো"
+
+msgid "Round Top Left Corner"
+msgstr "উপরের বাম কোনা গোল হবে"
+
+msgid "Round Top Right Corner"
+msgstr "উপরের ডান কোনা গোল হবে"
+
+msgid "Round Bottom Left Corner"
+msgstr "নিচের বাম কোনা গোল হবে"
+
+msgid "Round Bottom Right Corner"
+msgstr "নিচের ডান কোনা গোল হবে"
+
+msgid "Rounding Radius"
+msgstr "ব্যাসার্ধ"
+
+msgid "Colors"
+msgstr "রঙ"
+
+msgid "Outer Frame Blend"
+msgstr "কাঠামোর বাহিরের দিকের চেহারা"
+
+msgid "Inner Frame Blend"
+msgstr "কাঠামোর ভেতরের দিকের চেহারা"
+
+msgid "Outer Titlebar Blend"
+msgstr "শিরোনাম বারের বাহিরের দিকের চেহারা"
+
+msgid "Inner Titlebar Blend"
+msgstr "শিরোনাম বারের ভেতরের দিকের চেহারা"
+
+msgid "Titlebar Separator"
+msgstr "শিরোনাম বারের সেপারেটর"
+
+msgid "Frame Outline"
+msgstr "কাঠামোর বাহিরের অংশ"
+
+msgid "Frame Highlight"
+msgstr "কাঠামোর মূল অংশ"
+
+msgid "Frame Shadow"
+msgstr "কাঠামোর ছায়া"
+
+msgid "Contents Outline"
+msgstr "জিনিষপত্রের বাহিরের অংশ"
+
+msgid "Contents Highlight"
+msgstr "জিনিষপত্রের মূল অংশ"
+
+msgid "Contents Shadow"
+msgstr "জিনিষপত্রের ছায়া"
+
+msgid "Frame"
+msgstr "কাঠামো"
+
+msgid "Based on original legacy"
+msgstr "আদি লিগেসির মতো"
+
+msgid "Title Bar"
+msgstr "শিরোনাম বার"
+
+msgid "Designed to be vista-ish in nature"
+msgstr "ভিস্তার মতো"
+
+msgid "Base"
+msgstr "মূল"
+
+msgid "Glow"
+msgstr "আভা"
+
+msgid "Sides"
+msgstr "পাশ"
+
+msgid "Everything done with customizable pixmaps!"
+msgstr "সবকিছু পিক্সম্যাপ দিয়ে!"
+
+msgid "Top Rounding Radius"
+msgstr "উপরে গোল করে দেয়ার ব্যাসার্ধ"
+
+msgid "Bottom Rounding Radius"
+msgstr "নিচে গোল করে দেয়ার ব্যাসার্ধ"
+
+msgid "_Clear"
+msgstr "মুছে ফেলুন (_C)"
+
+#. style: use tiled or scaled pixmaps
+msgid "Scaled"
+msgstr "ছড়ানো"
+
+msgid "Not adjustable"
+msgstr "অপরিবর্তনীয়"
+
+msgid "Same as Active"
+msgstr "সক্রিয়টার মতোই"
+
+msgid "Pixmap"
+msgstr "পিক্সম্যাপ"
+
+msgid "File"
+msgstr "ফাইল"
+
+msgid "Preview"
+msgstr "নমুনা"
+
+msgid "Clear"
+msgstr "পরিষ্কার"
+
+msgid "Tiled/Scaled"
+msgstr "টাইল করা/ছড়ানো"
+
+msgid "Width Override"
+msgstr "নতুন প্রস্থ"
+
+msgid "Height Override"
+msgstr "নতুন উচ্চতা"
+
+msgid "Glassy effects for your windows"
+msgstr "উইন্ডোর জন্য কাচের স্বচ্ছতা"
+
+msgid "Glow Height"
+msgstr "আভার উচ্চতা"
+
+msgid "Frame Base Color"
+msgstr "কাঠামোর মূল রঙ"
+
+msgid "Upper Titlebar Glow"
+msgstr "শিরোনাম বারের উপরের আভা"
+
+msgid "Upper Glass Glow"
+msgstr "কাচের উপরের আভা"
+
+msgid "Lower Glass Glow"
+msgstr "কাচের নিচের আভা"
+
+msgid "Middle Glass Glow"
+msgstr "কাচের মাঝের আভা"
+
+msgid "Outer Glass Glow"
+msgstr "কাচের বাহিরের আভা"
+
+msgid "Multiple gradients with somewhat glassy features too"
+msgstr "মিলিয়ে যাওয়া রঙ,সাথে কাচের উজ্জ্বলতা"
+
+msgid "Left Blend"
+msgstr "বামের রঙ"
+
+msgid "Middle Blend"
+msgstr "মাঝের রঙ"
+
+msgid "Right Blend"
+msgstr "ডানের রঙ"
+
+msgid "Contrast"
+msgstr "কন্ট্রাস্ট"
+
+msgid "(Color)"
+msgstr "(রঙ)"
+
+msgid "(Alpha)"
+msgstr "(স্বচ্ছতা)"
+
+msgid "Notch"
+msgstr "নচ"
+
+msgid "Position"
+msgstr "অবস্থান"
+
+msgid "Curve"
+msgstr "বাক"
+
+msgid "Offset"
+msgstr "সরে আসবে"
+
+msgid "Use Glow"
+msgstr "আভা ব্যবহার করো"
+
+msgid "Title Glow"
+msgstr "শিরোনামের আভা"
+
+msgid "Radius"
+msgstr "ব্যাসার্ধ"
+
+msgid "Evolved from the legacy engine"
+msgstr "লিগেসি ইঞ্জিন থেকে এসেছে"
+
+msgid "Border Gap"
+msgstr "সীমানার ফাক"
+
+msgid "Show Border when maximised?"
+msgstr "পুরো পর্দা জুড়ে দেখানোর সময়ও সীমানা দেখাবে?"
+
+msgid "Show when minimised?"
+msgstr "লুকানো থাকার সময় দেখাবে?"
+
+msgid "Minimised Border Size"
+msgstr "লুকানো থাকার সময় সীমানা"
+
+msgid "Enable Left Bar Dip?"
+msgstr "বাম সীমানা ঢালু হবে?"
+
+msgid "Left Bar Radius"
+msgstr "বাম সীমানার ব্যাসার্ধ"
+
+msgid "Enable Lower Bulge? (Useless at the moment, but will be used soon)"
+msgstr "নিচে মোটা হবে?( আপাতত কাজ করে না)"
+
+msgid "Top Corner Offset (%)"
+msgstr "উপরের কোনা সরে যাবে (%)"
+
+msgid "Enable Title Bar Dip?"
+msgstr "শিরোনাম বার ঢালু হবে?"
+
+msgid "Enable Button Part?"
+msgstr "নিচের অংশ থাকবে?"
+
+msgid "Title Part Width"
+msgstr "শিরোনাম অংশের প্রস্থ"
+
+msgid "Button Part Width)"
+msgstr "নিচের অংশের প্রস্থ"
+
+msgid "Dip Corners Radius)"
+msgstr "ঢালু কোনার প্রস্থ"
+
+msgid "Round Inside Corners As well?"
+msgstr "ভেতরের কোনাগুলোও গোল হবে?"
+
+msgid "Enable Different Maximised Colors?"
+msgstr "পুরো পর্দা জুড়ে দেখানোর সময় রঙ আলাদা হবে?"
+
+msgid "Turn Off repeating gradients when maximised?"
+msgstr "পুরো পর্দা জুড়ে দেখানোর সময় রঙের পুনরাবৃত্তি হবে না?"
+
+msgid "Round Top Left Corner?"
+msgstr "উপরের বাম কোনা গোল হবে?"
+
+msgid "Frame Rounding Radius"
+msgstr "কাঠামো এই ব্যাসার্ধে গোল হবে"
+
+msgid "Titlebar Rounding Radius"
+msgstr "শিরোনাম বার এই ব্যাসার্ধে গোল হবে"
+
+msgid "Repeat Gradient?"
+msgstr "একই রঙ হবে "
+
+msgid "Vertical Repeat?"
+msgstr "উপর নিচে?"
+
+msgid "Diagonal Repeat?"
+msgstr "কোনাকুনি?"
+
+msgid "Repeat Frequency"
+msgstr "পুনরাবৃত্তির হার"
+
+#. ========================
+msgid "Enable Title Part Pixmap?"
+msgstr "উপরের অংশ পিক্সম্যাপ দিয়ে হবে?"
+
+msgid "Repeat Title Part Pixmap?"
+msgstr "উপরের অংশের পিক্সম্যাপ বারবার আসবে?"
+
+msgid "Title Bar Part Pixmap"
+msgstr "উপরের অংশের পিক্সম্যাপ"
+
+msgid "Choose Titlebar Part Pixmap"
+msgstr "উপরের অংশের পিক্সম্যাপ পছন্দ করুন"
+
+#. ========================
+msgid "Enable Button Part Pixmap?"
+msgstr "নিচের অংশ পিক্সম্যাপ দিয়ে হবে?"
+
+msgid "Repeat Button Part Pixmap?"
+msgstr "নিচের অংশের পিক্সম্যাপ বারবার আসবে?"
+
+msgid "Button Part Pixmap"
+msgstr "নিচের অংশের পিক্সম্যাপ"
+
+msgid "Choose Button Part Pixmap"
+msgstr "নিচের অংশের পিক্সম্যাপ পছন্দ করুন"
+
+#. ========================
+msgid "Enable Titlebar Pixmap?"
+msgstr "শিরোনাম বার পিক্সম্যাপ দিয়ে হবে?"
+
+msgid "Repeat Titlebar Pixmap?"
+msgstr "শিরোনাম বারের পিক্সম্যাপ বারবার আসবে?"
+
+msgid "Titlebar Pixmap"
+msgstr "শিরোনাম বারের পিক্সম্যাপ"
+
+msgid "Choose Titlebar Pixmap"
+msgstr "শিরোনাম বারের পিক্সম্যাপ পছন্দ করুন"
+
+msgid "Active/Inactive"
+msgstr "সক্রিয়/নিষ্ক্রিয়"
+
+msgid "Maximised"
+msgstr "পুরো পর্দা জুড়ে"
+
+msgid "Corners"
+msgstr "কোনা"
+
+msgid "Border Layout"
+msgstr "সীমানার পরিধি"
+
+msgid "Left Bar"
+msgstr "বাম অংশ"
+
+msgid "Pixmaps"
+msgstr "পিক্সম্যাপ"
+
+msgid ""
+"Select\n"
+"Engine"
+msgstr ""
+"ইঞ্জিনt\n"
+"পছন্দ\n"
+"করুন"
 
 msgid "Close Window"
 msgstr "উইন্ডো বন্ধ করুন"
@@ -53,6 +373,10 @@ msgstr "উইন্ডো এই জায়গা ছেড়ে নড়বে ন�
 msgid "UnStick Window"
 msgstr "উইন্ডো আবার নড়বে"
 
+#, fuzzy
+msgid "Super Maximize Window"
+msgstr "পুরো পর্দা জুড়ে উইন্ডো"
+
 #, c-format
 msgid "The window \"%s\" is not responding."
 msgstr "\"%s\" উইন্ডোটি সাড়া দিচ্ছে না"
@@ -60,6 +384,9 @@ msgstr "\"%s\" উইন্ডোটি সাড়া দিচ্ছে না"
 msgid ""
 "Forcing this application to quit will cause you to lose any unsaved changes."
 msgstr "এই এপ্লিকেশনটি বন্ধ করলে সংরক্ষরন না করা সব পরিবর্তন মুছে যাবে"
+
+msgid "_Cancel"
+msgstr "বাতিল (_C)"
 
 msgid "_Force Quit"
 msgstr "জোর করে বন্ধ করুন"
@@ -183,18 +510,6 @@ msgstr "বোতামের পিক্সম্যাপ"
 msgid "Button"
 msgstr "বোতাম"
 
-msgid "File"
-msgstr "ফাইল"
-
-msgid "Preview"
-msgstr "নমুনা"
-
-msgid "Clear"
-msgstr "পরিষ্কার"
-
-msgid "Colors"
-msgstr "রঙ"
-
 msgid "Text Fill"
 msgstr "লেখার রঙ"
 
@@ -212,9 +527,6 @@ msgstr "রঙ"
 
 msgid "Opacity"
 msgstr "স্বচ্ছতা"
-
-msgid "Radius"
-msgstr "ব্যাসার্ধ"
 
 msgid "X Offset"
 msgstr "X এর মান"
@@ -237,6 +549,7 @@ msgstr "বোতামের পাশাপাশি অবস্থান"
 msgid "Title-bar Object Layout"
 msgstr "শিরোনাম-বারের বোতামের অবস্থান"
 
+#, fuzzy
 msgid ""
 "Use colons to separate left, center, and right.\n"
 "Anything after a third colon is ignored.\n"
@@ -244,6 +557,7 @@ msgid ""
 "I=Icon, T=Title, H=Help, M=Menu\n"
 "S=Shade, U/A=On Top(Up/Above)\n"
 "Y=Sticky, (#)=# pixels space, ex: (5)\n"
+"F=SuperMaximize\n"
 msgstr ""
 "কোলন দিয়ে বাম,ডান আর মাঝ আলাদা করুন.\n"
 "তিনটির বেশি কোলন দেবেন না.\n"
@@ -254,6 +568,9 @@ msgstr ""
 
 msgid "Export Theme..."
 msgstr "থিম রপ্তানি করো"
+
+msgid "_Save"
+msgstr "সংরক্ষণ (_S)"
 
 msgid "Name:"
 msgstr "নাম"
@@ -331,9 +648,6 @@ msgstr "সক্রিয় উইন্ডো"
 msgid "Inactive Window"
 msgstr "নিষ্ক্রিয় উইন্ডো"
 
-msgid "Title Bar"
-msgstr "শিরোনাম বার"
-
 msgid "Screenshot"
 msgstr "স্ক্রিনশট"
 
@@ -355,6 +669,9 @@ msgstr "বোতামের নিচে পরিচিতি দেখাও
 msgid "Use Decoration Cropping"
 msgstr "সাজসজ্জা ক্রপ করো"
 
+msgid "No Shade on Titlebar Scroll"
+msgstr ""
+
 msgid "Use Button Fade"
 msgstr "বোতামের উজ্জ্বলতা পাল্টে যাবে"
 
@@ -374,6 +691,10 @@ msgid "Button Pulse Min Opacity %"
 msgstr "উজ্জ্বলতা পাল্টানোর সময় অস্বচ্ছতা"
 
 msgid "Titlebar Double-Click Action"
+msgstr "শিরোনাম-বার এ ডাবল ক্লিক করলে"
+
+#, fuzzy
+msgid "Titlebar Middle-Click Action"
 msgstr "শিরোনাম-বার এ ডাবল ক্লিক করলে"
 
 msgid "Button Hover Cursor"
@@ -418,52 +739,21 @@ msgstr "সম্পাদন"
 msgid "Import Theme..."
 msgstr "থিম আমদানি"
 
+msgid "_Open"
+msgstr "খুলুন (_O)"
+
 msgid "Search:"
 msgstr "অনুসন্ধানঃ"
 
-msgid "Fetching Themes"
-msgstr "থিম আনা হচ্ছে"
+msgid "_Refresh"
+msgstr "রিফ্রেশ করুন (_R)"
 
-msgid ""
-"Fetching themes... \n"
-"This may take time depending on \n"
-"internet connection speed."
-msgstr ""
-"থিম আনা হচ্ছে... \n"
-"কতো সময় লাগবে তা ইন্টারনেট কানেকশনের\n"
-" স্পিডের উপর নির্ভর করে."
+msgid "_Delete"
+msgstr "মুছে ফেলুন (_D)"
 
-msgid ""
-"Here are the repositories that you can fetch Emerald Themes from. \n"
-"Fetching themes would fetch and import themes from SVN repositories \n"
-"You need Subversion package installed to use this feature."
-msgstr ""
-"এই ভান্ডারগুলো থেকে আপনি এমারাল্ড এর থিম আমদানি  \n"
-"করতে পারবেন।এর ফলে SVN রেপোজিটরি থেকে থিম আমদানি\n"
-" হবে। তবে এজন্য আপনার সাবভার্সন প্যাকেজ লাগবে।"
-
-msgid ""
-"This repository contains GPL'd themes that can be used under \n"
-"the terms of GNU GPL licence v2.0 or later \n"
-msgstr ""
-"এই ভান্ডারে জিপিএল করা থিম গুলো আছে।এগুলো \n"
-"জিপিএল ২ বা পরবর্তী লাইসেন্স ব্যবহার করে। \n"
-
-msgid ""
-"This repository contains non-GPL'd themes. They might infringe \n"
-"copyrights and patent laws in some countries."
-msgstr ""
-"এই ভান্ডারে জিপিএল ছাড়া থিম গুলো আছে। কিছু বিশেষ দেশে \n"
-"এগুলো ব্যবহার করতে হলে প্যাটেন্ট আইন মানতে হবে।"
-
-msgid ""
-"To activate Non-GPL repository please run the following in shell and accept "
-"the server certificate permanently: \n"
-"svn ls https://svn.generation.no/emerald-themes."
-msgstr ""
-"জিপিএল ছাড়া থিম গুলোর ভান্ডার সক্রিয় করতে হলে নিচের কমান্ডটিটার্মিনালে চালিয়ে "
-"সবসময়ের জন্য সার্ভারের সার্টিফিকেট অনুমোদন করুন: \n"
-"svn ls https://svn.generation.no/emerald-themes."
+#, fuzzy
+msgid "_Import..."
+msgstr "রপ্তানি করুন"
 
 msgid "Themes"
 msgstr "থিম"
@@ -477,305 +767,52 @@ msgstr "থিমের পছন্দ"
 msgid "Emerald Settings"
 msgstr "এমারাল্ডের পছন্দ"
 
-msgid ""
-"Select\n"
-"Engine"
-msgstr ""
-"ইঞ্জিনt\n"
-"পছন্দ\n"
-"করুন"
-
-msgid "Based on original gtk-window-decorator"
-msgstr "জিনোমের নিজস্ব উইন্ডো সাজসজ্জার মতো"
-
-msgid "Round Top Left Corner"
-msgstr "উপরের বাম কোনা গোল হবে"
-
-msgid "Round Top Right Corner"
-msgstr "উপরের ডান কোনা গোল হবে"
-
-msgid "Round Bottom Left Corner"
-msgstr "নিচের বাম কোনা গোল হবে"
-
-msgid "Round Bottom Right Corner"
-msgstr "নিচের ডান কোনা গোল হবে"
-
-msgid "Rounding Radius"
-msgstr "ব্যাসার্ধ"
-
-msgid "Outer Frame Blend"
-msgstr "কাঠামোর বাহিরের দিকের চেহারা"
-
-msgid "Inner Frame Blend"
-msgstr "কাঠামোর ভেতরের দিকের চেহারা"
-
-msgid "Outer Titlebar Blend"
-msgstr "শিরোনাম বারের বাহিরের দিকের চেহারা"
-
-msgid "Inner Titlebar Blend"
-msgstr "শিরোনাম বারের ভেতরের দিকের চেহারা"
-
-msgid "Titlebar Separator"
-msgstr "শিরোনাম বারের সেপারেটর"
-
-msgid "Frame Outline"
-msgstr "কাঠামোর বাহিরের অংশ"
-
-msgid "Frame Highlight"
-msgstr "কাঠামোর মূল অংশ"
-
-msgid "Frame Shadow"
-msgstr "কাঠামোর ছায়া"
-
-msgid "Contents Outline"
-msgstr "জিনিষপত্রের বাহিরের অংশ"
-
-msgid "Contents Highlight"
-msgstr "জিনিষপত্রের মূল অংশ"
-
-msgid "Contents Shadow"
-msgstr "জিনিষপত্রের ছায়া"
-
-msgid "Frame"
-msgstr "কাঠামো"
-
-msgid "Based on original legacy"
-msgstr "আদি লিগেসির মতো"
-
-msgid "Designed to be vista-ish in nature"
-msgstr "ভিস্তার মতো"
-
-msgid "Base"
-msgstr "মূল"
-
-msgid "Glow"
-msgstr "আভা"
-
-msgid "Sides"
-msgstr "পাশ"
-
-msgid "Everything done with customizable pixmaps!"
-msgstr "সবকিছু পিক্সম্যাপ দিয়ে!"
-
-msgid "Top Rounding Radius"
-msgstr "উপরে গোল করে দেয়ার ব্যাসার্ধ"
-
-msgid "Bottom Rounding Radius"
-msgstr "নিচে গোল করে দেয়ার ব্যাসার্ধ"
-
-#. Style : Use Tiled or Scaled pixmaps
-msgid "Scaled"
-msgstr "ছড়ানো"
-
-msgid "Not adjustable"
-msgstr "অপরিবর্তনীয়"
-
-msgid "Same as Active"
-msgstr "সক্রিয়টার মতোই"
-
-msgid "Pixmap"
-msgstr "পিক্সম্যাপ"
-
-msgid "Tiled/Scaled"
-msgstr "টাইল করা/ছড়ানো"
-
-msgid "Width Override"
-msgstr "নতুন প্রস্থ"
-
-msgid "Height Override"
-msgstr "নতুন উচ্চতা"
-
-msgid "Glassy effects for your windows"
-msgstr "উইন্ডোর জন্য কাচের স্বচ্ছতা"
-
-msgid "Glow Height"
-msgstr "আভার উচ্চতা"
-
-msgid "Frame Base Color"
-msgstr "কাঠামোর মূল রঙ"
-
-msgid "Upper Titlebar Glow"
-msgstr "শিরোনাম বারের উপরের আভা"
-
-msgid "Upper Glass Glow"
-msgstr "কাচের উপরের আভা"
-
-msgid "Lower Glass Glow"
-msgstr "কাচের নিচের আভা"
-
-msgid "Middle Glass Glow"
-msgstr "কাচের মাঝের আভা"
-
-msgid "Outer Glass Glow"
-msgstr "কাচের বাহিরের আভা"
-
-msgid "Multiple gradients with somewhat glassy features too"
-msgstr "মিলিয়ে যাওয়া রঙ,সাথে কাচের উজ্জ্বলতা"
-
-msgid "Left Blend"
-msgstr "বামের রঙ"
-
-msgid "Middle Blend"
-msgstr "মাঝের রঙ"
-
-msgid "Right Blend"
-msgstr "ডানের রঙ"
-
-msgid "Contrast"
-msgstr "কন্ট্রাস্ট"
-
-msgid "(Color)"
-msgstr "(রঙ)"
-
-msgid "(Alpha)"
-msgstr "(স্বচ্ছতা)"
-
-msgid "Notch"
-msgstr "নচ"
-
-msgid "Position"
-msgstr "অবস্থান"
-
-msgid "Curve"
-msgstr "বাক"
-
-msgid "Offset"
-msgstr "সরে আসবে"
-
-msgid "Use Glow"
-msgstr "আভা ব্যবহার করো"
-
-msgid "Title Glow"
-msgstr "শিরোনামের আভা"
-
-msgid "Evolved from the legacy engine"
-msgstr "লিগেসি ইঞ্জিন থেকে এসেছে"
-
-msgid "Border Gap"
-msgstr "সীমানার ফাক"
-
-msgid "Show Border when maximised?"
-msgstr "পুরো পর্দা জুড়ে দেখানোর সময়ও সীমানা দেখাবে?"
-
-msgid "Show when minimised?"
-msgstr "লুকানো থাকার সময় দেখাবে?"
-
-msgid "Minimised Border Size"
-msgstr "লুকানো থাকার সময় সীমানা"
-
-msgid "Enable Left Bar Dip?"
-msgstr "বাম সীমানা ঢালু হবে?"
-
-msgid "Left Bar Radius"
-msgstr "বাম সীমানার ব্যাসার্ধ"
-
-msgid "Enable Lower Bulge? (Useless at the moment, but will be used soon)"
-msgstr "নিচে মোটা হবে?( আপাতত কাজ করে না)"
-
-msgid "Top Corner Offset (%)"
-msgstr "উপরের কোনা সরে যাবে (%)"
-
-msgid "Enable Title Bar Dip?"
-msgstr "শিরোনাম বার ঢালু হবে?"
-
-msgid "Enable Button Part?"
-msgstr "নিচের অংশ থাকবে?"
-
-msgid "Title Part Width"
-msgstr "শিরোনাম অংশের প্রস্থ"
-
-msgid "Button Part Width)"
-msgstr "নিচের অংশের প্রস্থ"
-
-msgid "Dip Corners Radius)"
-msgstr "ঢালু কোনার প্রস্থ"
-
-msgid "Round Inside Corners As well?"
-msgstr "ভেতরের কোনাগুলোও গোল হবে?"
-
-msgid "Enable Different Maximised Colors?"
-msgstr "পুরো পর্দা জুড়ে দেখানোর সময় রঙ আলাদা হবে?"
-
-msgid "Turn Off repeating gradients when maximised?"
-msgstr "পুরো পর্দা জুড়ে দেখানোর সময় রঙের পুনরাবৃত্তি হবে না?"
-
-msgid "Round Top Left Corner?"
-msgstr "উপরের বাম কোনা গোল হবে?"
-
-msgid "Frame Rounding Radius"
-msgstr "কাঠামো এই ব্যাসার্ধে গোল হবে"
-
-msgid "Titlebar Rounding Radius"
-msgstr "শিরোনাম বার এই ব্যাসার্ধে গোল হবে"
-
-msgid "Repeat Gradient?"
-msgstr "একই রঙ হবে "
-
-msgid "Vertical Repeat?"
-msgstr "উপর নিচে?"
-
-msgid "Diagonal Repeat?"
-msgstr "কোনাকুনি?"
-
-msgid "Repeat Frequency"
-msgstr "পুনরাবৃত্তির হার"
-
-#. /////////////////////
-msgid "Enable Title Part Pixmap?"
-msgstr "উপরের অংশ পিক্সম্যাপ দিয়ে হবে?"
-
-msgid "Repeat Title Part Pixmap?"
-msgstr "উপরের অংশের পিক্সম্যাপ বারবার আসবে?"
-
-msgid "Title Bar Part Pixmap"
-msgstr "উপরের অংশের পিক্সম্যাপ"
-
-msgid "Choose Titlebar Part Pixmap"
-msgstr "উপরের অংশের পিক্সম্যাপ পছন্দ করুন"
-
-#. /////////////////////////
-msgid "Enable Button Part Pixmap?"
-msgstr "নিচের অংশ পিক্সম্যাপ দিয়ে হবে?"
-
-msgid "Repeat Button Part Pixmap?"
-msgstr "নিচের অংশের পিক্সম্যাপ বারবার আসবে?"
-
-msgid "Button Part Pixmap"
-msgstr "নিচের অংশের পিক্সম্যাপ"
-
-msgid "Choose Button Part Pixmap"
-msgstr "নিচের অংশের পিক্সম্যাপ পছন্দ করুন"
-
-#. /////////////////////////
-msgid "Enable Titlebar Pixmap?"
-msgstr "শিরোনাম বার পিক্সম্যাপ দিয়ে হবে?"
-
-msgid "Repeat Titlebar Pixmap?"
-msgstr "শিরোনাম বারের পিক্সম্যাপ বারবার আসবে?"
-
-msgid "Titlebar Pixmap"
-msgstr "শিরোনাম বারের পিক্সম্যাপ"
-
-msgid "Choose Titlebar Pixmap"
-msgstr "শিরোনাম বারের পিক্সম্যাপ পছন্দ করুন"
-
-msgid "Active/Inactive"
-msgstr "সক্রিয়/নিষ্ক্রিয়"
-
-msgid "Maximised"
-msgstr "পুরো পর্দা জুড়ে"
-
-msgid "Corners"
-msgstr "কোনা"
-
-msgid "Border Layout"
-msgstr "সীমানার পরিধি"
-
-msgid "Left Bar"
-msgstr "বাম অংশ"
-
-msgid "Pixmaps"
-msgstr "পিক্সম্যাপ"
+msgid "_Quit"
+msgstr "প্রস্থান (_Q)"
+
+#~ msgid "Fetching Themes"
+#~ msgstr "থিম আনা হচ্ছে"
+
+#~ msgid ""
+#~ "Fetching themes... \n"
+#~ "This may take time depending on \n"
+#~ "internet connection speed."
+#~ msgstr ""
+#~ "থিম আনা হচ্ছে... \n"
+#~ "কতো সময় লাগবে তা ইন্টারনেট কানেকশনের\n"
+#~ " স্পিডের উপর নির্ভর করে."
+
+#~ msgid ""
+#~ "Here are the repositories that you can fetch Emerald Themes from. \n"
+#~ "Fetching themes would fetch and import themes from SVN repositories \n"
+#~ "You need Subversion package installed to use this feature."
+#~ msgstr ""
+#~ "এই ভান্ডারগুলো থেকে আপনি এমারাল্ড এর থিম আমদানি  \n"
+#~ "করতে পারবেন।এর ফলে SVN রেপোজিটরি থেকে থিম আমদানি\n"
+#~ " হবে। তবে এজন্য আপনার সাবভার্সন প্যাকেজ লাগবে।"
+
+#~ msgid ""
+#~ "This repository contains GPL'd themes that can be used under \n"
+#~ "the terms of GNU GPL licence v2.0 or later \n"
+#~ msgstr ""
+#~ "এই ভান্ডারে জিপিএল করা থিম গুলো আছে।এগুলো \n"
+#~ "জিপিএল ২ বা পরবর্তী লাইসেন্স ব্যবহার করে। \n"
+
+#~ msgid ""
+#~ "This repository contains non-GPL'd themes. They might infringe \n"
+#~ "copyrights and patent laws in some countries."
+#~ msgstr ""
+#~ "এই ভান্ডারে জিপিএল ছাড়া থিম গুলো আছে। কিছু বিশেষ দেশে \n"
+#~ "এগুলো ব্যবহার করতে হলে প্যাটেন্ট আইন মানতে হবে।"
+
+#~ msgid ""
+#~ "To activate Non-GPL repository please run the following in shell and "
+#~ "accept the server certificate permanently: \n"
+#~ "svn ls https://svn.generation.no/emerald-themes."
+#~ msgstr ""
+#~ "জিপিএল ছাড়া থিম গুলোর ভান্ডার সক্রিয় করতে হলে নিচের কমান্ডটিটার্মিনালে চালিয়ে "
+#~ "সবসময়ের জন্য সার্ভারের সার্টিফিকেট অনুমোদন করুন: \n"
+#~ "svn ls https://svn.generation.no/emerald-themes."
 
 #~ msgid "Repositories"
 #~ msgstr "ভান্ডার"
