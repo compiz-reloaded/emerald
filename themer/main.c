@@ -860,7 +860,7 @@ void layout_shadows_frame(GtkWidget * vbox)
     gtk_box_pack_startC(vbox,get_current_table(),FALSE,FALSE,0);
     add_color_button_row(vbox,_("Color"),"shadow_color","shadow");
     add_float_range_row(vbox,_("Opacity"),"shadow_opacity",0.01,6.0,0.01,"shadow");
-    add_float_range_row(vbox,_("Radius"),"shadow_radius",0.0,48.0,0.1,"shadow");
+    add_float_range_row(vbox,_("Radius"),"shadow_radius",0.0,96.0,0.1,"shadow");
     add_int_range_row(vbox,_("X Offset"),"shadow_offset_x",-16,16,"shadow");
     add_int_range_row(vbox,_("Y Offset"),"shadow_offset_y",-16,16,"shadow");
 }
