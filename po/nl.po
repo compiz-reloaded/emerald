@@ -8,79 +8,80 @@ msgstr ""
 "Project-Id-Version: emerald\n"
 "Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/emerald/issues\n"
 "POT-Creation-Date: 2017-05-04 19:29+0300\n"
-"PO-Revision-Date: 2008-01-21 15:01+0100\n"
-"Last-Translator: Rick <mailmelist@gmail.com>\n"
-"Language-Team: Dutch <nl@li.org>\n"
+"PO-Revision-Date: 2017-08-02 19:17+0200\n"
+"Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
+"Language-Team: Dutch <vistausss@outlook.com>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.2\n"
 
 msgid "Based on original gtk-window-decorator"
-msgstr "Gebaseerd op originele gtk-window-decorator"
+msgstr "Gebaseerd op de originele gtk-window-decorator"
 
 msgid "Round Top Left Corner"
 msgstr "Ronde Linksboven Hoek"
 
 msgid "Round Top Right Corner"
-msgstr "Ronde Rechtsboven Hoek"
+msgstr "Ronde rechterbovenhoek"
 
 msgid "Round Bottom Left Corner"
-msgstr "Ronde Linksonder Hoek"
+msgstr "Ronde linkeronderhoek"
 
 msgid "Round Bottom Right Corner"
-msgstr "Ronde Rechtsonder Hoek"
+msgstr "Ronde rechteronderhoek"
 
 msgid "Rounding Radius"
-msgstr "Rondings Radius"
+msgstr "Rondingsradius"
 
 msgid "Colors"
 msgstr "Kleuren"
 
 msgid "Outer Frame Blend"
-msgstr "Buitenste Frame Overgang"
+msgstr "Buitenste frame-overgang"
 
 msgid "Inner Frame Blend"
-msgstr "Binnenste Frame Overgang"
+msgstr "Binnenste frame-overgang"
 
 msgid "Outer Titlebar Blend"
-msgstr "Buitenste Titelbalk Overgang"
+msgstr "Buitenste titelbalkovergang"
 
 msgid "Inner Titlebar Blend"
-msgstr "Binnenste Titelbalk Overgang"
+msgstr "Binnenste titelbalkovergang"
 
 msgid "Titlebar Separator"
-msgstr "Titelbalk Scheidingslijn"
+msgstr "Titelbalk-scheidingslijn"
 
 msgid "Frame Outline"
-msgstr "Frame Omtrek"
+msgstr "Frame-omtrek"
 
 msgid "Frame Highlight"
-msgstr "Frame Highlight"
+msgstr "Frame-markering"
 
 msgid "Frame Shadow"
-msgstr "Frame Schaduw"
+msgstr "Frame-schaduw"
 
 msgid "Contents Outline"
-msgstr "Inhoud Omtrek"
+msgstr "Inhoudsomtrek"
 
 msgid "Contents Highlight"
-msgstr "Inhoud Highlight"
+msgstr "Inhoudsmarkering"
 
 msgid "Contents Shadow"
-msgstr "Inhoud Schaduw"
+msgstr "Inhoudsschaduw"
 
 msgid "Frame"
 msgstr "Frame"
 
 msgid "Based on original legacy"
-msgstr "Gebaseerd op de orginele legacy"
+msgstr "Gebaseerd op de originele, verouderde"
 
 msgid "Title Bar"
-msgstr "Titel Balk"
+msgstr "Titelbalk"
 
 msgid "Designed to be vista-ish in nature"
-msgstr "Ontworpen om Vista-achtig te zijn"
+msgstr "Ontworpen om van nature Vista-achtig te zijn"
 
 msgid "Base"
 msgstr "Basis"
@@ -89,16 +90,16 @@ msgid "Glow"
 msgstr "Gloeien"
 
 msgid "Sides"
-msgstr "Zijden"
+msgstr "Zijkanten"
 
 msgid "Everything done with customizable pixmaps!"
-msgstr "Alles gedaan met aanpasbare pixmaps!"
+msgstr "Alles is gedaan met aanpasbare pixmaps!"
 
 msgid "Top Rounding Radius"
-msgstr "Bovenste Rondings Radius"
+msgstr "Bovenste rondingsradius"
 
 msgid "Bottom Rounding Radius"
-msgstr "Onderste Rondings Radius"
+msgstr "Onderste rondingsradius"
 
 msgid "_Clear"
 msgstr "_Wissen"
@@ -129,46 +130,46 @@ msgid "Tiled/Scaled"
 msgstr "Tegels/geschaald"
 
 msgid "Width Override"
-msgstr "Breedte Overschrijven"
+msgstr "Breedte overschrijven"
 
 msgid "Height Override"
-msgstr "Hoogte Overschrijven"
+msgstr "Hoogte overschrijven"
 
 msgid "Glassy effects for your windows"
-msgstr "Glasachtige effecten voor je vensters"
+msgstr "Glasachtige effecten voor uw vensters"
 
 msgid "Glow Height"
-msgstr "Gloei Hoogte"
+msgstr "Gloeihoogte"
 
 msgid "Frame Base Color"
-msgstr "Frame Basis Kleur"
+msgstr "Basiskleur frame"
 
 msgid "Upper Titlebar Glow"
-msgstr "Bovenste Titelbalk Gloeien"
+msgstr "Gloeiende bovenste titelbalk"
 
 msgid "Upper Glass Glow"
-msgstr "Bovenste Glas Gloeien"
+msgstr "Gloeiend bovenste glas"
 
 msgid "Lower Glass Glow"
-msgstr "Lagere Glas Gloeien"
+msgstr "Gloeiend onderste glas"
 
 msgid "Middle Glass Glow"
-msgstr "Midden Glas Gloeien"
+msgstr "Gloeiende middelste glas"
 
 msgid "Outer Glass Glow"
-msgstr "Buitenste Glas Gloeien"
+msgstr "Gloeiend buitenste glas"
 
 msgid "Multiple gradients with somewhat glassy features too"
-msgstr "Meerdere kleurgradaties met ook min of meer glasachtige eigenschappen"
+msgstr "Meerdere kleurverlopen met min of meer glasachtige eigenschappen"
 
 msgid "Left Blend"
-msgstr "Links Overgang"
+msgstr "Linkerovergang"
 
 msgid "Middle Blend"
-msgstr "Midden Overgang"
+msgstr "Middelste overgang"
 
 msgid "Right Blend"
-msgstr "Rechts Overgang"
+msgstr "Rechterovergang"
 
 msgid "Contrast"
 msgstr "Contrast"
@@ -177,7 +178,7 @@ msgid "(Color)"
 msgstr "(Kleur)"
 
 msgid "(Alpha)"
-msgstr "(Alpha)"
+msgstr "(Alfa)"
 
 msgid "Notch"
 msgstr "Inkeping"
@@ -189,129 +190,129 @@ msgid "Curve"
 msgstr "Curve"
 
 msgid "Offset"
-msgstr "Offset"
+msgstr "Compensatie"
 
 msgid "Use Glow"
-msgstr "Gebruik Gloeien"
+msgstr "Gloeiing gebruiken"
 
 msgid "Title Glow"
-msgstr "Titel Gloeien"
+msgstr "Titelgloeiing"
 
 msgid "Radius"
 msgstr "Radius"
 
 msgid "Evolved from the legacy engine"
-msgstr "Voortgekomen uit de legacy engine"
+msgstr "Voortgekomen uit de verouderde aandrijving"
 
 msgid "Border Gap"
-msgstr "Rand Opening"
+msgstr "Randopening"
 
 msgid "Show Border when maximised?"
-msgstr "Toon omtrek rand indien gemaximaliseerd?"
+msgstr "Rand weergeven indien gemaximaliseerd?"
 
 msgid "Show when minimised?"
-msgstr "Toon indien geminimaliseerd?"
+msgstr "Weergeven indien geminimaliseerd?"
 
 msgid "Minimised Border Size"
-msgstr "Geminimaliseerd Rand Grootte"
+msgstr "Geminimaliseerde randgrootte"
 
 msgid "Enable Left Bar Dip?"
-msgstr "Inschakelen Linker Balk Dip?"
+msgstr "Linkerbalk-dip inschakelen?"
 
 msgid "Left Bar Radius"
-msgstr "Linker Balk Radius"
+msgstr "Linkerbalk-radius"
 
 msgid "Enable Lower Bulge? (Useless at the moment, but will be used soon)"
 msgstr ""
-"Inschakelen lagere uitstulping? (Nutteloos op het moment, maar het zal "
-"binnenkort wel gebruikt worden)"
+"Lagere uitstulping inschakelen? (op dit moment nutteloos, maar het zal "
+"binnenkort gebruikt worden)"
 
 msgid "Top Corner Offset (%)"
-msgstr "Bovenste Hoek Offset (%)"
+msgstr "Bovenste hoek-compensatie (%)"
 
 msgid "Enable Title Bar Dip?"
-msgstr "Inschakelen Titel Balk Dip?"
+msgstr "Titelbalk-dip inschakelen?"
 
 msgid "Enable Button Part?"
-msgstr "Inschakelen Knop Deel?"
+msgstr "Knopdeel inschakelen?"
 
 msgid "Title Part Width"
-msgstr "Titel Part Breedte"
+msgstr "Titeldeel-breedte"
 
 msgid "Button Part Width)"
-msgstr "Knop Deel Breedte)"
+msgstr "Knopdeel-breedte)"
 
 msgid "Dip Corners Radius)"
-msgstr "Dip Hoeken radius)"
+msgstr "Hoekradius-dip)"
 
 msgid "Round Inside Corners As well?"
-msgstr "Binnenste Hoeken ook afronden?"
+msgstr "Binnenste hoeken ook afronden?"
 
 msgid "Enable Different Maximised Colors?"
-msgstr "Inschakelen Verschillende gemaximaliseerde Kleuren?"
+msgstr "Verschillende gemaximaliseerde kleuren inschakelen?"
 
 msgid "Turn Off repeating gradients when maximised?"
-msgstr "Uitschakelen herhalen van gradaties indien gemaximaliseerd?"
+msgstr "Herhalen van kleurverlopen indien gemaximaliseerd uitschakelen?"
 
 msgid "Round Top Left Corner?"
-msgstr "Ronde Linkerboven Hoek? "
+msgstr "Ronde linkerbovenhoek?"
 
 msgid "Frame Rounding Radius"
-msgstr "Frame Afrondings Radius"
+msgstr "Frame afrondingsradius"
 
 msgid "Titlebar Rounding Radius"
-msgstr "Titelbalk Afrondings Radius"
+msgstr "Titelbalk afrondingsradius"
 
 msgid "Repeat Gradient?"
-msgstr "Herhaal Gradaties?"
+msgstr "Kleurverloop herhalen?"
 
 msgid "Vertical Repeat?"
-msgstr "Verticaal Herhalen?"
+msgstr "Verticaal herhalen?"
 
 msgid "Diagonal Repeat?"
-msgstr "Diagonaal Herhalen?"
+msgstr "Diagonaal herhalen?"
 
 msgid "Repeat Frequency"
-msgstr "Herhaal Frequentie"
+msgstr "Herhalingsfrequentie"
 
 #. ========================
 msgid "Enable Title Part Pixmap?"
-msgstr "Inschakelen Titel Part Pixmap?"
+msgstr "Titeldeel-pixmap inschakelen?"
 
 msgid "Repeat Title Part Pixmap?"
-msgstr "Herhaal Titel Part Pixmap?"
+msgstr "Titeldeel-pixmap herhalen?"
 
 msgid "Title Bar Part Pixmap"
-msgstr "Titel Balk Part Pixmap"
+msgstr "Titelbalkdeel-pixmap"
 
 msgid "Choose Titlebar Part Pixmap"
-msgstr "Kies Titelbalk Deel Pixmap"
+msgstr "Kies titelbalkdeel-pixmap"
 
 #. ========================
 msgid "Enable Button Part Pixmap?"
-msgstr "Inschakelen Knop Deel Pixmap?"
+msgstr "Knopdeel-pixmap inschakelen?"
 
 msgid "Repeat Button Part Pixmap?"
-msgstr "Herhaal Knop Deel Pixmap?"
+msgstr "Knopdeel-pixmap inschakelen?"
 
 msgid "Button Part Pixmap"
-msgstr "Knop Deel Pixmap"
+msgstr "Knopdeel-pixmap inschakelen?"
 
 msgid "Choose Button Part Pixmap"
-msgstr "Kies Knoppen Part Pixmap"
+msgstr "Kies knopdeel-pixmap"
 
 #. ========================
 msgid "Enable Titlebar Pixmap?"
-msgstr "Inschakelen TitelBalk Pixmap?"
+msgstr "Titelbalk-pixmap inschakelen?"
 
 msgid "Repeat Titlebar Pixmap?"
-msgstr "Herhaal Titelbalk Pixmap?"
+msgstr "Titelbalk-pixmap herhalen?"
 
 msgid "Titlebar Pixmap"
-msgstr "Titelbalk Pixmap"
+msgstr "Titelbalk-pixmap"
 
 msgid "Choose Titlebar Pixmap"
-msgstr "Kies Titelbalk Pixmap"
+msgstr "Kies Titelbalk-pixmap"
 
 msgid "Active/Inactive"
 msgstr "Actief/Inactief"
@@ -323,10 +324,10 @@ msgid "Corners"
 msgstr "Hoeken"
 
 msgid "Border Layout"
-msgstr "Rand Layout"
+msgstr "Randindeling"
 
 msgid "Left Bar"
-msgstr "Linker Balk"
+msgstr "Linkerbalk"
 
 msgid "Pixmaps"
 msgstr "Pixmaps"
@@ -335,26 +336,26 @@ msgid ""
 "Select\n"
 "Engine"
 msgstr ""
-"Selecteer\n"
-"Engine"
+"Aandrijving\n"
+"selecteren"
 
 msgid "Close Window"
-msgstr "Sluit venster"
+msgstr "Venster sluiten"
 
 msgid "Maximize Window"
-msgstr "Maximaliseren venster"
+msgstr "Venster maximaliseren"
 
 msgid "Restore Window"
-msgstr "Herstel venster"
+msgstr "Venster herstellen"
 
 msgid "Minimize Window"
-msgstr "Minimaliseren venster"
+msgstr "Venster minimaliseren"
 
 msgid "Context Help"
-msgstr "Context hulp"
+msgstr "Contexthulp"
 
 msgid "Window Menu"
-msgstr "Venster menu"
+msgstr "Venstermenu"
 
 msgid "Shade Window"
 msgstr "Venster oprollen"
@@ -363,20 +364,19 @@ msgid "UnShade Window"
 msgstr "Venster afrollen"
 
 msgid "Set Above"
-msgstr "Plaats bovenaan"
+msgstr "Bovenaan plaatsen"
 
 msgid "UnSet Above"
-msgstr "Geen plaats bovenaan"
+msgstr "Niet meer bovenaan plaatsen"
 
 msgid "Stick Window"
 msgstr "Venster vastzetten"
 
 msgid "UnStick Window"
-msgstr "Venster niet vastzetten"
+msgstr "Venster niet meer vastzetten"
 
-#, fuzzy
 msgid "Super Maximize Window"
-msgstr "Maximaliseren venster"
+msgstr "Venster super-maximaliseren"
 
 #, c-format
 msgid "The window \"%s\" is not responding."
@@ -385,14 +385,14 @@ msgstr "Het venster \"%s\" reageert niet."
 msgid ""
 "Forcing this application to quit will cause you to lose any unsaved changes."
 msgstr ""
-"Dit programma geforceerd afsluiten zal tot gevolg hebben dat alle niet "
-"opgeslagen wijzigingen verloren gaan."
+"Het geforceerd afsluiten van deze applicatie zal tot gevolg hebben dat alle "
+"niet-opgeslagen wijzigingen verloren gaan."
 
 msgid "_Cancel"
-msgstr " _Annuleren"
+msgstr "_Annuleren"
 
 msgid "_Force Quit"
-msgstr "_Forceer afsluiten"
+msgstr "Afsluiten _forceren"
 
 #, c-format
 msgid ""
@@ -406,8 +406,8 @@ msgstr ""
 "<b><big>%s</big></b>\n"
 "<i>%s</i>\n"
 "<small><b>Versie</b> %s\n"
-"<b>Gecreerd door</b> %s\n"
-"<b>Gebruik met</b> %s\n"
+"<b>Gecreëerd door</b> %s\n"
+"<b>Gebruiken met</b> %s\n"
 "</small>"
 
 #, c-format
@@ -419,11 +419,11 @@ msgid ""
 "<b>Use With</b> %s\n"
 "</small>"
 msgstr ""
-"<b><big>%s</big></b> (Systeem Thema) \n"
+"<b><big>%s</big></b> (Systeemthema) \n"
 "<i>%s</i>\n"
 "<small><b>Versie</b> %s\n"
 "<b>Gecreëerd door</b> %s\n"
-"<b>Gebruik met</b> %s\n"
+"<b>Gebruiken met</b> %s\n"
 "</small>"
 
 msgid "Unknown"
@@ -433,97 +433,97 @@ msgid "Whatever (no hint)"
 msgstr "Wat dan ook (geen hint)"
 
 msgid "No Description"
-msgstr "Geen beschrijving"
+msgstr "Geen omschrijving"
 
 msgid "Invalid Theme Name"
-msgstr "Ongeldige thema naam"
+msgstr "Ongeldige themanaam"
 
 msgid "Invalid theme file.  Does not end in .emerald"
-msgstr "Ongeldig thema bestand. Eindigt niet op .emerald"
+msgstr "Ongeldig themabestand; het eindigt niet op .emerald"
 
 msgid ""
 "Invalid Theme Name\n"
 "Could Not Export"
 msgstr ""
-"Ongeldige thema naam\n"
-" Kon niet exporteren"
+"Ongeldige themanaam\n"
+" Exporteren mislukt"
 
 msgid ""
 "Invalid File Name\n"
 "Must End in .emerald"
 msgstr ""
-"Ongeldige bestands naam\n"
+"Ongeldige bestandsnaam\n"
 "Moet eindigen op .emerald"
 
 msgid "Error calling tar."
-msgstr "Fout met aanroepen van tar"
+msgstr "Fout bij het aanroepen van tar."
 
 msgid "Theme Exported"
-msgstr "Thema geëxporteerd"
+msgstr "Thema is geëxporteerd"
 
 msgid ""
 "Can't save over system themes\n"
 "(or you forgot to enter a name)"
 msgstr ""
-"Kan niet opslaan over systeem thema's\n"
-" (of je vergat een naam op te geven)"
+"Kan systeemthema's niet overschrijven\n"
+"(of u vergat een naam in te voeren)"
 
 #, c-format
 msgid "Overwrite Theme %s?"
 msgstr "Thema %s overschrijven?"
 
 msgid "Couldn't Write Theme"
-msgstr "Kon thema niet wegschrijven"
+msgstr "Thema kan niet worden weggeschreven"
 
 msgid "Couldn't Form Theme"
-msgstr "Kon thema niet vormen"
+msgstr "Thema kan niet worden gevormd"
 
 msgid "Theme Saved"
-msgstr "Thema opgeslagen"
+msgstr "Thema is opgeslagen"
 
 msgid ""
 "Can't delete system themes\n"
 "(or you forgot to enter a name)"
 msgstr ""
-"Kan geen systeem thema's verwijderen\n"
-" (of je vergat om een naam op te geven)"
+"Kan systeemthema's niet verwijderen\n"
+"(of u vergat om een naam in te voeren)"
 
 #, c-format
 msgid "Are you sure you want to delete %s?"
-msgstr "Weet je zeker dat je %s wilt verwijderen?"
+msgstr "Weet u zeker dat u %s wilt verwijderen?"
 
 msgid "Theme deleted"
-msgstr "Thema gewist"
+msgstr "Thema is gewist"
 
 msgid "No such theme to delete"
-msgstr "Geen thema om te wissen"
+msgstr "Geen te wissen thema"
 
 msgid "Use Pixmap Buttons"
-msgstr "Gebruik pixmap knoppen"
+msgstr "Pixmap-knoppen gebruiken"
 
 msgid "Use Button Halo/Glow"
-msgstr "Gebruik knop Halo/Glow"
+msgstr "Halo/Gloeiing op knoppen gebruiken"
 
 msgid "Use Button Halo/Glow For Inactive Windows"
-msgstr "Gebruik knop Halo/Glow voor inactieve vensters"
+msgstr "Halo/Gloeiing gebruiken voor inactieve vensters"
 
 msgid "Button Pixmaps"
-msgstr "Knop pixmaps"
+msgstr "Knop-pixmaps"
 
 msgid "Button"
 msgstr "Knop"
 
 msgid "Text Fill"
-msgstr "Tekst opvulling"
+msgstr "Tekstopvulling"
 
 msgid "Text Outline"
-msgstr "Text omtrek"
+msgstr "Tekstomtrek"
 
 msgid "Button Fill"
-msgstr "Knop opvulling"
+msgstr "Knopopvulling"
 
 msgid "Button Outline"
-msgstr "Knop omtrek"
+msgstr "Knopomtrek"
 
 msgid "Color"
 msgstr "Kleur"
@@ -532,27 +532,26 @@ msgid "Opacity"
 msgstr "Ondoorzichtigheid"
 
 msgid "X Offset"
-msgstr "X Offset"
+msgstr "X-compensatie"
 
 msgid "Y Offset"
-msgstr "Y Offset"
+msgstr "Y-compensatie"
 
 msgid "Title-Text Font"
-msgstr "Titel tekst font"
+msgstr "Titeltekst-lettertype"
 
 msgid "Minimum Title-bar Height"
-msgstr "Minimum titel balk hoogte"
+msgstr "Minimale titelbalkhoogte"
 
 msgid "Vertical Button Offset"
-msgstr "Verticale Knop offset"
+msgstr "Verticale knop-compensatie"
 
 msgid "Horizontal Button Offset"
-msgstr "Horizontale Knop offset"
+msgstr "Horizontale knop-compensatie"
 
 msgid "Title-bar Object Layout"
-msgstr "Titel balk object layout"
+msgstr "Titelbalkobject-indeling"
 
-#, fuzzy
 msgid ""
 "Use colons to separate left, center, and right.\n"
 "Anything after a third colon is ignored.\n"
@@ -564,13 +563,15 @@ msgid ""
 msgstr ""
 "Gebuik dubbele punten om onderscheid te maken tussen links, midden en "
 "rechts\n"
-" Alles na de derde dubbele punt wordt genegeerd.\n"
+"Alles na de derde dubbele punt wordt genegeerd.\n"
 "C=Sluiten, N=Minimaliseren, X/R=herstellen,\n"
-" S=Oprollen, U/A=Bovenaan(UP/Above0\n"
-" Y=Sticky, (#)=# pixels ruimte, bijv.: (5)\n"
+"I=Iconiseren, T=Titel, H=Hulp, M=Menu\n"
+"S=Oprollen, U/A=Bovenaan(Omhoog/Boven)\n"
+" Y=Vastgezet, (#)=# pixels ruimte, bijv.: (5)\n"
+"F=Supermaximaliseren\n"
 
 msgid "Export Theme..."
-msgstr "Exporteer thema..."
+msgstr "Thema exporteren..."
 
 msgid "_Save"
 msgstr "Op_slaan"
@@ -588,25 +589,25 @@ msgid "Creator"
 msgstr "Maker"
 
 msgid "Description"
-msgstr "Beschrijving"
+msgstr "Omschrijving"
 
 msgid "Theme Version"
-msgstr "Thema versie"
+msgstr "Themaversie"
 
 msgid "Suggested Widget Theme"
-msgstr "Suggestie voor Widget thema"
+msgstr "Aangeraden widget-thema"
 
 msgid "Themer Version"
-msgstr "Themer Versie"
+msgstr "Themer-versie"
 
 msgid "Border"
-msgstr "Omranding"
+msgstr "Rand"
 
 msgid "Size"
 msgstr "Grootte"
 
 msgid "Top"
-msgstr "Top"
+msgstr "Bovenkant"
 
 msgid "Bottom"
 msgstr "Onderkant"
@@ -629,28 +630,28 @@ msgid ""
 "the titlebar-min-height slider\n"
 "or the titlebar font setting.\n"
 msgstr ""
-"Notitie, als deze waarden worden veranderd is het\n"
-"aangeraden dat je iets doet om bijvoorbeeld \n"
-"viewports te veranderen omdat zo de positie\n"
-"van de 'gebeurtenis vensters' op de juiste\n"
-"manier herladen wordt. Zodoende werkt \n"
+"Let op: als deze waarden worden gewijzigd is het\n"
+"aan te raden dat u iets doet, zoals bijvoorbeeld \n"
+"het veranderen van de viewports zodat de positie\n"
+"van de 'gebeurtenisvensters' op de juiste\n"
+"manier wordt bijgewerkt. Zodoende werkt \n"
 "venster vergroten en verplaatsen ook op\n"
 "de juiste manier. Dit is ook van toepassing\n"
-"als de titelbalk hoogte wordt aangepast\n"
-"met behulp van de titelbalk-min-hoogte schuif\n"
-"of de titelbalk fontgrootte instelling\n"
+"als de titelbalkhoogte wordt aangepast\n"
+"met behulp van de titelbalk-min-hoogte-schuifknop\n"
+"of de titelbalk-lettertypegrootte-instelling.\n"
 
 msgid "Shadows"
 msgstr "Schaduwen"
 
 msgid "Frame Borders"
-msgstr "Frame randen"
+msgstr "Frameranden"
 
 msgid "Active Window"
-msgstr "Active vensters"
+msgstr "Actief venster"
 
 msgid "Inactive Window"
-msgstr "Inactieve vensters"
+msgstr "Inactief venster"
 
 msgid "Screenshot"
 msgstr "Schermafbeelding"
@@ -665,66 +666,66 @@ msgid ""
 "NOTE - These settings are not part of themes, they are stored separately, "
 "and control various UI preferences for Emerald."
 msgstr ""
-"OPMERKING - Deze instellingen zijn geen deel van de thema's maar worden "
-"apart ervan opgeslagen. Ze bepalen diverse UI voorkeuren voor Emerald"
+"OPMERKING - Deze instellingen zijn geen onderdeel van de thema's; ze worden "
+"dan ook apart opgeslagen. Ze bepalen diverse uiterlijk-voorkeuren voor "
+"Emerald."
 
 msgid "Show Tooltips for Buttons"
-msgstr "Toon gereedschap tips voor knoppen"
+msgstr "Hulpballonnen weergeven bij knoppen"
 
 msgid "Use Decoration Cropping"
-msgstr "Gebruik Decoration Cropping"
+msgstr "Decoratie-bijsnijding gebruiken"
 
 msgid "No Shade on Titlebar Scroll"
-msgstr ""
+msgstr "Niet oprollen bij scrollen over titelbalk"
 
 msgid "Use Button Fade"
-msgstr "Gebruik Knop Fade"
+msgstr "Knopvervaging gebruiken"
 
 msgid "Use Button Fade Pulse"
-msgstr "Gebruik Knop Fade-Pulse"
+msgstr "Knopvervagingspulsatie gebruiken"
 
 msgid "Button Fade Total Duration"
-msgstr "Totale duur Knop Fading"
+msgstr "Totale duur van knopvervaging"
 
 msgid "Button Fade Step Duration"
-msgstr "Stap duur Knop Fading"
+msgstr "Stapduur van knopvervaging"
 
 msgid "Button Pulse Wait Duration"
-msgstr "Wachttijd Knop Pulse"
+msgstr "Wachttijd voor knoppulsering"
 
 msgid "Button Pulse Min Opacity %"
-msgstr "Minimale ondoorzichtigheid Knop Pulse %"
+msgstr "Minimale ondoorzichtigheid knoppulsatie in %"
 
 msgid "Titlebar Double-Click Action"
-msgstr "Titelbalk Dubbelklik Actie"
+msgstr "Titelbalk - dubbelklikactie"
 
-#, fuzzy
 msgid "Titlebar Middle-Click Action"
-msgstr "Titelbalk Dubbelklik Actie"
+msgstr "Titelbalk - middelklikactie"
 
 msgid "Button Hover Cursor"
-msgstr "Knop Zweef Cursor"
+msgstr "Knop bij overheen zweven met cursor"
 
 msgid "Normal"
 msgstr "Normaal"
 
 msgid "Pointing Finger"
-msgstr "Wijzende Vinger"
+msgstr "Aanwijsvinger"
 
 msgid "Compiz Decoration Blur Type"
-msgstr "Compiz decoratie Wazig type"
+msgstr "Compiz-decoratie vervagingstype"
 
 msgid "None"
 msgstr "Geen"
 
 msgid "Titlebar only"
-msgstr "Aleen de titelbalk"
+msgstr "Alleen de titelbalk"
 
 msgid "All decoration"
 msgstr "Alle decoratie"
 
 msgid "Frame Engine"
-msgstr "Frame Engine"
+msgstr "Frame-aandrijving"
 
 msgid "Buttons"
 msgstr "Knoppen"
@@ -742,7 +743,7 @@ msgid "Edit"
 msgstr "Bewerken"
 
 msgid "Import Theme..."
-msgstr "Importeer thema..."
+msgstr "Thema importeren..."
 
 msgid "_Open"
 msgstr "_Openen"
@@ -756,9 +757,8 @@ msgstr "_Verversen"
 msgid "_Delete"
 msgstr "_Verwijderen"
 
-#, fuzzy
 msgid "_Import..."
-msgstr "Exporteren..."
+msgstr "_Importeren..."
 
 msgid "Themes"
 msgstr "Thema's"
@@ -767,10 +767,10 @@ msgid "Edit Themes"
 msgstr "Thema's bewerken"
 
 msgid "Themes Settings"
-msgstr "Thema instellingen"
+msgstr "Thema-instellingen"
 
 msgid "Emerald Settings"
-msgstr "Emerald instellingen"
+msgstr "Emerald-instellingen"
 
 msgid "_Quit"
 msgstr "A_fsluiten"
