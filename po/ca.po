@@ -9,14 +9,14 @@ msgstr ""
 "Project-Id-Version: emerald\n"
 "Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/emerald/issues\n"
 "POT-Creation-Date: 2017-05-04 19:28+0300\n"
-"PO-Revision-Date: 2017-03-07 19:41+0100\n"
+"PO-Revision-Date: 2017-12-08 16:08+0100\n"
 "Last-Translator: Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>\n"
 "Language-Team: Catalan <ca@li.org>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.12\n"
+"X-Generator: Poedit 2.0.5\n"
 
 msgid "Based on original gtk-window-decorator"
 msgstr "Basat amb la versió original de gtk-window-decorator"
@@ -94,7 +94,7 @@ msgid "Sides"
 msgstr "Cares"
 
 msgid "Everything done with customizable pixmaps!"
-msgstr "Qualsevol cosa amb mapes de píxels personalitzats"
+msgstr "Qualsevol cosa amb mapes de píxels personalitzats!"
 
 msgid "Top Rounding Radius"
 msgstr "Radi d'arrodoniment superior"
@@ -215,7 +215,7 @@ msgid "Show when minimised?"
 msgstr "Voleu mostrar-ho quan estigui minimitzada?"
 
 msgid "Minimised Border Size"
-msgstr "Mida de la vora minimitzada?"
+msgstr "Mida de la vora minimitzada"
 
 msgid "Enable Left Bar Dip?"
 msgstr "Voleu habilitar la immersió en la barra esquerra?"
@@ -274,7 +274,7 @@ msgid "Diagonal Repeat?"
 msgstr "Repetició diagonal?"
 
 msgid "Repeat Frequency"
-msgstr "Freqüència de repetició?"
+msgstr "Freqüència de repetició"
 
 #. ========================
 msgid "Enable Title Part Pixmap?"
@@ -541,7 +541,7 @@ msgid "Y Offset"
 msgstr "Desplaçament Y"
 
 msgid "Title-Text Font"
-msgstr "Tipus de lletra del text del títol"
+msgstr "Lletra del text del títol"
 
 msgid "Minimum Title-bar Height"
 msgstr "Alçada mínima de la barra de títol"
@@ -642,7 +642,7 @@ msgstr ""
 "Això també s'aplica quan canvieu la mida\n"
 "de la barra de títol a través de la barra de\n"
 "desplaçament de l'alçada mínima de títol o des de\n"
-"l'ajust del tipus de lletra.\n"
+"l'ajust de la lletra.\n"
 
 msgid "Shadows"
 msgstr "Ombres"
@@ -702,9 +702,8 @@ msgstr "Opacitat mínima en % en pitjar el botó"
 msgid "Titlebar Double-Click Action"
 msgstr "Acció del doble clic en la barra de títol"
 
-#, fuzzy
 msgid "Titlebar Middle-Click Action"
-msgstr "Acció del doble clic en la barra de títol"
+msgstr "Acció del botó del mig en la barra de títol"
 
 msgid "Button Hover Cursor"
 msgstr "Cursor al damunt del botó"
