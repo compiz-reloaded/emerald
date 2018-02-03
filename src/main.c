@@ -321,8 +321,8 @@ static void update_window_extents(window_settings * ws)
     gint tt_h = ws->titlebar_height;
     gint l_ext = ws->win_extents.left + ws->extra_extents.left;
     gint r_ext = ws->win_extents.right + ws->extra_extents.right;
-    gint t_ext = ws->win_extents.top + ws->extra_extents.top + tt_h;
-    gint t_ext_nott = t_ext - tt_h; /* used to skip resize action on actual titlebar */
+    gint t_ext_nott = ws->win_extents.top + ws->extra_extents.top; /* used to skip resize action on actual titlebar */
+    gint t_ext = t_ext_nott + tt_h;
     gint b_ext = ws->win_extents.bottom + ws->extra_extents.bottom;
 
     /*pos_t newpos[3][3] = {

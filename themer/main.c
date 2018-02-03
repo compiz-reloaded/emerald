@@ -1088,7 +1088,7 @@ void layout_left_frame_pane(GtkWidget * hbox)
     gtk_box_pack_startC(hbox,vbox,TRUE,TRUE,0);
 
     layout_shadows_frame(build_frame(vbox,_("Shadows"),FALSE));
-    layout_extra_grab_frame(build_frame(vbox,_("Extra Grab"),FALSE));
+    layout_extra_grab_frame(build_frame(vbox,_("Extra Mouse Grabs"),FALSE));
 }
 void layout_right_frame_pane(GtkWidget * hbox)
 {
