@@ -4,7 +4,7 @@
 # Satoru SATOH <ss@gnome.gr.jp>, 2006, 2007.
 #
 # 誤訳や訳の改良などについては本家
-# (https://github.com/compiz-reloaded/emerald/issues)
+# (https://gitlab.com/compiz/emerald/issues)
 # または 2ch の関連スレッドへ -
 # E.g. "3Dﾃﾞｽｸﾄｯﾌﾟ統合ｽﾚ 3ｸﾞﾘ目 [Beryl/Compiz/AIGLX/Xgl]"
 # https://pc10.2ch.net/test/read.cgi/linux/1170886825/
@@ -12,7 +12,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: emerald\n"
-"Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/emerald/issues\n"
+"Report-Msgid-Bugs-To: https://gitlab.com/compiz/emerald/issues\n"
 "POT-Creation-Date: 2017-05-04 19:28+0300\n"
 "PO-Revision-Date: 2008-01-05 07:49+0100\n"
 "Last-Translator: Masaaki KANEMOTO <masaaki.kanemoto@gmail.com>\n"

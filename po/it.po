@@ -38,7 +38,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: emerald\n"
-"Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/emerald/issues\n"
+"Report-Msgid-Bugs-To: https://gitlab.com/compiz/emerald/issues\n"
 "POT-Creation-Date: 2017-05-04 19:28+0300\n"
 "PO-Revision-Date: 2007-08-31 23:27+0200\n"
 "Last-Translator: Milo Casagrande <milo_casagrande@yahoo.it>\n"

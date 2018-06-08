@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: emerald\n"
-"Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/emerald/issues\n"
+"Report-Msgid-Bugs-To: https://gitlab.com/compiz/emerald/issues\n"
 "POT-Creation-Date: 2017-05-04 19:28+0300\n"
 "PO-Revision-Date: 2008-07-12 15:02+0200\n"
 "Last-Translator: Yotam Benshalom <benshalom@gmail.com>\n"
