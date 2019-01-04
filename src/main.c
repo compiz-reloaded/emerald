@@ -318,11 +318,12 @@ static void update_window_extents(window_settings * ws)
        0,       TT_H,       L_EXT+4,    B_EXT+4,    0,1,0,0
        L_EXT+4, TT_H+4,     -8,         B_EXT,      0,1,1,0
        L_EXT-4, TT_H,       R_EXT+4,    B_EXT+4,    1,1,0,0 */
-    gint l_ext = ws->win_extents.left;
-    gint r_ext = ws->win_extents.right;
-    gint t_ext = ws->win_extents.top;
-    gint b_ext = ws->win_extents.bottom;
     gint tt_h = ws->titlebar_height;
+    gint l_ext = ws->win_extents.left + ws->extra_extents.left;
+    gint r_ext = ws->win_extents.right + ws->extra_extents.right;
+    gint t_ext_nott = ws->win_extents.top + ws->extra_extents.top; /* used to skip resize action on actual titlebar */
+    gint t_ext = t_ext_nott + tt_h;
+    gint b_ext = ws->win_extents.bottom + ws->extra_extents.bottom;
 
     /*pos_t newpos[3][3] = {
       {
@@ -339,6 +340,8 @@ static void update_window_extents(window_settings * ws)
       {  2, 17, 10, 10,   1, 1, 0, 0 }
       }
       }; */
+
+    /*
     pos_t newpos[3][3] = { {
 	{0, 0, l_ext + 4, tt_h + 4, 0, 0, 0, 0},
 	    {l_ext + 4, 0, -8, t_ext + 2, 0, 0, 1, 0},
@@ -355,7 +358,41 @@ static void update_window_extents(window_settings * ws)
 	    {l_ext - 4, tt_h, r_ext + 4, b_ext + 4, 1,
 		1, 0, 0}
     }
+    };*/
+
+    /*
+      1 2 3  RESIZE RESIZE RESIZE
+      4 5 6  RESIZE  MOVE  RESIZE
+      7 8 9  RESIZE RESIZE RESIZE
+
+      region_x = x + xw * window_width;
+      region_y = y + yh * window_height;
+      region_w = w + ww * window_width;
+      region_h = h + hh * window_height;
+
+      essentially left part is offset
+      right part is sort of translation of that offset normalized on window width/height
+      but only translation is normalized, original value is not, it's still offset
+      negative values in offsets are fine too
+
+      @see update_event_windows */
+    pos_t newpos[3][3] = {
+	{
+	/* x,     y,      w,      h,           xw, yh, ww, hh */
+	{ 0,      0,      l_ext,  t_ext,       0,  0,  0,  0 }, /* 1 - top left corner */
+	{ l_ext,  0,      0,      t_ext_nott,  0,  0,  1,  0 }, /* 2 - top side */
+	{ l_ext,  0,      r_ext,  t_ext,       1,  0,  0,  0 }, /* 3 - top right corner */
+	}, {
+	{ 0,      t_ext,  l_ext,  0,           0,  0,  0,  1 }, /* 4 - left side */
+	{ l_ext,  t_ext_nott, 0,  tt_h,        0,  0,  1,  0 }, /* 5 - titlebar */
+	{ l_ext,  t_ext,  r_ext,  0,           1,  0,  0,  1 }, /* 6 - right side */
+	}, {
+	{ 0,      t_ext,  l_ext,  b_ext,       0,  1,  0,  0 }, /* 7 - bottom left corner */
+	{ l_ext,  t_ext,  0,      b_ext,       0,  1,  1,  0 }, /* 8 - bottom side */
+	{ l_ext,  t_ext,  r_ext,  b_ext,       1,  1,  0,  0 }, /* 9 - bottom right corner */
+	}
     };
+
     memcpy(ws->pos, newpos, sizeof(pos_t) * 9);
 }
 
@@ -615,6 +652,10 @@ static void decor_update_window_property(decor_t * d)
 				d->state & WNCK_WINDOW_STATE_MAXIMIZED_VERTICALLY);
 
     extents.top += ws->titlebar_height;
+    extents.top += ws->extra_extents.top;
+    extents.left += ws->extra_extents.left;
+    extents.right += ws->extra_extents.right;
+    extents.bottom += ws->extra_extents.bottom;
 
     if (ws->use_decoration_cropping)
     {
@@ -2861,7 +2902,7 @@ void position_title_object(gchar obj, WnckWindow * win, window_settings * ws,
 	Display *xdisplay;
 	gint w = ws->use_pixmap_buttons ? ws->c_icon_size[i].w : 16;
 	gint h = ws->use_pixmap_buttons ? ws->c_icon_size[i].h : 16;
-	gint y = ws->button_offset;
+	gint y = ws->button_offset + ws->extra_extents.top;
 
 	xdisplay = GDK_DISPLAY_XDISPLAY(gdk_display_get_default());
 	gdk_error_trap_push();
@@ -2950,7 +2991,7 @@ void layout_title_objects(WnckWindow * win)
 	d->tobj_item_width[state] = owidth;
     }
     state = 0;
-    d->tobj_pos[0] = ws->win_extents.left;	/* always true */
+    d->tobj_pos[0] = ws->win_extents.left + ws->extra_extents.left;
     d->tobj_pos[2] = width - d->tobj_size[2] + d->tobj_pos[0];
     d->tobj_pos[1] =
 	MAX((d->tobj_pos[2] + d->tobj_size[0] - d->tobj_size[1]) / 2,
@@ -3014,21 +3055,24 @@ static void update_event_windows(WnckWindow * win)
 
     gdk_error_trap_push();
 
+    static guint event_window_actions[3][3] = {
+	{
+	WNCK_WINDOW_ACTION_RESIZE,
+	WNCK_WINDOW_ACTION_RESIZE,
+	WNCK_WINDOW_ACTION_RESIZE
+	}, {
+	WNCK_WINDOW_ACTION_RESIZE,
+	WNCK_WINDOW_ACTION_MOVE,
+	WNCK_WINDOW_ACTION_RESIZE
+	}, {
+	WNCK_WINDOW_ACTION_RESIZE,
+	WNCK_WINDOW_ACTION_RESIZE,
+	WNCK_WINDOW_ACTION_RESIZE
+	}
+    };
+
     for (i = 0; i < 3; i++)
     {
-	static guint event_window_actions[3][3] = {
-	    {
-		WNCK_WINDOW_ACTION_RESIZE,
-		WNCK_WINDOW_ACTION_RESIZE,
-		WNCK_WINDOW_ACTION_RESIZE}, {
-		    WNCK_WINDOW_ACTION_RESIZE,
-		    WNCK_WINDOW_ACTION_MOVE,
-		    WNCK_WINDOW_ACTION_RESIZE}, {
-			WNCK_WINDOW_ACTION_RESIZE,
-			WNCK_WINDOW_ACTION_RESIZE,
-			WNCK_WINDOW_ACTION_RESIZE}
-	};
-
 	for (j = 0; j < 3; j++)
 	{
 	    w = 0;
@@ -5785,6 +5829,10 @@ static void load_settings(window_settings * ws)
     load_int_setting(f, &ws->win_extents.left, "left", "borders");
     load_int_setting(f, &ws->win_extents.right, "right", "borders");
     load_int_setting(f, &ws->win_extents.bottom, "bottom", "borders");
+    load_int_setting(f, &ws->extra_extents.top, "top", "extra_grab");
+    load_int_setting(f, &ws->extra_extents.left, "left", "extra_grab");
+    load_int_setting(f, &ws->extra_extents.right, "right", "extra_grab");
+    load_int_setting(f, &ws->extra_extents.bottom, "bottom", "extra_grab");
     load_int_setting(f, &ws->min_titlebar_height, "min_titlebar_height",
 		     "titlebar");
     g_key_file_free(f);
@@ -5892,6 +5940,10 @@ int main(int argc, char *argv[])
     ws->win_extents.top = 4;
     ws->win_extents.right = 6;
     ws->win_extents.bottom = 6;
+    ws->extra_extents.left = 0;
+    ws->extra_extents.top = 0;
+    ws->extra_extents.right = 0;
+    ws->extra_extents.bottom = 0;
     ws->shadow_radius = 15;
     ws->shadow_opacity = .8;
     ws->min_titlebar_height = 17;

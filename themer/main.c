@@ -864,6 +864,27 @@ void layout_shadows_frame(GtkWidget * vbox)
     add_int_range_row(vbox,_("X Offset"),"shadow_offset_x",-16,16,"shadow");
     add_int_range_row(vbox,_("Y Offset"),"shadow_offset_y",-16,16,"shadow");
 }
+void add_extra_grab_slider(gchar * text,gchar * key,gint value)
+{
+    GtkWidget * w;
+    table_append(gtk_label_new(text),FALSE);
+
+    w = scaler_new(0,20,1);
+    table_append(w,TRUE);
+    gtk_range_set_value(GTK_RANGE(w),value);
+    register_setting(w,ST_INT,"extra_grab",key);
+}
+void layout_extra_grab_frame(GtkWidget * vbox)
+{
+    table_new(2,FALSE,FALSE);
+    gtk_box_pack_startC(vbox,get_current_table(),FALSE,FALSE,0);
+    table_append(gtk_label_new(_("Grab")),FALSE);
+    table_append(gtk_label_new(_("Size")),FALSE);
+    add_extra_grab_slider(_("Top"),"top",0);
+    add_extra_grab_slider(_("Bottom"),"bottom",0);
+    add_extra_grab_slider(_("Left"),"left",0);
+    add_extra_grab_slider(_("Right"),"right",0);
+}
 void layout_title_frame(GtkWidget * vbox)
 {
     GtkWidget * hbox;
@@ -1067,6 +1088,7 @@ void layout_left_frame_pane(GtkWidget * hbox)
     gtk_box_pack_startC(hbox,vbox,TRUE,TRUE,0);
 
     layout_shadows_frame(build_frame(vbox,_("Shadows"),FALSE));
+    layout_extra_grab_frame(build_frame(vbox,_("Extra Mouse Grabs"),FALSE));
 }
 void layout_right_frame_pane(GtkWidget * hbox)
 {

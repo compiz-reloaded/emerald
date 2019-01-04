@@ -199,7 +199,10 @@ typedef struct _window_settings
     gint    shadow_offset_x;
     gint    shadow_offset_y;
     decor_extents_t shadow_extents; /* = { 0, 0, 0, 0 }; */
+    /* actually win_extents == border extents */
     decor_extents_t win_extents; /* = { 6, 6, 4, 6 }; */
+    /* extra extents (besides usual border) */
+    decor_extents_t extra_extents; /* = { 0, 0, 0, 0 }; */
     pos_t pos[3][3];
     gint left_space; /* = 6; */
     gint right_space; /* = 6; */
