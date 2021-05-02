@@ -512,7 +512,7 @@ static void export_theme(gchar * file)
     at = g_shell_quote(fn);
     g_free(fn);
     fn = g_shell_quote(file);
-    ot = g_strdup_printf("tar -czf %s -C %s ./ --exclude=*~",fn,at);
+    ot = g_strdup_printf("tar -czf %s -C %s --exclude=*~ ./",fn,at);
     if (!g_spawn_command_line_sync(ot,NULL,NULL,&ex,NULL) ||
             (WIFEXITED(ex)&&WEXITSTATUS(ex)))
     {
