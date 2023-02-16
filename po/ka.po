@@ -1,0 +1,769 @@
+# Georgian translation for emerald.
+# Copyright (C) 2023 Emerald's authors
+# This file is distributed under the same license as the emerald package.
+# Temuri Doghonadze <temuri.doghonadze@gmail.com>, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: emerald\n"
+"Report-Msgid-Bugs-To: https://gitlab.com/compiz/emerald/issues\n"
+"POT-Creation-Date: 2023-02-16 10:35+0100\n"
+"PO-Revision-Date: 2023-02-16 14:48+0100\n"
+"Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
+"Language-Team: Georgian <(nothing)>\n"
+"Language: ka\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.2.2\n"
+
+msgid "Based on original gtk-window-decorator"
+msgstr "ბაზირებულია ორიგინალ gtk-window-decorator-ზე"
+
+msgid "Round Top Left Corner"
+msgstr "ზედა მარცხენა კუთხის მომრგვალება"
+
+msgid "Round Top Right Corner"
+msgstr "ზედა მარჯვენა კუთხის მომრგვალება"
+
+msgid "Round Bottom Left Corner"
+msgstr "ქვედა მარცხენა კუთხის მომრგვალება"
+
+msgid "Round Bottom Right Corner"
+msgstr "ქვედა მარჯვენა კუთხის მომრგვალება"
+
+msgid "Rounding Radius"
+msgstr "მომრგვალების რადიუსი"
+
+msgid "Colors"
+msgstr "ფერები"
+
+msgid "Outer Frame Blend"
+msgstr "გარე ჩარჩოს სირბილე"
+
+msgid "Inner Frame Blend"
+msgstr "შიდა ჩარჩოს სირბილე"
+
+msgid "Outer Titlebar Blend"
+msgstr "სათაურის გარე სირბილე"
+
+msgid "Inner Titlebar Blend"
+msgstr "სათაურის შიდა სირბილე"
+
+msgid "Titlebar Separator"
+msgstr "სათაურის გამყოფი"
+
+msgid "Frame Outline"
+msgstr "ფანჯრის კონტური"
+
+msgid "Frame Highlight"
+msgstr "ფანჯრის გამოკვეთა"
+
+msgid "Frame Shadow"
+msgstr "ჩარჩოს ჩრდილი"
+
+msgid "Contents Outline"
+msgstr "კონტურის შემცველობა"
+
+msgid "Contents Highlight"
+msgstr "გამოკვეთის შემცველობა"
+
+msgid "Contents Shadow"
+msgstr "ჩრდილის შემცველობა"
+
+msgid "Frame"
+msgstr "კადრი"
+
+msgid "Based on original legacy"
+msgstr "დაფუძნებულია მოძველებულზე"
+
+msgid "Title Bar"
+msgstr "სათაურის ზოლი"
+
+msgid "Designed to be vista-ish in nature"
+msgstr "შექმნილია, რომ წააგავდეს Vista-ს"
+
+msgid "Base"
+msgstr "ფუძე"
+
+msgid "Glow"
+msgstr "ნათება"
+
+msgid "Sides"
+msgstr "მხარეები"
+
+msgid "Everything done with customizable pixmaps!"
+msgstr "ყველაფერი შექმნილია შეცვლადი სურათებით!"
+
+msgid "Top Rounding Radius"
+msgstr "ზედა მომრგვალების რადიუსი"
+
+msgid "Bottom Rounding Radius"
+msgstr "ქვედა  მომრგვალების რადიუსი"
+
+msgid "_Clear"
+msgstr "გასუფთავება"
+
+#. style: use tiled or scaled pixmaps
+msgid "Scaled"
+msgstr "გადიდებული"
+
+msgid "Not adjustable"
+msgstr "არამორგებადი"
+
+msgid "Same as Active"
+msgstr "იგივე, რაც აქტიური"
+
+msgid "Pixmap"
+msgstr "სურათი"
+
+msgid "File"
+msgstr "ფაილი"
+
+msgid "Preview"
+msgstr "მინიატურა"
+
+msgid "Clear"
+msgstr "სუფთა ცა"
+
+msgid "Tiled/Scaled"
+msgstr "გამეორება/მასშტაბი"
+
+msgid "Width Override"
+msgstr "სიგანის გადაფარვა"
+
+msgid "Height Override"
+msgstr "სიმაღლის გადაფარვა"
+
+msgid "Glassy effects for your windows"
+msgstr "მინის ეფექტი თქვენი ფანჯრებისთვის"
+
+msgid "Glow Height"
+msgstr "ნათების სიმაღლე"
+
+msgid "Frame Base Color"
+msgstr "ფანჯრის ძირითადი ფერი"
+
+msgid "Upper Titlebar Glow"
+msgstr "ქუდის ნათების მაქსიმუმი"
+
+msgid "Upper Glass Glow"
+msgstr "მინის ნათების მაქსიმუმი"
+
+msgid "Lower Glass Glow"
+msgstr "მინის ნათების მინიმუმი"
+
+msgid "Middle Glass Glow"
+msgstr "მინის ნათების საშუალო"
+
+msgid "Outer Glass Glow"
+msgstr "მინის გარე ნათება"
+
+msgid "Multiple gradients with somewhat glassy features too"
+msgstr "მინისებრი თვისებების მქონე რამდენიმე გრადიენტი"
+
+msgid "Left Blend"
+msgstr "მარცხენა გრადიენტი"
+
+msgid "Middle Blend"
+msgstr "შუა გრადიენტი"
+
+msgid "Right Blend"
+msgstr "მარჯვენა გრადიენტი"
+
+msgid "Contrast"
+msgstr "კონტრასტი"
+
+msgid "(Color)"
+msgstr "(ფერი)"
+
+msgid "(Alpha)"
+msgstr "(ალფა)"
+
+msgid "Notch"
+msgstr "ამოკვეთა"
+
+msgid "Position"
+msgstr "პოზიცია"
+
+msgid "Curve"
+msgstr "მრუდი"
+
+msgid "Offset"
+msgstr "წანაცვლება"
+
+msgid "Use Glow"
+msgstr "ნათების გამოყენება"
+
+msgid "Title Glow"
+msgstr "სათაურის ნათება"
+
+msgid "Radius"
+msgstr "რადიუსი"
+
+msgid "Evolved from the legacy engine"
+msgstr "აღმოცენდა მოძველებული ძრავიდან"
+
+msgid "Border Gap"
+msgstr "საზღვრის შუალედი"
+
+msgid "Show Border when maximised?"
+msgstr "ვაჩვენო საზღვარი, როცა ფანჯარა გაშლილია?"
+
+msgid "Show when minimised?"
+msgstr "ვაჩვენო, როცა ჩაკეცილია?"
+
+msgid "Minimised Border Size"
+msgstr "ჩაკეცილი საზღვრის ზომა"
+
+msgid "Enable Left Bar Dip?"
+msgstr "ჩავრთო მარცხენა ზოლის ჩაფლობა?"
+
+msgid "Left Bar Radius"
+msgstr "მარცხენა ზოლის რადიუსი"
+
+msgid "Enable Lower Bulge? (Useless at the moment, but will be used soon)"
+msgstr ""
+"გამოვიყენო დაბალი ამობურცულობა? (ამ წამს გამოუსადეგარია, მაგრამ მალე "
+"დავწერთ)"
+
+msgid "Top Corner Offset (%)"
+msgstr "ზედა კუთხის წანაცვლება (%)"
+
+msgid "Enable Title Bar Dip?"
+msgstr "ჩავრთო სათაურის ზოლის ჩაფლობა?"
+
+msgid "Enable Button Part?"
+msgstr "ჩავრთო ღილაკის ნაწილი?"
+
+msgid "Title Part Width"
+msgstr "სატაურის ნაწილის სიგანე"
+
+msgid "Button Part Width)"
+msgstr "ღილაკის ნაწილის სიგანე)"
+
+msgid "Dip Corners Radius)"
+msgstr "კუთხის ჩაფლობის რადიუსი)"
+
+msgid "Round Inside Corners As well?"
+msgstr "კუთხეების შიგნითაც მოვამრგვალო?"
+
+msgid "Enable Different Maximised Colors?"
+msgstr "ჩავრთო მაქსიმიზაციის სხვადასხვა ფერები?"
+
+msgid "Turn Off repeating gradients when maximised?"
+msgstr "გამოვრთო გამეორებადი გრადიენტები, როცა მაქსიმიზებულია?"
+
+msgid "Round Top Left Corner?"
+msgstr "მოვამრგვალო ზედა მარცხენა კუთხე?"
+
+msgid "Frame Rounding Radius"
+msgstr "ჩარჩოს მომრგვალების რადიუსი"
+
+msgid "Titlebar Rounding Radius"
+msgstr "სათაურის ზოლის მომრგვალების რადიუსი"
+
+msgid "Repeat Gradient?"
+msgstr "გავიმეორო გრადიენტი?"
+
+msgid "Vertical Repeat?"
+msgstr "ვერტიკალური გამეორება?"
+
+msgid "Diagonal Repeat?"
+msgstr "დიაგონალური გამეორება?"
+
+msgid "Repeat Frequency"
+msgstr "გამეორების სიხშირე"
+
+#. ========================
+msgid "Enable Title Part Pixmap?"
+msgstr "ჩავრთო სათაურის ნაწილის გამოსახულება?"
+
+msgid "Repeat Title Part Pixmap?"
+msgstr "გავიმეორო სათაურის ნაწილის გამოსახულება?"
+
+msgid "Title Bar Part Pixmap"
+msgstr "სათაურის ზოლის ნაწილის გამოსახულება"
+
+msgid "Choose Titlebar Part Pixmap"
+msgstr "აირჩიეთ სათაურის ზოლის ნაწილის გამოსახულება"
+
+#. ========================
+msgid "Enable Button Part Pixmap?"
+msgstr "ჩავრთო ღილაკის ნაწილის გამოსახულება?"
+
+msgid "Repeat Button Part Pixmap?"
+msgstr "გავიმეორო ღილაკის ნაწილის გამოსახულება?"
+
+msgid "Button Part Pixmap"
+msgstr "ღილაკის ნაწილის გამოსახულება"
+
+msgid "Choose Button Part Pixmap"
+msgstr "აირჩიეთ ღილაკის ნაწილის გამოსახულება"
+
+#. ========================
+msgid "Enable Titlebar Pixmap?"
+msgstr "ჩავრთო ღილაკის ნაწილის გამოსახულება?"
+
+msgid "Repeat Titlebar Pixmap?"
+msgstr "გავიმეორო ღილაკის ნაწილის გამოსახულება?"
+
+msgid "Titlebar Pixmap"
+msgstr "სათაურის ზოლის გამოსახულება"
+
+msgid "Choose Titlebar Pixmap"
+msgstr "აირჩიეთ სათაურის ზოლის გამოსახულება"
+
+msgid "Active/Inactive"
+msgstr "აქტიური/არააქტიური"
+
+msgid "Maximised"
+msgstr "მთელ ეკრანზე გაშლილი"
+
+msgid "Corners"
+msgstr "კუთხეები"
+
+msgid "Border Layout"
+msgstr "საზღვრის განლაგება"
+
+msgid "Left Bar"
+msgstr "მარცხენა ზოლი"
+
+msgid "Pixmaps"
+msgstr "გამოსახულებები"
+
+msgid ""
+"Select\n"
+"Engine"
+msgstr "აირჩიეთ ძრავა"
+
+msgid "Close Window"
+msgstr "ფანჯრის დახურვა"
+
+msgid "Maximize Window"
+msgstr "ფანჯრის გადიდება"
+
+msgid "Restore Window"
+msgstr "ფანჯრის აღდგენა"
+
+msgid "Minimize Window"
+msgstr "ფანჯრის ჩაკეცვა"
+
+msgid "Context Help"
+msgstr "კონტექსტური დახმარება"
+
+msgid "Window Menu"
+msgstr "ფანჯრის მენიუ"
+
+msgid "Shade Window"
+msgstr "ფანჯრის დაჩრდილვა"
+
+msgid "UnShade Window"
+msgstr "ფანჯრის განჩრდილვა"
+
+msgid "Set Above"
+msgstr "ზემოდან დაყენება"
+
+msgid "UnSet Above"
+msgstr "ზემოდან დაყენების მოხსნა"
+
+msgid "Stick Window"
+msgstr "ფანჯრის მიმაგრება"
+
+msgid "UnStick Window"
+msgstr "ფანჯრის მოხსნა"
+
+msgid "Super Maximize Window"
+msgstr "ფანჯრის ძალიან გადიდება"
+
+#, c-format
+msgid "The window \"%s\" is not responding."
+msgstr "ფანჯარა \"%s\" არ პასუხობს."
+
+msgid ""
+"Forcing this application to quit will cause you to lose any unsaved changes."
+msgstr ""
+"აპლიკაციიდან იძულებითი გასვლა თქვენი ყველა შეუნახავი ცვლილების დაკარგვას "
+"გამოიწვევს."
+
+msgid "_Cancel"
+msgstr "გაუქმება"
+
+msgid "_Force Quit"
+msgstr "_ძალით გასვლა"
+
+#, c-format
+msgid ""
+"<b><big>%s</big></b>\n"
+"<i>%s</i>\n"
+"<small><b>Version</b> %s\n"
+"<b>Created By</b> %s\n"
+"<b>Use With</b> %s\n"
+"</small>"
+msgstr ""
+"<b><big>%s</big></b>\n"
+"<i>%s</i>\n"
+"<small><b>ვერსია</b> %s\n"
+"<b>ავტორი</b> %s\n"
+"<b>გამოიყენეთ</b> %s\n"
+"</small>"
+
+#, c-format
+msgid ""
+"<b><big>%s</big></b> (System Theme)\n"
+"<i>%s</i>\n"
+"<small><b>Version</b> %s\n"
+"<b>Created By</b> %s\n"
+"<b>Use With</b> %s\n"
+"</small>"
+msgstr ""
+"<b><big>%s</big></b> (სისტემის თემა)\n"
+"<i>%s</i>\n"
+"<small><b>ვერსია</b> %s\n"
+"<b>ავტორი</b> %s\n"
+"<b>გამოიყენეთ</b> %s\n"
+"</small>"
+
+msgid "Unknown"
+msgstr "უცნობი"
+
+msgid "Whatever (no hint)"
+msgstr "რამე (მინიშნების გარეშე)"
+
+msgid "No Description"
+msgstr "აღწერის გარეშე"
+
+msgid "Invalid Theme Name"
+msgstr "თეის არასწორი სახელი"
+
+msgid "Invalid theme file.  Does not end in .emerald"
+msgstr "არასწორი თემის ფაილი.  არ სრულდება სტრიქონით .emerald"
+
+msgid ""
+"Invalid Theme Name\n"
+"Could Not Export"
+msgstr ""
+"არასწორი თემის სახელი\n"
+"გატანა შეუძლებელია"
+
+msgid ""
+"Invalid File Name\n"
+"Must End in .emerald"
+msgstr ""
+"არასწორი ფაილის სახელი\n"
+"უნდა სრულდებოდეს სტრიქონით .emerald"
+
+msgid "Error calling tar."
+msgstr "TAR-ის გამოძახების შეცდომა."
+
+msgid "Theme Exported"
+msgstr "თემა გატანილია"
+
+msgid ""
+"Can't save over system themes\n"
+"(or you forgot to enter a name)"
+msgstr ""
+"სისტემურ თემებს თავზე ვერ გადავაწერ\n"
+"(ან სახელის შეყვანა დაგავიწყდათ)"
+
+#, c-format
+msgid "Overwrite Theme %s?"
+msgstr "გადავაწერო თემაზე %s?"
+
+msgid "Couldn't Write Theme"
+msgstr "თემის ჩაწერის შეცდომა"
+
+msgid "Couldn't Form Theme"
+msgstr "თემის ფორმირების შეცდომა"
+
+msgid "Theme Saved"
+msgstr "თემა შენახულია"
+
+msgid ""
+"Can't delete system themes\n"
+"(or you forgot to enter a name)"
+msgstr ""
+"სისტემური თემის წაშლა შეუძლებელია\n"
+"(ან სახელის შეყვანა დაგავიწყდათ)"
+
+#, c-format
+msgid "Are you sure you want to delete %s?"
+msgstr "დარწმუნებული ხართ, რომ გსურთ %s-ის წაშლა?"
+
+msgid "Theme deleted"
+msgstr "თემა წაშლილია"
+
+msgid "No such theme to delete"
+msgstr "წასაშლელად ასეთი თემა არ არსებობს"
+
+msgid "Use Pixmap Buttons"
+msgstr "რასტრული ღილაკების გამოყენება"
+
+msgid "Use Button Halo/Glow"
+msgstr "ღილაკის ნათება/გამოკვეთის გამოყენება"
+
+msgid "Use Button Halo/Glow For Inactive Windows"
+msgstr "ნათება/გამოკვეთის გამოყენება არააქტიური ფანჯრებისთვის"
+
+msgid "Button Pixmaps"
+msgstr "ღილაკის გამოსახულებები"
+
+msgid "Button"
+msgstr "ღილაკი"
+
+msgid "Text Fill"
+msgstr "ტექსტის შევსება"
+
+msgid "Text Outline"
+msgstr "ტექსტის კონტური"
+
+msgid "Button Fill"
+msgstr "ღილაკის შევსება"
+
+msgid "Button Outline"
+msgstr "ღილაკის კონტური"
+
+msgid "Color"
+msgstr "ფერი"
+
+msgid "Opacity"
+msgstr "_გაუმჭვირვალობა"
+
+msgid "X Offset"
+msgstr "X წანაცვლება"
+
+msgid "Y Offset"
+msgstr "Y წანაცვლება"
+
+msgid "Grab"
+msgstr "ჩაჭერა"
+
+msgid "Size"
+msgstr "ზომა"
+
+msgid "Top"
+msgstr "თავში"
+
+msgid "Bottom"
+msgstr "ქვედა"
+
+msgid "Left"
+msgstr "მარცხენა"
+
+msgid "Right"
+msgstr "მარჯვენა"
+
+msgid "Title-Text Font"
+msgstr "სათაურის ტექსტის ფონტი"
+
+msgid "Minimum Title-bar Height"
+msgstr "სათაურის მინიმალური სიმაღლე"
+
+msgid "Vertical Button Offset"
+msgstr "ღილაკის ვერტიკალური წანაცვლება"
+
+msgid "Horizontal Button Offset"
+msgstr "ღილაკის ჰორიზონტალური წანაცვლება"
+
+msgid "Title-bar Object Layout"
+msgstr "სათაურის ობიექტების განლაგება"
+
+msgid ""
+"Use colons to separate left, center, and right.\n"
+"Anything after a third colon is ignored.\n"
+"C=Close, N=Minimize, X/R=Restore\n"
+"I=Icon, T=Title, H=Help, M=Menu\n"
+"S=Shade, U/A=On Top(Up/Above)\n"
+"Y=Sticky, (#)=# pixels space, ex: (5)\n"
+"F=SuperMaximize\n"
+msgstr ""
+"მარცხენას, ცენტრის და მარჯვენას გასაყოფად ორიწერტილი გამოიყენეთ.\n"
+"ყველაფერი მესამე სვეტის შემდეგ გამოტოვებული იქნება.\n"
+"C=დახურვა, N=ჩაკეცვა, X/R=აღდგენა\n"
+"I=ხატულა, T=სათაური, H=დახმარება, M=მენიუ\n"
+"S=ჩრდილი, U/A=ზემოდან(მაღლა/მაღლიდან)\n"
+"Y=წებოვანი, (#)=# პიქსელების სივრცე, მაგ: (5)\n"
+"F=ზეგადიდება\n"
+
+msgid "Export Theme..."
+msgstr "თემის გატანა..."
+
+msgid "_Save"
+msgstr "_შენახვა"
+
+msgid "Name:"
+msgstr "სახელი:"
+
+msgid "Untitled Theme"
+msgstr "სახელო თემა"
+
+msgid "Export..."
+msgstr "გატანა..."
+
+msgid "Creator"
+msgstr "შემქმნელი"
+
+msgid "Description"
+msgstr "აღწერა"
+
+msgid "Theme Version"
+msgstr "თემის ვერსია"
+
+msgid "Suggested Widget Theme"
+msgstr "ვიჯეტის არჩეული თემა"
+
+msgid "Themer Version"
+msgstr "თემის ვერსია"
+
+msgid "Border"
+msgstr "საზღვარი"
+
+msgid ""
+"Note, when changing these values,\n"
+"it is advised that you do something\n"
+"like change viewports, as this will\n"
+"cause the position of the 'event windows'\n"
+"to update properly, and thus make\n"
+"moving/resizing windows work properly.\n"
+"This also applies to when you change\n"
+"the title-bar height through either\n"
+"the titlebar-min-height slider\n"
+"or the titlebar font setting.\n"
+msgstr ""
+
+msgid "Shadows"
+msgstr "ჩრდილები"
+
+msgid "Extra Mouse Grabs"
+msgstr "თაგუნას დამატებითი ჩაჭერები"
+
+msgid "Frame Borders"
+msgstr "ფანჯრის საზღვრები"
+
+msgid "Active Window"
+msgstr "აქტიური ფანჯარა"
+
+msgid "Inactive Window"
+msgstr "არააქტიური ფანჯარა"
+
+msgid "Screenshot"
+msgstr "ეკრანის ანაბეჭდი"
+
+msgid "Images"
+msgstr "გამოსახულებები"
+
+msgid "Information"
+msgstr "ინფორმაცია"
+
+msgid ""
+"NOTE - These settings are not part of themes, they are stored separately, "
+"and control various UI preferences for Emerald."
+msgstr ""
+"დაიმახსოვრეთ - ეს პარამეტრები თემების ნაწილს არ წარმოადგენენ. ისინი ცალკე "
+"ინახება და Emerald-ის ინტერფეისის სხვადასხვა პარამეტრებს აკონტროლებენ."
+
+msgid "Show Tooltips for Buttons"
+msgstr "ღილაკებისთვის მინიშნებების ჩვენება"
+
+msgid "Use Decoration Cropping"
+msgstr "დეკორაციის ამოჭრის ჩართვა"
+
+msgid "No Shade on Titlebar Scroll"
+msgstr "სათაურის გადახვევისას ჩრდილი ჩართული არ იქნება"
+
+msgid "Use Button Fade"
+msgstr "ღილაკის მინავლების გამოყენება"
+
+msgid "Use Button Fade Pulse"
+msgstr "ღილაკის მინავლების პულსირების გამოყენება"
+
+msgid "Button Fade Total Duration"
+msgstr "ღილაკის მინავლების სრული ხანგრძლივობა"
+
+msgid "Button Fade Step Duration"
+msgstr "ღილაკის მინავლების ბიჯის ხანგრძლივობა"
+
+msgid "Button Pulse Wait Duration"
+msgstr "ღილაკის მინავლების ლოდინის ხანგრძლივობა"
+
+msgid "Button Pulse Min Opacity %"
+msgstr "ღილაკის პულსირების მინიმალური გაუმჭვირვალობის %"
+
+msgid "Titlebar Double-Click Action"
+msgstr "სათაურის ზოლზე ორმაგი-წკაპის ქმედება"
+
+msgid "Titlebar Middle-Click Action"
+msgstr "სათაურის ზოლზე შუა-წკაპის ქმედება"
+
+msgid "Button Hover Cursor"
+msgstr "ღილაკზე კურსორის გადატარებისას"
+
+msgid "Normal"
+msgstr "ჩვეულებრივი"
+
+msgid "Pointing Finger"
+msgstr "თითი"
+
+msgid "Compiz Decoration Blur Type"
+msgstr "Compiz-ის დეკორაციის ბუნდოვნების ტიპი"
+
+msgid "None"
+msgstr "არაფერი"
+
+msgid "Titlebar only"
+msgstr "მხოლოდ სათაურის ზოლი"
+
+msgid "All decoration"
+msgstr "ყველა დეკორაცია"
+
+msgid "Frame Engine"
+msgstr "ფანჯრის ძრავი"
+
+msgid "Buttons"
+msgstr "ღილაკები"
+
+msgid "Frame/Shadows"
+msgstr "ფანჯარა/ჩრდილები"
+
+msgid "Titlebar"
+msgstr "სათაურის ქუდის"
+
+msgid "Theme"
+msgstr "თემა"
+
+msgid "Edit"
+msgstr "ჩასწორება"
+
+msgid "Import Theme..."
+msgstr "თემის შემოტანა.."
+
+msgid "_Open"
+msgstr "_გახსნა"
+
+msgid "Search:"
+msgstr "ძებნა:"
+
+msgid "_Refresh"
+msgstr "_განახლება"
+
+msgid "_Delete"
+msgstr "_წაშლა"
+
+msgid "_Import..."
+msgstr "_შემოტანა..."
+
+msgid "Themes"
+msgstr "თემები"
+
+msgid "Edit Themes"
+msgstr "თემების ჩასწორება"
+
+msgid "Themes Settings"
+msgstr "თემების მორგება"
+
+msgid "Emerald Settings"
+msgstr "Emerald-ის მორგება"
+
+msgid "_Quit"
+msgstr "_გასვლა"
